@@ -1,0 +1,119 @@
+{
+  "TYPES": {
+    "Actor": {
+      "eminence": "Eminence grise"
+    }
+  },
+  "PENOMBRE": {
+    "Feuille": {
+      "eminence": "Feuille d'Eminence grise"
+    },
+    "Eminence": {
+      "FIELDS": {
+        "peuple": {
+          "label": "Peuple"
+        },
+        "harmoniques": {
+          "ame": {
+            "valeur": {
+              "label": "Ame"
+            }
+          },
+          "esprit": {
+            "valeur": {
+              "label": "Esprit"
+            }
+          },
+          "etincelle": {
+            "valeur": {
+              "label": "Etincelle"
+            }
+          },
+          "nature": {
+            "valeur": {
+              "label": "Nature"
+            }
+          },
+          "nuit": {
+            "valeur": {
+              "label": "Nuit"
+            }
+          }
+        },
+        "cle": {
+          "label": "Clé"
+        },
+        "gamme": {
+          "label": "Gamme"
+        },
+        "ton": {
+          "label": "Ton"
+        }
+      }
+    },
+    "Harmonique": {
+      "ame": {
+        "label": "Ame"
+      },
+      "esprit": {
+        "label": "Esprit"
+      },
+      "etincelle": {
+        "label": "Etincelle"
+      },
+      "nature": {
+        "label": "Nature"
+      },
+      "nuit": {
+        "label": "Nuit"
+      }
+    },
+    "Peuple": {
+      "gnome": {
+        "label": "Gnome"
+      },
+      "nain": {
+        "label": "Nain"
+      },
+      "centaure": {
+        "label": "Centaure"
+      },
+      "meduse": {
+        "label": "Méduse"
+      },
+      "satyre": {
+        "label": "Satyre"
+      },
+      "minotaure": {
+        "label": "Minotaure"
+      },
+      "ameAccouchee": {
+        "label": "Ame accouchée"
+      },
+      "opalinDeLaRomance": {
+        "label": "Opalin de la Romance"
+      },
+      "danseurAffranchi": {
+        "label": "Danseur affranchi"
+      },
+      "sirene": {
+        "label": "Sirène"
+      },
+      "banshee": {
+        "label": "Banshee"
+      },
+      "feeNoire": {
+        "label": "Fée noire"
+      },
+      "humain": {
+        "label": "Humain"
+      },
+      "ogre": {
+        "label": "Ogre"
+      },
+      "geant": {
+        "label": "Géant"
+      }
+    }
+  }
+}

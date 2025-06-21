@@ -1,0 +1,13 @@
+# IDE
+.idea/
+.vs/
+styles/*.css
+
+# Node Modules
+node_modules/
+
+# Foundry VTT
+packs/*
+
+# GitHub
+.github/copilot-instructions.md

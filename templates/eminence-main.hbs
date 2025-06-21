@@ -1,0 +1,14 @@
+{{log "eminence" this}}
+<section class="eminence-main standard-form">
+  {{formGroup systemFields.peuple value=systemSource.peuple localize=true}}
+  {{formGroup systemFields.cle value=systemSource.cle localize=true}}
+  <div class="form-group"><label>Gamme</label><div class="form-fields">{{system.gamme}}</div></div>
+  <div class="form-group"><label>Ton</label><div class="form-fields">{{system.ton}}</div></div>
+
+  {{formGroup systemFields.harmoniques.fields.ame.fields.valeur value=systemSource.harmoniques.ame.valeur localize=true}}
+  {{formGroup systemFields.harmoniques.fields.esprit.fields.valeur value=systemSource.harmoniques.esprit.valeur localize=true}}
+  {{formGroup systemFields.harmoniques.fields.etincelle.fields.valeur value=systemSource.harmoniques.etincelle.valeur localize=true}}
+  {{formGroup systemFields.harmoniques.fields.nature.fields.valeur value=systemSource.harmoniques.nature.valeur localize=true}}
+  {{formGroup systemFields.harmoniques.fields.nuit.fields.valeur value=systemSource.harmoniques.nuit.valeur localize=true}}
+
+</section>

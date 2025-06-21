@@ -1,0 +1,37 @@
+{
+  "id": "penombre",
+  "title": "Pénombre",
+  "description": "un jeu de rôle dans les Royaumes crépusculaires d'après les romans de Mathieu Gaborit",
+  "authors": [{ "name": "Kristov" }, { "name": "Mystery Man from Outer Space" }],
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13",
+    "maximum": "13"
+  },
+  "esmodules": ["penombre.mjs"],
+  "styles": ["penombre.css"],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "Anglais",
+      "path": "lang/fr.json"
+    },
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json"
+    }
+  ],
+  "documentTypes": {
+    "Actor": {
+      "eminence": {}
+    }
+  },
+  "socket": true,
+  "flags": {
+    "hotReload": {
+      "extensions": ["css", "html", "hbs", "json"],
+      "paths": ["css", "styles", "lang", "templates"]
+    }
+  }
+}
