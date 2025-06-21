@@ -1,1 +1,1 @@
-export default class Eminence extends Actor {}
+export default class PenombreActor extends Actor {}

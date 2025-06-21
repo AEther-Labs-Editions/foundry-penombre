@@ -7,18 +7,24 @@ import * as documents from "./module/documents/_module.mjs"
 import * as applications from "./module/applications/_module.mjs"
 
 Hooks.once("init", function () {
-  console.info("Penombre | Initializing Penombre...")
+  console.info("Pénombre | Initialisation du système...")
 
   globalThis.penombre = game.system
   game.system.CONST = SYSTEM
 
-  CONFIG.Actor.documentClass = documents.EminenceActor
+  CONFIG.Actor.documentClass = documents.PenombreActor
   CONFIG.Actor.dataModels = {
     eminence: models.PenombreEminence,
   }
-
   foundry.documents.collections.Actors.unregisterSheet("core", foundry.appv1.sheets.ActorSheet)
   foundry.documents.collections.Actors.registerSheet("penombre", applications.EminenceSheet, { types: ["eminence"], label: "PENOMBRE.Feuille.eminence", makeDefault: true })
 
-  console.info("Penombre | Penombre initialized successfully.")
+  CONFIG.Item.documentClass = documents.PenombreItem
+  CONFIG.Item.dataModels = {
+    pouvoir: models.PenombrePouvoir,
+  }
+  foundry.documents.collections.Items.unregisterSheet("core", foundry.appv1.sheets.ItemSheet)
+  foundry.documents.collections.Items.registerSheet("penombre", applications.PouvoirSheet, { types: ["pouvoir"], label: "PENOMBRE.Feuille.pouvoir", makeDefault: true })
+
+  console.info("Pénombre | Système initialisé.")
 })

@@ -89,21 +89,21 @@ export const GAMMES = Object.freeze({
     id: "auberon",
     label: "PENOMBRE.Gamme.auberon.label",
   },
-  horla: {
-    id: "horla",
-    label: "PENOMBRE.Gamme.horla.label",
-  },
   diamantin: {
     id: "diamantin",
     label: "PENOMBRE.Gamme.diamantin.label",
   },
-  melusine: {
-    id: "melusine",
-    label: "PENOMBRE.Gamme.melusine.label",
-  },
   grangousier: {
     id: "grangousier",
     label: "PENOMBRE.Gamme.grangousier.label",
+  },
+  horla: {
+    id: "horla",
+    label: "PENOMBRE.Gamme.horla.label",
+  },
+  melusine: {
+    id: "melusine",
+    label: "PENOMBRE.Gamme.melusine.label",
   },
 })
 
@@ -112,12 +112,27 @@ export const TONS = Object.freeze({
     id: "capitan",
     label: "PENOMBRE.Ton.capitan.label",
   },
+  cassandre: {
+    id: "cassandre",
+    label: "PENOMBRE.Ton.cassandre.label",
+  },
   mascarille: {
     id: "mascarille",
     label: "PENOMBRE.Ton.mascarille.label",
   },
-  cassandre: {
-    id: "cassandre",
-    label: "PENOMBRE.Ton.cassandre.label",
+})
+
+export const TIMBRES = Object.freeze({
+  harmonieux: {
+    id: "harmonieux",
+    label: "PENOMBRE.Timbre.harmonieux.label",
+  },
+  faux: {
+    id: "faux",
+    label: "PENOMBRE.Timbre.faux.label",
+  },
+  dissonant: {
+    id: "dissonant",
+    label: "PENOMBRE.Timbre.dissonant.label",
   },
 })

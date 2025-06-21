@@ -1,1 +1,2 @@
-export { default as EminenceActor } from "./actor.mjs"
+export { default as PenombreActor } from "./actor.mjs"
+export { default as PenombreItem } from "./item.mjs"

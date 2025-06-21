@@ -25,6 +25,9 @@
   "documentTypes": {
     "Actor": {
       "eminence": {}
+    },
+    "Item": {
+      "pouvoir": {}
     }
   },
   "socket": true,

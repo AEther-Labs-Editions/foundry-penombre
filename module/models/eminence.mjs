@@ -1,50 +1,133 @@
 import { SYSTEM } from "../config/system.mjs"
 
+const { SchemaField, NumberField, StringField, ArrayField } = foundry.data.fields
+
 export default class Eminence extends foundry.abstract.TypeDataModel {
+  /** @override */
+  static LOCALIZATION_PREFIXES = ["PENOMBRE.Eminence"]
+
   static defineSchema() {
-    const fields = foundry.data.fields
     const requiredInteger = { required: true, nullable: false, integer: true }
     const schema = {}
 
-    schema.peuple = new fields.StringField({
-      required: true,
-      nullable: false,
-      initial: SYSTEM.PEUPLES.ameAccouchee.id,
-      choices: SYSTEM.PEUPLES,
-    })
-
-    schema.cle = new fields.StringField({
-      required: true,
-      nullable: false,
-      initial: SYSTEM.HARMONIQUES.ame.id,
-      choices: SYSTEM.HARMONIQUES,
+    // Personnage
+    schema.peuple = new StringField({ required: true, nullable: false, initial: SYSTEM.PEUPLES.ameAccouchee.id, choices: SYSTEM.PEUPLES })
+    schema.cle = new StringField({ required: true, nullable: false, initial: SYSTEM.HARMONIQUES.ame.id, choices: SYSTEM.HARMONIQUES })
+    schema.potentiel = new SchemaField({
+      pouvoirs: new NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+      atouts: new NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+      maitrises: new NumberField({ ...requiredInteger, initial: 0, min: 0 }),
     })
 
     // Harmoniques
     const harmoniqueField = (label) => {
       const schema = {
-        valeur: new fields.StringField({
+        valeur: new StringField({
           required: true,
           nullable: false,
-          initial: SYSTEM.HARMONIQUES_VALUES.D4,
-          choices: Object.fromEntries(Object.entries(SYSTEM.HARMONIQUES_VALUES).map(([key, value]) => [value, { label: `${value}` }])),
+          initial: SYSTEM.HARMONIQUE_VALEURS.D4,
+          choices: Object.fromEntries(Object.entries(SYSTEM.HARMONIQUE_VALEURS).map(([key, value]) => [value, { label: `${value}` }])),
         }),
       }
-      return new fields.SchemaField(schema, { label })
+      return new SchemaField(schema, { label })
     }
 
-    schema.harmoniques = new fields.SchemaField(
+    schema.harmoniques = new SchemaField(
       Object.values(SYSTEM.HARMONIQUES).reduce((obj, harmonique) => {
         obj[harmonique.id] = harmoniqueField(harmonique.label)
         return obj
       }, {}),
     )
 
+    // Conscience
+    schema.conscience = new SchemaField({
+      valeur: new NumberField({
+        ...requiredInteger,
+        initial: 7,
+        min: 0,
+      }),
+      max: new NumberField({
+        ...requiredInteger,
+        initial: 7,
+        min: 0,
+      }),
+      jetons: new ArrayField(
+        new SchemaField({
+          statut: new StringField({
+            required: true,
+            nullable: false,
+            initial: SYSTEM.JETON_STATUTS.actif.id,
+            choices: SYSTEM.JETON_STATUTS,
+          }),
+        }),
+      ),
+      complications: new SchemaField({
+        une: new SchemaField(this.createComplication()),
+        deux: new SchemaField(this.createComplication()),
+        trois: new SchemaField(this.createComplication()),
+        quatre: new SchemaField(this.createComplication()),
+      }),
+    })
+
+    // Timbre (Règles avancées)
+    schema.timbre = new SchemaField({
+      description: new StringField(),
+      statut: new StringField({
+        required: true,
+        nullable: false,
+        initial: SYSTEM.TIMBRES.harmonieux.id,
+        choices: SYSTEM.TIMBRES,
+      }),
+      peste: new StringField(),
+    })
+
+    // Pouvoirs : sous forme d'un item
+
+    // Atouts
+    schema.atouts = new ArrayField(
+      new SchemaField({
+        description: new StringField({}),
+        valeur: new NumberField({ ...requiredInteger, initial: 0, min: 0, max: 3 }),
+      }),
+    )
+
+    // Maîtrises magiques
+    schema.maitrises = new ArrayField(
+      new SchemaField({
+        description: new StringField({}),
+        harmonique: new StringField({
+          required: true,
+          nullable: false,
+          initial: SYSTEM.HARMONIQUES.ame.id,
+          choices: SYSTEM.HARMONIQUES,
+        }),
+        prerequis: new StringField({}),
+        niveau: new NumberField({ ...requiredInteger, initial: 1, min: 1, max: 5 }),
+      }),
+    )
+
     return schema
   }
 
-  /** @override */
-  static LOCALIZATION_PREFIXES = ["PENOMBRE.Eminence"]
+  /**
+   * Helper pour créer le schéma d'une complication
+   */
+  static createComplication() {
+    return {
+      description: new StringField({
+        required: true,
+        nullable: false,
+        blank: true,
+      }),
+      valeur: new NumberField({
+        required: true,
+        nullable: false,
+        initial: 0,
+        min: 0,
+        max: 3,
+      }),
+    }
+  }
 
   /** @override */
   prepareBaseData() {

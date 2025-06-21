@@ -7,7 +7,7 @@ const less = require('gulp-less');
 function compileLESS() {
   return gulp.src("styles/penombre.less")
       .pipe(less())
-      .pipe(gulp.dest(""))
+      .pipe(gulp.dest("."))
 }
 const css = gulp.series(compileLESS);
 

@@ -1,14 +1,30 @@
 import * as EMINENCE from "./eminence.mjs"
+import * as POUVOIR from "./pouvoir.mjs"
 
 export const SYSTEM_ID = "penombre"
 export const DEV_MODE = true
 
-export const HARMONIQUES_VALUES = Object.freeze({
+export const HARMONIQUE_VALEURS = Object.freeze({
   D4: "d4",
   D6: "d6",
   D8: "d8",
   D10: "d10",
   D12: "d12",
+})
+
+export const JETON_STATUTS = Object.freeze({
+  actif: {
+    id: "actif",
+    label: "PENOMBRE.Jeton.actif.label",
+  },
+  inactif: {
+    id: "inactif",
+    label: "PENOMBRE.Jeton.inactif.label",
+  },
+  perdu: {
+    id: "perdu",
+    label: "PENOMBRE.Jeton.perdu.label",
+  },
 })
 
 /**
@@ -22,5 +38,8 @@ export const SYSTEM = {
   PEUPLES: EMINENCE.PEUPLES,
   GAMMES: EMINENCE.GAMMES,
   TONS: EMINENCE.TONS,
-  HARMONIQUES_VALUES,
+  TIMBRES: EMINENCE.TIMBRES,
+  HARMONIQUE_VALEURS: HARMONIQUE_VALEURS,
+  POUVOIR_TYPES: POUVOIR.POUVOIR_TYPES,
+  JETON_STATUTS,
 }

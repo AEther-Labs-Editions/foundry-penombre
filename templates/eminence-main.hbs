@@ -1,14 +1,43 @@
 {{log "eminence" this}}
 <section class="eminence-main standard-form">
+
+  <!-- Personnage -->
   {{formGroup systemFields.peuple value=systemSource.peuple localize=true}}
   {{formGroup systemFields.cle value=systemSource.cle localize=true}}
-  <div class="form-group"><label>Gamme</label><div class="form-fields">{{system.gamme}}</div></div>
-  <div class="form-group"><label>Ton</label><div class="form-fields">{{system.ton}}</div></div>
+  <div class="form-group"><label>Gamme</label><div class="form-fields">{{localize (concat "PENOMBRE.Gamme." system.gamme ".label")}}</div></div>
+  <div class="form-group"><label>Ton</label><div class="form-fields">{{localize (concat "PENOMBRE.Ton." system.ton ".label")}}</div></div>
 
+  <!-- Harmoniques -->
   {{formGroup systemFields.harmoniques.fields.ame.fields.valeur value=systemSource.harmoniques.ame.valeur localize=true}}
   {{formGroup systemFields.harmoniques.fields.esprit.fields.valeur value=systemSource.harmoniques.esprit.valeur localize=true}}
   {{formGroup systemFields.harmoniques.fields.etincelle.fields.valeur value=systemSource.harmoniques.etincelle.valeur localize=true}}
   {{formGroup systemFields.harmoniques.fields.nature.fields.valeur value=systemSource.harmoniques.nature.valeur localize=true}}
   {{formGroup systemFields.harmoniques.fields.nuit.fields.valeur value=systemSource.harmoniques.nuit.valeur localize=true}}
 
+  <!-- Conscience -->
+  {{formGroup systemFields.conscience.fields.valeur value=systemSource.conscience.valeur localize=true}}
+  {{formGroup systemFields.conscience.fields.max value=systemSource.conscience.max localize=true}}
+
+  <!-- Complications -->
+  {{formGroup systemFields.conscience.fields.complications.fields.une.fields.description value=systemSource.conscience.complications.une.description localize=true}}
+  {{formGroup systemFields.conscience.fields.complications.fields.une.fields.valeur value=systemSource.conscience.complications.une.valeur localize=true}}
+  {{formGroup systemFields.conscience.fields.complications.fields.deux.fields.description value=systemSource.conscience.complications.deux.description localize=true}}
+  {{formGroup systemFields.conscience.fields.complications.fields.deux.fields.valeur value=systemSource.conscience.complications.deux.valeur localize=true}}
+  {{formGroup systemFields.conscience.fields.complications.fields.trois.fields.description value=systemSource.conscience.complications.trois.description localize=true}}
+  {{formGroup systemFields.conscience.fields.complications.fields.trois.fields.valeur value=systemSource.conscience.complications.trois.valeur localize=true}}
+  {{formGroup systemFields.conscience.fields.complications.fields.quatre.fields.description value=systemSource.conscience.complications.quatre.description localize=true}}
+  {{formGroup systemFields.conscience.fields.complications.fields.quatre.fields.valeur value=systemSource.conscience.complications.quatre.valeur localize=true}}
+
+  <!-- Jetons-->
+
+  <!-- Timbre -->
+  {{formGroup systemFields.timbre.fields.description value=systemSource.timbre.description localize=true}}
+  {{formGroup systemFields.timbre.fields.statut value=systemSource.timbre.statut localize=true}}
+  {{formGroup systemFields.timbre.fields.peste value=systemSource.timbre.peste localize=true}}
+
+  <!-- Pouvoirs -->
+
+  <!-- Atouts -->
+
+  <!-- Maitrises magiques -->
 </section>

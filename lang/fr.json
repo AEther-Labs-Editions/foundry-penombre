@@ -2,11 +2,15 @@
   "TYPES": {
     "Actor": {
       "eminence": "Eminence grise"
+    },
+    "Item": {
+      "pouvoir": "Pouvoir"
     }
   },
   "PENOMBRE": {
     "Feuille": {
-      "eminence": "Feuille d'Eminence grise"
+      "eminence": "Feuille d'Eminence grise",
+      "pouvoir": "Feuille de Pouvoir"
     },
     "Eminence": {
       "FIELDS": {
@@ -39,6 +43,89 @@
               "label": "Nuit"
             }
           }
+        },
+        "cle": {
+          "label": "Clé"
+        },
+        "gamme": {
+          "label": "Gamme"
+        },
+        "ton": {
+          "label": "Ton"
+        },
+        "conscience": {
+          "valeur": {
+            "label": "Conscience"
+          },
+          "max": {
+            "label": "Conscience Max"
+          },
+          "complications": {
+            "une": {
+              "description": {
+                "label": "Description de la complication 1"
+              },
+              "valeur": {
+                "label": "Valeur de la complication 1"
+              }
+            },
+            "deux": {
+              "description": {
+                "label": "Description de la complication 2"
+              },
+              "valeur": {
+                "label": "Valeur de la complication 2"
+              }
+            },
+            "trois": {
+              "description": {
+                "label": "Description de la complication 3"
+              },
+              "valeur": {
+                "label": "Valeur de la complication 3"
+              }
+            },
+            "quatre": {
+              "description": {
+                "label": "Description de la complication 4"
+              },
+              "valeur": {
+                "label": "Valeur de la complication 4"
+              }
+            }
+          }
+        },
+        "timbre": {
+          "description": {
+            "label": "Description du Timbre"
+          },
+          "statut": {
+            "label": "Statut du Timbre"
+          },
+          "peste": {
+            "label": "Peste"
+          }
+        }
+      }
+    },
+    "Pouvoir": {
+      "FIELDS": {
+        "utilise": {
+          "label": "Utilisé"
+        },
+        "description": {
+          "label": "Description"
+        },
+        "type": {
+          "label": "Type"
+        }
+      },
+      "type": {
+        "naissance": {
+          "label": "Naissance"
+        },
+        "peuple": {
+          "label": "Peuple"
         },
         "cle": {
           "label": "Clé"
@@ -113,6 +200,56 @@
       },
       "geant": {
         "label": "Géant"
+      }
+    },
+    "Gamme": {
+      "auberon": {
+        "label": "Auberon"
+      },
+      "diamantin": {
+        "label": "Diamantin"
+      },
+      "grangousier": {
+        "label": "Grangousier"
+      },
+      "horla": {
+        "label": "Horla"
+      },
+      "melusine": {
+        "label": "Mélusine"
+      }
+    },
+    "Ton": {
+      "capitan": {
+        "label": "Capitan"
+      },
+      "cassandre": {
+        "label": "Cassandre"
+      },
+      "mascarille": {
+        "label": "Mascarille"
+      }
+    },
+    "Timbre": {
+      "harmonieux": {
+        "label": "Harmonieux"
+      },
+      "faux": {
+        "label": "Faux"
+      },
+      "dissonant": {
+        "label": "Dissonant"
+      }
+    },
+    "Jeton": {
+      "actif": {
+        "label": "Actif"
+      },
+      "inactif": {
+        "label": "Inactif"
+      },
+      "perdu": {
+        "label": "Perdu"
       }
     }
   }
