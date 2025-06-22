@@ -1,7 +1,7 @@
 {
   "TYPES": {
     "Actor": {
-      "eminence": "Eminence grise"
+      "eminence": "Éminence grise"
     },
     "Item": {
       "pouvoir": "Pouvoir"
@@ -9,7 +9,7 @@
   },
   "PENOMBRE": {
     "Feuille": {
-      "eminence": "Feuille d'Eminence grise",
+      "eminence": "Feuille d'Éminence grise",
       "pouvoir": "Feuille de Pouvoir"
     },
     "Eminence": {
@@ -20,7 +20,7 @@
         "harmoniques": {
           "ame": {
             "valeur": {
-              "label": "Ame"
+              "label": "Âme"
             }
           },
           "esprit": {
@@ -30,7 +30,7 @@
           },
           "etincelle": {
             "valeur": {
-              "label": "Etincelle"
+              "label": "Étincelle"
             }
           },
           "nature": {
@@ -140,13 +140,13 @@
     },
     "Harmonique": {
       "ame": {
-        "label": "Ame"
+        "label": "Âme"
       },
       "esprit": {
         "label": "Esprit"
       },
       "etincelle": {
-        "label": "Etincelle"
+        "label": "Étincelle"
       },
       "nature": {
         "label": "Nature"
@@ -175,7 +175,7 @@
         "label": "Minotaure"
       },
       "ameAccouchee": {
-        "label": "Ame accouchée"
+        "label": "Âme accouchée"
       },
       "opalinDeLaRomance": {
         "label": "Opalin de la Romance"
