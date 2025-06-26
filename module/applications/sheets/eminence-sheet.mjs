@@ -1,5 +1,7 @@
 const { HandlebarsApplicationMixin } = foundry.applications.api
 
+import { systemPath } from "../../config/system.mjs"
+
 export default class EminenceSheet extends HandlebarsApplicationMixin(foundry.applications.sheets.ActorSheetV2) {
   /** @override */
   static DEFAULT_OPTIONS = {
@@ -19,7 +21,9 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(foundry.ap
 
   /** @override */
   static PARTS = {
-    main: { template: "systems/penombre/templates/eminence-main.hbs" },
+    main: { template: "systems/penombre/templates/eminence/eminence.hbs" ,
+      templates: ["atouts.hbs", "conscience.hbs", "harmoniques.hbs","maitrises.hbs", "personnage.hbs", "pouvoirs.hbs", "timbre.hbs"].map(t => systemPath(`templates/eminence/partials/${t}`)),
+    },
   }
 
   /** @override */

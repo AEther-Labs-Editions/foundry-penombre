@@ -1,0 +1,12 @@
+<div class="eminence-personnage">
+    {{formGroup systemFields.peuple value=systemSource.peuple localize=true}}
+    {{formGroup systemFields.cle value=systemSource.cle localize=true}}
+    <div class="form-group">
+        <label>Gamme</label>
+        <div class="form-fields">{{localize (concat "PENOMBRE.Gamme." system.gamme ".label")}}</div>
+    </div>
+    <div class="form-group">
+        <label>Ton</label>
+        <div class="form-fields">{{localize (concat "PENOMBRE.Ton." system.ton ".label")}}</div>
+    </div>
+</div>
