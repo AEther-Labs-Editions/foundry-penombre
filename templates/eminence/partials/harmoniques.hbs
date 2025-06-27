@@ -1,7 +1,300 @@
-<div class="eminence-harmoniques">
-    {{formGroup systemFields.harmoniques.fields.ame.fields.valeur value=systemSource.harmoniques.ame.valeur localize=true}}
-  {{formGroup systemFields.harmoniques.fields.esprit.fields.valeur value=systemSource.harmoniques.esprit.valeur localize=true}}
-  {{formGroup systemFields.harmoniques.fields.etincelle.fields.valeur value=systemSource.harmoniques.etincelle.valeur localize=true}}
-  {{formGroup systemFields.harmoniques.fields.nature.fields.valeur value=systemSource.harmoniques.nature.valeur localize=true}}
-  {{formGroup systemFields.harmoniques.fields.nuit.fields.valeur value=systemSource.harmoniques.nuit.valeur localize=true}}
+<div class="eminence-harmoniques flexible">
+  <div class="col-1-1 text-vertical-harmoniques">{{localize "PENOMBRE.Harmoniques"}}</div>
+  <div class="col-2-1 frise-verticale">
+      <img
+      class=""
+      src="/systems/penombre/assets/ui/grise.png"
+      alt="|" />
+  </div>
+  <div class="col-3-1 flexible">
+    <div class="col-1-3">
+      {{formGroup systemFields.harmoniques.fields.ame.fields.valeur value=systemSource.harmoniques.ame.valeur localize=true}}
+      {{formGroup systemFields.harmoniques.fields.esprit.fields.valeur value=systemSource.harmoniques.esprit.valeur localize=true}}
+      {{formGroup systemFields.harmoniques.fields.etincelle.fields.valeur value=systemSource.harmoniques.etincelle.valeur localize=true}}
+      {{formGroup systemFields.harmoniques.fields.nature.fields.valeur value=systemSource.harmoniques.nature.valeur localize=true}}
+      {{formGroup systemFields.harmoniques.fields.nuit.fields.valeur value=systemSource.harmoniques.nuit.valeur localize=true}}
+    </div>
+    <div class="col-2-3 flexible">
+      <table class="table-de flexible">
+        <tr class="tr-de flexible">
+          <td  class="flexible" title="{{localize 'PENOMBRE.Action Scelerate'}}">
+            <div class="case-de-mouve-1 flexible">
+              <div class="absolue">
+                <img
+                class="case-de"
+                src="/systems/penombre/assets/ui/case_de_penombre.png"
+                alt="|" />
+              </div>
+              <div class="de-de-nuit absolue">
+                {{#if (eq nuit 'd4')}}
+                <img
+                class="click de-nuit"
+                src="/systems/penombre/assets/ui/d4-marge.png"
+                alt="|" />
+                {{else}}
+                {{/if}}
+                {{#if (eq nuit 'd6')}}
+                <img
+                class="click de-nuit"
+                src="/systems/penombre/assets/ui/d6-marge.png"
+                alt="|" />
+                {{else}}
+                {{/if}}
+                {{#if (eq nuit 'd8')}}
+                <img
+                class="click de-nuit"
+                src="/systems/penombre/assets/ui/d8-marge.png"
+                alt="|" />
+                {{else}}
+                {{/if}}
+                {{#if (eq nuit 'd10')}}
+                <img
+                class="click de-nuit"
+                src="/systems/penombre/assets/ui/d10-marge.png"
+                alt="|" />
+                {{else}}
+                {{/if}}
+                {{#if (eq nuit 'd12')}}
+                <img
+                class="click de-nuit"
+                src="/systems/penombre/assets/ui/d12-marge.png"
+                alt="|" />
+                {{else}}
+                {{/if}}
+              </div>
+            </div>
+            <br>&nbsp;<br>
+            <div class="text-gros-1">
+              {{localize "PENOMBRE.nuit"}}
+            </div>
+          </td>
+
+          <td>
+
+          </td>
+
+          <td class="flexible" title="{{localize 'PENOMBRE.Action Sociale'}}">
+            <div class="case-de-mouve-2 flexible">
+              <div class="absolue">
+                <img
+                class="case-de"
+                src="/systems/penombre/assets/ui/case_de_penombre.png"
+                alt="|" />
+              </div>
+              <div class="de-d-ame absolue">
+                {{#if (eq ame 'd4')}}
+                <img
+                class="click de-ame"
+                src="/systems/penombre/assets/ui/d4-marge.png"
+                alt="|" />
+                {{else}}
+                {{/if}}
+                {{#if (eq ame 'd6')}}
+                <img
+                class="click de-ame"
+                src="/systems/penombre/assets/ui/d6-marge.png"
+                alt="|" />
+                {{else}}
+                {{/if}}
+                {{#if (eq ame 'd8')}}
+                <img
+                class="click de-ame"
+                src="/systems/penombre/assets/ui/d8-marge.png"
+                alt="|" />
+                {{else}}
+                {{/if}}
+                {{#if (eq ame 'd10')}}
+                <img
+                class="click de-ame"
+                src="/systems/penombre/assets/ui/d10-marge.png"
+                alt="|" />
+                {{else}}
+                {{/if}}
+                {{#if (eq ame 'd12')}}
+                <img
+                class="click de-ame"
+                src="/systems/penombre/assets/ui/d12-marge.png"
+                alt="|" />
+                {{else}}
+                {{/if}}
+              </div>
+            </div>
+            <br>&nbsp;<br>
+            <div class="text-gros-2">
+              {{localize "PENOMBRE.ame"}}
+            </div>
+          </td>
+        </tr>
+        <tr class="tr-de flexible">
+          <td class="flexible" title="{{localize 'PENOMBRE.Action Physique'}}">
+            <div class="case-de-mouve-3 flexible">
+              <div class="absolue">
+                <img
+                class="case-de"
+                src="/systems/penombre/assets/ui/case_de_penombre.png"
+                alt="|" />
+              </div>
+              <div class="de-de-nature absolue">
+                {{#if (eq nature 'd4')}}
+                <img
+                class="click de-nature"
+                src="/systems/penombre/assets/ui/d4-marge.png"
+                alt="|" />
+                {{else}}
+                {{/if}}
+                {{#if (eq nature 'd6')}}
+                <img
+                class="click de-nature"
+                src="/systems/penombre/assets/ui/d6-marge.png"
+                alt="|" />
+                {{else}}
+                {{/if}}
+                {{#if (eq nature 'd8')}}
+                <img
+                class="click de-nature"
+                src="/systems/penombre/assets/ui/d8-marge.png"
+                alt="|" />
+                {{else}}
+                {{/if}}
+                {{#if (eq nature 'd10')}}
+                <img
+                class="click de-nature"
+                src="/systems/penombre/assets/ui/d10-marge.png"
+                alt="|" />
+                {{else}}
+                {{/if}}
+                {{#if (eq nature 'd12')}}
+                <img
+                class="click de-nature"
+                src="/systems/penombre/assets/ui/d12-marge.png"
+                alt="|" />
+                {{else}}
+                {{/if}}
+              </div>
+            </div>
+            <br>&nbsp;<br>
+            <div class="text-gros-3">
+              {{localize "PENOMBRE.nature"}}
+            </div>
+          </td>
+
+          <td>
+
+          </td>
+
+          <td class="flexible" title="{{localize 'PENOMBRE.Action Mentale'}}">
+            <div class="case-de-mouve-4 flexible">
+              <div class="absolue">
+                <img
+                class="case-de"
+                src="/systems/penombre/assets/ui/case_de_penombre.png"
+                alt="|" />
+              </div>
+              <div class="de-d-esprit absolue">
+                {{#if (eq esprit 'd4')}}
+                <img
+                class="click de-esprit"
+                src="/systems/penombre/assets/ui/d4-marge.png"
+                alt="|" />
+                {{else}}
+                {{/if}}
+                {{#if (eq esprit 'd6')}}
+                <img
+                class="click de-esprit"
+                src="/systems/penombre/assets/ui/d6-marge.png"
+                alt="|" />
+                {{else}}
+                {{/if}}
+                {{#if (eq esprit 'd8')}}
+                <img
+                class="click de-esprit"
+                src="/systems/penombre/assets/ui/d8-marge.png"
+                alt="|" />
+                {{else}}
+                {{/if}}
+                {{#if (eq esprit 'd10')}}
+                <img
+                class="click de-esprit"
+                src="/systems/penombre/assets/ui/d10-marge.png"
+                alt="|" />
+                {{else}}
+                {{/if}}
+                {{#if (eq esprit 'd12')}}
+                <img
+                class="click de-esprit"
+                src="/systems/penombre/assets/ui/d12-marge.png"
+                alt="|" />
+                {{else}}
+                {{/if}}
+              </div>
+            </div>
+            <br>&nbsp;<br>
+            <div class="text-gros-4">
+              {{localize "PENOMBRE.esprit"}}
+            </div>
+          </td>
+        </tr>
+        <tr class="tr-de flexible">
+          <td>
+
+          </td>
+
+          <td class="flexible" title="{{localize 'PENOMBRE.Action Perceptive'}}">
+            <div class="case-de-mouve-5 flexible">
+              <div class="absolue">
+                <img
+                class="case-de"
+                src="/systems/penombre/assets/ui/case_de_penombre.png"
+                alt="|" />
+              </div>
+              <div class="de-d-etincelle absolue">
+                {{#if (eq etincelle 'd4')}}
+                <img
+                class="click de-etincelle"
+                src="/systems/penombre/assets/ui/d4-marge.png"
+                alt="|" />
+                {{else}}
+                {{/if}}
+                {{#if (eq etincelle 'd6')}}
+                <img
+                class="click de-etincelle"
+                src="/systems/penombre/assets/ui/d6-marge.png"
+                alt="|" />
+                {{else}}
+                {{/if}}
+                {{#if (eq etincelle 'd8')}}
+                <img
+                class="click de-etincelle"
+                src="/systems/penombre/assets/ui/d8-marge.png"
+                alt="|" />
+                {{else}}
+                {{/if}}
+                {{#if (eq etincelle 'd10')}}
+                <img
+                class="click de-etincelle"
+                src="/systems/penombre/assets/ui/d10-marge.png"
+                alt="|" />
+                {{else}}
+                {{/if}}
+                {{#if (eq etincelle 'd12')}}
+                <img
+                class="click de-etincelle"
+                src="/systems/penombre/assets/ui/d12-marge.png"
+                alt="|" />
+                {{else}}
+                {{/if}}
+              </div>
+            </div>
+            <br>&nbsp;<br>
+            <div class="text-gros-5">
+              {{localize "PENOMBRE.etincelle"}}
+            </div>
+          </td>
+          <td>
+            
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
 </div>

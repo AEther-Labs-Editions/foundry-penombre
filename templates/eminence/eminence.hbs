@@ -1,6 +1,8 @@
 {{log "eminence" this}}
 <section class="eminence-main standard-form">
 
+  <div class="col-1">
+
   <!-- Personnage -->
   {{> "systems/penombre/templates/eminence/partials/personnage.hbs" }}
 
@@ -9,6 +11,32 @@
 
   <!-- Conscience -->
   {{> "systems/penombre/templates/eminence/partials/conscience.hbs" }}
+
+  </div>
+
+  <div class="col-2 frise-verticale">
+      <div classe="grande-frise-verticale-1">
+      <img
+      class=""
+      src="/systems/penombre/assets/ui/marron.png"
+      alt="|" />
+      </div>
+      <div classe="grande-frise-verticale-2">
+      <img
+      class=""
+      src="/systems/penombre/assets/ui/marron.png"
+      alt="|" />
+      </div>
+      <div classe="grande-frise-verticale-3">
+      <img
+      class=""
+      src="/systems/penombre/assets/ui/marron.png"
+      alt="|" />
+      </div>
+
+  </div>
+
+  <div class="col-3">
 
   <!-- Timbre -->
   {{> "systems/penombre/templates/eminence/partials/timbre.hbs" }}
@@ -21,5 +49,7 @@
 
   <!-- Maitrises magiques -->
   {{> "systems/penombre/templates/eminence/partials/maitrises.hbs" }}
+
+  </div>
   
 </section>

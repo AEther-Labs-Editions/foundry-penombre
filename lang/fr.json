@@ -252,5 +252,28 @@
         "label": "Perdu"
       }
     }
-  }
+  },
+
+  "PENOMBRE.ame": "Ame",
+  "PENOMBRE.esprit": "Esprit",
+  "PENOMBRE.etincelle": "Etincelle",
+  "PENOMBRE.nature": "Nature",
+  "PENOMBRE.nuit": "Nuit",
+
+  "PENOMBRE.Action Scelerate" :"Action Scélérate",
+  "PENOMBRE.Action Sociale" :"Action Sociale",
+  "PENOMBRE.Action Physique" :"Action Physique",
+  "PENOMBRE.Action Mentale" :"Action Mentale",
+  "PENOMBRE.Action Perceptive" :"Action Perceptive",
+
+
+  "PENOMBRE.Personnage": "Personnage",
+  "PENOMBRE.Harmoniques": "Harmoniques",
+  "PENOMBRE.Conscience": "Conscience",
+
+  
+  "PENOMBRE.LaGamme": "Gamme",
+  "PENOMBRE.LeTon": "Ton"
+
+
 }

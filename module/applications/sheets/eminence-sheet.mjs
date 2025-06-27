@@ -36,6 +36,12 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(foundry.ap
     context.system = this.document.system
     context.systemSource = this.document.system._source
 
+    context.ame = this.document.system._source.harmoniques.ame.valeur
+    context.esprit = this.document.system._source.harmoniques.esprit.valeur
+    context.etincelle = this.document.system._source.harmoniques.etincelle.valeur
+    context.nature = this.document.system._source.harmoniques.nature.valeur
+    context.nuit = this.document.system._source.harmoniques.nuit.valeur
+
     return context
   }
 }
