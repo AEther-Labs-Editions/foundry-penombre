@@ -1,12 +1,21 @@
 <div class="eminence-personnage">
-    {{formGroup systemFields.peuple value=systemSource.peuple localize=true}}
-    {{formGroup systemFields.cle value=systemSource.cle localize=true}}
-    <div class="form-group">
-        <label>Gamme</label>
-        <div class="form-fields">{{localize (concat "PENOMBRE.Gamme." system.gamme ".label")}}</div>
+    <div class="col-1-1 text-vertical-personnage">{{localize "PENOMBRE.Personnage"}}</div>
+    <div class="col-2-1 frise-verticale">
+        <img
+        class=""
+        src="/systems/penombre/assets/ui/marron.png"
+        alt="|" />
     </div>
-    <div class="form-group">
-        <label>Ton</label>
-        <div class="form-fields">{{localize (concat "PENOMBRE.Ton." system.ton ".label")}}</div>
+    <div class="col-3-1">
+        {{formGroup systemFields.peuple value=systemSource.peuple localize=true}}
+        {{formGroup systemFields.cle value=systemSource.cle localize=true}}
+        <div class="form-group">
+            <label>{{localize "PENOMBRE.LaGamme"}}</label>
+            <div class="form-fields">{{localize (concat "PENOMBRE.Gamme." system.gamme ".label")}}</div>
+        </div>
+        <div class="form-group">
+            <label>{{localize "PENOMBRE.LeTon"}}</label>
+            <div class="form-fields">{{localize (concat "PENOMBRE.Ton." system.ton ".label")}}</div>
+        </div>
     </div>
 </div>
