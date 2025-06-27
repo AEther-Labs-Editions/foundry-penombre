@@ -1,329 +1,303 @@
 /* ---------------------------------------------
+        Variables LESS
+--------------------------------------------- */
+
+// Couleurs du thème
+@color-primary: #a56135;   // Marron principal
+@color-secondary: #56605b; // Gris
+@color-accent: #917f35;    // Doré
+@background-light: #faeed6; // Fond clair
+
+// Polices
+@font-cattedrale: "CattedraleDemo";
+@font-chocolate: "ChocoCovRainBold";
+
+// Tailles
+@font-size-base: 17px;
+@font-size-large: 29px;
+@font-size-xlarge: 30px;
+
+// Dimensions des éléments
+@dice-size: 20px;
+@case-size: 85px;
+@border-radius: 6px;
+
+/* ---------------------------------------------
         Fonts
 --------------------------------------------- */
 
 @font-face {
-  font-family: "CattedraleDemo";
+  font-family: @font-cattedrale;
   src: url(/systems/penombre/fonts/Cattedrale-Demo/Cattedrale-Demo-Regular.ttf);
 }
 
 @font-face {
-  font-family: "ChocoCovRainBold";
+  font-family: @font-chocolate;
   src: url(/systems/penombre/fonts/chocolate-covered-raindrops/Chocolate%20Covered%20Raindrops%20BOLD.ttf);
 }
 
+/* ---------------------------------------------
+        Mixins
+--------------------------------------------- */
+
+// Mixin pour le texte vertical
+.vertical-text(@color: @color-primary) {
+  writing-mode: vertical-rl;
+  text-orientation: sideways-left;
+  font-family: @font-cattedrale;
+  color: @color;
+  font-size: @font-size-base;
+  text-align: center;
+}
+
+// Mixin pour les éléments de dé
+.dice-element(@size: @dice-size) {
+  width: @size;
+  height: @size;
+}
+
+// Mixin pour les cases de mouvement
+.case-de-mouve(@margin-left: 0px) {
+  float: none;
+  margin-left: @margin-left;
+  width: @case-size;
+  height: @case-size;
+}
+
+// Mixin pour les sections principales
+.section-style() {
+  float: none;
+  flex-direction: column;
+  border: 1px solid @color-primary;
+  padding: 2px;
+  border-radius: @border-radius;
+}
 
 /* ---------------------------------------------
         Eminence
 --------------------------------------------- */
 
-.eminence .eminence-content {
-  overflow: auto;
-}
+.eminence {
+  
+  .eminence-content {
+    overflow: auto;
+    background-color: @background-light;
+    font-family: @font-cattedrale;
+    color: @color-primary;
+    font-size: @font-size-base;
 
-/* Si et seulement si on est en mode clair (et pas sombre) de la fiche */
-.eminence .eminence-content {
-  background-color: #faeed6;
-}
+    // Styles pour les inputs
+    input,
+    select {
+      border-color: @color-primary;
+      color: @color-secondary;
+      font-family: @font-chocolate;
+      font-size: @font-size-large;
+    }
 
-.eminence .eminence-content .eminence-main {
-  width: 1100px;
-  display: flex;
-  display: table;
-  clear: both;
-}
+    // Structure principale
+    .eminence-main {
+      width: 1100px;
+      display: flex;
+      display: table;
+      clear: both;
+    }
 
-.eminence .eminence-content .col-1 {
-  width: 450px;
-  float: left;
-  display: table;
-  clear: both;
-}
+    // Colonnes
+    .col-1 {
+      width: 450px;
+      float: left;
+      display: table;
+      clear: both;
+    }
 
-.eminence .eminence-content .col-2 {
-  width: 23px;
-  float: left;
-  height: 500px;
-  padding: 0 3px;
-}
+    .col-2 {
+      width: 23px;
+      float: left;
+      height: 500px;
+      padding: 0 3px;
 
-.eminence .eminence-content .col-3 {
-  width: 625px;
-  float: left;
-}
+      .grande-frise-verticale-1,
+      .grande-frise-verticale-2,
+      .grande-frise-verticale-3 {
+        flex-direction: column;
+      }
+    }
 
-.eminence .eminence-content .col-2 .grande-frise-verticale-1,
-.eminence .eminence-content .col-2 .grande-frise-verticale-2,
-.eminence .eminence-content .col-2 .grande-frise-verticale-3 {
-  flex-direction: column;
-}
+    .col-3 {
+      width: 625px;
+      float: left;
+    }
 
-.eminence .eminence-content .col-1-1 {
-  width: 25px;
-  float: left;
-}
+    .col-1-1 {
+      width: 25px;
+      float: left;
+    }
 
-.eminence .eminence-content .col-2-1 {
-  width: 8px;
-  float: left;
-}
+    .col-2-1 {
+      width: 8px;
+      float: left;
+    }
 
-.eminence .eminence-content .col-3-1 {
-  width: 410px;
-  float: left;
-  flex-direction: column;
-  padding-left: 4px;
-}
+    .col-3-1 {
+      width: 410px;
+      float: left;
+      flex-direction: column;
+      padding-left: 4px;
+    }
 
-.eminence .eminence-content .eminence-personnage,
-.eminence .eminence-content .eminence-harmoniques,
-.eminence .eminence-content .eminence-conscience,
-.eminence .eminence-content .eminence-timbre,
-.eminence .eminence-content .eminence-pouvoirs,
-.eminence .eminence-content .eminence-atouts,
-.eminence .eminence-content .eminence-maitrises {
-  float: none;
-  flex-direction: column;
-  border: 1px solid #a56135;
-  padding: 2px;
-  border-radius: 6px;
-}
+    // Sections principales avec mixin
+    .eminence-personnage,
+    .eminence-harmoniques,
+    .eminence-conscience,
+    .eminence-timbre,
+    .eminence-pouvoirs,
+    .eminence-atouts,
+    .eminence-maitrises {
+      .section-style();
+    }
 
+    // Hauteurs spécifiques
+    .eminence-personnage {
+      height: 200px;
+    }
 
-.eminence .eminence-content .eminence-personnage {
-  height: 200px;
-}
+    .eminence-harmoniques {
+      height: 475px;
+    }
 
-.eminence .eminence-content .eminence-harmoniques {
-  height: 475px;
-}
+    .eminence-conscience {
+      height: 600px;
+    }
 
-.eminence .eminence-content .eminence-conscience {
-  height: 600px;
-}
+    // Styles de texte avec classes utilitaires
+    .text {
+      .font-doree {
+        color: @color-accent;
+      }
 
+      .font-grise {
+        color: @color-secondary;
+      }
 
-/* */
-.eminence .eminence-content .text .font-doree {
-  color: #917f35;
-}
+      .font-marron {
+        color: @color-primary;
+      }
 
-/* */
-.eminence .eminence-content .text .font-grise {
-  color: #56605b;
-}
+      .font-chocolate {
+        font-family: @font-chocolate;
+      }
 
-/* */
-.eminence .eminence-content .text .font-marron {
-  color: #a56135;
-}
+      .font-cattedrale {
+        font-family: @font-cattedrale;
+      }
+    }
 
-/* */
-.eminence .eminence-content .text .font-chocolate {
-  font-family: "ChocoCovRainBold";
-}
+    // Textes verticaux avec mixins
+    .text-vertical-personnage {
+      .vertical-text(@color-primary);
+    }
 
-/* */
-.eminence .eminence-content .text .font-cattedrale {
-  font-family: "CattedraleDemo";
-}
+    .text-vertical-harmoniques {
+      .vertical-text(@color-secondary);
+    }
 
+    .text-vertical-conscience {
+      .vertical-text(@color-accent);
+    }
 
-.eminence .eminence-content {
-  font-family: "CattedraleDemo";
-  color: #a56135;
-  font-size: 17px;
-}
+    // Section harmoniques
+    .eminence-harmoniques {
+      table {
+        width: 380px;
 
-.eminence .eminence-content input,
-.eminence .eminence-content select {
-  border-color: #a56135;
-  color: #56605b;
-  font-family: "ChocoCovRainBold";
-  font-size: 29px;
-}
+        tr {
+          width: 600px;
 
+          &:nth-child(odd),
+          &:nth-child(even) {
+            background-color: transparent;
+          }
+        }
+      }
 
-.eminence .eminence-content .text-vertical-personnage {
-  writing-mode: vertical-rl;
-  text-orientation: sideways-left;
-  font-family: "CattedraleDemo";
-  color: #a56135;
-  font-size: 17px;
-  text-align: center;
-}
+      .case-de {
+        width: @case-size;
+      }
 
-.eminence .eminence-content .text-vertical-harmoniques {
-  writing-mode: vertical-rl;
-  text-orientation: sideways-left;
-  font-family: "CattedraleDemo";
-  color: #56605b;
-  font-size: 17px;
-  text-align: center;
-}
+      .col-3-1 {
+        .col-2-3 {
+          float: none;
+          width: 400px;
+        }
 
-.eminence .eminence-content .text-vertical-conscience {
-  writing-mode: vertical-rl;
-  text-orientation: sideways-left;
-  font-family: "CattedraleDemo";
-  color: #917f35;
-  font-size: 17px;
-  text-align: center;
-}
+        .col-1-3 {
+          float: left;
+          width: 410px;
+        }
+      }
 
-/* */
-.eminence .eminence-content .eminence-harmoniques table {
-  width: 380px;
-  /* background-color: green; */
-} 
+      // Cases de mouvement avec mixin
+      .case-de-mouve-1 {
+        .case-de-mouve(40px);
+      }
 
-.eminence .eminence-content .eminence-harmoniques table tr {
-  width: 600px;
-}
+      .case-de-mouve-2 {
+        .case-de-mouve(-40px);
+      }
 
-.eminence .eminence-content .eminence-harmoniques table tr:nth-child(odd) {
-  background-color: transparent;
-}
+      .case-de-mouve-3 {
+        .case-de-mouve(10px);
+      }
 
-.eminence .eminence-content .eminence-harmoniques table tr:nth-child(even) {
-  background-color: transparent;
-}
+      .case-de-mouve-4 {
+        .case-de-mouve(5px);
+      }
 
-.eminence .eminence-content .eminence-harmoniques .case-de {
-  width: 85px;
-}
+      .case-de-mouve-5 {
+        .case-de-mouve(65px);
+      }
 
-.eminence .eminence-content .eminence-harmoniques .col-3-1 .col-2-3 {
-  float: none;
-  width: 400px;
-  /* background-color: yellow; */
-}
+      .flexible {
+        position: relative;
+        display: flex;
+      }
 
-.eminence .eminence-content .eminence-harmoniques .col-3-1 .col-1-3 {
-  float: left;
-  width: 410px;
-}
+      .absolue {
+        position: absolute;
+        z-index: 5;
+      }
+    }
 
+    // Éléments harmoniques
+    .eminence-harmonique {
+      
+      // Dés avec z-index
+      .de-d-ame,
+      .de-d-esprit,
+      .de-d-etincelle,
+      .de-de-nature,
+      .de-de-nuit {
+        z-index: 3;
+      }
 
-.eminence .eminence-content .eminence-harmoniques .case-de-mouve-1 {
-  float: none;
-  margin-left: 40px;
-  width: 85px;
-  height: 85px;
-}
+      // Tailles des dés avec mixin
+      .de-ame,
+      .de-esprit,
+      .de-etincelle,
+      .de-nature,
+      .de-nuit {
+        .dice-element();
+      }
 
-.eminence .eminence-content .eminence-harmoniques .case-de-mouve-2 {
-  float: none;
-  margin-left: -40px;
-  width: 85px;
-  height: 85px;
-}
-
-.eminence .eminence-content .eminence-harmoniques .case-de-mouve-3 {
-  float: none;
-  margin-left: 10px;
-  width: 85px;
-  height: 85px;
-}
-
-.eminence .eminence-content .eminence-harmoniques .case-de-mouve-4 {
-  float:none;
-  margin-left: 5px;
-  width: 85px;
-  height: 85px;
-}
-
-.eminence .eminence-content .eminence-harmoniques .case-de-mouve-5 {
-  float: none;
-  margin-left: 65px;
-  width: 85px;
-  height: 85px;
-}
-
-.eminence .eminence-content .eminence-harmoniques .flexible {
-  position: relative;
-  display: flex;
-}
-
-.eminence .eminence-content .eminence-harmoniques .absolue {
-  position: absolute;
-  z-index: 5;
-}
-
-.eminence .eminence-content .eminence-harmonique .de-d-ame {
-  z-index: 3;
-  /* width: 30px; */
-  /* margin-left: -50px; */
-  /* margin-top: -50px; */
-}
-.eminence .eminence-content .eminence-harmonique .de-ame {
-  width: 20px;
-  height: 20px;
-}
-
-.eminence .eminence-content .eminence-harmonique .de-d-esprit {
-  z-index: 3;
-  /* width: 30px; */
-  /* margin-top: -50px; */
-}
-.eminence .eminence-content .eminence-harmonique .de-esprit {
-  width: 20px;
-  height: 20px;
-}
-
-.eminence .eminence-content .eminence-harmonique .de-d-etincelle {
-  z-index: 3;
-  /* width: 30px; */
-  /* margin-left: -50px; */
-  /* margin-top: -50px; */
-}
-.eminence .eminence-content .eminence-harmonique .de-etincelle {
-  width: 20px;
-  height: 20px;
-}
-
-.eminence .eminence-content .eminence-harmonique .de-de-nature {
-  z-index: 3;
-  /* width: 30px; */
-  /* margin-top: -50px; */
-}
-.eminence .eminence-content .eminence-harmonique .de-nature {
-  width: 20px;
-  height: 20px;
-}
-
-.eminence .eminence-content .eminence-harmonique .de-de-nuit {
-  z-index: 3;
-  /* width: 30px; */
-  /* margin-left: 50px; */
-  /* margin-top: -50px; */
-}
-.eminence .eminence-content .eminence-harmonique .de-nuit {
-  width: 20px;
-  height: 20px;
-}
-
-.eminence .eminence-content .eminence-harmonique .text-gros-1 {
-  float: none;
-  font-size: 30px;
-}
-
-.eminence .eminence-content .eminence-harmonique .text-gros-2 {
-  float: none;
-  font-size: 30px;
-}
-
-.eminence .eminence-content .eminence-harmonique .text-gros-3 {
-  float: none;
-  font-size: 30px;
-}
-
-.eminence .eminence-content .eminence-harmonique .text-gros-4 {
-  float: none;
-  font-size: 30px;
-}
-
-.eminence .eminence-content .eminence-harmonique .text-gros-1 {
-  float: none;
-  font-size: 30px;
+      // Textes gros (génération avec boucle LESS)
+      .text-gros-1,
+      .text-gros-2,
+      .text-gros-3,
+      .text-gros-4 {
+        float: none;
+        font-size: @font-size-xlarge;
+      }
+    }
+  }
 }
