@@ -4,8 +4,20 @@
     <img class="" src="/systems/penombre/assets/ui/marron.png" alt="|" />
   </div>
   <div class="col-3-1">
+    {{#if unlocked}}
     {{formGroup systemFields.peuple value=systemSource.peuple localize=true}}
     {{formGroup systemFields.cle value=systemSource.cle localize=true}}
+    {{else}}
+    <div class="form-group">
+      <label>{{localize "PENOMBRE.ui.peuple"}}</label>
+      <div class="form-fields">{{localize (concat "PENOMBRE.Peuple." system.peuple ".label")}}</div>
+    </div>
+    <div class="form-group">
+      <label>{{localize "PENOMBRE.ui.cle"}}</label>
+      <div class="form-fields">{{localize (concat "PENOMBRE.Cle." system.cle ".label")}}</div>
+    </div>
+    {{/if}}
+
     <div class="form-group">
       <label>{{localize "PENOMBRE.ui.gamme"}}</label>
       <div class="form-fields">{{localize (concat "PENOMBRE.Gamme." system.gamme ".label")}}</div>
@@ -14,5 +26,6 @@
       <label>{{localize "PENOMBRE.ui.ton"}}</label>
       <div class="form-fields">{{localize (concat "PENOMBRE.Ton." system.ton ".label")}}</div>
     </div>
+
   </div>
 </div>
