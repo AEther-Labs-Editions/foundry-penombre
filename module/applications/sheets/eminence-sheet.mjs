@@ -44,6 +44,7 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
       templates: ["atouts.hbs", "conscience.hbs", "harmoniques.hbs", "maitrises.hbs", "personnage.hbs", "pouvoirs.hbs", "timbre.hbs"].map((t) =>
         systemPath(`templates/eminence/partials/${t}`),
       ),
+      scrollable: [""],
     },
   }
 
@@ -87,6 +88,8 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
     context.locked = this.isPlayMode
 
     context.styleJeu = game.settings.get("penombre", "styleJeu")
+
+    context.pouvoirs = this.document.itemTypes.pouvoir
 
     console.log("EminenceSheet._prepareContext", context)
     return context

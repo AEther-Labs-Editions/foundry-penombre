@@ -28,9 +28,11 @@ export default class PouvoirSheet extends HandlebarsApplicationMixin(foundry.app
 
     context.fields = this.document.schema.fields
     context.systemFields = this.document.system.schema.fields
+    context.systemSource = this.document.system._source
     context.document = this.document
     context.system = this.document.system
-    context.systemSource = this.document.system._source
+
+    context.item = this.document
 
     return context
   }

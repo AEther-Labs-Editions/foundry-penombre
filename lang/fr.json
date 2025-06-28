@@ -17,6 +17,17 @@
         "peuple": {
           "label": "Peuple"
         },
+        "potentiel": {
+          "pouvoirs": {
+            "label": "Potentiel"
+          },
+          "atouts": {
+            "label": "Potentiel"
+          },
+          "maitrises": {
+            "label": "Potentiel"
+          }
+        },
         "harmoniques": {
           "ame": {
             "valeur": {

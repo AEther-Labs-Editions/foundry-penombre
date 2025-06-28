@@ -1,3 +1,19 @@
+{{log "EminenceSheet - Partials - Pouvoirs" this }}
 <div class="eminence-pouvoirs">
-    
+    <h1>Pouvoirs</h1>
+    <div class="content">
+        <div class="potentiel">
+            {{formGroup systemFields.potentiel.fields.pouvoirs value=systemSource.potentiel.pouvoirs localize=true disabled=locked}}
+        </div>
+        <div class="pouvoirs">
+            {{#each pouvoirs as |pouvoir|}}
+                {{log 'pouvoir' pouvoir }}
+                <input type="checkbox" {{#if pouvoir.system.utilise}}checked{{/if}}></input>
+                <label>{{pouvoir.name}}</label>                
+                {{pouvoir.system.description}}
+                {{pouvoir.system.type}}
+                <br>
+            {{/each}}
+        </div>
+    </div>
 </div>
