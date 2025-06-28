@@ -151,7 +151,14 @@ penombre-toggle-switch[checked] thumb {
 }
 
 .eminence .eminence-content .eminence-conscience {
-  height: 600px;
+  height: 650px;
+}
+
+.eminence .eminence-content .eminence-conscience .cadre-complications {
+  border: 1px solid #917f35;
+  padding: 2px;
+  padding-left: 10px;
+  border-radius: 4px;
 }
 
 
@@ -375,26 +382,31 @@ penombre-toggle-switch[checked] thumb {
 */
 
 .eminence .eminence-content .eminence-harmoniques .text-gros-1 {
+  color: #56605b;
   float: none;
   font-size: 25px;
 }
 
 .eminence .eminence-content .eminence-harmoniques .text-gros-2 {
+  color: #56605b;
   float: none;
   font-size: 25px;
 }
 
 .eminence .eminence-content .eminence-harmoniques .text-gros-3 {
+  color: #56605b;
   float: none;
   font-size: 25px;
 }
 
 .eminence .eminence-content .eminence-harmoniques .text-gros-4 {
+  color: #56605b;
   float: none;
   font-size: 25px;
 }
 
 .eminence .eminence-content .eminence-harmoniques .text-gros-5 {
+  color: #56605b;
   float: none;
   font-size: 25px;
 }
