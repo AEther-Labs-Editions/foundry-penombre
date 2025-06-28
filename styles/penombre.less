@@ -1,11 +1,13 @@
+@import "./elements/_index.less";
+
 /* ---------------------------------------------
         Variables LESS
 --------------------------------------------- */
 
 // Couleurs du thème
-@color-primary: #a56135;   // Marron principal
+@color-primary: #a56135; // Marron principal
 @color-secondary: #56605b; // Gris
-@color-accent: #917f35;    // Doré
+@color-accent: #917f35; // Doré
 @background-light: #faeed6; // Fond clair
 
 // Polices
@@ -73,230 +75,234 @@
   border-radius: @border-radius;
 }
 
-/* ---------------------------------------------
+.penombre {
+  /* ---------------------------------------------
         Eminence
 --------------------------------------------- */
 
-.eminence {
-  
-  .eminence-content {
-    overflow: auto;
-    background-color: @background-light;
-    font-family: @font-cattedrale;
-    color: @color-primary;
-    font-size: @font-size-base;
+  &.eminence {
+    .eminence-content {
+      overflow: auto;
+      background-color: @background-light; /* Si et seulement si on est en mode clair (et pas sombre) de la fiche */
+      font-family: @font-cattedrale;
+      color: @color-primary;
+      font-size: @font-size-base;
 
-    // Styles pour les inputs
-    input,
-    select {
-      border-color: @color-primary;
-      color: @color-secondary;
-      font-family: @font-chocolate;
-      font-size: @font-size-large;
-    }
-
-    // Structure principale
-    .eminence-main {
-      width: 1100px;
-      display: flex;
-      display: table;
-      clear: both;
-    }
-
-    // Colonnes
-    .col-1 {
-      width: 450px;
-      float: left;
-      display: table;
-      clear: both;
-    }
-
-    .col-2 {
-      width: 23px;
-      float: left;
-      height: 500px;
-      padding: 0 3px;
-
-      .grande-frise-verticale-1,
-      .grande-frise-verticale-2,
-      .grande-frise-verticale-3 {
-        flex-direction: column;
-      }
-    }
-
-    .col-3 {
-      width: 625px;
-      float: left;
-    }
-
-    .col-1-1 {
-      width: 25px;
-      float: left;
-    }
-
-    .col-2-1 {
-      width: 8px;
-      float: left;
-    }
-
-    .col-3-1 {
-      width: 410px;
-      float: left;
-      flex-direction: column;
-      padding-left: 4px;
-    }
-
-    // Sections principales avec mixin
-    .eminence-personnage,
-    .eminence-harmoniques,
-    .eminence-conscience,
-    .eminence-timbre,
-    .eminence-pouvoirs,
-    .eminence-atouts,
-    .eminence-maitrises {
-      .section-style();
-    }
-
-    // Hauteurs spécifiques
-    .eminence-personnage {
-      height: 200px;
-    }
-
-    .eminence-harmoniques {
-      height: 475px;
-    }
-
-    .eminence-conscience {
-      height: 600px;
-    }
-
-    // Styles de texte avec classes utilitaires
-    .text {
-      .font-doree {
-        color: @color-accent;
-      }
-
-      .font-grise {
+      // Styles pour les inputs
+      input,
+      select {
+        border-color: @color-primary;
         color: @color-secondary;
-      }
-
-      .font-marron {
-        color: @color-primary;
-      }
-
-      .font-chocolate {
         font-family: @font-chocolate;
+        font-size: @font-size-large;
       }
 
-      .font-cattedrale {
-        font-family: @font-cattedrale;
+      // Structure principale
+      .eminence-main {
+        width: 1100px;
+        display: flex;
+        display: table;
+        clear: both;
       }
-    }
 
-    // Textes verticaux avec mixins
-    .text-vertical-personnage {
-      .vertical-text(@color-primary);
-    }
+      // Colonnes
+      .col-1 {
+        width: 450px;
+        float: left;
+        display: table;
+        clear: both;
+      }
 
-    .text-vertical-harmoniques {
-      .vertical-text(@color-secondary);
-    }
+      .col-2 {
+        width: 23px;
+        float: left;
+        height: 500px;
+        padding: 0 3px;
 
-    .text-vertical-conscience {
-      .vertical-text(@color-accent);
-    }
-
-    // Section harmoniques
-    .eminence-harmoniques {
-      table {
-        width: 380px;
-
-        tr {
-          width: 600px;
-
-          &:nth-child(odd),
-          &:nth-child(even) {
-            background-color: transparent;
-          }
+        .grande-frise-verticale-1,
+        .grande-frise-verticale-2,
+        .grande-frise-verticale-3 {
+          flex-direction: column;
         }
       }
 
-      .case-de {
-        width: @case-size;
+      .col-3 {
+        width: 625px;
+        float: left;
+      }
+
+      .col-1-1 {
+        width: 25px;
+        float: left;
+      }
+
+      .col-2-1 {
+        width: 8px;
+        float: left;
       }
 
       .col-3-1 {
-        .col-2-3 {
-          float: none;
+        width: 410px;
+        float: left;
+        flex-direction: column;
+        padding-left: 4px;
+      }
+
+      // Sections principales avec mixin
+      .eminence-personnage,
+      .eminence-harmoniques,
+      .eminence-conscience,
+      .eminence-timbre,
+      .eminence-pouvoirs,
+      .eminence-atouts,
+      .eminence-maitrises {
+        .section-style();
+      }
+
+      // Hauteurs spécifiques
+      .eminence-personnage {
+        height: 200px;
+      }
+
+      .eminence-harmoniques {
+        height: 475px;
+      }
+
+      .eminence-conscience {
+        height: 600px;
+      }
+
+      // Styles de texte avec classes utilitaires
+      .text {
+        .font-doree {
+          color: @color-accent;
+        }
+
+        .font-grise {
+          color: @color-secondary;
+        }
+
+        .font-marron {
+          color: @color-primary;
+        }
+
+        .font-chocolate {
+          font-family: @font-chocolate;
+        }
+
+        .font-cattedrale {
+          font-family: @font-cattedrale;
+        }
+      }
+
+      // Textes verticaux avec mixins
+      .text-vertical-personnage {
+        .vertical-text(@color-primary);
+      }
+
+      .text-vertical-harmoniques {
+        .vertical-text(@color-secondary);
+      }
+
+      .text-vertical-conscience {
+        .vertical-text(@color-accent);
+      }
+
+      // Section harmoniques
+      .eminence-harmoniques {
+        .click:hover {
+          cursor: pointer;
+          filter: drop-shadow(0px 0px 6px #af010a);
+        }
+        table {
           width: 400px;
+
+          tr {
+            width: 600px;
+
+            &:nth-child(odd),
+            &:nth-child(even) {
+              background-color: transparent;
+            }
+          }
         }
 
-        .col-1-3 {
-          float: left;
-          width: 410px;
+        .case-de {
+          width: @case-size;
+        }
+
+        .col-3-1 {
+          .col-2-3 {
+            float: none;
+            width: 400px;
+          }
+
+          .col-1-3 {
+            float: left;
+            width: 410px;
+          }
+        }
+
+        // Cases de mouvement avec mixin
+        .case-de-mouve-1 {
+          .case-de-mouve(40px);
+        }
+
+        .case-de-mouve-2 {
+          .case-de-mouve(-40px);
+        }
+
+        .case-de-mouve-3 {
+          .case-de-mouve(10px);
+        }
+
+        .case-de-mouve-4 {
+          .case-de-mouve(5px);
+        }
+
+        .case-de-mouve-5 {
+          .case-de-mouve(65px);
+        }
+
+        .flexible {
+          position: relative;
+          display: flex;
+        }
+
+        .absolue {
+          position: absolute;
+          z-index: 5;
         }
       }
 
-      // Cases de mouvement avec mixin
-      .case-de-mouve-1 {
-        .case-de-mouve(40px);
-      }
+      // Éléments harmoniques
+      .eminence-harmonique {
+        // Dés avec z-index
+        .de-d-ame,
+        .de-d-esprit,
+        .de-d-etincelle,
+        .de-de-nature,
+        .de-de-nuit {
+          z-index: 3;
+        }
 
-      .case-de-mouve-2 {
-        .case-de-mouve(-40px);
-      }
+        // Tailles des dés avec mixin
+        .de-ame,
+        .de-esprit,
+        .de-etincelle,
+        .de-nature,
+        .de-nuit {
+          .dice-element();
+        }
 
-      .case-de-mouve-3 {
-        .case-de-mouve(10px);
-      }
-
-      .case-de-mouve-4 {
-        .case-de-mouve(5px);
-      }
-
-      .case-de-mouve-5 {
-        .case-de-mouve(65px);
-      }
-
-      .flexible {
-        position: relative;
-        display: flex;
-      }
-
-      .absolue {
-        position: absolute;
-        z-index: 5;
-      }
-    }
-
-    // Éléments harmoniques
-    .eminence-harmonique {
-      
-      // Dés avec z-index
-      .de-d-ame,
-      .de-d-esprit,
-      .de-d-etincelle,
-      .de-de-nature,
-      .de-de-nuit {
-        z-index: 3;
-      }
-
-      // Tailles des dés avec mixin
-      .de-ame,
-      .de-esprit,
-      .de-etincelle,
-      .de-nature,
-      .de-nuit {
-        .dice-element();
-      }
-
-      // Textes gros (génération avec boucle LESS)
-      .text-gros-1,
-      .text-gros-2,
-      .text-gros-3,
-      .text-gros-4 {
-        float: none;
-        font-size: @font-size-xlarge;
+        // Textes gros
+        .text-gros-1,
+        .text-gros-2,
+        .text-gros-3,
+        .text-gros-4 {
+          float: none;
+          font-size: @font-size-xlarge;
+        }
       }
     }
   }

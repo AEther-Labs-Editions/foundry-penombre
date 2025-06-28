@@ -251,29 +251,26 @@
       "perdu": {
         "label": "Perdu"
       }
+    },
+    "ui": {
+      "section": {
+        "personnage": "Personnage",
+        "harmoniques": "Harmoniques",
+        "conscience": "Conscience"
+      },
+      "ame": "Âme",
+      "esprit": "Esprit",
+      "etincelle": "Étincelle",
+      "nature": "Nature",
+      "nuit": "Nuit",
+      "actionScelerate": "Action Scélérate",
+      "actionSociale": "Action Sociale",
+      "actionPhysique": "Action Physique",
+      "actionMentale": "Action Mentale",
+      "actionPerceptive": "Action Perceptive",
+      "gamme": "Gamme",
+      "ton": "Ton",
+      "modeEdition": "Bascule entre le Mode Éditer et le Mode Jouer"
     }
-  },
-
-  "PENOMBRE.ame": "Ame",
-  "PENOMBRE.esprit": "Esprit",
-  "PENOMBRE.etincelle": "Etincelle",
-  "PENOMBRE.nature": "Nature",
-  "PENOMBRE.nuit": "Nuit",
-
-  "PENOMBRE.Action Scelerate" :"Action Scélérate",
-  "PENOMBRE.Action Sociale" :"Action Sociale",
-  "PENOMBRE.Action Physique" :"Action Physique",
-  "PENOMBRE.Action Mentale" :"Action Mentale",
-  "PENOMBRE.Action Perceptive" :"Action Perceptive",
-
-
-  "PENOMBRE.Personnage": "Personnage",
-  "PENOMBRE.Harmoniques": "Harmoniques",
-  "PENOMBRE.Conscience": "Conscience",
-
-  
-  "PENOMBRE.LaGamme": "Gamme",
-  "PENOMBRE.LeTon": "Ton"
-
-
+  }
 }

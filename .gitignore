@@ -1,7 +1,6 @@
 # IDE
-.idea/
 .vs/
-styles/*.css
+styles/**/*.css
 
 # Node Modules
 node_modules/
