@@ -58,7 +58,7 @@ penombre-toggle-switch[checked] thumb {
         Mixins
 --------------------------------------------- */
 .penombre {
-  /* ---------------------------------------------
+/* ---------------------------------------------
         Eminence
 --------------------------------------------- */
 }
@@ -70,6 +70,13 @@ penombre-toggle-switch[checked] thumb {
 /* Si et seulement si on est en mode clair (et pas sombre) de la fiche */
 .eminence .eminence-content {
   background-color: #faeed6;
+}
+
+.eminence .eminence-content .eminence-personnage .logo-frame {
+  display: flex;
+  justify-content: center;
+  height: 150px;
+  width: 180px;
 }
 
 .eminence .eminence-content .eminence-harmoniques .click:hover {
@@ -143,7 +150,7 @@ penombre-toggle-switch[checked] thumb {
 
 
 .eminence .eminence-content .eminence-personnage {
-  height: 200px;
+  height: 300px;
 }
 
 .eminence .eminence-content .eminence-harmoniques {
