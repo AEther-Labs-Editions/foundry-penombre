@@ -20,7 +20,7 @@
         "harmoniques": {
           "ame": {
             "valeur": {
-              "label": "Âme"
+              "label": "Ame"
             }
           },
           "esprit": {
@@ -30,7 +30,7 @@
           },
           "etincelle": {
             "valeur": {
-              "label": "Étincelle"
+              "label": "Etincelle"
             }
           },
           "nature": {
@@ -45,7 +45,7 @@
           }
         },
         "cle": {
-          "label": "Clé"
+          "label": "Clef"
         },
         "gamme": {
           "label": "Gamme"
@@ -128,7 +128,7 @@
           "label": "Peuple"
         },
         "cle": {
-          "label": "Clé"
+          "label": "Clef"
         },
         "gamme": {
           "label": "Gamme"
@@ -140,13 +140,13 @@
     },
     "Harmonique": {
       "ame": {
-        "label": "Âme"
+        "label": "Ame"
       },
       "esprit": {
         "label": "Esprit"
       },
       "etincelle": {
-        "label": "Étincelle"
+        "label": "Etincelle"
       },
       "nature": {
         "label": "Nature"
@@ -166,7 +166,7 @@
         "label": "Centaure"
       },
       "meduse": {
-        "label": "Méduse"
+        "label": "Meduse"
       },
       "satyre": {
         "label": "Satyre"
@@ -175,7 +175,7 @@
         "label": "Minotaure"
       },
       "ameAccouchee": {
-        "label": "Âme accouchée"
+        "label": "Ame accouchee"
       },
       "opalinDeLaRomance": {
         "label": "Opalin de la Romance"
@@ -184,13 +184,13 @@
         "label": "Danseur affranchi"
       },
       "sirene": {
-        "label": "Sirène"
+        "label": "Sirene"
       },
       "banshee": {
         "label": "Banshee"
       },
       "feeNoire": {
-        "label": "Fée noire"
+        "label": "Fee noire"
       },
       "humain": {
         "label": "Humain"
@@ -199,7 +199,7 @@
         "label": "Ogre"
       },
       "geant": {
-        "label": "Géant"
+        "label": "Geant"
       }
     },
     "Gamme": {
@@ -216,7 +216,7 @@
         "label": "Horla"
       },
       "melusine": {
-        "label": "Mélusine"
+        "label": "Melusine"
       }
     },
     "Ton": {
@@ -258,9 +258,9 @@
         "harmoniques": "Harmoniques",
         "conscience": "Conscience"
       },
-      "ame": "Âme",
+      "ame": "Ame",
       "esprit": "Esprit",
-      "etincelle": "Étincelle",
+      "etincelle": "Etincelle",
       "nature": "Nature",
       "nuit": "Nuit",
       "actionScelerate": "Action Scélérate",
@@ -268,9 +268,32 @@
       "actionPhysique": "Action Physique",
       "actionMentale": "Action Mentale",
       "actionPerceptive": "Action Perceptive",
+      "peuple": "Peuple",
+      "cle": "Clef",
       "gamme": "Gamme",
       "ton": "Ton",
-      "modeEdition": "Bascule entre le Mode Éditer et le Mode Jouer"
+      "conscienceVal" : "Conscience",
+      "conscienceMax": " Conscience Max",
+      "modeEdition": "Bascule entre le Mode Éditer et le Mode Jouer",
+      "complicationsListe": "Complications :",
+      "complications": {
+        "une": {
+          "description": "Complication 1",
+          "valeur": "Valeur 1"
+        },
+        "deux": {
+          "description": "Complication 2",
+          "valeur": "Valeur 2"
+        },
+        "trois": {
+          "description": "Complication 3",
+          "valeur": "Valeur 3"
+        },
+        "quatre": {
+          "description": "Complication 4",
+          "valeur": "Valeur 4"
+        }
+      }
     }
   }
 }
