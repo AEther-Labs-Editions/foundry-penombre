@@ -24,6 +24,9 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
       contentClasses: ["eminence-content"],
       resizable: true,
     },
+    actions: {
+      editImage: EminenceSheet.#onEditImage,
+    },
   }
 
   /**
@@ -126,5 +129,30 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
     } else if (!this.isEditable && toggle) {
       toggle.remove()
     }
+  }
+
+  /**
+   * Handle changing a Document's image.
+   *
+   * @this EminenceSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @returns {Promise}
+   * @private
+   */
+  static async #onEditImage(event, target) {
+    const current = foundry.utils.getProperty(this.document, "img")
+    const { img } = this.document.constructor.getDefaultArtwork?.(this.document.toObject()) ?? {}
+    const fp = new foundry.applications.apps.FilePicker.implementation({
+      current,
+      type: "image",
+      redirectToRoot: img ? [img] : [],
+      callback: (path) => {
+        this.document.update({ img: path })
+      },
+      top: this.position.top + 40,
+      left: this.position.left + 10,
+    })
+    return fp.browse()
   }
 }

@@ -1,11 +1,11 @@
 <div class="eminence-personnage">
   <div class="col-1-1 text-vertical-personnage">{{localize "PENOMBRE.ui.section.personnage"}}</div>
   <div class="col-2-1 frise-verticale">
-    <img class="" src="/systems/penombre/assets/ui/marron.png" alt="|" />
+    <img src="/systems/penombre/assets/ui/marron.png" alt="|" />
   </div>
   <div class="col-3-1">
     <div class="logo-frame">
-      <img class="logo-img" src="{{document.img}}" height="150" data-edit="img" title="{{document.name}}" />
+      <img class="logo-img" src="{{document.img}}" data-action="editImage" height="150" data-edit="img" data-tooltip="{{document.name}}" />
     </div>
     {{#if unlocked}}
     {{formGroup systemFields.peuple value=systemSource.peuple localize=true}}
