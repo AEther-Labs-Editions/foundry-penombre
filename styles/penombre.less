@@ -20,7 +20,7 @@
 @font-size-xlarge: 30px;
 
 // Dimensions des éléments
-@dice-size: 20px;
+@dice-size: 85px;
 @case-size: 85px;
 @border-radius: 6px;
 
@@ -75,8 +75,20 @@
   border-radius: @border-radius;
 }
 
+/* ---------------------------------------------
+        Interface de Foundry VTT
+--------------------------------------------- */
+
+#pause > img {
+  content: url("/systems/penombre/assets/ui/penombre_wheel.webp");
+  height: 192px;
+  width: 192px;
+  top: -45px;
+  left: calc(50% - 96px);
+}
+
 .penombre {
-  /* ---------------------------------------------
+/* ---------------------------------------------
         Eminence
 --------------------------------------------- */
 
@@ -121,7 +133,8 @@
 
         .grande-frise-verticale-1,
         .grande-frise-verticale-2,
-        .grande-frise-verticale-3 {
+        .grande-frise-verticale-3,
+        .grande-frise-verticale-4 {
           flex-direction: column;
         }
       }
@@ -276,22 +289,14 @@
       }
 
       // Éléments harmoniques
-      .eminence-harmonique {
-        // Dés avec z-index
-        .de-d-ame,
-        .de-d-esprit,
-        .de-d-etincelle,
-        .de-de-nature,
-        .de-de-nuit {
-          z-index: 3;
-        }
-
+      .eminence-harmoniques {
         // Tailles des dés avec mixin
         .de-ame,
         .de-esprit,
         .de-etincelle,
         .de-nature,
         .de-nuit {
+          margin-left: 5px;
           .dice-element();
         }
 
