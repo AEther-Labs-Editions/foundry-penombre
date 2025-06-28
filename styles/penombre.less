@@ -182,7 +182,7 @@
       }
 
       .eminence-conscience {
-        height: 600px;
+        height: 650px;
       }
 
       // Styles de texte avec classes utilitaires
@@ -219,6 +219,16 @@
 
       .text-vertical-conscience {
         .vertical-text(@color-accent);
+      }
+
+      // Section conscience
+      .eminence.conscience {
+        .cadre-complications {
+          border: 1px solid #917f35;
+          border-radius: 4px;
+          padding: 2px;
+          padding-left: 10px;
+        }
       }
 
       // Section harmoniques
@@ -306,6 +316,7 @@
         .text-gros-3,
         .text-gros-4 {
           float: none;
+          color: @color-secondary;
           font-size: @font-size-xlarge;
         }
       }
