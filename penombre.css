@@ -72,11 +72,21 @@ penombre-toggle-switch[checked] thumb {
   background-color: #faeed6;
 }
 
+
 .eminence .eminence-content .eminence-personnage .logo-frame {
   display: flex;
+  display: table;
+  float: left;
   justify-content: center;
-  height: 150px;
-  width: 180px;
+  height: 152px;
+  width: 150px;
+  padding: 1px;
+}
+
+.eminence .eminence-content .eminence-personnage .data {
+  float: left;
+  width: 256px;
+  clear: right;
 }
 
 .eminence .eminence-content .eminence-harmoniques .click:hover {
@@ -150,15 +160,18 @@ penombre-toggle-switch[checked] thumb {
 
 
 .eminence .eminence-content .eminence-personnage {
-  height: 300px;
+  min-height: 165px;
+  color: #a56135;
 }
 
 .eminence .eminence-content .eminence-harmoniques {
-  height: 475px;
+  min-height: 500px;
+  color: #56605b;
 }
 
 .eminence .eminence-content .eminence-conscience {
-  height: 650px;
+  min-height: 655px;
+  color: #917f35;
 }
 
 .eminence .eminence-content .eminence-conscience .cadre-complications {
@@ -197,7 +210,6 @@ penombre-toggle-switch[checked] thumb {
 
 .eminence .eminence-content {
   font-family: "CattedraleDemo";
-  color: #a56135;
   font-size: 17px;
 }
 
@@ -212,39 +224,36 @@ penombre-toggle-switch[checked] thumb {
 
 .eminence .eminence-content .text-vertical-personnage {
   writing-mode: vertical-rl;
+  font-size: 19px;
   text-orientation: sideways-left;
   font-family: "CattedraleDemo";
-  color: #a56135;
-  font-size: 17px;
   text-align: center;
 }
 
 .eminence .eminence-content .text-vertical-harmoniques {
   writing-mode: vertical-rl;
+  font-size: 19px;
   text-orientation: sideways-left;
   font-family: "CattedraleDemo";
-  color: #56605b;
-  font-size: 17px;
   text-align: center;
 }
 
 .eminence .eminence-content .text-vertical-conscience {
   writing-mode: vertical-rl;
+  font-size: 19px;
   text-orientation: sideways-left;
   font-family: "CattedraleDemo";
-  color: #917f35;
-  font-size: 17px;
   text-align: center;
 }
 
 /* */
 .eminence .eminence-content .eminence-harmoniques table {
-  width: 400px;
+  /* width: 600px; */
   /* background-color: green; */
 } 
 
 .eminence .eminence-content .eminence-harmoniques table tr {
-  width: 600px;
+  /* width: 600px; */
 }
 
 .eminence .eminence-content .eminence-harmoniques table tr:nth-child(odd) {
@@ -259,17 +268,16 @@ penombre-toggle-switch[checked] thumb {
   width: 85px;
 }
 
-.eminence .eminence-content .eminence-harmoniques .col-3-1 .col-2-3 {
-  float: none;
-  width: 400px;
-  /* background-color: yellow; */
-}
-
-.eminence .eminence-content .eminence-harmoniques .col-3-1 .col-1-3 {
+.eminence .eminence-content .eminence-harmoniques .col-3-1 .col-1-2 {
   float: left;
   width: 410px;
 }
 
+.eminence .eminence-content .eminence-harmoniques .col-3-1 .col-2-2 {
+  float: none;
+  width: 400px;
+  /* background-color: yellow; */
+}
 
 .eminence .eminence-content .eminence-harmoniques .case-de-mouve-1 {
   float: none;
@@ -389,31 +397,26 @@ penombre-toggle-switch[checked] thumb {
 */
 
 .eminence .eminence-content .eminence-harmoniques .text-gros-1 {
-  color: #56605b;
   float: none;
   font-size: 25px;
 }
 
 .eminence .eminence-content .eminence-harmoniques .text-gros-2 {
-  color: #56605b;
   float: none;
   font-size: 25px;
 }
 
 .eminence .eminence-content .eminence-harmoniques .text-gros-3 {
-  color: #56605b;
   float: none;
   font-size: 25px;
 }
 
 .eminence .eminence-content .eminence-harmoniques .text-gros-4 {
-  color: #56605b;
   float: none;
   font-size: 25px;
 }
 
 .eminence .eminence-content .eminence-harmoniques .text-gros-5 {
-  color: #56605b;
   float: none;
   font-size: 25px;
 }
