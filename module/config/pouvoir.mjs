@@ -7,7 +7,7 @@ export const POUVOIR_TYPES = Object.freeze({
     id: "peuple",
     label: "PENOMBRE.Pouvoir.type.peuple.label",
   },
-  clef: {
+  cle: {
     id: "cle",
     label: "PENOMBRE.Pouvoir.type.cle.label",
   },

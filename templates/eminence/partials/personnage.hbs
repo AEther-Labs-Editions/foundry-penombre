@@ -8,24 +8,19 @@
       <img class="logo-img" src="{{document.img}}" data-action="editImage" height="150" data-edit="img" data-tooltip="{{document.name}}" />
     </div>
     <div class="data">
+      {{formGroup fields.nom value=document.name localize=true disabled=locked}}
       {{#if unlocked}}
-      {{formGroup PENOMBRE.ui.nom value=document.name localize=true}}
-      {{formGroup systemFields.peuple value=systemSource.peuple localize=true}}
-      {{formGroup systemFields.cle value=systemSource.cle localize=true}}
+        {{formGroup systemFields.peuple value=systemSource.peuple localize=true}}
+        {{formGroup systemFields.cle value=systemSource.cle localize=true}}
       {{else}}
-      <div class="form-group">
-        <label>{{localize "PENOMBRE.ui.nom"}}</label>
-        <div class="form-fields">{{document.name}}</div>
-      </div>
-
-      <div class="form-group">
-        <label>{{localize "PENOMBRE.ui.peuple"}}</label>
-        <div class="form-fields">{{localize (concat "PENOMBRE.Peuple." system.peuple ".label")}}</div>
-      </div>
-      <div class="form-group">
-        <label>{{localize "PENOMBRE.ui.cle"}}</label>
-        <div class="form-fields">{{localize (concat "PENOMBRE.Cle." system.cle ".label")}}</div>
-      </div>
+        <div class="form-group">
+          <label>{{localize "PENOMBRE.ui.peuple"}}</label>
+          <div class="form-fields">{{localize (concat "PENOMBRE.Peuple." system.peuple ".label")}}</div>
+        </div>
+        <div class="form-group">
+          <label>{{localize "PENOMBRE.ui.cle"}}</label>
+          <div class="form-fields">{{localize (concat "PENOMBRE.Harmonique." system.cle ".label")}}</div>
+        </div>
       {{/if}}
 
       <div class="form-group">
