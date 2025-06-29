@@ -16,6 +16,7 @@
 
 // Tailles
 @font-size-base: 17px;
+@font-size-middle: 19px;
 @font-size-large: 29px;
 @font-size-xlarge: 30px;
 
@@ -174,17 +175,26 @@
 
       // Hauteurs spécifiques
       .eminence-personnage {
-        height: 200px;
+        min-height: 165px;
+        
+        .logo-frame {
+          height: 152px;
+          width: 182px;
+          display: flex;
+          justify-content: center;
+          padding: 1px;
+        }
       }
 
       .eminence-harmoniques {
-        height: 475px;
+        min-height: 500px;
       }
 
       .eminence-conscience {
-        height: 600px;
+        min-height: 655px;
       }
 
+      /*
       // Styles de texte avec classes utilitaires
       .text {
         .font-doree {
@@ -207,18 +217,62 @@
           font-family: @font-cattedrale;
         }
       }
+      */
 
-      // Textes verticaux avec mixins
+      // Couleur des textes principaux
+      .eminence-personnage {
+        color: @color-primary;
+      }
+
+      .eminence-harmoniques {
+        color: @color-secondary;
+      }
+
+      .eminence-conscience {
+        color: @color-accent;
+      }
+
+
+      // Police des textes verticaux
       .text-vertical-personnage {
-        .vertical-text(@color-primary);
+        font-size: @font-size-middle;
       }
 
       .text-vertical-harmoniques {
-        .vertical-text(@color-secondary);
+        font-size: @font-size-middle;
       }
 
       .text-vertical-conscience {
-        .vertical-text(@color-accent);
+        font-size: @font-size-middle;
+      }
+
+      // Section personnage
+      .eminence-personnage {
+        .logo-frame {
+          display: flex;
+          display: table;
+          float: left;
+          justify-content: center;
+          height: 152px;
+          width: 150px;
+          padding: 1px;
+        }
+
+        .data {
+          float: left;
+          width: 256px;
+          clear: right;
+        }
+      }
+
+      // Section conscience
+      .eminence.conscience {
+        .cadre-complications {
+          border: 1px solid #917f35;
+          border-radius: 4px;
+          padding: 2px;
+          padding-left: 10px;
+        }
       }
 
       // Section harmoniques
@@ -228,11 +282,7 @@
           filter: drop-shadow(0px 0px 6px #af010a);
         }
         table {
-          width: 400px;
-
           tr {
-            width: 600px;
-
             &:nth-child(odd),
             &:nth-child(even) {
               background-color: transparent;
@@ -245,14 +295,14 @@
         }
 
         .col-3-1 {
-          .col-2-3 {
-            float: none;
-            width: 400px;
-          }
-
-          .col-1-3 {
+          .col-1-2 {
             float: left;
             width: 410px;
+          }
+
+          .col-2-2 {
+            float: none;
+            width: 400px;
           }
         }
 
@@ -306,6 +356,7 @@
         .text-gros-3,
         .text-gros-4 {
           float: none;
+          color: @color-secondary;
           font-size: @font-size-xlarge;
         }
       }
