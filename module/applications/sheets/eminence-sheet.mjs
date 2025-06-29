@@ -80,6 +80,8 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
     context.unlocked = this.isEditMode
     context.locked = this.isPlayMode
 
+    context.styleJeu = game.settings.get("penombre", "styleJeu")
+
     console.log("EminenceSheet._prepareContext", context)
     return context
   }

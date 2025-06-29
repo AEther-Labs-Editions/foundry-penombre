@@ -1,5 +1,9 @@
 <div class="eminence-timbre">
-  {{formGroup systemFields.timbre.fields.description value=systemSource.timbre.description localize=true}}  
-  {{formGroup systemFields.timbre.fields.statut value=systemSource.timbre.statut localize=true}}
-  {{formGroup systemFields.timbre.fields.peste value=systemSource.timbre.peste localize=true}}
+  {{#if (or (eq styleJeu "standard") (eq styleJeu "avance"))}}
+    {{formGroup systemFields.timbre.fields.description value=systemSource.timbre.description localize=true}}
+    {{formGroup systemFields.timbre.fields.statut value=systemSource.timbre.statut localize=true}}
+    {{formGroup systemFields.timbre.fields.peste value=systemSource.timbre.peste localize=true}}
+  {{else}}
+    <img class="logo-penombre" src="/systems/penombre/assets/ui/logo_penombre_sur_fond_clair.png" />
+  {{/if}}
 </div>

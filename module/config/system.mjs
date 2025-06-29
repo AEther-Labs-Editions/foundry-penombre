@@ -32,7 +32,7 @@ export const JETON_STATUTS = Object.freeze({
  * @type {Object}
  */
 export const SYSTEM = {
-  id: SYSTEM_ID,
+  ID: SYSTEM_ID,
   DEV_MODE,
   HARMONIQUES: EMINENCE.HARMONIQUES,
   PEUPLES: EMINENCE.PEUPLES,

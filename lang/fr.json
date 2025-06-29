@@ -295,6 +295,15 @@
           "valeur": "Valeur 4"
         }
       }
+    },
+    "Settings": {
+      "styleJeu": {
+        "name": "Style de jeu",
+        "hint": "Choisissez le style de jeu pour votre campagne.",
+        "demo": "Kit de demo",
+        "standard": "Standard",
+        "avance": "Règles avancées"
+      }
     }
   }
 }

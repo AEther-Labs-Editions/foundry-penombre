@@ -176,8 +176,11 @@ penombre-toggle-switch[checked] thumb {
   justify-content: center;
   padding: 1px;
 }
-.penombre.eminence .eminence-content .eminence-harmoniques {
-  min-height: 500px;
+.penombre.eminence .eminence-content .eminence-harmoniques.locked {
+  min-height: 400px;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques.unlocked {
+  min-height: 550px;
 }
 .penombre.eminence .eminence-content .eminence-conscience {
   min-height: 655px;

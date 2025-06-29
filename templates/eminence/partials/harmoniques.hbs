@@ -4,7 +4,7 @@
   <div class="col-2-1 frise-verticale">
     <img class="" src="/systems/penombre/assets/ui/grise.png" alt="|" />
   </div>
-  <div class="col-3-1 flexible">
+  <div class="col-3-1 flexible {{#if locked}}locked{{else}}unlocked{{/if}}">
     {{#if unlocked}}
       <div class="col-1-2">
         {{formGroup systemFields.harmoniques.fields.ame.fields.valeur value=systemSource.harmoniques.ame.valeur localize=true}}
@@ -12,9 +12,7 @@
         {{formGroup systemFields.harmoniques.fields.etincelle.fields.valeur value=systemSource.harmoniques.etincelle.valeur localize=true}}
         {{formGroup systemFields.harmoniques.fields.nature.fields.valeur value=systemSource.harmoniques.nature.valeur localize=true}}
         {{formGroup systemFields.harmoniques.fields.nuit.fields.valeur value=systemSource.harmoniques.nuit.valeur localize=true}}
-      </div>
-    {{else}}
-      <img class="logo-penombre" src="/systems/penombre/assets/ui/logo_penombre_sur_fond_clair.png" />
+      </div>      
     {{/if}}
     <div class="col-2-2 flexible">
       <table class="table-de flexible">

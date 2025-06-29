@@ -32,5 +32,20 @@ Hooks.once("init", function () {
     return `/systems/penombre/assets/ui/${value}-marge.png`
   })
 
+  game.settings.register(SYSTEM.ID, "styleJeu", {
+    name: "PENOMBRE.Settings.styleJeu.name",
+    hint: "PENOMBRE.Settings.styleJeu.hint",
+    scope: "world",
+    config: true,
+    default: "demo",
+    type: String,
+    choices: {
+      demo: "PENOMBRE.Settings.styleJeu.demo",
+      standard: "PENOMBRE.Settings.styleJeu.standard",
+      avance: "PENOMBRE.Settings.styleJeu.avance",
+    },
+    requiresReload: true,
+  })
+
   console.info("Pénombre | Système initialisé.")
 })
