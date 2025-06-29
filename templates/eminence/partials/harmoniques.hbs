@@ -6,15 +6,17 @@
   </div>
   <div class="col-3-1 flexible">
     {{#if unlocked}}
-      <div class="col-1-3">
+      <div class="col-1-2">
         {{formGroup systemFields.harmoniques.fields.ame.fields.valeur value=systemSource.harmoniques.ame.valeur localize=true}}
         {{formGroup systemFields.harmoniques.fields.esprit.fields.valeur value=systemSource.harmoniques.esprit.valeur localize=true}}
         {{formGroup systemFields.harmoniques.fields.etincelle.fields.valeur value=systemSource.harmoniques.etincelle.valeur localize=true}}
         {{formGroup systemFields.harmoniques.fields.nature.fields.valeur value=systemSource.harmoniques.nature.valeur localize=true}}
         {{formGroup systemFields.harmoniques.fields.nuit.fields.valeur value=systemSource.harmoniques.nuit.valeur localize=true}}
       </div>
+    {{else}}
+      <img class="logo-penombre" src="/systems/penombre/assets/ui/logo_penombre_sur_fond_clair.png" />
     {{/if}}
-    <div class="col-2-3 flexible">
+    <div class="col-2-2 flexible">
       <table class="table-de flexible">
         <tr class="tr-de flexible">
           <td class="flexible" title="{{localize 'PENOMBRE.ui.actionScelerate'}}">
@@ -67,7 +69,7 @@
 
           <td></td>
 
-          <td class="flexible" title="{{localize 'PENOMBRE.Action Mentale'}}">
+          <td class="flexible" title="{{localize 'PENOMBRE.ui.actionMentale'}}">
             <div class="case-de-mouve-4 flexible">
               <div class="absolue">
                 <img class="case-de" src="/systems/penombre/assets/ui/case_de_penombre.png" alt="|" />
@@ -85,7 +87,7 @@
         <tr class="tr-de flexible">
           <td></td>
 
-          <td class="flexible" title="{{localize 'PENOMBRE.Action Perceptive'}}">
+          <td class="flexible" title="{{localize 'PENOMBRE.ui.actionPerceptive'}}">
             <div class="case-de-mouve-5 flexible">
               <div class="absolue">
                 <img class="case-de" src="/systems/penombre/assets/ui/case_de_penombre.png" alt="|" />
