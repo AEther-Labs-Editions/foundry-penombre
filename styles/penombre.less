@@ -89,7 +89,7 @@
 }
 
 .penombre {
-/* ---------------------------------------------
+  /* ---------------------------------------------
         Eminence
 --------------------------------------------- */
 
@@ -192,7 +192,7 @@
 
       .eminence-harmoniques-unlocked {
         min-height: 510px;
-      }        
+      }
 
       /*
       // Styles de texte avec classes utilitaires
@@ -233,7 +233,6 @@
         min-height: 655px;
         color: @color-accent;
       }
-
 
       // Police des textes verticaux
       .text-vertical-personnage,
@@ -379,11 +378,20 @@
           }
 
           .clic-jeton:hover {
-              cursor: pointer;
+            cursor: pointer;
+          }
+        }
+
+        .div-jetons {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr); /* 5 colonnes égales */
+          gap: 10px;
+          padding: 10px;
+          .jeton {
+            text-align: center;
           }
         }
       }
-
     }
   }
 }

@@ -68,7 +68,7 @@ penombre-toggle-switch[checked] thumb {
   left: calc(50% - 96px);
 }
 .penombre {
-/* ---------------------------------------------
+  /* ---------------------------------------------
         Eminence
 --------------------------------------------- */
 }
@@ -167,9 +167,6 @@ penombre-toggle-switch[checked] thumb {
   padding: 2px;
   border-radius: 6px;
 }
-.penombre.eminence .eminence-content .eminence-personnage {
-  min-height: 165px;
-}
 .penombre.eminence .eminence-content .eminence-personnage .logo-frame {
   height: 152px;
   width: 182px;
@@ -183,23 +180,22 @@ penombre-toggle-switch[checked] thumb {
 .penombre.eminence .eminence-content .eminence-harmoniques-unlocked {
   min-height: 510px;
 }
-.penombre.eminence .eminence-content .eminence-conscience {
-  min-height: 655px;
-}
 .penombre.eminence .eminence-content .eminence-personnage {
+  min-height: 165px;
   color: #a56135;
 }
 .penombre.eminence .eminence-content .eminence-harmoniques {
   color: #56605b;
 }
 .penombre.eminence .eminence-content .eminence-conscience {
+  min-height: 655px;
   color: #917f35;
 }
 .penombre.eminence .eminence-content .text-vertical-personnage,
 .penombre.eminence .eminence-content .text-vertical-harmoniques,
 .penombre.eminence .eminence-content .text-vertical-conscience {
-  writing-mode: vertical-rl;
   font-size: 19px;
+  writing-mode: vertical-rl;
   text-orientation: sideways-left;
 }
 .penombre.eminence .eminence-content .eminence-personnage .logo-frame {
@@ -298,22 +294,28 @@ penombre-toggle-switch[checked] thumb {
   color: #56605b;
   font-size: 30px;
 }
-
-.eminence .eminence-content .eminence-conscience .div-jetons,
-.eminence .eminence-content .eminence-conscience .tr-jetons {
+.penombre.eminence .eminence-content .eminence-conscience .div-jetons,
+.penombre.eminence .eminence-content .eminence-conscience .tr-jetons {
   width: 400px;
 }
-
-.eminence .eminence-content .eminence-conscience .td-jetons {
+.penombre.eminence .eminence-content .eminence-conscience .td-jetons {
   width: 35px;
   height: 35px;
 }
-
-.eminence .eminence-content .eminence-conscience .td-jetons .clic-jeton:hover {
-  cursor: pointer;
-}
-
-.eminence .eminence-content .eminence-conscience .td-jetons img.dropshadow {
+.penombre.eminence .eminence-content .eminence-conscience .td-jetons img.dropshadow {
   -webkit-filter: drop-shadow(5px 5px 5px #666666);
   filter: drop-shadow(5px 5px 5px #666666);
+}
+.penombre.eminence .eminence-content .eminence-conscience .td-jetons .clic-jeton:hover {
+  cursor: pointer;
+}
+.penombre.eminence .eminence-content .eminence-conscience .div-jetons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* 5 colonnes égales */
+  gap: 10px;
+  padding: 10px;
+}
+.penombre.eminence .eminence-content .eminence-conscience .div-jetons .jeton {
+  text-align: center;
 }
