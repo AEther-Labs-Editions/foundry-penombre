@@ -26,6 +26,7 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
     },
     actions: {
       editImage: EminenceSheet.#onEditImage,
+      clicJeton: EminenceSheet.#onClicJeton,
     },
   }
 
@@ -78,6 +79,7 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
     context.nuit = this.document.system._source.harmoniques.nuit.valeur
 
     context.conscience = this.document.system.conscience.valeur
+    context.consciencemax = this.document.system.conscience.max
 
     context.unlocked = this.isEditMode
     context.locked = this.isPlayMode
@@ -87,6 +89,10 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
     console.log("EminenceSheet._prepareContext", context)
     return context
   }
+
+
+  /* -------------------------------------------- */
+
 
   /** @inheritDoc */
   async _onRender(context, options) {
@@ -159,4 +165,162 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
     })
     return fp.browse()
   }
+
+  /**
+   * Handle clicking on Document's elements.
+  **/
+  static async #onClicJeton(event, target) {
+
+    console.log("Je suis dans #onClicJeton()");
+
+    const element = target;                                     // On récupère le clic
+    const whatIsIt = element.dataset.libelId;                   // Va récupérer 'conscience-1-on' ou 'conscience-1-off' par exemple
+    const whatIsItTab = whatIsIt.split('-');
+    const which = whatIsItTab[1];                               // Va récupérer '1' ou '2'…
+    const how = whatIsItTab[2];                                 // Va récupérer 'on' ou bien 'off'
+
+    let myActor = this.actor;
+    console.log ("myActor = ", myActor);
+    let myTabJetonsConscience = myActor.system.conscience.jetons;
+    console.log ("myTabJetonsConscience = ", myTabJetonsConscience);
+
+    console.log("whatIsIt = ", whatIsIt);
+
+    /*
+
+    switch (how) {
+      case "on": 
+      switch (which) {
+        case "1":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "2":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "3":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "4":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "5":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "6":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "7":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "8":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "9":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "10":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "11":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "12":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "13":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "14":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "15":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "16":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "17":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "18":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "19":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "20":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+      };
+      break;
+      case "off":
+        switch (which) {
+        case "1":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "2":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "3":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "4":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "5":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "6":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "7":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "8":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "9":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "10":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "11":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "12":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "13":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "14":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "15":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "16":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "17":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "18":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "19":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+        case "20":
+          myActor.update({ "system.counscience.jauge10": false });
+          break;
+      };
+      break;
+    }
+
+    */
+  }
+
+
 }

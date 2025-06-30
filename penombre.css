@@ -309,6 +309,11 @@ penombre-toggle-switch[checked] thumb {
   height: 35px;
 }
 
-.eminence .eminence-content .eminence-conscience .td-jetons .clicsurconscience:hover {
+.eminence .eminence-content .eminence-conscience .td-jetons .clic-jeton:hover {
   cursor: pointer;
+}
+
+.eminence .eminence-content .eminence-conscience .td-jetons img.dropshadow {
+  -webkit-filter: drop-shadow(5px 5px 5px #666666);
+  filter: drop-shadow(5px 5px 5px #666666);
 }
