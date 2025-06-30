@@ -148,6 +148,7 @@
       .col-1-1 {
         width: 25px;
         float: left;
+        transform: rotate(180deg);
       }
 
       .col-2-1 {
@@ -186,10 +187,13 @@
         }
       }
 
-      .eminence-harmoniques {
-        &.locked {min-height: 400px;}
-        &.unlocked {min-height: 550px;}        
+      .eminence-harmoniques-locked {
+        min-height: 350px;
       }
+
+      .eminence-harmoniques-unlocked {
+        min-height: 510px;
+      }        
 
       .eminence-conscience {
         min-height: 655px;
@@ -235,25 +239,12 @@
 
 
       // Police des textes verticaux
-      .text-vertical-personnage {
-        font-size: @font-size-middle;
-        transform: rotate(270deg);
-        position: relative;
-        top: 65px;
-      }
-
-      .text-vertical-harmoniques {
-        font-size: @font-size-middle;
-        transform: rotate(270deg);
-        position: relative;
-        top: 75px;
-      }
-
+      .text-vertical-personnage,
+      .text-vertical-harmoniques,
       .text-vertical-conscience {
         font-size: @font-size-middle;
-        transform: rotate(270deg);
-        position: relative;
-        top: 50px;
+        writing-mode: vertical-rl;
+        text-orientation: sideways-left;
       }
 
       // Section personnage
@@ -276,7 +267,7 @@
       }
 
       // Section conscience
-      .eminence.conscience {
+      .eminence-conscience {
         .cadre-complications {
           border: 1px solid #917f35;
           border-radius: 4px;
@@ -330,11 +321,11 @@
         }
 
         .case-de-mouve-4 {
-          .case-de-mouve(5px);
+          .case-de-mouve(-5px);
         }
 
         .case-de-mouve-5 {
-          .case-de-mouve(65px);
+          .case-de-mouve(85px);
         }
 
         .flexible {
@@ -356,7 +347,8 @@
         .de-etincelle,
         .de-nature,
         .de-nuit {
-          margin-left: 5px;
+          margin-left: 3px;
+          margin-top: -2px;
           .dice-element();
         }
 
@@ -364,12 +356,32 @@
         .text-gros-1,
         .text-gros-2,
         .text-gros-3,
-        .text-gros-4 {
+        .text-gros-4,
+        .text-gros-5 {
           float: none;
           color: @color-secondary;
           font-size: @font-size-xlarge;
         }
       }
+
+      // Eléments conscience
+      .eminence-conscience {
+        // Jetons
+        .div-jetons,
+        .tr-jetons {
+          width: 400px;
+        }
+
+        .td-jetons {
+          width: 35px;
+          height: 35px;
+
+          .clicsurconscience:hover {
+              cursor: pointer;
+          }
+        }
+      }
+
     }
   }
 }

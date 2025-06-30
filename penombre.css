@@ -68,7 +68,7 @@ penombre-toggle-switch[checked] thumb {
   left: calc(50% - 96px);
 }
 .penombre {
-  /* ---------------------------------------------
+/* ---------------------------------------------
         Eminence
 --------------------------------------------- */
 }
@@ -142,6 +142,7 @@ penombre-toggle-switch[checked] thumb {
 .penombre.eminence .eminence-content .col-1-1 {
   width: 25px;
   float: left;
+  transform: rotate(180deg);
 }
 .penombre.eminence .eminence-content .col-2-1 {
   width: 8px;
@@ -176,11 +177,11 @@ penombre-toggle-switch[checked] thumb {
   justify-content: center;
   padding: 1px;
 }
-.penombre.eminence .eminence-content .eminence-harmoniques.locked {
-  min-height: 400px;
+.penombre.eminence .eminence-content .eminence-harmoniques-locked {
+  min-height: 350px;
 }
-.penombre.eminence .eminence-content .eminence-harmoniques.unlocked {
-  min-height: 550px;
+.penombre.eminence .eminence-content .eminence-harmoniques-unlocked {
+  min-height: 510px;
 }
 .penombre.eminence .eminence-content .eminence-conscience {
   min-height: 655px;
@@ -194,23 +195,12 @@ penombre-toggle-switch[checked] thumb {
 .penombre.eminence .eminence-content .eminence-conscience {
   color: #917f35;
 }
-.penombre.eminence .eminence-content .text-vertical-personnage {
-  font-size: 19px;
-  transform: rotate(270deg);
-  position: relative;
-  top: 65px;
-}
-.penombre.eminence .eminence-content .text-vertical-harmoniques {
-  font-size: 19px;
-  transform: rotate(270deg);
-  position: relative;
-  top: 75px;
-}
+.penombre.eminence .eminence-content .text-vertical-personnage,
+.penombre.eminence .eminence-content .text-vertical-harmoniques,
 .penombre.eminence .eminence-content .text-vertical-conscience {
+  writing-mode: vertical-rl;
   font-size: 19px;
-  transform: rotate(270deg);
-  position: relative;
-  top: 50px;
+  text-orientation: sideways-left;
 }
 .penombre.eminence .eminence-content .eminence-personnage .logo-frame {
   display: flex;
@@ -226,7 +216,7 @@ penombre-toggle-switch[checked] thumb {
   width: 256px;
   clear: right;
 }
-.penombre.eminence .eminence-content .eminence.conscience .cadre-complications {
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications {
   border: 1px solid #917f35;
   border-radius: 4px;
   padding: 2px;
@@ -271,13 +261,13 @@ penombre-toggle-switch[checked] thumb {
 }
 .penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-4 {
   float: none;
-  margin-left: 5px;
+  margin-left: -5px;
   width: 85px;
   height: 85px;
 }
 .penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-5 {
   float: none;
-  margin-left: 65px;
+  margin-left: 85px;
   width: 85px;
   height: 85px;
 }
@@ -294,15 +284,31 @@ penombre-toggle-switch[checked] thumb {
 .penombre.eminence .eminence-content .eminence-harmoniques .de-etincelle,
 .penombre.eminence .eminence-content .eminence-harmoniques .de-nature,
 .penombre.eminence .eminence-content .eminence-harmoniques .de-nuit {
-  margin-left: 5px;
+  margin-left: 3px;
+  margin-top: -2px;
   width: 85px;
   height: 85px;
 }
 .penombre.eminence .eminence-content .eminence-harmoniques .text-gros-1,
 .penombre.eminence .eminence-content .eminence-harmoniques .text-gros-2,
 .penombre.eminence .eminence-content .eminence-harmoniques .text-gros-3,
-.penombre.eminence .eminence-content .eminence-harmoniques .text-gros-4 {
+.penombre.eminence .eminence-content .eminence-harmoniques .text-gros-4,
+.penombre.eminence .eminence-content .eminence-harmoniques .text-gros-5 {
   float: none;
   color: #56605b;
   font-size: 30px;
+}
+
+.eminence .eminence-content .eminence-conscience .div-jetons,
+.eminence .eminence-content .eminence-conscience .tr-jetons {
+  width: 400px;
+}
+
+.eminence .eminence-content .eminence-conscience .td-jetons {
+  width: 35px;
+  height: 35px;
+}
+
+.eminence .eminence-content .eminence-conscience .td-jetons .clicsurconscience:hover {
+  cursor: pointer;
 }

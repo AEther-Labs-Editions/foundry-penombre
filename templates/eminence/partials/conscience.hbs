@@ -78,6 +78,263 @@
       {{/if}}
 
       <!-- Jetons-->
+      {{#if unlocked}}
+      {{else}}
+      <div class="div-jetons">
+        <table class="table-jetons">
+          <tr class="tr-jetons">
+            <td  class="td-jetons">
+              {{#if (gt conscience 0)}}
+                {{#if (eq couscienceretournee1 true)}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-1-off" src="systems/penombre/assets/ui/jeton_face_inactive.png" alt="Cercle" />
+                {{else}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-1-on" src="systems/penombre/assets/ui/jeton_face_active.png" alt="Cercle" />
+                {{/if}}
+              {{else}}
+              <img src="systems/penombre/assets/ui/cercle.png" alt="Cercle" />
+              {{/if}}
+              
+            </td>
+            <td  class="td-jetons">
+              {{#if (gt conscience 1)}}
+                {{#if (eq couscienceretournee2 true)}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-2-off" src="systems/penombre/assets/ui/jeton_face_inactive.png" alt="Cercle" />
+                {{else}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-2-on" src="systems/penombre/assets/ui/jeton_face_active.png" alt="Cercle" />
+                {{/if}}
+              {{else}}
+              <img src="systems/penombre/assets/ui/cercle.png" alt="Cercle" />
+              {{/if}}
+              
+            </td>
+            <td  class="td-jetons">
+              {{#if (gt conscience 2)}}
+                {{#if (eq couscienceretournee3 true)}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-3-off" src="systems/penombre/assets/ui/jeton_face_inactive.png" alt="Cercle" />
+                {{else}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-3-on" src="systems/penombre/assets/ui/jeton_face_active.png" alt="Cercle" />
+                {{/if}}
+              {{else}}
+              <img src="systems/penombre/assets/ui/cercle.png" alt="Cercle" />
+              {{/if}}
+              
+            </td>
+            <td  class="td-jetons">
+              {{#if (gt conscience 3)}}
+                {{#if (eq couscienceretournee4 true)}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-4-off" src="systems/penombre/assets/ui/jeton_face_inactive.png" alt="Cercle" />
+                {{else}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-4-on" src="systems/penombre/assets/ui/jeton_face_active.png" alt="Cercle" />
+                {{/if}}
+              {{else}}
+              <img src="systems/penombre/assets/ui/cercle.png" alt="Cercle" />
+              {{/if}}
+              
+            </td>
+            <td  class="td-jetons">
+              {{#if (gt conscience 4)}}
+                {{#if (eq couscienceretournee5 true)}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-5-off" src="systems/penombre/assets/ui/jeton_face_inactive.png" alt="Cercle" />
+                {{else}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-5-on" src="systems/penombre/assets/ui/jeton_face_active.png" alt="Cercle" />
+                {{/if}}
+              {{else}}
+              <img src="systems/penombre/assets/ui/cercle.png" alt="Cercle" />
+              {{/if}}
+              
+            </td>
+          </tr>
+          <tr class="tr-jetons">
+            <td  class="td-jetons">
+              {{#if (gt conscience 5)}}
+                {{#if (eq couscienceretournee6 true)}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-6-off" src="systems/penombre/assets/ui/jeton_face_inactive.png" alt="Cercle" />
+                {{else}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-6-on" src="systems/penombre/assets/ui/jeton_face_active.png" alt="Cercle" />
+                {{/if}}
+              {{else}}
+              <img src="systems/penombre/assets/ui/cercle.png" alt="Cercle" />
+              {{/if}}
+              
+            </td>
+            <td  class="td-jetons">
+              {{#if (gt conscience 6)}}
+                {{#if (eq couscienceretournee7 true)}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-7-off" src="systems/penombre/assets/ui/jeton_face_inactive.png" alt="Cercle" />
+                {{else}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-7-on" src="systems/penombre/assets/ui/jeton_face_active.png" alt="Cercle" />
+                {{/if}}
+              {{else}}
+              <img src="systems/penombre/assets/ui/cercle.png" alt="Cercle" />
+              {{/if}}
+              
+            </td>
+            <td  class="td-jetons">
+              {{#if (gt conscience 7)}}
+                {{#if (eq couscienceretournee8 true)}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-8-off" src="systems/penombre/assets/ui/jeton_face_inactive.png" alt="Cercle" />
+                {{else}}
+                <img  class="clicsurconscience dropshadow" data-libel-id="conscience-8-on" src="systems/penombre/assets/ui/jeton_face_active.png" alt="Cercle" />
+                {{/if}}
+              {{else}}
+              <img data-libel-id="conscience-8-off" src="systems/penombre/assets/ui/cercle.png" alt="Cercle" />
+              {{/if}}
+              
+            </td>
+            <td  class="td-jetons">
+              {{#if (gt conscience 8)}}
+                {{#if (eq couscienceretournee9 true)}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-9-off" src="systems/penombre/assets/ui/jeton_face_inactive.png" alt="Cercle" />
+                {{else}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-9-on" src="systems/penombre/assets/ui/jeton_face_active.png" alt="Cercle" />
+                {{/if}}
+              {{else}}
+              <img src="systems/penombre/assets/ui/cercle.png" alt="Cercle" />
+              {{/if}}
+              
+            </td>
+            <td  class="td-jetons">
+              {{#if (gt conscience 9)}}
+                {{#if (eq couscienceretournee10 true)}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-10-off" src="systems/penombre/assets/ui/jeton_face_inactive.png" alt="Cercle" />
+                {{else}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-10-on" src="systems/penombre/assets/ui/jeton_face_active.png" alt="Cercle" />
+                {{/if}}
+              {{else}}
+              <img src="systems/penombre/assets/ui/cercle.png" alt="Cercle" />
+              {{/if}}
+              
+            </td>
+          </tr>
+          <tr class="tr-jetons">
+            <td  class="td-jetons">
+              {{#if (gt conscience 10)}}
+                {{#if (eq couscienceretournee11 true)}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-11-off" src="systems/penombre/assets/ui/jeton_face_inactive.png" alt="Cercle" />
+                {{else}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-11-on" src="systems/penombre/assets/ui/jeton_face_active.png" alt="Cercle" />
+                {{/if}}
+              {{else}}
+              <img src="systems/penombre/assets/ui/cercle.png" alt="Cercle" />
+              {{/if}}
+              
+            </td>
+            <td  class="td-jetons">
+              {{#if (gt conscience 11)}}
+                {{#if (eq couscienceretournee12 true)}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-12-off" src="systems/penombre/assets/ui/jeton_face_inactive.png" alt="Cercle" />
+                {{else}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-12-on" src="systems/penombre/assets/ui/jeton_face_active.png" alt="Cercle" />
+                {{/if}}
+              {{else}}
+              <img src="systems/penombre/assets/ui/cercle.png" alt="Cercle" />
+              {{/if}}
+              
+            </td>
+            <td  class="td-jetons">
+              {{#if (gt conscience 12)}}
+                {{#if (eq couscienceretournee13 true)}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-13-off" src="systems/penombre/assets/ui/jeton_face_inactive.png" alt="Cercle" />
+                {{else}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-13-on" src="systems/penombre/assets/ui/jeton_face_active.png" alt="Cercle" />
+                {{/if}}
+              {{else}}
+              <img src="systems/penombre/assets/ui/cercle.png" alt="Cercle" />
+              {{/if}}
+              
+            </td>
+            <td  class="td-jetons">
+              {{#if (gt conscience 13)}}
+                {{#if (eq couscienceretournee14 true)}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-14-off" src="systems/penombre/assets/ui/jeton_face_inactive.png" alt="Cercle" />
+                {{else}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-14-on" src="systems/penombre/assets/ui/jeton_face_active.png" alt="Cercle" />
+                {{/if}}
+              {{else}}
+              <img src="systems/penombre/assets/ui/cercle.png" alt="Cercle" />
+              {{/if}}
+              
+            </td>
+            <td  class="td-jetons">
+              {{#if (gt conscience 14)}}
+                {{#if (eq couscienceretournee15 true)}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-15-off" src="systems/penombre/assets/ui/jeton_face_inactive.png" alt="Cercle" />
+                {{else}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-15-on" src="systems/penombre/assets/ui/jeton_face_active.png" alt="Cercle" />
+                {{/if}}
+              {{else}}
+              <img src="systems/penombre/assets/ui/cercle.png" alt="Cercle" />
+              {{/if}}
+              
+            </td>
+          </tr>
+          <tr class="tr-jetons">
+            <td  class="td-jetons">
+              {{#if (gt conscience 15)}}
+                {{#if (eq couscienceretournee16 true)}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-16-off" src="systems/penombre/assets/ui/jeton_face_inactive.png" alt="Cercle" />
+                {{else}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-16-on" src="systems/penombre/assets/ui/jeton_face_active.png" alt="Cercle" />
+                {{/if}}
+              {{else}}
+              <img src="systems/penombre/assets/ui/cercle.png" alt="Cercle" />
+              {{/if}}
+              
+            </td>
+            <td  class="td-jetons">
+              {{#if (gt conscience 16)}}
+                {{#if (eq couscienceretournee17 true)}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-17-off" src="systems/penombre/assets/ui/jeton_face_inactive.png" alt="Cercle" />
+                {{else}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-17-on" src="systems/penombre/assets/ui/jeton_face_active.png" alt="Cercle" />
+                {{/if}}
+              {{else}}
+              <img src="systems/penombre/assets/ui/cercle.png" alt="Cercle" />
+              {{/if}}
+              
+            </td>
+            <td  class="td-jetons">
+              {{#if (gt conscience 17)}}
+                {{#if (eq couscienceretournee18 true)}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-18-off" src="systems/penombre/assets/ui/jeton_face_inactive.png" alt="Cercle" />
+                {{else}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-18-on" src="systems/penombre/assets/ui/jeton_face_active.png" alt="Cercle" />
+                {{/if}}
+              {{else}}
+              <img src="systems/penombre/assets/ui/cercle.png" alt="Cercle" />
+              {{/if}}
+              
+            </td>
+            <td  class="td-jetons">
+              {{#if (gt conscience 18)}}
+                {{#if (eq couscienceretournee19 true)}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-19-off" src="systems/penombre/assets/ui/jeton_face_inactive.png" alt="Cercle" />
+                {{else}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-19-on" src="systems/penombre/assets/ui/jeton_face_active.png" alt="Cercle" />
+                {{/if}}
+              {{else}}
+              <img src="systems/penombre/assets/ui/cercle.png" alt="Cercle" />
+              {{/if}}
+              
+            </td>
+            <td  class="td-jetons">
+              {{#if (gt conscience 19)}}
+                {{#if (eq couscienceretournee20 true)}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-20-off" src="systems/penombre/assets/ui/jeton_face_inactive.png" alt="Cercle" />
+                {{else}}
+                <img class="clicsurconscience dropshadow" data-libel-id="conscience-20-on" src="systems/penombre/assets/ui/jeton_face_active.png" alt="Cercle" />
+                {{/if}}
+              {{else}}
+              <img src="systems/penombre/assets/ui/cercle.png" alt="Cercle" />
+              {{/if}}
+              
+            </td>
+          </tr>
+
+        </table>
+      </div>
+      {{/if}}
+
     </div>
   </div>
 </div>

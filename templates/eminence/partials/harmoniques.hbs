@@ -1,10 +1,10 @@
 {{log "harmoniques" this}}
-<div class="eminence-harmoniques flexible">
+<div class="eminence-harmoniques eminence-harmoniques-{{#if locked}}locked{{else}}unlocked{{/if}} flexible">
   <div class="col-1-1 text-vertical-harmoniques">{{localize "PENOMBRE.ui.section.harmoniques"}}</div>
   <div class="col-2-1 frise-verticale">
     <img class="" src="/systems/penombre/assets/ui/grise.png" alt="|" />
   </div>
-  <div class="col-3-1 flexible {{#if locked}}locked{{else}}unlocked{{/if}}">
+  <div class="col-3-1 flexible">
     {{#if unlocked}}
       <div class="col-1-2">
         {{formGroup systemFields.harmoniques.fields.ame.fields.valeur value=systemSource.harmoniques.ame.valeur localize=true}}
@@ -12,7 +12,7 @@
         {{formGroup systemFields.harmoniques.fields.etincelle.fields.valeur value=systemSource.harmoniques.etincelle.valeur localize=true}}
         {{formGroup systemFields.harmoniques.fields.nature.fields.valeur value=systemSource.harmoniques.nature.valeur localize=true}}
         {{formGroup systemFields.harmoniques.fields.nuit.fields.valeur value=systemSource.harmoniques.nuit.valeur localize=true}}
-      </div>      
+      </div>
     {{/if}}
     <div class="col-2-2 flexible">
       <table class="table-de flexible">
@@ -103,5 +103,6 @@
         </tr>
       </table>
     </div>
+    
   </div>
 </div>

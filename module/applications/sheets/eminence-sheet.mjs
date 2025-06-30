@@ -77,6 +77,8 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
     context.nature = this.document.system._source.harmoniques.nature.valeur
     context.nuit = this.document.system._source.harmoniques.nuit.valeur
 
+    context.conscience = this.document.system.conscience.valeur
+
     context.unlocked = this.isEditMode
     context.locked = this.isPlayMode
 
