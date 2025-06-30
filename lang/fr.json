@@ -284,7 +284,7 @@
       "cle": "Clef",
       "gamme": "Gamme",
       "ton": "Ton",
-      "conscienceVal" : "Actuelle",
+      "conscienceVal": "Actuelle",
       "conscienceMax": " Max",
       "modeEdition": "Bascule entre le Mode « Éditer » et le Mode « Jouer »",
       "complicationsListe": "Complications :",
@@ -302,7 +302,18 @@
         "demo": "Kit de demo",
         "standard": "Standard",
         "avance": "Règles avancées"
+      },
+      "reserveCollegiale": {
+        "name": "Jetons de la Réserve Collégiale",
+        "hint": "Jetons de la Réserve Collégiale."
+      },
+      "nbJetons": {
+        "name": "Nombre de jetons de la Réserve Collégiale",
+        "hint": "Nombre maximum de jetons disponibles dans la Réserve Collégiale."
       }
+    },
+    "ReserveCollegiale": {
+      "title": "Réserve Collégiale"
     }
   }
 }

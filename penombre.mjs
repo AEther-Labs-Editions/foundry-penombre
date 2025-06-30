@@ -7,6 +7,7 @@ export * as elements from "./module/elements/_module.mjs"
 import * as models from "./module/models/_module.mjs"
 import * as documents from "./module/documents/_module.mjs"
 import * as applications from "./module/applications/_module.mjs"
+import ReserveCollegiale from "./module/models/reserve-collegiale.mjs"
 
 Hooks.once("init", function () {
   console.info("Pénombre | Initialisation du système...")
@@ -28,14 +29,18 @@ Hooks.once("init", function () {
   foundry.documents.collections.Items.unregisterSheet("core", foundry.appv1.sheets.ItemSheet)
   foundry.documents.collections.Items.registerSheet(SYSTEM.ID, applications.PouvoirSheet, { types: ["pouvoir"], label: "PENOMBRE.Feuille.pouvoir", makeDefault: true })
 
+  CONFIG.queries["penombre.updateReserveCollegiale"] = applications.PenombreReserveCollegiale._handleQuery
+
   Handlebars.registerHelper("getDiceImage", function (value) {
     return `/systems/penombre/assets/ui/${value}-marge.png`
   })
 
   Handlebars.registerHelper("getJetonImage", function (value) {
     switch (value) {
+      case true:
       case "actif":
         return `systems/penombre/assets/ui/jeton_face_active.png`
+      case false:
       case "inactif":
         return `systems/penombre/assets/ui/jeton_face_inactive.png`
       case "perdu":
@@ -69,5 +74,69 @@ Hooks.once("init", function () {
     requiresReload: true,
   })
 
+  game.settings.register(SYSTEM.ID, "nbJetons", {
+    name: "PENOMBRE.Settings.nbJetons.name",
+    hint: "PENOMBRE.Settings.nbJetons.hint",
+    scope: "world",
+    config: true,
+    type: Number,
+    default: 10,
+  })
+
+  game.settings.register(SYSTEM.ID, "reserveCollegiale", {
+    name: "PENOMBRE.Settings.reserveCollegiale.name",
+    hint: "PENOMBRE.Settings.reserveCollegiale.hint",
+    scope: "world",
+    config: false,
+    type: ReserveCollegiale,
+    default: () => {
+      const nbJetons = game.settings.get(SYSTEM.ID, "nbJetons")
+      const jetonsDefaut = {}
+      for (let i = 1; i <= nbJetons; i++) {
+        jetonsDefaut[i] = false
+      }
+      return {
+        jetons: jetonsDefaut,
+      }
+    },
+  })
+
   console.info("Pénombre | Système initialisé.")
+})
+
+Hooks.once("ready", function () {
+  game.system.applicationReserveCollegiale = new applications.PenombreReserveCollegiale()
+  game.system.applicationReserveCollegiale.render({ force: true })
+})
+
+Hooks.on("updateSetting", async (setting, update, options, id) => {
+  // Mise à jour de la Réserve collégiale
+  if (setting.key === "penombre.reserveCollegiale") {
+    game.system.applicationReserveCollegiale.render(true)
+  }
+
+  // Mise à jour du nombre de jetons dans la réserve collégiale
+  if (setting.key === "penombre.nbJetons" && game.user.isGM) {
+    console.log("Pénombre | Mise à jour du nombre de jetons dans la réserve collégiale", setting, update, options, id)
+    const reserveCollegiale = foundry.utils.duplicate(game.settings.get(SYSTEM.ID, "reserveCollegiale"))
+    const nouveauNbJetons = update.value
+
+    // Ajouter les jetons manquants si le nombre augmente
+    for (let i = 1; i <= nouveauNbJetons; i++) {
+      const key = String(i)
+      if (!reserveCollegiale.jetons.hasOwnProperty(key)) {
+        reserveCollegiale.jetons[key] = { valeur: false }
+      }
+    }
+
+    // Supprimer les jetons en excès si le nombre diminue
+    Object.keys(reserveCollegiale.jetons).forEach((key) => {
+      const numericKey = parseInt(key, 10)
+      if (numericKey > nouveauNbJetons) {
+        delete reserveCollegiale.jetons[key]
+      }
+    })
+
+    await game.settings.set(SYSTEM.ID, "reserveCollegiale", reserveCollegiale)
+  }
 })
