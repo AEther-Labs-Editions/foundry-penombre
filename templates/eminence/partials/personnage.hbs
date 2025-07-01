@@ -8,7 +8,7 @@
       <img class="logo-img" src="{{document.img}}" data-action="editImage" height="150" data-edit="img" data-tooltip="{{document.name}}" />
     </div>
     <div class="data">
-      {{formGroup fields.nom value=document.name localize=true disabled=locked}}
+      {{formGroup fields.name value=document.name localize=true disabled=locked}}
       {{#if unlocked}}
         {{formGroup systemFields.peuple value=systemSource.peuple localize=true}}
         {{formGroup systemFields.cle value=systemSource.cle localize=true}}

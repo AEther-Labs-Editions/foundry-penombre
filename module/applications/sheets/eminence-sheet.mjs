@@ -26,6 +26,7 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
     },
     actions: {
       editImage: EminenceSheet.#onEditImage,
+      clicJeton: EminenceSheet.#onClicJeton,
     },
   }
 
@@ -77,6 +78,10 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
     context.nature = this.document.system._source.harmoniques.nature.valeur
     context.nuit = this.document.system._source.harmoniques.nuit.valeur
 
+    context.conscience = this.document.system.conscience.valeur
+    context.consciencemax = this.document.system.conscience.max
+    context.nbJetonsPerdus = this.document.system.conscience.max - this.document.system.conscience.valeur
+
     context.unlocked = this.isEditMode
     context.locked = this.isPlayMode
 
@@ -85,6 +90,8 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
     console.log("EminenceSheet._prepareContext", context)
     return context
   }
+
+  /* -------------------------------------------- */
 
   /** @inheritDoc */
   async _onRender(context, options) {
@@ -156,5 +163,27 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
       left: this.position.left + 10,
     })
     return fp.browse()
+  }
+
+  /**
+   * Handle clicking on Document's elements.
+   * @param event
+   * @param target
+   **/
+  static async #onClicJeton(event, target) {
+    event.preventDefault()
+    const dataset = target.dataset
+    const index = dataset.index // Commence à 0
+    const jetons = foundry.utils.duplicate(this.document.system.conscience.jetons)
+    const currentStatut = jetons[index].statut
+    switch (currentStatut) {
+      case "actif":
+        jetons[index].statut = "inactif"
+        break
+      case "inactif":
+        jetons[index].statut = "actif"
+        break
+    }
+    await this.document.update({ "system.conscience.jetons": jetons })
   }
 }

@@ -184,5 +184,15 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
         this.ton = SYSTEM.TONS.cassandre.id
         break
     }
+
+    // Initialisation des jetons de conscience
+    if (this.conscience.jetons.length === 0) {
+      this.conscience.jetons = Array.from({ length: this.conscience.max }, () => ({ statut: SYSTEM.JETON_STATUTS.inactif.id }))
+    } else if (this.conscience.jetons.length < this.conscience.max) {
+      const missingJetons = this.conscience.max - this.conscience.jetons.length
+      this.conscience.jetons.push(...Array.from({ length: missingJetons }, () => ({ statut: SYSTEM.JETON_STATUTS.inactif.id })))
+    } else if (this.conscience.jetons.length > this.conscience.max) {
+      this.conscience.jetons = this.conscience.jetons.slice(0, this.conscience.max)
+    }
   }
 }
