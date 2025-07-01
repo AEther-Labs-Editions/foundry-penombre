@@ -83,7 +83,7 @@
         <div class="div-jetons">
           {{#each system.conscience.jetons as |jeton id|}}
             {{#if (lt id @root.system.conscience.valeur)}}
-              <img class="jeton" data-action="clicJeton" data-index="{{@index}}" src="{{getJetonImage jeton.statut}}"></img>
+              <img class="jeton dropshadow-{{jeton.statut}}" data-action="clicJeton" data-index="{{@index}}" src="{{getJetonImage jeton.statut}}"></img>
             {{/if}}
           {{/each}}
           {{#times nbJetonsPerdus}}

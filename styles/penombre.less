@@ -363,30 +363,23 @@
       // Eléments conscience
       .eminence-conscience {
         // Jetons
-        .div-jetons,
-        .tr-jetons {
-          width: 400px;
-        }
-
-        .td-jetons {
-          width: 35px;
-          height: 35px;
-
-          img.dropshadow {
-            -webkit-filter: drop-shadow(5px 5px 5px #666666);
-            filter: drop-shadow(5px 5px 5px #666666);
-          }
-
-          .clic-jeton:hover {
-            cursor: pointer;
-          }
-        }
-
         .div-jetons {
+          width: 400px;
           display: grid;
           grid-template-columns: repeat(5, 1fr); /* 5 colonnes égales */
           gap: 10px;
           padding: 10px;
+          
+          img.dropshadow_actif,
+          img.dropshadow-inactif {
+            -webkit-filter: drop-shadow(5px 5px 5px #666666);
+            filter: drop-shadow(5px 5px 5px #666666);
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+
           .jeton {
             text-align: center;
           }

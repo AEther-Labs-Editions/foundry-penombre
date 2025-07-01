@@ -294,20 +294,8 @@ penombre-toggle-switch[checked] thumb {
   color: #56605b;
   font-size: 30px;
 }
-.penombre.eminence .eminence-content .eminence-conscience .div-jetons,
-.penombre.eminence .eminence-content .eminence-conscience .tr-jetons {
+.penombre.eminence .eminence-content .eminence-conscience .div-jetons {
   width: 400px;
-}
-.penombre.eminence .eminence-content .eminence-conscience .td-jetons {
-  width: 35px;
-  height: 35px;
-}
-.penombre.eminence .eminence-content .eminence-conscience .td-jetons img.dropshadow {
-  -webkit-filter: drop-shadow(5px 5px 5px #666666);
-  filter: drop-shadow(5px 5px 5px #666666);
-}
-.penombre.eminence .eminence-content .eminence-conscience .td-jetons .clic-jeton:hover {
-  cursor: pointer;
 }
 .penombre.eminence .eminence-content .eminence-conscience .div-jetons {
   display: grid;
@@ -318,4 +306,13 @@ penombre-toggle-switch[checked] thumb {
 }
 .penombre.eminence .eminence-content .eminence-conscience .div-jetons .jeton {
   text-align: center;
+}
+.penombre.eminence .eminence-content .eminence-conscience .div-jetons img.dropshadow-actif:hover,
+.penombre.eminence .eminence-content .eminence-conscience .div-jetons img.dropshadow-inactif:hover {
+  cursor: pointer;
+}
+.penombre.eminence .eminence-content .eminence-conscience .div-jetons img.dropshadow-actif,
+.penombre.eminence .eminence-content .eminence-conscience .div-jetons img.dropshadow-inactif {
+  -webkit-filter: drop-shadow(5px 5px 5px #666666);
+  filter: drop-shadow(5px 5px 5px #666666);
 }
