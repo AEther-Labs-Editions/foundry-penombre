@@ -32,6 +32,26 @@ Hooks.once("init", function () {
     return `/systems/penombre/assets/ui/${value}-marge.png`
   })
 
+  Handlebars.registerHelper("getJetonImage", function (value) {
+    if (value === "actif") {
+      return `systems/penombre/assets/ui/jeton_face_active.png`
+    }
+    if (value === "inactif") {
+      return `systems/penombre/assets/ui/jeton_face_inactive.png`
+    }
+  })
+
+  Handlebars.registerHelper("times", function (n, block) {
+    let accum = ""
+    for (let i = 1; i <= n; ++i) {
+      block.data.index = i
+      block.data.first = i === 0
+      block.data.last = i === n - 1
+      accum += block.fn(this)
+    }
+    return accum
+  })
+
   game.settings.register(SYSTEM.ID, "styleJeu", {
     name: "PENOMBRE.Settings.styleJeu.name",
     hint: "PENOMBRE.Settings.styleJeu.hint",
