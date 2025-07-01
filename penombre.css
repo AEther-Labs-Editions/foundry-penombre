@@ -167,36 +167,16 @@ penombre-toggle-switch[checked] thumb {
   padding: 2px;
   border-radius: 6px;
 }
-.penombre.eminence .eminence-content .eminence-personnage .logo-frame {
-  height: 152px;
-  width: 182px;
-  display: flex;
-  justify-content: center;
-  padding: 1px;
-}
-.penombre.eminence .eminence-content .eminence-harmoniques-locked {
-  min-height: 350px;
-}
-.penombre.eminence .eminence-content .eminence-harmoniques-unlocked {
-  min-height: 510px;
-}
-.penombre.eminence .eminence-content .eminence-personnage {
-  min-height: 165px;
-  color: #a56135;
-}
-.penombre.eminence .eminence-content .eminence-harmoniques {
-  color: #56605b;
-}
-.penombre.eminence .eminence-content .eminence-conscience {
-  min-height: 655px;
-  color: #917f35;
-}
 .penombre.eminence .eminence-content .text-vertical-personnage,
 .penombre.eminence .eminence-content .text-vertical-harmoniques,
 .penombre.eminence .eminence-content .text-vertical-conscience {
   font-size: 19px;
   writing-mode: vertical-rl;
   text-orientation: sideways-left;
+}
+.penombre.eminence .eminence-content .eminence-personnage {
+  min-height: 165px;
+  color: #a56135;
 }
 .penombre.eminence .eminence-content .eminence-personnage .logo-frame {
   display: flex;
@@ -212,11 +192,44 @@ penombre-toggle-switch[checked] thumb {
   width: 256px;
   clear: right;
 }
+.penombre.eminence .eminence-content .eminence-harmoniques-locked {
+  min-height: 350px;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques-unlocked {
+  min-height: 510px;
+}
+.penombre.eminence .eminence-content .eminence-conscience {
+  min-height: 655px;
+  color: #917f35;
+}
+.penombre.eminence .eminence-content .eminence-conscience .div-jetons {
+  width: 400px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* 5 colonnes égales */
+  gap: 10px;
+  padding: 10px;
+}
+.penombre.eminence .eminence-content .eminence-conscience .div-jetons img.dropshadow-actif,
+.penombre.eminence .eminence-content .eminence-conscience .div-jetons img.dropshadow-inactif {
+  -webkit-filter: drop-shadow(5px 5px 5px #666666);
+  filter: drop-shadow(5px 5px 5px #666666);
+}
+.penombre.eminence .eminence-content .eminence-conscience .div-jetons img.dropshadow-actif:hover,
+.penombre.eminence .eminence-content .eminence-conscience .div-jetons img.dropshadow-inactif:hover {
+  cursor: pointer;
+}
+.penombre.eminence .eminence-content .eminence-conscience .div-jetons .jeton {
+  text-align: center;
+}
 .penombre.eminence .eminence-content .eminence-conscience .cadre-complications {
   border: 1px solid #917f35;
   border-radius: 4px;
   padding: 2px;
   padding-left: 10px;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques {
+  color: #56605b;
 }
 .penombre.eminence .eminence-content .eminence-harmoniques .click:hover {
   cursor: pointer;
@@ -293,26 +306,4 @@ penombre-toggle-switch[checked] thumb {
   float: none;
   color: #56605b;
   font-size: 30px;
-}
-.penombre.eminence .eminence-content .eminence-conscience .div-jetons {
-  width: 400px;
-}
-.penombre.eminence .eminence-content .eminence-conscience .div-jetons {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  /* 5 colonnes égales */
-  gap: 10px;
-  padding: 10px;
-}
-.penombre.eminence .eminence-content .eminence-conscience .div-jetons .jeton {
-  text-align: center;
-}
-.penombre.eminence .eminence-content .eminence-conscience .div-jetons img.dropshadow-actif:hover,
-.penombre.eminence .eminence-content .eminence-conscience .div-jetons img.dropshadow-inactif:hover {
-  cursor: pointer;
-}
-.penombre.eminence .eminence-content .eminence-conscience .div-jetons img.dropshadow-actif,
-.penombre.eminence .eminence-content .eminence-conscience .div-jetons img.dropshadow-inactif {
-  -webkit-filter: drop-shadow(5px 5px 5px #666666);
-  filter: drop-shadow(5px 5px 5px #666666);
 }

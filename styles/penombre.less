@@ -174,15 +174,33 @@
         .section-style();
       }
 
+      // Police des textes verticaux
+      .text-vertical-personnage,
+      .text-vertical-harmoniques,
+      .text-vertical-conscience {
+        font-size: @font-size-middle;
+        writing-mode: vertical-rl;
+        text-orientation: sideways-left;
+      }
+
       // Hauteurs spécifiques
       .eminence-personnage {
-
+        min-height: 165px;
+        color: @color-primary;
         .logo-frame {
-          height: 152px;
-          width: 182px;
           display: flex;
+          display: table;
+          float: left;
           justify-content: center;
+          height: 152px;
+          width: 150px;
           padding: 1px;
+        }
+
+        .data {
+          float: left;
+          width: 256px;
+          clear: right;
         }
       }
 
@@ -219,51 +237,32 @@
       }
       */
 
-      // Couleur des textes principaux
-      .eminence-personnage {
-        min-height: 165px;
-        color: @color-primary;
-      }
-      
-      .eminence-harmoniques {
-        color: @color-secondary;
-      }
-
+      // Section conscience
       .eminence-conscience {
         min-height: 655px;
         color: @color-accent;
-      }
+        // Jetons
+        .div-jetons {
+          width: 400px;
+          display: grid;
+          grid-template-columns: repeat(5, 1fr); /* 5 colonnes égales */
+          gap: 10px;
+          padding: 10px;
 
-      // Police des textes verticaux
-      .text-vertical-personnage,
-      .text-vertical-harmoniques,
-      .text-vertical-conscience {
-        font-size: @font-size-middle;
-        writing-mode: vertical-rl;
-        text-orientation: sideways-left;
-      }
+          img.dropshadow-actif,
+          img.dropshadow-inactif {
+            -webkit-filter: drop-shadow(5px 5px 5px #666666);
+            filter: drop-shadow(5px 5px 5px #666666);
 
-      // Section personnage
-      .eminence-personnage {
-        .logo-frame {
-          display: flex;
-          display: table;
-          float: left;
-          justify-content: center;
-          height: 152px;
-          width: 150px;
-          padding: 1px;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+
+          .jeton {
+            text-align: center;
+          }
         }
-
-        .data {
-          float: left;
-          width: 256px;
-          clear: right;
-        }
-      }
-
-      // Section conscience
-      .eminence-conscience {
         .cadre-complications {
           border: 1px solid #917f35;
           border-radius: 4px;
@@ -274,6 +273,7 @@
 
       // Section harmoniques
       .eminence-harmoniques {
+        color: @color-secondary;
         .click:hover {
           cursor: pointer;
           filter: drop-shadow(0px 0px 6px #af010a);
@@ -333,10 +333,7 @@
           position: absolute;
           z-index: 5;
         }
-      }
 
-      // Éléments harmoniques
-      .eminence-harmoniques {
         // Tailles des dés avec mixin
         .de-ame,
         .de-esprit,
@@ -357,32 +354,6 @@
           float: none;
           color: @color-secondary;
           font-size: @font-size-xlarge;
-        }
-      }
-
-      // Eléments conscience
-      .eminence-conscience {
-        // Jetons
-        .div-jetons {
-          width: 400px;
-          display: grid;
-          grid-template-columns: repeat(5, 1fr); /* 5 colonnes égales */
-          gap: 10px;
-          padding: 10px;
-          
-          img.dropshadow-actif,
-          img.dropshadow-inactif {
-            -webkit-filter: drop-shadow(5px 5px 5px #666666);
-            filter: drop-shadow(5px 5px 5px #666666);
-
-            &:hover {
-              cursor: pointer;
-            }
-          }
-
-          .jeton {
-            text-align: center;
-          }
         }
       }
     }
