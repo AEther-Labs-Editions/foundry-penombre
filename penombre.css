@@ -132,7 +132,8 @@ penombre-toggle-switch[checked] thumb {
 .penombre.eminence .eminence-content .col-2 .grande-frise-verticale-1,
 .penombre.eminence .eminence-content .col-2 .grande-frise-verticale-2,
 .penombre.eminence .eminence-content .col-2 .grande-frise-verticale-3,
-.penombre.eminence .eminence-content .col-2 .grande-frise-verticale-4 {
+.penombre.eminence .eminence-content .col-2 .grande-frise-verticale-4,
+.penombre.eminence .eminence-content .col-2 .grande-frise-verticale-5 {
   flex-direction: column;
 }
 .penombre.eminence .eminence-content .col-3 {
@@ -199,7 +200,7 @@ penombre-toggle-switch[checked] thumb {
   min-height: 510px;
 }
 .penombre.eminence .eminence-content .eminence-conscience {
-  min-height: 655px;
+  min-height: 800px;
   color: #917f35;
 }
 .penombre.eminence .eminence-content .eminence-conscience .div-jetons {
