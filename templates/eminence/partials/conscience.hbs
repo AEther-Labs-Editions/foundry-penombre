@@ -16,13 +16,9 @@
         <p>{{localize "PENOMBRE.ui.complicationsListe"}}</p>
         <div class="cadre-complications">
           {{formGroup systemFields.conscience.fields.complications.fields.une.fields.description value=systemSource.conscience.complications.une.description localize=true}}
-          {{formGroup systemFields.conscience.fields.complications.fields.une.fields.valeur value=systemSource.conscience.complications.une.valeur localize=true}}
           {{formGroup systemFields.conscience.fields.complications.fields.deux.fields.description value=systemSource.conscience.complications.deux.description localize=true}}
-          {{formGroup systemFields.conscience.fields.complications.fields.deux.fields.valeur value=systemSource.conscience.complications.deux.valeur localize=true}}
           {{formGroup systemFields.conscience.fields.complications.fields.trois.fields.description value=systemSource.conscience.complications.trois.description localize=true}}
-          {{formGroup systemFields.conscience.fields.complications.fields.trois.fields.valeur value=systemSource.conscience.complications.trois.valeur localize=true}}
           {{formGroup systemFields.conscience.fields.complications.fields.quatre.fields.description value=systemSource.conscience.complications.quatre.description localize=true}}
-          {{formGroup systemFields.conscience.fields.complications.fields.quatre.fields.valeur value=systemSource.conscience.complications.quatre.valeur localize=true}}
         </div>
 
       {{else}}
@@ -45,7 +41,7 @@
               <label>{{localize "PENOMBRE.ui.complications.description"}}</label>
               <div class="form-fields">{{complication.description}}</div>
             </div>
-            <div class="form-group">
+            <div class="form-group div-cases">
               <label>{{localize "PENOMBRE.ui.complications.valeur"}}</label>
               <div class="images-cases">
                 <!-- id : une, deux, trois, quatre ; @index : 1, 2, 3 -->

@@ -282,7 +282,7 @@ body {
       }
       */
 
-      // Section conscience
+            // Section conscience
       .eminence-conscience {
         min-height: 800px;
         color: @color-accent;
@@ -310,30 +310,51 @@ body {
             text-align: center;
           }
         }
+
         .cadre-complications {
+          display: table;
+          width: 402px;
           border: 1px solid #917f35;
           border-radius: @border-radius-small;
           padding: 2px;
           padding-left: 10px;
 
           // Cases à cocher
-          .images-cases {
-            text-align: right;
-            width: 200px;
-            height: 20px;
-            display: table;
-            flex-direction: line;
-            text-align: right;
+          .div-cases {
+            display: flex;
+            width: 390px;
+            // justify-content: space-between;
 
-            .complication-case {
+            label {
               float: left;
-              width: 20px;
+            }
+
+            .images-cases {
+              display: flex;
+              width: 250px;
               height: 20px;
+              float: left;
+              flex-direction: line;
+              justify-content: right;
+
+              .complication-case {
+                float: left;
+                width: 20px;
+                height: 20px;
+
+                &:hover {
+                  cursor: pointer;
+                  /*
+                  -webkit-filter: drop-shadow(0px 0px 6px #af010a);
+                  filter: drop-shadow(0px 0px 6px #af010a);
+                  */
+                }
+              }
             }
           }
         }
-
       }
+
 
       // Section harmoniques
       .eminence-harmoniques {
