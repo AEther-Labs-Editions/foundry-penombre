@@ -366,6 +366,7 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .logo-peno
   font-size: 40px;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel {
+  position: relative;
   text-align: center;
   width: 100px;
   height: 200px;
@@ -386,6 +387,7 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .logo-peno
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel span {
   margin-left: -42px;
   margin-top: 90px;
+  color: #a56135;
   font-size: 29px;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs {
