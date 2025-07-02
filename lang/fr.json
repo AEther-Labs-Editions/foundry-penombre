@@ -278,22 +278,8 @@
       "modeEdition": "Bascule entre le Mode « Éditer » et le Mode « Jouer »",
       "complicationsListe": "Complications :",
       "complications": {
-        "une": {
-          "description": "Complication 1",
-          "valeur": "Valeur 1"
-        },
-        "deux": {
-          "description": "Complication 2",
-          "valeur": "Valeur 2"
-        },
-        "trois": {
-          "description": "Complication 3",
-          "valeur": "Valeur 3"
-        },
-        "quatre": {
-          "description": "Complication 4",
-          "valeur": "Valeur 4"
-        }
+        "description": "Complication",
+        "valeur": "Valeur"
       }
     },
     "Settings": {

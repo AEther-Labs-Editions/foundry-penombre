@@ -24,11 +24,11 @@
 @dice-size: 85px;
 @case-size: 85px;
 @border-radius: 6px;
+@border-radius-small: 4px;
 
 /* ---------------------------------------------
         Fonts
 --------------------------------------------- */
-
 @font-face {
   font-family: @font-cattedrale;
   src: url(/systems/penombre/fonts/Cattedrale-Demo/Cattedrale-Demo-Regular.ttf);
@@ -88,18 +88,62 @@
   left: calc(50% - 96px);
 }
 
+/* ---------------------------------------------
+        Thème Clair
+--------------------------------------------- */
+/* ---------------------------------------------
+          Thème Sombre
+--------------------------------------------- */
+body {
+  &.theme-light {
+    .penombre {
+      &.eminence {
+        .eminence-content {
+          overflow: auto;
+          font-family: @font-cattedrale;
+          color: @color-primary;
+          font-size: @font-size-base;
+          background-color: @background-light; /* Si et seulement si on est en mode clair (et pas sombre) de la fiche */
+
+          // Section timbre
+          .eminence-timbre {
+            .logo-penombre {
+              content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_clair.png");
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.theme-dark {
+    .penombre {
+      &.eminence {
+        .eminence-content {
+          overflow: auto;
+          font-family: @font-cattedrale;
+          color: @color-primary;
+          font-size: @font-size-base;
+
+          // Section timbre
+          .eminence-timbre {
+            .logo-penombre {
+              content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.png");
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .penombre {
-  /* ---------------------------------------------
+/* ---------------------------------------------
         Eminence
 --------------------------------------------- */
 
   &.eminence {
     .eminence-content {
-      overflow: auto;
-      background-color: @background-light; /* Si et seulement si on est en mode clair (et pas sombre) de la fiche */
-      font-family: @font-cattedrale;
-      color: @color-primary;
-      font-size: @font-size-base;
 
       // Styles pour les inputs
       input,
@@ -135,7 +179,8 @@
         .grande-frise-verticale-1,
         .grande-frise-verticale-2,
         .grande-frise-verticale-3,
-        .grande-frise-verticale-4 {
+        .grande-frise-verticale-4,
+        .grande-frise-verticale-5 {
           flex-direction: column;
         }
       }
@@ -152,12 +197,12 @@
       }
 
       .col-2-1 {
-        width: 8px;
+        width: 9px;
         float: left;
       }
 
       .col-3-1 {
-        width: 410px;
+        width: 408px;
         float: left;
         flex-direction: column;
         padding-left: 4px;
@@ -199,7 +244,7 @@
 
         .data {
           float: left;
-          width: 256px;
+          width: 254px;
           clear: right;
         }
       }
@@ -239,8 +284,10 @@
 
       // Section conscience
       .eminence-conscience {
-        min-height: 655px;
+        min-height: 800px;
         color: @color-accent;
+
+
         // Jetons
         .div-jetons {
           width: 400px;
@@ -265,10 +312,27 @@
         }
         .cadre-complications {
           border: 1px solid #917f35;
-          border-radius: 4px;
+          border-radius: @border-radius-small;
           padding: 2px;
           padding-left: 10px;
+
+          // Cases à cocher
+          .images-cases {
+            text-align: right;
+            width: 200px;
+            height: 20px;
+            display: table;
+            flex-direction: line;
+            text-align: right;
+
+            .complication-case {
+              float: left;
+              width: 20px;
+              height: 20px;
+            }
+          }
         }
+
       }
 
       // Section harmoniques
@@ -276,6 +340,7 @@
         color: @color-secondary;
         .click:hover {
           cursor: pointer;
+          -webkit-filter: drop-shadow(0px 0px 6px #af010a);
           filter: drop-shadow(0px 0px 6px #af010a);
         }
         table {
