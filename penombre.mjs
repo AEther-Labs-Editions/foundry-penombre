@@ -41,6 +41,37 @@ Hooks.once("init", function () {
     }
   })
 
+  Handlebars.registerHelper("getCaseConscienceImage", function (myVal, myCase) {
+    switch  (myCase) {
+      case 1 : {
+        if (myVal > 0) {
+          return `systems/penombre/assets/ui/transp_case_checked.png`
+        } else {
+          return `systems/penombre/assets/ui/transp_case_unchecked.png`
+        }
+      break
+      }
+      case 2 : {
+        if (myVal > 1) {
+          return `systems/penombre/assets/ui/transp_case_checked.png`
+        } else {
+          return `systems/penombre/assets/ui/transp_case_unchecked.png`
+        }
+        break
+      }
+      case 3 : {
+        if (myVal > 2) {
+          return `systems/penombre/assets/ui/transp_case_checked.png`
+        } else {
+          return `systems/penombre/assets/ui/transp_case_unchecked.png`
+        }
+        break
+      }
+      default:
+    }
+
+  })
+
   Handlebars.registerHelper("times", function (n, block) {
     let accum = ""
     for (let i = 1; i <= n; ++i) {
