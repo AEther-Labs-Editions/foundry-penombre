@@ -67,18 +67,38 @@ penombre-toggle-switch[checked] thumb {
   top: -45px;
   left: calc(50% - 96px);
 }
+/* ---------------------------------------------
+        Thème Clair
+--------------------------------------------- */
+/* ---------------------------------------------
+          Thème Sombre
+--------------------------------------------- */
+body.theme-light .penombre.eminence .eminence-content {
+  overflow: auto;
+  font-family: "CattedraleDemo";
+  color: #a56135;
+  font-size: 17px;
+  background-color: #faeed6;
+  /* Si et seulement si on est en mode clair (et pas sombre) de la fiche */
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .logo-penombre {
+  content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_clair.png");
+}
+body.theme-dark .penombre.eminence .eminence-content {
+  overflow: auto;
+  font-family: "CattedraleDemo";
+  color: #a56135;
+  font-size: 17px;
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .logo-penombre {
+  content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.png");
+}
 .penombre {
   /* ---------------------------------------------
         Eminence
 --------------------------------------------- */
 }
 .penombre.eminence .eminence-content {
-  overflow: auto;
-  background-color: #faeed6;
-  /* Si et seulement si on est en mode clair (et pas sombre) de la fiche */
-  font-family: "CattedraleDemo";
-  color: #a56135;
-  font-size: 17px;
   /*
       // Styles de texte avec classes utilitaires
       .text {
@@ -146,11 +166,11 @@ penombre-toggle-switch[checked] thumb {
   transform: rotate(180deg);
 }
 .penombre.eminence .eminence-content .col-2-1 {
-  width: 8px;
+  width: 9px;
   float: left;
 }
 .penombre.eminence .eminence-content .col-3-1 {
-  width: 410px;
+  width: 408px;
   float: left;
   flex-direction: column;
   padding-left: 4px;
@@ -190,7 +210,7 @@ penombre-toggle-switch[checked] thumb {
 }
 .penombre.eminence .eminence-content .eminence-personnage .data {
   float: left;
-  width: 256px;
+  width: 254px;
   clear: right;
 }
 .penombre.eminence .eminence-content .eminence-harmoniques-locked {
@@ -234,6 +254,7 @@ penombre-toggle-switch[checked] thumb {
 }
 .penombre.eminence .eminence-content .eminence-harmoniques .click:hover {
   cursor: pointer;
+  -webkit-filter: drop-shadow(0px 0px 6px #af010a);
   filter: drop-shadow(0px 0px 6px #af010a);
 }
 .penombre.eminence .eminence-content .eminence-harmoniques table tr:nth-child(odd),
