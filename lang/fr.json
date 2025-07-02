@@ -291,7 +291,9 @@
       "complications": {
         "description": "Complication",
         "valeur": "Valeur"
-      }
+      },
+      "pouvoirs": "Pouvoirs",
+      "potentiel": "Potentiel"
     },
     "Settings": {
       "styleJeu": {

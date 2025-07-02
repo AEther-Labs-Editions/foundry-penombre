@@ -19,6 +19,8 @@
 @font-size-middle: 19px;
 @font-size-large: 29px;
 @font-size-xlarge: 30px;
+@font-size-2xlarge: 40px;
+
 
 // Dimensions des éléments
 @dice-size: 85px;
@@ -440,6 +442,55 @@ body {
           float: none;
           color: @color-secondary;
           font-size: @font-size-xlarge;
+        }
+      }
+
+      // Section Pouvoirs
+      .eminence-pouvoirs {
+        min-height: 800px;
+        color: @color-secondary;
+
+        .titre-section-pouvoirs {
+          font-size: @font-size-2xlarge;
+        }
+
+        .content {
+          .potentiel {
+
+            .div-potentiel {
+              text-align: center;
+              width: 100px;
+              height: 200px;
+
+              .img-potentiel {
+                width: 100px;
+                height: 100px;
+
+              }
+            
+              .absolue {
+                position: absolute;
+                z-index: 5;
+              }
+
+              .val-potentiel {
+                margin-left: 45px;
+                margin-top: 42px;
+                font-size: @font-size-large;
+
+              }
+
+              span {
+                margin-left: -42px;
+                margin-top: 90px;
+                font-size: @font-size-large;
+              }
+            }
+          }
+
+          .pouvoirs {
+            float: none;
+          }
         }
       }
     }

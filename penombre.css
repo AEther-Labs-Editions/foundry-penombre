@@ -358,3 +358,36 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .logo-peno
   color: #56605b;
   font-size: 30px;
 }
+.penombre.eminence .eminence-content .eminence-pouvoirs {
+  min-height: 800px;
+  color: #56605b;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .titre-section-pouvoirs {
+  font-size: 40px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel {
+  text-align: center;
+  width: 100px;
+  height: 200px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel .img-potentiel {
+  width: 100px;
+  height: 100px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel .absolue {
+  position: absolute;
+  z-index: 5;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel .val-potentiel {
+  margin-left: 45px;
+  margin-top: 42px;
+  font-size: 29px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel span {
+  margin-left: -42px;
+  margin-top: 90px;
+  font-size: 29px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs {
+  float: none;
+}
