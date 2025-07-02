@@ -223,18 +223,6 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .logo-peno
   min-height: 800px;
   color: #917f35;
 }
-.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .images-cases {
-  width: 200px;
-  height: 20px;
-  display: table;
-  flex-direction: line;
-  text-align: right;
-}
-.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .images-cases .complication-case {
-  float: left;
-  width: 20px;
-  height: 20px;
-}
 .penombre.eminence .eminence-content .eminence-conscience .div-jetons {
   width: 400px;
   display: grid;
@@ -260,6 +248,18 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .logo-peno
   border-radius: 4px;
   padding: 2px;
   padding-left: 10px;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .images-cases {
+  width: 200px;
+  height: 20px;
+  display: table;
+  flex-direction: line;
+  text-align: right;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .images-cases .complication-case {
+  float: left;
+  width: 20px;
+  height: 20px;
 }
 .penombre.eminence .eminence-content .eminence-harmoniques {
   color: #56605b;
