@@ -27,6 +27,7 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
     actions: {
       editImage: EminenceSheet.#onEditImage,
       clicJeton: EminenceSheet.#onClicJeton,
+      complication: EminenceSheet.#onClicComplication,
     },
   }
 
@@ -185,5 +186,24 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
         break
     }
     await this.document.update({ "system.conscience.jetons": jetons })
+  }
+
+  /**
+   * Gère les clics sur les éléments de complication dans l'interface.
+   *
+   * @param {Event} event L'événement de clic déclenché par l'utilisateur.
+   * @param {HTMLElement} target L'élément HTML cliqué, contenant les attributs data de la complication.
+   * @returns {Promise<void>} Résout lorsque la mise à jour du document est terminée.
+   * @private
+   * @static
+   */
+  static async #onClicComplication(event, target) {
+    event.preventDefault()
+    const dataset = target.dataset
+    const complication = dataset.complication
+    let index = parseInt(dataset.index)
+    const initialValue = this.document.system.conscience.complications[complication].valeur
+    if (initialValue === 1 && index === 1) index = 0 // Si on clique sur la première case, on la désactive
+    await this.document.update({ [`system.conscience.complications.${complication}.valeur`]: index })
   }
 }
