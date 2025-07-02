@@ -26,7 +26,7 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
     },
     actions: {
       editImage: EminenceSheet.#onEditImage,
-      clicJeton: EminenceSheet.#onClicJeton,
+      jeton: EminenceSheet.#onClicJeton,
       complication: EminenceSheet.#onClicComplication,
     },
   }
