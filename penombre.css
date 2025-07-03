@@ -265,6 +265,34 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
 .penombre.eminence .eminence-content .eminence-conscience .div-jetons .jeton {
   text-align: center;
 }
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications-2 {
+  display: table;
+  width: 402px;
+  border: 1px solid #917f35;
+  border-radius: 4px;
+  padding: 2px;
+  padding-left: 10px;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications-2 .div-cases {
+  display: flex;
+  width: 390px;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications-2 .div-cases label {
+  float: left;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications-2 .div-cases .images-cases {
+  display: flex;
+  width: 250px;
+  height: 20px;
+  float: left;
+  flex-direction: line;
+  justify-content: right;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications-2 .div-cases .images-cases .complication-case {
+  float: left;
+  width: 20px;
+  height: 20px;
+}
 .penombre.eminence .eminence-content .eminence-conscience .cadre-complications {
   display: table;
   width: 402px;
@@ -273,32 +301,43 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
   padding: 2px;
   padding-left: 10px;
 }
-.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .div-cases {
-  display: flex;
-  width: 390px;
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications label {
+  width: 402px;
+  float: none;
+  clear: both;
 }
-.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .div-cases label {
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication {
+  display: flex;
+  float: none;
+  clear: both;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication .div-descriptions {
+  width: 320px;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication .div-cases {
   float: left;
-}
-.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .div-cases .images-cases {
   display: flex;
-  width: 250px;
+  width: 70px;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication .div-cases .images-cases {
+  display: flex;
+  width: 70px;
   height: 20px;
   float: left;
   flex-direction: line;
   justify-content: right;
 }
-.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .div-cases .images-cases .complication-case {
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication .div-cases .images-cases .complication-case {
   float: left;
   width: 20px;
   height: 20px;
 }
-.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .div-cases .images-cases .complication-case:hover {
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication .div-cases .images-cases .complication-case:hover {
   cursor: pointer;
   /*
-                  -webkit-filter: drop-shadow(0px 0px 6px #af010a);
-                  filter: drop-shadow(0px 0px 6px #af010a);
-                  */
+                    -webkit-filter: drop-shadow(0px 0px 6px #af010a);
+                    filter: drop-shadow(0px 0px 6px #af010a);
+                    */
 }
 .penombre.eminence .eminence-content .eminence-harmoniques {
   color: #56605b;
