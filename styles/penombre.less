@@ -19,7 +19,7 @@
 @font-size-middle: 19px;
 @font-size-large: 29px;
 @font-size-xlarge: 30px;
-@font-size-2xlarge: 40px;
+@font-size-2xlarge: 35px;
 
 
 // Dimensions des éléments
@@ -110,11 +110,11 @@ body {
 
           // Section timbre
           .eminence-timbre {
-            min-height: 95px;
+            min-height: 90px;
 
             .logo-penombre {
               float: none;
-              width: 210px;
+              width: 217px;
               content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_clair.png");
             }
             .frise-penombre {
@@ -139,11 +139,12 @@ body {
 
           // Section timbre
           .eminence-timbre {
-            min-height: 95px;
+            min-height: 90px;
+            background-color: #2d1000;
 
             .logo-penombre {
               float: none;
-              width: 210px;
+              width: 217px;
               content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.png");
             }
             .frise-penombre {
@@ -400,16 +401,25 @@ body {
         }
 
         .col-3-1 {
-          .col-1-2 {
+          .rang-1-2 {
             float: left;
-            width: 410px;
+            width: 404px;
+
+            .col-choix-des {
+              width: 190px;
+            }
           }
 
-          .col-2-2 {
+          .rang-2-2 {
             float: none;
-            width: 400px;
+            width: 405px;
           }
         }
+
+        .editer-harmoniques {
+          width: 405px;
+        }
+
 
         // Cases de mouvement avec mixin
         .case-de-mouve-1 {

@@ -74,7 +74,7 @@
           "complications": {
             "une": {
               "description": {
-                "label": "Description de la complication 1"
+                "label": "Complication 1"
               },
               "valeur": {
                 "label": "Valeur de la complication 1"
@@ -82,7 +82,7 @@
             },
             "deux": {
               "description": {
-                "label": "Description de la complication 2"
+                "label": "Complication 2"
               },
               "valeur": {
                 "label": "Valeur de la complication 2"
@@ -90,7 +90,7 @@
             },
             "trois": {
               "description": {
-                "label": "Description de la complication 3"
+                "label": "Complication 3"
               },
               "valeur": {
                 "label": "Valeur de la complication 3"
@@ -98,7 +98,7 @@
             },
             "quatre": {
               "description": {
-                "label": "Description de la complication 4"
+                "label": "Complication 4"
               },
               "valeur": {
                 "label": "Valeur de la complication 4"
@@ -289,8 +289,14 @@
       "modeEdition": "Bascule entre le Mode « Éditer » et le Mode « Jouer »",
       "complicationsListe": "Complications :",
       "complications": {
-        "description": "Complication",
-        "valeur": "Valeur"
+        "description": {
+          "une": "Complication 1",
+          "deux": "Complication 2",
+          "trois": "Complication 3",
+          "quatre": "Complication 4"
+        },
+        "decrivezPoints": "Veuillez decrire…",
+        "valeur": "⌞Valeur"
       },
       "pouvoirs": "Pouvoirs",
       "potentiel": "Potentiel"

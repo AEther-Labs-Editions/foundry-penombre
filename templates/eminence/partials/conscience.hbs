@@ -15,6 +15,7 @@
         <!-- Complications -->
         <p>{{localize "PENOMBRE.ui.complicationsListe"}}</p>
         <div class="cadre-complications">
+          <label>{{localize "PENOMBRE.ui.complications.decrivezPoints"}}</label>
           {{formGroup systemFields.conscience.fields.complications.fields.une.fields.description value=systemSource.conscience.complications.une.description localize=true}}
           {{formGroup systemFields.conscience.fields.complications.fields.deux.fields.description value=systemSource.conscience.complications.deux.description localize=true}}
           {{formGroup systemFields.conscience.fields.complications.fields.trois.fields.description value=systemSource.conscience.complications.trois.description localize=true}}
@@ -38,7 +39,7 @@
         <div class="cadre-complications">
           {{#each system.conscience.complications as |complication id|}}
             <div class="form-group">
-              <label>{{localize "PENOMBRE.ui.complications.description"}}</label>
+              <label>{{localize (concat "PENOMBRE.ui.complications.description." id)}}</label>
               <div class="form-fields">{{complication.description}}</div>
             </div>
             <div class="form-group div-cases">
@@ -55,8 +56,6 @@
       {{/if}}
 
       <!-- Jetons-->
-      {{#if unlocked}}
-      {{else}}
         <div class="div-jetons">
           {{#each system.conscience.jetons as |jeton id|}}
             {{#if (lt id @root.system.conscience.valeur)}}
@@ -67,7 +66,6 @@
             <img class="jeton" src="systems/penombre/assets/ui/cercle.png"></img>
           {{/times}}
         </div>
-      {{/if}}
 
     </div>
   </div>

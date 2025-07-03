@@ -83,11 +83,11 @@ body.theme-light .penombre.eminence .eminence-content {
   clear: both;
 }
 body.theme-light .penombre.eminence .eminence-content .eminence-timbre {
-  min-height: 95px;
+  min-height: 90px;
 }
 body.theme-light .penombre.eminence .eminence-content .eminence-timbre .logo-penombre {
   float: none;
-  width: 210px;
+  width: 217px;
   content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_clair.png");
 }
 body.theme-light .penombre.eminence .eminence-content .eminence-timbre .frise-penombre {
@@ -102,11 +102,12 @@ body.theme-dark .penombre.eminence .eminence-content {
   font-size: 17px;
 }
 body.theme-dark .penombre.eminence .eminence-content .eminence-timbre {
-  min-height: 95px;
+  min-height: 90px;
+  background-color: #2d1000;
 }
 body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .logo-penombre {
   float: none;
-  width: 210px;
+  width: 217px;
   content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.png");
 }
 body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-penombre {
@@ -314,13 +315,19 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
 .penombre.eminence .eminence-content .eminence-harmoniques .case-de {
   width: 85px;
 }
-.penombre.eminence .eminence-content .eminence-harmoniques .col-3-1 .col-1-2 {
+.penombre.eminence .eminence-content .eminence-harmoniques .col-3-1 .rang-1-2 {
   float: left;
-  width: 410px;
+  width: 404px;
 }
-.penombre.eminence .eminence-content .eminence-harmoniques .col-3-1 .col-2-2 {
+.penombre.eminence .eminence-content .eminence-harmoniques .col-3-1 .rang-1-2 .col-choix-des {
+  width: 190px;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .col-3-1 .rang-2-2 {
   float: none;
-  width: 400px;
+  width: 405px;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .editer-harmoniques {
+  width: 405px;
 }
 .penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-1 {
   float: none;
@@ -384,7 +391,7 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
   color: #56605b;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .titre-section-pouvoirs {
-  font-size: 40px;
+  font-size: 35px;
   float: none;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel {
