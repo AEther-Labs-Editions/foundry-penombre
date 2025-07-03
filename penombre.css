@@ -242,7 +242,7 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
   min-height: 510px;
 }
 .penombre.eminence .eminence-content .eminence-conscience {
-  min-height: 800px;
+  min-height: 785px;
   color: #917f35;
 }
 .penombre.eminence .eminence-content .eminence-conscience .div-jetons {
@@ -387,8 +387,9 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
   font-size: 30px;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs {
-  min-height: 500px;
+  min-height: 400px;
   color: #56605b;
+  text-align: center;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .titre-section-pouvoirs {
   font-size: 35px;
@@ -396,6 +397,7 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel {
   position: relative;
+  float: left;
   text-align: center;
   width: 100px;
   height: 200px;
@@ -420,5 +422,96 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
   font-size: 29px;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs {
+  float: left;
+  width: 517px;
+  min-height: 290px;
+  border: 1px solid #917f35;
+  border-radius: 4px;
+  padding: 2px;
+}
+.penombre.eminence .eminence-content .eminence-atouts {
+  min-height: 400px;
+  color: #56605b;
+  text-align: center;
+}
+.penombre.eminence .eminence-content .eminence-atouts .titre-section-atouts {
+  font-size: 35px;
   float: none;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel {
+  position: relative;
+  float: left;
+  text-align: center;
+  width: 100px;
+  height: 200px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel .img-potentiel {
+  width: 100px;
+  height: 100px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel .absolue {
+  position: absolute;
+  z-index: 5;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel .val-potentiel {
+  margin-left: 45px;
+  margin-top: 42px;
+  font-size: 29px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel span {
+  margin-left: -42px;
+  margin-top: 90px;
+  color: #a56135;
+  font-size: 29px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts {
+  float: left;
+  width: 517px;
+  min-height: 290px;
+  border: 1px solid #917f35;
+  border-radius: 4px;
+  padding: 2px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises {
+  min-height: 400px;
+  color: #56605b;
+  text-align: center;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .titre-section-maitrises {
+  font-size: 35px;
+  float: none;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel {
+  position: relative;
+  float: left;
+  text-align: center;
+  width: 100px;
+  height: 200px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel .img-potentiel {
+  width: 100px;
+  height: 100px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel .absolue {
+  position: absolute;
+  z-index: 5;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel .val-potentiel {
+  margin-left: 45px;
+  margin-top: 42px;
+  font-size: 29px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel span {
+  margin-left: -42px;
+  margin-top: 90px;
+  color: #a56135;
+  font-size: 29px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises {
+  float: left;
+  width: 517px;
+  min-height: 290px;
+  border: 1px solid #917f35;
+  border-radius: 4px;
+  padding: 2px;
 }
