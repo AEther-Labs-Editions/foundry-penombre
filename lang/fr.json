@@ -284,20 +284,10 @@
       "cle": "Clef",
       "gamme": "Gamme",
       "ton": "Ton",
-      "conscienceVal" : "Conscience",
-      "conscienceMax": " Conscience Max",
+      "conscienceVal" : "Actuelle",
+      "conscienceMax": " Max",
       "modeEdition": "Bascule entre le Mode « Éditer » et le Mode « Jouer »",
       "complicationsListe": "Complications :",
-      "complications": {
-        "description": {
-          "une": "Complication 1",
-          "deux": "Complication 2",
-          "trois": "Complication 3",
-          "quatre": "Complication 4"
-        },
-        "decrivezPoints": "Veuillez decrire…",
-        "valeur": "⌞Valeur"
-      },
       "pouvoirs": "Pouvoirs",
       "atouts": "Atouts",
       "maitrises": "Maitrises magiques",
