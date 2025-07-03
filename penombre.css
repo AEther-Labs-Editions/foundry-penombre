@@ -293,6 +293,9 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
   width: 20px;
   height: 20px;
 }
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications-2 .div-cases .images-cases .complication-case:hover {
+  cursor: pointer;
+}
 .penombre.eminence .eminence-content .eminence-conscience .cadre-complications {
   display: table;
   width: 402px;
@@ -331,13 +334,6 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
   float: left;
   width: 20px;
   height: 20px;
-}
-.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication .div-cases .images-cases .complication-case:hover {
-  cursor: pointer;
-  /*
-                    -webkit-filter: drop-shadow(0px 0px 6px #af010a);
-                    filter: drop-shadow(0px 0px 6px #af010a);
-                    */
 }
 .penombre.eminence .eminence-content .eminence-harmoniques {
   color: #56605b;
