@@ -87,7 +87,7 @@ body.theme-light .penombre.eminence .eminence-content .eminence-timbre {
 }
 body.theme-light .penombre.eminence .eminence-content .eminence-timbre .logo-penombre {
   float: none;
-  width: 200px;
+  width: 210px;
   content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_clair.png");
 }
 body.theme-light .penombre.eminence .eminence-content .eminence-timbre .frise-penombre {
@@ -106,7 +106,7 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre {
 }
 body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .logo-penombre {
   float: none;
-  width: 200px;
+  width: 210px;
   content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.png");
 }
 body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-penombre {
