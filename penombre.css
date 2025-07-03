@@ -80,9 +80,20 @@ body.theme-light .penombre.eminence .eminence-content {
   font-size: 17px;
   background-color: #faeed6;
   /* Si et seulement si on est en mode clair (et pas sombre) de la fiche */
+  clear: both;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre {
+  min-height: 95px;
 }
 body.theme-light .penombre.eminence .eminence-content .eminence-timbre .logo-penombre {
+  float: none;
+  width: 200px;
   content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_clair.png");
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .frise-penombre {
+  float: left;
+  width: 400px;
+  content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_clair.png");
 }
 body.theme-dark .penombre.eminence .eminence-content {
   overflow: auto;
@@ -90,8 +101,18 @@ body.theme-dark .penombre.eminence .eminence-content {
   color: #a56135;
   font-size: 17px;
 }
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre {
+  min-height: 95px;
+}
 body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .logo-penombre {
+  float: none;
+  width: 200px;
   content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.png");
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-penombre {
+  float: left;
+  width: 400px;
+  content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.png");
 }
 .penombre {
   /* ---------------------------------------------
@@ -359,11 +380,12 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .logo-peno
   font-size: 30px;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs {
-  min-height: 800px;
+  min-height: 500px;
   color: #56605b;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .titre-section-pouvoirs {
   font-size: 40px;
+  float: none;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel {
   position: relative;

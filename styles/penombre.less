@@ -106,11 +106,21 @@ body {
           color: @color-primary;
           font-size: @font-size-base;
           background-color: @background-light; /* Si et seulement si on est en mode clair (et pas sombre) de la fiche */
+          clear: both;
 
           // Section timbre
           .eminence-timbre {
+            min-height: 95px;
+
             .logo-penombre {
+              float: none;
+              width: 200px;
               content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_clair.png");
+            }
+            .frise-penombre {
+              float: left;
+              width: 400px;
+              content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_clair.png");
             }
           }
         }
@@ -129,9 +139,19 @@ body {
 
           // Section timbre
           .eminence-timbre {
+            min-height: 95px;
+
             .logo-penombre {
+              float: none;
+              width: 200px;
               content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.png");
             }
+            .frise-penombre {
+              float: left;
+              width: 400px;
+              content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.png");
+            }
+
           }
         }
       }
@@ -447,11 +467,12 @@ body {
 
       // Section Pouvoirs
       .eminence-pouvoirs {
-        min-height: 800px;
+        min-height: 500px;
         color: @color-secondary;
 
         .titre-section-pouvoirs {
           font-size: @font-size-2xlarge;
+          float: none;
         }
 
         .content {
