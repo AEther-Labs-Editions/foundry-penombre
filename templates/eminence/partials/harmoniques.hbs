@@ -1,21 +1,10 @@
 {{log "harmoniques" this}}
-<div class="eminence-harmoniques eminence-harmoniques-{{#if locked}}locked{{else}}unlocked{{/if}} flexible">
+<div class="eminence-harmoniques flexible">
   <div class="col-1-1 text-vertical-harmoniques">{{localize "PENOMBRE.ui.section.harmoniques"}}</div>
   <div class="col-2-1 frise-verticale">
     <img class="" src="/systems/penombre/assets/ui/grise.png" alt="|" />
   </div>
   <div class="col-3-1 flexible">
-    {{#if unlocked}}
-      <div class="rang-1-2">
-        <div class="col-choix-des">
-        {{formGroup systemFields.harmoniques.fields.ame.fields.valeur value=systemSource.harmoniques.ame.valeur localize=true}}
-        {{formGroup systemFields.harmoniques.fields.esprit.fields.valeur value=systemSource.harmoniques.esprit.valeur localize=true}}
-        {{formGroup systemFields.harmoniques.fields.etincelle.fields.valeur value=systemSource.harmoniques.etincelle.valeur localize=true}}
-        {{formGroup systemFields.harmoniques.fields.nature.fields.valeur value=systemSource.harmoniques.nature.valeur localize=true}}
-        {{formGroup systemFields.harmoniques.fields.nuit.fields.valeur value=systemSource.harmoniques.nuit.valeur localize=true}}
-        </div>
-      </div>
-    {{/if}}
     <div class="rang-2-2 flexible">
       <table class="table-de flexible">
         <tr class="tr-de flexible">
@@ -24,9 +13,15 @@
               <div class="absolue">
                 <img class="case-de" src="/systems/penombre/assets/ui/case_de_penombre.png" alt="|" />
               </div>
-              <div class="de-de-nuit absolue">
-                <img class="click de-nuit" src="{{getDiceImage nuit}}" alt="|" />
-              </div>
+              {{#if unlocked}}
+              <select name="system.harmoniques.nuit.valeur" class="de-de-nuit-saisie absolue">
+                {{selectOptions harmoniquesChoices selected=systemSource.harmoniques.nuit.valeur localize=true}}
+              </select>
+              {{else}}
+                <div class="de-de-nuit absolue">
+                  <img class="click de-nuit" src="{{getDiceImage nuit}}" alt="|" />
+                </div>
+              {{/if}}
             </div>
             <br />&nbsp;<br />
             <div class="text-gros-1">
@@ -41,9 +36,15 @@
               <div class="absolue">
                 <img class="case-de" src="/systems/penombre/assets/ui/case_de_penombre.png" alt="|" />
               </div>
-              <div class="de-d-ame absolue">
-                <img class="click de-ame" src="{{getDiceImage ame}}" alt="|" />
-              </div>
+              {{#if unlocked}}
+              <select name="system.harmoniques.ame.valeur" class="de-d-ame-saisie absolue">
+                {{selectOptions harmoniquesChoices selected=systemSource.harmoniques.ame.valeur localize=true}}
+              </select>
+              {{else}}
+                <div class="de-d-ame absolue">
+                  <img class="click de-ame" src="{{getDiceImage ame}}" alt="|" />
+                </div>
+              {{/if}}
             </div>
             <br />&nbsp;<br />
             <div class="text-gros-2">
@@ -57,9 +58,15 @@
               <div class="absolue">
                 <img class="case-de" src="/systems/penombre/assets/ui/case_de_penombre.png" alt="|" />
               </div>
-              <div class="de-de-nature absolue">
-                <img class="click de-nature" src="{{getDiceImage nature}}" alt="|" />
-              </div>
+              {{#if unlocked}}
+              <select name="system.harmoniques.nature.valeur" class="de-de-nature-saisie absolue">
+                {{selectOptions harmoniquesChoices selected=systemSource.harmoniques.nature.valeur localize=true}}
+              </select>
+              {{else}}
+                <div class="de-de-nature absolue">
+                  <img class="click de-nature" src="{{getDiceImage nature}}" alt="|" />
+                </div>
+              {{/if}}
             </div>
             <br />&nbsp;<br />
             <div class="text-gros-3">
@@ -74,9 +81,15 @@
               <div class="absolue">
                 <img class="case-de" src="/systems/penombre/assets/ui/case_de_penombre.png" alt="|" />
               </div>
-              <div class="de-d-esprit absolue">
-                <img class="click de-esprit" src="{{getDiceImage esprit}}" alt="|" />
-              </div>
+              {{#if unlocked}}
+              <select name="system.harmoniques.esprit.valeur" class="de-d-esprit-saisie absolue">
+                {{selectOptions harmoniquesChoices selected=systemSource.harmoniques.esprit.valeur localize=true}}
+              </select>
+              {{else}}
+                <div class="de-d-esprit absolue">
+                  <img class="click de-esprit" src="{{getDiceImage esprit}}" alt="|" />
+                </div>
+              {{/if}}
             </div>
             <br />&nbsp;<br />
             <div class="text-gros-4">
@@ -92,9 +105,15 @@
               <div class="absolue">
                 <img class="case-de" src="/systems/penombre/assets/ui/case_de_penombre.png" alt="|" />
               </div>
-              <div class="de-d-etincelle absolue">
-                <img class="click de-etincelle" src="{{getDiceImage etincelle}}" alt="|" />
-              </div>
+              {{#if unlocked}}
+              <select name="system.harmoniques.etincelle.valeur" class="de-d-etincelle-saisie absolue">
+                {{selectOptions harmoniquesChoices selected=systemSource.harmoniques.etincelle.valeur localize=true}}
+              </select>
+              {{else}}
+                <div class="de-d-etincelle absolue">
+                  <img class="click de-etincelle" src="{{getDiceImage etincelle}}" alt="|" />
+                </div>
+              {{/if}}
             </div>
             <br />&nbsp;<br />
             <div class="text-gros-5">
