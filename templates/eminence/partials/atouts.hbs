@@ -1,2 +1,27 @@
+{{log "EminenceSheet - Partials - Atouts" this }}
 <div class="eminence-atouts">
+    <span class="titre-section-atouts">{{localize "PENOMBRE.ui.atouts"}}</span>
+    <div class="content">
+        <div class="potentiel">
+            {{#if unlocked}}
+            {{formGroup systemFields.potentiel.fields.atouts value=systemSource.potentiel.atouts localize=true disabled=locked}}
+            {{else}}
+            <div class="div-potentiel">
+                <span class="absolue">{{localize "PENOMBRE.ui.potentiel"}}</span>
+                <div class="val-potentiel absolue">{{system.potentiel.atouts}}</div>
+                <img class="img-potentiel absolue" src="systems/penombre/assets/ui/potentiel_creux.png" alt="|" />
+            </div>
+            {{/if}}
+        </div>
+        <div class="atouts absolue">
+            {{#each atouts as |atout|}}
+                {{log 'atout' atout }}
+                <input type="checkbox" {{#if atout.system.utilise}}checked{{/if}}></input>
+                <label>{{atout.name}}</label>                
+                {{atout.system.description}}
+                {{atout.system.type}}
+                <br>
+            {{/each}}
+        </div>
+    </div>
 </div>

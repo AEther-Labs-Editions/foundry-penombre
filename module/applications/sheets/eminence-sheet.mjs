@@ -207,6 +207,8 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
     let index = parseInt(dataset.index)
     const initialValue = this.document.system.conscience.complications[complication].valeur
     if (initialValue === 1 && index === 1) index = 0 // Si on clique sur la première case, on la désactive
+    if (initialValue === 2 && index === 2) index = 1
+    if (initialValue === 3 && index === 3) index = 2
     await this.document.update({ [`system.conscience.complications.${complication}.valeur`]: index })
   }
 }

@@ -80,9 +80,20 @@ body.theme-light .penombre.eminence .eminence-content {
   font-size: 17px;
   background-color: #faeed6;
   /* Si et seulement si on est en mode clair (et pas sombre) de la fiche */
+  clear: both;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre {
+  min-height: 90px;
 }
 body.theme-light .penombre.eminence .eminence-content .eminence-timbre .logo-penombre {
+  float: none;
+  width: 217px;
   content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_clair.png");
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .frise-penombre {
+  float: left;
+  width: 400px;
+  content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_clair.png");
 }
 body.theme-dark .penombre.eminence .eminence-content {
   overflow: auto;
@@ -90,8 +101,19 @@ body.theme-dark .penombre.eminence .eminence-content {
   color: #a56135;
   font-size: 17px;
 }
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre {
+  min-height: 90px;
+  background-color: #2d1000;
+}
 body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .logo-penombre {
+  float: none;
+  width: 217px;
   content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.png");
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-penombre {
+  float: left;
+  width: 400px;
+  content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.png");
 }
 .penombre {
   /* ---------------------------------------------
@@ -220,7 +242,7 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .logo-peno
   min-height: 510px;
 }
 .penombre.eminence .eminence-content .eminence-conscience {
-  min-height: 800px;
+  min-height: 785px;
   color: #917f35;
 }
 .penombre.eminence .eminence-content .eminence-conscience .div-jetons {
@@ -243,20 +265,72 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .logo-peno
 .penombre.eminence .eminence-content .eminence-conscience .div-jetons .jeton {
   text-align: center;
 }
-.penombre.eminence .eminence-content .eminence-conscience .cadre-complications {
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications-2 {
+  display: table;
+  width: 402px;
   border: 1px solid #917f35;
   border-radius: 4px;
   padding: 2px;
   padding-left: 10px;
 }
-.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .images-cases {
-  width: 200px;
-  height: 20px;
-  display: table;
-  flex-direction: line;
-  text-align: right;
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications-2 .div-cases {
+  display: flex;
+  width: 390px;
 }
-.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .images-cases .complication-case {
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications-2 .div-cases label {
+  float: left;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications-2 .div-cases .images-cases {
+  display: flex;
+  width: 250px;
+  height: 20px;
+  float: left;
+  flex-direction: line;
+  justify-content: right;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications-2 .div-cases .images-cases .complication-case {
+  float: left;
+  width: 20px;
+  height: 20px;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications-2 .div-cases .images-cases .complication-case:hover {
+  cursor: pointer;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications {
+  display: table;
+  width: 402px;
+  border: 1px solid #917f35;
+  border-radius: 4px;
+  padding: 2px;
+  padding-left: 10px;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications label {
+  width: 402px;
+  float: none;
+  clear: both;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication {
+  display: flex;
+  float: none;
+  clear: both;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication .div-descriptions {
+  width: 320px;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication .div-cases {
+  float: left;
+  display: flex;
+  width: 70px;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication .div-cases .images-cases {
+  display: flex;
+  width: 70px;
+  height: 20px;
+  float: left;
+  flex-direction: line;
+  justify-content: right;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication .div-cases .images-cases .complication-case {
   float: left;
   width: 20px;
   height: 20px;
@@ -276,13 +350,19 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .logo-peno
 .penombre.eminence .eminence-content .eminence-harmoniques .case-de {
   width: 85px;
 }
-.penombre.eminence .eminence-content .eminence-harmoniques .col-3-1 .col-1-2 {
+.penombre.eminence .eminence-content .eminence-harmoniques .col-3-1 .rang-1-2 {
   float: left;
-  width: 410px;
+  width: 404px;
 }
-.penombre.eminence .eminence-content .eminence-harmoniques .col-3-1 .col-2-2 {
+.penombre.eminence .eminence-content .eminence-harmoniques .col-3-1 .rang-1-2 .col-choix-des {
+  width: 190px;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .col-3-1 .rang-2-2 {
   float: none;
-  width: 400px;
+  width: 405px;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .editer-harmoniques {
+  width: 405px;
 }
 .penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-1 {
   float: none;
@@ -340,4 +420,138 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .logo-peno
   float: none;
   color: #56605b;
   font-size: 30px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs {
+  min-height: 400px;
+  color: #56605b;
+  text-align: center;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .titre {
+  font-size: 35px;
+  float: none;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel {
+  position: relative;
+  float: left;
+  text-align: center;
+  width: 100px;
+  height: 200px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel .img-potentiel {
+  width: 100px;
+  height: 100px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel .absolue {
+  position: absolute;
+  z-index: 5;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel .val-potentiel {
+  margin-left: 45px;
+  margin-top: 42px;
+  font-size: 29px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel span {
+  margin-left: -42px;
+  margin-top: 90px;
+  color: #a56135;
+  font-size: 29px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs {
+  float: left;
+  width: 517px;
+  min-height: 290px;
+  border: 1px solid #917f35;
+  border-radius: 4px;
+  padding: 2px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs .ligne-pouvoir {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.penombre.eminence .eminence-content .eminence-atouts {
+  min-height: 400px;
+  color: #56605b;
+  text-align: center;
+}
+.penombre.eminence .eminence-content .eminence-atouts .titre-section-atouts {
+  font-size: 35px;
+  float: none;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel {
+  position: relative;
+  float: left;
+  text-align: center;
+  width: 100px;
+  height: 200px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel .img-potentiel {
+  width: 100px;
+  height: 100px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel .absolue {
+  position: absolute;
+  z-index: 5;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel .val-potentiel {
+  margin-left: 45px;
+  margin-top: 42px;
+  font-size: 29px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel span {
+  margin-left: -42px;
+  margin-top: 90px;
+  color: #a56135;
+  font-size: 29px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts {
+  float: left;
+  width: 517px;
+  min-height: 290px;
+  border: 1px solid #917f35;
+  border-radius: 4px;
+  padding: 2px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises {
+  min-height: 400px;
+  color: #56605b;
+  text-align: center;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .titre-section-maitrises {
+  font-size: 35px;
+  float: none;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel {
+  position: relative;
+  float: left;
+  text-align: center;
+  width: 100px;
+  height: 200px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel .img-potentiel {
+  width: 100px;
+  height: 100px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel .absolue {
+  position: absolute;
+  z-index: 5;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel .val-potentiel {
+  margin-left: 45px;
+  margin-top: 42px;
+  font-size: 29px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel span {
+  margin-left: -42px;
+  margin-top: 90px;
+  color: #a56135;
+  font-size: 29px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises {
+  float: left;
+  width: 517px;
+  min-height: 290px;
+  border: 1px solid #917f35;
+  border-radius: 4px;
+  padding: 2px;
 }

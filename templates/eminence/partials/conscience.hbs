@@ -6,62 +6,24 @@
   </div>
   <div class="col-3-1 flexible">
     <div class="col-1-3">
-      {{#if unlocked}}
 
-        <!-- Conscience -->
-        {{formGroup systemFields.conscience.fields.valeur value=systemSource.conscience.valeur localize=true}}
-        {{formGroup systemFields.conscience.fields.max value=systemSource.conscience.max localize=true}}
-
-        <!-- Complications -->
-        <p>{{localize "PENOMBRE.ui.complicationsListe"}}</p>
-        <div class="cadre-complications">
-          {{formGroup systemFields.conscience.fields.complications.fields.une.fields.description value=systemSource.conscience.complications.une.description localize=true}}
-          {{formGroup systemFields.conscience.fields.complications.fields.une.fields.valeur value=systemSource.conscience.complications.une.valeur localize=true}}
-          {{formGroup systemFields.conscience.fields.complications.fields.deux.fields.description value=systemSource.conscience.complications.deux.description localize=true}}
-          {{formGroup systemFields.conscience.fields.complications.fields.deux.fields.valeur value=systemSource.conscience.complications.deux.valeur localize=true}}
-          {{formGroup systemFields.conscience.fields.complications.fields.trois.fields.description value=systemSource.conscience.complications.trois.description localize=true}}
-          {{formGroup systemFields.conscience.fields.complications.fields.trois.fields.valeur value=systemSource.conscience.complications.trois.valeur localize=true}}
-          {{formGroup systemFields.conscience.fields.complications.fields.quatre.fields.description value=systemSource.conscience.complications.quatre.description localize=true}}
-          {{formGroup systemFields.conscience.fields.complications.fields.quatre.fields.valeur value=systemSource.conscience.complications.quatre.valeur localize=true}}
-        </div>
-
+      <!-- Conscience -->
+      {{#if unlocked}}       
+          {{formGroup systemFields.conscience.fields.valeur value=systemSource.conscience.valeur localize=true}}
+          {{formGroup systemFields.conscience.fields.max value=systemSource.conscience.max localize=true}}
       {{else}}
-        <!-- Conscience -->
-        <div class="form-group">
-          <label>{{localize "PENOMBRE.ui.conscienceVal"}}</label>
-          <div class="form-fields">{{system.conscience.valeur}}</div>
-        </div>
-        <div class="form-group">
-          <label>{{localize "PENOMBRE.ui.conscienceMax"}}</label>
-          <div class="form-fields">{{system.conscience.max}}</div>
-        </div>
-
-        <!-- Complications -->
-
-        <p>{{localize "PENOMBRE.ui.complicationsListe"}}</p>
-        <div class="cadre-complications">
-          {{#each system.conscience.complications as |complication id|}}
-            <div class="form-group">
-              <label>{{localize "PENOMBRE.ui.complications.description"}}</label>
-              <div class="form-fields">{{complication.description}}</div>
-            </div>
-            <div class="form-group">
-              <label>{{localize "PENOMBRE.ui.complications.valeur"}}</label>
-              <div class="images-cases">
-                <!-- id : une, deux, trois, quatre ; @index : 1, 2, 3 -->
-                {{#times 3}}
-                  <img class="complication-case" data-action="complication" data-complication="{{id}}" data-index="{{@index}}" src="systems/penombre/assets/ui/transp_case_{{#if (gte complication.valeur @index)}}checked{{else}}unchecked{{/if}}.png"></img>
-                {{/times}}
-              </div>
-            </div>
-          {{/each}}
-        </div>
+          <div class="form-group">
+            <label>{{localize "PENOMBRE.ui.conscienceVal"}}</label>
+            <div class="form-fields">{{system.conscience.valeur}}</div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "PENOMBRE.ui.conscienceMax"}}</label>
+            <div class="form-fields">{{system.conscience.max}}</div>
+          </div>
       {{/if}}
 
       <!-- Jetons-->
-      {{#if unlocked}}
-      {{else}}
-        <div class="div-jetons">
+      <div class="div-jetons">
           {{#each system.conscience.jetons as |jeton id|}}
             {{#if (lt id @root.system.conscience.valeur)}}
               <img class="jeton dropshadow-{{jeton.statut}}" data-action="jeton" data-index="{{@index}}" src="{{getJetonImage jeton.statut}}"></img>
@@ -70,6 +32,69 @@
           {{#times nbJetonsPerdus}}
             <img class="jeton" src="systems/penombre/assets/ui/cercle.png"></img>
           {{/times}}
+      </div>
+
+      <!-- Complications -->
+      <p>{{localize "PENOMBRE.ui.complicationsListe"}}</p>
+      {{#if unlocked}}                            
+          <div class="cadre-complications-2">
+
+              <div class="form-group div-cases">
+                {{formInput systemFields.conscience.fields.complications.fields.une.fields.description value=systemSource.conscience.complications.une.description localize=true}}
+                <div class="images-cases">
+                  {{#times 3}}
+                    <img class="complication-case" data-action="complication" data-complication="une" data-index="{{@index}}" src="systems/penombre/assets/ui/transp_case_{{#if (gte systemSource.conscience.complications.une.valeur @index)}}checked{{else}}unchecked{{/if}}.png"></img>
+                  {{/times}}
+                </div>
+              </div>
+
+              <div class="form-group div-cases">
+                {{formInput systemFields.conscience.fields.complications.fields.deux.fields.description value=systemSource.conscience.complications.deux.description localize=true}}
+                <div class="images-cases">
+                  {{#times 3}}
+                    <img class="complication-case" data-action="complication" data-complication="deux" data-index="{{@index}}" src="systems/penombre/assets/ui/transp_case_{{#if (gte systemSource.conscience.complications.deux.valeur @index)}}checked{{else}}unchecked{{/if}}.png"></img>
+                  {{/times}}
+                </div>
+              </div>
+
+              <div class="form-group div-cases">
+                {{formInput systemFields.conscience.fields.complications.fields.trois.fields.description value=systemSource.conscience.complications.trois.description localize=true}}
+                <div class="images-cases">
+                  {{#times 3}}
+                    <img class="complication-case" data-action="complication" data-complication="trois" data-index="{{@index}}" src="systems/penombre/assets/ui/transp_case_{{#if (gte systemSource.conscience.complications.trois.valeur @index)}}checked{{else}}unchecked{{/if}}.png"></img>
+                  {{/times}}
+                </div>
+              </div>
+
+              <div class="form-group div-cases">
+                {{formInput systemFields.conscience.fields.complications.fields.quatre.fields.description value=systemSource.conscience.complications.quatre.description localize=true}}
+                <div class="images-cases">
+                  {{#times 3}}
+                    <img class="complication-case" data-action="complication" data-complication="quatre" data-index="{{@index}}" src="systems/penombre/assets/ui/transp_case_{{#if (gte systemSource.conscience.complications.quatre.valeur @index)}}checked{{else}}unchecked{{/if}}.png"></img>
+                  {{/times}}
+                </div>
+              </div>
+
+            </div>
+
+      {{else}}
+
+        <div class="cadre-complications">
+          {{#each system.conscience.complications as |complication id|}}
+            <div class="ligne-complication">
+              <div class="form-group div-descriptions">
+                <div class="form-fields">{{complication.description}}</div>
+              </div>
+              <div class="form-group div-cases">
+                <div class="images-cases">
+                  <!-- id : une, deux, trois, quatre ; @index : 1, 2, 3 -->
+                  {{#times 3}}
+                    <img class="complication-case-2" src="systems/penombre/assets/ui/transp_case_{{#if (gte complication.valeur @index)}}checked{{else}}unchecked{{/if}}.png"></img>
+                  {{/times}}
+                </div>
+              </div>
+            </div>
+          {{/each}}
         </div>
       {{/if}}
 

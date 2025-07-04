@@ -19,6 +19,8 @@
 @font-size-middle: 19px;
 @font-size-large: 29px;
 @font-size-xlarge: 30px;
+@font-size-2xlarge: 35px;
+
 
 // Dimensions des éléments
 @dice-size: 85px;
@@ -104,11 +106,21 @@ body {
           color: @color-primary;
           font-size: @font-size-base;
           background-color: @background-light; /* Si et seulement si on est en mode clair (et pas sombre) de la fiche */
+          clear: both;
 
           // Section timbre
           .eminence-timbre {
+            min-height: 90px;
+
             .logo-penombre {
+              float: none;
+              width: 217px;
               content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_clair.png");
+            }
+            .frise-penombre {
+              float: left;
+              width: 400px;
+              content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_clair.png");
             }
           }
         }
@@ -127,9 +139,20 @@ body {
 
           // Section timbre
           .eminence-timbre {
+            min-height: 90px;
+            background-color: #2d1000;
+
             .logo-penombre {
+              float: none;
+              width: 217px;
               content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.png");
             }
+            .frise-penombre {
+              float: left;
+              width: 400px;
+              content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.png");
+            }
+
           }
         }
       }
@@ -282,9 +305,9 @@ body {
       }
       */
 
-      // Section conscience
+            // Section conscience
       .eminence-conscience {
-        min-height: 800px;
+        min-height: 785px;
         color: @color-accent;
 
 
@@ -310,30 +333,99 @@ body {
             text-align: center;
           }
         }
-        .cadre-complications {
+
+        .cadre-complications-2 {
+          display: table;
+          width: 402px;
           border: 1px solid #917f35;
           border-radius: @border-radius-small;
           padding: 2px;
           padding-left: 10px;
 
           // Cases à cocher
-          .images-cases {
-            text-align: right;
-            width: 200px;
-            height: 20px;
-            display: table;
-            flex-direction: line;
-            text-align: right;
+          .div-cases {
+            display: flex;
+            width: 390px;
+            // justify-content: space-between;
 
-            .complication-case {
+            label {
               float: left;
-              width: 20px;
+            }
+
+            .images-cases {
+              display: flex;
+              width: 250px;
               height: 20px;
+              float: left;
+              flex-direction: line;
+              justify-content: right;
+
+              .complication-case {
+                float: left;
+                width: 20px;
+                height: 20px;
+
+                &:hover {
+                  cursor: pointer;
+                }
+
+              }
             }
           }
         }
 
+        .cadre-complications {
+          display: table;
+          width: 402px;
+          border: 1px solid #917f35;
+          border-radius: @border-radius-small;
+          padding: 2px;
+          padding-left: 10px;
+
+          label {
+            width: 402px;
+            float: none;
+            clear: both;
+          }
+
+          .ligne-complication {
+            display: flex;
+            float: none;
+            clear: both;
+
+
+            .div-descriptions {
+              // float: left;
+              width: 320px;
+            }
+
+            // Cases à cocher
+            .div-cases {
+              float: left;
+              display: flex;
+              width: 70px;
+
+              // justify-content: space-between;
+
+              .images-cases {
+                display: flex;
+                width: 70px;
+                height: 20px;
+                float: left;
+                flex-direction: line;
+                justify-content: right;
+
+                .complication-case {
+                  float: left;
+                  width: 20px;
+                  height: 20px;
+                }
+              }
+            }
+          }
+        }
       }
+
 
       // Section harmoniques
       .eminence-harmoniques {
@@ -357,16 +449,25 @@ body {
         }
 
         .col-3-1 {
-          .col-1-2 {
+          .rang-1-2 {
             float: left;
-            width: 410px;
+            width: 404px;
+
+            .col-choix-des {
+              width: 190px;
+            }
           }
 
-          .col-2-2 {
+          .rang-2-2 {
             float: none;
-            width: 400px;
+            width: 405px;
           }
         }
+
+        .editer-harmoniques {
+          width: 405px;
+        }
+
 
         // Cases de mouvement avec mixin
         .case-de-mouve-1 {
@@ -421,6 +522,184 @@ body {
           font-size: @font-size-xlarge;
         }
       }
+
+      // Section Pouvoirs
+      .eminence-pouvoirs {
+        min-height: 400px;
+        color: @color-secondary;
+        text-align: center;
+
+        .titre {
+          font-size: @font-size-2xlarge;
+          float: none;
+        }
+
+        .content {
+          .potentiel {
+
+            .div-potentiel {
+              position: relative;
+              float: left;
+              text-align: center;
+              width: 100px;
+              height: 200px;
+
+              .img-potentiel {
+                width: 100px;
+                height: 100px;
+              }
+            
+              .absolue {
+                position: absolute;
+                z-index: 5;
+              }
+
+              .val-potentiel {
+                margin-left: 45px;
+                margin-top: 42px;
+                font-size: @font-size-large;
+              }
+
+              span {
+                margin-left: -42px;
+                margin-top: 90px;
+                color: @color-primary;
+                font-size: @font-size-large;
+              }
+            }
+          }
+
+          .pouvoirs {
+            float: left;
+            width: 517px;
+            min-height: 290px;
+            border: 1px solid #917f35;
+            border-radius: @border-radius-small;
+            padding: 2px;
+
+            .ligne-pouvoir {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+            }
+          }
+        }
+      }
+
+      // Section Atouts
+      .eminence-atouts {
+        min-height: 400px;
+        color: @color-secondary;
+        text-align: center;
+
+        .titre-section-atouts {
+          font-size: @font-size-2xlarge;
+          float: none;
+        }
+
+        .content {
+          .potentiel {
+
+            .div-potentiel {
+              position: relative;
+              float: left;
+              text-align: center;
+              width: 100px;
+              height: 200px;
+
+              .img-potentiel {
+                width: 100px;
+                height: 100px;
+              }
+            
+              .absolue {
+                position: absolute;
+                z-index: 5;
+              }
+
+              .val-potentiel {
+                margin-left: 45px;
+                margin-top: 42px;
+                font-size: @font-size-large;
+              }
+
+              span {
+                margin-left: -42px;
+                margin-top: 90px;
+                color: @color-primary;
+                font-size: @font-size-large;
+              }
+            }
+          }
+
+          .atouts {
+            float: left;
+            width: 517px;
+            min-height: 290px;
+            border: 1px solid #917f35;
+            border-radius: @border-radius-small;
+            padding: 2px;
+          }
+        }
+      }
+
+      // Section Maîtrises
+      .eminence-maitrises {
+        min-height: 400px;
+        color: @color-secondary;
+        text-align: center;
+
+        .titre-section-maitrises {
+          font-size: @font-size-2xlarge;
+          float: none;
+        }
+
+        .content {
+          .potentiel {
+
+            .div-potentiel {
+              position: relative;
+              float: left;
+              text-align: center;
+              width: 100px;
+              height: 200px;
+
+              .img-potentiel {
+                width: 100px;
+                height: 100px;
+              }
+            
+              .absolue {
+                position: absolute;
+                z-index: 5;
+              }
+
+              .val-potentiel {
+                margin-left: 45px;
+                margin-top: 42px;
+                font-size: @font-size-large;
+              }
+
+              span {
+                margin-left: -42px;
+                margin-top: 90px;
+                color: @color-primary;
+                font-size: @font-size-large;
+              }
+            }
+          }
+
+          .maitrises {
+            float: left;
+            width: 517px;
+            min-height: 290px;
+            border: 1px solid #917f35;
+            border-radius: @border-radius-small;
+            padding: 2px;
+          }
+        }
+      }
+
     }
   }
 }
