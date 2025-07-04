@@ -339,6 +339,10 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
   width: 20px;
   height: 20px;
 }
+.penombre.eminence .eminence-content .eminence-conscience .note-jetons {
+  text-align: center;
+  color: #56605b;
+}
 .penombre.eminence .eminence-content .eminence-harmoniques {
   color: #56605b;
 }
