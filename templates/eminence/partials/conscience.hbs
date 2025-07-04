@@ -5,7 +5,7 @@
     <img class="" src="/systems/penombre/assets/ui/doree.png" alt="|" />
   </div>
   <div class="col-3-1 flexible">
-    <div class="col-1-3" data-tooltip="{{localize 'PENOMBRE.ui.clicJetons'}}">
+    <div class="col-1-3">
 
       <!-- Conscience -->
       {{#if unlocked}}       
@@ -22,7 +22,7 @@
       {{/if}}
 
       <!-- Jetons-->
-      <div class="div-jetons">
+      <div class="div-jetons"  data-tooltip="{{localize 'PENOMBRE.ui.clicJetons'}}">
           {{#each jetons as |jeton id|}}
             {{#if (lt id @root.system.conscience.valeur)}}
               <img class="jeton jeton-contextmenu dropshadow-{{jeton.statut}}" data-action="jeton" data-index="{{@index}}" src="{{getJetonImage jeton.statut}}"></img>
