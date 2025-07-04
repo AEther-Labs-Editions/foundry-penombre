@@ -9,29 +9,27 @@
 
       <!-- Conscience -->
       {{#if unlocked}}       
-          {{formGroup systemFields.conscience.fields.valeur value=systemSource.conscience.valeur localize=true}}
           {{formGroup systemFields.conscience.fields.max value=systemSource.conscience.max localize=true}}
       {{else}}
           <div class="form-group">
             <label>{{localize "PENOMBRE.ui.conscienceVal"}}</label>
-            <div class="form-fields">{{system.conscience.valeur}}</div>
+            <div class="form-fields">{{systemSource.conscience.valeur}}</div>
           </div>
           <div class="form-group">
             <label>{{localize "PENOMBRE.ui.conscienceMax"}}</label>
-            <div class="form-fields">{{system.conscience.max}}</div>
+            <div class="form-fields">{{systemSource.conscience.max}}</div>
           </div>
       {{/if}}
 
       <!-- Jetons-->
       <div class="div-jetons">
-          {{#each system.conscience.jetons as |jeton id|}}
+          {{#each jetons as |jeton id|}}
             {{#if (lt id @root.system.conscience.valeur)}}
-              <img class="jeton dropshadow-{{jeton.statut}}" data-action="jeton" data-index="{{@index}}" src="{{getJetonImage jeton.statut}}"></img>
+              <img class="jeton jeton-contextmenu dropshadow-{{jeton.statut}}" data-action="jeton" data-index="{{@index}}" src="{{getJetonImage jeton.statut}}"></img>
+            {{else}}
+              <img class="jeton jeton-contextmenu" data-index="{{@index}}" src="systems/penombre/assets/ui/cercle.png"></img>
             {{/if}}
           {{/each}}
-          {{#times nbJetonsPerdus}}
-            <img class="jeton" src="systems/penombre/assets/ui/cercle.png"></img>
-          {{/times}}
       </div>
 
       <!-- Complications -->

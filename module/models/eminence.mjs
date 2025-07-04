@@ -186,14 +186,12 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
         break
     }
 
-    // Initialisation des jetons de conscience
+    // Initialisation des jetons de conscience à la création
     if (this.conscience.jetons.length === 0) {
-      this.conscience.jetons = Array.from({ length: this.conscience.max }, () => ({ statut: SYSTEM.JETON_STATUTS.inactif.id }))
-    } else if (this.conscience.jetons.length < this.conscience.max) {
-      const missingJetons = this.conscience.max - this.conscience.jetons.length
-      this.conscience.jetons.push(...Array.from({ length: missingJetons }, () => ({ statut: SYSTEM.JETON_STATUTS.inactif.id })))
-    } else if (this.conscience.jetons.length > this.conscience.max) {
-      this.conscience.jetons = this.conscience.jetons.slice(0, this.conscience.max)
+      this.conscience.jetons = Array.from({ length: this.conscience.valeur }, () => ({ statut: SYSTEM.JETON_STATUTS.actif.id }))
+      this.conscience.jetons.push(...Array.from({ length: this.conscience.max - this.conscience.valeur }, () => ({ statut: SYSTEM.JETON_STATUTS.inactif.id })))
+      this.conscience.jetons.push(...Array.from({ length: 25 - this.conscience.max }, () => ({ statut: SYSTEM.JETON_STATUTS.perdu.id })))
+      this.parent.update({ "system.conscience.jetons": this.conscience.jetons })
     }
   }
 }

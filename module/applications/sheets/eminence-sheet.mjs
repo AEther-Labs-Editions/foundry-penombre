@@ -1,7 +1,7 @@
 const { sheets } = foundry.applications
 const { HandlebarsApplicationMixin } = foundry.applications.api
 
-import { systemPath } from "../../config/system.mjs"
+import { SYSTEM, systemPath } from "../../config/system.mjs"
 
 export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.ActorSheetV2) {
   /**
@@ -80,9 +80,7 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
     context.nature = this.document.system._source.harmoniques.nature.valeur
     context.nuit = this.document.system._source.harmoniques.nuit.valeur
 
-    context.conscience = this.document.system.conscience.valeur
-    context.consciencemax = this.document.system.conscience.max
-    context.nbJetonsPerdus = this.document.system.conscience.max - this.document.system.conscience.valeur
+    context.jetons = this.document.system.conscience.jetons.slice(0, this.document.system.conscience.max)
 
     context.unlocked = this.isEditMode
     context.locked = this.isPlayMode
@@ -91,15 +89,71 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
 
     context.pouvoirs = this.document.itemTypes.pouvoir
 
-    context.harmoniquesChoices = {d4: "D4", d6: "D6", d8: "D8", d10: "D10", d12: "D12"}
-
-    context.potentielChoices = {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9}
+    // Select options
+    context.harmoniquesChoices = { d4: "D4", d6: "D6", d8: "D8", d10: "D10", d12: "D12" }
+    context.potentielChoices = Object.fromEntries(Array.from({ length: SYSTEM.POTENTIEL_MAX }, (_, i) => [i, i]))
 
     console.log("EminenceSheet._prepareContext", context)
     return context
   }
 
   /* -------------------------------------------- */
+
+  /**
+   * Actions performed after a first render of the Application.
+   * Post-render steps are not awaited by the render process.
+   * @param {ApplicationRenderContext} context      Prepared context data
+   * @param {RenderOptions} options                 Provided render options
+   * @protected
+   */
+  async _onFirstRender(context, options) {
+    await super._onFirstRender(context, options)
+    this._createContextMenus()
+  }
+
+  /* Right-click context menus */
+  _createContextMenus() {
+    /** @fires {hookEvents:_getItemEntryContextOptions} */
+    this._createContextMenu(this._getJetonConscienceContextOptions, ".jeton-contextmenu", {
+      fixed: true,
+      hookName: "JetonEntryContext",
+      parentClassHooks: false,
+    })
+  }
+
+  /** * Get the context options for the jeton conscience.
+   * @returns {ContextMenuEntry[]} An array of context menu entries.
+   * @private
+   */
+  _getJetonConscienceContextOptions() {
+    return [
+      {
+        name: `Ajouter / Perdre un jeton de conscience`,
+        icon: `<i class="fa-regular fa-bolt"></i>`,
+        callback: (li) => {
+          const index = li.dataset.index
+          console.log(`EminenceSheet._getJetonConscienceContextOptions: index ${index}`)
+          let jetons = foundry.utils.duplicate(this.document.system.conscience.jetons)
+          const currentStatut = jetons[index].statut
+          let currentConscience = this.document.system.conscience.valeur
+          switch (currentStatut) {
+            case "actif":
+            case "inactif":
+              const jetonSupprime = jetons.splice(index, 1)
+              jetonSupprime.statut = "perdu"
+              jetons.push(jetonSupprime)
+              currentConscience--
+              break
+            case "perdu":
+              jetons[index].statut = "inactif"
+              currentConscience++
+              break
+          }
+          this.document.update({ "system.conscience.jetons": jetons, "system.conscience.valeur": currentConscience })
+        },
+      },
+    ]
+  }
 
   /** @inheritDoc */
   async _onRender(context, options) {
