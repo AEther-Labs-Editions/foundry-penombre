@@ -50,7 +50,7 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
         ...requiredInteger,
         initial: 7,
         min: 0,
-        max: 20,
+        max: 25,
       }),
       jetons: new ArrayField(
         new SchemaField({

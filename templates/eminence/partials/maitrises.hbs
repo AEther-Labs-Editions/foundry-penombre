@@ -3,15 +3,17 @@
     <span class="titre-section-maitrises">{{localize "PENOMBRE.ui.maitrises"}}</span>
     <div class="content">
         <div class="potentiel">
-            {{#if unlocked}}
-            {{formGroup systemFields.potentiel.fields.maitrises value=systemSource.potentiel.maitrises localize=true disabled=locked}}
-            {{else}}
             <div class="div-potentiel">
                 <span class="absolue">{{localize "PENOMBRE.ui.potentiel"}}</span>
+                {{#if unlocked}}
+                <select name="system.potentiel.maitrises" class="val-potentiel-saisie absolue">
+                    {{selectOptions potentielChoices selected=systemSource.potentiel.maitrises localize=true}}
+                </select>
+                {{else}}
                 <div class="val-potentiel absolue">{{system.potentiel.maitrises}}</div>
+                {{/if}}
                 <img class="img-potentiel absolue" src="systems/penombre/assets/ui/potentiel_creux.png" alt="|" />
             </div>
-            {{/if}}
         </div>
         <div class="maitrises absolue">
             {{#each maitrises as |maitrise|}}

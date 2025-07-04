@@ -1,5 +1,5 @@
 {{log "conscience" this}}
-<div class="eminence-conscience flexible">
+<div class="eminence-conscience eminence-conscience-{{#if locked}}locked{{else}}unlocked{{/if}} flexible">
   <div class="col-1-1 text-vertical-conscience">{{localize "PENOMBRE.ui.section.conscience"}}</div>
   <div class="col-2-1 frise-verticale">
     <img class="" src="/systems/penombre/assets/ui/doree.png" alt="|" />
@@ -40,7 +40,9 @@
           <div class="cadre-complications-2">
 
               <div class="form-group div-cases">
-                {{formInput systemFields.conscience.fields.complications.fields.une.fields.description value=systemSource.conscience.complications.une.description localize=true}}
+                <div class="form-fields div-descriptions">
+                  {{formInput systemFields.conscience.fields.complications.fields.une.fields.description value=systemSource.conscience.complications.une.description localize=true class="div-description-2"}}
+                </div>
                 <div class="images-cases">
                   {{#times 3}}
                     <img class="complication-case" data-action="complication" data-complication="une" data-index="{{@index}}" src="systems/penombre/assets/ui/transp_case_{{#if (gte systemSource.conscience.complications.une.valeur @index)}}checked{{else}}unchecked{{/if}}.png"></img>
@@ -49,7 +51,9 @@
               </div>
 
               <div class="form-group div-cases">
-                {{formInput systemFields.conscience.fields.complications.fields.deux.fields.description value=systemSource.conscience.complications.deux.description localize=true}}
+                <div class="form-fields div-descriptions">
+                  {{formInput systemFields.conscience.fields.complications.fields.deux.fields.description value=systemSource.conscience.complications.deux.description localize=true class="div-description-2"}}
+                </div>
                 <div class="images-cases">
                   {{#times 3}}
                     <img class="complication-case" data-action="complication" data-complication="deux" data-index="{{@index}}" src="systems/penombre/assets/ui/transp_case_{{#if (gte systemSource.conscience.complications.deux.valeur @index)}}checked{{else}}unchecked{{/if}}.png"></img>
@@ -58,7 +62,9 @@
               </div>
 
               <div class="form-group div-cases">
-                {{formInput systemFields.conscience.fields.complications.fields.trois.fields.description value=systemSource.conscience.complications.trois.description localize=true}}
+                <div class="form-fields div-descriptions">
+                  {{formInput systemFields.conscience.fields.complications.fields.trois.fields.description value=systemSource.conscience.complications.trois.description localize=true class="div-description-2"}}
+                </div>
                 <div class="images-cases">
                   {{#times 3}}
                     <img class="complication-case" data-action="complication" data-complication="trois" data-index="{{@index}}" src="systems/penombre/assets/ui/transp_case_{{#if (gte systemSource.conscience.complications.trois.valeur @index)}}checked{{else}}unchecked{{/if}}.png"></img>
@@ -67,7 +73,9 @@
               </div>
 
               <div class="form-group div-cases">
-                {{formInput systemFields.conscience.fields.complications.fields.quatre.fields.description value=systemSource.conscience.complications.quatre.description localize=true}}
+                <div class="form-fields div-descriptions">
+                  {{formInput systemFields.conscience.fields.complications.fields.quatre.fields.description value=systemSource.conscience.complications.quatre.description localize=true class="div-description-2"}}
+                </div>
                 <div class="images-cases">
                   {{#times 3}}
                     <img class="complication-case" data-action="complication" data-complication="quatre" data-index="{{@index}}" src="systems/penombre/assets/ui/transp_case_{{#if (gte systemSource.conscience.complications.quatre.valeur @index)}}checked{{else}}unchecked{{/if}}.png"></img>

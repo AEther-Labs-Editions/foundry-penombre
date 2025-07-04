@@ -3,15 +3,17 @@
     <span class="titre-section-pouvoirs">{{localize "PENOMBRE.ui.pouvoirs"}}</span>
     <div class="content">
         <div class="potentiel">
-            {{#if unlocked}}
-                {{formGroup systemFields.potentiel.fields.pouvoirs value=systemSource.potentiel.pouvoirs localize=true disabled=locked}}
-            {{else}}
             <div class="div-potentiel">
                 <span class="absolue">{{localize "PENOMBRE.ui.potentiel"}}</span>
+                {{#if unlocked}}
+                <select name="system.potentiel.pouvoirs" class="val-potentiel-saisie absolue">
+                    {{selectOptions potentielChoices selected=systemSource.potentiel.pouvoirs localize=true}}
+                </select>
+                {{else}}
                 <div class="val-potentiel absolue">{{system.potentiel.pouvoirs}}</div>
+                {{/if}}
                 <img class="img-potentiel absolue" src="systems/penombre/assets/ui/potentiel_creux.png" alt="|" />
             </div>
-            {{/if}}
         </div>
         <div class="pouvoirs absolue">
             {{#each pouvoirs as |pouvoir|}}

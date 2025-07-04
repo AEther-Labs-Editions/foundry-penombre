@@ -155,7 +155,6 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
 }
 .penombre.eminence .eminence-content .eminence-main {
   width: 1100px;
-  display: flex;
   display: table;
   clear: both;
 }
@@ -222,7 +221,6 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
   color: #a56135;
 }
 .penombre.eminence .eminence-content .eminence-personnage .logo-frame {
-  display: flex;
   display: table;
   float: left;
   justify-content: center;
@@ -235,14 +233,16 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
   width: 254px;
   clear: right;
 }
-.penombre.eminence .eminence-content .eminence-harmoniques-locked {
+.penombre.eminence .eminence-content .eminence-harmoniques {
   min-height: 350px;
 }
-.penombre.eminence .eminence-content .eminence-harmoniques-unlocked {
-  min-height: 510px;
+.penombre.eminence .eminence-content .eminence-conscience-locked {
+  min-height: 725px;
+}
+.penombre.eminence .eminence-content .eminence-conscience-unlocked {
+  min-height: 685px;
 }
 .penombre.eminence .eminence-content .eminence-conscience {
-  min-height: 785px;
   color: #917f35;
 }
 .penombre.eminence .eminence-content .eminence-conscience .div-jetons {
@@ -280,13 +280,16 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
 .penombre.eminence .eminence-content .eminence-conscience .cadre-complications-2 .div-cases label {
   float: left;
 }
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications-2 .div-cases .div-descriptions input {
+  width: 320px;
+}
 .penombre.eminence .eminence-content .eminence-conscience .cadre-complications-2 .div-cases .images-cases {
   display: flex;
   width: 250px;
   height: 20px;
   float: left;
-  flex-direction: line;
-  justify-content: right;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 .penombre.eminence .eminence-content .eminence-conscience .cadre-complications-2 .div-cases .images-cases .complication-case {
   float: left;
@@ -311,24 +314,25 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
 }
 .penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication {
   display: flex;
-  float: none;
   clear: both;
 }
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication .div-descriptions-2 input {
+  width: 600px;
+}
 .penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication .div-descriptions {
+  float: left;
   width: 320px;
 }
 .penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication .div-cases {
   float: left;
-  display: flex;
   width: 70px;
 }
 .penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication .div-cases .images-cases {
   display: flex;
   width: 70px;
   height: 20px;
-  float: left;
-  flex-direction: line;
-  justify-content: right;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 .penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication .div-cases .images-cases .complication-case {
   float: left;
@@ -349,13 +353,6 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
 }
 .penombre.eminence .eminence-content .eminence-harmoniques .case-de {
   width: 85px;
-}
-.penombre.eminence .eminence-content .eminence-harmoniques .col-3-1 .rang-1-2 {
-  float: left;
-  width: 404px;
-}
-.penombre.eminence .eminence-content .eminence-harmoniques .col-3-1 .rang-1-2 .col-choix-des {
-  width: 190px;
 }
 .penombre.eminence .eminence-content .eminence-harmoniques .col-3-1 .rang-2-2 {
   float: none;
@@ -402,6 +399,16 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
   position: absolute;
   z-index: 5;
 }
+.penombre.eminence .eminence-content .eminence-harmoniques .de-d-ame-saisie,
+.penombre.eminence .eminence-content .eminence-harmoniques .de-d-esprit-saisie,
+.penombre.eminence .eminence-content .eminence-harmoniques .de-d-etincelle-saisie,
+.penombre.eminence .eminence-content .eminence-harmoniques .de-de-nature-saisie,
+.penombre.eminence .eminence-content .eminence-harmoniques .de-de-nuit-saisie {
+  margin-top: 25px;
+  margin-left: 10px;
+  width: 70px;
+  font-family: "ChocoCovRainBold";
+}
 .penombre.eminence .eminence-content .eminence-harmoniques .de-ame,
 .penombre.eminence .eminence-content .eminence-harmoniques .de-esprit,
 .penombre.eminence .eminence-content .eminence-harmoniques .de-etincelle,
@@ -426,7 +433,7 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
   color: #56605b;
   text-align: center;
 }
-.penombre.eminence .eminence-content .eminence-pouvoirs .titre {
+.penombre.eminence .eminence-content .eminence-pouvoirs .titre-section-pouvoirs {
   font-size: 35px;
   float: none;
 }
@@ -444,6 +451,13 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel .absolue {
   position: absolute;
   z-index: 5;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel .val-potentiel-saisie {
+  margin-left: -22.5px;
+  margin-top: 42px;
+  width: 55px;
+  font-family: "ChocoCovRainBold";
+  z-index: 10;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel .val-potentiel {
   margin-left: 45px;
@@ -493,6 +507,13 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
   position: absolute;
   z-index: 5;
 }
+.penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel .val-potentiel-saisie {
+  margin-left: -22.5px;
+  margin-top: 42px;
+  width: 55px;
+  font-family: "ChocoCovRainBold";
+  z-index: 10;
+}
 .penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel .val-potentiel {
   margin-left: 45px;
   margin-top: 42px;
@@ -535,6 +556,13 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
 .penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel .absolue {
   position: absolute;
   z-index: 5;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel .val-potentiel-saisie {
+  margin-left: -22.5px;
+  margin-top: 42px;
+  width: 55px;
+  font-family: "ChocoCovRainBold";
+  z-index: 10;
 }
 .penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel .val-potentiel {
   margin-left: 45px;

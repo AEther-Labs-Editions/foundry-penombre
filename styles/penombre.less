@@ -180,7 +180,6 @@ body {
       // Structure principale
       .eminence-main {
         width: 1100px;
-        display: flex;
         display: table;
         clear: both;
       }
@@ -256,7 +255,6 @@ body {
         min-height: 165px;
         color: @color-primary;
         .logo-frame {
-          display: flex;
           display: table;
           float: left;
           justify-content: center;
@@ -272,13 +270,20 @@ body {
         }
       }
 
-      .eminence-harmoniques-locked {
+      .eminence-harmoniques {
         min-height: 350px;
       }
 
-      .eminence-harmoniques-unlocked {
-        min-height: 510px;
+      .eminence-conscience-locked {
+        min-height: 725px;
+
       }
+
+      .eminence-conscience-unlocked {
+        min-height: 685px;
+
+      }
+
 
       /*
       // Styles de texte avec classes utilitaires
@@ -305,9 +310,8 @@ body {
       }
       */
 
-            // Section conscience
+      // Section conscience
       .eminence-conscience {
-        min-height: 785px;
         color: @color-accent;
 
 
@@ -352,13 +356,20 @@ body {
               float: left;
             }
 
+            .div-descriptions {
+              input {
+                width: 320px;
+              }
+            }
+
+
             .images-cases {
               display: flex;
               width: 250px;
               height: 20px;
               float: left;
-              flex-direction: line;
-              justify-content: right;
+              flex-direction: row;
+              justify-content: flex-end;
 
               .complication-case {
                 float: left;
@@ -390,30 +401,30 @@ body {
 
           .ligne-complication {
             display: flex;
-            float: none;
             clear: both;
 
+            .div-descriptions-2 {
+              input {
+                width: 600px;
+              }
+            }
 
             .div-descriptions {
-              // float: left;
+              float: left;
               width: 320px;
             }
 
             // Cases à cocher
             .div-cases {
               float: left;
-              display: flex;
               width: 70px;
-
-              // justify-content: space-between;
 
               .images-cases {
                 display: flex;
                 width: 70px;
                 height: 20px;
-                float: left;
-                flex-direction: line;
-                justify-content: right;
+                flex-direction: row;
+                justify-content: flex-end;
 
                 .complication-case {
                   float: left;
@@ -449,15 +460,6 @@ body {
         }
 
         .col-3-1 {
-          .rang-1-2 {
-            float: left;
-            width: 404px;
-
-            .col-choix-des {
-              width: 190px;
-            }
-          }
-
           .rang-2-2 {
             float: none;
             width: 405px;
@@ -500,6 +502,17 @@ body {
           z-index: 5;
         }
 
+        .de-d-ame-saisie,
+        .de-d-esprit-saisie,
+        .de-d-etincelle-saisie,
+        .de-de-nature-saisie,
+        .de-de-nuit-saisie {
+          margin-top: 25px;
+          margin-left: 10px;
+          width: 70px;
+          font-family: @font-chocolate;
+        }
+
         // Tailles des dés avec mixin
         .de-ame,
         .de-esprit,
@@ -529,7 +542,7 @@ body {
         color: @color-secondary;
         text-align: center;
 
-        .titre {
+        .titre-section-pouvoirs {
           font-size: @font-size-2xlarge;
           float: none;
         }
@@ -552,6 +565,14 @@ body {
               .absolue {
                 position: absolute;
                 z-index: 5;
+              }
+
+              .val-potentiel-saisie {
+                margin-left: -22.5px;
+                margin-top: 42px;
+                width: 55px;
+                font-family: @font-chocolate;
+                z-index: 10;
               }
 
               .val-potentiel {
@@ -617,6 +638,14 @@ body {
                 z-index: 5;
               }
 
+              .val-potentiel-saisie {
+                margin-left: -22.5px;
+                margin-top: 42px;
+                width: 55px;
+                font-family: @font-chocolate;
+                z-index: 10;
+              }
+
               .val-potentiel {
                 margin-left: 45px;
                 margin-top: 42px;
@@ -672,6 +701,14 @@ body {
               .absolue {
                 position: absolute;
                 z-index: 5;
+              }
+
+              .val-potentiel-saisie {
+                margin-left: -22.5px;
+                margin-top: 42px;
+                width: 55px;
+                font-family: @font-chocolate;
+                z-index: 10;
               }
 
               .val-potentiel {

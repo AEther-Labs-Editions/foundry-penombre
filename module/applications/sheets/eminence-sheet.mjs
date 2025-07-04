@@ -91,6 +91,10 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
 
     context.pouvoirs = this.document.itemTypes.pouvoir
 
+    context.harmoniquesChoices = {d4: "D4", d6: "D6", d8: "D8", d10: "D10", d12: "D12"}
+
+    context.potentielChoices = {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9}
+
     console.log("EminenceSheet._prepareContext", context)
     return context
   }
