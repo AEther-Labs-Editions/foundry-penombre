@@ -4,7 +4,7 @@
     <div class="content">
         <div class="potentiel">
             {{#if unlocked}}
-            {{formGroup systemFields.potentiel.fields.pouvoirs value=systemSource.potentiel.pouvoirs localize=true disabled=locked}}
+                {{formGroup systemFields.potentiel.fields.pouvoirs value=systemSource.potentiel.pouvoirs localize=true disabled=locked}}
             {{else}}
             <div class="div-potentiel">
                 <span class="absolue">{{localize "PENOMBRE.ui.potentiel"}}</span>
@@ -15,12 +15,12 @@
         </div>
         <div class="pouvoirs absolue">
             {{#each pouvoirs as |pouvoir|}}
-                {{log 'pouvoir' pouvoir }}
-                <input type="checkbox" {{#if pouvoir.system.utilise}}checked{{/if}}></input>
-                <label>{{pouvoir.name}}</label>                
-                {{pouvoir.system.description}}
-                {{pouvoir.system.type}}
-                <br>
+                <div class="ligne-pouvoir">
+                    <input type="checkbox" {{#if pouvoir.system.utilise}}checked{{/if}}></input>
+                    <label>{{pouvoir.name}}</label>
+                    <div>{{pouvoir.system.description}}</div>
+                    <div>{{localize (concat 'PENOMBRE.Pouvoir.type.' pouvoir.system.type '.label')}}</div>
+                </div>
             {{/each}}
         </div>
     </div>

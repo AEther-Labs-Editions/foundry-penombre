@@ -529,7 +529,7 @@ body {
         color: @color-secondary;
         text-align: center;
 
-        .titre-section-pouvoirs {
+        .titre {
           font-size: @font-size-2xlarge;
           float: none;
         }
@@ -576,6 +576,12 @@ body {
             border: 1px solid #917f35;
             border-radius: @border-radius-small;
             padding: 2px;
+
+            .ligne-pouvoir {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+            }
           }
         }
       }

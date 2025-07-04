@@ -426,7 +426,7 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
   color: #56605b;
   text-align: center;
 }
-.penombre.eminence .eminence-content .eminence-pouvoirs .titre-section-pouvoirs {
+.penombre.eminence .eminence-content .eminence-pouvoirs .titre {
   font-size: 35px;
   float: none;
 }
@@ -463,6 +463,11 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
   border: 1px solid #917f35;
   border-radius: 4px;
   padding: 2px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs .ligne-pouvoir {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .penombre.eminence .eminence-content .eminence-atouts {
   min-height: 400px;
