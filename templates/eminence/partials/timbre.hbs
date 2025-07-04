@@ -1,8 +1,13 @@
 <div class="eminence-timbre">
   {{#if (or (eq styleJeu "standard") (eq styleJeu "avance"))}}
+    <div class="cadre-img">
+      <img class="img-timbre" src="systems/penombre/assets/ui/timbre.png" />
+    </div>
+    <div class="datas-timbre">
     {{formGroup systemFields.timbre.fields.description value=systemSource.timbre.description localize=true}}
     {{formGroup systemFields.timbre.fields.statut value=systemSource.timbre.statut localize=true}}
     {{formGroup systemFields.timbre.fields.peste value=systemSource.timbre.peste localize=true}}
+    </div>
   {{else}}
     <img class="frise-penombre"></img>
     <img class="logo-penombre"></img>

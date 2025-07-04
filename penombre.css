@@ -84,6 +84,15 @@ body.theme-light .penombre.eminence .eminence-content {
 }
 body.theme-light .penombre.eminence .eminence-content .eminence-timbre {
   min-height: 90px;
+  display: table;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .cadre-img {
+  width: 100px;
+  float: left;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre {
+  float: left;
+  width: 518px;
 }
 body.theme-light .penombre.eminence .eminence-content .eminence-timbre .logo-penombre {
   float: none;
@@ -102,8 +111,16 @@ body.theme-dark .penombre.eminence .eminence-content {
   font-size: 17px;
 }
 body.theme-dark .penombre.eminence .eminence-content .eminence-timbre {
-  min-height: 90px;
+  min-height: 110px;
   background-color: #2d1000;
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .cadre-img {
+  width: 100px;
+  float: left;
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .datas-timbre {
+  float: left;
+  width: 518px;
 }
 body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .logo-penombre {
   float: none;
