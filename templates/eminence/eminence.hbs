@@ -43,6 +43,11 @@
 
     <!-- Maitrises magiques -->
     {{> "systems/penombre/templates/eminence/partials/maitrises.hbs" }}
+
+    {{#if (ne styleJeu "avance")}}
+        <!-- Récapitulatif -->
+    {{> "systems/penombre/templates/eminence/partials/recapitulatif.hbs" }}
+    {{/if}}
   </div>
   
 </section>

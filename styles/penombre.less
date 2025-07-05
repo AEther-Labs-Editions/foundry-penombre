@@ -298,7 +298,8 @@ body {
       .eminence-timbre2,
       .eminence-pouvoirs,
       .eminence-atouts,
-      .eminence-maitrises {
+      .eminence-maitrises,
+      .eminence-recapitulatif {
         .section-style();
       }
 
@@ -808,6 +809,40 @@ body {
             border: 1px solid #917f35;
             border-radius: @border-radius-small;
             padding: 2px;
+          }
+        }
+      }
+
+      .eminence-recapitulatif {
+        min-height: 180px;
+        width: 625px;
+        color: @color-secondary;
+        text-align: center;
+
+        .content {
+
+          .tableau {
+            display: table;
+
+            .div-gauche {
+              float: left;
+              height: 100px;
+              width: 477px;
+
+              .img-gauche {
+
+              }
+            }
+            .div-droite {
+              float: left;
+              height: 100px;
+              width: 142px;
+              padding-left: 23px;
+
+              .img-droite {
+
+              }
+            }
           }
         }
       }

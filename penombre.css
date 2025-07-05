@@ -251,7 +251,8 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre2 .frise-pe
 .penombre.eminence .eminence-content .eminence-timbre2,
 .penombre.eminence .eminence-content .eminence-pouvoirs,
 .penombre.eminence .eminence-content .eminence-atouts,
-.penombre.eminence .eminence-content .eminence-maitrises {
+.penombre.eminence .eminence-content .eminence-maitrises,
+.penombre.eminence .eminence-content .eminence-recapitulatif {
   float: none;
   flex-direction: column;
   border: 1px solid #a56135;
@@ -650,4 +651,24 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre2 .frise-pe
   border: 1px solid #917f35;
   border-radius: 4px;
   padding: 2px;
+}
+.penombre.eminence .eminence-content .eminence-recapitulatif {
+  min-height: 180px;
+  width: 625px;
+  color: #56605b;
+  text-align: center;
+}
+.penombre.eminence .eminence-content .eminence-recapitulatif .content .tableau {
+  display: table;
+}
+.penombre.eminence .eminence-content .eminence-recapitulatif .content .tableau .div-gauche {
+  float: left;
+  height: 100px;
+  width: 477px;
+}
+.penombre.eminence .eminence-content .eminence-recapitulatif .content .tableau .div-droite {
+  float: left;
+  height: 100px;
+  width: 142px;
+  padding-left: 23px;
 }
