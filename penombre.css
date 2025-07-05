@@ -458,6 +458,9 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
   font-size: 35px;
   float: none;
 }
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel {
+  text-align: center;
+}
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel {
   position: relative;
   float: left;
@@ -481,8 +484,9 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
   z-index: 10;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel .val-potentiel {
-  margin-left: 45px;
+  margin-left: 41.5px;
   margin-top: 42px;
+  text-align: center;
   font-size: 29px;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel span {
@@ -513,6 +517,9 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
   font-size: 35px;
   float: none;
 }
+.penombre.eminence .eminence-content .eminence-atouts .content .potentiel {
+  text-align: center;
+}
 .penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel {
   position: relative;
   float: left;
@@ -536,8 +543,9 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
   z-index: 10;
 }
 .penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel .val-potentiel {
-  margin-left: 45px;
+  margin-left: 41.5px;
   margin-top: 42px;
+  text-align: center;
   font-size: 29px;
 }
 .penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel span {
@@ -563,6 +571,9 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
   font-size: 35px;
   float: none;
 }
+.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel {
+  text-align: center;
+}
 .penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel {
   position: relative;
   float: left;
@@ -586,8 +597,9 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
   z-index: 10;
 }
 .penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel .val-potentiel {
-  margin-left: 45px;
+  margin-left: 41.5px;
   margin-top: 42px;
+  text-align: center;
   font-size: 29px;
 }
 .penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel span {

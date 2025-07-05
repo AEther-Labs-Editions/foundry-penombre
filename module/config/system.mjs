@@ -27,7 +27,7 @@ export const JETON_STATUTS = Object.freeze({
   },
 })
 
-export const POTENTIEL_MAX = 10
+export const POTENTIEL_MAX = 20
 
 /**
  * Include all constant definitions within the SYSTEM global export
