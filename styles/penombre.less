@@ -111,7 +111,7 @@ body {
 
           // Section timbre
           .eminence-timbre,
-          .eminence-timbre2 {
+          .eminence-timbre-2 {
             min-height: 90px;
             display: table;
 
@@ -183,7 +183,7 @@ body {
 
           }
           // Section timbre
-          .eminence-timbre2 {
+          .eminence-timbre-2 {
             min-height: 110px;
 
             .cadre-img {
@@ -295,10 +295,13 @@ body {
       .eminence-harmoniques,
       .eminence-conscience,
       .eminence-timbre,
-      .eminence-timbre2,
+      .eminence-timbre-2,
       .eminence-pouvoirs,
       .eminence-atouts,
       .eminence-maitrises,
+      .eminence-pouvoirs-2,
+      .eminence-atouts-2,
+      .eminence-maitrises-2,
       .eminence-recapitulatif {
         .section-style();
       }
@@ -608,9 +611,19 @@ body {
 
       // Section Pouvoirs
       .eminence-pouvoirs {
+        min-height: 255px;
+        color: @color-secondary;
+        text-align: center;
+      }
+
+      .eminence-pouvoirs-2 {
         min-height: 400px;
         color: @color-secondary;
         text-align: center;
+      }
+
+      .eminence-pouvoirs,
+      .eminence-pouvoirs-2 {
 
         .titre-section-pouvoirs {
           font-size: @font-size-2xlarge;
@@ -665,10 +678,23 @@ body {
           .pouvoirs {
             float: left;
             width: 517px;
+            min-height: 145px;
+            border: 1px solid #917f35;
+            border-radius: @border-radius-small;
+            padding: 2px;
+          }
+
+          .pouvoirs-2 {
+            float: left;
+            width: 517px;
             min-height: 290px;
             border: 1px solid #917f35;
             border-radius: @border-radius-small;
             padding: 2px;
+          }
+
+          .pouvoirs,
+          .pouvoirs-2 {
 
             .ligne-pouvoir {
               display: flex;
@@ -681,9 +707,19 @@ body {
 
       // Section Atouts
       .eminence-atouts {
+        min-height: 255px;
+        color: @color-secondary;
+        text-align: center;
+      }
+
+      .eminence-atouts-2 {
         min-height: 400px;
         color: @color-secondary;
         text-align: center;
+      }
+
+      .eminence-atouts,
+      .eminence-atouts-2 {
 
         .titre-section-atouts {
           font-size: @font-size-2xlarge;
@@ -738,19 +774,39 @@ body {
           .atouts {
             float: left;
             width: 517px;
+            min-height: 145px;
+            border: 1px solid #917f35;
+            border-radius: @border-radius-small;
+            padding: 2px;
+          }
+
+          .atouts-2 {
+            float: left;
+            width: 517px;
             min-height: 290px;
             border: 1px solid #917f35;
             border-radius: @border-radius-small;
             padding: 2px;
           }
+
         }
       }
 
       // Section Maîtrises
       .eminence-maitrises {
+        min-height: 255px;
+        color: @color-secondary;
+        text-align: center;
+      }
+
+      .eminence-maitrises-2 {
         min-height: 400px;
         color: @color-secondary;
         text-align: center;
+      }
+
+      .eminence-maitrises,
+      .eminence-maitrises-2 {
 
         .titre-section-maitrises {
           font-size: @font-size-2xlarge;
@@ -805,11 +861,21 @@ body {
           .maitrises {
             float: left;
             width: 517px;
+            min-height: 145px;
+            border: 1px solid #917f35;
+            border-radius: @border-radius-small;
+            padding: 2px;
+          }
+
+          .maitrises-2 {
+            float: left;
+            width: 517px;
             min-height: 290px;
             border: 1px solid #917f35;
             border-radius: @border-radius-small;
             padding: 2px;
           }
+
         }
       }
 
