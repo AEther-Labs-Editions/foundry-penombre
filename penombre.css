@@ -82,24 +82,30 @@ body.theme-light .penombre.eminence .eminence-content {
   /* Si et seulement si on est en mode clair (et pas sombre) de la fiche */
   clear: both;
 }
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre {
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre,
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre2 {
   min-height: 90px;
   display: table;
 }
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre .cadre-img {
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .cadre-img,
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre2 .cadre-img {
   width: 100px;
   float: left;
 }
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre {
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre,
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre2 .datas-timbre {
   float: left;
   width: 518px;
+  padding-left: 4px;
 }
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre .logo-penombre {
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .logo-penombre,
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre2 .logo-penombre {
   float: none;
   width: 217px;
   content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_clair.png");
 }
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre .frise-penombre {
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .frise-penombre,
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre2 .frise-penombre {
   float: left;
   width: 400px;
   content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_clair.png");
@@ -111,7 +117,7 @@ body.theme-dark .penombre.eminence .eminence-content {
   font-size: 17px;
 }
 body.theme-dark .penombre.eminence .eminence-content .eminence-timbre {
-  min-height: 110px;
+  min-height: 90px;
   background-color: #2d1000;
 }
 body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .cadre-img {
@@ -121,6 +127,7 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .cadre-img
 body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .datas-timbre {
   float: left;
   width: 518px;
+  padding-left: 4px;
 }
 body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .logo-penombre {
   float: none;
@@ -128,6 +135,30 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .logo-peno
   content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.png");
 }
 body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-penombre {
+  float: left;
+  width: 400px;
+  content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.png");
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre2 {
+  min-height: 110px;
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre2 .cadre-img {
+  width: 100px;
+  float: left;
+  border-radius: 6px;
+  background-color: #faeed6;
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre2 .datas-timbre {
+  float: left;
+  width: 518px;
+  padding-left: 4px;
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre2 .logo-penombre {
+  float: none;
+  width: 217px;
+  content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.png");
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre2 .frise-penombre {
   float: left;
   width: 400px;
   content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.png");
@@ -217,6 +248,7 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
 .penombre.eminence .eminence-content .eminence-harmoniques,
 .penombre.eminence .eminence-content .eminence-conscience,
 .penombre.eminence .eminence-content .eminence-timbre,
+.penombre.eminence .eminence-content .eminence-timbre2,
 .penombre.eminence .eminence-content .eminence-pouvoirs,
 .penombre.eminence .eminence-content .eminence-atouts,
 .penombre.eminence .eminence-content .eminence-maitrises {
@@ -244,6 +276,9 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
   height: 152px;
   width: 150px;
   padding: 1px;
+}
+.penombre.eminence .eminence-content .eminence-personnage .logo-frame .logo-img {
+  border-radius: 6px;
 }
 .penombre.eminence .eminence-content .eminence-personnage .data {
   float: left;
