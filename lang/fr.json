@@ -177,7 +177,7 @@
         "label": "Centaure"
       },
       "meduse": {
-        "label": "Meduse"
+        "label": "Méduse"
       },
       "satyre": {
         "label": "Satyre"
@@ -186,7 +186,7 @@
         "label": "Minotaure"
       },
       "ameAccouchee": {
-        "label": "Ame accouchee"
+        "label": "Ame accouchée"
       },
       "opalinDeLaRomance": {
         "label": "Opalin de la Romance"
@@ -195,13 +195,13 @@
         "label": "Danseur affranchi"
       },
       "sirene": {
-        "label": "Sirene"
+        "label": "Sirène"
       },
       "banshee": {
         "label": "Banshee"
       },
       "feeNoire": {
-        "label": "Fee noire"
+        "label": "Fée noire"
       },
       "humain": {
         "label": "Humain"
@@ -210,7 +210,7 @@
         "label": "Ogre"
       },
       "geant": {
-        "label": "Geant"
+        "label": "Géant"
       }
     },
     "Gamme": {
@@ -227,7 +227,7 @@
         "label": "Horla"
       },
       "melusine": {
-        "label": "Melusine"
+        "label": "Mélusine"
       }
     },
     "Ton": {
@@ -293,7 +293,7 @@
       "maitrises": "Maitrises magiques",
       "potentiel": "Potentiel",
       "creerJetons": "(pensez a en creer pour preserver vos jetons)",
-      "clicJetons": "Clic pour retourner un jeton de Conscience. Clic-droit pour ajouter / perdre un jeton de Conscience."
+      "clicJetons": "Clic pour dépenser ou réactiver un jeton. Clic-droit pour perdre ou ajouter un jeton."
     },
     "Settings": {
       "styleJeu": {

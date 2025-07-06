@@ -85,7 +85,10 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
     context.unlocked = this.isEditMode
     context.locked = this.isPlayMode
 
-    context.styleJeu = game.settings.get("penombre", "styleJeu")
+    const styleJeu = game.settings.get("penombre", "styleJeu")
+    context.isStyleJeuDemo = styleJeu === "demo"
+    context.isStyleJeuStandard = styleJeu === "standard"
+    context.isStyleJeuAvance = styleJeu === "avance"
 
     context.pouvoirs = this.document.itemTypes.pouvoir
 

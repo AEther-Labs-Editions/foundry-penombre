@@ -1,5 +1,5 @@
 {{log "EminenceSheet - Partials - Maîtrises" this }}
-<div class="eminence-maitrises{{#if (eq styleJeu "avance")}}-2{{/if}}">
+<div class="eminence-maitrises{{#if isStyleJeuAvance}}-2{{/if}}">
     <span class="titre-section-maitrises">{{localize "PENOMBRE.ui.maitrises"}}</span>
     <div class="content">
         <div class="potentiel">
@@ -15,7 +15,7 @@
                 <img class="img-potentiel absolue" src="systems/penombre/assets/ui/potentiel_creux.png" alt="|" />
             </div>
         </div>
-        <div class="maitrises{{#if (eq styleJeu "avance")}}-2{{/if}} absolue">
+        <div class="maitrises{{#if isStyleJeuAvance}}-2{{/if}} absolue">
             {{#each maitrises as |maitrise|}}
                 {{log 'maitrise' maitrise }}
                 <input type="checkbox" {{#if maitrise.system.utilise}}checked{{/if}}></input>

@@ -11,7 +11,7 @@
       {{formGroup fields.name value=document.name localize=true disabled=locked}}
       {{#if unlocked}}
         {{formGroup systemFields.peuple value=systemSource.peuple localize=true}}
-          {{#if (or (eq styleJeu "standard") (eq styleJeu "avance"))}}
+          {{#if (or isStyleJeuStandard isStyleJeuAvance)}}
           {{formGroup systemFields.cle value=systemSource.cle localize=true}}
           {{/if}}
       {{else}}
@@ -19,14 +19,14 @@
           <label>{{localize "PENOMBRE.ui.peuple"}}</label>
           <div class="form-fields">{{localize (concat "PENOMBRE.Peuple." system.peuple ".label")}}</div>
         </div>
-        {{#if (or (eq styleJeu "standard") (eq styleJeu "avance"))}}
+        {{#if (or isStyleJeuStandard isStyleJeuAvance)}}
         <div class="form-group">
           <label>{{localize "PENOMBRE.ui.cle"}}</label>
           <div class="form-fields">{{localize (concat "PENOMBRE.Harmonique." system.cle ".label")}}</div>
         </div>
         {{/if}}
       {{/if}}
-      {{#if (or (eq styleJeu "standard") (eq styleJeu "avance"))}}
+      {{#if (or isStyleJeuStandard isStyleJeuAvance)}}
       <div class="form-group">
         <label>{{localize "PENOMBRE.ui.gamme"}}</label>
         <div class="form-fields">{{localize (concat "PENOMBRE.Gamme." system.gamme ".label")}}</div>

@@ -1,5 +1,5 @@
 {{log "EminenceSheet - Partials - Atouts" this }}
-<div class="eminence-atouts{{#if (eq styleJeu "avance")}}-2{{/if}}">
+<div class="eminence-atouts{{#if isStyleJeuAvance}}-2{{/if}}">
     <span class="titre-section-atouts">{{localize "PENOMBRE.ui.atouts"}}</span>
     <div class="content">
         <div class="potentiel">
@@ -15,7 +15,7 @@
                 <img class="img-potentiel absolue" src="systems/penombre/assets/ui/potentiel_creux.png" alt="|" />
             </div>
         </div>
-        <div class="atouts{{#if (eq styleJeu "avance")}}-2{{/if}} absolue">
+        <div class="atouts{{#if isStyleJeuAvance}}-2{{/if}} absolue">
             {{#each atouts as |atout|}}
                 {{log 'atout' atout }}
                 <input type="checkbox" {{#if atout.system.utilise}}checked{{/if}}></input>
