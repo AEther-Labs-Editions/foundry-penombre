@@ -115,10 +115,12 @@ body.theme-dark .penombre.eminence .eminence-content {
   font-family: "CattedraleDemo";
   color: #a56135;
   font-size: 17px;
+  clear: both;
 }
 body.theme-dark .penombre.eminence .eminence-content .eminence-timbre {
   min-height: 90px;
   background-color: #2d1000;
+  display: table;
 }
 body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .cadre-img {
   width: 100px;
@@ -141,6 +143,7 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-pen
 }
 body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 {
   min-height: 110px;
+  display: table;
 }
 body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .cadre-img {
   width: 100px;
