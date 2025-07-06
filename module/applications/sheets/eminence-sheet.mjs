@@ -41,7 +41,7 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
   static PARTS = {
     main: {
       template: "systems/penombre/templates/eminence/eminence.hbs",
-      templates: ["atouts.hbs", "conscience.hbs", "harmoniques.hbs", "maitrises.hbs", "personnage.hbs", "pouvoirs.hbs", "timbre.hbs"].map((t) =>
+      templates: ["atouts.hbs", "conscience.hbs", "harmoniques.hbs", "maitrises.hbs", "personnage.hbs", "pouvoirs.hbs", "recapitulatif.hbs", "timbre.hbs"].map((t) =>
         systemPath(`templates/eminence/partials/${t}`),
       ),
       scrollable: [""],

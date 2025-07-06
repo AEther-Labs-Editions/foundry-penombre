@@ -291,7 +291,9 @@
       "pouvoirs": "Pouvoirs",
       "atouts": "Atouts",
       "maitrises": "Maitrises magiques",
-      "potentiel": "Potentiel"
+      "potentiel": "Potentiel",
+      "creerJetons": "(pensez a en creer pour preserver vos jetons)",
+      "clicJetons": "Clic pour retourner un jeton de Conscience. Clic-droit pour ajouter / perdre un jeton de Conscience."
     },
     "Settings": {
       "styleJeu": {

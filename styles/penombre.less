@@ -9,6 +9,7 @@
 @color-secondary: #56605b; // Gris
 @color-accent: #917f35; // Doré
 @background-light: #faeed6; // Fond clair
+@background-dark: #2d1000; // fond frise sombre
 
 // Polices
 @font-cattedrale: "CattedraleDemo";
@@ -78,6 +79,16 @@
   border-radius: @border-radius;
 }
 
+.section-style-2() {
+  // width: calc(100% - 5px);
+  min-width: 635px;
+  float: none;
+  flex-direction: column;
+  border: 1px solid @color-primary;
+  padding: 2px;
+  border-radius: @border-radius;
+}
+
 /* ---------------------------------------------
         Interface de Foundry VTT
 --------------------------------------------- */
@@ -93,6 +104,7 @@
 /* ---------------------------------------------
         Thème Clair
 --------------------------------------------- */
+
 /* ---------------------------------------------
           Thème Sombre
 --------------------------------------------- */
@@ -100,8 +112,10 @@ body {
   &.theme-light {
     .penombre {
       &.eminence {
+
         .eminence-content {
           overflow: auto;
+          // width: 100%;
           font-family: @font-cattedrale;
           color: @color-primary;
           font-size: @font-size-base;
@@ -109,20 +123,36 @@ body {
           clear: both;
 
           // Section timbre
-          .eminence-timbre {
+          .eminence-timbre,
+          .eminence-timbre-2 {
             min-height: 90px;
+            display: table;
+
+            .cadre-img {
+              width: 100px;
+              // height: 100px;
+              float: left;
+            }
+
+            .datas-timbre {
+              float: left;
+              width: 525px;
+              padding-left: 4px;
+            }
 
             .logo-penombre {
               float: none;
-              width: 217px;
+              width: 223px;
               content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_clair.png");
             }
+
             .frise-penombre {
               float: left;
-              width: 400px;
+              width: 402px;
               content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_clair.png");
             }
           }
+
         }
       }
     }
@@ -131,29 +161,78 @@ body {
   &.theme-dark {
     .penombre {
       &.eminence {
+
         .eminence-content {
           overflow: auto;
+          // width: 100%;
           font-family: @font-cattedrale;
           color: @color-primary;
           font-size: @font-size-base;
+          clear: both;
 
           // Section timbre
           .eminence-timbre {
             min-height: 90px;
-            background-color: #2d1000;
+            background-color: @background-dark;
+            display: table;
+
+            .cadre-img {
+              width: 100px;
+              // height: 100px;
+              float: left;
+            }
+
+            .datas-timbre {
+              float: left;
+              width: 525px;
+              padding-left: 4px;
+            }
 
             .logo-penombre {
               float: none;
-              width: 217px;
+              width: 223px;
               content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.png");
             }
+
             .frise-penombre {
               float: left;
-              width: 400px;
+              width: 402px;
               content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.png");
             }
-
           }
+
+          // Section timbre
+          .eminence-timbre-2 {
+            min-height: 110px;
+            display: table;
+
+            .cadre-img {
+              width: 100px;
+              // height: 100px;
+              float: left;
+              border-radius: @border-radius; 
+              background-color: @background-light;
+            }
+
+            .datas-timbre {
+              float: left;
+              width: 525px;
+              padding-left: 4px;
+            }
+
+            .logo-penombre {
+              float: none;
+              width: 223px;
+              content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.png");
+            }
+
+            .frise-penombre {
+              float: left;
+              width: 402px;
+              content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.png");
+            }
+          }
+
         }
       }
     }
@@ -179,7 +258,7 @@ body {
 
       // Structure principale
       .eminence-main {
-        width: 1100px;
+        width: 100%;
         display: table;
         clear: both;
       }
@@ -208,8 +287,11 @@ body {
       }
 
       .col-3 {
-        width: 625px;
-        float: left;
+        // width: 625px;
+        margin-left: 473px;
+        // width: 100%;
+        min-width: 635px;
+        // float: left;
       }
 
       .col-1-1 {
@@ -233,12 +315,20 @@ body {
       // Sections principales avec mixin
       .eminence-personnage,
       .eminence-harmoniques,
-      .eminence-conscience,
-      .eminence-timbre,
+      .eminence-conscience{
+        .section-style();
+      }
+
       .eminence-pouvoirs,
       .eminence-atouts,
-      .eminence-maitrises {
-        .section-style();
+      .eminence-maitrises,
+      .eminence-pouvoirs-2,
+      .eminence-atouts-2,
+      .eminence-maitrises-2,
+      .eminence-timbre,
+      .eminence-timbre-2,
+      .eminence-recapitulatif {
+        .section-style-2();
       }
 
       // Police des textes verticaux
@@ -261,6 +351,10 @@ body {
           height: 152px;
           width: 150px;
           padding: 1px;
+
+          .logo-img {
+            border-radius: @border-radius;
+          }
         }
 
         .data {
@@ -283,7 +377,6 @@ body {
         min-height: 685px;
 
       }
-
 
       /*
       // Styles de texte avec classes utilitaires
@@ -313,7 +406,6 @@ body {
       // Section conscience
       .eminence-conscience {
         color: @color-accent;
-
 
         // Jetons
         .div-jetons {
@@ -361,7 +453,6 @@ body {
                 width: 320px;
               }
             }
-
 
             .images-cases {
               display: flex;
@@ -435,8 +526,12 @@ body {
             }
           }
         }
-      }
 
+        .note-jetons {
+          text-align: center;
+          color: @color-secondary;
+        }
+      }
 
       // Section harmoniques
       .eminence-harmoniques {
@@ -469,7 +564,6 @@ body {
         .editer-harmoniques {
           width: 405px;
         }
-
 
         // Cases de mouvement avec mixin
         .case-de-mouve-1 {
@@ -538,9 +632,19 @@ body {
 
       // Section Pouvoirs
       .eminence-pouvoirs {
+        min-height: 255px;
+        color: @color-secondary;
+        text-align: center;
+      }
+
+      .eminence-pouvoirs-2 {
         min-height: 400px;
         color: @color-secondary;
         text-align: center;
+      }
+
+      .eminence-pouvoirs,
+      .eminence-pouvoirs-2 {
 
         .titre-section-pouvoirs {
           font-size: @font-size-2xlarge;
@@ -549,6 +653,7 @@ body {
 
         .content {
           .potentiel {
+            text-align: center;
 
             .div-potentiel {
               position: relative;
@@ -576,8 +681,9 @@ body {
               }
 
               .val-potentiel {
-                margin-left: 45px;
+                margin-left: 41.5px;
                 margin-top: 42px;
+                text-align: center;
                 font-size: @font-size-large;
               }
 
@@ -591,12 +697,27 @@ body {
           }
 
           .pouvoirs {
-            float: left;
-            width: 517px;
+            // float: left;
+            margin-left: 100px;
+            width: calc(100% - 103px);
+            min-height: 145px;
+            border: 1px solid #917f35;
+            border-radius: @border-radius-small;
+            padding: 2px;
+          }
+
+          .pouvoirs-2 {
+            // float: left;
+            margin-left: 100px;
+            width: calc(100% - 103px);
             min-height: 290px;
             border: 1px solid #917f35;
             border-radius: @border-radius-small;
             padding: 2px;
+          }
+
+          .pouvoirs,
+          .pouvoirs-2 {
 
             .ligne-pouvoir {
               display: flex;
@@ -609,9 +730,19 @@ body {
 
       // Section Atouts
       .eminence-atouts {
+        min-height: 255px;
+        color: @color-secondary;
+        text-align: center;
+      }
+
+      .eminence-atouts-2 {
         min-height: 400px;
         color: @color-secondary;
         text-align: center;
+      }
+
+      .eminence-atouts,
+      .eminence-atouts-2 {
 
         .titre-section-atouts {
           font-size: @font-size-2xlarge;
@@ -620,6 +751,7 @@ body {
 
         .content {
           .potentiel {
+            text-align: center;
 
             .div-potentiel {
               position: relative;
@@ -647,8 +779,9 @@ body {
               }
 
               .val-potentiel {
-                margin-left: 45px;
+                margin-left: 41.5px;
                 margin-top: 42px;
+                text-align: center;
                 font-size: @font-size-large;
               }
 
@@ -662,21 +795,43 @@ body {
           }
 
           .atouts {
-            float: left;
-            width: 517px;
+            // float: left;
+            margin-left: 100px;
+            width: calc(100% - 103px);
+            min-height: 145px;
+            border: 1px solid #917f35;
+            border-radius: @border-radius-small;
+            padding: 2px;
+          }
+
+          .atouts-2 {
+            // float: left;
+            margin-left: 100px;
+            width: (100% - 103px);
             min-height: 290px;
             border: 1px solid #917f35;
             border-radius: @border-radius-small;
             padding: 2px;
           }
+
         }
       }
 
       // Section Maîtrises
       .eminence-maitrises {
+        min-height: 255px;
+        color: @color-secondary;
+        text-align: center;
+      }
+
+      .eminence-maitrises-2 {
         min-height: 400px;
         color: @color-secondary;
         text-align: center;
+      }
+
+      .eminence-maitrises,
+      .eminence-maitrises-2 {
 
         .titre-section-maitrises {
           font-size: @font-size-2xlarge;
@@ -685,6 +840,7 @@ body {
 
         .content {
           .potentiel {
+            text-align: center;
 
             .div-potentiel {
               position: relative;
@@ -712,8 +868,9 @@ body {
               }
 
               .val-potentiel {
-                margin-left: 45px;
+                margin-left: 41.5px;
                 margin-top: 42px;
+                text-align: center;
                 font-size: @font-size-large;
               }
 
@@ -727,12 +884,61 @@ body {
           }
 
           .maitrises {
-            float: left;
-            width: 517px;
+            // float: left;
+            margin-left: 100px;
+            width: calc(100% - 103px);
+            min-height: 145px;
+            border: 1px solid #917f35;
+            border-radius: @border-radius-small;
+            padding: 2px;
+          }
+
+          .maitrises-2 {
+            // float: left;
+            margin-left: 100px;
+            width: calc(100% - 103px);
             min-height: 290px;
             border: 1px solid #917f35;
             border-radius: @border-radius-small;
             padding: 2px;
+          }
+
+        }
+      }
+
+      .eminence-recapitulatif {
+        min-height: 180px;
+        width: 633px;
+        color: @color-secondary;
+        text-align: center;
+
+        .content {
+
+          .tableau {
+            display: table;
+
+            .div-gauche {
+              float: left;
+              height: 100px;
+              width: 477px;
+
+              .img-gauche {
+                border-top-left-radius: @border-radius-small;
+                border-bottom-left-radius: @border-radius-small;
+              }
+            }
+
+            .div-droite {
+              float: left;
+              height: 100px;
+              width: 152px;
+              padding-left: 33px;
+
+              .img-droite {
+                border-top-right-radius: @border-radius-small;
+                border-bottom-right-radius: @border-radius-small;
+              }
+            }
           }
         }
       }

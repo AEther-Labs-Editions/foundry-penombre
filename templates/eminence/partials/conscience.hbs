@@ -22,7 +22,7 @@
       {{/if}}
 
       <!-- Jetons-->
-      <div class="div-jetons">
+      <div class="div-jetons" data-tooltip="{{localize 'PENOMBRE.ui.clicJetons'}}">
           {{#each jetons as |jeton id|}}
             {{#if (lt id @root.system.conscience.valeur)}}
               <img class="jeton jeton-contextmenu dropshadow-{{jeton.statut}}" data-action="jeton" data-index="{{@index}}" src="{{getJetonImage jeton.statut}}"></img>
@@ -41,7 +41,7 @@
                 <div class="form-fields div-descriptions">
                   {{formInput systemFields.conscience.fields.complications.fields.une.fields.description value=systemSource.conscience.complications.une.description localize=true class="div-description-2"}}
                 </div>
-                <div class="images-cases">
+                <div class="images-cases" data-tooltip="{{system.conscience.complications.une.valeur}}">
                   {{#times 3}}
                     <img class="complication-case" data-action="complication" data-complication="une" data-index="{{@index}}" src="systems/penombre/assets/ui/transp_case_{{#if (gte systemSource.conscience.complications.une.valeur @index)}}checked{{else}}unchecked{{/if}}.png"></img>
                   {{/times}}
@@ -52,7 +52,7 @@
                 <div class="form-fields div-descriptions">
                   {{formInput systemFields.conscience.fields.complications.fields.deux.fields.description value=systemSource.conscience.complications.deux.description localize=true class="div-description-2"}}
                 </div>
-                <div class="images-cases">
+                <div class="images-cases" data-tooltip="{{system.conscience.complications.deux.valeur}}">
                   {{#times 3}}
                     <img class="complication-case" data-action="complication" data-complication="deux" data-index="{{@index}}" src="systems/penombre/assets/ui/transp_case_{{#if (gte systemSource.conscience.complications.deux.valeur @index)}}checked{{else}}unchecked{{/if}}.png"></img>
                   {{/times}}
@@ -63,7 +63,7 @@
                 <div class="form-fields div-descriptions">
                   {{formInput systemFields.conscience.fields.complications.fields.trois.fields.description value=systemSource.conscience.complications.trois.description localize=true class="div-description-2"}}
                 </div>
-                <div class="images-cases">
+                <div class="images-cases" data-tooltip="{{system.conscience.complications.trois.valeur}}">
                   {{#times 3}}
                     <img class="complication-case" data-action="complication" data-complication="trois" data-index="{{@index}}" src="systems/penombre/assets/ui/transp_case_{{#if (gte systemSource.conscience.complications.trois.valeur @index)}}checked{{else}}unchecked{{/if}}.png"></img>
                   {{/times}}
@@ -74,7 +74,7 @@
                 <div class="form-fields div-descriptions">
                   {{formInput systemFields.conscience.fields.complications.fields.quatre.fields.description value=systemSource.conscience.complications.quatre.description localize=true class="div-description-2"}}
                 </div>
-                <div class="images-cases">
+                <div class="images-cases" data-tooltip="{{system.conscience.complications.quatre.valeur}}">
                   {{#times 3}}
                     <img class="complication-case" data-action="complication" data-complication="quatre" data-index="{{@index}}" src="systems/penombre/assets/ui/transp_case_{{#if (gte systemSource.conscience.complications.quatre.valeur @index)}}checked{{else}}unchecked{{/if}}.png"></img>
                   {{/times}}
@@ -91,7 +91,7 @@
               <div class="form-group div-descriptions">
                 <div class="form-fields">{{complication.description}}</div>
               </div>
-              <div class="form-group div-cases">
+              <div class="form-group div-cases" data-tooltip="{{complication.valeur}}">
                 <div class="images-cases">
                   <!-- id : une, deux, trois, quatre ; @index : 1, 2, 3 -->
                   {{#times 3}}
@@ -103,7 +103,9 @@
           {{/each}}
         </div>
       {{/if}}
-
+      <div class="note-jetons">
+        <span>{{localize "PENOMBRE.ui.creerJetons"}}</span>
+      </div>
     </div>
   </div>
 </div>
