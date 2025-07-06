@@ -230,7 +230,7 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 }
 .penombre.eminence .eminence-content .col-3 {
   margin-left: 473px;
-  min-width: 600px;
+  min-width: 635px;
 }
 .penombre.eminence .eminence-content .col-1-1 {
   width: 25px;
@@ -249,10 +249,7 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 }
 .penombre.eminence .eminence-content .eminence-personnage,
 .penombre.eminence .eminence-content .eminence-harmoniques,
-.penombre.eminence .eminence-content .eminence-conscience,
-.penombre.eminence .eminence-content .eminence-timbre,
-.penombre.eminence .eminence-content .eminence-timbre-2,
-.penombre.eminence .eminence-content .eminence-recapitulatif {
+.penombre.eminence .eminence-content .eminence-conscience {
   float: none;
   flex-direction: column;
   border: 1px solid #a56135;
@@ -264,8 +261,11 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 .penombre.eminence .eminence-content .eminence-maitrises,
 .penombre.eminence .eminence-content .eminence-pouvoirs-2,
 .penombre.eminence .eminence-content .eminence-atouts-2,
-.penombre.eminence .eminence-content .eminence-maitrises-2 {
-  min-width: 600px;
+.penombre.eminence .eminence-content .eminence-maitrises-2,
+.penombre.eminence .eminence-content .eminence-timbre,
+.penombre.eminence .eminence-content .eminence-timbre-2,
+.penombre.eminence .eminence-content .eminence-recapitulatif {
+  min-width: 635px;
   float: none;
   flex-direction: column;
   border: 1px solid #a56135;
