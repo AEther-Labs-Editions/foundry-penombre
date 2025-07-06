@@ -293,7 +293,7 @@
       "maitrises": "Maitrises magiques",
       "potentiel": "Potentiel",
       "creerJetons": "(pensez a en creer pour preserver vos jetons)",
-      "clicJetons": "Clic pour dépenser ou réactiver un jeton. Clic-droit pour perdre ou ajouter un jeton."
+      "clicJetons": "Clic pour dépenser ou réactiver un jeton. <br>Clic-droit pour perdre ou ajouter un jeton."
     },
     "Settings": {
       "styleJeu": {
