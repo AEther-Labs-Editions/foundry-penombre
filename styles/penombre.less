@@ -132,12 +132,14 @@ body {
               width: 217px;
               content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_clair.png");
             }
+
             .frise-penombre {
               float: left;
               width: 400px;
               content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_clair.png");
             }
           }
+
         }
       }
     }
@@ -169,19 +171,19 @@ body {
               padding-left: 4px;
             }
 
-
             .logo-penombre {
               float: none;
               width: 217px;
               content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.png");
             }
+
             .frise-penombre {
               float: left;
               width: 400px;
               content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.png");
             }
-
           }
+
           // Section timbre
           .eminence-timbre-2 {
             min-height: 110px;
@@ -200,18 +202,17 @@ body {
               padding-left: 4px;
             }
 
-
             .logo-penombre {
               float: none;
               width: 217px;
               content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.png");
             }
+
             .frise-penombre {
               float: left;
               width: 400px;
               content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.png");
             }
-
           }
 
         }
@@ -353,7 +354,6 @@ body {
 
       }
 
-
       /*
       // Styles de texte avec classes utilitaires
       .text {
@@ -429,7 +429,6 @@ body {
                 width: 320px;
               }
             }
-
 
             .images-cases {
               display: flex;
@@ -541,7 +540,6 @@ body {
         .editer-harmoniques {
           width: 405px;
         }
-
 
         // Cases de mouvement avec mixin
         .case-de-mouve-1 {
@@ -895,9 +893,11 @@ body {
               width: 477px;
 
               .img-gauche {
-
+                border-top-left-radius: @border-radius-small;
+                border-bottom-left-radius: @border-radius-small;
               }
             }
+
             .div-droite {
               float: left;
               height: 100px;
@@ -905,7 +905,8 @@ body {
               padding-left: 23px;
 
               .img-droite {
-
+                border-top-right-radius: @border-radius-small;
+                border-bottom-right-radius: @border-radius-small;
               }
             }
           }
