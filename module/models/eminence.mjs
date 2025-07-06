@@ -57,10 +57,16 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
           statut: new StringField({
             required: true,
             nullable: false,
-            initial: SYSTEM.JETON_STATUTS.actif.id,
             choices: SYSTEM.JETON_STATUTS,
           }),
         }),
+        {
+          initial: () => {
+            let initJetons = Array.from({ length: 7 }, () => ({ statut: SYSTEM.JETON_STATUTS.actif.id }))
+            initJetons.push(...Array.from({ length: 18 }, () => ({ statut: SYSTEM.JETON_STATUTS.perdu.id })))
+            return initJetons
+          },
+        },
       ),
       complications: new SchemaField({
         une: new SchemaField(this.createComplication()),
@@ -184,14 +190,6 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
       case SYSTEM.PEUPLES.nain.id:
         this.ton = SYSTEM.TONS.cassandre.id
         break
-    }
-
-    // Initialisation des jetons de conscience à la création
-    if (this.conscience.jetons.length === 0) {
-      this.conscience.jetons = Array.from({ length: this.conscience.valeur }, () => ({ statut: SYSTEM.JETON_STATUTS.actif.id }))
-      this.conscience.jetons.push(...Array.from({ length: this.conscience.max - this.conscience.valeur }, () => ({ statut: SYSTEM.JETON_STATUTS.inactif.id })))
-      this.conscience.jetons.push(...Array.from({ length: 25 - this.conscience.max }, () => ({ statut: SYSTEM.JETON_STATUTS.perdu.id })))
-      this.parent.update({ "system.conscience.jetons": this.conscience.jetons })
     }
   }
 }

@@ -24,7 +24,7 @@ export const JETON_STATUTS = Object.freeze({
   perdu: {
     id: "perdu",
     label: "PENOMBRE.Jeton.perdu.label",
-  },
+  },  
 })
 
 export const POTENTIEL_MAX = 20

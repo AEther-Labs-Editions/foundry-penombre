@@ -139,13 +139,13 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
           switch (currentStatut) {
             case "actif":
             case "inactif":
-              const jetonSupprime = jetons.splice(index, 1)
+              const jetonSupprime = jetons.splice(index, 1)[0]
               jetonSupprime.statut = "perdu"
               jetons.push(jetonSupprime)
               currentConscience--
               break
             case "perdu":
-              jetons[index].statut = "inactif"
+              jetons[currentConscience].statut = "inactif"
               currentConscience++
               break
           }

@@ -33,11 +33,13 @@ Hooks.once("init", function () {
   })
 
   Handlebars.registerHelper("getJetonImage", function (value) {
-    if (value === "actif") {
-      return `systems/penombre/assets/ui/jeton_face_active.png`
-    }
-    if (value === "inactif") {
-      return `systems/penombre/assets/ui/jeton_face_inactive.png`
+    switch (value) {
+      case "actif":
+        return `systems/penombre/assets/ui/jeton_face_active.png`
+      case "inactif":
+        return `systems/penombre/assets/ui/jeton_face_inactive.png`
+      case "perdu":
+        return `systems/penombre/assets/ui/cercle.png`
     }
   })
 
