@@ -79,6 +79,16 @@
   border-radius: @border-radius;
 }
 
+.section-style-2() {
+  // width: calc(100% - 5px);
+  min-width: 600px;
+  float: none;
+  flex-direction: column;
+  border: 1px solid @color-primary;
+  padding: 2px;
+  border-radius: @border-radius;
+}
+
 /* ---------------------------------------------
         Interface de Foundry VTT
 --------------------------------------------- */
@@ -94,6 +104,7 @@
 /* ---------------------------------------------
         Thème Clair
 --------------------------------------------- */
+
 /* ---------------------------------------------
           Thème Sombre
 --------------------------------------------- */
@@ -101,8 +112,10 @@ body {
   &.theme-light {
     .penombre {
       &.eminence {
+
         .eminence-content {
           overflow: auto;
+          // width: 100%;
           font-family: @font-cattedrale;
           color: @color-primary;
           font-size: @font-size-base;
@@ -148,8 +161,10 @@ body {
   &.theme-dark {
     .penombre {
       &.eminence {
+
         .eminence-content {
           overflow: auto;
+          // width: 100%;
           font-family: @font-cattedrale;
           color: @color-primary;
           font-size: @font-size-base;
@@ -240,7 +255,7 @@ body {
 
       // Structure principale
       .eminence-main {
-        width: 1100px;
+        width: 100%;
         display: table;
         clear: both;
       }
@@ -269,8 +284,12 @@ body {
       }
 
       .col-3 {
-        width: 625px;
-        float: left;
+        // width: 625px;
+        margin-left: 473px;
+        // width: 100%;
+        min-width: 600px;
+        background-color: yellow;
+        // float: left;
       }
 
       .col-1-1 {
@@ -297,15 +316,19 @@ body {
       .eminence-conscience,
       .eminence-timbre,
       .eminence-timbre-2,
+      .eminence-recapitulatif {
+        .section-style();
+      }
+
       .eminence-pouvoirs,
       .eminence-atouts,
       .eminence-maitrises,
       .eminence-pouvoirs-2,
       .eminence-atouts-2,
-      .eminence-maitrises-2,
-      .eminence-recapitulatif {
-        .section-style();
+      .eminence-maitrises-2 {
+        .section-style-2();
       }
+
 
       // Police des textes verticaux
       .text-vertical-personnage,
@@ -673,8 +696,9 @@ body {
           }
 
           .pouvoirs {
-            float: left;
-            width: 517px;
+            // float: left;
+            margin-left: 100px;
+            width: calc(100% - 103px);
             min-height: 145px;
             border: 1px solid #917f35;
             border-radius: @border-radius-small;
@@ -682,8 +706,9 @@ body {
           }
 
           .pouvoirs-2 {
-            float: left;
-            width: 517px;
+            // float: left;
+            margin-left: 100px;
+            width: calc(100% - 103px);
             min-height: 290px;
             border: 1px solid #917f35;
             border-radius: @border-radius-small;
@@ -769,8 +794,9 @@ body {
           }
 
           .atouts {
-            float: left;
-            width: 517px;
+            // float: left;
+            margin-left: 100px;
+            width: calc(100% - 103px);
             min-height: 145px;
             border: 1px solid #917f35;
             border-radius: @border-radius-small;
@@ -778,8 +804,9 @@ body {
           }
 
           .atouts-2 {
-            float: left;
-            width: 517px;
+            // float: left;
+            margin-left: 100px;
+            width: (100% - 103px);
             min-height: 290px;
             border: 1px solid #917f35;
             border-radius: @border-radius-small;
@@ -856,8 +883,9 @@ body {
           }
 
           .maitrises {
-            float: left;
-            width: 517px;
+            // float: left;
+            margin-left: 100px;
+            width: calc(100% - 103px);
             min-height: 145px;
             border: 1px solid #917f35;
             border-radius: @border-radius-small;
@@ -865,8 +893,9 @@ body {
           }
 
           .maitrises-2 {
-            float: left;
-            width: 517px;
+            // float: left;
+            margin-left: 100px;
+            width: calc(100% - 103px);
             min-height: 290px;
             border: 1px solid #917f35;
             border-radius: @border-radius-small;

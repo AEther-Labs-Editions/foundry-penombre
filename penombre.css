@@ -202,7 +202,7 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   font-size: 29px;
 }
 .penombre.eminence .eminence-content .eminence-main {
-  width: 1100px;
+  width: 100%;
   display: table;
   clear: both;
 }
@@ -226,8 +226,9 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   flex-direction: column;
 }
 .penombre.eminence .eminence-content .col-3 {
-  width: 625px;
-  float: left;
+  margin-left: 473px;
+  min-width: 600px;
+  background-color: yellow;
 }
 .penombre.eminence .eminence-content .col-1-1 {
   width: 25px;
@@ -249,13 +250,20 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 .penombre.eminence .eminence-content .eminence-conscience,
 .penombre.eminence .eminence-content .eminence-timbre,
 .penombre.eminence .eminence-content .eminence-timbre-2,
+.penombre.eminence .eminence-content .eminence-recapitulatif {
+  float: none;
+  flex-direction: column;
+  border: 1px solid #a56135;
+  padding: 2px;
+  border-radius: 6px;
+}
 .penombre.eminence .eminence-content .eminence-pouvoirs,
 .penombre.eminence .eminence-content .eminence-atouts,
 .penombre.eminence .eminence-content .eminence-maitrises,
 .penombre.eminence .eminence-content .eminence-pouvoirs-2,
 .penombre.eminence .eminence-content .eminence-atouts-2,
-.penombre.eminence .eminence-content .eminence-maitrises-2,
-.penombre.eminence .eminence-content .eminence-recapitulatif {
+.penombre.eminence .eminence-content .eminence-maitrises-2 {
+  min-width: 600px;
   float: none;
   flex-direction: column;
   border: 1px solid #a56135;
@@ -549,8 +557,8 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs,
 .penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs {
-  float: left;
-  width: 517px;
+  margin-left: 100px;
+  width: calc(100% - 103px);
   min-height: 145px;
   border: 1px solid #917f35;
   border-radius: 4px;
@@ -558,8 +566,8 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs-2,
 .penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs-2 {
-  float: left;
-  width: 517px;
+  margin-left: 100px;
+  width: calc(100% - 103px);
   min-height: 290px;
   border: 1px solid #917f35;
   border-radius: 4px;
@@ -634,8 +642,8 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 }
 .penombre.eminence .eminence-content .eminence-atouts .content .atouts,
 .penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts {
-  float: left;
-  width: 517px;
+  margin-left: 100px;
+  width: calc(100% - 103px);
   min-height: 145px;
   border: 1px solid #917f35;
   border-radius: 4px;
@@ -643,8 +651,8 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 }
 .penombre.eminence .eminence-content .eminence-atouts .content .atouts-2,
 .penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts-2 {
-  float: left;
-  width: 517px;
+  margin-left: 100px;
+  width: -3%;
   min-height: 290px;
   border: 1px solid #917f35;
   border-radius: 4px;
@@ -711,8 +719,8 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 }
 .penombre.eminence .eminence-content .eminence-maitrises .content .maitrises,
 .penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises {
-  float: left;
-  width: 517px;
+  margin-left: 100px;
+  width: calc(100% - 103px);
   min-height: 145px;
   border: 1px solid #917f35;
   border-radius: 4px;
@@ -720,8 +728,8 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 }
 .penombre.eminence .eminence-content .eminence-maitrises .content .maitrises-2,
 .penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises-2 {
-  float: left;
-  width: 517px;
+  margin-left: 100px;
+  width: calc(100% - 103px);
   min-height: 290px;
   border: 1px solid #917f35;
   border-radius: 4px;
