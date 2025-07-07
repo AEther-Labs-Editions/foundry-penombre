@@ -18,6 +18,7 @@
 // Tailles
 @font-size-base: 17px;
 @font-size-middle: 19px;
+@font-size-midlarge: 25px;
 @font-size-large: 29px;
 @font-size-xlarge: 30px;
 @font-size-2xlarge: 35px;
@@ -253,7 +254,7 @@ body {
         border-color: @color-primary;
         color: @color-secondary;
         font-family: @font-chocolate;
-        font-size: @font-size-large;
+        font-size: @font-size-midlarge;
       }
 
       // Structure principale
@@ -561,29 +562,62 @@ body {
           }
         }
 
+        /*
         .editer-harmoniques {
-          width: 405px;
+          // width: 405px;
+          font-size: @font-size-xlarge;
         }
+        */
 
         // Cases de mouvement avec mixin
         .case-de-mouve-1 {
           .case-de-mouve(40px);
+
+          .editer-harmoniques {
+            // width: 405px;
+            font-size: @font-size-xlarge;
+          }
+
         }
 
         .case-de-mouve-2 {
           .case-de-mouve(-40px);
+
+          .editer-harmoniques {
+            // width: 405px;
+            font-size: @font-size-xlarge;
+        }
+
         }
 
         .case-de-mouve-3 {
           .case-de-mouve(10px);
+
+        .editer-harmoniques {
+          // width: 405px;
+          font-size: @font-size-xlarge;
+        }
+
         }
 
         .case-de-mouve-4 {
           .case-de-mouve(-5px);
+
+          .editer-harmoniques {
+            // width: 405px;
+            font-size: @font-size-xlarge;
+          }
+
         }
 
         .case-de-mouve-5 {
           .case-de-mouve(85px);
+
+          .editer-harmoniques {
+            // width: 405px;
+            font-size: @font-size-xlarge;
+          }
+
         }
 
         .flexible {
@@ -676,8 +710,8 @@ body {
                 margin-left: -22.5px;
                 margin-top: 42px;
                 width: 55px;
-                font-family: @font-chocolate;
                 z-index: 10;
+                font-size: @font-size-xlarge;
               }
 
               .val-potentiel {
@@ -774,8 +808,8 @@ body {
                 margin-left: -22.5px;
                 margin-top: 42px;
                 width: 55px;
-                font-family: @font-chocolate;
                 z-index: 10;
+                font-size: @font-size-xlarge;
               }
 
               .val-potentiel {
@@ -863,8 +897,8 @@ body {
                 margin-left: -22.5px;
                 margin-top: 42px;
                 width: 55px;
-                font-family: @font-chocolate;
                 z-index: 10;
+                font-size: @font-size-xlarge;
               }
 
               .val-potentiel {

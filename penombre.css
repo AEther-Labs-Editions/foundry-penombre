@@ -202,7 +202,7 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   border-color: #a56135;
   color: #56605b;
   font-family: "ChocoCovRainBold";
-  font-size: 29px;
+  font-size: 25px;
 }
 .penombre.eminence .eminence-content .eminence-main {
   width: 100%;
@@ -411,6 +411,12 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 }
 .penombre.eminence .eminence-content .eminence-harmoniques {
   color: #56605b;
+  /*
+        .editer-harmoniques {
+          // width: 405px;
+          font-size: @font-size-xlarge;
+        }
+        */
 }
 .penombre.eminence .eminence-content .eminence-harmoniques .click:hover {
   cursor: pointer;
@@ -428,14 +434,14 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   float: none;
   width: 405px;
 }
-.penombre.eminence .eminence-content .eminence-harmoniques .editer-harmoniques {
-  width: 405px;
-}
 .penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-1 {
   float: none;
   margin-left: 40px;
   width: 85px;
   height: 85px;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-1 .editer-harmoniques {
+  font-size: 30px;
 }
 .penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-2 {
   float: none;
@@ -443,11 +449,17 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   width: 85px;
   height: 85px;
 }
+.penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-2 .editer-harmoniques {
+  font-size: 30px;
+}
 .penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-3 {
   float: none;
   margin-left: 10px;
   width: 85px;
   height: 85px;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-3 .editer-harmoniques {
+  font-size: 30px;
 }
 .penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-4 {
   float: none;
@@ -455,11 +467,17 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   width: 85px;
   height: 85px;
 }
+.penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-4 .editer-harmoniques {
+  font-size: 30px;
+}
 .penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-5 {
   float: none;
   margin-left: 85px;
   width: 85px;
   height: 85px;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-5 .editer-harmoniques {
+  font-size: 30px;
 }
 .penombre.eminence .eminence-content .eminence-harmoniques .flexible {
   position: relative;
@@ -540,8 +558,8 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   margin-left: -22.5px;
   margin-top: 42px;
   width: 55px;
-  font-family: "ChocoCovRainBold";
   z-index: 10;
+  font-size: 30px;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel .val-potentiel,
 .penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .potentiel .div-potentiel .val-potentiel {
@@ -625,8 +643,8 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   margin-left: -22.5px;
   margin-top: 42px;
   width: 55px;
-  font-family: "ChocoCovRainBold";
   z-index: 10;
+  font-size: 30px;
 }
 .penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel .val-potentiel,
 .penombre.eminence .eminence-content .eminence-atouts-2 .content .potentiel .div-potentiel .val-potentiel {
@@ -702,8 +720,8 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   margin-left: -22.5px;
   margin-top: 42px;
   width: 55px;
-  font-family: "ChocoCovRainBold";
   z-index: 10;
+  font-size: 30px;
 }
 .penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel .val-potentiel,
 .penombre.eminence .eminence-content .eminence-maitrises-2 .content .potentiel .div-potentiel .val-potentiel {
