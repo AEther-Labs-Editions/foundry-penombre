@@ -81,6 +81,7 @@ Hooks.once("init", function () {
     config: true,
     type: Number,
     default: 10,
+    requiresReload: true,
   })
 
   game.settings.register(SYSTEM.ID, "reserveCollegiale", {
@@ -89,15 +90,19 @@ Hooks.once("init", function () {
     scope: "world",
     config: false,
     type: ReserveCollegiale,
-    default: () => {
-      const nbJetons = game.settings.get(SYSTEM.ID, "nbJetons")
-      const jetonsDefaut = {}
-      for (let i = 1; i <= nbJetons; i++) {
-        jetonsDefaut[i] = false
-      }
-      return {
-        jetons: jetonsDefaut,
-      }
+    default: {
+      jetons: {
+        1: { valeur: false },
+        2: { valeur: false },
+        3: { valeur: false },
+        4: { valeur: false },
+        5: { valeur: false },
+        6: { valeur: false },
+        7: { valeur: false },
+        8: { valeur: false },
+        9: { valeur: false },
+        10: { valeur: false },
+      },
     },
   })
 
