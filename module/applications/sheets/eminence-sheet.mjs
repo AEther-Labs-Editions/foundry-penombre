@@ -14,7 +14,7 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
   static DEFAULT_OPTIONS = {
     classes: ["penombre", "eminence"],
     position: {
-      width: 1150,
+      width: 1152,
       height: 780,
     },
     form: {
