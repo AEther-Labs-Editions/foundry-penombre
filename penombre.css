@@ -783,7 +783,57 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
-#penombre-reserve-collegiale .jetons {
+#penombre-reserve-collegiale {
+  padding: none;
+}
+#penombre-reserve-collegiale .div-jetons {
+  background-image: url("/systems/penombre/assets/ui/reserve-collegiale.jpg");
+  background-repeat: no-repeat;
+  background-size: 550px 550px;
+  width: 740px;
+  height: 790px;
+  padding-left: 157px;
+  padding-top: 159px;
+}
+#penombre-reserve-collegiale .div-jetons .jetons {
+  width: 235px;
+  height: 288px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 5 colonnes égales */
+  gap: 5px;
+  padding: 10px;
+  /*
+      .absolue {
+        position: absolute;
+        z-index: 5;
+      }
+      */
+}
+#penombre-reserve-collegiale .div-jetons .jetons img.dropshadow-actif,
+#penombre-reserve-collegiale .div-jetons .jetons img.dropshadow-inactif {
+  -webkit-filter: drop-shadow(5px 5px 5px #666666);
+  filter: drop-shadow(5px 5px 5px #666666);
+}
+#penombre-reserve-collegiale .div-jetons .jetons img.dropshadow-actif:hover,
+#penombre-reserve-collegiale .div-jetons .jetons img.dropshadow-inactif:hover {
+  cursor: pointer;
+}
+#penombre-reserve-collegiale .div-jetons .jetons .jeton-2,
+#penombre-reserve-collegiale .div-jetons .jetons .jeton-5,
+#penombre-reserve-collegiale .div-jetons .jetons .jeton-8 {
+  margin-top: -36px;
+}
+#penombre-reserve-collegiale .div-jetons .jetons .jeton-10 {
+  margin-top: -36px;
+  margin-left: 75px;
+}
+#penombre-reserve-collegiale .div-jetons .jetons .jeton {
+  text-align: center;
+  width: 68px;
+  height: 68px;
+}
+#penombre-reserve-collegiale .div-jetons-2 .jetons {
   width: 400px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -791,15 +841,15 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   gap: 10px;
   padding: 10px;
 }
-#penombre-reserve-collegiale .jetons img.dropshadow-actif,
-#penombre-reserve-collegiale .jetons img.dropshadow-inactif {
+#penombre-reserve-collegiale .div-jetons-2 .jetons img.dropshadow-actif,
+#penombre-reserve-collegiale .div-jetons-2 .jetons img.dropshadow-inactif {
   -webkit-filter: drop-shadow(5px 5px 5px #666666);
   filter: drop-shadow(5px 5px 5px #666666);
 }
-#penombre-reserve-collegiale .jetons img.dropshadow-actif:hover,
-#penombre-reserve-collegiale .jetons img.dropshadow-inactif:hover {
+#penombre-reserve-collegiale .div-jetons-2 .jetons img.dropshadow-actif:hover,
+#penombre-reserve-collegiale .div-jetons-2 .jetons img.dropshadow-inactif:hover {
   cursor: pointer;
 }
-#penombre-reserve-collegiale .jetons .jeton {
+#penombre-reserve-collegiale .div-jetons-2 .jetons .jeton {
   text-align: center;
 }

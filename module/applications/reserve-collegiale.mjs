@@ -18,8 +18,8 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
       controls: [],
     },
     position: {
-      width: 425,
-      height: 300,
+      width: 580,
+      height: 620,
       top: 80,
       left: 150,
     },
@@ -40,10 +40,16 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
 
   /** @override */
   async _prepareContext(_options = {}) {
+    const styleJeu = game.settings.get("penombre", "styleJeu")
+
     return {
       userId: game.user.id,
       isGM: game.user.isGM,
       jetons: await game.settings.get(SYSTEM.ID, "reserveCollegiale").jetons,
+
+      isStyleJeuStandard: styleJeu === "standard",
+      isStyleJeuAvance: styleJeu === "avance",
+
     }
   }
 
