@@ -292,6 +292,7 @@
       "atouts": "Atouts",
       "maitrises": "Maitrises magiques",
       "potentiel": "Potentiel",
+      "jeton": "Jeton",
       "creerJetons": "(pensez a en creer pour preserver vos jetons)",
       "clicJetons": "Clic pour dépenser ou réactiver un jeton. <br>Clic-droit pour perdre ou ajouter un jeton."
     },
@@ -299,7 +300,7 @@
       "styleJeu": {
         "name": "Style de jeu",
         "hint": "Choisissez le style de jeu pour votre campagne.",
-        "demo": "Kit de demo",
+        "demo": "Kit de démo",
         "standard": "Standard",
         "avance": "Règles avancées"
       },

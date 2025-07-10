@@ -15,14 +15,14 @@
       width: 235px;
       height: 288px;
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 5 colonnes égales */
+      grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
       gap: 5px;
       padding: 10px;
 
       img.dropshadow-actif,
       img.dropshadow-inactif {
-        -webkit-filter: drop-shadow(5px 5px 5px #666666);
-        filter: drop-shadow(5px 5px 5px #666666);
+        -webkit-filter: drop-shadow(-5px 5px 5px #666666);
+        filter: drop-shadow(-5px 5px 5px #666666);
 
         &:hover {
           cursor: pointer;
@@ -68,8 +68,8 @@
 
       img.dropshadow-actif,
       img.dropshadow-inactif {
-        -webkit-filter: drop-shadow(5px 5px 5px #666666);
-        filter: drop-shadow(5px 5px 5px #666666);
+        -webkit-filter: drop-shadow(-5px 5px 5px #666666);
+        filter: drop-shadow(-5px 5px 5px #666666);
 
         &:hover {
           cursor: pointer;

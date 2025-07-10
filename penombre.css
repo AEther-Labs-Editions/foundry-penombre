@@ -321,8 +321,8 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 }
 .penombre.eminence .eminence-content .eminence-conscience .div-jetons img.dropshadow-actif,
 .penombre.eminence .eminence-content .eminence-conscience .div-jetons img.dropshadow-inactif {
-  -webkit-filter: drop-shadow(5px 5px 5px #666666);
-  filter: drop-shadow(5px 5px 5px #666666);
+  -webkit-filter: drop-shadow(-5px 5px 5px #666666);
+  filter: drop-shadow(-5px 5px 5px #666666);
 }
 .penombre.eminence .eminence-content .eminence-conscience .div-jetons img.dropshadow-actif:hover,
 .penombre.eminence .eminence-content .eminence-conscience .div-jetons img.dropshadow-inactif:hover {
@@ -800,7 +800,7 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   height: 288px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* 5 colonnes égales */
+  /* 3 colonnes égales */
   gap: 5px;
   padding: 10px;
   /*
@@ -812,8 +812,8 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 }
 #penombre-reserve-collegiale .div-jetons .jetons img.dropshadow-actif,
 #penombre-reserve-collegiale .div-jetons .jetons img.dropshadow-inactif {
-  -webkit-filter: drop-shadow(5px 5px 5px #666666);
-  filter: drop-shadow(5px 5px 5px #666666);
+  -webkit-filter: drop-shadow(-5px 5px 5px #666666);
+  filter: drop-shadow(-5px 5px 5px #666666);
 }
 #penombre-reserve-collegiale .div-jetons .jetons img.dropshadow-actif:hover,
 #penombre-reserve-collegiale .div-jetons .jetons img.dropshadow-inactif:hover {
@@ -843,8 +843,8 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 }
 #penombre-reserve-collegiale .div-jetons-2 .jetons img.dropshadow-actif,
 #penombre-reserve-collegiale .div-jetons-2 .jetons img.dropshadow-inactif {
-  -webkit-filter: drop-shadow(5px 5px 5px #666666);
-  filter: drop-shadow(5px 5px 5px #666666);
+  -webkit-filter: drop-shadow(-5px 5px 5px #666666);
+  filter: drop-shadow(-5px 5px 5px #666666);
 }
 #penombre-reserve-collegiale .div-jetons-2 .jetons img.dropshadow-actif:hover,
 #penombre-reserve-collegiale .div-jetons-2 .jetons img.dropshadow-inactif:hover {
