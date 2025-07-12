@@ -40,7 +40,7 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
 
   /** @override */
   async _prepareContext(_options = {}) {
-    const styleJeu = game.settings.get("penombre", "styleJeu")
+    const styleJeu = await game.settings.get("penombre", "styleJeu")
 
     return {
       userId: game.user.id,

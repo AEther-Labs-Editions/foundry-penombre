@@ -22,6 +22,44 @@
       "path": "lang/fr.json"
     }
   ],
+    "packFolders": [
+    {
+      "name": "FR - Système",
+      "sorting": "a",
+      "color": "#a4653d",
+      "packs": [
+        "journal",
+        "landing-page"
+      ],
+      "folders": []
+    }
+  ],
+  "packs": [
+    {
+      "name": "journal",
+      "label": "FR - Journal",
+      "system": "penombre",
+      "path": "packs/journal",
+      "type": "JournalEntry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+        {
+      "name": "landing-page",
+      "label": "Landing Page",
+      "system": "penombre",
+      "path": "packs/landing-page",
+      "type": "Scene",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    }
+  ],
   "documentTypes": {
     "Actor": {
       "eminence": {}

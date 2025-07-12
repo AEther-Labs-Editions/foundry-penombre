@@ -68,6 +68,33 @@ penombre-toggle-switch[checked] thumb {
   left: calc(50% - 96px);
 }
 /* ---------------------------------------------
+        Concerne les pages de journaux
+--------------------------------------------- */
+.journal-header input {
+  font-family: "CattedraleDemo";
+}
+.journal-entry-page h1,
+.journal-entry-page h2,
+.journal-entry-page h3,
+.journal-entry-page h4,
+.journal-entry-page h5,
+.journal-entry-page h6 {
+  font-family: "CattedraleDemo";
+  color: #a56135;
+}
+/* ---------------------------------------------
+        Concerne l'editor
+--------------------------------------------- */
+.penombre .editor-content h1,
+.penombre .editor-content h2,
+.penombre .editor-content h3,
+.penombre .editor-content h4,
+.penombre .editor-content h5,
+.penombre .editor-content h6 {
+  font-family: "CattedraleDemo";
+  color: #a56135;
+}
+/* ---------------------------------------------
         Thème Clair
 --------------------------------------------- */
 /* ---------------------------------------------
