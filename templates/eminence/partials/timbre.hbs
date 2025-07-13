@@ -1,12 +1,34 @@
+{{log "timbre" this}}
 <div class="eminence-timbre{{#if (or isStyleJeuStandard isStyleJeuAvance)}}-2{{/if}}">
   {{#if (or isStyleJeuStandard isStyleJeuAvance)}}
     <div class="cadre-img">
       <img class="img-timbre" src="systems/penombre/assets/ui/timbre.png" />
     </div>
     <div class="datas-timbre">
+    {{#if unlocked}}
     {{formGroup systemFields.timbre.fields.description value=systemSource.timbre.description localize=true}}
     {{formGroup systemFields.timbre.fields.statut value=systemSource.timbre.statut localize=true}}
     {{formGroup systemFields.timbre.fields.peste value=systemSource.timbre.peste localize=true}}
+    {{else}}
+      <div class="col-1-2">
+      <label>{{localize "PENOMBRE.ui.timbre"}}</label>
+      <span>{{localize system.timbre.description}}<span>
+      </div>
+      {{log "system.timbre.statut = " system.timbre.statut}}
+      <div class="col-2-2">
+        {{#each systemFields.timbre.fields.statut.choices as |choice id|}}
+        {{log "choice = " choice}}
+        {{log "@id = " @id}}
+        {{log "../systemSource.timbre.statut.id" ../systemSource.timbre.statut.id}}
+        <img class="statut-timbre-case" src="systems/penombre/assets/ui/transp_case_{{#if (eq ../system.timbre.statut @id)}}checked{{else}}unchecked{{/if}}.png" />
+        <span>{{localize choice.label}}</span>
+        {{/each}}
+      </div>
+      <div class="col-3-2">
+      <label>{{localize "PENOMBRE.ui.peste"}}</label>
+      <span>{{localize system.timbre.peste}}</span>
+      </div>
+    {{/if}}
     </div>
   {{else}}
     <img class="frise-penombre"></img>
