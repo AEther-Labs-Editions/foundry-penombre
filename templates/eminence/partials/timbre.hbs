@@ -14,12 +14,8 @@
       <label>{{localize "PENOMBRE.ui.timbre"}}</label>
       <span>{{localize system.timbre.description}}<span>
       </div>
-      {{log "system.timbre.statut = " system.timbre.statut}}
       <div class="col-2-2">
         {{#each systemFields.timbre.fields.statut.choices as |choice id|}}
-        {{log "choice = " choice}}
-        {{log "@id = " @id}}
-        {{log "../systemSource.timbre.statut.id" ../systemSource.timbre.statut.id}}
         <img class="statut-timbre-case" src="systems/penombre/assets/ui/transp_case_{{#if (eq ../system.timbre.statut @id)}}checked{{else}}unchecked{{/if}}.png" />
         <span>{{localize choice.label}}</span>
         {{/each}}
