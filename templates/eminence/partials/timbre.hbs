@@ -11,7 +11,7 @@
     {{formGroup systemFields.timbre.fields.peste value=systemSource.timbre.peste localize=true}}
     {{else}}
       <div class="col-1-2">
-      <label>{{localize "PENOMBRE.ui.timbre"}}</label>
+      <label class="label-timbre">{{localize "PENOMBRE.ui.timbre"}}</label>
       <span>{{localize system.timbre.description}}<span>
       </div>
       <div class="col-2-2">
@@ -21,7 +21,7 @@
         {{/each}}
       </div>
       <div class="col-3-2">
-      <label>{{localize "PENOMBRE.ui.peste"}}</label>
+      <label class="label-peste">{{localize "PENOMBRE.ui.peste"}}</label>
       <span>{{localize system.timbre.peste}}</span>
       </div>
     {{/if}}

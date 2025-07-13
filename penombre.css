@@ -125,6 +125,14 @@ body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-
   width: 525px;
   padding-left: 4px;
 }
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .label-timbre,
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .label-timbre {
+  color: #56605b;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .label-peste,
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .label-peste {
+  color: #917f35;
+}
 body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre label,
 body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre label {
   display: flex;
@@ -220,6 +228,43 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-t
   float: left;
   width: 525px;
   padding-left: 4px;
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .label-timbre {
+  color: #56605b;
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .label-peste {
+  color: #917f35;
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre label {
+  display: flex;
+  float: none;
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre span {
+  display: flex;
+  float: none;
+  font-family: "ChocoCovRainBold";
+  font-size: 17px;
+  color: #56605b;
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 {
+  float: left;
+  width: 212px;
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 {
+  float: left;
+  width: 101px;
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 img {
+  float: left;
+  width: 20px;
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 span {
+  margin-left: 25px;
+  width: calc(100% - 25px);
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-3-2 {
+  margin-left: 313px;
+  width: calc(100% - 313px);
 }
 body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .logo-penombre {
   float: none;
