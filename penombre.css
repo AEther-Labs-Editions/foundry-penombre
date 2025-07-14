@@ -68,6 +68,33 @@ penombre-toggle-switch[checked] thumb {
   left: calc(50% - 96px);
 }
 /* ---------------------------------------------
+        Concerne les pages de journaux
+--------------------------------------------- */
+.journal-header input {
+  font-family: "CattedraleDemo";
+}
+.journal-entry-page h1,
+.journal-entry-page h2,
+.journal-entry-page h3,
+.journal-entry-page h4,
+.journal-entry-page h5,
+.journal-entry-page h6 {
+  font-family: "CattedraleDemo";
+  color: #a56135;
+}
+/* ---------------------------------------------
+        Concerne l'editor
+--------------------------------------------- */
+.penombre .editor-content h1,
+.penombre .editor-content h2,
+.penombre .editor-content h3,
+.penombre .editor-content h4,
+.penombre .editor-content h5,
+.penombre .editor-content h6 {
+  font-family: "CattedraleDemo";
+  color: #a56135;
+}
+/* ---------------------------------------------
         Thème Clair
 --------------------------------------------- */
 /* ---------------------------------------------
@@ -97,6 +124,52 @@ body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-
   float: left;
   width: 525px;
   padding-left: 4px;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .label-timbre,
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .label-timbre {
+  color: #56605b;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .label-peste,
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .label-peste {
+  color: #917f35;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre label,
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre label {
+  display: flex;
+  float: none;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre span,
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre span {
+  display: flex;
+  float: none;
+  font-family: "ChocoCovRainBold";
+  font-size: 17px;
+  color: #56605b;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .col-1-2,
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 {
+  float: left;
+  width: 212px;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .col-2-2,
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 {
+  float: left;
+  width: 101px;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .col-2-2 img,
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 img {
+  float: left;
+  width: 20px;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .col-2-2 span,
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 span {
+  margin-left: 25px;
+  width: calc(100% - 25px);
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .col-3-2,
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-3-2 {
+  margin-left: 313px;
+  width: calc(100% - 313px);
 }
 body.theme-light .penombre.eminence .eminence-content .eminence-timbre .logo-penombre,
 body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .logo-penombre {
@@ -155,6 +228,43 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-t
   float: left;
   width: 525px;
   padding-left: 4px;
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .label-timbre {
+  color: #56605b;
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .label-peste {
+  color: #917f35;
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre label {
+  display: flex;
+  float: none;
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre span {
+  display: flex;
+  float: none;
+  font-family: "ChocoCovRainBold";
+  font-size: 17px;
+  color: #56605b;
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 {
+  float: left;
+  width: 212px;
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 {
+  float: left;
+  width: 101px;
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 img {
+  float: left;
+  width: 20px;
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 span {
+  margin-left: 25px;
+  width: calc(100% - 25px);
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-3-2 {
+  margin-left: 313px;
+  width: calc(100% - 313px);
 }
 body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .logo-penombre {
   float: none;
@@ -321,8 +431,8 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 }
 .penombre.eminence .eminence-content .eminence-conscience .div-jetons img.dropshadow-actif,
 .penombre.eminence .eminence-content .eminence-conscience .div-jetons img.dropshadow-inactif {
-  -webkit-filter: drop-shadow(5px 5px 5px #666666);
-  filter: drop-shadow(5px 5px 5px #666666);
+  -webkit-filter: drop-shadow(-5px 5px 5px #666666);
+  filter: drop-shadow(-5px 5px 5px #666666);
 }
 .penombre.eminence .eminence-content .eminence-conscience .div-jetons img.dropshadow-actif:hover,
 .penombre.eminence .eminence-content .eminence-conscience .div-jetons img.dropshadow-inactif:hover {
@@ -783,7 +893,57 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
-#penombre-reserve-collegiale .jetons {
+#penombre-reserve-collegiale {
+  padding: none;
+}
+#penombre-reserve-collegiale .div-jetons {
+  background-image: url("/systems/penombre/assets/ui/reserve-collegiale.jpg");
+  background-repeat: no-repeat;
+  background-size: 550px 550px;
+  width: 740px;
+  height: 790px;
+  padding-left: 157px;
+  padding-top: 159px;
+}
+#penombre-reserve-collegiale .div-jetons .jetons {
+  width: 235px;
+  height: 288px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 colonnes égales */
+  gap: 5px;
+  padding: 10px;
+  /*
+      .absolue {
+        position: absolute;
+        z-index: 5;
+      }
+      */
+}
+#penombre-reserve-collegiale .div-jetons .jetons img.dropshadow-actif,
+#penombre-reserve-collegiale .div-jetons .jetons img.dropshadow-inactif {
+  -webkit-filter: drop-shadow(-5px 5px 5px #666666);
+  filter: drop-shadow(-5px 5px 5px #666666);
+}
+#penombre-reserve-collegiale .div-jetons .jetons img.dropshadow-actif:hover,
+#penombre-reserve-collegiale .div-jetons .jetons img.dropshadow-inactif:hover {
+  cursor: pointer;
+}
+#penombre-reserve-collegiale .div-jetons .jetons .jeton-2,
+#penombre-reserve-collegiale .div-jetons .jetons .jeton-5,
+#penombre-reserve-collegiale .div-jetons .jetons .jeton-8 {
+  margin-top: -36px;
+}
+#penombre-reserve-collegiale .div-jetons .jetons .jeton-10 {
+  margin-top: -36px;
+  margin-left: 75px;
+}
+#penombre-reserve-collegiale .div-jetons .jetons .jeton {
+  text-align: center;
+  width: 68px;
+  height: 68px;
+}
+#penombre-reserve-collegiale .div-jetons-2 .jetons {
   width: 400px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -791,15 +951,15 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   gap: 10px;
   padding: 10px;
 }
-#penombre-reserve-collegiale .jetons img.dropshadow-actif,
-#penombre-reserve-collegiale .jetons img.dropshadow-inactif {
-  -webkit-filter: drop-shadow(5px 5px 5px #666666);
-  filter: drop-shadow(5px 5px 5px #666666);
+#penombre-reserve-collegiale .div-jetons-2 .jetons img.dropshadow-actif,
+#penombre-reserve-collegiale .div-jetons-2 .jetons img.dropshadow-inactif {
+  -webkit-filter: drop-shadow(-5px 5px 5px #666666);
+  filter: drop-shadow(-5px 5px 5px #666666);
 }
-#penombre-reserve-collegiale .jetons img.dropshadow-actif:hover,
-#penombre-reserve-collegiale .jetons img.dropshadow-inactif:hover {
+#penombre-reserve-collegiale .div-jetons-2 .jetons img.dropshadow-actif:hover,
+#penombre-reserve-collegiale .div-jetons-2 .jetons img.dropshadow-inactif:hover {
   cursor: pointer;
 }
-#penombre-reserve-collegiale .jetons .jeton {
+#penombre-reserve-collegiale .div-jetons-2 .jetons .jeton {
   text-align: center;
 }

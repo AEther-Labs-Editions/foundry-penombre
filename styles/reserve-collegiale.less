@@ -1,24 +1,84 @@
 #penombre-reserve-collegiale {
+  padding: none;
+
   // Jetons
-  .jetons {
-    width: 400px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 colonnes égales */
-    gap: 10px;
-    padding: 10px;
+  .div-jetons {
+    background-image: url("/systems/penombre/assets/ui/reserve-collegiale.jpg");
+    background-repeat: no-repeat;
+    background-size: 550px 550px;
+    width: 740px;
+    height: 790px;
+    padding-left: 157px;
+    padding-top: 159px;
 
-    img.dropshadow-actif,
-    img.dropshadow-inactif {
-      -webkit-filter: drop-shadow(5px 5px 5px #666666);
-      filter: drop-shadow(5px 5px 5px #666666);
+    .jetons {
+      width: 235px;
+      height: 288px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+      gap: 5px;
+      padding: 10px;
 
-      &:hover {
-        cursor: pointer;
+      img.dropshadow-actif,
+      img.dropshadow-inactif {
+        -webkit-filter: drop-shadow(-5px 5px 5px #666666);
+        filter: drop-shadow(-5px 5px 5px #666666);
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      /*
+      .absolue {
+        position: absolute;
+        z-index: 5;
+      }
+      */
+
+      .jeton-2,
+      .jeton-5,
+      .jeton-8 {
+        margin-top: -36px;
+      }
+
+      .jeton-10 {
+        margin-top: -36px;
+        margin-left: 75px;
+      }
+
+
+      .jeton {
+        text-align: center;
+        width: 68px;
+        height: 68px;
       }
     }
+  }
 
-    .jeton {
-      text-align: center;
+  .div-jetons-2 {
+
+    // Jetons
+    .jetons {
+      width: 400px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); /* 5 colonnes égales */
+      gap: 10px;
+      padding: 10px;
+
+      img.dropshadow-actif,
+      img.dropshadow-inactif {
+        -webkit-filter: drop-shadow(-5px 5px 5px #666666);
+        filter: drop-shadow(-5px 5px 5px #666666);
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .jeton {
+        text-align: center;
+      }
     }
   }
 }

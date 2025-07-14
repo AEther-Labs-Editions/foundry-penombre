@@ -103,6 +103,37 @@
 }
 
 /* ---------------------------------------------
+        Concerne les pages de journaux
+--------------------------------------------- */
+.journal-header {
+  input {
+    font-family: @font-cattedrale;
+    // text-transform: uppercase;
+  }
+}
+
+.journal-entry-page {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: @font-cattedrale;
+    // text-transform: uppercase;
+    color: @color-primary;
+  }
+}
+
+/* ---------------------------------------------
+        Concerne l'editor
+--------------------------------------------- */
+.penombre {
+  .editor-content {
+    h1, h2, h3, h4, h5, h6 {
+      font-family: @font-cattedrale;
+      color: @color-primary;
+    }
+  }
+}
+
+
+/* ---------------------------------------------
         Thème Clair
 --------------------------------------------- */
 
@@ -139,6 +170,52 @@ body {
               float: left;
               width: 525px;
               padding-left: 4px;
+
+              .label-timbre {
+                color: @color-secondary;
+              }
+
+              .label-peste {
+                color: @color-accent;
+              }
+
+              label {
+                display: flex;
+                float: none;
+              }
+
+              span {
+                display: flex;
+                float: none;
+                font-family: @font-chocolate;
+                font-size: @font-size-base;
+                color: @color-secondary;
+              }
+
+              .col-1-2 {
+                float: left;
+                width: 212px;
+              }
+
+              .col-2-2 {
+                float: left;
+                width: 101px;
+
+                img {
+                  float: left;
+                  width: 20px;
+                }
+
+                span {
+                  margin-left: 25px;
+                  width: calc(100% - 25px);
+                }
+              }
+
+              .col-3-2 {
+                margin-left: 313px;
+                width: calc(100% - 313px);
+              }
             }
 
             .logo-penombre {
@@ -219,6 +296,52 @@ body {
               float: left;
               width: 525px;
               padding-left: 4px;
+              
+              .label-timbre {
+                color: @color-secondary;
+              }
+
+              .label-peste {
+                color: @color-accent;
+              }
+
+              label {
+                display: flex;
+                float: none;
+              }
+
+              span {
+                display: flex;
+                float: none;
+                font-family: @font-chocolate;
+                font-size: @font-size-base;
+                color: @color-secondary;
+              }
+
+              .col-1-2 {
+                float: left;
+                width: 212px;
+              }
+
+              .col-2-2 {
+                float: left;
+                width: 101px;
+
+                img {
+                  float: left;
+                  width: 20px;
+                }
+
+                span {
+                  margin-left: 25px;
+                  width: calc(100% - 25px);
+                }
+              }
+
+              .col-3-2 {
+                margin-left: 313px;
+                width: calc(100% - 313px);
+              }
             }
 
             .logo-penombre {
@@ -316,7 +439,7 @@ body {
       // Sections principales avec mixin
       .eminence-personnage,
       .eminence-harmoniques,
-      .eminence-conscience{
+      .eminence-conscience {
         .section-style();
       }
 
@@ -418,8 +541,8 @@ body {
 
           img.dropshadow-actif,
           img.dropshadow-inactif {
-            -webkit-filter: drop-shadow(5px 5px 5px #666666);
-            filter: drop-shadow(5px 5px 5px #666666);
+            -webkit-filter: drop-shadow(-5px 5px 5px #666666);
+            filter: drop-shadow(-5px 5px 5px #666666);
 
             &:hover {
               cursor: pointer;
