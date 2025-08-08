@@ -28,6 +28,7 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
       editImage: EminenceSheet.#onEditImage,
       jeton: EminenceSheet.#onClicJeton,
       complication: EminenceSheet.#onClicComplication,
+      clicDe: EminenceSheet.#onClicDe
     },
   }
 
@@ -272,4 +273,105 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
     if (initialValue === 3 && index === 3) index = 2
     await this.document.update({ [`system.conscience.complications.${complication}.valeur`]: index })
   }
+
+    /**
+   * Gère les clics sur les Dés dans l'interface.
+   *
+   * @param {Event} event L'événement de clic déclenché par l'utilisateur.
+   * @param {HTMLElement} target L'élément HTML cliqué, contenant les attributs data du Dé.
+   * @returns {Promise<void>} Résout lorsque la mise à jour du document est terminée.
+   * @private
+   * @static
+   */
+  static async #onClicDe(event, target) {
+    event.preventDefault()
+    const dataset = target.dataset
+    const clicDe = dataset.clicDe
+    let myActor = this.actor
+    let myHarmonique = dataset.index
+    let myDeHarmonique = "d20"
+    switch (myHarmonique) {
+      case 'ame': myDeHarmonique = await myActor.system.harmoniques.ame.valeur
+        break;
+      case 'esprit': myDeHarmonique = await myActor.system.harmoniques.esprit.valeur
+        break;
+      case 'etincelle': myDeHarmonique = await myActor.system.harmoniques.etincelle.valeur
+        break;
+      case 'nature': myDeHarmonique = await myActor.system.harmoniques.nature.valeur
+        break;
+      case 'nuit': myDeHarmonique = await myActor.system.harmoniques.nuit.valeur
+        break;
+      default: console.log('Désolé, il y a un problème.');
+    }
+
+    const myTypeOfThrow = game.settings.get("core", "rollMode"); // Type de Lancer
+    let myRoll = ""
+    var msg = ""
+
+    // Affiche le prompt de lancer de dés
+    let template = ""
+    let myTitle = "" // game.i18n.localize("PENOMBRE.ThrowDice");
+    let myDialogOptions = {}
+    let promptLanceDes = await _promptV2LanceDes (myHarmonique, myDeHarmonique, template, myTitle, myDialogOptions)
+
+    //////////////////////////////////////////////////////////////////
+    if (!(promptLanceDes)) {
+      ui.notifications.warn(game.i18n.localize("PENOMBRE.Error111"));
+      return;
+      };
+    //////////////////////////////////////////////////////////////////
+
+
+    // Récupère les données du prompt de lancer de dés
+    myHarmonique = promptLanceDes.harmonique
+    myDeHarmonique = promptLanceDes.deHarmonique
+    let myListeBonus = promptLanceDes.listeBonus
+    let myNbreJetons = promptLanceDes.nbreJetons
+
+    let myNbreBonus = 0
+    // Ici, on calcule les nombre de D6 bonus à partir de la liste de Bonus
+
+    // Lance les Dés
+    if (myNbreBonus == 0) {
+      myRoll = "1"+myDeHarmonique
+    } else {
+      myRoll = "1"+myDeHarmonique+"+"+myNbreBonus.toString()+"d6"
+    }
+    console.log("myRoll = ", myRoll)
+    let r = new Roll(myRoll, myActor.getRollData());
+    await r.evaluate();
+
+  
+    msg = await r.toMessage({
+      user: game.user.id,
+      speaker: ChatMessage.getSpeaker({ actor: myActor }),
+      rollMode: myTypeOfThrow
+    });
+
+
+    /*
+    msg = await renderChatMessageHTML({ // Remplacera définitivement la commande précédente à partir de Foundry VTT v15
+
+  
+    })
+    */
+
+    if (game.modules.get("dice-so-nice")?.active) {
+      await game.dice3d.waitFor3DAnimationByMessageID(msg.id);
+    };
+
+  }
+
+}
+
+// Gère le prompt de lancer de dés
+async function _promptV2LanceDes(myHarmonique, myDeHarmonique, template, myTitle, myDialogOptions) {
+  let promptLanceDes = {
+    harmonique: myHarmonique,
+    deHarmonique: myDeHarmonique,
+    listeBonus: {},
+    nbreJetons: 0
+  }
+  console.log("Je lance le prompt pour", myHarmonique, myDeHarmonique)
+  return promptLanceDes
 }

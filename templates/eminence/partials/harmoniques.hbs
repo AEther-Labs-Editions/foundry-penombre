@@ -19,7 +19,7 @@
               </select>
               {{else}}
                 <div class="de-de-nuit absolue">
-                  <img class="click de-nuit" src="{{getDiceImage nuit}}" alt="|" />
+                  <img class="click de-nuit" data-action="clicDe" data-index="nuit" src="{{getDiceImage nuit}}" alt="|" />
                 </div>
               {{/if}}
             </div>
@@ -42,7 +42,7 @@
               </select>
               {{else}}
                 <div class="de-d-ame absolue">
-                  <img class="click de-ame" src="{{getDiceImage ame}}" alt="|" />
+                  <img class="click de-ame" data-action="clicDe" data-index="ame" src="{{getDiceImage ame}}" alt="|" />
                 </div>
               {{/if}}
             </div>
@@ -64,7 +64,7 @@
               </select>
               {{else}}
                 <div class="de-de-nature absolue">
-                  <img class="click de-nature" src="{{getDiceImage nature}}" alt="|" />
+                  <img class="click de-nature" data-action="clicDe" data-index="nature" src="{{getDiceImage nature}}" alt="|" />
                 </div>
               {{/if}}
             </div>
@@ -87,7 +87,7 @@
               </select>
               {{else}}
                 <div class="de-d-esprit absolue">
-                  <img class="click de-esprit" src="{{getDiceImage esprit}}" alt="|" />
+                  <img class="click de-esprit" data-action="clicDe" data-index="esprit" src="{{getDiceImage esprit}}" alt="|" />
                 </div>
               {{/if}}
             </div>
@@ -106,12 +106,13 @@
                 <img class="case-de" src="/systems/penombre/assets/ui/case_de_penombre.png" alt="|" />
               </div>
               {{#if unlocked}}
-              <select name="system.harmoniques.etincelle.valeur" class="de-d-etincelle-saisie editer-harmoniques absolue">
+              <select name="
+              " class="de-d-etincelle-saisie editer-harmoniques absolue">
                 {{selectOptions harmoniquesChoices selected=systemSource.harmoniques.etincelle.valeur localize=true}}
               </select>
               {{else}}
                 <div class="de-d-etincelle absolue">
-                  <img class="click de-etincelle" src="{{getDiceImage etincelle}}" alt="|" />
+                  <img class="click de-etincelle" data-action="clicDe" data-index="etincelle" src="{{getDiceImage etincelle}}" alt="|" />
                 </div>
               {{/if}}
             </div>
