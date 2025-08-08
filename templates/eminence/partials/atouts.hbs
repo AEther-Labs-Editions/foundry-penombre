@@ -35,7 +35,7 @@
                         <span class="item-name">{{item.name}}</span>
                     </td>
                     <td>
-                        <input type="item-value">{{item.valeur}}</span>
+                        <input type="item-valeur">{{item.valeur}}</span>
                     </td>
                     <td class="item-controls">
                         <a class="item-control" title="{{ localize 'PENOMBRE.ui.atoutEdit' }}" data-action="edit" data-item-id="{{item._id}}"><i class="fas fa-edit"></i></a>
@@ -44,8 +44,8 @@
                 </tr>
                 {{/each}}
             </table>
-            <span>
-            <a class="item-control" title="{{ localize 'PENOMBRE.ui.atoutCreate' }}" data-action="create" data-type="atout"><i class="fas fa-plus"></i> {{ localize "PENOMBRE.ui.atoutCreate" }}</a>
+            <span class="plusitem">
+                <a class="item-control" title="{{ localize 'PENOMBRE.ui.atoutCreate' }}" data-action="create" data-type="atout"><i class="fas fa-plus"></i> {{ localize "PENOMBRE.ui.atoutCreate" }}</a>
             </span> 
         </div>
 

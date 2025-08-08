@@ -644,6 +644,10 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   font-size: 35px;
   float: none;
 }
+.penombre.eminence .eminence-content .eminence-pouvoirs .content,
+.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content {
+  text-align: left;
+}
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel,
 .penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .potentiel {
   text-align: center;
@@ -719,15 +723,25 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   color: #56605b;
   text-align: center;
 }
+.penombre.eminence .eminence-content .eminence-atouts .plusitem {
+  text-align: right;
+}
 .penombre.eminence .eminence-content .eminence-atouts-2 {
   min-height: 400px;
   color: #56605b;
   text-align: center;
 }
+.penombre.eminence .eminence-content .eminence-atouts-2 .plusitem {
+  text-align: right;
+}
 .penombre.eminence .eminence-content .eminence-atouts .titre-section-atouts,
 .penombre.eminence .eminence-content .eminence-atouts-2 .titre-section-atouts {
   font-size: 35px;
   float: none;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content {
+  text-align: left;
 }
 .penombre.eminence .eminence-content .eminence-atouts .content .potentiel,
 .penombre.eminence .eminence-content .eminence-atouts-2 .content .potentiel {
@@ -785,7 +799,7 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 .penombre.eminence .eminence-content .eminence-atouts .content .atouts-2,
 .penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts-2 {
   margin-left: 100px;
-  width: -3%;
+  width: calc(100% - 103px);
   min-height: 290px;
   border: 1px solid #917f35;
   border-radius: 4px;
@@ -805,6 +819,10 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 .penombre.eminence .eminence-content .eminence-maitrises-2 .titre-section-maitrises {
   font-size: 35px;
   float: none;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .content {
+  text-align: left;
 }
 .penombre.eminence .eminence-content .eminence-maitrises .content .potentiel,
 .penombre.eminence .eminence-content .eminence-maitrises-2 .content .potentiel {
