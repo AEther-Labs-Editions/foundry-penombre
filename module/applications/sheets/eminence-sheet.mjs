@@ -28,7 +28,11 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
       editImage: EminenceSheet.#onEditImage,
       jeton: EminenceSheet.#onClicJeton,
       complication: EminenceSheet.#onClicComplication,
-      clicDe: EminenceSheet.#onClicDe
+      clicDe: EminenceSheet.#onClicDe,
+      edit: EminenceSheet.#onEditItem,
+      read: EminenceSheet.#onReadItem,
+      delete: EminenceSheet.#onDeleteItem,
+      create: EminenceSheet.#onCreateItem
     },
   }
 
@@ -92,6 +96,7 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
     context.isStyleJeuAvance = styleJeu === "avance"
 
     context.pouvoirs = this.document.itemTypes.pouvoir
+    context.atouts = this.document.itemTypes.atout
 
     // Select options
     context.harmoniquesChoices = { d4: "D4", d6: "D6", d8: "D8", d10: "D10", d12: "D12" }
@@ -360,6 +365,118 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
       await game.dice3d.waitFor3DAnimationByMessageID(msg.id);
     };
 
+  }
+
+
+  /**
+   * Handle click events for Pouvoir, Atout within the Eminence Sheet
+   *
+   * @param {Event} event L'événement de clic déclenché par l'utilisateur.
+   * @param {HTMLElement} target L'élément HTML cliqué, contenant les attributs data de la complication.
+   * @returns {Promise<void>} Résout lorsque la mise à jour du document est terminée.
+   * @private
+   * @static
+   */
+  static async #onCreateItem(event, target) {
+    event.preventDefault();
+
+    // Obtain event data
+    const dataset = target.dataset
+    // const proceed = dataset.proceed
+    const type = dataset.type
+
+    let myActor = this.actor
+
+    const button = target
+
+    let item;
+
+    // Handle different actions
+    const cls = getDocumentClass("Item")
+    let name = "";
+    let imgPath = "";
+    if (type === "pouvoir") {
+      name = game.i18n.localize("PENOMBRE.ui.pouvoirNew");
+      imgPath = "systems/penombre/images/icons/pouvoir.png";
+    }
+    else if (type === "atout") {
+      name = game.i18n.localize("PENOMBRE.ui.atoutNew");
+      imgPath = "systems/devastra/images/icons/atout.png";
+    }
+    
+
+    await cls.create({ name: name, type: type }, { parent: myActor });
+
+    const myType = type;
+    switch (myType) {
+      case "pouvoir":
+        for (let item of myActor.items.filter(item => item.type === 'pouvoir')) {
+          if (item.img == "icons/svg/item-bag.svg") item.update({ "img": imgPath });
+        }
+      break;
+      case "atout":
+        for (let enseignement of myActor.items.filter(item => item.type === 'atout')) {
+          if (enseignement.img == "icons/svg/item-bag.svg") enseignement.update({ "img": imgPath });
+        }
+      break;
+    }
+  }
+
+  static async #onReadItem(event, target) {
+    event.preventDefault();
+
+    // Obtain event data
+    const dataset = target.dataset
+    // const proceed = dataset.proceed
+    const type = dataset.type
+    const itemId = dataset.itemId
+
+    let myActor = this.actor
+
+    const button = target
+
+    let item = myActor.items.get(itemId)
+    console.log("item = ", item)
+    return item.sheet.render(true)
+  }
+
+
+  static async #onDeleteItem(event, target) {
+    event.preventDefault();
+
+    // Obtain event data
+    const dataset = target.dataset
+    // const proceed = dataset.proceed
+    const type = dataset.type
+    const itemId = dataset.itemId
+
+    let myActor = this.actor
+
+    const button = target
+
+    let item = myActor.items.get(itemId)
+    console.log("item = ", item)
+    return item.delete()
+  }
+
+  static async #onEditItem(event, target) {
+    event.preventDefault()
+
+    // Obtain event data
+    const dataset = target.dataset
+    // const proceed = dataset.proceed
+    const type = dataset.type
+    const itemId = dataset.itemId
+
+    let myActor = this.actor
+
+    const button = target
+
+
+    console.log("myActor = ", myActor)
+    let item = myActor.items.get(itemId)
+    console.log("item = ", item)
+    return item.sheet.render(true)
   }
 
 }

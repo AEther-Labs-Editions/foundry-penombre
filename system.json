@@ -65,7 +65,8 @@
       "eminence": {}
     },
     "Item": {
-      "pouvoir": {}
+      "pouvoir": {},
+      "atout": {} 
     }
   },
   "socket": true,

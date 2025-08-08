@@ -25,9 +25,11 @@ Hooks.once("init", function () {
   CONFIG.Item.documentClass = documents.PenombreItem
   CONFIG.Item.dataModels = {
     pouvoir: models.PenombrePouvoir,
+    atout: models.PenombreAtout,
   }
   foundry.documents.collections.Items.unregisterSheet("core", foundry.appv1.sheets.ItemSheet)
   foundry.documents.collections.Items.registerSheet(SYSTEM.ID, applications.PouvoirSheet, { types: ["pouvoir"], label: "PENOMBRE.Feuille.pouvoir", makeDefault: true })
+  foundry.documents.collections.Items.registerSheet(SYSTEM.ID, applications.AtoutSheet, { types: ["atout"], label: "PENOMBRE.Feuille.atout", makeDefault: true })
 
   CONFIG.queries["penombre.updateReserveCollegiale"] = applications.PenombreReserveCollegiale._handleQuery
 

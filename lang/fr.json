@@ -4,13 +4,15 @@
       "eminence": "Éminence grise"
     },
     "Item": {
-      "pouvoir": "Pouvoir"
+      "pouvoir": "Pouvoir",
+      "atout": "Atout"
     }
   },
   "PENOMBRE": {
     "Feuille": {
       "eminence": "Feuille d'Éminence grise",
-      "pouvoir": "Feuille de Pouvoir"
+      "pouvoir": "Feuille de Pouvoir",
+      "atout": "Feuille d'Atout"
     },
     "Eminence": {
       "FIELDS": {
@@ -146,6 +148,16 @@
         },
         "ton": {
           "label": "Ton"
+        }
+      }
+    },
+    "Atout": {
+      "FIELDS": {
+        "valeur": {
+          "label": "Valeur"
+        },
+        "description": {
+          "label": "Description"
         }
       }
     },
@@ -296,7 +308,12 @@
       "creerJetons": "(pensez a en creer pour preserver vos jetons)",
       "clicJetons": "Clic pour dépenser ou réactiver un jeton. <br>Clic-droit pour perdre ou ajouter un jeton.",
       "timbre": "Timbre",
-      "peste": "Peste"
+      "peste": "Peste",
+      "atoutNom": "Nom",
+      "atoutNew": "Nouvel atout",
+      "atoutEdit": "Éditer",
+      "atoutDelete": "Supprimer",
+      "atoutCreate": "Nouvel atout"
     },
     "Settings": {
       "styleJeu": {
