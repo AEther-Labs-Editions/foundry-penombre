@@ -7,7 +7,6 @@ export * as elements from "./module/elements/_module.mjs"
 import * as models from "./module/models/_module.mjs"
 import * as documents from "./module/documents/_module.mjs"
 import * as applications from "./module/applications/_module.mjs"
-import ReserveCollegiale from "./module/models/reserve-collegiale.mjs"
 
 Hooks.once("init", function () {
   console.info("Pénombre | Initialisation du système...")
@@ -26,12 +25,16 @@ Hooks.once("init", function () {
   CONFIG.Item.dataModels = {
     pouvoir: models.PenombrePouvoir,
     atout: models.PenombreAtout,
+    maitrise: models.PenombreMaitrise,
   }
   foundry.documents.collections.Items.unregisterSheet("core", foundry.appv1.sheets.ItemSheet)
   foundry.documents.collections.Items.registerSheet(SYSTEM.ID, applications.PouvoirSheet, { types: ["pouvoir"], label: "PENOMBRE.Feuille.pouvoir", makeDefault: true })
   foundry.documents.collections.Items.registerSheet(SYSTEM.ID, applications.AtoutSheet, { types: ["atout"], label: "PENOMBRE.Feuille.atout", makeDefault: true })
+  foundry.documents.collections.Items.registerSheet(SYSTEM.ID, applications.MaitriseSheet, { types: ["maitrise"], label: "PENOMBRE.Feuille.maitrise", makeDefault: true })
 
   CONFIG.queries["penombre.updateReserveCollegiale"] = applications.PenombreReserveCollegiale._handleQuery
+
+  CONFIG.Dice.rolls.push(documents.PenombreRoll)
 
   Handlebars.registerHelper("getDiceImage", function (value) {
     return `/systems/penombre/assets/ui/${value}-marge.png`
@@ -91,7 +94,7 @@ Hooks.once("init", function () {
     hint: "PENOMBRE.Settings.reserveCollegiale.hint",
     scope: "world",
     config: false,
-    type: ReserveCollegiale,
+    type: models.ReserveCollegiale,
     default: {
       jetons: {
         1: { valeur: false },

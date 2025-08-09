@@ -2,7 +2,7 @@
 <div class="eminence-harmoniques flexible">
   <div class="col-1-1 text-vertical-harmoniques">{{localize "PENOMBRE.ui.section.harmoniques"}}</div>
   <div class="col-2-1 frise-verticale">
-    <img class="" src="/systems/penombre/assets/ui/grise.png" alt="|" />
+    <img class="" src="/systems/penombre/assets/ui/grise.png" />
   </div>
   <div class="col-3-1 flexible">
     <div class="rang-2-2 flexible">
@@ -11,7 +11,7 @@
           <td class="flexible" data-tooltip="{{localize 'PENOMBRE.ui.actionScelerate'}}">
             <div class="case-de-mouve-1 flexible">
               <div class="absolue">
-                <img class="case-de" src="/systems/penombre/assets/ui/case_de_penombre.png" alt="|" />
+                <img class="case-de" src="/systems/penombre/assets/ui/case_de_penombre.png" />
               </div>
               {{#if unlocked}}
               <select name="system.harmoniques.nuit.valeur" class="de-de-nuit-saisie editer-harmoniques absolue">
@@ -19,7 +19,7 @@
               </select>
               {{else}}
                 <div class="de-de-nuit absolue">
-                  <img class="click de-nuit" data-action="clicDe" data-index="nuit" src="{{getDiceImage nuit}}" alt="|" />
+                  <img class="click de-nuit" src="{{getDiceImage nuit}}" data-action="jetHarmonique" data-harmonique="nuit"/>
                 </div>
               {{/if}}
             </div>
@@ -34,7 +34,7 @@
           <td class="flexible" data-tooltip="{{localize 'PENOMBRE.ui.actionSociale'}}">
             <div class="case-de-mouve-2 flexible">
               <div class="absolue">
-                <img class="case-de" src="/systems/penombre/assets/ui/case_de_penombre.png" alt="|" />
+                <img class="case-de" src="/systems/penombre/assets/ui/case_de_penombre.png" />
               </div>
               {{#if unlocked}}
               <select name="system.harmoniques.ame.valeur" class="de-d-ame-saisie editer-harmoniques absolue">
@@ -42,7 +42,7 @@
               </select>
               {{else}}
                 <div class="de-d-ame absolue">
-                  <img class="click de-ame" data-action="clicDe" data-index="ame" src="{{getDiceImage ame}}" alt="|" />
+                  <img class="click de-ame" src="{{getDiceImage ame}}" data-action="jetHarmonique" data-harmonique="ame"/>
                 </div>
               {{/if}}
             </div>
@@ -56,7 +56,7 @@
           <td class="flexible" data-tooltip="{{localize 'PENOMBRE.ui.actionPhysique'}}">
             <div class="case-de-mouve-3 flexible">
               <div class="absolue">
-                <img class="case-de" src="/systems/penombre/assets/ui/case_de_penombre.png" alt="|" />
+                <img class="case-de" src="/systems/penombre/assets/ui/case_de_penombre.png" />
               </div>
               {{#if unlocked}}
               <select name="system.harmoniques.nature.valeur" class="de-de-nature-saisie editer-harmoniques absolue">
@@ -64,7 +64,7 @@
               </select>
               {{else}}
                 <div class="de-de-nature absolue">
-                  <img class="click de-nature" data-action="clicDe" data-index="nature" src="{{getDiceImage nature}}" alt="|" />
+                  <img class="click de-nature" src="{{getDiceImage nature}}" data-action="jetHarmonique" data-harmonique="nature"/>
                 </div>
               {{/if}}
             </div>
@@ -79,7 +79,7 @@
           <td class="flexible" data-tooltip="{{localize 'PENOMBRE.ui.actionMentale'}}">
             <div class="case-de-mouve-4 flexible">
               <div class="absolue">
-                <img class="case-de" src="/systems/penombre/assets/ui/case_de_penombre.png" alt="|" />
+                <img class="case-de" src="/systems/penombre/assets/ui/case_de_penombre.png" />
               </div>
               {{#if unlocked}}
               <select name="system.harmoniques.esprit.valeur" class="de-d-esprit-saisie editer-harmoniques absolue">
@@ -87,7 +87,7 @@
               </select>
               {{else}}
                 <div class="de-d-esprit absolue">
-                  <img class="click de-esprit" data-action="clicDe" data-index="esprit" src="{{getDiceImage esprit}}" alt="|" />
+                  <img class="click de-esprit" src="{{getDiceImage esprit}}" data-action="jetHarmonique" data-harmonique="esprit"/>
                 </div>
               {{/if}}
             </div>
@@ -103,7 +103,7 @@
           <td class="flexible" data-tooltip="{{localize 'PENOMBRE.ui.actionPerceptive'}}">
             <div class="case-de-mouve-5 flexible">
               <div class="absolue">
-                <img class="case-de" src="/systems/penombre/assets/ui/case_de_penombre.png" alt="|" />
+                <img class="case-de" src="/systems/penombre/assets/ui/case_de_penombre.png" />
               </div>
               {{#if unlocked}}
               <select name="system.harmoniques.etincelle.valeur" class="de-d-etincelle-saisie editer-harmoniques absolue">
@@ -111,7 +111,7 @@
               </select>
               {{else}}
                 <div class="de-d-etincelle absolue">
-                  <img class="click de-etincelle" data-action="clicDe" data-index="etincelle" src="{{getDiceImage etincelle}}" alt="|" />
+                  <img class="click de-etincelle" src="{{getDiceImage etincelle}}" data-action="jetHarmonique" data-harmonique="etincelle"/>
                 </div>
               {{/if}}
             </div>

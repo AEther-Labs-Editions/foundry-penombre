@@ -1,0 +1,8 @@
+{{log "maitrise" this}}
+<section class="standard-form">
+  {{formInput fields.name value=item.name localize=true}}
+  {{formGroup systemFields.harmonique value=systemSource.harmonique localize=true}}
+  {{formGroup systemFields.prerequis value=systemSource.prerequis localize=true}}
+  {{formGroup systemFields.niveau value=systemSource.niveau localize=true}}
+  {{formInput systemFields.description enriched=enrichedDescription value=system.description name="system.description" toggled=true}}
+</section>

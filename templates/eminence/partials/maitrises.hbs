@@ -18,11 +18,10 @@
         <div class="maitrises{{#if isStyleJeuAvance}}-2{{/if}} absolue">
             {{#each maitrises as |maitrise|}}
                 {{log 'maitrise' maitrise }}
-                <input type="checkbox" {{#if maitrise.system.utilise}}checked{{/if}}></input>
-                <label>{{maitrise.name}}</label>                
-                {{maitrise.system.description}}
-                {{maitrise.system.type}}
-                <br>
+                <label>{{maitrise.name}}</label>
+                {{maitrise.system.harmonique}}
+                {{maitrise.system.prerequis}}
+                {{maitrise.system.niveau}}
             {{/each}}
         </div>
     </div>

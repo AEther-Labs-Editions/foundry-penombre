@@ -1,5 +1,3 @@
-import { SYSTEM } from "../config/system.mjs"
-
 const { HTMLField, NumberField } = foundry.data.fields
 
 export default class Atout extends foundry.abstract.TypeDataModel {

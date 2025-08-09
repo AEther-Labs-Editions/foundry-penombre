@@ -1,4 +1,5 @@
 import { SYSTEM } from "../config/system.mjs"
+import PenombreRoll from "../documents/roll.mjs"
 
 const { SchemaField, NumberField, StringField, ArrayField } = foundry.data.fields
 
@@ -192,5 +193,15 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
         this.ton = SYSTEM.TONS.cassandre.id
         break
     }
+  }
+
+  hasAtouts() {
+    return this.atouts.length > 0
+  }
+
+  async roll(value) {
+    let roll = await PenombreRoll.prompt({ rollValue: value })
+    if (!roll) return null
+    await roll.toMessage({}, { rollMode: roll.options.rollMode })
   }
 }

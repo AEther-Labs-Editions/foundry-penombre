@@ -5,14 +5,16 @@
     },
     "Item": {
       "pouvoir": "Pouvoir",
-      "atout": "Atout"
+      "atout": "Atout",
+      "maitrise": "Maitrise magique"
     }
   },
   "PENOMBRE": {
     "Feuille": {
       "eminence": "Feuille d'Éminence grise",
       "pouvoir": "Feuille de Pouvoir",
-      "atout": "Feuille d'Atout"
+      "atout": "Feuille d'Atout",
+      "maitrise": "Feuille de Maitrise magique"
     },
     "Eminence": {
       "FIELDS": {
@@ -158,6 +160,19 @@
         },
         "description": {
           "label": "Description"
+        }
+      }
+    },
+    "Maitrise": {
+      "FIELDS": {
+        "harmonique": {
+          "label": "Harmonique"
+        },
+        "prerequis": {
+          "label": "Prérequis"
+        },
+        "niveau": {
+          "label": "Niveau"
         }
       }
     },

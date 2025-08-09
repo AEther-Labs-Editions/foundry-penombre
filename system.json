@@ -63,7 +63,8 @@
     },
     "Item": {
       "pouvoir": { "htmlFields": ["description"] },
-      "atout": { "htmlFields": ["description"] }
+      "atout": { "htmlFields": ["description"] },
+      "maitrise": { "htmlFields": ["description"] }
     }
   },
   "socket": true,

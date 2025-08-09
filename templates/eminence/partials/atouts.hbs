@@ -1,6 +1,6 @@
 {{log "EminenceSheet - Partials - Atouts" this }}
 <div class="eminence-atouts{{#if isStyleJeuAvance}}-2{{/if}}">
-    <span class="titre-section-atouts">{{localize "PENOMBRE.ui.atouts"}}</span>
+    <span class="titre-section-atouts">{{localize "PENOMBRE.ui.atouts"}}{{#if unlocked}}<i class="fas fa-plus" data-action="ajouter" data-type="atout"></i>{{/if}}</span>
     <div class="content">
         <div class="potentiel">
             <div class="div-potentiel">
@@ -26,28 +26,28 @@
 
                     </th>
                     <th class="item-controls">
-                    {{#if unlocked}}
-                        <a class="item-control" data-tooltip="{{ localize 'PENOMBRE.ui.atoutCreate' }}" data-action="create" data-type="atout"><i class="fas fa-plus"></i></a>
-                    {{/if}}
+                        {{#if unlocked}}
+                            <a class="item-control" data-tooltip="{{ localize 'PENOMBRE.ui.atoutCreate' }}" data-action="create" data-type="atout"><i class="fas fa-plus"></i></a>
+                        {{/if}}
                     </th>
                 </tr>
                 {{#each atouts as |item id|}}
-                <tr class="item">
-                    <td>
-                        <span class="item-name">{{item.name}}</span>
-                    </td>
-                    <td  class="item-case-width" data-tooltip="{{item.system.valeur}}">
-                    {{#times 3}}
-                        <img class="item-case" src="systems/penombre/assets/ui/de_case_{{#if (gte item.system.valeur @index)}}checked{{else}}unchecked{{/if}}.png"></img>
-                    {{/times}}
-                    </td>
-                    <td class="item-controls">
-                    {{#if ../unlocked}}
-                        <a class="item-control" data-tooltip="{{ localize 'PENOMBRE.ui.atoutEdit' }}" data-action="edit" data-item-id="{{item._id}}"><i class="fas fa-edit"></i></a>
-                        <a class="item-control" data-tooltip="{{ localize 'PENOMBRE.ui.atoutDelete' }}" data-action="delete" data-item-id="{{item._id}}"><i class="fas fa-trash"></i></a>
-                    {{/if}}
-                    </td>
-                </tr>
+                    <tr class="item">
+                        <td>
+                            <span class="item-name">{{item.name}}</span>
+                        </td>
+                        <td  class="item-case-width" data-tooltip="{{item.system.valeur}}">
+                        {{#times 3}}
+                            <img class="item-case" src="systems/penombre/assets/ui/de_case_{{#if (gte item.system.valeur @index)}}checked{{else}}unchecked{{/if}}.png"></img>
+                        {{/times}}
+                        </td>
+                        <td class="item-controls">
+                        {{#if ../unlocked}}
+                            <a class="item-control" data-tooltip="{{ localize 'PENOMBRE.ui.atoutEdit' }}" data-action="edit" data-item-id="{{item._id}}"><i class="fas fa-edit"></i></a>
+                            <a class="item-control" data-tooltip="{{ localize 'PENOMBRE.ui.atoutDelete' }}" data-action="delete" data-item-id="{{item._id}}"><i class="fas fa-trash"></i></a>
+                        {{/if}}
+                        </td>
+                    </tr>
                 {{/each}}
             </table>
         </div>
