@@ -22,7 +22,7 @@
                     <th>
                         {{ localize 'PENOMBRE.ui.atoutNom' }}
                     </th>
-                    <th>
+                    <th class="item-case-width">
 
                     </th>
                     <th class="item-controls">
@@ -35,7 +35,9 @@
                         <span class="item-name">{{item.name}}</span>
                     </td>
                     <td>
-                        <input type="item-valeur">{{item.valeur}}</span>
+                    {{#times 3}}
+                        <img class="item-case" src="systems/penombre/assets/ui/de_case_{{#if (gte item.system.valeur @index)}}checked{{else}}unchecked{{/if}}.png"></img>
+                    {{/times}}
                     </td>
                     <td class="item-controls">
                         <a class="item-control" title="{{ localize 'PENOMBRE.ui.atoutEdit' }}" data-action="edit" data-item-id="{{item._id}}"><i class="fas fa-edit"></i></a>

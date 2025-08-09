@@ -796,6 +796,20 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   border-radius: 4px;
   padding: 2px;
 }
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts th.item-case-width,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts th.item-case-width {
+  width: 100px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts th.item-controls,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts th.item-controls {
+  width: 70px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts .item-case,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts .item-case {
+  float: left;
+  width: 20px;
+  height: 20px;
+}
 .penombre.eminence .eminence-content .eminence-atouts .content .atouts-2,
 .penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts-2 {
   margin-left: 100px;
@@ -804,6 +818,20 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   border: 1px solid #917f35;
   border-radius: 4px;
   padding: 2px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts-2 th.item-case-width,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts-2 th.item-case-width {
+  width: 70px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts-2 th.item-controls,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts-2 th.item-controls {
+  width: 100px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts-2 .item-case,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts-2 .item-case {
+  float: left;
+  width: 20px;
+  height: 20px;
 }
 .penombre.eminence .eminence-content .eminence-maitrises {
   min-height: 255px;
