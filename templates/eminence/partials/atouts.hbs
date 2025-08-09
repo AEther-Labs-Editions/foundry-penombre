@@ -26,7 +26,7 @@
 
                     </th>
                     <th class="item-controls">
-
+                        <a class="item-control" data-tooltip="{{ localize 'PENOMBRE.ui.atoutCreate' }}" data-action="create" data-type="atout"><i class="fas fa-plus"></i></a>
                     </th>
                 </tr>
                 {{#each atouts as |item id|}}
@@ -34,21 +34,18 @@
                     <td>
                         <span class="item-name">{{item.name}}</span>
                     </td>
-                    <td>
+                    <td  class="item-case-width" data-tooltip="{{item.system.valeur}}">
                     {{#times 3}}
                         <img class="item-case" src="systems/penombre/assets/ui/de_case_{{#if (gte item.system.valeur @index)}}checked{{else}}unchecked{{/if}}.png"></img>
                     {{/times}}
                     </td>
                     <td class="item-controls">
-                        <a class="item-control" title="{{ localize 'PENOMBRE.ui.atoutEdit' }}" data-action="edit" data-item-id="{{item._id}}"><i class="fas fa-edit"></i></a>
-                        <a class="item-control" title="{{ localize 'PENOMBRE.ui.atoutDelete' }}" data-action="delete" data-item-id="{{item._id}}"><i class="fas fa-trash"></i></a>
+                        <a class="item-control" data-tooltip="{{ localize 'PENOMBRE.ui.atoutEdit' }}" data-action="edit" data-item-id="{{item._id}}"><i class="fas fa-edit"></i></a>
+                        <a class="item-control" data-tooltip="{{ localize 'PENOMBRE.ui.atoutDelete' }}" data-action="delete" data-item-id="{{item._id}}"><i class="fas fa-trash"></i></a>
                     </td>
                 </tr>
                 {{/each}}
             </table>
-            <span class="plusitem">
-                <a class="item-control" title="{{ localize 'PENOMBRE.ui.atoutCreate' }}" data-action="create" data-type="atout"><i class="fas fa-plus"></i> {{ localize "PENOMBRE.ui.atoutCreate" }}</a>
-            </span> 
         </div>
 
     </div>

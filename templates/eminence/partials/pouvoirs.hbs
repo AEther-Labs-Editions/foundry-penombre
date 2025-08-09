@@ -16,14 +16,54 @@
             </div>
         </div>
         <div class="pouvoirs{{#if isStyleJeuAvance}}-2{{/if}} absolue">
-            {{#each pouvoirs as |pouvoir|}}
-                <div class="ligne-pouvoir">
-                    <input type="checkbox" {{#if pouvoir.system.utilise}}checked{{/if}}></input>
-                    <label>{{pouvoir.name}}</label>
-                    <div>{{pouvoir.system.description}}</div>
-                    <div>{{localize (concat 'PENOMBRE.Pouvoir.type.' pouvoir.system.type '.label')}}</div>
-                </div>
-            {{/each}}
+
+            <table class="item-list centpourcent">
+                <tr class="centpourcent">
+                    <th class="item-coche">
+
+                    </th>
+                    <th>
+                        {{ localize 'PENOMBRE.ui.pouvoirNom' }}
+                    </th>
+                    <th>
+                        {{ localize 'PENOMBRE.ui.pouvoirType' }}
+                    </th>
+                    <th class="item-controls">
+                        <a class="item-control" data-tooltip="{{ localize 'PENOMBRE.ui.pouvoirCreate' }}" data-action="create" data-type="pouvoir"><i class="fas fa-plus"></i></a>
+                    </th>
+                </tr>
+                {{#each pouvoirs as |item id|}}
+                <tr class="item">
+                    <td class="item-coche">
+                        <img class="item-case" src="systems/penombre/assets/ui/transp_case_{{#if item.system.utilise}}checked{{else}}unchecked{{/if}}.png"></img>
+                    </td>
+                    <td>
+                        <span class="item-name">{{item.name}}</span>
+                    </td>
+                    <td>
+                    {{#if (eq item.system.type 'naissance')}}
+                        <span class="item-type">{{ localize  'PENOMBRE.Pouvoir.type.naissance.label' }}</span>
+                    {{/if}}
+                    {{#if (eq item.system.type 'peuple')}}
+                        <span class="item-type">{{ localize  'PENOMBRE.Pouvoir.type.peuple.label' }}</span>
+                    {{/if}}
+                    {{#if (eq item.system.type 'cle')}}
+                        <span class="item-type">{{ localize  'PENOMBRE.Pouvoir.type.cle.label' }}</span>
+                    {{/if}}
+                    {{#if (eq item.system.type 'gamme')}}
+                        <span class="item-type">{{ localize  'PENOMBRE.Pouvoir.type.gamme.label' }}</span>
+                    {{/if}}
+                    {{#if (eq item.system.type 'ton')}}
+                        <span class="item-type">{{ localize  'PENOMBRE.Pouvoir.type.ton.label' }}</span>
+                    {{/if}}
+                    </td>
+                    <td class="item-controls">
+                        <a class="item-control" data-tooltip="{{ localize 'PENOMBRE.ui.pouvoirEdit' }}" data-action="edit" data-item-id="{{item._id}}"><i class="fas fa-edit"></i></a>
+                        <a class="item-control" data-tooltip="{{ localize 'PENOMBRE.ui.pouvoirDelete' }}" data-action="delete" data-item-id="{{item._id}}"><i class="fas fa-trash"></i></a>
+                    </td>
+                </tr>
+                {{/each}}
+            </table>
         </div>
     </div>
 </div>

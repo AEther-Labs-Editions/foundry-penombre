@@ -311,9 +311,16 @@
       "peste": "Peste",
       "atoutNom": "Nom",
       "atoutNew": "Nouvel atout",
-      "atoutEdit": "Éditer",
+      "atoutEdit": "Modifier",
       "atoutDelete": "Supprimer",
-      "atoutCreate": "Nouvel atout"
+      "atoutCreate": "Ajouter un atout",
+      "pouvoirNom": "Nom",
+      "pouvoirType": "Type",
+      "pouvoirNew": "Nouveau pouvoir",
+      "pouvoirEdit": "Modifier",
+      "pouvoirDelete": "Supprimer",
+      "pouvoirCreate": "Ajouter un pouvoir"
+
     },
     "Settings": {
       "styleJeu": {
