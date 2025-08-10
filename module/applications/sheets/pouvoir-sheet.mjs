@@ -17,42 +17,14 @@ export default class PouvoirSheet extends HandlebarsApplicationMixin(foundry.app
     },
   }
 
-  /** @typedef {import("@client/applications/api/handlebars-application.mjs").HandlebarsTemplatePart} HandlebarsTemplatePart */
-  /** @type {Record<string, HandlebarsTemplatePart>} */
+  /** @override */
   static PARTS = {
-    header: {
-      template: 'systems/penombre/templates/pouvoir-main.hbs',
-    },
-    tabs: {
-      // Foundry-provided generic template
-      template: 'templates/generic/tab-navigation.hbs',
-      // classes: ['sysclass'], // Optionally add extra classes to the part for extra customization
-    },
-    datas: {
-      template: 'systems/penombre/templates/pouvoir-datas.hbs',
-      scrollable: [''],
-    },
-    descriptions: {
-      template: 'systems/penombre/templates/pouvoir-description.hbs',
-      scrollable: [''],
-    },
-  };
-
-  /** @type {Record<string, foundry.applications.types.ApplicationTabsConfiguration>} */
-  static TABS = {
-    primary: {
-      tabs: [{ id: "datas" }, { id: "descriptions" }],
-      labelPrefix: "PENOMBRE.tab", // Optional. Prepended to the id to generate a localization key
-      initial: "datas", // Set the initial tab
-    },
-  };
+    main: { template: "systems/penombre/templates/pouvoir-main.hbs" },
+  }
 
   /** @override */
   async _prepareContext() {
     const context = await super._prepareContext()
-
-    /** @type {Record<string, foundry.applications.types.ApplicationTab} */
-    context.tabs = this._prepareTabs("primary")
 
     context.fields = this.document.schema.fields
     context.systemFields = this.document.system.schema.fields
@@ -62,24 +34,6 @@ export default class PouvoirSheet extends HandlebarsApplicationMixin(foundry.app
 
     context.item = this.document
 
-    context.descriptionHTML = await foundry.applications.ux.TextEditor.implementation.enrichHTML(this.document.system.description, {
-      secrets: this.document.isOwner,
-      async: true,
-      }
-    )
-
     return context
   }
-
-  async _preparePartContext(partId, context) {
-    switch (partId) {
-      case 'datas':
-      case 'descriptions':
-        context.tab = context.tabs[partId];
-        break;
-      default:
-    }
-    return context;
-  }
-
 }

@@ -1,4 +1,7 @@
 {{log "atout" this}}
 <section class="atout-main standard-form">
-    <h2>{{ localize 'PENOMBRE.ui.atout' }}</h2>
+    {{formGroup fields.name value=item.name localize=true}}
+    {{formGroup systemFields.valeur value=systemSource.valeur localize=true}}
+    {{formGroup systemFields.type value=systemSource.type localize=true}}
+    {{editor descriptionHTML target="system.description" button=true editable=editable engine="prosemirror"}}
 </section>

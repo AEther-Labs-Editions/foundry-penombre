@@ -279,48 +279,6 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 /* ---------------------------------------------
         Items
 --------------------------------------------- */
-.pouvoir .pouvoir-content .pouvoir-main {
-  text-align: center;
-}
-.pouvoir .pouvoir-content .pouvoir-main h2 {
-  font-family: "CattedraleDemo";
-  color: #a56135;
-}
-.pouvoir .pouvoir-content .datas h3 {
-  font-family: "CattedraleDemo";
-  color: #56605b;
-}
-.pouvoir .pouvoir-content .datas .datas-entry {
-  width: 100%;
-}
-.pouvoir .pouvoir-content .descriptions h3 {
-  font-family: "CattedraleDemo";
-  color: #56605b;
-}
-.pouvoir .pouvoir-content .descriptions .descriptions-entry {
-  width: 100%;
-}
-.atout .atout-content .atout-main {
-  text-align: center;
-}
-.atout .atout-content .atout-main h2 {
-  font-family: "CattedraleDemo";
-  color: #a56135;
-}
-.atout .atout-content .datas h3 {
-  font-family: "CattedraleDemo";
-  color: #56605b;
-}
-.atout .atout-content .datas .datas-entry {
-  width: 100%;
-}
-.atout .atout-content .descriptions h3 {
-  font-family: "CattedraleDemo";
-  color: #56605b;
-}
-.atout .atout-content .descriptions .descriptions-entry {
-  width: 100%;
-}
 .penombre {
   /* ---------------------------------------------
         Eminence
