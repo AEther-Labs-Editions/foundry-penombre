@@ -279,6 +279,13 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 /* ---------------------------------------------
         Items
 --------------------------------------------- */
+.pouvoir .pouvoir-content .standard-form .details {
+  display: flex;
+  justify-content: space-between;
+}
+.pouvoir .pouvoir-content .standard-form .details select[name="system.type"] {
+  width: 100px;
+}
 .penombre {
   /* ---------------------------------------------
         Eminence

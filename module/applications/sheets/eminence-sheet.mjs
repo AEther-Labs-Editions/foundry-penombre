@@ -32,7 +32,7 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
       edit: EminenceSheet.#onEditItem,
       read: EminenceSheet.#onReadItem,
       delete: EminenceSheet.#onDeleteItem,
-      create: EminenceSheet.#onCreateItem
+      create: EminenceSheet.#onCreateItem,
     },
   }
 
@@ -279,7 +279,7 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
     await this.document.update({ [`system.conscience.complications.${complication}.valeur`]: index })
   }
 
-    /**
+  /**
    * Gère les clics sur les Dés dans l'interface.
    *
    * @param {Event} event L'événement de clic déclenché par l'utilisateur.
@@ -296,36 +296,41 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
     let myHarmonique = dataset.index
     let myDeHarmonique = "d20"
     switch (myHarmonique) {
-      case 'ame': myDeHarmonique = await myActor.system.harmoniques.ame.valeur
-        break;
-      case 'esprit': myDeHarmonique = await myActor.system.harmoniques.esprit.valeur
-        break;
-      case 'etincelle': myDeHarmonique = await myActor.system.harmoniques.etincelle.valeur
-        break;
-      case 'nature': myDeHarmonique = await myActor.system.harmoniques.nature.valeur
-        break;
-      case 'nuit': myDeHarmonique = await myActor.system.harmoniques.nuit.valeur
-        break;
-      default: console.log('Désolé, il y a un problème.');
+      case "ame":
+        myDeHarmonique = await myActor.system.harmoniques.ame.valeur
+        break
+      case "esprit":
+        myDeHarmonique = await myActor.system.harmoniques.esprit.valeur
+        break
+      case "etincelle":
+        myDeHarmonique = await myActor.system.harmoniques.etincelle.valeur
+        break
+      case "nature":
+        myDeHarmonique = await myActor.system.harmoniques.nature.valeur
+        break
+      case "nuit":
+        myDeHarmonique = await myActor.system.harmoniques.nuit.valeur
+        break
+      default:
+        console.log("Désolé, il y a un problème.")
     }
 
-    const myTypeOfThrow = game.settings.get("core", "rollMode"); // Type de Lancer
+    const myTypeOfThrow = game.settings.get("core", "rollMode") // Type de Lancer
     let myRoll = ""
-    var msg = ""
+    let msg = ""
 
     // Affiche le prompt de lancer de dés
     let template = ""
-    let myTitle = "" // game.i18n.localize("PENOMBRE.ThrowDice");
+    let myTitle = "" // Game.i18n.localize("PENOMBRE.ThrowDice");
     let myDialogOptions = {}
-    let promptLanceDes = await _promptV2LanceDes (myHarmonique, myDeHarmonique, template, myTitle, myDialogOptions)
+    let promptLanceDes = await _promptV2LanceDes(myHarmonique, myDeHarmonique, template, myTitle, myDialogOptions)
 
-    //////////////////////////////////////////////////////////////////
-    if (!(promptLanceDes)) {
-      ui.notifications.warn(game.i18n.localize("PENOMBRE.Error111"));
-      return;
-      };
-    //////////////////////////////////////////////////////////////////
-
+    // ////////////////////////////////////////////////////////////////
+    if (!promptLanceDes) {
+      ui.notifications.warn(game.i18n.localize("PENOMBRE.Error111"))
+      return
+    }
+    // ////////////////////////////////////////////////////////////////
 
     // Récupère les données du prompt de lancer de dés
     myHarmonique = promptLanceDes.harmonique
@@ -338,35 +343,31 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
 
     // Lance les Dés
     if (myNbreBonus == 0) {
-      myRoll = "1"+myDeHarmonique
+      myRoll = `1${myDeHarmonique}`
     } else {
-      myRoll = "1"+myDeHarmonique+"+"+myNbreBonus.toString()+"d6"
+      myRoll = `1${myDeHarmonique}+${myNbreBonus.toString()}d6`
     }
     console.log("myRoll = ", myRoll)
-    let r = new Roll(myRoll, myActor.getRollData());
-    await r.evaluate();
+    let r = new Roll(myRoll, myActor.getRollData())
+    await r.evaluate()
 
-  
     msg = await r.toMessage({
       user: game.user.id,
       speaker: ChatMessage.getSpeaker({ actor: myActor }),
-      rollMode: myTypeOfThrow
-    });
-
+      rollMode: myTypeOfThrow,
+    })
 
     /*
-    msg = await renderChatMessageHTML({ // Remplacera définitivement la commande précédente à partir de Foundry VTT v15
+    Msg = await renderChatMessageHTML({ // Remplacera définitivement la commande précédente à partir de Foundry VTT v15
 
   
     })
     */
 
     if (game.modules.get("dice-so-nice")?.active) {
-      await game.dice3d.waitFor3DAnimationByMessageID(msg.id);
-    };
-
+      await game.dice3d.waitFor3DAnimationByMessageID(msg.id)
+    }
   }
-
 
   /**
    * Handle click events for Pouvoir, Atout within the Eminence Sheet
@@ -378,56 +379,54 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
    * @static
    */
   static async #onCreateItem(event, target) {
-    event.preventDefault();
+    event.preventDefault()
 
     // Obtain event data
     const dataset = target.dataset
-    // const proceed = dataset.proceed
+    // Const proceed = dataset.proceed
     const type = dataset.type
 
     let myActor = this.actor
 
     const button = target
 
-    let item;
+    let item
 
     // Handle different actions
     const cls = getDocumentClass("Item")
-    let name = "";
-    let imgPath = "";
+    let name = ""
+    let imgPath = ""
     if (type === "pouvoir") {
-      name = game.i18n.localize("PENOMBRE.ui.pouvoirNew");
-      imgPath = "systems/penombre/images/icons/pouvoir.png";
+      name = game.i18n.localize("PENOMBRE.ui.pouvoirNew")
+      imgPath = "systems/penombre/images/icons/pouvoir.png"
+    } else if (type === "atout") {
+      name = game.i18n.localize("PENOMBRE.ui.atoutNew")
+      imgPath = "systems/devastra/images/icons/atout.png"
     }
-    else if (type === "atout") {
-      name = game.i18n.localize("PENOMBRE.ui.atoutNew");
-      imgPath = "systems/devastra/images/icons/atout.png";
-    }
-    
 
-    await cls.create({ name: name, type: type }, { parent: myActor });
+    await cls.create({ name: name, type: type }, { parent: myActor })
 
-    const myType = type;
+    const myType = type
     switch (myType) {
       case "pouvoir":
-        for (let item of myActor.items.filter(item => item.type === 'pouvoir')) {
-          if (item.img == "icons/svg/item-bag.svg") item.update({ "img": imgPath });
+        for (let item of myActor.items.filter((item) => item.type === "pouvoir")) {
+          if (item.img == "icons/svg/item-bag.svg") item.update({ img: imgPath })
         }
-      break;
+        break
       case "atout":
-        for (let enseignement of myActor.items.filter(item => item.type === 'atout')) {
-          if (enseignement.img == "icons/svg/item-bag.svg") enseignement.update({ "img": imgPath });
+        for (let enseignement of myActor.items.filter((item) => item.type === "atout")) {
+          if (enseignement.img == "icons/svg/item-bag.svg") enseignement.update({ img: imgPath })
         }
-      break;
+        break
     }
   }
 
   static async #onReadItem(event, target) {
-    event.preventDefault();
+    event.preventDefault()
 
     // Obtain event data
     const dataset = target.dataset
-    // const proceed = dataset.proceed
+    // Const proceed = dataset.proceed
     const type = dataset.type
     const itemId = dataset.itemId
 
@@ -440,13 +439,12 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
     return item.sheet.render(true)
   }
 
-
   static async #onDeleteItem(event, target) {
-    event.preventDefault();
+    event.preventDefault()
 
     // Obtain event data
     const dataset = target.dataset
-    // const proceed = dataset.proceed
+    // Const proceed = dataset.proceed
     const type = dataset.type
     const itemId = dataset.itemId
 
@@ -464,7 +462,7 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
 
     // Obtain event data
     const dataset = target.dataset
-    // const proceed = dataset.proceed
+    // Const proceed = dataset.proceed
     const type = dataset.type
     const itemId = dataset.itemId
 
@@ -472,22 +470,28 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
 
     const button = target
 
-
     console.log("myActor = ", myActor)
     let item = myActor.items.get(itemId)
     console.log("item = ", item)
     return item.sheet.render(true)
   }
-
 }
 
 // Gère le prompt de lancer de dés
+/**
+ *
+ * @param myHarmonique
+ * @param myDeHarmonique
+ * @param template
+ * @param myTitle
+ * @param myDialogOptions
+ */
 async function _promptV2LanceDes(myHarmonique, myDeHarmonique, template, myTitle, myDialogOptions) {
   let promptLanceDes = {
     harmonique: myHarmonique,
     deHarmonique: myDeHarmonique,
     listeBonus: {},
-    nbreJetons: 0
+    nbreJetons: 0,
   }
   console.log("Je lance le prompt pour", myHarmonique, myDeHarmonique)
   return promptLanceDes

@@ -19,7 +19,7 @@ export default class PouvoirSheet extends HandlebarsApplicationMixin(foundry.app
 
   /** @override */
   static PARTS = {
-    main: { template: "systems/penombre/templates/atout-main.hbs" },
+    main: { template: "systems/penombre/templates/atout.hbs" },
   }
 
   /** @override */
@@ -30,9 +30,10 @@ export default class PouvoirSheet extends HandlebarsApplicationMixin(foundry.app
     context.systemFields = this.document.system.schema.fields
     context.systemSource = this.document.system._source
     context.document = this.document
+    context.item = this.document
     context.system = this.document.system
 
-    context.item = this.document
+    context.enrichedDescription = await foundry.applications.ux.TextEditor.implementation.enrichHTML(this.document.system.description, { async: true })
 
     return context
   }

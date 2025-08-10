@@ -1,0 +1,9 @@
+{{log "pouvoir" this}}
+<section class="standard-form">
+    {{formInput fields.name value=item.name localize=true}}
+    <div class="details">
+        {{formGroup systemFields.utilise value=systemSource.utilise localize=true}}
+        {{formGroup systemFields.type value=systemSource.type localize=true}}
+    </div>
+    {{formInput systemFields.description enriched=enrichedDescription value=system.description name="system.description" toggled=true}}
+</section>

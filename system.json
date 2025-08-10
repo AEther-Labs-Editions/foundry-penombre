@@ -22,15 +22,12 @@
       "path": "lang/fr.json"
     }
   ],
-    "packFolders": [
+  "packFolders": [
     {
       "name": "FR - Système",
       "sorting": "a",
       "color": "#a4653d",
-      "packs": [
-        "journal",
-        "landing-page"
-      ],
+      "packs": ["journal", "landing-page"],
       "folders": []
     }
   ],
@@ -47,7 +44,7 @@
       },
       "flags": {}
     },
-        {
+    {
       "name": "landing-page",
       "label": "Landing Page",
       "system": "penombre",
@@ -65,8 +62,8 @@
       "eminence": {}
     },
     "Item": {
-      "pouvoir": {},
-      "atout": {} 
+      "pouvoir": { "htmlFields": ["description"] },
+      "atout": { "htmlFields": ["description"] }
     }
   },
   "socket": true,
