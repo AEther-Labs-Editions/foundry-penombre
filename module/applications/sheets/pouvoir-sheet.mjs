@@ -20,9 +20,6 @@ export default class PouvoirSheet extends HandlebarsApplicationMixin(foundry.app
   /** @typedef {import("@client/applications/api/handlebars-application.mjs").HandlebarsTemplatePart} HandlebarsTemplatePart */
   /** @type {Record<string, HandlebarsTemplatePart>} */
   static PARTS = {
-    header: {
-      template: 'systems/penombre/templates/pouvoir-main.hbs',
-    },
     tabs: {
       // Foundry-provided generic template
       template: 'templates/generic/tab-navigation.hbs',
@@ -65,7 +62,8 @@ export default class PouvoirSheet extends HandlebarsApplicationMixin(foundry.app
     context.descriptionHTML = await foundry.applications.ux.TextEditor.implementation.enrichHTML(this.document.system.description, {
       secrets: this.document.isOwner,
       async: true,
-    })
+      }
+    )
 
     return context
   }

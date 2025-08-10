@@ -57,9 +57,6 @@ penombre-toggle-switch[checked] thumb {
 /* ---------------------------------------------
         Mixins
 --------------------------------------------- */
-.centpourcent {
-  width: 100%;
-}
 /* ---------------------------------------------
         Interface de Foundry VTT
 --------------------------------------------- */
@@ -279,6 +276,37 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   width: 402px;
   content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.png");
 }
+/* ---------------------------------------------
+        Items
+--------------------------------------------- */
+.pouvoir .pouvoir-content .datas h3 {
+  font-family: "CattedraleDemo";
+  color: #56605b;
+}
+.pouvoir .pouvoir-content .datas .datas-entry {
+  width: 100%;
+}
+.pouvoir .pouvoir-content .descriptions h3 {
+  font-family: "CattedraleDemo";
+  color: #56605b;
+}
+.pouvoir .pouvoir-content .descriptions .descriptions-entry {
+  width: 100%;
+}
+.atout .atout-content .datas h3 {
+  font-family: "CattedraleDemo";
+  color: #56605b;
+}
+.atout .atout-content .datas .datas-entry {
+  width: 100%;
+}
+.atout .atout-content .descriptions h3 {
+  font-family: "CattedraleDemo";
+  color: #56605b;
+}
+.atout .atout-content .descriptions .descriptions-entry {
+  width: 100%;
+}
 .penombre {
   /* ---------------------------------------------
         Eminence
@@ -309,6 +337,9 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
         }
       }
       */
+}
+.penombre.eminence .eminence-content .centpourcent {
+  width: 100%;
 }
 .penombre.eminence .eminence-content input,
 .penombre.eminence .eminence-content select {
@@ -719,7 +750,7 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 .penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs th.item-controls,
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs td.item-controls,
 .penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs td.item-controls {
-  width: 65px;
+  width: 70px;
   font-size: 17px;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs-2,
@@ -749,7 +780,7 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 .penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs-2 th.item-controls,
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs-2 td.item-controls,
 .penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs-2 td.item-controls {
-  width: 65px;
+  width: 70px;
   font-size: 17px;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs .ligne-pouvoir,
@@ -853,7 +884,7 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 .penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts th.item-controls,
 .penombre.eminence .eminence-content .eminence-atouts .content .atouts td.item-controls,
 .penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts td.item-controls {
-  width: 65px;
+  width: 70px;
   font-size: 17px;
 }
 .penombre.eminence .eminence-content .eminence-atouts .content .atouts .item-case,
@@ -886,7 +917,7 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 .penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts-2 th.item-controls,
 .penombre.eminence .eminence-content .eminence-atouts .content .atouts-2 td.item-controls,
 .penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts-2 td.item-controls {
-  width: 65px;
+  width: 70px;
   font-size: 17px;
 }
 .penombre.eminence .eminence-content .eminence-atouts .content .atouts-2 .item-case,

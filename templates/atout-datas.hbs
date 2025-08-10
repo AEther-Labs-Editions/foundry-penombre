@@ -4,9 +4,11 @@
     data-group='primary'
     data-tab='datas'
 >
-    <h1>{{ localize 'PENOMBRE.tab.datas' }}</h1>
+    <h3>{{ localize 'PENOMBRE.tab.datas' }}</h3>
 
+    <div class="datas-entry"></div>
     {{formGroup fields.name value=item.name localize=true}}
     {{formGroup systemFields.valeur value=systemSource.valeur localize=true}}
     {{formGroup systemFields.type value=systemSource.type localize=true}}
+    </div>
 </section>

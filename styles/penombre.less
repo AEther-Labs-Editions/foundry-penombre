@@ -27,6 +27,7 @@
 // Dimensions des éléments
 @dice-size: 85px;
 @case-size: 85px;
+@small-case-size: 20px;
 @border-radius: 6px;
 @border-radius-small: 4px;
 
@@ -46,10 +47,6 @@
 /* ---------------------------------------------
         Mixins
 --------------------------------------------- */
-
-.centpourcent {
-  width: 100%;
-}
 
 // Mixin pour le texte vertical
 .vertical-text(@color: @color-primary) {
@@ -367,13 +364,76 @@ body {
   }
 }
 
+
+/* ---------------------------------------------
+        Items
+--------------------------------------------- */
+.pouvoir {
+  .pouvoir-content {
+    .datas {
+      h3 {
+        font-family: @font-cattedrale;
+        color: @color-secondary;
+      }
+
+      .datas-entry {
+        width: 100%;
+      }
+
+    }
+
+    .descriptions {
+      h3 {
+        font-family: @font-cattedrale;
+        color: @color-secondary;
+      }
+
+      .descriptions-entry {
+        width: 100%;
+      }
+
+    }
+  }
+}
+
+.atout {
+  .atout-content {
+    .datas {
+      h3 {
+        font-family: @font-cattedrale;
+        color: @color-secondary;
+      }
+
+      .datas-entry {
+        width: 100%;
+      }
+
+    }
+
+    .descriptions {
+      h3 {
+        font-family: @font-cattedrale;
+        color: @color-secondary;
+      }
+
+      .descriptions-entry {
+        width: 100%;
+      }
+
+    }
+  }
+}
+
 .penombre {
 /* ---------------------------------------------
         Eminence
 --------------------------------------------- */
-
   &.eminence {
     .eminence-content {
+
+      .centpourcent {
+        width: 100%;
+      }
 
       // Styles pour les inputs
       input,
@@ -592,8 +652,8 @@ body {
 
               .complication-case {
                 float: left;
-                width: 20px;
-                height: 20px;
+                width: @small-case-size;
+                height: @small-case-size;
 
                 &:hover {
                   cursor: pointer;
@@ -647,8 +707,8 @@ body {
 
                 .complication-case {
                   float: left;
-                  width: 20px;
-                  height: 20px;
+                  width: @small-case-size;
+                  height: @small-case-size;
                 }
               }
             }
@@ -873,8 +933,8 @@ body {
             }
 
             .item-case {
-              width: 20px;
-              height: 20px;
+              width: @small-case-size;
+              height: @small-case-size;
             }
 
             td {
@@ -884,7 +944,7 @@ body {
 
             th.item-controls,
             td.item-controls {
-              width: 65px;
+              width: 70px;
               font-size: @font-size-base;
             }
 
@@ -904,8 +964,8 @@ body {
             }
 
             .item-case {
-              width: 20px;
-              height: 20px;
+              width: @small-case-size;
+              height: @small-case-size;
             }
 
             td {
@@ -915,7 +975,7 @@ body {
 
             th.item-controls,
             td.item-controls {
-              width: 65px;
+              width: 70px;
               font-size: @font-size-base;
             }
 
@@ -1032,14 +1092,14 @@ body {
 
             th.item-controls,
             td.item-controls {
-              width: 65px;
+              width: 70px;
               font-size: @font-size-base;
             }
 
             .item-case {
               float: left;
-              width: 20px;
-              height: 20px;
+              width: @small-case-size;
+              height: @small-case-size;
             }
 
           }
@@ -1065,14 +1125,14 @@ body {
 
             th.item-controls,
             td.item-controls {
-              width: 65px;
+              width: 70px;
               font-size: @font-size-base;
             }
 
             .item-case {
               float: left;
-              width: 20px;
-              height: 20px;
+              width: @small-case-size;
+              height: @small-case-size;
             }
 
           }

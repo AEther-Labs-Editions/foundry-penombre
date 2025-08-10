@@ -4,7 +4,9 @@
     data-group='primary'
     data-tab='descriptions'
 >
-    <h1>{{ localize 'PENOMBRE.tab.descriptions' }}</h1>
+    <h3>{{ localize 'PENOMBRE.tab.descriptions' }}</h3>
 
+    <div class="descriptions-entry"></div>
     {{editor descriptionHTML target="system.description" button=true editable=editable engine="prosemirror"}}
+    </div>
 </section>

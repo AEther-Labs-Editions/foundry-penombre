@@ -20,9 +20,6 @@ export default class AtoutSheet extends HandlebarsApplicationMixin(foundry.appli
   /** @typedef {import("@client/applications/api/handlebars-application.mjs").HandlebarsTemplatePart} HandlebarsTemplatePart */
   /** @type {Record<string, HandlebarsTemplatePart>} */
   static PARTS = {
-    header: {
-      template: 'systems/penombre/templates/atout-main.hbs',
-    },
     tabs: {
       // Foundry-provided generic template
       template: 'templates/generic/tab-navigation.hbs',
@@ -65,7 +62,8 @@ export default class AtoutSheet extends HandlebarsApplicationMixin(foundry.appli
     context.descriptionHTML = await foundry.applications.ux.TextEditor.implementation.enrichHTML(this.document.system.description, {
       secrets: this.document.isOwner,
       async: true,
-    })
+      }
+    )
 
 
     return context
