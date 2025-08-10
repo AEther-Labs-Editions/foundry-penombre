@@ -49,7 +49,6 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
 
       isStyleJeuStandard: styleJeu === "standard",
       isStyleJeuAvance: styleJeu === "avance",
-
     }
   }
 

@@ -27,6 +27,7 @@
 // Dimensions des éléments
 @dice-size: 85px;
 @case-size: 85px;
+@small-case-size: 20px;
 @border-radius: 6px;
 @border-radius-small: 4px;
 
@@ -363,13 +364,36 @@ body {
   }
 }
 
+
+/* ---------------------------------------------
+        Items
+--------------------------------------------- */
+.pouvoir {
+  .pouvoir-content .standard-form .details {
+      display: flex;
+      justify-content: space-between;
+
+      select[name="system.type"] {
+        width: 100px;
+      }
+  }
+}
+
+.atout {
+  .atout-content {
+  }
+}
+
 .penombre {
 /* ---------------------------------------------
         Eminence
 --------------------------------------------- */
-
   &.eminence {
     .eminence-content {
+
+      .centpourcent {
+        width: 100%;
+      }
 
       // Styles pour les inputs
       input,
@@ -588,8 +612,8 @@ body {
 
               .complication-case {
                 float: left;
-                width: 20px;
-                height: 20px;
+                width: @small-case-size;
+                height: @small-case-size;
 
                 &:hover {
                   cursor: pointer;
@@ -643,8 +667,8 @@ body {
 
                 .complication-case {
                   float: left;
-                  width: 20px;
-                  height: 20px;
+                  width: @small-case-size;
+                  height: @small-case-size;
                 }
               }
             }
@@ -809,6 +833,8 @@ body {
         }
 
         .content {
+          text-align: left;
+
           .potentiel {
             text-align: center;
 
@@ -861,6 +887,27 @@ body {
             border: 1px solid #917f35;
             border-radius: @border-radius-small;
             padding: 2px;
+
+            .item-coche {
+              width: 55px;
+            }
+
+            .item-case {
+              width: @small-case-size;
+              height: @small-case-size;
+            }
+
+            td {
+              font-family: @font-chocolate;
+              font-size: @font-size-midlarge;
+            }
+
+            th.item-controls,
+            td.item-controls {
+              width: 70px;
+              font-size: @font-size-base;
+            }
+
           }
 
           .pouvoirs-2 {
@@ -871,6 +918,27 @@ body {
             border: 1px solid #917f35;
             border-radius: @border-radius-small;
             padding: 2px;
+
+            .item-coche {
+              width: 55px;
+            }
+
+            .item-case {
+              width: @small-case-size;
+              height: @small-case-size;
+            }
+
+            td {
+              font-family: @font-chocolate;
+              font-size: @font-size-midlarge;
+            }
+
+            th.item-controls,
+            td.item-controls {
+              width: 70px;
+              font-size: @font-size-base;
+            }
+
           }
 
           .pouvoirs,
@@ -890,12 +958,22 @@ body {
         min-height: 255px;
         color: @color-secondary;
         text-align: center;
+        
+        .plusitem {
+            text-align: right;
+        }
+
       }
 
       .eminence-atouts-2 {
         min-height: 400px;
         color: @color-secondary;
         text-align: center;
+
+        .plusitem {
+            text-align: right;
+        }
+
       }
 
       .eminence-atouts,
@@ -907,6 +985,8 @@ body {
         }
 
         .content {
+          text-align: left;
+
           .potentiel {
             text-align: center;
 
@@ -959,16 +1039,62 @@ body {
             border: 1px solid #917f35;
             border-radius: @border-radius-small;
             padding: 2px;
+
+            td {
+              font-family: @font-chocolate;
+              font-size: @font-size-midlarge;
+            }
+
+            th.item-case-width,
+            td.item-case-width {
+              width: 100px;
+            }
+
+            th.item-controls,
+            td.item-controls {
+              width: 70px;
+              font-size: @font-size-base;
+            }
+
+            .item-case {
+              float: left;
+              width: @small-case-size;
+              height: @small-case-size;
+            }
+
           }
 
           .atouts-2 {
             // float: left;
             margin-left: 100px;
-            width: (100% - 103px);
+            width: calc(100% - 103px);
             min-height: 290px;
             border: 1px solid #917f35;
             border-radius: @border-radius-small;
             padding: 2px;
+
+            td {
+              font-family: @font-chocolate;
+              font-size: @font-size-midlarge;
+            }
+
+            th.item-case-width,
+            td.item-case-width {
+              width: 70px;
+            }
+
+            th.item-controls,
+            td.item-controls {
+              width: 70px;
+              font-size: @font-size-base;
+            }
+
+            .item-case {
+              float: left;
+              width: @small-case-size;
+              height: @small-case-size;
+            }
+
           }
 
         }
@@ -996,6 +1122,8 @@ body {
         }
 
         .content {
+          text-align: left;
+
           .potentiel {
             text-align: center;
 

@@ -4,13 +4,15 @@
       "eminence": "Éminence grise"
     },
     "Item": {
-      "pouvoir": "Pouvoir"
+      "pouvoir": "Pouvoir",
+      "atout": "Atout"
     }
   },
   "PENOMBRE": {
     "Feuille": {
       "eminence": "Feuille d'Éminence grise",
-      "pouvoir": "Feuille de Pouvoir"
+      "pouvoir": "Feuille de Pouvoir",
+      "atout": "Feuille d'Atout"
     },
     "Eminence": {
       "FIELDS": {
@@ -149,6 +151,16 @@
         }
       }
     },
+    "Atout": {
+      "FIELDS": {
+        "valeur": {
+          "label": "Valeur"
+        },
+        "description": {
+          "label": "Description"
+        }
+      }
+    },
     "Harmonique": {
       "ame": {
         "label": "Ame"
@@ -263,6 +275,10 @@
         "label": "Perdu"
       }
     },
+    "tab": {
+      "datas": "Datas",
+      "descriptions": "Description"
+    },
     "ui": {
       "section": {
         "personnage": "Personnage",
@@ -288,7 +304,9 @@
       "conscienceMax": " Max",
       "modeEdition": "Bascule entre le Mode « Éditer » et le Mode « Jouer »",
       "complicationsListe": "Complications :",
+      "pouvoir": "Pouvoir",
       "pouvoirs": "Pouvoirs",
+      "atout": "Atout",
       "atouts": "Atouts",
       "maitrises": "Maitrises magiques",
       "potentiel": "Potentiel",
@@ -296,7 +314,19 @@
       "creerJetons": "(pensez a en creer pour preserver vos jetons)",
       "clicJetons": "Clic pour dépenser ou réactiver un jeton. <br>Clic-droit pour perdre ou ajouter un jeton.",
       "timbre": "Timbre",
-      "peste": "Peste"
+      "peste": "Peste",
+      "atoutNom": "Nom",
+      "atoutNew": "Nouvel atout",
+      "atoutEdit": "Modifier",
+      "atoutDelete": "Supprimer",
+      "atoutCreate": "Ajouter un atout",
+      "pouvoirNom": "Nom",
+      "pouvoirType": "Type",
+      "pouvoirNew": "Nouveau pouvoir",
+      "pouvoirEdit": "Modifier",
+      "pouvoirDelete": "Supprimer",
+      "pouvoirCreate": "Ajouter un pouvoir"
+
     },
     "Settings": {
       "styleJeu": {

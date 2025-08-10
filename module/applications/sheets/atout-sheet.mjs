@@ -3,23 +3,23 @@ const { HandlebarsApplicationMixin } = foundry.applications.api
 export default class PouvoirSheet extends HandlebarsApplicationMixin(foundry.applications.sheets.ItemSheetV2) {
   /** @override */
   static DEFAULT_OPTIONS = {
-    classes: ["pouvoir"],
+    classes: ["atout"],
     position: {
       width: 500,
-      height: 350,
+      height: 300,
     },
     form: {
       submitOnChange: true,
     },
     window: {
-      contentClasses: ["pouvoir-content"],
+      contentClasses: ["atout-content"],
       resizable: true,
     },
   }
 
   /** @override */
   static PARTS = {
-    main: { template: "systems/penombre/templates/pouvoir.hbs" },
+    main: { template: "systems/penombre/templates/atout.hbs" },
   }
 
   /** @override */

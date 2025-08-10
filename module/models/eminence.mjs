@@ -90,7 +90,8 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
 
     // Pouvoirs : sous forme d'un item
 
-    // Atouts
+    // Atouts : sous forme d'un item
+
     schema.atouts = new ArrayField(
       new SchemaField({
         description: new StringField({}),
