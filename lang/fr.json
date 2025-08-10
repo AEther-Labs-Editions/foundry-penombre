@@ -275,6 +275,10 @@
         "label": "Perdu"
       }
     },
+    "tab": {
+      "datas": "Données",
+      "descriptions": "Description"
+    },
     "ui": {
       "section": {
         "personnage": "Personnage",

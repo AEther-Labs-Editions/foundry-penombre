@@ -1,0 +1,12 @@
+{{log "pouvoir-datas" this}}
+<section
+    class='tab datas {{tab.cssClass}}'
+    data-group='primary'
+    data-tab='datas'
+>
+    <h1>{{ localize 'PENOMBRE.tab.datas' }}</h1>
+
+    {{formGroup fields.name value=item.name localize=true}}
+    {{formGroup systemFields.utilise value=systemSource.utilise localize=true}}
+    {{formGroup systemFields.type value=systemSource.type localize=true}}
+</section>

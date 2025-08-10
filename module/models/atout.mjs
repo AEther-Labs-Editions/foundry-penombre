@@ -1,6 +1,6 @@
 import { SYSTEM } from "../config/system.mjs"
 
-const { StringField, NumberField } = foundry.data.fields
+const { HTMLField, NumberField } = foundry.data.fields
 
 export default class Atout extends foundry.abstract.TypeDataModel {
   /** @override */
@@ -9,7 +9,7 @@ export default class Atout extends foundry.abstract.TypeDataModel {
   static defineSchema() {
     const schema = {}
 
-    schema.description = new StringField({})
+    schema.description = new HTMLField({})
     schema.valeur = new NumberField({ required: true, integer: true, initial: 0, min: 0, max: 3 })
 
     return schema
