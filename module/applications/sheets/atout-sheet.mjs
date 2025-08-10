@@ -6,7 +6,7 @@ export default class AtoutSheet extends HandlebarsApplicationMixin(foundry.appli
     classes: ["atout"],
     position: {
       width: 500,
-      height: 270,
+      height: 300,
     },
     form: {
       submitOnChange: true,
@@ -20,6 +20,9 @@ export default class AtoutSheet extends HandlebarsApplicationMixin(foundry.appli
   /** @typedef {import("@client/applications/api/handlebars-application.mjs").HandlebarsTemplatePart} HandlebarsTemplatePart */
   /** @type {Record<string, HandlebarsTemplatePart>} */
   static PARTS = {
+    header: {
+      template: 'systems/penombre/templates/atout-main.hbs',
+    },
     tabs: {
       // Foundry-provided generic template
       template: 'templates/generic/tab-navigation.hbs',

@@ -6,7 +6,7 @@ export default class PouvoirSheet extends HandlebarsApplicationMixin(foundry.app
     classes: ["pouvoir"],
     position: {
       width: 500,
-      height: 320,
+      height: 350,
     },
     form: {
       submitOnChange: true,
@@ -20,6 +20,9 @@ export default class PouvoirSheet extends HandlebarsApplicationMixin(foundry.app
   /** @typedef {import("@client/applications/api/handlebars-application.mjs").HandlebarsTemplatePart} HandlebarsTemplatePart */
   /** @type {Record<string, HandlebarsTemplatePart>} */
   static PARTS = {
+    header: {
+      template: 'systems/penombre/templates/pouvoir-main.hbs',
+    },
     tabs: {
       // Foundry-provided generic template
       template: 'templates/generic/tab-navigation.hbs',
