@@ -6,7 +6,7 @@ export default class ReserveCollegiale extends foundry.abstract.TypeDataModel {
 
     schema.jetons = new TypedObjectField(
       new SchemaField({
-        valeur: new BooleanField(),
+        valeur: new BooleanField(), // True si le jeton est disponible, false sinon
       }),
       {
         validateKeys: (key) => {
@@ -17,5 +17,9 @@ export default class ReserveCollegiale extends foundry.abstract.TypeDataModel {
     )
 
     return schema
+  }
+
+  get nbJetonsRestants() {
+    return Object.values(this.jetons).filter((jeton) => jeton.valeur === true).length
   }
 }

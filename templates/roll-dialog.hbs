@@ -1,11 +1,11 @@
 {{log "roll-dialog" this}}
-<div class="penombre-roll-dialog">
+<div class="penombre-roll-dialog" data-actor-id="{{actor.id}}">
   <fieldset>
     <legend>Harmonique</legend>
     {{label}}
     :
-    {{formula}}
-    <div><input type="checkbox" name="deMerveilleux" /><label>Dé merveilleux</label></div>
+    <input type="text" id="harmoniqueDice" name="harmoniqueDice" value={{harmoniqueDice}} />
+    <div><input type="checkbox" id="deMerveilleux" name="deMerveilleux" /><label>Dé merveilleux</label></div>
   </fieldset>
   <fieldset>
     <legend>Atouts</legend>
@@ -15,6 +15,27 @@
         <div>Niveau : {{this.system.valeur}}</div>
       </div>
     {{/each}}
+    <label>Bonus total des atouts :</label>
+    <input type="number" id="bonusAtouts" name="bonusAtouts" value={{bonusAtouts}} readonly />
+  </fieldset>
+  <fieldset>
+    <legend>Formule</legend>
+    <input type="text" id="formule" name="formule" value={{formule}} />
+  </fieldset>
+  <fieldset>
+    <legend>Jetons</legend>
+    <label>Nombre de jetons à dépenser :</label>
+    <div class="form-fields">
+      <input type="number" id="jetons" name="jetons" />
+    </div>
+    <label>Conscience :</label>
+    <div class="form-fields">
+      <input type="number" id="jetonsConscience" name="jetonsConscience" />
+    </div>
+    <label>Réserve collégiale :</label>
+    <div class="form-fields">
+      <input type="number" id="jetonsReserve" name="jetonsReserve" />
+    </div>
   </fieldset>
   <fieldset>
     <legend>Options</legend>

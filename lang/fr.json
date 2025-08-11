@@ -348,6 +348,11 @@
 
 
     },
+    "warnings": {
+      "jetonsDepassement": "Trop de jetons sélectionnés",
+      "jetonsConscienceInsuffisants": "Vous avez demandé {demande} jeton(s) de conscience alors qu'il ne vous en reste plus que {actuel} !",
+      "jetonsReserveInsuffisants": "Vous avez demandé {demande} jeton(s) de la réserve collégiale alors qu'il ne vous en reste plus que {actuel} !"
+    },
     "Settings": {
       "styleJeu": {
         "name": "Style de jeu",

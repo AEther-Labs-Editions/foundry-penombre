@@ -288,7 +288,7 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
     console.log(`EminenceSheet.#onClicHarmonique: harmonique ${harmonique}`)
     let rollValue = this.document.system.harmoniques[harmonique].valeur
     const atouts = this.document.itemTypes.atout
-    let roll = await PenombreRoll.prompt({ harmonique, rollValue, atouts })
+    let roll = await PenombreRoll.prompt({ actor: this.actor, harmonique, rollValue, atouts })
     if (!roll) return null
     await roll.toMessage({}, { rollMode: roll.options.rollMode })
   }

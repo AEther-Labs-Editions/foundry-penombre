@@ -195,13 +195,28 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
     }
   }
 
-  hasAtouts() {
+  get hasAtouts() {
     return this.atouts.length > 0
   }
 
-  async roll(value) {
-    let roll = await PenombreRoll.prompt({ rollValue: value })
-    if (!roll) return null
-    await roll.toMessage({}, { rollMode: roll.options.rollMode })
+  get nbJetonsRestants() {
+    const jetonsConscience = this.conscience.jetons.filter((jeton) => jeton.statut === SYSTEM.JETON_STATUTS.actif.id).length
+    return jetonsConscience
+  }
+
+  depenserJetons(nbJetons) {
+    // Parcours de l'objet pour mettre à jour nbJetons
+    let nbJetonsModifies = 0
+    const jetons = { ...this.conscience.jetons }
+    for (const key of Object.keys(jetons)) {
+      if (nbJetonsModifies >= nbJetons) break
+      if (jetons[key].statut === SYSTEM.JETON_STATUTS.actif.id) {
+        jetons[key] = { ...jetons[key], statut: SYSTEM.JETON_STATUTS.inactif.id }
+        nbJetonsModifies++
+      }
+    }
+    if (nbJetonsModifies > 0) {
+      this.parent.update({ "system.conscience.jetons": jetons })
+    }
   }
 }
