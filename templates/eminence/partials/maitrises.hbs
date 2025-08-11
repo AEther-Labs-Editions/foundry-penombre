@@ -42,21 +42,7 @@
                         <span class="item-name">{{item.name}}</span>
                     </td>
                     <td class="harmonique-width">
-                    {{#if (eq item.system.harmonique 'ame')}}
-                        <span class="item-type">{{ localize 'PENOMBRE.Harmonique.ame.label' }}</span>
-                    {{/if}}
-                    {{#if (eq item.system.harmonique 'esprit')}}
-                        <span class="item-type">{{ localize 'PENOMBRE.Harmonique.esprit.label' }}</span>
-                    {{/if}}
-                    {{#if (eq item.system.harmonique 'etincelle')}}
-                        <span class="item-type">{{ localize 'PENOMBRE.Harmonique.etincelle.label' }}</span>
-                    {{/if}}
-                    {{#if (eq item.system.harmonique 'nature')}}
-                        <span class="item-type">{{ localize 'PENOMBRE.Harmonique.nature.label' }}</span>
-                    {{/if}}
-                    {{#if (eq item.system.harmonique 'nuit')}}
-                        <span class="item-type">{{ localize 'PENOMBRE.Harmonique.nuit.label' }}</span>
-                    {{/if}}
+                        <span class="item-type">{{ localize (concat 'PENOMBRE.Harmonique.' item.system.harmonique '.label') }}</span>
                     </td>
                     <td>
                         <span class="item-prerequis">{{item.system.prerequis}}</span>
