@@ -27,10 +27,12 @@ export default class PouvoirSheet extends HandlebarsApplicationMixin(foundry.app
    * @type {boolean}
    */
   get isEditMode() {
-    let result = true;
+    let result = true
     try {
       result = this.document.parent._sheetMode === this.document.parent.constructor.SHEET_MODES.EDIT
-    } catch {console.log("Erreur sur isEditMode !")}
+    } catch {
+      console.log("Erreur sur isEditMode !")
+    }
     console.log("isEditMode = ", result)
     return result
   }

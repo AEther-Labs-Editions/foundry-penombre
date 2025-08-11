@@ -320,7 +320,7 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
     }
   }
 
-    static #onReadItem(event, target) {
+  static #onReadItem(event, target) {
     event.preventDefault()
     const id = target.dataset.itemId
     if (id) {
