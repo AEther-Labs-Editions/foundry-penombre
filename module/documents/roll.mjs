@@ -1,6 +1,8 @@
 import { SYSTEM } from "../config/system.mjs"
 export default class PenombreRoll extends Roll {
-  static DIALOG_TEMPLATE = "modules/penombre/templates/roll-dialog.hbs"
+  static DIALOG_TEMPLATE = "modules/penombre/templates/dialogs/roll-dialog.hbs"
+
+  static CHAT_TEMPLATE = "systems/penombre/templates/chat/harmonique-roll.hbs"
 
   static async prompt(options = {}) {
     const actor = options.actor || null
@@ -58,7 +60,7 @@ export default class PenombreRoll extends Roll {
       choiceHarmonique,
     }
 
-    const content = await foundry.applications.handlebars.renderTemplate("systems/penombre/templates/roll-dialog.hbs", dialogContext)
+    const content = await foundry.applications.handlebars.renderTemplate("systems/penombre/templates/dialogs/roll-dialog.hbs", dialogContext)
     const title = harmonique != null ? `Jet de ${game.i18n.localize(`PENOMBRE.ui.${harmonique}`)}` : "Jet de dés"
 
     const rollContext = await foundry.applications.api.DialogV2.wait({
@@ -139,17 +141,22 @@ export default class PenombreRoll extends Roll {
 
     formule = rollContext.formule || formule
 
-    const rollData = {
-      value: options.rollValue,
+    const rollOptions = {
+      harmonique: rollContext.harmonique,
+      actionCollegiale: rollContext.actionCollegiale,
+      difficulte: rollContext.difficulte,
+      rollMode: rollContext.rollMode,
+      formule: rollContext.formule,
     }
 
-    const roll = new this(formule, options.data, rollData)
+    const roll = new this(formule, options.data, rollOptions)
 
     await roll.evaluate()
 
     return roll
   }
 
+  // #region Événements du prompt
   static _onChangeHarmonique(event) {
     PenombreRoll._updateFormula()
     document.querySelector("#harmonique-label").textContent = game.i18n.localize(`PENOMBRE.ui.${event.target.options[event.target.selectedIndex].value}`)
@@ -237,5 +244,18 @@ export default class PenombreRoll extends Roll {
       formule += ` + ${bonusAtouts}d6`
     }
     document.querySelector("#formule").value = formule
+  }
+  // #endregion Événements du prompt
+
+  async _prepareChatRenderContext({ flavor, isPrivate = false, ...options } = {}) {
+    return {
+      harmonique: this.options.harmonique,
+      difficulte: this.options.difficulte,
+      formula: isPrivate ? "???" : this._formula,
+      flavor: isPrivate ? null : (flavor ?? this.options.flavor),
+      user: game.user.id,
+      tooltip: isPrivate ? "" : await this.getTooltip(),
+      total: isPrivate ? "?" : Math.round(this.total * 100) / 100,
+    }
   }
 }

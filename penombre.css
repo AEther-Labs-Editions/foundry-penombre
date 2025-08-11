@@ -1260,3 +1260,61 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   float: left;
   width: 40px;
 }
+.theme-dark #interface #sidebar .chat-message,
+.theme-dark #interface #ui-right-column-1 .chat-message {
+  background: #0b0a13e6;
+  color: var(--color-textLight);
+}
+.theme-dark #interface #sidebar .chat-message span,
+.theme-dark #interface #ui-right-column-1 .chat-message span,
+.theme-dark #interface #sidebar .chat-message label,
+.theme-dark #interface #ui-right-column-1 .chat-message label {
+  color: var(--color-textLight);
+}
+.theme-light #interface #sidebar .chat-message,
+.theme-light #interface #ui-right-column-1 .chat-message {
+  background-color: var(--color-light-3);
+  color: #222;
+}
+.theme-light #interface #sidebar .chat-message span,
+.theme-light #interface #ui-right-column-1 .chat-message span,
+.theme-light #interface #sidebar .chat-message label,
+.theme-light #interface #ui-right-column-1 .chat-message label {
+  color: #222;
+}
+#interface #sidebar .chat-message .message-header,
+#interface #ui-right-column-1 .chat-message .message-header {
+  border-bottom: 1px solid #5d142b;
+  display: grid;
+}
+.theme-dark #interface #sidebar .chat-message .message-header,
+.theme-dark #interface #ui-right-column-1 .chat-message .message-header {
+  color: var(--color-textLight);
+}
+.theme-light #interface #sidebar .chat-message .message-header,
+.theme-light #interface #ui-right-column-1 .chat-message .message-header {
+  color: #222;
+}
+#interface #sidebar .chat-message .message-header .message-metadata,
+#interface #ui-right-column-1 .chat-message .message-header .message-metadata {
+  margin-top: -53px;
+}
+#interface #sidebar .chat-message .message-header img,
+#interface #ui-right-column-1 .chat-message .message-header img {
+  max-width: 50px;
+  max-height: 50px;
+  margin-right: 4px;
+}
+#interface #sidebar .chat-message .message-header .title,
+#interface #ui-right-column-1 .chat-message .message-header .title {
+  font-size: 18px;
+  font-weight: bold;
+  display: inline;
+  text-wrap: auto;
+}
+#interface #sidebar .chat-message .message-header .message-sender,
+#interface #ui-right-column-1 .chat-message .message-header .message-sender {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

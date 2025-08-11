@@ -65,6 +65,9 @@
       "pouvoir": { "htmlFields": ["description"] },
       "atout": { "htmlFields": ["description"] },
       "maitrise": { "htmlFields": ["description"] }
+    },
+    "ChatMessage": {
+      "harmonique": {}
     }
   },
   "socket": true,

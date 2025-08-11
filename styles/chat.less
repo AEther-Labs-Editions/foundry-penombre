@@ -1,0 +1,54 @@
+#interface #sidebar,
+#interface #ui-right-column-1 {
+  & .chat-message {
+    .theme-dark & {
+      background: #0b0a13e6;
+      color: var(--color-textLight);
+      span,
+      label {
+        color: var(--color-textLight);
+      }
+    }
+    .theme-light & {
+      background-color: var(--color-light-3);
+      color: #222;
+      span,
+      label {
+        color: #222;
+      }
+    }
+    .message-header {
+      border-bottom: 1px solid #5d142b;
+      display: grid;
+      .theme-dark & {
+        color: var(--color-textLight);
+      }
+      .theme-light & {
+        color: #222;
+      }
+
+      .message-metadata {
+        margin-top: -53px;
+      }
+
+      img {
+        max-width: 50px;
+        max-height: 50px;
+        margin-right: 4px;
+      }
+      .title {
+        font-size: 18px;
+        font-weight: bold;
+        display: inline;
+        text-wrap: auto;
+      }
+      .message-sender {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .message-content {
+      }
+    }
+  }
+}

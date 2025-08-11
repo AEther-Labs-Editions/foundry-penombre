@@ -37,6 +37,12 @@ Hooks.once("init", function () {
 
   CONFIG.Dice.rolls.push(documents.PenombreRoll)
 
+  CONFIG.ChatMessage.documentClass = documents.PenombreMessage
+  CONFIG.ChatMessage.dataModels = {
+    base: models.BaseMessageData,
+    harmonique: models.HarmoniqueMessageData,
+  }
+
   Handlebars.registerHelper("getDiceImage", function (value) {
     return `/systems/penombre/assets/ui/${value}-marge.png`
   })
