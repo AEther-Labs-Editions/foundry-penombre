@@ -1,3 +1,4 @@
+import { SYSTEM } from "../config/system.mjs"
 export default class PenombreRoll extends Roll {
   static DIALOG_TEMPLATE = "modules/penombre/templates/roll-dialog.hbs"
 
@@ -14,12 +15,15 @@ export default class PenombreRoll extends Roll {
 
     const atouts = options.atouts || []
 
+    const choiceDifficulte = SYSTEM.DIFFICULTE
+
     let dialogContext = {
       rollModes,
       fieldRollMode,
       formula,
       atouts,
       label: game.i18n.localize(`PENOMBRE.ui.${harmonique}`),
+      choiceDifficulte,
     }
 
     const content = await foundry.applications.handlebars.renderTemplate("systems/penombre/templates/roll-dialog.hbs", dialogContext)
@@ -56,7 +60,12 @@ export default class PenombreRoll extends Roll {
         },
       ],
       render: (event, dialog) => {
-        const rangeInput = dialog.element.querySelector('input[name="avantages"]')
+        const inputs = dialog.element.querySelectorAll(".atout")
+        if (inputs) {
+          inputs.forEach((input) => {
+            input.addEventListener("click", this._onToggleAtout.bind(this))
+          })
+        }
       },
     })
 
@@ -72,5 +81,10 @@ export default class PenombreRoll extends Roll {
     await roll.evaluate()
 
     return roll
+  }
+
+  static _onToggleAtout(event) {
+    let item = event.currentTarget.closest(".atout")
+    item.classList.toggle("checked")
   }
 }

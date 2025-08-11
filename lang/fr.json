@@ -290,10 +290,6 @@
         "label": "Perdu"
       }
     },
-    "tab": {
-      "datas": "Datas",
-      "descriptions": "Description"
-    },
     "ui": {
       "section": {
         "personnage": "Personnage",
@@ -310,6 +306,7 @@
       "actionPhysique": "Action Physique",
       "actionMentale": "Action Mentale",
       "actionPerceptive": "Action Perceptive",
+      "difficulte": "Difficulté",
       "nom": "Nom",
       "peuple": "Peuple",
       "cle": "Clef",

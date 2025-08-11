@@ -23,7 +23,6 @@
 @font-size-xlarge: 30px;
 @font-size-2xlarge: 35px;
 
-
 // Dimensions des éléments
 @dice-size: 85px;
 @case-size: 85px;
@@ -114,7 +113,12 @@
 }
 
 .journal-entry-page {
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: @font-cattedrale;
     // text-transform: uppercase;
     color: @color-primary;
@@ -126,13 +130,17 @@
 --------------------------------------------- */
 .penombre {
   .editor-content {
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       font-family: @font-cattedrale;
       color: @color-primary;
     }
   }
 }
-
 
 /* ---------------------------------------------
         Thème Clair
@@ -145,7 +153,6 @@ body {
   &.theme-light {
     .penombre {
       &.eminence {
-
         .eminence-content {
           overflow: auto;
           // width: 100%;
@@ -231,7 +238,6 @@ body {
               content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_clair.png");
             }
           }
-
         }
       }
     }
@@ -240,7 +246,6 @@ body {
   &.theme-dark {
     .penombre {
       &.eminence {
-
         .eminence-content {
           overflow: auto;
           // width: 100%;
@@ -289,7 +294,7 @@ body {
               width: 100px;
               // height: 100px;
               float: left;
-              border-radius: @border-radius; 
+              border-radius: @border-radius;
               background-color: @background-light;
             }
 
@@ -297,7 +302,7 @@ body {
               float: left;
               width: 525px;
               padding-left: 4px;
-              
+
               .label-timbre {
                 color: @color-secondary;
               }
@@ -357,40 +362,18 @@ body {
               content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.png");
             }
           }
-
         }
       }
     }
   }
 }
 
-
-/* ---------------------------------------------
-        Items
---------------------------------------------- */
-.pouvoir {
-  .pouvoir-content .standard-form .details {
-      display: flex;
-      justify-content: space-between;
-
-      select[name="system.type"] {
-        width: 100px;
-      }
-  }
-}
-
-.atout {
-  .atout-content {
-  }
-}
-
 .penombre {
-/* ---------------------------------------------
+  /* ---------------------------------------------
         Eminence
 --------------------------------------------- */
   &.eminence {
     .eminence-content {
-
       .centpourcent {
         width: 100%;
       }
@@ -518,12 +501,10 @@ body {
 
       .eminence-conscience-locked {
         min-height: 725px;
-
       }
 
       .eminence-conscience-unlocked {
         min-height: 685px;
-
       }
 
       /*
@@ -618,7 +599,6 @@ body {
                 &:hover {
                   cursor: pointer;
                 }
-
               }
             }
           }
@@ -724,7 +704,6 @@ body {
             // width: 405px;
             font-size: @font-size-xlarge;
           }
-
         }
 
         .case-de-mouve-2 {
@@ -733,18 +712,16 @@ body {
           .editer-harmoniques {
             // width: 405px;
             font-size: @font-size-xlarge;
-        }
-
+          }
         }
 
         .case-de-mouve-3 {
           .case-de-mouve(10px);
 
-        .editer-harmoniques {
-          // width: 405px;
-          font-size: @font-size-xlarge;
-        }
-
+          .editer-harmoniques {
+            // width: 405px;
+            font-size: @font-size-xlarge;
+          }
         }
 
         .case-de-mouve-4 {
@@ -754,7 +731,6 @@ body {
             // width: 405px;
             font-size: @font-size-xlarge;
           }
-
         }
 
         .case-de-mouve-5 {
@@ -764,7 +740,6 @@ body {
             // width: 405px;
             font-size: @font-size-xlarge;
           }
-
         }
 
         .flexible {
@@ -826,7 +801,6 @@ body {
 
       .eminence-pouvoirs,
       .eminence-pouvoirs-2 {
-
         .titre-section-pouvoirs {
           font-size: @font-size-2xlarge;
           float: none;
@@ -849,7 +823,7 @@ body {
                 width: 100px;
                 height: 100px;
               }
-            
+
               .absolue {
                 position: absolute;
                 z-index: 5;
@@ -907,7 +881,6 @@ body {
               width: 70px;
               font-size: @font-size-base;
             }
-
           }
 
           .pouvoirs-2 {
@@ -938,12 +911,10 @@ body {
               width: 70px;
               font-size: @font-size-base;
             }
-
           }
 
           .pouvoirs,
           .pouvoirs-2 {
-
             .ligne-pouvoir {
               display: flex;
               align-items: center;
@@ -958,11 +929,10 @@ body {
         min-height: 255px;
         color: @color-secondary;
         text-align: center;
-        
-        .plusitem {
-            text-align: right;
-        }
 
+        .plusitem {
+          text-align: right;
+        }
       }
 
       .eminence-atouts-2 {
@@ -971,14 +941,12 @@ body {
         text-align: center;
 
         .plusitem {
-            text-align: right;
+          text-align: right;
         }
-
       }
 
       .eminence-atouts,
       .eminence-atouts-2 {
-
         .titre-section-atouts {
           font-size: @font-size-2xlarge;
           float: none;
@@ -1001,7 +969,7 @@ body {
                 width: 100px;
                 height: 100px;
               }
-            
+
               .absolue {
                 position: absolute;
                 z-index: 5;
@@ -1061,7 +1029,6 @@ body {
               width: @small-case-size;
               height: @small-case-size;
             }
-
           }
 
           .atouts-2 {
@@ -1094,9 +1061,7 @@ body {
               width: @small-case-size;
               height: @small-case-size;
             }
-
           }
-
         }
       }
 
@@ -1115,7 +1080,6 @@ body {
 
       .eminence-maitrises,
       .eminence-maitrises-2 {
-
         .titre-section-maitrises {
           font-size: @font-size-2xlarge;
           float: none;
@@ -1138,7 +1102,7 @@ body {
                 width: 100px;
                 height: 100px;
               }
-            
+
               .absolue {
                 position: absolute;
                 z-index: 5;
@@ -1187,7 +1151,6 @@ body {
             border-radius: @border-radius-small;
             padding: 2px;
           }
-
         }
       }
 
@@ -1198,7 +1161,6 @@ body {
         text-align: center;
 
         .content {
-
           .tableau {
             display: table;
 
@@ -1227,9 +1189,9 @@ body {
           }
         }
       }
-
     }
   }
 }
-
+@import "items.less";
 @import "reserve-collegiale.less";
+@import "dialog.less";

@@ -3,7 +3,7 @@ const { HandlebarsApplicationMixin } = foundry.applications.api
 export default class MaitriseSheet extends HandlebarsApplicationMixin(foundry.applications.sheets.ItemSheetV2) {
   /** @override */
   static DEFAULT_OPTIONS = {
-    classes: ["maitrise"],
+    classes: ["penombre", "maitrise"],
     position: {
       width: 500,
       height: 300,

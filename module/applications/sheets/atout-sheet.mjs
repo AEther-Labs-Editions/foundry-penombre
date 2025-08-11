@@ -3,7 +3,7 @@ const { HandlebarsApplicationMixin } = foundry.applications.api
 export default class PouvoirSheet extends HandlebarsApplicationMixin(foundry.applications.sheets.ItemSheetV2) {
   /** @override */
   static DEFAULT_OPTIONS = {
-    classes: ["atout"],
+    classes: ["penombre", "atout"],
     position: {
       width: 500,
       height: 300,
