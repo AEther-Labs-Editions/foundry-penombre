@@ -31,6 +31,7 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
       complication: EminenceSheet.#onClicComplication,
       create: EminenceSheet.#onCreateItem,
       edit: EminenceSheet.#onEditItem,
+      read: EminenceSheet.#onReadItem,
       delete: EminenceSheet.#onDeleteItem,
       jetHarmonique: EminenceSheet.#onClicHarmonique,
     },
@@ -303,6 +304,8 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
       itemData.name = game.i18n.localize("PENOMBRE.ui.pouvoirNew")
     } else if (type === "atout") {
       itemData.name = game.i18n.localize("PENOMBRE.ui.atoutNew")
+    } else if (type === "maitrise") {
+      itemData.name = game.i18n.localize("PENOMBRE.ui.maitriseNew")
     }
 
     return await this.actor.createEmbeddedDocuments("Item", [itemData])
@@ -315,6 +318,16 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
       const item = this.actor.items.get(id)
       if (item) return item.sheet.render({ force: true })
     }
+  }
+
+    static #onReadItem(event, target) {
+    event.preventDefault()
+    const id = target.dataset.itemId
+    if (id) {
+      const item = this.actor.items.get(id)
+      if (item) return item.sheet.render({ force: true })
+    }
+    console.log("this.actor = ", this.actor)
   }
 
   static async #onDeleteItem(event, target) {

@@ -5,7 +5,7 @@ export default class PouvoirSheet extends HandlebarsApplicationMixin(foundry.app
   static DEFAULT_OPTIONS = {
     classes: ["penombre", "pouvoir"],
     position: {
-      width: 500,
+      width: 570,
       height: 350,
     },
     form: {
@@ -20,6 +20,19 @@ export default class PouvoirSheet extends HandlebarsApplicationMixin(foundry.app
   /** @override */
   static PARTS = {
     main: { template: "systems/penombre/templates/pouvoir.hbs" },
+  }
+
+  /**
+   * Is the parent actor sheet of the item currently in 'Edit' mode?
+   * @type {boolean}
+   */
+  get isEditMode() {
+    let result = true;
+    try {
+      result = this.document.parent._sheetMode === this.document.parent.constructor.SHEET_MODES.EDIT
+    } catch {console.log("Erreur sur isEditMode !")}
+    console.log("isEditMode = ", result)
+    return result
   }
 
   /** @override */

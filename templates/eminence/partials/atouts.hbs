@@ -32,7 +32,7 @@
                     </th>
                 </tr>
                 {{#each atouts as |item id|}}
-                    <tr class="item">
+                    <tr class="item" data-tooltip="{{{item.system.description}}}">
                         <td>
                             <span class="item-name">{{item.name}}</span>
                         </td>

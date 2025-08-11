@@ -5,7 +5,7 @@ export default class MaitriseSheet extends HandlebarsApplicationMixin(foundry.ap
   static DEFAULT_OPTIONS = {
     classes: ["penombre", "maitrise"],
     position: {
-      width: 500,
+      width: 570,
       height: 300,
     },
     form: {

@@ -5,7 +5,7 @@ export default class PouvoirSheet extends HandlebarsApplicationMixin(foundry.app
   static DEFAULT_OPTIONS = {
     classes: ["penombre", "atout"],
     position: {
-      width: 500,
+      width: 570,
       height: 300,
     },
     form: {
@@ -24,8 +24,6 @@ export default class PouvoirSheet extends HandlebarsApplicationMixin(foundry.app
 
   /** @override */
   async _prepareContext() {
-    const context = await super._prepareContext()
-
     context.fields = this.document.schema.fields
     context.systemFields = this.document.system.schema.fields
     context.systemSource = this.document.system._source
