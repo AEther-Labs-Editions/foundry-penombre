@@ -193,7 +193,7 @@ export default class PenombreRoll extends Roll {
     const harmoniqueDice = document.querySelector("#harmoniqueDice").value
     const deMerveilleux = document.querySelector("#deMerveilleux").checked
     const bonusAtouts = document.querySelector("#bonusAtouts").value
-    let formule = deMerveilleux ? `1d20: ` : `1${harmoniqueDice}`
+    let formule = deMerveilleux ? `1d20` : `1${harmoniqueDice}`
     if (bonusAtouts > 0) {
       formule += ` + ${bonusAtouts}d6`
     }
