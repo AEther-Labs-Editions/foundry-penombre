@@ -337,7 +337,15 @@
       "pouvoirNew": "Nouveau pouvoir",
       "pouvoirEdit": "Modifier",
       "pouvoirDelete": "Supprimer",
-      "pouvoirCreate": "Ajouter un pouvoir"
+      "pouvoirCreate": "Ajouter un pouvoir",
+      "maitriseNom": "Nom",
+      "maitriseHarmonique": "Harmonique",
+      "maitrisePrerequis": "Prerequis",
+      "maitriseNew": "Nouvelle maîtrise",
+      "maitriseEdit": "Modifier",
+      "maitriseDelete": "Supprimer",
+      "maitriseCreate": "Ajouter une maîtrise"
+
 
     },
     "Settings": {

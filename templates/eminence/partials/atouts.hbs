@@ -1,6 +1,6 @@
 {{log "EminenceSheet - Partials - Atouts" this }}
 <div class="eminence-atouts{{#if isStyleJeuAvance}}-2{{/if}}">
-    <span class="titre-section-atouts">{{localize "PENOMBRE.ui.atouts"}}{{#if unlocked}}<i class="fas fa-plus" data-action="ajouter" data-type="atout"></i>{{/if}}</span>
+    <span class="titre-section-atouts">{{localize "PENOMBRE.ui.atouts"}}</span>
     <div class="content">
         <div class="potentiel">
             <div class="div-potentiel">
@@ -32,7 +32,7 @@
                     </th>
                 </tr>
                 {{#each atouts as |item id|}}
-                    <tr class="item">
+                    <tr class="item" data-tooltip="{{{item.system.description}}}">
                         <td>
                             <span class="item-name">{{item.name}}</span>
                         </td>

@@ -967,6 +967,18 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   border-radius: 4px;
   padding: 2px;
 }
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises td,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises td {
+  font-family: "ChocoCovRainBold";
+  font-size: 25px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises th.item-controls,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises th.item-controls,
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises td.item-controls,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises td.item-controls {
+  width: 70px;
+  font-size: 17px;
+}
 .penombre.eminence .eminence-content .eminence-maitrises .content .maitrises-2,
 .penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises-2 {
   margin-left: 100px;
@@ -975,6 +987,24 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   border: 1px solid #917f35;
   border-radius: 4px;
   padding: 2px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises-2 td,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises-2 td {
+  font-family: "ChocoCovRainBold";
+  font-size: 25px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises-2 th.harmonique-width,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises-2 th.harmonique-width,
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises-2 td.harmonique-width,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises-2 td.harmonique-width {
+  width: 70px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises-2 th.item-controls,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises-2 th.item-controls,
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises-2 td.item-controls,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises-2 td.item-controls {
+  width: 70px;
+  font-size: 17px;
 }
 .penombre.eminence .eminence-content .eminence-recapitulatif {
   min-height: 180px;
@@ -1004,11 +1034,11 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
-.penombre .pouvoir .pouvoir-content .standard-form .details {
+.penombre.pouvoir .pouvoir-content .standard-form .details {
   display: flex;
   justify-content: space-between;
 }
-.penombre .pouvoir .pouvoir-content .standard-form .details select[name="system.type"] {
+.penombre.pouvoir .pouvoir-content .standard-form .details select[name="system.type"] {
   width: 100px;
 }
 #penombre-reserve-collegiale {

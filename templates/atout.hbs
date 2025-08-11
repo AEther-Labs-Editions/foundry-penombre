@@ -1,6 +1,8 @@
 {{log "atout" this}}
 <section class="standard-form">
-  {{formInput fields.name value=item.name localize=true}}
-  {{formGroup systemFields.valeur value=systemSource.valeur localize=true}}
-  {{formInput systemFields.description enriched=enrichedDescription value=system.description name="system.description" toggled=true}}
+    {{formInput fields.name value=item.name localize=true}}
+    <div class="details enabled">
+    {{formGroup systemFields.valeur value=systemSource.valeur localize=true}}
+    </div>
+    {{formInput systemFields.description enriched=enrichedDescription value=system.description name="system.description" toggled=true}}
 </section>
