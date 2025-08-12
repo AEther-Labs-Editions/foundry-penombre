@@ -14,7 +14,7 @@ export default class PouvoirSheet extends HandlebarsApplicationMixin(foundry.app
     window: {
       contentClasses: ["pouvoir-content"],
       resizable: true,
-    },
+    }
   }
 
   /** @override */

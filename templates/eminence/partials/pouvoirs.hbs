@@ -33,7 +33,7 @@
                     </th>
                 </tr>
                 {{#each pouvoirs as |item id|}}
-                <tr class="item">
+                <tr class="item" data-item-id="{{item._id}}">
                     <td class="item-coche">
                         <img class="item-case" src="systems/penombre/assets/ui/transp_case_{{#if item.system.utilise}}checked{{else}}unchecked{{/if}}.png"></img>
                     </td>
