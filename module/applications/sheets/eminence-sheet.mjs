@@ -34,11 +34,7 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
       read: EminenceSheet.#onReadItem,
       delete: EminenceSheet.#onDeleteItem,
       jetHarmonique: EminenceSheet.#onClicHarmonique,
-    },
-    dragDrop: [{
-      dragSelector: ".item-list .item",
-      dropSelector: null
-    }]
+    }
   }
 
   /**

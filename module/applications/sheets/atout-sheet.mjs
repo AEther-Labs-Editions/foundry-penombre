@@ -6,7 +6,7 @@ export default class PouvoirSheet extends HandlebarsApplicationMixin(foundry.app
     classes: ["penombre", "atout"],
     position: {
       width: 570,
-      height: 300,
+      height: 400,
     },
     form: {
       submitOnChange: true,
