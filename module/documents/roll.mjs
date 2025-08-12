@@ -9,17 +9,19 @@ export default class PenombreRoll extends Roll {
     const harmoniqueDice = options.rollValue
 
     const rollModes = Object.fromEntries(Object.entries(CONFIG.Dice.rollModes).map(([key, value]) => [key, game.i18n.localize(value.label)]))
-    const fieldRollMode = new foundry.data.fields.StringField({
-      choices: rollModes,
-      blank: false,
-      default: "public",
-    })
+    const fieldRollMode = new foundry.data.fields.StringField({ choices: rollModes, blankdefault: "public" })
 
     let formule = options.formule || (harmoniqueDice ? `1${harmoniqueDice}` : "1d20")
     const bonusAtouts = 0
     const deMerveilleux = options.deMerveilleux || false
     const atouts = options.atouts || []
     const choiceDifficulte = SYSTEM.DIFFICULTE
+
+    const maxJetonsConscience = actor.system.nbJetonsRestants
+    const maxJetonsReserve = await game.settings.get("penombre", "reserveCollegiale").nbJetonsRestants
+
+    const fieldJetonsConscience = new foundry.data.fields.NumberField({ initial: 0, min: 0, max: maxJetonsConscience, step: 1 })
+    const fieldJetonsReserve = new foundry.data.fields.NumberField({ initial: 0, min: 0, max: maxJetonsReserve, step: 1 })
 
     let dialogContext = {
       actor,
@@ -33,6 +35,10 @@ export default class PenombreRoll extends Roll {
       label: game.i18n.localize(`PENOMBRE.ui.${harmonique}`),
       choiceDifficulte,
       canRoll: true,
+      maxJetonsConscience,
+      fieldJetonsConscience,
+      maxJetonsReserve,
+      fieldJetonsReserve,
     }
 
     const content = await foundry.applications.handlebars.renderTemplate("systems/penombre/templates/roll-dialog.hbs", dialogContext)

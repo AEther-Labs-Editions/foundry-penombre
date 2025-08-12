@@ -18,14 +18,14 @@ export default class Pouvoir extends foundry.abstract.TypeDataModel {
 
   /** @inheritDoc */
   async _preCreate(data, options, user) {
-    let updates = {}     
+    let updates = {}
     const stats = this.parent._stats
 
     // Pour un acteur non dupliqué, non provenant d'un compendium et non exporté
     if (!stats.duplicateSource && !stats.compendiumSource && !stats.exportSource) {
       // Image par défaut
       if (!foundry.utils.hasProperty(data, "img")) {
-          updates.img = "systems/penombre/assets/icons/pouvoir.png"
+        updates.img = "systems/penombre/assets/icons/pouvoir.png"
       }
     }
     this.parent.updateSource(updates)
