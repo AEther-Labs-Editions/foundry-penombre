@@ -1,63 +1,84 @@
 {{!log "roll-dialog" this}}
 <div class="penombre-roll-dialog" data-actor-id="{{actor.id}}">
-  <fieldset>
-    <legend>Harmonique</legend>
-    {{label}}
-    :
-    <input type="text" id="harmoniqueDice" name="harmoniqueDice" value={{harmoniqueDice}} />
-    <div><input type="checkbox" id="deMerveilleux" name="deMerveilleux" /><label>Dé merveilleux</label></div>
-  </fieldset>
-  <fieldset>
-    <legend>Atouts</legend>
-    {{#each atouts}}
-      <div class="atout flexrow" data-bonus="{{this.system.valeur}}">
-        <div>{{this.name}}</div>
-        <div>Niveau : {{this.system.valeur}}</div>
+
+  <div class="line-1">
+    <div class="part-left-1">
+      <fieldset>
+        <legend>Harmonique</legend>
+        <label>{{label}}&nbsp;:</label>
+        <input class="name" type="text" id="harmoniqueDice" name="harmoniqueDice" value={{harmoniqueDice}} />
+        <div class="clearboth"><input type="checkbox" id="deMerveilleux" name="deMerveilleux" /><label>Plutôt le Dé merveilleux</label></div>
+      </fieldset>
+    </div>
+
+    <div class="part-right-1">
+      <div class="form-group difficulte">
+        <label for="difficulte">{{localize "PENOMBRE.ui.difficulte"}}</label>
+        <div class="form-fields">
+          <select name="difficulte" id="difficulte">
+            {{selectOptions choiceDifficulte selected=difficulte localize=true}}
+          </select>
+        </div>
       </div>
-    {{/each}}
-    <label>Bonus total des atouts :</label>
-    <input type="number" id="bonusAtouts" name="bonusAtouts" value={{bonusAtouts}} readonly />
-  </fieldset>
-  <fieldset>
-    <legend>Formule</legend>
-    <input type="text" id="formule" name="formule" value={{formule}} />
-  </fieldset>
-  <fieldset>
-    <legend>Jetons</legend>
-    <label>Nombre de jetons à dépenser :</label>
-    <div class="form-fields">
-      <input type="number" id="jetons" name="jetons" />
-    </div>
-    <label>Conscience :</label>
-    <div class="form-fields">
-      <input type="number" id="jetonsConscience" name="jetonsConscience" />
-    </div>
-    <label>Réserve collégiale :</label>
-    <div class="form-fields">
-      <input type="number" id="jetonsReserve" name="jetonsReserve" />
-    </div>
-  </fieldset>
-  <fieldset>
-    <legend>Options</legend>
-    <div>
-      <input type="checkbox" name="actionCollegiale" /><label>Action collégiale</label>
-      <input type="checkbox" name="effetMagique" /><label>Effet magique</label>
-    </div>
-  </fieldset>
-  <div class="form-group difficulte">
-    <label for="difficulte">{{localize "PENOMBRE.ui.difficulte"}}</label>
-    <div class="form-fields">
-      <select name="difficulte" id="difficulte">
-        {{selectOptions choiceDifficulte selected=difficulte localize=true}}
-      </select>
+      <div class="form-group rollMode">
+        <label for="rollMode">{{localize "CHAT.RollDefault"}}</label>
+        <div class="form-fields">
+          <select name="rollMode" id="rollMode">
+            {{selectOptions rollModes selected=rollMode localize=true}}
+          </select>
+        </div>
+      </div>
+      <br>
+      <div>
+        <input type="checkbox" name="actionCollegiale" /><label>Action collégiale</label>
+        <input type="checkbox" name="effetMagique" /><label>Effet magique</label>
+      </div>
     </div>
   </div>
-  <div class="form-group rollMode">
-    <label for="rollMode">{{localize "CHAT.RollDefault"}}</label>
-    <div class="form-fields">
-      <select name="rollMode" id="rollMode">
-        {{selectOptions rollModes selected=rollMode localize=true}}
-      </select>
+
+  <div class="line-2">
+    <fieldset>
+      <legend>Atouts</legend>
+      {{#each atouts}}
+        <div class="atout atoutdata" data-bonus="{{this.system.valeur}}">
+          <div class="nom">{{this.name}}</div>
+          <div class="level">Niveau : {{this.system.valeur}}</div>
+        </div>
+      {{/each}}
+      <div class="bonustotal">
+      <label>Bonus total des atouts :</label>
+      <input type="number" id="bonusAtouts" name="bonusAtouts" value={{bonusAtouts}} readonly />
+      </div>
+    </fieldset>
+  </div>
+
+    <div class="line-3">
+      <div class="part-left-3">
+
+        <fieldset>
+          <legend>Formule</legend>
+          <input type="text" id="formule" name="formule" value={{formule}} />
+        </fieldset>
+      </div>
+
+      <div class="part-right-3">
+        <fieldset>
+          <legend>Jetons</legend>
+          <label>Nombre de jetons à dépenser :</label>
+          <div class="form-fields">
+            <input type="number" id="jetons" name="jetons" />
+          </div>
+          <label>Conscience :</label>
+          <div class="form-fields">
+            <input type="number" id="jetonsConscience" name="jetonsConscience" />
+          </div>
+          <label>Réserve collégiale :</label>
+          <div class="form-fields">
+            <input type="number" id="jetonsReserve" name="jetonsReserve" />
+          </div>
+        </fieldset>
+      </div>
     </div>
   </div>
+
 </div>
