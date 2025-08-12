@@ -12,4 +12,20 @@ export default class Atout extends foundry.abstract.TypeDataModel {
 
     return schema
   }
+
+  /** @inheritDoc */
+  async _preCreate(data, options, user) {
+    let updates = {}     
+    const stats = this.parent._stats
+
+    // Pour un acteur non dupliqué, non provenant d'un compendium et non exporté
+    if (!stats.duplicateSource && !stats.compendiumSource && !stats.exportSource) {
+      // Image par défaut
+      if (!foundry.utils.hasProperty(data, "img")) {
+          updates.img = "systems/penombre/assets/icons/atout.png"
+      }
+    }
+    this.parent.updateSource(updates)
+  }
+
 }

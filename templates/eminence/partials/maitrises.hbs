@@ -28,7 +28,7 @@
                         {{ localize 'PENOMBRE.ui.prerequis' }}
                     </th>
                     <th>
-                        {{ localize 'PENOMBRE.ui.niveau' }}
+                        
                     </th>
                     <th class="item-controls">
                         {{#if unlocked}}
@@ -37,12 +37,12 @@
                     </th>
                 </tr>
                 {{#each maitrises as |item id|}}
-                <tr class="item">
+                <tr class="item draggable" data-item-id="{{item._id}}">
                     <td>
                         <span class="item-name" data-tooltip="{{{item.system.description}}}">{{item.name}}</span>
                     </td>
                     <td class="harmonique-width">
-                        <span class="item-type">{{ localize (concat 'PENOMBRE.Harmonique.' item.system.harmonique '.label') }}</span>
+                        <span class="item-harmonique">{{ localize (concat 'PENOMBRE.Harmonique.' item.system.harmonique '.label') }}</span>
                     </td>
                     <td>
                         <span class="item-prerequis">{{item.system.prerequis}}</span>

@@ -6,7 +6,7 @@ export default class MaitriseSheet extends HandlebarsApplicationMixin(foundry.ap
     classes: ["penombre", "maitrise"],
     position: {
       width: 570,
-      height: 300,
+      height: 450,
     },
     form: {
       submitOnChange: true,

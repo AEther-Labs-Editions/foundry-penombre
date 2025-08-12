@@ -1,12 +1,52 @@
 .penombre {
-  &.pouvoir {
-    .pouvoir-content .standard-form .details {
-      display: flex;
-      justify-content: space-between;
+  &.atout  {
+    .atout-content .standard-form {
+      .logo-frame {
+        display: flex;
+        justify-content: space-between;
 
-      select[name="system.type"] {
-        width: 100px;
+        .name {
+          width: calc(100% - 90px);
+        }
       }
     }
   }
+
+  &.maitrise {
+    .maitrise-content .standard-form {
+      .logo-frame {
+        display: flex;
+        justify-content: space-between;
+
+        .name {
+          width: calc(100% - 90px);
+        }
+      }
+    }
+  }
+
+
+  &.pouvoir {
+    .pouvoir-content .standard-form {
+
+      .details {
+        display: flex;
+        justify-content: space-between;
+
+        select[name="system.type"] {
+          width: 100px;
+        }
+      }
+
+      .logo-frame {
+        display: flex;
+        justify-content: space-between;
+
+        .name {
+          width: calc(100% - 90px);
+        }
+      }
+    }
+  }
+
 }
