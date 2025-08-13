@@ -1,13 +1,19 @@
-{{!log "roll-dialog" this}}
+{{log "roll-dialog" this}}
 <div class="penombre-roll-dialog" data-actor-id="{{actor.id}}">
 
   <div class="line-1">
     <div class="part-left-1">
       <fieldset>
-        <legend>Harmonique</legend>
-        <label>{{label}}&nbsp;:</label>
-        <input class="name" type="text" id="harmoniqueDice" name="harmoniqueDice" value={{harmoniqueDice}} />
-        <div class="clearboth"><input type="checkbox" id="deMerveilleux" name="deMerveilleux" /><label>Plutôt le Dé merveilleux</label></div>
+        <legend>{{localize "PENOMBRE.ui.harmonique"}}</legend>
+        <div class="harmonique">
+          <label id="harmonique-label">{{label}}</label>
+          <select id="harmonique" name="harmonique">
+            {{selectOptions choiceHarmonique selected=harmonique localize=true}}
+          </select>
+        </div>
+        <div class="deMerveilleux">
+          <input type="checkbox" id="deMerveilleux" name="deMerveilleux" /><label>Plutôt le Dé merveilleux</label>
+        </div>
       </fieldset>
     </div>
 
@@ -20,9 +26,8 @@
           </select>
         </div>
       </div>
-      <br>
       <fieldset>
-        <div>
+        <div class="options">
           <input type="checkbox" name="actionCollegiale" /><label>Action collégiale</label>
           <input type="checkbox" name="effetMagique" /><label>Effet magique</label>
         </div>
@@ -33,17 +38,17 @@
   <div class="line-2">
     <fieldset>
       <legend>Atouts</legend>
-      <div class="defile-div">
-      {{#each atouts}}
-        <div class="atout atoutdata" data-bonus="{{this.system.valeur}}">
-          <div class="nom">{{this.name}}</div>
-          <div class="level">Niveau : {{this.system.valeur}}</div>
-        </div>
-      {{/each}}
+      <div class="atouts">
+        {{#each atouts}}
+          <div class="atout" data-bonus="{{this.system.valeur}}">
+            <div class="nom">{{this.name}}</div>
+            <div class="level">Niveau : {{this.system.valeur}}</div>
+          </div>
+        {{/each}}
       </div>
-      <div class="bonustotal">
-      <label>Bonus total des atouts :</label>
-      <input type="number" id="bonusAtouts" name="bonusAtouts" value={{bonusAtouts}} readonly />
+      <div class="bonus-total">
+        <label>Bonus total</label>
+        <input type="number" id="bonusAtouts" name="bonusAtouts" value={{bonusAtouts}} readonly />
       </div>
     </fieldset>
   </div>
@@ -63,7 +68,7 @@
         <img width="75" src="/systems/penombre/assets/ui/d12.png" />
         <img width="75" src="/systems/penombre/assets/ui/d20.png" />
       </div>
-      <br>&nbsp;<br>
+      <br />&nbsp;<br />
       <div class="form-group rollMode">
         <label for="rollMode">{{localize "CHAT.RollDefault"}}</label>
         <div class="form-fields">
@@ -84,12 +89,12 @@
           </div>
         </div>
         <fieldset>
-          <div>
           <legend>Dépense automatique</legend>
-          <label>Conscience :</label>
-          {{formInput fieldJetonsConscience name="jetonsConscience" id="jetonsConscience"}}
-          <label>Réserve collégiale :</label>
-          {{formInput fieldJetonsReserve name="jetonsReserve" id="jetonsReserve"}}
+          <div>            
+            <label>Conscience :</label>
+            {{formInput fieldJetonsConscience name="jetonsConscience" id="jetonsConscience"}}
+            <label>Réserve collégiale :</label>
+            {{formInput fieldJetonsReserve name="jetonsReserve" id="jetonsReserve"}}
           </div>
         </fieldset>
       </fieldset>

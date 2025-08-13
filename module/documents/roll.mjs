@@ -23,10 +23,23 @@ export default class PenombreRoll extends Roll {
     const fieldJetonsConscience = new foundry.data.fields.NumberField({ initial: 0, min: 0, max: maxJetonsConscience, step: 1 })
     const fieldJetonsReserve = new foundry.data.fields.NumberField({ initial: 0, min: 0, max: maxJetonsReserve, step: 1 })
 
+    const fieldHarmonique = new foundry.data.fields.StringField({
+      required: true,
+      nullable: false,
+      choices: Object.fromEntries(Object.entries(SYSTEM.HARMONIQUE_VALEURS).map(([key, value]) => [value, { label: `${value}` }])),
+    })
+
+    // Construit le choix de l'harmonique
+    const choiceHarmonique = Object.entries(actor.system.harmoniques).reduce((acc, [key, obj]) => {
+      acc[key] = `${game.i18n.localize(`PENOMBRE.ui.${key}`)} (${obj.valeur})`
+      return acc
+    }, {})
+
     let dialogContext = {
       actor,
       rollModes,
       fieldRollMode,
+      harmonique,
       harmoniqueDice,
       formule,
       bonusAtouts,
@@ -39,6 +52,8 @@ export default class PenombreRoll extends Roll {
       fieldJetonsConscience,
       maxJetonsReserve,
       fieldJetonsReserve,
+      fieldHarmonique,
+      choiceHarmonique,
     }
 
     const content = await foundry.applications.handlebars.renderTemplate("systems/penombre/templates/roll-dialog.hbs", dialogContext)
@@ -75,6 +90,12 @@ export default class PenombreRoll extends Roll {
         },
       ],
       render: (event, dialog) => {
+        // Harmonique
+        const harmoniqueSelect = dialog.element.querySelector("#harmonique")
+        if (harmoniqueSelect) {
+          harmoniqueSelect.addEventListener("change", this._onChangeHarmonique.bind(this))
+        }
+
         // Atouts
         const inputs = dialog.element.querySelectorAll(".atout")
         if (inputs) {
@@ -125,6 +146,11 @@ export default class PenombreRoll extends Roll {
     await roll.evaluate()
 
     return roll
+  }
+
+  static _onChangeHarmonique(event) {
+    PenombreRoll._updateFormula()
+    document.querySelector("#harmonique-label").textContent = game.i18n.localize(`PENOMBRE.ui.${event.target.options[event.target.selectedIndex].value}`)
   }
 
   static _onToggleAtout(event) {
@@ -196,7 +222,12 @@ export default class PenombreRoll extends Roll {
   }
 
   static _updateFormula() {
-    const harmoniqueDice = document.querySelector("#harmoniqueDice").value
+    const harmonique = document.querySelector("#harmonique").value
+    const id = document.querySelector(".penombre-roll-dialog").dataset.actorId
+    let actor
+    if (id) actor = game.actors.get(id)
+    if (!actor) return
+    const harmoniqueDice = actor.system.harmoniques[harmonique].valeur
     const deMerveilleux = document.querySelector("#deMerveilleux").checked
     const bonusAtouts = document.querySelector("#bonusAtouts").value
     let formule = deMerveilleux ? `1d20` : `1${harmoniqueDice}`

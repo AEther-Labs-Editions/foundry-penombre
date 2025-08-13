@@ -54,8 +54,9 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
 
   /**
    * Handle clicking on Document's elements.
-   * @param event
-   * @param target
+   * @param {Event} event The click event triggered by the user.
+   * @param {HTMLElement} target The HTML element that was clicked, containing dataset information.
+   * @returns {Promise<void>}
    **/
   static async #onClicJeton(event, target) {
     event.preventDefault()

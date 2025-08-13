@@ -1143,88 +1143,79 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   text-align: center;
 }
 .penombre-roll-dialog {
-  display: table;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .penombre-roll-dialog .line-1 {
-  width: 100%;
-  float: left;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
 }
-.penombre-roll-dialog .line-1 .part-left-1 {
-  width: 275px;
-  float: left;
+.penombre-roll-dialog .line-1 .part-left-1 fieldset .harmonique {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.penombre-roll-dialog .line-1 .part-left-1 fieldset {
-  display: table;
-  float: left;
-  width: 100%;
+.penombre-roll-dialog .line-1 .part-left-1 fieldset .harmonique label {
+  font-family: "CattedraleDemo";
+  font-size: 1.8rem;
+  width: 140px;
+  padding-right: 10px;
 }
-.penombre-roll-dialog .line-1 .part-left-1 fieldset label {
-  float: left;
-  width: 195px;
-}
-.penombre-roll-dialog .line-1 .part-left-1 fieldset input {
-  text-align: center;
-  float: left;
+.penombre-roll-dialog .line-1 .part-left-1 fieldset .harmonique input {
   width: 40px;
 }
-.penombre-roll-dialog .line-1 .part-left-1 fieldset .clearboth {
-  clear: both;
-}
-.penombre-roll-dialog .line-1 .part-left-1 fieldset .clearboth #deMerveilleux {
-  width: 20px;
-}
-.penombre-roll-dialog .line-1 .part-left-1 fieldset .clearboth label {
-  width: 80px;
-}
-.penombre-roll-dialog .line-1 .part-left-1 fieldset #formule {
-  text-align: left;
-  width: 230px;
+.penombre-roll-dialog .line-1 .part-left-1 fieldset .deMerveilleux {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .penombre-roll-dialog .line-1 .part-right-1 {
-  margin-left: 285px;
-  width: calc(100% - 285px);
+  display: flex;
+  flex-direction: column;
 }
-.penombre-roll-dialog .line-2 {
-  display: table;
-  clear: both;
-  width: 100%;
+.penombre-roll-dialog .line-1 .part-right-1 .difficulte {
+  margin: 0 4px 10px 0;
 }
-.penombre-roll-dialog .line-2 .defile-div {
-  border: solid;
-  border-width: 0.5px;
-  border-color: gray;
+.penombre-roll-dialog .line-1 .part-right-1 fieldset {
+  padding: 5px;
+}
+.penombre-roll-dialog .line-1 .part-right-1 .options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.penombre-roll-dialog .line-1 .part-right-1 .options input {
+  margin-right: 5px;
+}
+.penombre-roll-dialog .line-2 fieldset {
+  padding-top: 0;
+}
+.penombre-roll-dialog .line-2 fieldset .atouts {
   overflow-y: auto;
-  height: 125px;
 }
-.penombre-roll-dialog .line-2 .defile-div .atout.checked {
+.penombre-roll-dialog .line-2 fieldset .atouts .atout {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.penombre-roll-dialog .line-2 fieldset .atouts .atout.checked {
   background-color: #917f35;
   color: white;
 }
-.penombre-roll-dialog .line-2 .defile-div .atoutdata {
-  float: left;
-  width: 100%;
+.penombre-roll-dialog .line-2 fieldset .bonus-total {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
-.penombre-roll-dialog .line-2 .defile-div .atoutdata .nom {
-  width: 450px;
-  float: left;
+.penombre-roll-dialog .line-2 fieldset .bonus-total label {
+  margin-right: 10px;
 }
-.penombre-roll-dialog .line-2 .defile-div .atoutdata .level {
-  margin-left: 454px;
-  width: calc(100% - 454px);
-}
-.penombre-roll-dialog .line-2 .bonustotal {
-  float: left;
-  width: 100%;
-}
-.penombre-roll-dialog .line-2 .bonustotal label {
-  margin-left: 250px;
-  width: 235px;
-  float: left;
-}
-.penombre-roll-dialog .line-2 .bonustotal input {
+.penombre-roll-dialog .line-2 fieldset .bonus-total input {
   text-align: center;
-  float: left;
   width: 40px;
 }
 .penombre-roll-dialog .line-3 {
