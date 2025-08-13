@@ -1,6 +1,6 @@
 const { HandlebarsApplicationMixin } = foundry.applications.api
 
-export default class PouvoirSheet extends HandlebarsApplicationMixin(foundry.applications.sheets.ItemSheetV2) {
+export default class AtoutSheet extends HandlebarsApplicationMixin(foundry.applications.sheets.ItemSheetV2) {
   /** @override */
   static DEFAULT_OPTIONS = {
     classes: ["penombre", "atout"],
@@ -24,6 +24,8 @@ export default class PouvoirSheet extends HandlebarsApplicationMixin(foundry.app
 
   /** @override */
   async _prepareContext() {
+    const context = await super._prepareContext()
+
     context.fields = this.document.schema.fields
     context.systemFields = this.document.system.schema.fields
     context.systemSource = this.document.system._source
