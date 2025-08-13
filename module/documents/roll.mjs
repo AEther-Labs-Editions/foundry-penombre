@@ -9,7 +9,8 @@ export default class PenombreRoll extends Roll {
     const harmoniqueDice = options.rollValue
 
     const rollModes = Object.fromEntries(Object.entries(CONFIG.Dice.rollModes).map(([key, value]) => [key, game.i18n.localize(value.label)]))
-    const fieldRollMode = new foundry.data.fields.StringField({ choices: rollModes, blankdefault: "public" })
+    const defaultRollMode = game.settings.get("core", "rollMode")
+    const fieldRollMode = new foundry.data.fields.StringField({ choices: rollModes, blank: false, default: defaultRollMode })
 
     let formule = options.formule || (harmoniqueDice ? `1${harmoniqueDice}` : "1d20")
     const bonusAtouts = 0
@@ -38,6 +39,7 @@ export default class PenombreRoll extends Roll {
     let dialogContext = {
       actor,
       rollModes,
+      defaultRollMode,
       fieldRollMode,
       harmonique,
       harmoniqueDice,

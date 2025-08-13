@@ -73,7 +73,7 @@
         <label for="rollMode">{{localize "CHAT.RollDefault"}}</label>
         <div class="form-fields">
           <select name="rollMode" id="rollMode">
-            {{selectOptions rollModes selected=rollMode localize=true}}
+            {{selectOptions rollModes selected=defaultRollMode localize=true}}
           </select>
         </div>
       </div>
@@ -91,9 +91,9 @@
         <fieldset>
           <legend>Dépense automatique</legend>
           <div>            
-            <label>Conscience :</label>
+            <label>Conscience ({{maxJetonsConscience}})</label>
             {{formInput fieldJetonsConscience name="jetonsConscience" id="jetonsConscience"}}
-            <label>Réserve collégiale :</label>
+            <label>Réserve collégiale ({{maxJetonsReserve}})</label>
             {{formInput fieldJetonsReserve name="jetonsReserve" id="jetonsReserve"}}
           </div>
         </fieldset>
