@@ -406,6 +406,7 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 }
 .penombre.eminence .eminence-content .eminence-personnage .logo-frame .logo-img {
   border-radius: 6px;
+  width: 150px;
 }
 .penombre.eminence .eminence-content .eminence-personnage .data {
   float: left;
@@ -1038,6 +1039,9 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   display: flex;
   justify-content: space-between;
 }
+.penombre.atout .atout-content .standard-form .logo-frame .logo-img {
+  width: 80px;
+}
 .penombre.atout .atout-content .standard-form .logo-frame .name {
   width: calc(100% - 90px);
 }
@@ -1045,22 +1049,28 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   display: flex;
   justify-content: space-between;
 }
+.penombre.maitrise .maitrise-content .standard-form .logo-frame .logo-img {
+  width: 80px;
+}
 .penombre.maitrise .maitrise-content .standard-form .logo-frame .name {
   width: calc(100% - 90px);
 }
-.penombre.pouvoir .atout-content .standard-form .details {
+.penombre.pouvoir .pouvoir-content .standard-form .logo-frame {
   display: flex;
   justify-content: space-between;
 }
-.penombre.pouvoir .atout-content .standard-form .details select[name="system.type"] {
-  width: 100px;
+.penombre.pouvoir .pouvoir-content .standard-form .logo-frame .logo-img {
+  width: 80px;
 }
-.penombre.pouvoir .atout-content .standard-form .logo-frame {
-  display: flex;
-  justify-content: space-between;
-}
-.penombre.pouvoir .atout-content .standard-form .logo-frame .name {
+.penombre.pouvoir .pouvoir-content .standard-form .logo-frame .name {
   width: calc(100% - 90px);
+}
+.penombre.pouvoir .pouvoir-content .standard-form .details {
+  display: flex;
+  justify-content: space-between;
+}
+.penombre.pouvoir .pouvoir-content .standard-form .details select[name="system.type"] {
+  width: 100px;
 }
 #penombre-reserve-collegiale {
   padding: none;
