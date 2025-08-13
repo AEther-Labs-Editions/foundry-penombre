@@ -193,6 +193,9 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
         this.ton = SYSTEM.TONS.cassandre.id
         break
     }
+
+    // Contrôle de la valeur de la conscience qui ne doit pas dépasser le maximum
+    this.conscience.valeur = Math.clamp(this.conscience.valeur, 0, this.conscience.max)
   }
 
   get hasAtouts() {
