@@ -1048,18 +1048,18 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 .penombre.maitrise .maitrise-content .standard-form .logo-frame .name {
   width: calc(100% - 90px);
 }
-.penombre.pouvoir .pouvoir-content .standard-form .details {
+.penombre.pouvoir .atout-content .standard-form .details {
   display: flex;
   justify-content: space-between;
 }
-.penombre.pouvoir .pouvoir-content .standard-form .details select[name="system.type"] {
+.penombre.pouvoir .atout-content .standard-form .details select[name="system.type"] {
   width: 100px;
 }
-.penombre.pouvoir .pouvoir-content .standard-form .logo-frame {
+.penombre.pouvoir .atout-content .standard-form .logo-frame {
   display: flex;
   justify-content: space-between;
 }
-.penombre.pouvoir .pouvoir-content .standard-form .logo-frame .name {
+.penombre.pouvoir .atout-content .standard-form .logo-frame .name {
   width: calc(100% - 90px);
 }
 #penombre-reserve-collegiale {
@@ -1141,7 +1141,7 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   float: left;
 }
 .penombre-roll-dialog .line-1 .part-left-1 {
-  width: 270px;
+  width: 275px;
   float: left;
 }
 .penombre-roll-dialog .line-1 .part-left-1 fieldset {
@@ -1151,7 +1151,7 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 }
 .penombre-roll-dialog .line-1 .part-left-1 fieldset label {
   float: left;
-  width: 190px;
+  width: 195px;
 }
 .penombre-roll-dialog .line-1 .part-left-1 fieldset input {
   text-align: center;
@@ -1172,27 +1172,34 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   width: 230px;
 }
 .penombre-roll-dialog .line-1 .part-right-1 {
-  margin-left: 275px;
-  width: calc(100% - 275px);
+  margin-left: 285px;
+  width: calc(100% - 285px);
 }
 .penombre-roll-dialog .line-2 {
   display: table;
   clear: both;
   width: 100%;
 }
-.penombre-roll-dialog .line-2 .atout.checked {
+.penombre-roll-dialog .line-2 .defile-div {
+  border: solid;
+  border-width: 0.5px;
+  border-color: gray;
+  overflow-y: auto;
+  height: 125px;
+}
+.penombre-roll-dialog .line-2 .defile-div .atout.checked {
   background-color: #917f35;
   color: white;
 }
-.penombre-roll-dialog .line-2 .atoutdata {
+.penombre-roll-dialog .line-2 .defile-div .atoutdata {
   float: left;
   width: 100%;
 }
-.penombre-roll-dialog .line-2 .atoutdata .nom {
+.penombre-roll-dialog .line-2 .defile-div .atoutdata .nom {
   width: 450px;
   float: left;
 }
-.penombre-roll-dialog .line-2 .atoutdata .level {
+.penombre-roll-dialog .line-2 .defile-div .atoutdata .level {
   margin-left: 454px;
   width: calc(100% - 454px);
 }
@@ -1204,7 +1211,6 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   margin-left: 250px;
   width: 235px;
   float: left;
-  width: 80;
 }
 .penombre-roll-dialog .line-2 .bonustotal input {
   text-align: center;
@@ -1217,10 +1223,39 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   width: 100%;
 }
 .penombre-roll-dialog .line-3 .part-left-3 {
-  width: 270px;
+  width: 280px;
   float: left;
 }
+.penombre-roll-dialog .line-3 .part-left-3 .des-img {
+  float: left;
+  width: 100%;
+}
+.penombre-roll-dialog .line-3 .part-left-3 .des-img img {
+  width: 75px;
+  height: 75px;
+  float: left;
+}
+.penombre-roll-dialog .line-3 .part-left-3 .rollMode {
+  width: calc(100% - 10px);
+}
 .penombre-roll-dialog .line-3 .part-right-3 {
-  margin-left: 275px;
-  width: calc(100% - 275px);
+  margin-left: 285px;
+  width: calc(100% - 285px);
+}
+.penombre-roll-dialog .line-3 .part-right-3 .depensetotal {
+  float: left;
+  width: 100%;
+}
+.penombre-roll-dialog .line-3 .part-right-3 .depensetotal label {
+  width: 200px;
+  float: left;
+}
+.penombre-roll-dialog .line-3 .part-right-3 .depensetotal .form-fields {
+  float: left;
+  width: 40px;
+}
+.penombre-roll-dialog .line-3 .part-right-3 .depensetotal .form-fields input {
+  text-align: center;
+  float: left;
+  width: 40px;
 }
