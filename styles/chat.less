@@ -56,28 +56,53 @@
               grid-template-rows: 1fr;
             }
           }
+          .dice-tooltip {
+            cursor: var(--cursor-default);
+            .wrapper .reroll-container {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              .reroll.hidden {
+                display: none;
+              }
+            }
+          }
         }
         .dice-tooltip .dice-rolls .roll {
           background-image: none;
         }
-        li.roll.harmonique.die {
-          width: 48px;
-          height: 48px;
-          &.max {
-            filter: sepia(0.9) hue-rotate(10deg) saturate(0.8) brightness(0.85);
-          }
-          &.min {
-            filter: sepia(0.7) hue-rotate(-20deg) saturate(2) brightness(1);
+        section.harmonique {
+          li.roll.die {
+            width: 48px;
+            height: 48px;
+            &.rerollable {
+              cursor: var(--cursor-pointer);
+            }
+            &.max {
+              filter: sepia(0.9) hue-rotate(10deg) saturate(0.8) brightness(0.85);
+            }
+            &.min {
+              filter: sepia(0.7) hue-rotate(-20deg) saturate(2) brightness(1);
+            }
+            &.dice-selected {
+              border: solid 2px black;
+            }
           }
         }
-        li.roll.atout.die {
-          width: 48px;
-          height: 48px;
-          &.max {
-            filter: none;
-          }
-          &.min {
-            filter: none;
+        section.atout {
+          li.roll.die {
+            width: 48px;
+            height: 48px;
+            cursor: var(--cursor-pointer);
+            &.max {
+              filter: none;
+            }
+            &.min {
+              filter: none;
+            }
+            &.dice-selected {
+              border: solid 2px black;
+            }
           }
         }
       }

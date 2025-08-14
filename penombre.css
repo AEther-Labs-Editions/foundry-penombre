@@ -1325,33 +1325,60 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 #interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .dice-result.expanded .dice-tooltip {
   grid-template-rows: 1fr;
 }
+#interface #sidebar .chat-message .message-content .dice-roll.penombre .dice-result .dice-tooltip,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .dice-result .dice-tooltip {
+  cursor: var(--cursor-default);
+}
+#interface #sidebar .chat-message .message-content .dice-roll.penombre .dice-result .dice-tooltip .wrapper .reroll-container,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .dice-result .dice-tooltip .wrapper .reroll-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#interface #sidebar .chat-message .message-content .dice-roll.penombre .dice-result .dice-tooltip .wrapper .reroll-container .reroll.hidden,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .dice-result .dice-tooltip .wrapper .reroll-container .reroll.hidden {
+  display: none;
+}
 #interface #sidebar .chat-message .message-content .dice-roll.penombre .dice-tooltip .dice-rolls .roll,
 #interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .dice-tooltip .dice-rolls .roll {
   background-image: none;
 }
-#interface #sidebar .chat-message .message-content .dice-roll.penombre li.roll.harmonique.die,
-#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre li.roll.harmonique.die {
+#interface #sidebar .chat-message .message-content .dice-roll.penombre section.harmonique li.roll.die,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre section.harmonique li.roll.die {
   width: 48px;
   height: 48px;
 }
-#interface #sidebar .chat-message .message-content .dice-roll.penombre li.roll.harmonique.die.max,
-#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre li.roll.harmonique.die.max {
+#interface #sidebar .chat-message .message-content .dice-roll.penombre section.harmonique li.roll.die.rerollable,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre section.harmonique li.roll.die.rerollable {
+  cursor: var(--cursor-pointer);
+}
+#interface #sidebar .chat-message .message-content .dice-roll.penombre section.harmonique li.roll.die.max,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre section.harmonique li.roll.die.max {
   filter: sepia(0.9) hue-rotate(10deg) saturate(0.8) brightness(0.85);
 }
-#interface #sidebar .chat-message .message-content .dice-roll.penombre li.roll.harmonique.die.min,
-#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre li.roll.harmonique.die.min {
+#interface #sidebar .chat-message .message-content .dice-roll.penombre section.harmonique li.roll.die.min,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre section.harmonique li.roll.die.min {
   filter: sepia(0.7) hue-rotate(-20deg) saturate(2) brightness(1);
 }
-#interface #sidebar .chat-message .message-content .dice-roll.penombre li.roll.atout.die,
-#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre li.roll.atout.die {
+#interface #sidebar .chat-message .message-content .dice-roll.penombre section.harmonique li.roll.die.dice-selected,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre section.harmonique li.roll.die.dice-selected {
+  border: solid 2px black;
+}
+#interface #sidebar .chat-message .message-content .dice-roll.penombre section.atout li.roll.die,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre section.atout li.roll.die {
   width: 48px;
   height: 48px;
+  cursor: var(--cursor-pointer);
 }
-#interface #sidebar .chat-message .message-content .dice-roll.penombre li.roll.atout.die.max,
-#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre li.roll.atout.die.max {
+#interface #sidebar .chat-message .message-content .dice-roll.penombre section.atout li.roll.die.max,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre section.atout li.roll.die.max {
   filter: none;
 }
-#interface #sidebar .chat-message .message-content .dice-roll.penombre li.roll.atout.die.min,
-#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre li.roll.atout.die.min {
+#interface #sidebar .chat-message .message-content .dice-roll.penombre section.atout li.roll.die.min,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre section.atout li.roll.die.min {
   filter: none;
+}
+#interface #sidebar .chat-message .message-content .dice-roll.penombre section.atout li.roll.die.dice-selected,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre section.atout li.roll.die.dice-selected {
+  border: solid 2px black;
 }

@@ -1,9 +1,10 @@
-{{log 'dice-tooltip' this}}
+{{!log 'chat harmonique roll dice-tooltip' this}}
 {{#if parts.length}}
   <div class="dice-tooltip">
     <div class="wrapper">
-      {{#each parts as |part|}}
-            <section class="tooltip-part">
+      {{#each parts as |part id|}}
+            {{!log 'part' id part}}
+            <section class="tooltip-part{{#if @first}} harmonique{{else}} atout{{/if}}">
                 <div class="dice">
                     <header class="part-header flexrow">
                     {{#if part.icon}}
@@ -16,14 +17,17 @@
                     </header>
                     <ol class="dice-rolls">
                     {{#each part.rolls as |roll|}}
-                        <li class="roll {{#if @first}}harmonique{{else}}atout{{/if}} {{roll.classes}}">
-                            <img src="/systems/penombre/assets/ui/des_numerotes/d{{../faces}}_{{roll.result}}.png" alt="Dé {{roll.result}}">
+                    {{!log 'roll' roll @root ../id}}
+                        <li class="roll {{roll.classes}}" data-indice="{{@../index}}-{{@index}}">
+                            <img src="/systems/penombre/assets/ui/des_numerotes/d{{../faces}}_{{roll.result}}.png" alt="Dé {{roll.result}}" data-tooltip="{{roll.result}}" data-tooltip-direction="UP">
                         </li>
                     {{/each}}
                     </ol>
                 </div>
             </section>
       {{/each}}
+    <div class="reroll-container">
+      <button class="reroll hidden">Relancer les dés sélectionnés</button>
     </div>
   </div>
 {{/if}}

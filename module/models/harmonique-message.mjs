@@ -1,9 +1,8 @@
-const { ObjectField, SchemaField, NumberField, StringField, BooleanField, ArrayField } = foundry.data.fields
+const { SchemaField, NumberField, StringField, BooleanField, ArrayField } = foundry.data.fields
 import BaseMessageData from "./base-message.mjs"
 
 export default class HarmoniqueMessageData extends BaseMessageData {
   static defineSchema() {
-    const fields = foundry.data.fields
     return foundry.utils.mergeObject(super.defineSchema(), {
       harmonique: new StringField({
         required: true,
@@ -19,7 +18,7 @@ export default class HarmoniqueMessageData extends BaseMessageData {
       ),
       actionCollegiale: new BooleanField({ initial: false }),
       difficulte: new NumberField({ min: 0, max: 20 }),
-      result: new ObjectField(),
+      relanceFaite: new BooleanField({ initial: false }),
     })
   }
 }

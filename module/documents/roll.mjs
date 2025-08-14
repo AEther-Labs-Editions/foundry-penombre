@@ -251,6 +251,7 @@ export default class PenombreRoll extends Roll {
   }
   // #endregion Événements du prompt
 
+  /** @override */
   async _prepareChatRenderContext({ flavor, isPrivate = false, ...options } = {}) {
     const nbSucces = PenombreRoll.analyseRollResult(this)
     const hasDifficulte = this.options.difficulte !== ""
@@ -269,16 +270,43 @@ export default class PenombreRoll extends Roll {
     }
   }
 
+  /**
+   * Analyse le résultat d'un jet et calcule le nombre de succès.
+   * Chaque résultat de dé est divisé par 4 et arrondi à l'entier inférieur pour déterminer le nombre de succès par résultat.
+   *
+   * @param {Object} roll L'objet Roll contenant les résultats des dés.
+   * @returns {number} Le nombre total de succès calculé à partir du jet : 1 succès par tranche de 4 au dé
+   */
   static analyseRollResult(roll) {
     let nbSucces = 0
-    const dice = roll.dice
-    // Parcourir le tableau et l'afficher
-    for (const die of dice) {
-      console.log(die)
+    // Parcourt le tableau et calcule les succès
+    for (const die of roll.dice) {
       for (const r of die.results) {
         nbSucces += Math.floor(r.result / 4)
       }
     }
     return nbSucces
+  }
+
+  static async reroll(messageId, rerolledDices) {
+    const message = game.messages.get(messageId)
+    if (!message) {
+      return
+    }
+
+    // Vérifie que le message est un jet de dés de Pénombre
+    if (message.isRoll && message.rolls[0] && message.rolls[0] instanceof PenombreRoll) {
+      const roll = message.rolls[0]
+      if (roll) console.log("Pénombre | Rerolling dice", roll, rerolledDices)
+      for (const indice of rerolledDices) {
+        const [dieIndex, resultIndex] = indice.split("-").map(Number)
+        if (roll.dice[dieIndex] && roll.dice[dieIndex].results[resultIndex]) {
+          const formula = `1d${roll.dice[dieIndex].faces}`
+          const newDice = await new Roll(formula).evaluate()
+          roll.dice[dieIndex].results[resultIndex].result = newDice.result
+        }
+      }
+      await message.update({ rolls: [roll], "system.relanceFaite": true })
+    }
   }
 }

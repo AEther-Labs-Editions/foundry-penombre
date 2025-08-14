@@ -157,3 +157,39 @@ Hooks.on("updateSetting", async (setting, update, options, id) => {
     await game.settings.set(SYSTEM.ID, "reserveCollegiale", reserveCollegiale)
   }
 })
+
+Hooks.on("renderChatMessageHTML", (message, html, context) => {
+  console.log("Pénombre | Rendu du message de chat", message, html, context)
+
+  // Le bouton reroll n'est affiché pour le MJ ou le joueur à l'origine du message
+  if ((game.user.isGM || message.author.id === game.user.id) && !message.system.relanceFaite) {
+    html.querySelectorAll(".roll.die").forEach((btn) => {
+      btn.classList.add("rerollable")
+      btn.addEventListener("click", (ev) => {
+        ev.preventDefault()
+        ev.stopPropagation()
+        // Ajoute la classe css dice-selected
+        ev.currentTarget.classList.toggle("dice-selected")
+      })
+    })
+
+    html.querySelector(".reroll").classList.remove("hidden")
+
+    html.querySelector(".reroll").addEventListener("click", (ev) => {
+      ev.preventDefault()
+      ev.stopPropagation()
+      const messageId = ev.target.closest(".chat-message").dataset.messageId
+      let rerolledDices = []
+      // Remonter dans la structure html pour trouver les éléments dice-selected
+      ev.target
+        .closest(".chat-message")
+        .querySelectorAll(".dice-selected")
+        .forEach((selected) => {
+          rerolledDices.push(selected.dataset.indice)
+        })
+      // Pas de dé sélectionné
+      if (rerolledDices.length === 0) return
+      documents.PenombreRoll.reroll(messageId, rerolledDices)
+    })
+  }
+})
