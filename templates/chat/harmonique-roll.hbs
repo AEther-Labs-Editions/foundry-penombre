@@ -1,12 +1,17 @@
-<div class="dice-roll" data-action="expandRoll">
-  Jet d'harmonique : {{harmonique}}
-  Difficulté : {{difficulte}}
+<div class="dice-roll penombre">
+  Jet d'harmonique : {{harmonique}} <br>
+  Difficulté : {{difficulte}} <br>
+  Succès : {{nbSucces}}
+  {{#if icon}} 
+    <span class="part-method" data-tooltip aria-label="{{localize method}}">
+      {{{icon}}}
+    </span>
+  {{/if}}
   {{#if flavor}}
     <div class="dice-flavor">{{flavor}}</div>
   {{/if}}
-  <div class="dice-result">
+  <div class="dice-result" data-action="expandRoll">
     <div class="dice-formula">{{formula}}</div>
     {{{tooltip}}}
-    <h4 class="dice-total">{{total}}</h4>
   </div>
 </div>

@@ -4,6 +4,8 @@ export default class PenombreRoll extends Roll {
 
   static CHAT_TEMPLATE = "systems/penombre/templates/chat/harmonique-roll.hbs"
 
+  static TOOLTIP_TEMPLATE = "systems/penombre/templates/chat/dice-tooltip.hbs"
+
   static async prompt(options = {}) {
     const actor = options.actor || null
     if (!actor) return null
@@ -153,6 +155,8 @@ export default class PenombreRoll extends Roll {
 
     await roll.evaluate()
 
+    console.log("PenombreRoll roll", roll)
+
     return roll
   }
 
@@ -248,14 +252,29 @@ export default class PenombreRoll extends Roll {
   // #endregion Événements du prompt
 
   async _prepareChatRenderContext({ flavor, isPrivate = false, ...options } = {}) {
+    const nbSucces = PenombreRoll.analyseRollResult(this)
     return {
       harmonique: this.options.harmonique,
       difficulte: this.options.difficulte,
+      nbSucces,
       formula: isPrivate ? "???" : this._formula,
       flavor: isPrivate ? null : (flavor ?? this.options.flavor),
       user: game.user.id,
       tooltip: isPrivate ? "" : await this.getTooltip(),
       total: isPrivate ? "?" : Math.round(this.total * 100) / 100,
     }
+  }
+
+  static analyseRollResult(roll) {
+    let nbSucces = 0
+    const dice = roll.dice
+    // Parcourir le tableau et l'afficher
+    for (const die of dice) {
+      console.log(die)
+      for (const r of die.results) {
+        nbSucces += Math.floor(r.result / 4)
+      }
+    }
+    return nbSucces
   }
 }

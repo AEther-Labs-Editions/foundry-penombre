@@ -47,7 +47,46 @@
         flex-direction: row;
         align-items: center;
       }
-      .message-content {
+    }
+    .message-content {
+      .dice-roll.penombre {
+        .dice-result {
+          &.expanded {
+            .dice-tooltip {
+              grid-template-rows: 1fr;
+            }
+          }
+        }
+        .dice-tooltip .dice-rolls .roll {
+          min-width: 48px;
+          line-height: 48px;
+        }
+        li.roll.harmonique.die {
+          background-image: url(/systems/penombre/assets/ui/d6-vierge.png);
+          background-size: contain;
+          &.d4 {
+            background-image: url(/systems/penombre/assets/ui/d4-vierge.png);
+          }
+          &.d6 {
+            background-image: url(/systems/penombre/assets/ui/d6-vierge.png);
+          }
+          &.d8 {
+            background-image: url(/systems/penombre/assets/ui/d8-vierge.png);
+          }
+          &.d10 {
+            background-image: url(/systems/penombre/assets/ui/d10-vierge.png);
+          }
+          &.d12 {
+            background-image: url(/systems/penombre/assets/ui/d12-vierge.png);
+          }
+          &.d20 {
+            background-image: url(/systems/penombre/assets/ui/d20-vierge.png);
+          }
+        }
+        li.roll.atout.die {
+          background-image: url(/systems/penombre/assets/ui/d6-vierge.png);
+          background-size: contain;
+        }
       }
     }
   }
