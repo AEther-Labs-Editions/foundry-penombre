@@ -141,7 +141,7 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
       {
         name: `Ajouter / Perdre un jeton de conscience`,
         icon: `<i class="fa-regular fa-bolt"></i>`,
-        callback: (li) => {
+        callback: async (li) => {
           const index = li.dataset.index
           console.log(`EminenceSheet._getJetonConscienceContextOptions: index ${index}`)
           let jetons = foundry.utils.duplicate(this.document.system.conscience.jetons)
@@ -160,7 +160,7 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
               currentConscience++
               break
           }
-          this.document.update({ "system.conscience.jetons": jetons, "system.conscience.valeur": currentConscience })
+          await this.document.update({ "system.conscience.jetons": jetons, "system.conscience.valeur": currentConscience })
         },
       },
     ]
