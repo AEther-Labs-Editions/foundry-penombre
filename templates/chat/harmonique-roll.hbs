@@ -1,7 +1,16 @@
+{{log 'roll' this}}
 <div class="dice-roll penombre">
-  Jet d'harmonique : {{harmonique}} <br>
-  Difficulté : {{difficulte}} <br>
-  Succès : {{nbSucces}}
+  Jet d'harmonique {{localize (concat 'PENOMBRE.ui.' harmonique)}} <br>
+  {{#if hasDifficulte}}
+    Succès : {{nbSucces}} / Difficulté : {{difficulte}}
+    {{#if isSuccess}}
+        C'est une réussite !
+    {{else}}
+        C'est un échec !
+    {{/if}}
+  {{else}}
+    Succès : {{nbSucces}}
+  {{/if}}
   {{#if icon}} 
     <span class="part-method" data-tooltip aria-label="{{localize method}}">
       {{{icon}}}

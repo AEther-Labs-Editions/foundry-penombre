@@ -2,21 +2,23 @@
 {{#if parts.length}}
   <div class="dice-tooltip">
     <div class="wrapper">
-      {{#each parts}}
+      {{#each parts as |part|}}
             <section class="tooltip-part">
                 <div class="dice">
                     <header class="part-header flexrow">
-                    {{#if icon}}
-                        <span class="part-method" data-tooltip aria-label="{{localize method}}">
-                        {{{icon}}}
+                    {{#if part.icon}}
+                        <span class="part-method" data-tooltip aria-label="{{localize part.method}}">
+                        {{{part.icon}}}
                         </span>
                     {{/if}}
-                    <span class="part-formula">{{this.formula}}</span>
-                    {{#if this.flavor}}<span class="part-flavor">{{this.flavor}}</span>{{/if}}
+                    <span class="part-formula">{{part.formula}}</span>
+                    {{#if part.flavor}}<span class="part-flavor">{{part.flavor}}</span>{{/if}}
                     </header>
                     <ol class="dice-rolls">
-                    {{#each this.rolls}}
-                        <li class="roll {{#if @../first}}harmonique {{else}}atout {{/if}}{{this.classes}}">{{{this.result}}}</li>
+                    {{#each part.rolls as |roll|}}
+                        <li class="roll {{#if @first}}harmonique{{else}}atout{{/if}} {{roll.classes}}">
+                            <img src="/systems/penombre/assets/ui/des_numerotes/d{{../faces}}_{{roll.result}}.png" alt="Dé {{roll.result}}">
+                        </li>
                     {{/each}}
                     </ol>
                 </div>

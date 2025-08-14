@@ -253,10 +253,14 @@ export default class PenombreRoll extends Roll {
 
   async _prepareChatRenderContext({ flavor, isPrivate = false, ...options } = {}) {
     const nbSucces = PenombreRoll.analyseRollResult(this)
+    const hasDifficulte = this.options.difficulte !== ""
+    const isSuccess = hasDifficulte && nbSucces >= this.options.difficulte
     return {
       harmonique: this.options.harmonique,
+      hasDifficulte: this.options.difficulte !== "",
       difficulte: this.options.difficulte,
       nbSucces,
+      isSuccess,
       formula: isPrivate ? "???" : this._formula,
       flavor: isPrivate ? null : (flavor ?? this.options.flavor),
       user: game.user.id,

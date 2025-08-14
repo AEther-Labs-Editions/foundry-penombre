@@ -1324,40 +1324,31 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 }
 #interface #sidebar .chat-message .message-content .dice-roll.penombre .dice-tooltip .dice-rolls .roll,
 #interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .dice-tooltip .dice-rolls .roll {
-  min-width: 48px;
-  line-height: 48px;
+  background-image: none;
 }
 #interface #sidebar .chat-message .message-content .dice-roll.penombre li.roll.harmonique.die,
 #interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre li.roll.harmonique.die {
-  background-image: url(/systems/penombre/assets/ui/d6-vierge.png);
-  background-size: contain;
+  width: 48px;
+  height: 48px;
 }
-#interface #sidebar .chat-message .message-content .dice-roll.penombre li.roll.harmonique.die.d4,
-#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre li.roll.harmonique.die.d4 {
-  background-image: url(/systems/penombre/assets/ui/d4-vierge.png);
+#interface #sidebar .chat-message .message-content .dice-roll.penombre li.roll.harmonique.die.max,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre li.roll.harmonique.die.max {
+  filter: sepia(0.9) hue-rotate(10deg) saturate(0.8) brightness(0.85);
 }
-#interface #sidebar .chat-message .message-content .dice-roll.penombre li.roll.harmonique.die.d6,
-#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre li.roll.harmonique.die.d6 {
-  background-image: url(/systems/penombre/assets/ui/d6-vierge.png);
-}
-#interface #sidebar .chat-message .message-content .dice-roll.penombre li.roll.harmonique.die.d8,
-#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre li.roll.harmonique.die.d8 {
-  background-image: url(/systems/penombre/assets/ui/d8-vierge.png);
-}
-#interface #sidebar .chat-message .message-content .dice-roll.penombre li.roll.harmonique.die.d10,
-#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre li.roll.harmonique.die.d10 {
-  background-image: url(/systems/penombre/assets/ui/d10-vierge.png);
-}
-#interface #sidebar .chat-message .message-content .dice-roll.penombre li.roll.harmonique.die.d12,
-#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre li.roll.harmonique.die.d12 {
-  background-image: url(/systems/penombre/assets/ui/d12-vierge.png);
-}
-#interface #sidebar .chat-message .message-content .dice-roll.penombre li.roll.harmonique.die.d20,
-#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre li.roll.harmonique.die.d20 {
-  background-image: url(/systems/penombre/assets/ui/d20-vierge.png);
+#interface #sidebar .chat-message .message-content .dice-roll.penombre li.roll.harmonique.die.min,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre li.roll.harmonique.die.min {
+  filter: sepia(0.7) hue-rotate(-20deg) saturate(2) brightness(1);
 }
 #interface #sidebar .chat-message .message-content .dice-roll.penombre li.roll.atout.die,
 #interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre li.roll.atout.die {
-  background-image: url(/systems/penombre/assets/ui/d6-vierge.png);
-  background-size: contain;
+  width: 48px;
+  height: 48px;
+}
+#interface #sidebar .chat-message .message-content .dice-roll.penombre li.roll.atout.die.max,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre li.roll.atout.die.max {
+  filter: none;
+}
+#interface #sidebar .chat-message .message-content .dice-roll.penombre li.roll.atout.die.min,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre li.roll.atout.die.min {
+  filter: none;
 }
