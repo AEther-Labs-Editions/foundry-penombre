@@ -406,7 +406,10 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 }
 .penombre.eminence .eminence-content .eminence-personnage .logo-frame .logo-img {
   border-radius: 6px;
-  width: 150px;
+  height: 150px;
+  width: auto;
+  max-width: 100%;
+  display: block;
 }
 .penombre.eminence .eminence-content .eminence-personnage .data {
   float: left;
