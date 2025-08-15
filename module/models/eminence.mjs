@@ -193,9 +193,25 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
         this.ton = SYSTEM.TONS.cassandre.id
         break
     }
+  }
 
-    // Contrôle de la valeur de la conscience qui ne doit pas dépasser le maximum
-    this.conscience.valeur = Math.clamp(this.conscience.valeur, 0, this.conscience.max)
+  /** @override */
+  async _preUpdate(changed, options, user) {
+    if (foundry.utils.hasProperty(changed, "system.conscience.max")) {
+      // Si le nouveau max est inférieur à l'ancien max, il faut remettre tous les jetons intermédiaires au statut perdu
+      if (changed.system.conscience.max < this.conscience.max) {
+        const jetons = foundry.utils.duplicate(this.conscience.jetons)
+        for (let i = changed.system.conscience.max; i <= this.conscience.max && i < jetons.length; i++) {
+          jetons[i].statut = SYSTEM.JETON_STATUTS.perdu.id
+        }
+        foundry.utils.setProperty(changed, "system.conscience.jetons", jetons)
+      }
+      // Si la valeur de conscience est supérieure à la nouvelle valeur max, on la met à jour
+      if (this.conscience.valeur > changed.system.conscience.max) {
+        foundry.utils.setProperty(changed, "system.conscience.valeur", changed.system.conscience.max)
+      }
+    }
+    return super._preUpdate(changed, options, user)
   }
 
   get hasAtouts() {

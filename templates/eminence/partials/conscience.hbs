@@ -24,7 +24,7 @@
       <!-- Jetons-->
       <div class="div-jetons" data-tooltip="{{localize 'PENOMBRE.ui.clicJetons'}}">
           {{#each jetons as |jeton id|}}
-            {{#if (lt id @root.system.conscience.valeur)}}
+            {{#if (or (eq jeton.statut 'actif') (eq jeton.statut 'inactif'))}}
               <img class="jeton jeton-contextmenu dropshadow-{{jeton.statut}}" data-action="jeton" data-index="{{@index}}" src="{{getJetonImage jeton.statut}}"></img>
             {{else}}
               <img class="jeton jeton-contextmenu" data-index="{{@index}}" src="systems/penombre/assets/ui/cercle.png"></img>
