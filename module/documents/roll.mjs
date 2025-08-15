@@ -102,6 +102,12 @@ export default class PenombreRoll extends Roll {
           harmoniqueSelect.addEventListener("change", this._onChangeHarmonique.bind(this))
         }
 
+        // Action collégiale
+        const actionCollegiale = dialog.element.querySelector("#actionCollegiale")
+        if (actionCollegiale) {
+          actionCollegiale.addEventListener("change", this._onToggleActionCollegiale.bind(this))
+        }
+
         // Atouts
         const inputs = dialog.element.querySelectorAll(".atout")
         if (inputs) {
@@ -151,6 +157,11 @@ export default class PenombreRoll extends Roll {
       formule: rollContext.formule,
     }
 
+    /**
+     * @param {string} formula    The string formula to parse
+     * @param {object} data       The data object against which to parse attributes within the formula
+     * @param {RollOptions} [options]  Options modifying or describing the Roll
+     */
     const roll = new this(formule, options.data, rollOptions)
 
     await roll.evaluate()
@@ -166,6 +177,10 @@ export default class PenombreRoll extends Roll {
     document.querySelector("#harmonique-label").textContent = game.i18n.localize(`PENOMBRE.ui.${event.target.options[event.target.selectedIndex].value}`)
   }
 
+  static _onToggleActionCollegiale(event) {
+    PenombreRoll._updateNbJetons()
+  }
+
   static _onToggleAtout(event) {
     let item = event.currentTarget.closest(".atout")
     item.classList.toggle("checked")
@@ -174,8 +189,7 @@ export default class PenombreRoll extends Roll {
     document.querySelector("#bonusAtouts").value = bonusTotal
 
     // Calcul du nombre de jetons à dépenser
-    const jetons = Math.max(document.querySelectorAll(".atout.checked").length - 1, 0)
-    document.querySelector("#jetons").value = jetons
+    const jetons = PenombreRoll._updateNbJetons()
     PenombreRoll._updateFormula()
 
     // Vérification des conditions de lancement
@@ -249,6 +263,13 @@ export default class PenombreRoll extends Roll {
     }
     document.querySelector("#formule").value = formule
   }
+
+  static _updateNbJetons() {
+    const jetons = Math.max(document.querySelectorAll(".atout.checked").length - 1, 0)
+    const actionCollegiale = document.querySelector("#actionCollegiale").checked
+    document.querySelector("#jetons").value = jetons + (actionCollegiale ? 1 : 0)
+    return jetons
+  }
   // #endregion Événements du prompt
 
   /** @override */
@@ -258,6 +279,7 @@ export default class PenombreRoll extends Roll {
     const isSuccess = hasDifficulte && nbSucces >= this.options.difficulte
     return {
       harmonique: this.options.harmonique,
+      actionCollegiale: this.options.actionCollegiale,
       hasDifficulte: this.options.difficulte !== "",
       difficulte: this.options.difficulte,
       nbSucces,
