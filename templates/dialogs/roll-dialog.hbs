@@ -91,9 +91,9 @@
         <fieldset>
           <legend>Dépense automatique</legend>
           <div>            
-            <label>Conscience ({{maxJetonsConscience}})</label>
+            <label>Conscience <span data-tooltip="Nombre de jetons de conscience restant" data-tooltip-direction="UP">({{maxJetonsConscience}})</span></label>
             {{formInput fieldJetonsConscience name="jetonsConscience" id="jetonsConscience"}}
-            <label>Réserve collégiale ({{maxJetonsReserve}})</label>
+            <label>Réserve collégiale <span data-tooltip="Nombre de jetons restant dans la réserve collégiale au moment de l'ouverture de cette fenêtre" data-tooltip-direction="UP">({{maxJetonsReserve}})</span></label>
             {{formInput fieldJetonsReserve name="jetonsReserve" id="jetonsReserve"}}
           </div>
         </fieldset>

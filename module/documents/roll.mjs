@@ -101,13 +101,11 @@ export default class PenombreRoll extends Roll {
         if (harmoniqueSelect) {
           harmoniqueSelect.addEventListener("change", this._onChangeHarmonique.bind(this))
         }
-
         // Action collégiale
         const actionCollegiale = dialog.element.querySelector("#actionCollegiale")
         if (actionCollegiale) {
           actionCollegiale.addEventListener("change", this._onToggleActionCollegiale.bind(this))
         }
-
         // Atouts
         const inputs = dialog.element.querySelectorAll(".atout")
         if (inputs) {
@@ -237,7 +235,9 @@ export default class PenombreRoll extends Roll {
     const reserveCollegiale = game.settings.get("penombre", "reserveCollegiale")
     const nbJetonsRestantsReserveCollegiale = reserveCollegiale.nbJetonsRestants
     if (jetonsReserve > nbJetonsRestantsReserveCollegiale) {
-      ui.notifications.warn(game.i18n.format("PENOMBRE.warnings.jetonsReserveInsuffisants", { actuel: nbJetonsRestantsReserveCollegiale, demande: jetonsReserve }))
+      ui.notifications.warn(game.i18n.format("PENOMBRE.warnings.jetonsReserveInsuffisants", { actuel: nbJetonsRestantsReserveCollegiale, demande: jetonsReserve }), {
+        permanent: true,
+      })
       canRoll = false
     }
 
