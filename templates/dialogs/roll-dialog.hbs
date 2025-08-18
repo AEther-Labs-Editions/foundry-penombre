@@ -1,4 +1,4 @@
-{{!log "roll-dialog" this}}
+{{log "roll-dialog" this}}
 <div class="penombre-roll-dialog" data-actor-id="{{actor.id}}">
 
   <div class="line-1">
@@ -18,20 +18,22 @@
     </div>
 
     <div class="part-right-1">
-      <div class="form-group difficulte">
-        <label for="difficulte">{{localize "PENOMBRE.ui.difficulte"}}</label>
-        <div class="form-fields">
-          <select name="difficulte" id="difficulte">
-            {{selectOptions choiceDifficulte selected=difficulte localize=true blank=""}}
-          </select>
+      {{#if (eq messageType "principal")}}
+        <div class="form-group difficulte">
+          <label for="difficulte">{{localize "PENOMBRE.ui.difficulte"}}</label>
+          <div class="form-fields">
+            <select name="difficulte" id="difficulte">
+              {{selectOptions choiceDifficulte selected=difficulte localize=true blank=""}}
+            </select>
+          </div>
         </div>
-      </div>
-      <fieldset>
-        <div class="options">
-          <input type="checkbox" name="actionCollegiale" id="actionCollegiale"/><label>Action collégiale</label>
-          <input type="checkbox" name="effetMagique" id="effetMagique"/><label>Effet magique</label>
-        </div>
-      </fieldset>
+        <fieldset>
+          <div class="options">
+            <input type="checkbox" name="actionCollegiale" id="actionCollegiale"/><label>Action collégiale</label>
+            <input type="checkbox" name="effetMagique" id="effetMagique"/><label>Effet magique</label>
+          </div>
+        </fieldset>
+      {{/if}}
     </div>
   </div>
 

@@ -1,3 +1,5 @@
+import PenombreRoll from "./roll.mjs"
+
 export default class PenombreMessage extends ChatMessage {
   /** @inheritDoc */
   async renderHTML({ canDelete, canClose = false, ...rest } = {}) {
@@ -48,5 +50,38 @@ export default class PenombreMessage extends ChatMessage {
 
     const sender = html.querySelector(".message-sender")
     sender?.replaceChildren(avatar, name)
+  }
+
+  static async _handleQueryMessageParticipation({ existingMessageId, actorId, answer, nbSucces, newMessageId }) {
+    const message = game.messages.get(existingMessageId)
+    let newMessage
+    if (newMessageId) {
+      newMessage = game.messages.get(newMessageId)
+    }
+    if (!message) return
+
+    // Vérifie que le message est un jet de dés de Pénombre
+    if (message.isRoll && message.rolls[0] && message.rolls[0] instanceof PenombreRoll) {
+      console.log("Pénombre | Participation au jet", existingMessageId, actorId, answer, nbSucces, newMessageId)
+      // Met à jour la réponse de l'acteur dans le message
+      if (answer) {
+        // Si la réponse est positive, on enregistre le nombre de succès
+        const nbSucces = PenombreRoll.analyseRollResult(newMessage.rolls[0])
+        const roll = message.rolls[0]
+        roll.options.messagesLies[actorId] = {
+          nbSucces: nbSucces,
+        }
+        await message.update({
+          [`system.messagesLies.${actorId}.messageId`]: newMessageId,
+          [`system.messagesLies.${actorId}.reponseFaite`]: true,
+          [`system.messagesLies.${actorId}.nbSucces`]: nbSucces,
+          rolls: [roll],
+        })
+      } else {
+        await message.update({
+          [`system.messagesLies.${actorId}.reponseFaite`]: true,
+        })
+      }
+    }
   }
 }
