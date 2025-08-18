@@ -310,6 +310,13 @@ export default class PenombreRoll extends Roll {
     return nbSucces
   }
 
+  /**
+   * Relance les résultats de dés spécifiés dans un message de jet Pénombre et met à jour le message.
+   *
+   * @param {string} messageId L'identifiant du message de chat contenant le jet à relancer.
+   * @param {string[]} rerolledDices Tableau des indices de dés à relancer, format "dieIndex-resultIndex".
+   * @returns {Promise<void>} Résout lorsque la relance et la mise à jour du message sont terminées.
+   */
   static async reroll(messageId, rerolledDices) {
     const message = game.messages.get(messageId)
     if (!message) {
