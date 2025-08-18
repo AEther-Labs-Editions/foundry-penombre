@@ -203,6 +203,7 @@ export default class PenombreRoll extends Roll {
   }
 
   static _onToggleDeMerveilleux(event) {
+    PenombreRoll._updateNbJetons()
     PenombreRoll._updateFormula()
   }
 
@@ -267,7 +268,8 @@ export default class PenombreRoll extends Roll {
   static _updateNbJetons() {
     const jetons = Math.max(document.querySelectorAll(".atout.checked").length - 1, 0)
     const actionCollegiale = document.querySelector("#actionCollegiale").checked
-    document.querySelector("#jetons").value = jetons + (actionCollegiale ? 1 : 0)
+    const deMerveilleux = document.querySelector("#deMerveilleux").checked
+    document.querySelector("#jetons").value = jetons + (actionCollegiale ? 1 : 0) + (deMerveilleux ? 1 : 0)
     return jetons
   }
   // #endregion Événements du prompt
