@@ -1,4 +1,4 @@
-{{!log 'chat harmonique roll dice-tooltip' this}}
+{{log 'chat harmonique-roll dice-tooltip' this}}
 {{#if parts.length}}
   <div class="dice-tooltip">
     <div class="wrapper">
@@ -26,8 +26,10 @@
                 </div>
             </section>
       {{/each}}
-    <div class="reroll-container">
-      <button class="reroll hidden">Relancer les dés sélectionnés</button>
+      <div class="reroll-container">
+        <button class="reroll-conscience hidden">Relance (Conscience)</button>
+        <button class="reroll-reserve hidden">Relance (Réserve)</button>
+      </div>    
     </div>
   </div>
 {{/if}}

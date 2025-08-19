@@ -1321,6 +1321,16 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   flex-direction: row;
   align-items: center;
 }
+#interface #sidebar .chat-message .message-content .dice-roll.penombre .participate-container,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .participate-container {
+  display: flex;
+  justify-content: space-between;
+}
+#interface #sidebar .chat-message .message-content .dice-roll.penombre .participate-container button,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .participate-container button {
+  flex: 1;
+  margin: 0 4px;
+}
 #interface #sidebar .chat-message .message-content .dice-roll.penombre .dice-result.expanded .dice-tooltip,
 #interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .dice-result.expanded .dice-tooltip {
   grid-template-rows: 1fr;
@@ -1335,8 +1345,12 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   align-items: center;
   justify-content: center;
 }
-#interface #sidebar .chat-message .message-content .dice-roll.penombre .dice-result .dice-tooltip .wrapper .reroll-container .reroll.hidden,
-#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .dice-result .dice-tooltip .wrapper .reroll-container .reroll.hidden {
+#interface #sidebar .chat-message .message-content .dice-roll.penombre .dice-result .dice-tooltip .wrapper .reroll-container .reroll-conscience.hidden,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .dice-result .dice-tooltip .wrapper .reroll-container .reroll-conscience.hidden {
+  display: none;
+}
+#interface #sidebar .chat-message .message-content .dice-roll.penombre .dice-result .dice-tooltip .wrapper .reroll-container .reroll-reserve.hidden,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .dice-result .dice-tooltip .wrapper .reroll-container .reroll-reserve.hidden {
   display: none;
 }
 #interface #sidebar .chat-message .message-content .dice-roll.penombre .dice-tooltip .dice-rolls .roll,

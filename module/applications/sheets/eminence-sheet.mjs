@@ -288,7 +288,7 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
     const harmonique = dataset.harmonique
     console.log(`EminenceSheet.#onClicHarmonique: harmonique ${harmonique}`)
 
-    await this.actor.rollHarmonique(harmonique)
+    await this.actor.rollHarmonique({ harmonique })
   }
 
   static async #onCreateItem(event, target) {

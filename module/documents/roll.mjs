@@ -7,6 +7,8 @@ export default class PenombreRoll extends Roll {
   static TOOLTIP_TEMPLATE = "systems/penombre/templates/chat/dice-tooltip.hbs"
 
   static async prompt(options = {}) {
+    const messageType = options.messageType || "principal"
+    let messagesLies = {}
     const actor = options.actor || null
     if (!actor) return null
     const harmonique = options.harmonique || null
@@ -42,6 +44,7 @@ export default class PenombreRoll extends Roll {
 
     let dialogContext = {
       actor,
+      messageType,
       rollModes,
       defaultRollMode,
       fieldRollMode,
@@ -148,8 +151,11 @@ export default class PenombreRoll extends Roll {
     formule = rollContext.formule || formule
 
     const rollOptions = {
+      messageType,
+      messagesLies,
+      actorId: actor.id,
       harmonique: rollContext.harmonique,
-      actionCollegiale: rollContext.actionCollegiale,
+      actionCollegiale: messageType === "principal" ? rollContext.actionCollegiale : true,
       difficulte: rollContext.difficulte,
       rollMode: rollContext.rollMode,
       formule: rollContext.formule,
@@ -203,6 +209,7 @@ export default class PenombreRoll extends Roll {
   }
 
   static _onToggleDeMerveilleux(event) {
+    PenombreRoll._updateNbJetons()
     PenombreRoll._updateFormula()
   }
 
@@ -266,8 +273,9 @@ export default class PenombreRoll extends Roll {
 
   static _updateNbJetons() {
     const jetons = Math.max(document.querySelectorAll(".atout.checked").length - 1, 0)
-    const actionCollegiale = document.querySelector("#actionCollegiale").checked
-    document.querySelector("#jetons").value = jetons + (actionCollegiale ? 1 : 0)
+    const actionCollegiale = document.querySelector("#actionCollegiale")?.checked ?? false
+    const deMerveilleux = document.querySelector("#deMerveilleux").checked
+    document.querySelector("#jetons").value = jetons + (actionCollegiale ? 1 : 0) + (deMerveilleux ? 1 : 0)
     return jetons
   }
   // #endregion Événements du prompt
@@ -276,10 +284,32 @@ export default class PenombreRoll extends Roll {
   async _prepareChatRenderContext({ flavor, isPrivate = false, ...options } = {}) {
     const nbSucces = PenombreRoll.analyseRollResult(this)
     const hasDifficulte = this.options.difficulte !== ""
-    const isSuccess = hasDifficulte && nbSucces >= this.options.difficulte
+    const actorIdSource = this.options.actorId
+    const actorId = game.user.character?.id
+
+    // { actorId: {nbSuccess}}
+    const messagesLies = this.options.messagesLies
+    let autresSucces = []
+    if (messagesLies) {
+      // Parcourir messagesLies pour extraire un tableau de {actorId, nbSucces}
+      autresSucces = Object.entries(messagesLies).map(([id, value]) => ({
+        actor: game.actors.get(id).name,
+        nbSucces: value.nbSucces,
+      }))
+    }
+    const hasAutresSucces = autresSucces.length > 0
+    const totalSucces = nbSucces + autresSucces.reduce((acc, curr) => acc + curr.nbSucces, 0)
+
+    const isSuccess = hasDifficulte && totalSucces >= this.options.difficulte
+
     return {
+      messageType: this.options.messageType,
+      hasAutresSucces,
+      autresSucces,
+      totalSucces,
       harmonique: this.options.harmonique,
       actionCollegiale: this.options.actionCollegiale,
+      isActionPrincipale: this.options.messageType === "principal",
       hasDifficulte: this.options.difficulte !== "",
       difficulte: this.options.difficulte,
       nbSucces,
@@ -287,6 +317,7 @@ export default class PenombreRoll extends Roll {
       formula: isPrivate ? "???" : this._formula,
       flavor: isPrivate ? null : (flavor ?? this.options.flavor),
       user: game.user.id,
+      peutParticiper: actorIdSource !== actorId,
       tooltip: isPrivate ? "" : await this.getTooltip(),
       total: isPrivate ? "?" : Math.round(this.total * 100) / 100,
     }
@@ -310,6 +341,13 @@ export default class PenombreRoll extends Roll {
     return nbSucces
   }
 
+  /**
+   * Relance les résultats de dés spécifiés dans un message de jet Pénombre et met à jour le message.
+   *
+   * @param {string} messageId L'identifiant du message de chat contenant le jet à relancer.
+   * @param {string[]} rerolledDices Tableau des indices de dés à relancer, format "dieIndex-resultIndex".
+   * @returns {Promise<void>} Résout lorsque la relance et la mise à jour du message sont terminées.
+   */
   static async reroll(messageId, rerolledDices) {
     const message = game.messages.get(messageId)
     if (!message) {
@@ -325,7 +363,7 @@ export default class PenombreRoll extends Roll {
         if (roll.dice[dieIndex] && roll.dice[dieIndex].results[resultIndex]) {
           const formula = `1d${roll.dice[dieIndex].faces}`
           const newDice = await new Roll(formula).evaluate()
-          roll.dice[dieIndex].results[resultIndex].result = newDice.result
+          roll.dice[dieIndex].results[resultIndex].result = parseInt(newDice.result)
         }
       }
       await message.update({ rolls: [roll], "system.relanceFaite": true })

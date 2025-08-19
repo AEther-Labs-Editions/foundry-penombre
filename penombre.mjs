@@ -34,6 +34,7 @@ Hooks.once("init", function () {
 
   CONFIG.queries["penombre.updateReserveCollegiale"] = applications.PenombreReserveCollegiale._handleQueryUpdateReserveCollegiale
   CONFIG.queries["penombre.updateReserveCollegialeFromRoll"] = applications.PenombreReserveCollegiale._handleQueryUpdateReserveCollegialeFromRoll
+  CONFIG.queries["penombre.updateMessageParticipation"] = documents.PenombreMessage._handleQueryMessageParticipation
 
   CONFIG.Dice.rolls.push(documents.PenombreRoll)
 
@@ -161,8 +162,8 @@ Hooks.on("updateSetting", async (setting, update, options, id) => {
 Hooks.on("renderChatMessageHTML", (message, html, context) => {
   console.log("Pénombre | Rendu du message de chat", message, html, context)
 
-  // Le bouton reroll n'est affiché pour le MJ ou le joueur à l'origine du message
-  if ((game.user.isGM || message.author.id === game.user.id) && !message.system.relanceFaite) {
+  // Les boutons reroll n'est affiché pour le MJ ou le joueur à l'origine du message
+  if ((game.user.isGM || message.isAuthor) && !message.system.relanceFaite) {
     html.querySelectorAll(".roll.die").forEach((btn) => {
       btn.classList.add("rerollable")
       btn.addEventListener("click", (ev) => {
@@ -173,23 +174,126 @@ Hooks.on("renderChatMessageHTML", (message, html, context) => {
       })
     })
 
-    html.querySelector(".reroll").classList.remove("hidden")
+    // S'il reste au moins un jeton de conscience
+    const actor = game.actors.get(message.speaker.actor)
+    if (actor && actor.system.nbJetonsRestants > 0) {
+      html.querySelector(".reroll-conscience").classList.remove("hidden")
 
-    html.querySelector(".reroll").addEventListener("click", (ev) => {
+      html.querySelector(".reroll-conscience").addEventListener("click", async (ev) => {
+        ev.preventDefault()
+        ev.stopPropagation()
+        const messageId = ev.target.closest(".chat-message").dataset.messageId
+        if (!messageId) return
+        let rerolledDices = []
+        // Remonter dans la structure html pour trouver les éléments dice-selected
+        ev.target
+          .closest(".chat-message")
+          .querySelectorAll(".dice-selected")
+          .forEach((selected) => {
+            rerolledDices.push(selected.dataset.indice)
+          })
+        // Pas de dé sélectionné
+        if (rerolledDices.length === 0) return
+
+        // On vérifie qu'il reste un jeton de la réserve de conscience
+        if (actor.system.nbJetonsRestants === 0) {
+          ui.notifications.warn(game.i18n.format("PENOMBRE.warnings.jetonsConscienceInsuffisants", { actuel: 0, demande: 1 }))
+          return
+        }
+
+        // Dépense d'un jeton de conscience et relance
+        const depense = actor.system.depenserJetons(1)
+        await documents.PenombreRoll.reroll(messageId, rerolledDices)
+
+        // Si c'est un message lié, mettre à jour le message principal
+        if (message.system.actionCollegialeMessageLie && message.system.idMessageOrigine) {
+          await game.users.activeGM.query("penombre.updateMessageParticipation", {
+            existingMessageId: message.system.idMessageOrigine,
+            actorId: actor.id,
+            answer: true,
+            newMessageId: messageId,
+          })
+        }
+      })
+    }
+
+    // S'il reste au moins un jeton dans la réserve collégiale
+    let reserveCollegiale = game.settings.get(SYSTEM.ID, "reserveCollegiale")
+    if (reserveCollegiale.nbJetonsRestants > 0) {
+      html.querySelector(".reroll-reserve").classList.remove("hidden")
+
+      html.querySelector(".reroll-reserve").addEventListener("click", async (ev) => {
+        ev.preventDefault()
+        ev.stopPropagation()
+        const messageId = ev.target.closest(".chat-message").dataset.messageId
+        if (!messageId) return
+        let rerolledDices = []
+        // Remonter dans la structure html pour trouver les éléments dice-selected
+        ev.target
+          .closest(".chat-message")
+          .querySelectorAll(".dice-selected")
+          .forEach((selected) => {
+            rerolledDices.push(selected.dataset.indice)
+          })
+        // Pas de dé sélectionné
+        if (rerolledDices.length === 0) return
+
+        // On vérifie qu'il reste un jeton dans la réserve collégiale
+        reserveCollegiale = game.settings.get(SYSTEM.ID, "reserveCollegiale")
+        if (reserveCollegiale.nbJetonsRestants === 0) {
+          ui.notifications.warn(game.i18n.format("PENOMBRE.warnings.jetonsReserveInsuffisants", { actuel: 0, demande: 1 }), {
+            permanent: true,
+          })
+          return
+        }
+
+        // Dépense d'un jeton de la réserve et relance
+        await game.users.activeGM.query("penombre.updateReserveCollegialeFromRoll", { nbJetons: 1 })
+        await documents.PenombreRoll.reroll(messageId, rerolledDices)
+
+        // Si c'est un message lié, mettre à jour le message principal
+        if (message.system.actionCollegialeMessageLie && message.system.idMessageOrigine) {
+          await game.users.activeGM.query("penombre.updateMessageParticipation", {
+            existingMessageId: message.system.idMessageOrigine,
+            actorId: actor.id,
+            answer: true,
+            newMessageId: messageId,
+          })
+        }
+      })
+    }
+  }
+
+  // Les boutons pour participer à un jet collégial sont visibles par tous les autres joueurs
+  if (message.system.actionCollegiale && !message.system.actionCollegialeMessageLie && !message.isAuthor) {
+    html.querySelector(".participate-yes").classList.remove("hidden")
+    html.querySelector(".participate-no").classList.remove("hidden")
+
+    const currentActorId = game.user.character?.id
+
+    html.querySelector(".participate-yes").addEventListener("click", async (ev) => {
       ev.preventDefault()
       ev.stopPropagation()
       const messageId = ev.target.closest(".chat-message").dataset.messageId
-      let rerolledDices = []
-      // Remonter dans la structure html pour trouver les éléments dice-selected
-      ev.target
-        .closest(".chat-message")
-        .querySelectorAll(".dice-selected")
-        .forEach((selected) => {
-          rerolledDices.push(selected.dataset.indice)
+      const message = game.messages.get(messageId)
+      const harmonique = message.system.harmonique
+      const actor = game.actors.get(currentActorId)
+      const chatMessage = await actor.rollHarmonique({ harmonique, messageType: "lie", idMessageOrigine: messageId })
+      if (chatMessage) {
+        await game.users.activeGM.query("penombre.updateMessageParticipation", {
+          existingMessageId: messageId,
+          actorId: currentActorId,
+          answer: true,
+          newMessageId: chatMessage.id,
         })
-      // Pas de dé sélectionné
-      if (rerolledDices.length === 0) return
-      documents.PenombreRoll.reroll(messageId, rerolledDices)
+      }
+    })
+
+    html.querySelector(".participate-no").addEventListener("click", async (ev) => {
+      ev.preventDefault()
+      ev.stopPropagation()
+      const messageId = ev.target.closest(".chat-message").dataset.messageId
+      await game.users.activeGM.query("penombre.updateMessageParticipation", { existingMessageId: messageId, actorId: currentActorId, answer: false })
     })
   }
 })
