@@ -1,12 +1,17 @@
 {
   "TYPES": {
     "Actor": {
-      "eminence": "Éminence grise"
+      "eminence": "Éminence grise",
+      "adversaire": "Adversaire"
     },
     "Item": {
       "pouvoir": "Pouvoir",
       "atout": "Atout",
-      "maitrise": "Maitrise magique"
+      "maitrise": "Maitrise magique",
+      "description": "Description",
+      "actionAdverse": "Action adverse",
+      "actionDissonance": "Action de dissonance",
+      "intrigue": "Intrigue"
     }
   },
   "PENOMBRE": {
@@ -14,7 +19,12 @@
       "eminence": "Feuille d'Éminence grise",
       "pouvoir": "Feuille de Pouvoir",
       "atout": "Feuille d'Atout",
-      "maitrise": "Feuille de Maitrise magique"
+      "maitrise": "Feuille de Maitrise magique",
+      "adversaire": "Feuille d'Adversaire",
+      "description": "Feuille de Description",
+      "actionAdverse": "Feuille d'Action adverse",
+      "actionDissonance": "Feuille d'Action de dissonance",
+      "intrigue": "Feuille d'Intrigue"
     },
     "Eminence": {
       "FIELDS": {
@@ -288,6 +298,52 @@
       },
       "perdu": {
         "label": "Perdu"
+      }
+    },
+    "Adversaire": {
+      "FIELDS": {
+        "adversite": {
+          "valeur": {
+            "label": "Adversité"
+          },
+          "max": {
+            "label": "Adversité Max"
+          }
+        },
+        "resilience": {
+          "label": "Résilience"
+        },
+        "dissonance": {
+          "label": "Dissonance"
+        }
+      }
+    },
+    "Description": {
+      "FIELDS": {
+        "description": {
+          "label": "Description"
+        }
+      }
+    },
+    "ActionAdverse": {
+      "FIELDS": {
+        "description": {
+          "label": "Description"
+        }
+      }
+    },
+    "ActionDissonance": {
+      "FIELDS": {
+        "description": {
+          "label": "Description"
+        }
+      }
+    },
+    "Intrigue": {
+      "FIELDS": {
+        "description": {
+          "label": "Description"
+        }
       }
     },
     "ui": {
