@@ -21,6 +21,7 @@ Hooks.once("init", function () {
   }
   foundry.documents.collections.Actors.unregisterSheet("core", foundry.appv1.sheets.ActorSheet)
   foundry.documents.collections.Actors.registerSheet(SYSTEM.ID, applications.EminenceSheet, { types: ["eminence"], label: "PENOMBRE.Feuille.eminence", makeDefault: true })
+  foundry.documents.collections.Actors.registerSheet(SYSTEM.ID, applications.AdversaireSheet, { types: ["adversaire"], label: "PENOMBRE.Feuille.adversaire", makeDefault: true })
 
   CONFIG.Item.documentClass = documents.PenombreItem
   CONFIG.Item.dataModels = {
