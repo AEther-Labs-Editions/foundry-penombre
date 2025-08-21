@@ -151,6 +151,20 @@ body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-
   float: left;
   width: 212px;
 }
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .col-1-2 div,
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div {
+  display: table;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .col-1-2 div span,
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div span {
+  float: none;
+  clear: both;
+  height: 15px;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .col-1-2 div span.description,
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div span.description {
+  height: auto;
+}
 body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .col-2-2,
 body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 {
   float: left;

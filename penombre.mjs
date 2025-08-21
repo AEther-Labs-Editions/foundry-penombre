@@ -17,32 +17,40 @@ Hooks.once("init", function () {
   CONFIG.Actor.documentClass = documents.PenombreActor
   CONFIG.Actor.dataModels = {
     eminence: models.PenombreEminence,
+    /*
     adversaire: models.PenombreAdversaire,
+    */
   }
   foundry.documents.collections.Actors.unregisterSheet("core", foundry.appv1.sheets.ActorSheet)
   foundry.documents.collections.Actors.registerSheet(SYSTEM.ID, applications.EminenceSheet, { types: ["eminence"], label: "PENOMBRE.Feuille.eminence", makeDefault: true })
+  /*
   foundry.documents.collections.Actors.registerSheet(SYSTEM.ID, applications.AdversaireSheet, { types: ["adversaire"], label: "PENOMBRE.Feuille.adversaire", makeDefault: true })
+  */
 
   CONFIG.Item.documentClass = documents.PenombreItem
   CONFIG.Item.dataModels = {
     pouvoir: models.PenombrePouvoir,
     atout: models.PenombreAtout,
     maitrise: models.PenombreMaitrise,
+    /*
     description: models.PenombreDescription,
     actionAdverse: models.PenombreActionAdverse,
     actionDissonance: models.PenombreActionDissonance,
     intrigue: models.PenombreIntrigue,
+    */
   }
   foundry.documents.collections.Items.unregisterSheet("core", foundry.appv1.sheets.ItemSheet)
   foundry.documents.collections.Items.registerSheet(SYSTEM.ID, applications.PouvoirSheet, { types: ["pouvoir"], label: "PENOMBRE.Feuille.pouvoir", makeDefault: true })
   foundry.documents.collections.Items.registerSheet(SYSTEM.ID, applications.AtoutSheet, { types: ["atout"], label: "PENOMBRE.Feuille.atout", makeDefault: true })
   foundry.documents.collections.Items.registerSheet(SYSTEM.ID, applications.MaitriseSheet, { types: ["maitrise"], label: "PENOMBRE.Feuille.maitrise", makeDefault: true })
 
+  /*
   foundry.documents.collections.Items.registerSheet(SYSTEM.ID, applications.DescriptionSheet, { types: ["description"], label: "PENOMBRE.Feuille.description", makeDefault: true })
   foundry.documents.collections.Items.registerSheet(SYSTEM.ID, applications.ActionAdverseSheet, { types: ["actionAdverse"], label: "PENOMBRE.Feuille.actionAdverse", makeDefault: true })
   foundry.documents.collections.Items.registerSheet(SYSTEM.ID, applications.ActionDissonanceSheet, { types: ["actionDissonance"], label: "PENOMBRE.Feuille.actionDissonance", makeDefault: true })
   foundry.documents.collections.Items.registerSheet(SYSTEM.ID, applications.IntrigueSheet, { types: ["intrigue"], label: "PENOMBRE.Feuille.intrigue", makeDefault: true })
-  
+  */
+ 
   CONFIG.queries["penombre.updateReserveCollegiale"] = applications.PenombreReserveCollegiale._handleQueryUpdateReserveCollegiale
   CONFIG.queries["penombre.updateReserveCollegialeFromRoll"] = applications.PenombreReserveCollegiale._handleQueryUpdateReserveCollegialeFromRoll
   CONFIG.queries["penombre.updateMessageParticipation"] = documents.PenombreMessage._handleQueryMessageParticipation
