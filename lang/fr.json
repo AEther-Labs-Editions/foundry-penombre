@@ -342,6 +342,14 @@
         "description": {
           "label": "Description"
         }
+      },
+      "type": {
+        "adverse": {
+          "label": "Action adverse"
+        },
+        "dissonance": {
+          "label": "Action de dissonance"
+        }
       }
     },
     "Intrigue": {

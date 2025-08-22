@@ -1,4 +1,6 @@
-const { HTMLField } = foundry.data.fields
+import { SYSTEM } from "../config/system.mjs"
+
+const { StringField, HTMLField } = foundry.data.fields
 
 export default class Action extends foundry.abstract.TypeDataModel {
   /** @override */
@@ -7,6 +9,8 @@ export default class Action extends foundry.abstract.TypeDataModel {
   static defineSchema() {
     const schema = {}
 
+    schema.type = new StringField({})
+    schema.type = new StringField({ required: true, nullable: false, initial: SYSTEM.ACTION_TYPES.adverse.id, choices: SYSTEM.ACTION_TYPES })
     schema.description = new HTMLField({})
 
     return schema

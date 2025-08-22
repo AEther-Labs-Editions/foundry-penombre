@@ -1,5 +1,7 @@
 import * as EMINENCE from "./eminence.mjs"
 import * as POUVOIR from "./pouvoir.mjs"
+import * as ACTION from "./action.mjs"
+
 
 export const SYSTEM_ID = "penombre"
 export const DEV_MODE = true
@@ -129,6 +131,7 @@ export const SYSTEM = {
   JETON_STATUTS,
   POTENTIEL_MAX,
   DIFFICULTE,
+  ACTION_TYPES: ACTION.ACTION_TYPES,
 }
 
 /**

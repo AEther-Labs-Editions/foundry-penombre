@@ -1089,6 +1089,26 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 .penombre.pouvoir .pouvoir-content .standard-form .details select[name="system.type"] {
   width: 100px;
 }
+.penombre.intrigue .intrigue-content .standard-form .logo-frame {
+  display: flex;
+  justify-content: space-between;
+}
+.penombre.intrigue .intrigue-content .standard-form .logo-frame .logo-img {
+  width: 80px;
+}
+.penombre.intrigue .intrigue-content .standard-form .logo-frame .name {
+  width: calc(100% - 90px);
+}
+.penombre.action .action-content .standard-form .logo-frame {
+  display: flex;
+  justify-content: space-between;
+}
+.penombre.action .action-content .standard-form .logo-frame .logo-img {
+  width: 80px;
+}
+.penombre.action .action-content .standard-form .logo-frame .name {
+  width: calc(100% - 90px);
+}
 #penombre-reserve-collegiale {
   padding: none;
 }
