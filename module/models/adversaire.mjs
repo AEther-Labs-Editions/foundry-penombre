@@ -42,9 +42,7 @@ export default class Adversaire extends foundry.abstract.TypeDataModel {
 
     // Descriptions : sous forme d'un item
 
-    // Actions adverses : sous forme d'un item
-
-    // Actions de dissonance : sous forme d'un item
+    // Actions : sous forme d'un item
 
     // Intrigues : sous forme d'un item
 

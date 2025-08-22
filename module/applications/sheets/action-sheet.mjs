@@ -1,9 +1,9 @@
 const { HandlebarsApplicationMixin } = foundry.applications.api
 
-export default class DescriptionSheet extends HandlebarsApplicationMixin(foundry.applications.sheets.ItemSheetV2) {
+export default class ActionSheet extends HandlebarsApplicationMixin(foundry.applications.sheets.ItemSheetV2) {
   /** @override */
   static DEFAULT_OPTIONS = {
-    classes: ["penombre", "description"],
+    classes: ["penombre", "action"],
     position: {
       width: 570,
       height: 400,
@@ -12,14 +12,14 @@ export default class DescriptionSheet extends HandlebarsApplicationMixin(foundry
       submitOnChange: true,
     },
     window: {
-      contentClasses: ["description-content"],
+      contentClasses: ["action-content"],
       resizable: true,
     },
   }
 
   /** @override */
   static PARTS = {
-    main: { template: "systems/penombre/templates/description.hbs" },
+    main: { template: "systems/penombre/templates/action.hbs" },
   }
 
   /** @override */

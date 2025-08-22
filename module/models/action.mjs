@@ -1,8 +1,8 @@
 const { HTMLField } = foundry.data.fields
 
-export default class ActionDissonance extends foundry.abstract.TypeDataModel {
+export default class Action extends foundry.abstract.TypeDataModel {
   /** @override */
-  static LOCALIZATION_PREFIXES = ["PENOMBRE.ActionDissonance"]
+  static LOCALIZATION_PREFIXES = ["PENOMBRE.Action"]
 
   static defineSchema() {
     const schema = {}
@@ -21,7 +21,7 @@ export default class ActionDissonance extends foundry.abstract.TypeDataModel {
     if (!stats.duplicateSource && !stats.compendiumSource && !stats.exportSource) {
       // Image par défaut
       if (!foundry.utils.hasProperty(data, "img")) {
-        updates.img = "systems/penombre/assets/icons/actionDissonance.png"
+        updates.img = "systems/penombre/assets/icons/action.png"
       }
     }
     this.parent.updateSource(updates)

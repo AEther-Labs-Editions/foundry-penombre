@@ -8,9 +8,7 @@
       "pouvoir": "Pouvoir",
       "atout": "Atout",
       "maitrise": "Maitrise magique",
-      "description": "Description",
-      "actionAdverse": "Action adverse",
-      "actionDissonance": "Action de dissonance",
+      "action": "Action",
       "intrigue": "Intrigue"
     }
   },
@@ -21,9 +19,7 @@
       "atout": "Feuille d'Atout",
       "maitrise": "Feuille de Maitrise magique",
       "adversaire": "Feuille d'Adversaire",
-      "description": "Feuille de Description",
-      "actionAdverse": "Feuille d'Action adverse",
-      "actionDissonance": "Feuille d'Action de dissonance",
+      "action": "Feuille d'Action",
       "intrigue": "Feuille d'Intrigue"
     },
     "Eminence": {
@@ -302,6 +298,11 @@
     },
     "Adversaire": {
       "FIELDS": {
+        "description": {
+          "valeur": {
+            "label": "Description"
+          }
+        },
         "adversite": {
           "valeur": {
             "label": "Adversité"
@@ -311,29 +312,33 @@
           }
         },
         "resilience": {
-          "label": "Résilience"
+          "valeur": {
+            "label": "Résilience"
+          },
+          "max": {
+            "label": "Résilience Max"
+          }
         },
         "dissonance": {
-          "label": "Dissonance"
+          "valeur": {
+            "label": "Dissonance"
+          },
+          "max": {
+            "label": "Dissonance Max"
+          },
+          "harmonique": {
+            "valeur": {
+              "label": "Harmonique"
+            }
+          }
         }
       }
     },
-    "Description": {
+    "Action": {
       "FIELDS": {
-        "description": {
-          "label": "Description"
-        }
-      }
-    },
-    "ActionAdverse": {
-      "FIELDS": {
-        "description": {
-          "label": "Description"
-        }
-      }
-    },
-    "ActionDissonance": {
-      "FIELDS": {
+        "type": {
+          "label": "Type"
+        },
         "description": {
           "label": "Description"
         }

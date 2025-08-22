@@ -1,23 +1,29 @@
-{{!log "AdversaireSheet - Partials - Actions_adverses" this }}
-<div class="adversaire-action-de-dissonance">
-    <span class="titre-section-action-de-dissonance">{{localize "PENOMBRE.ui.actions_de_dossonance"}}</span>
+{{!log "AdversaireSheet - Partials - Actions" this }}
+<div class="adversaire-action">
+    <span class="titre-section-action">{{localize "PENOMBRE.ui.pouvoirs"}}</span>
     <div class="content">
-        <div class="actions-de-dissonance absolue">
+        <div class="actions absolue">
             <table class="item-list centpourcent">
                 <tr class="centpourcent">
                     <th>
                         {{ localize 'PENOMBRE.ui.nom' }}
                     </th>
+                    <th>
+                        {{ localize 'PENOMBRE.ui.type' }}
+                    </th>
                     <th class="item-controls">
                         {{#if unlocked}}
-                            <a class="item-control" data-tooltip="{{ localize 'PENOMBRE.ui.create' item='une action de dissonance' }}" data-action="create" data-type="action-dissonance"><i class="fas fa-plus"></i></a>
+                            <a class="item-control" data-tooltip="{{ localize 'PENOMBRE.ui.create' item='une action' }}" data-action="create" data-type="action"><i class="fas fa-plus"></i></a>
                         {{/if}}
                     </th>
                 </tr>
-                {{#each actionsDissonance as |item id|}}
+                {{#each actions as |item id|}}
                 <tr class="item draggable" data-item-id="{{item._id}}">
                     <td>
                         <span class="item-name" data-tooltip="{{{item.system.description}}}">{{item.name}}</span>
+                    </td>
+                    <td>
+                        <span class="item-type">{{item.system.type}}</span>
                     </td>
                     <td class="item-controls">
                     {{#if ../unlocked}}
