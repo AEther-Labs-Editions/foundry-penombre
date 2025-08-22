@@ -390,6 +390,8 @@
       "atout": "Atout",
       "atouts": "Atouts",
       "maitrises": "Maitrises magiques",
+      "actions": "Actions",
+      "intrigues": "Intrigues",
       "potentiel": "Potentiel",
       "jeton": "Jeton",
       "creerJetons": "(pensez a en creer pour preserver vos jetons)",
@@ -403,6 +405,8 @@
       "atoutNew": "Nouvel atout",      
       "pouvoirNew": "Nouveau pouvoir",
       "maitriseNew": "Nouvelle maîtrise",
+      "actionNew": "Nouvelle action",
+      "intrigueNew": "Nouvelle intrigue",
       "harmonique": "Harmonique",
       "prerequis": "Prerequis",
       "niveau": "Niveau"

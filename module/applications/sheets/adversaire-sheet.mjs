@@ -1,6 +1,5 @@
 const { sheets } = foundry.applications
 const { HandlebarsApplicationMixin } = foundry.applications.api
-
 import { SYSTEM, systemPath } from "../../config/system.mjs"
 
 export default class AdversaireSheet extends HandlebarsApplicationMixin(sheets.ActorSheetV2) {
@@ -14,7 +13,7 @@ export default class AdversaireSheet extends HandlebarsApplicationMixin(sheets.A
   static DEFAULT_OPTIONS = {
     classes: ["penombre", "adversaire"],
     position: {
-      width: 1152,
+      width: 575,
       height: 780,
     },
     form: {
@@ -49,6 +48,14 @@ export default class AdversaireSheet extends HandlebarsApplicationMixin(sheets.A
       ),
       scrollable: [""],
     },
+  }
+
+  /**
+   * Is the sheet currently in 'Play' mode?
+   * @type {boolean}
+   */
+  get isPlayMode() {
+    return this._sheetMode === this.constructor.SHEET_MODES.PLAY
   }
 
   /**

@@ -1,4 +1,5 @@
 import * as EMINENCE from "./eminence.mjs"
+import * as ADVERSAIRE from "./adversaire.mjs"
 import * as POUVOIR from "./pouvoir.mjs"
 import * as ACTION from "./action.mjs"
 
@@ -132,6 +133,8 @@ export const SYSTEM = {
   POTENTIEL_MAX,
   DIFFICULTE,
   ACTION_TYPES: ACTION.ACTION_TYPES,
+  HARMONIQUES_2: ADVERSAIRE.HARMONIQUES_2,
+
 }
 
 /**

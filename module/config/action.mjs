@@ -3,7 +3,7 @@ export const ACTION_TYPES = Object.freeze({
     id: "adverse",
     label: "PENOMBRE.Action.type.adverse.label",
   },
-  peuple: {
+  dissonance: {
     id: "dissonance",
     label: "PENOMBRE.Action.type.dissonance.label",
   },

@@ -1,12 +1,12 @@
 {{!log "AdversaireSheet - Partials - Actions" this }}
-<div class="adversaire-action">
-    <span class="titre-section-action">{{localize "PENOMBRE.ui.pouvoirs"}}</span>
+<div class="adversaire-actions">
+    <span class="titre-section-actions"></span>
     <div class="content">
         <div class="actions absolue">
             <table class="item-list centpourcent">
                 <tr class="centpourcent">
                     <th>
-                        {{ localize 'PENOMBRE.ui.nom' }}
+                        {{ localize 'PENOMBRE.ui.actions' }}
                     </th>
                     <th>
                         {{ localize 'PENOMBRE.ui.type' }}
@@ -23,7 +23,7 @@
                         <span class="item-name" data-tooltip="{{{item.system.description}}}">{{item.name}}</span>
                     </td>
                     <td>
-                        <span class="item-type">{{item.system.type}}</span>
+                        <span class="item-type">{{localize (concat "PENOMBRE.Action.type." item.system.type ".label")}}</span>
                     </td>
                     <td class="item-controls">
                     {{#if ../unlocked}}
