@@ -43,7 +43,7 @@ export default class AdversaireSheet extends HandlebarsApplicationMixin(sheets.A
   static PARTS = {
     main: {
       template: "systems/penombre/templates/adversaire/adversaire.hbs",
-      templates: ["actions.hbs", "description.hbs", "intrigues.hbs", "personnage.hbs"].map((t) =>
+      templates: ["actions.hbs", "intrigues.hbs", "personnage.hbs"].map((t) =>
         systemPath(`templates/adversaire/partials/${t}`),
       ),
       scrollable: [""],

@@ -303,18 +303,18 @@
         },
         "adversite": {
           "valeur": {
-            "label": "Adversité"
+            "label": "Adversite"
           },
           "max": {
-            "label": "Adversité Max"
+            "label": "Adversite Max"
           }
         },
         "resilience": {
           "valeur": {
-            "label": "Résilience"
+            "label": "Resilience"
           },
           "max": {
-            "label": "Résilience Max"
+            "label": "Resilience Max"
           }
         },
         "dissonance": {
@@ -325,9 +325,7 @@
             "label": "Dissonance Max"
           },
           "harmonique": {
-            "valeur": {
-              "label": "Harmonique"
-            }
+            "label": "Disson. harmonique"
           }
         }
       }
