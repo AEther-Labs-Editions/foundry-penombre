@@ -106,6 +106,11 @@ export default class AdversaireSheet extends HandlebarsApplicationMixin(sheets.A
 
     // Set toggle state and add status class to frame
     this._renderModeToggle(this.element)
+
+    // foo("system.adversite.valeur", this.adversite.valeur, 0, system.adversite.max, 1)
+    // foo("system.resilience.valeur", this.resilience.valeur, 0, system.adversite.max * 3, 1)
+    // foo("system.dissonance.valeur", this.resilience.valeur, 0, system.dissonance.max * 3, 1)
+
   }
 
   /**
@@ -214,3 +219,24 @@ export default class AdversaireSheet extends HandlebarsApplicationMixin(sheets.A
     if (id) return await this.actor.deleteEmbeddedDocuments("Item", [id])
   }
 }
+
+/*
+function foo (name, value, min, max, step) {
+  console.log("foo", name, value, min, max, step)
+  if (name) {
+    // Here you process the template and put it in the DOM
+    var template = $(`range-picker[name="`+name+`"]`).parent().html();
+    console.log("foo template = ", template)
+    var templateScript = Handlebars.compile(template);
+    let result = '';
+    // {{rangePicker name="foo" value=bar min=0 max=10 step=1}}
+    result += `<range-picker name="`+name+`"`+` value="`+value+`" min="`+min+`" max="`+max+`" step="`+step+`">`+
+    `<input type="range" min="`+min+`" max="`+max+`" step="`+step+`">`+
+    `<input type="number" min="`+min+`" max="`+max+`" step="`+step+`></range-picker>`
+    console.log("foo result = ", result)
+    var html = templateScript(result);
+    // Once you have inserted your code in the DOM you can now use jQuery to modify it
+    $(`range-picker[name="`+name+`"]`).parent().html($(`range-picker[name="`+name+`"]`).parent().html(html))
+  }
+}
+*/

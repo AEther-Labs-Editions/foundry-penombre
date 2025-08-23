@@ -7,39 +7,70 @@
                 <table class="centpourcent">
                         <tr class="centpourcent">
                         {{#if unlocked}}
-                        <th>
-                                {{ localize 'PENOMBRE.ui.nom' }}
-                        </th>
-                        <th>
-                                {{ localize 'PENOMBRE.Adversaire.FIELDS.description.label' }}
-                        </th>
+                                <th>
+                                        {{ localize 'PENOMBRE.ui.nom' }}
+                                </th>
+                                <th>
+                                        {{ localize 'PENOMBRE.Adversaire.FIELDS.description.label' }}
+                                </th>
                         {{else}}
-                        <th>
-                                {{ localize 'PENOMBRE.ui.nom' }}
-                        </th>
+                                <th>
+                                        {{ localize 'PENOMBRE.ui.nom' }}
+                                </th>
                         {{/if}}
                         </tr>
                         <tr>
                         {{#if unlocked}}
-                        <td>
-                                <span class="name" data-tooltip="{{{system.description}}}">{{document.name}}</span>
-                        </td>
-                        <td>
-                                {{formGroup systemFields.description value=systemSource.description localize=true}}
-                        </td>
+                                <td>
+                                        <span class="name" data-tooltip="{{{system.description}}}">{{document.name}}</span>
+                                </td>
+                                <td>
+                                        {{formGroup systemFields.description value=systemSource.description localize=true}}
+                                </td>
                         {{else}}
-                        <td>
-                                <span class="name-complete">{{document.name}}{{system.description}}</span>
-                        </td>
+                                <td>
+                                        <span class="name-complete">{{document.name}}&nbsp;{{system.description}}</span>
+                                </td>
                         {{/if}}
                         </tr>
                 </table>
-            {{formGroup systemFields.adversite.fields.max value=systemSource.adversite.max localize=true}}
-            {{formGroup systemFields.adversite.fields.valeur value=systemSource.adversite.valeur localize=true}}
-            {{formGroup systemFields.resilience.fields.max value=systemSource.resilience.max localize=true disabled=true}}
-            {{formGroup systemFields.resilience.fields.valeur value=systemSource.resilience.valeur localize=true}}
-            {{formGroup systemFields.dissonance.fields.max value=systemSource.dissonance.max localize=true}}
-            {{formGroup systemFields.dissonance.fields.valeur value=systemSource.dissonance.valeur localize=true}}
-            {{formGroup systemFields.dissonance.fields.harmonique value=systemSource.dissonance.harmonique localize=true}}
+                {{#if unlocked}}
+                {{formGroup systemFields.adversite.fields.max value=systemSource.adversite.max localize=true}}
+                {{formGroup systemFields.adversite.fields.valeur value=systemSource.adversite.valeur localize=true}}
+                {{formGroup systemFields.resilience.fields.max value=systemSource.resilience.max localize=true disabled=true}}
+                {{formGroup systemFields.resilience.fields.valeur value=systemSource.resilience.valeur localize=true}}
+                {{formGroup systemFields.dissonance.fields.max value=systemSource.dissonance.max localize=true}}
+                {{formGroup systemFields.dissonance.fields.valeur value=systemSource.dissonance.valeur localize=true}}
+                {{formGroup systemFields.dissonance.fields.harmonique value=systemSource.dissonance.harmonique localize=true}}
+                {{else}}
+                <div class="form-group">
+                        <label>{{localize "PENOMBRE.Adversaire.FIELDS.adversite.max.label"}}</label>
+                        <div class="form-fields">{{system.adversite.max}}</div>
+                </div>
+                <div class="form-group">
+                        <label>{{localize "PENOMBRE.Adversaire.FIELDS.adversite.valeur.label"}}</label>
+                        <div class="form-fields">{{system.adversite.valeur}}</div>
+                </div>
+                <div class="form-group">
+                        <label>{{localize "PENOMBRE.Adversaire.FIELDS.resilience.max.label"}}</label>
+                        <div class="form-fields">{{system.resilience.max}}</div>
+                </div>
+                <div class="form-group">
+                        <label>{{localize "PENOMBRE.Adversaire.FIELDS.resilience.valeur.label"}}</label>
+                        <div class="form-fields">{{system.resilience.valeur}}</div>
+                </div>
+                <div class="form-group">
+                        <label>{{localize "PENOMBRE.Adversaire.FIELDS.dissonance.max.label"}}</label>
+                        <div class="form-fields">{{system.dissonance.max}}</div>
+                </div>
+                <div class="form-group">
+                        <label>{{localize "PENOMBRE.Adversaire.FIELDS.dissonance.valeur.label"}}</label>
+                        <div class="form-fields">{{system.dissonance.valeur}}</div>
+                </div>
+                <div class="form-group">
+                        <label>{{localize "PENOMBRE.Adversaire.FIELDS.dissonance.harmonique.label"}}</label>
+                        <div class="form-fields">{{localize (concat "PENOMBRE.Harmonique." system.dissonance.harmonique ".label")}}</div>
+                </div>
+                {{/if}}
       </div>
 </div>
