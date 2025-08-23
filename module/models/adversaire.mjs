@@ -11,6 +11,7 @@ export default class Adversaire extends foundry.abstract.TypeDataModel {
     const schema = {}
 
     // Personnage
+    schema.description = new StringField()
     schema.adversite = new SchemaField({
       valeur: new NumberField({
         ...requiredInteger,
@@ -52,21 +53,8 @@ export default class Adversaire extends foundry.abstract.TypeDataModel {
         initial: 0,
         min: 0,
       }),
-
-      
     })
     
-    /*
-    schema.datas = new SchemaField({
-      description: new NumberField({ ...requiredInteger, initial: 0, min: 0 }),
-      actionsAdverses: new NumberField({ ...requiredInteger, initial: 0, min: 0 }),
-      actionsDissonance: new NumberField({ ...requiredInteger, initial: 0, min: 0 }),
-      intrigues: new NumberField({ ...requiredInteger, initial: 0, min: 0 }),
-    })
-  */
-
-    // Descriptions : sous forme d'un item
-
     // Actions : sous forme d'un item
 
     // Intrigues : sous forme d'un item
@@ -74,15 +62,12 @@ export default class Adversaire extends foundry.abstract.TypeDataModel {
     return schema
   }
 
-
   /** @override */
   prepareBaseData() {
   }
-
 
   /** @override */
   async _preUpdate(changed, options, user) {
     return super._preUpdate(changed, options, user)
   }
-
 }

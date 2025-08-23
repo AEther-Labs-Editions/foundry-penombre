@@ -299,9 +299,7 @@
     "Adversaire": {
       "FIELDS": {
         "description": {
-          "valeur": {
             "label": "Description"
-          }
         },
         "adversite": {
           "valeur": {

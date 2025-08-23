@@ -82,6 +82,8 @@ export default class AdversaireSheet extends HandlebarsApplicationMixin(sheets.A
     context.unlocked = this.isEditMode
     context.locked = this.isPlayMode
 
+    context.harmoniquesChoices = this.document.system.dissonance.harmonique.choices
+
     console.log("AdversaireSheet._prepareContext", context)
     return context
   }

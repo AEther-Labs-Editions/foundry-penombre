@@ -7,7 +7,7 @@
                 {{ localize 'PENOMBRE.ui.nom' }}
             </th>
             <th>
-                {{ localize 'PENOMBRE.Adversaire.FIELDS.description.valeur.label' }}
+                {{ localize 'PENOMBRE.Adversaire.FIELDS.description.label' }}
             </th>
             {{else}}
             <th>
@@ -18,14 +18,14 @@
         <tr>
             {{#if unlocked}}
             <td>
-                <span class="name" data-tooltip="{{{system.description.valeur}}}">{{system.name}}</span>
+                <span class="name" data-tooltip="{{{system.description}}}">{{system.name}}</span>
             </td>
             <td>
-                {{formGroup systemFields.description.valeur value=systemSource.description.valeur localize=true}}
+                {{formGroup systemFields.description.valeur value=systemSource.description localize=true}}
             </td>
             {{else}}
             <td>
-                <span class="name-complete">{{system.name}}{{system.description.valeur}}</span>
+                <span class="name-complete">{{system.name}}{{system.description}}</span>
             </td>
             {{/if}}
         </tr>

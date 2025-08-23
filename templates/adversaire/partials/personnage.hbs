@@ -5,12 +5,12 @@
     <div class="data">
             {{formGroup fields.name value=document.name localize=true disabled=locked}}
 
-            {{formGroup systemFields.adversite.max value=systemSource.adversite.max localize=true}}
-            {{formGroup systemFields.adversite.valeur value=systemSource.adversite.valeur localize=true}}
-            {{formGroup systemFields.resilience.max value=systemSource.resilience.max localize=true}}
-            {{formGroup systemFields.resilience.valeur value=systemSource.resilience.valeur localize=true}}
-            {{formGroup systemFields.dissonance.harmonique value=systemSource.dissonance.harmonique localize=true}}
-            {{formGroup systemFields.dissonance.max value=systemSource.dissonance.max localize=true}}
-            {{formGroup systemFields.dissonance.valeur value=systemSource.dissonance.valeur localize=true}}
+            {{formGroup systemFields.adversite.field.max value=systemSource.adversite.max localize=true}}
+            {{formGroup systemFields.adversite.field.valeur value=systemSource.adversite.valeur localize=true}}
+            {{formGroup systemFields.resilience.field.max value=systemSource.resilience.max localize=true}}
+            {{formGroup systemFields.resilience.field.valeur value=systemSource.resilience.valeur localize=true}}
+            {{formGroup systemFields.dissonance.field.harmonique value=systemSource.dissonance.harmonique localize=true}}
+            {{formGroup systemFields.dissonance.field.max value=systemSource.dissonance.max localize=true}}
+            {{selectOptions harmoniquesChoices value=systemSource.dissonance.valeur localize=true}}
       </div>
 </div>
