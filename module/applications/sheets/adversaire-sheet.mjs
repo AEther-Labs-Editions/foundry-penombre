@@ -172,11 +172,15 @@ export default class AdversaireSheet extends HandlebarsApplicationMixin(sheets.A
   static async #onCreateItem(event, target) {
     event.preventDefault()
     const type = target.dataset.type
+    const subtype = target.dataset.subtype
 
     const itemData = {
       type: type,
     }
-    if (type === "description") {
+    if (type === "action") {
+      itemData.name = subtype === "dissonance" ? game.i18n.localize("PENOMBRE.ui.actionDissonanceNew") : game.i18n.localize("PENOMBRE.ui.actionAdverseNew")
+      foundry.utils.setProperty(itemData, "system.type", subtype)
+    } else if (type === "description") {
       itemData.name = game.i18n.localize("PENOMBRE.ui.descriptionNew")
     } else if (type === "action") {
       itemData.name = game.i18n.localize("PENOMBRE.ui.actionNew")

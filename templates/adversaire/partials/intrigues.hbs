@@ -1,6 +1,10 @@
 {{!log "AdversaireSheet - Partials - Intrigues" this }}
 <div class="adversaire-intrigues">
-    <h2>Intrigues</h2>
+    <h2>Intrigues
+       {{#if unlocked}}
+            <a class="item-control" data-tooltip="{{ localize 'PENOMBRE.ui.create' item='une intrigue' }}" data-action="create" data-type="intrigue"><i class="fas fa-plus"></i></a>
+        {{/if}}
+    </h2>
     <div class="intrigues">
         {{#each intrigues as |item id|}}
             <div class="intrigue item draggable" data-item-id="{{item._id}}">
