@@ -32,20 +32,17 @@ export default class AdversaireSheet extends HandlebarsApplicationMixin(sheets.A
     },
   }
 
-    /**
+  /**
    * The current sheet mode.
    * @type {number}
    */
   _sheetMode = this.constructor.SHEET_MODES.PLAY
 
-
   /** @override */
   static PARTS = {
     main: {
       template: "systems/penombre/templates/adversaire/adversaire.hbs",
-      templates: ["actions.hbs", "intrigues.hbs", "personnage.hbs"].map((t) =>
-        systemPath(`templates/adversaire/partials/${t}`),
-      ),
+      templates: ["actions.hbs", "intrigues.hbs", "personnage.hbs"].map((t) => systemPath(`templates/adversaire/partials/${t}`)),
       scrollable: [""],
     },
   }
@@ -76,29 +73,29 @@ export default class AdversaireSheet extends HandlebarsApplicationMixin(sheets.A
     context.document = this.document
     context.system = this.document.system
 
-    context.actions = this.document.itemTypes.action
+    context.nom = this.document.name
+    context.description = this.document.system.description
+
+    context.hasDissonance = this.document.system.dissonance.max > 0
+
+    const actions = this.document.itemTypes.action
+    context.actionsAdverses = actions.filter((a) => a.system.type === SYSTEM.ACTION_TYPES.adverse.id)
+    context.actionsDissonance = actions.filter((a) => a.system.type === SYSTEM.ACTION_TYPES.dissonance.id)
+    context.hasActionsDissonance = context.actionsDissonance.length > 0
+
     context.intrigues = this.document.itemTypes.intrigue
 
     context.unlocked = this.isEditMode
     context.locked = this.isPlayMode
 
     context.harmoniquesChoices = this.document.system.dissonance.harmonique.choices
+    context.maxAdversite = this.document.system.adversite.max
+    context.maxResilience = this.document.system.resilience.max
+    context.maxDissonance = this.document.system.dissonance.max
 
     console.log("AdversaireSheet._prepareContext", context)
     return context
   }
-
-  /**
-   * Actions performed after a first render of the Application.
-   * Post-render steps are not awaited by the render process.
-   * @param {ApplicationRenderContext} context      Prepared context data
-   * @param {RenderOptions} options                 Provided render options
-   * @protected
-   */
-  async _onFirstRender(context, options) {
-    await super._onFirstRender(context, options)
-  }
-
 
   /** @inheritDoc */
   async _onRender(context, options) {
@@ -106,11 +103,6 @@ export default class AdversaireSheet extends HandlebarsApplicationMixin(sheets.A
 
     // Set toggle state and add status class to frame
     this._renderModeToggle(this.element)
-
-    // foo("system.adversite.valeur", this.adversite.valeur, 0, system.adversite.max, 1)
-    // foo("system.resilience.valeur", this.resilience.valeur, 0, system.adversite.max * 3, 1)
-    // foo("system.dissonance.valeur", this.resilience.valeur, 0, system.dissonance.max * 3, 1)
-
   }
 
   /**
@@ -221,7 +213,7 @@ export default class AdversaireSheet extends HandlebarsApplicationMixin(sheets.A
 }
 
 /*
-function foo (name, value, min, max, step) {
+Function foo (name, value, min, max, step) {
   console.log("foo", name, value, min, max, step)
   if (name) {
     // Here you process the template and put it in the DOM

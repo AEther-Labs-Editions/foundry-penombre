@@ -1430,439 +1430,125 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 #interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre section.atout li.roll.die.dice-selected {
   border: solid 2px black;
 }
-/* ---------------------------------------------
-        Thème Clair
---------------------------------------------- */
-/* ---------------------------------------------
-          Thème Sombre
---------------------------------------------- */
-body.theme-light .penombre.adversaire .adversaire-content {
-  overflow: auto;
-  font-family: "CattedraleDemo";
-  color: #a56135;
-  font-size: 17px;
-  background-color: #faeed6;
-  /* Si et seulement si on est en mode clair (et pas sombre) de la fiche */
-  clear: both;
-}
-body.theme-dark .penombre.adversaire .adversaire-content {
-  overflow: auto;
-  width: 100%;
-  font-family: "CattedraleDemo";
-  color: #a56135;
-  font-size: 17px;
-  clear: both;
-}
-.penombre {
-  /* ---------------------------------------------
-        Eminence
---------------------------------------------- */
-}
-.penombre.adversaire {
-  width: 100%;
-}
-.penombre.adversaire .adversaire-content {
-  width: 100%;
-  /*
-      // Styles de texte avec classes utilitaires
-      .text {
-        .font-doree {
-          color: @color-accent;
-        }
-
-        .font-grise {
-          color: @color-secondary;
-        }
-
-        .font-marron {
-          color: @color-primary;
-        }
-
-        .font-chocolate {
-          font-family: @font-chocolate;
-        }
-
-        .font-cattedrale {
-          font-family: @font-cattedrale;
-        }
-      }
-      */
-}
-.penombre.adversaire .adversaire-content .centpourcent {
-  width: 100%;
-}
-.penombre.adversaire .adversaire-content input,
-.penombre.adversaire .adversaire-content select {
-  border-color: #a56135;
-  color: #56605b;
-  font-family: "ChocoCovRainBold";
-  font-size: 25px;
-}
 .penombre.adversaire .adversaire-content .adversaire-main {
-  width: 100%;
-  display: table;
-  clear: both;
+  overflow-y: auto;
 }
-.penombre.adversaire .adversaire-content .col-1 {
-  width: 450px;
-  float: left;
-  display: table;
-  clear: both;
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage {
+  display: flex;
 }
-.penombre.adversaire .adversaire-content .col-2 {
-  width: 23px;
-  float: left;
-  height: 500px;
-  padding: 0 3px;
-}
-.penombre.adversaire .adversaire-content .col-2 .grande-frise-verticale-1,
-.penombre.adversaire .adversaire-content .col-2 .grande-frise-verticale-2,
-.penombre.adversaire .adversaire-content .col-2 .grande-frise-verticale-3,
-.penombre.adversaire .adversaire-content .col-2 .grande-frise-verticale-4,
-.penombre.adversaire .adversaire-content .col-2 .grande-frise-verticale-5 {
-  flex-direction: column;
-}
-.penombre.adversaire .adversaire-content .col-3 {
-  margin-left: 473px;
-  min-width: 635px;
-}
-.penombre.adversaire .adversaire-content .col-1-1 {
-  width: 25px;
-  float: left;
-  transform: rotate(180deg);
-}
-.penombre.adversaire .adversaire-content .col-2-1 {
-  width: 9px;
-  float: left;
-}
-.penombre.adversaire .adversaire-content .col-3-1 {
-  width: 408px;
-  float: left;
-  flex-direction: column;
-  padding-left: 4px;
-}
-.penombre.adversaire .adversaire-content .eminence-personnage,
-.penombre.adversaire .adversaire-content .eminence-harmoniques,
-.penombre.adversaire .adversaire-content .eminence-conscience {
-  float: none;
-  flex-direction: column;
-  border: 1px solid #a56135;
-  padding: 2px;
-  border-radius: 6px;
-}
-.penombre.adversaire .adversaire-content .eminence-pouvoirs,
-.penombre.adversaire .adversaire-content .eminence-atouts,
-.penombre.adversaire .adversaire-content .eminence-maitrises,
-.penombre.adversaire .adversaire-content .eminence-pouvoirs-2,
-.penombre.adversaire .adversaire-content .eminence-atouts-2,
-.penombre.adversaire .adversaire-content .eminence-maitrises-2,
-.penombre.adversaire .adversaire-content .eminence-timbre,
-.penombre.adversaire .adversaire-content .eminence-timbre-2,
-.penombre.adversaire .adversaire-content .eminence-recapitulatif {
-  min-width: 635px;
-  float: none;
-  flex-direction: column;
-  border: 1px solid #a56135;
-  padding: 2px;
-  border-radius: 6px;
-}
-.penombre.adversaire .adversaire-content .text-vertical-personnage,
-.penombre.adversaire .adversaire-content .text-vertical-harmoniques,
-.penombre.adversaire .adversaire-content .text-vertical-conscience {
-  font-size: 19px;
-  writing-mode: vertical-rl;
-  text-orientation: sideways-left;
-}
-.penombre.adversaire .adversaire-content .eminence-personnage {
-  min-height: 165px;
-  color: #a56135;
-}
-.penombre.adversaire .adversaire-content .eminence-personnage .logo-frame {
-  display: table;
-  float: left;
-  justify-content: center;
-  height: 152px;
-  width: 150px;
-  padding: 1px;
-}
-.penombre.adversaire .adversaire-content .eminence-personnage .logo-frame .logo-img {
-  border-radius: 6px;
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .logo-frame .logo-img {
   height: 150px;
   width: auto;
   max-width: 100%;
   display: block;
 }
-.penombre.adversaire .adversaire-content .eminence-personnage .data {
-  float: left;
-  width: 254px;
-  clear: right;
-}
-.penombre.adversaire .adversaire-content .eminence-harmoniques {
-  min-height: 350px;
-}
-.penombre.adversaire .adversaire-content .eminence-conscience-locked {
-  min-height: 725px;
-}
-.penombre.adversaire .adversaire-content .eminence-conscience-unlocked {
-  min-height: 685px;
-}
-.penombre.adversaire .adversaire-content .eminence-conscience {
-  color: #917f35;
-}
-.penombre.adversaire .adversaire-content .eminence-conscience .div-jetons {
-  width: 400px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  /* 5 colonnes égales */
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos input {
+  margin: 0 5px;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .nom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .nom.locked {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .nom.locked .name {
+  color: #055205;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .nom.locked .description {
+  color: #927e0b;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .adversite {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .adversite .attribut {
+  display: flex;
+  align-items: center;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .adversite .attribut label {
+  display: inline-block;
+  width: 120px;
+  font-weight: bold;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .adversite .attribut input {
+  margin: 0 5px;
+  width: 50px;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions-adverses,
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions-dissonance {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions-adverses h2,
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions-dissonance h2 {
+  font-size: 1.2rem;
+  text-align: center;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions .action {
+  border: 1px solid #ccc;
+  border-radius: 5px;
   padding: 10px;
 }
-.penombre.adversaire .adversaire-content .eminence-conscience .div-jetons img.dropshadow-actif,
-.penombre.adversaire .adversaire-content .eminence-conscience .div-jetons img.dropshadow-inactif {
-  -webkit-filter: drop-shadow(-5px 5px 5px #666666);
-  filter: drop-shadow(-5px 5px 5px #666666);
-}
-.penombre.adversaire .adversaire-content .eminence-conscience .div-jetons img.dropshadow-actif:hover,
-.penombre.adversaire .adversaire-content .eminence-conscience .div-jetons img.dropshadow-inactif:hover {
-  cursor: pointer;
-}
-.penombre.adversaire .adversaire-content .eminence-conscience .div-jetons .jeton {
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions .action .nom {
+  font-weight: bold;
+  font-style: italic;
   text-align: center;
 }
-.penombre.adversaire .adversaire-content .eminence-conscience .cadre-complications-2 {
-  display: table;
-  width: 402px;
-  border: 1px solid #917f35;
-  border-radius: 4px;
-  padding: 2px;
-  padding-left: 10px;
-}
-.penombre.adversaire .adversaire-content .eminence-conscience .cadre-complications-2 .div-cases {
-  display: flex;
-  width: 390px;
-}
-.penombre.adversaire .adversaire-content .eminence-conscience .cadre-complications-2 .div-cases label {
-  float: left;
-}
-.penombre.adversaire .adversaire-content .eminence-conscience .cadre-complications-2 .div-cases .div-descriptions input {
-  width: 320px;
-}
-.penombre.adversaire .adversaire-content .eminence-conscience .cadre-complications-2 .div-cases .images-cases {
-  display: flex;
-  width: 250px;
-  height: 20px;
-  float: left;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-.penombre.adversaire .adversaire-content .eminence-conscience .cadre-complications-2 .div-cases .images-cases .complication-case {
-  float: left;
-  width: 20px;
-  height: 20px;
-}
-.penombre.adversaire .adversaire-content .eminence-conscience .cadre-complications-2 .div-cases .images-cases .complication-case:hover {
-  cursor: pointer;
-}
-.penombre.adversaire .adversaire-content .eminence-conscience .cadre-complications {
-  display: table;
-  width: 402px;
-  border: 1px solid #917f35;
-  border-radius: 4px;
-  padding: 2px;
-  padding-left: 10px;
-}
-.penombre.adversaire .adversaire-content .eminence-conscience .cadre-complications label {
-  width: 402px;
-  float: none;
-  clear: both;
-}
-.penombre.adversaire .adversaire-content .eminence-conscience .cadre-complications .ligne-complication {
-  display: flex;
-  clear: both;
-}
-.penombre.adversaire .adversaire-content .eminence-conscience .cadre-complications .ligne-complication .div-descriptions-2 input {
-  width: 600px;
-}
-.penombre.adversaire .adversaire-content .eminence-conscience .cadre-complications .ligne-complication .div-descriptions {
-  float: left;
-  width: 320px;
-}
-.penombre.adversaire .adversaire-content .eminence-conscience .cadre-complications .ligne-complication .div-cases {
-  float: left;
-  width: 70px;
-}
-.penombre.adversaire .adversaire-content .eminence-conscience .cadre-complications .ligne-complication .div-cases .images-cases {
-  display: flex;
-  width: 70px;
-  height: 20px;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-.penombre.adversaire .adversaire-content .eminence-conscience .cadre-complications .ligne-complication .div-cases .images-cases .complication-case {
-  float: left;
-  width: 20px;
-  height: 20px;
-}
-.penombre.adversaire .adversaire-content .eminence-conscience .note-jetons {
-  text-align: center;
-  color: #56605b;
-}
-.penombre.adversaire .adversaire-content .eminence-harmoniques {
-  color: #56605b;
-  /*
-        .editer-harmoniques {
-          // width: 405px;
-          font-size: @font-size-xlarge;
-        }
-        */
-}
-.penombre.adversaire .adversaire-content .eminence-harmoniques .click:hover {
-  cursor: pointer;
-  -webkit-filter: drop-shadow(0px 0px 6px #af010a);
-  filter: drop-shadow(0px 0px 6px #af010a);
-}
-.penombre.adversaire .adversaire-content .eminence-harmoniques table tr:nth-child(odd),
-.penombre.adversaire .adversaire-content .eminence-harmoniques table tr:nth-child(even) {
-  background-color: transparent;
-}
-.penombre.adversaire .adversaire-content .eminence-harmoniques .case-de {
-  width: 85px;
-}
-.penombre.adversaire .adversaire-content .eminence-harmoniques .col-3-1 .rang-2-2 {
-  float: none;
-  width: 405px;
-}
-.penombre.adversaire .adversaire-content .eminence-harmoniques .case-de-mouve-1 {
-  float: none;
-  margin-left: 40px;
-  width: 85px;
-  height: 85px;
-}
-.penombre.adversaire .adversaire-content .eminence-harmoniques .case-de-mouve-1 .editer-harmoniques {
-  font-size: 30px;
-}
-.penombre.adversaire .adversaire-content .eminence-harmoniques .case-de-mouve-2 {
-  float: none;
-  margin-left: -40px;
-  width: 85px;
-  height: 85px;
-}
-.penombre.adversaire .adversaire-content .eminence-harmoniques .case-de-mouve-2 .editer-harmoniques {
-  font-size: 30px;
-}
-.penombre.adversaire .adversaire-content .eminence-harmoniques .case-de-mouve-3 {
-  float: none;
-  margin-left: 10px;
-  width: 85px;
-  height: 85px;
-}
-.penombre.adversaire .adversaire-content .eminence-harmoniques .case-de-mouve-3 .editer-harmoniques {
-  font-size: 30px;
-}
-.penombre.adversaire .adversaire-content .eminence-harmoniques .case-de-mouve-4 {
-  float: none;
-  margin-left: -5px;
-  width: 85px;
-  height: 85px;
-}
-.penombre.adversaire .adversaire-content .eminence-harmoniques .case-de-mouve-4 .editer-harmoniques {
-  font-size: 30px;
-}
-.penombre.adversaire .adversaire-content .eminence-harmoniques .case-de-mouve-5 {
-  float: none;
-  margin-left: 85px;
-  width: 85px;
-  height: 85px;
-}
-.penombre.adversaire .adversaire-content .eminence-harmoniques .case-de-mouve-5 .editer-harmoniques {
-  font-size: 30px;
-}
-.penombre.adversaire .adversaire-content .eminence-harmoniques .flexible {
-  position: relative;
-  display: flex;
-}
-.penombre.adversaire .adversaire-content .eminence-harmoniques .absolue {
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions .action .item-controls {
   position: absolute;
-  z-index: 5;
+  top: 0.5rem;
+  right: 0.5rem;
 }
-.penombre.adversaire .adversaire-content .eminence-harmoniques .de-d-ame-saisie,
-.penombre.adversaire .adversaire-content .eminence-harmoniques .de-d-esprit-saisie,
-.penombre.adversaire .adversaire-content .eminence-harmoniques .de-d-etincelle-saisie,
-.penombre.adversaire .adversaire-content .eminence-harmoniques .de-de-nature-saisie,
-.penombre.adversaire .adversaire-content .eminence-harmoniques .de-de-nuit-saisie {
-  margin-top: 25px;
-  margin-left: 10px;
-  width: 70px;
-  font-family: "ChocoCovRainBold";
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-.penombre.adversaire .adversaire-content .eminence-harmoniques .de-ame,
-.penombre.adversaire .adversaire-content .eminence-harmoniques .de-esprit,
-.penombre.adversaire .adversaire-content .eminence-harmoniques .de-etincelle,
-.penombre.adversaire .adversaire-content .eminence-harmoniques .de-nature,
-.penombre.adversaire .adversaire-content .eminence-harmoniques .de-nuit {
-  margin-left: 3px;
-  margin-top: -2px;
-  width: 85px;
-  height: 85px;
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues h2 {
+  font-size: 1.2rem;
+  text-align: center;
 }
-.penombre.adversaire .adversaire-content .eminence-harmoniques .text-gros-1,
-.penombre.adversaire .adversaire-content .eminence-harmoniques .text-gros-2,
-.penombre.adversaire .adversaire-content .eminence-harmoniques .text-gros-3,
-.penombre.adversaire .adversaire-content .eminence-harmoniques .text-gros-4,
-.penombre.adversaire .adversaire-content .eminence-harmoniques .text-gros-5 {
-  float: none;
-  color: #56605b;
-  font-size: 30px;
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues .intrigues {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
 }
-.penombre.adversaire .adversaire-content .adversaire-personnage {
-  justify-content: center;
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues .intrigues .intrigue {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
 }
-.penombre.adversaire .adversaire-content .adversaire-personnage .logo-frame {
-  display: table;
-  float: left;
-  justify-content: center;
-  height: 152px;
-  width: 150px;
-  padding: 1px;
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues .intrigues .intrigue .nom {
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
 }
-.penombre.adversaire .adversaire-content .adversaire-personnage .logo-frame .logo-img {
-  border-radius: 6px;
-  height: 150px;
-  width: auto;
-  max-width: 100%;
-  display: block;
-}
-.penombre.adversaire .adversaire-content .adversaire-actions td {
-  font-family: "ChocoCovRainBold";
-  font-size: 25px;
-  color: #56605b;
-}
-.penombre.adversaire .adversaire-content .adversaire-actions th {
-  text-align: left;
-}
-.penombre.adversaire .adversaire-content .adversaire-actions th.item-controls,
-.penombre.adversaire .adversaire-content .adversaire-actions td.item-controls {
-  width: 70px;
-  font-size: 17px;
-}
-.penombre.adversaire .adversaire-content .adversaire-description td {
-  font-family: "ChocoCovRainBold";
-  font-size: 25px;
-  color: #56605b;
-}
-.penombre.adversaire .adversaire-content .adversaire-description th {
-  text-align: left;
-}
-.penombre.adversaire .adversaire-content .adversaire-intrigues td {
-  font-family: "ChocoCovRainBold";
-  font-size: 25px;
-  color: #56605b;
-}
-.penombre.adversaire .adversaire-content .adversaire-intrigues th {
-  text-align: left;
-}
-.penombre.adversaire .adversaire-content .adversaire-intrigues th.item-controls,
-.penombre.adversaire .adversaire-content .adversaire-intrigues td.item-controls {
-  width: 70px;
-  font-size: 17px;
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues .intrigues .intrigue .item-controls {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
 }
