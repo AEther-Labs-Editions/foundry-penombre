@@ -28,7 +28,6 @@ Hooks.once("init", function () {
     pouvoir: models.PenombrePouvoir,
     atout: models.PenombreAtout,
     maitrise: models.PenombreMaitrise,
-  
     action: models.PenombreAction,
     intrigue: models.PenombreIntrigue,
   }
@@ -39,7 +38,7 @@ Hooks.once("init", function () {
 
   foundry.documents.collections.Items.registerSheet(SYSTEM.ID, applications.ActionSheet, { types: ["action"], label: "PENOMBRE.Feuille.action", makeDefault: true })
   foundry.documents.collections.Items.registerSheet(SYSTEM.ID, applications.IntrigueSheet, { types: ["intrigue"], label: "PENOMBRE.Feuille.intrigue", makeDefault: true })
- 
+
   CONFIG.queries["penombre.updateReserveCollegiale"] = applications.PenombreReserveCollegiale._handleQueryUpdateReserveCollegiale
   CONFIG.queries["penombre.updateReserveCollegialeFromRoll"] = applications.PenombreReserveCollegiale._handleQueryUpdateReserveCollegialeFromRoll
   CONFIG.queries["penombre.updateMessageParticipation"] = documents.PenombreMessage._handleQueryMessageParticipation

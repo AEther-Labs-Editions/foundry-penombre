@@ -1,76 +1,31 @@
+{{log "personnage" this}}
 <div class="adversaire-personnage">
     <div class="logo-frame">
-            <img class="logo-img" src="{{document.img}}" {{#if unlocked}}data-action="editImage"{{/if}} data-tooltip="{{document.name}}"/>
+      <img class="logo-img" src="{{document.img}}" {{#if unlocked}}data-action="editImage"{{/if}} data-tooltip="{{document.name}}"/>
     </div>
-    <div class="data">
-            {{formGroup fields.name value=document.name localize=true disabled=locked}}
-                <table class="centpourcent">
-                        <tr class="centpourcent">
-                        {{#if unlocked}}
-                                <th>
-                                        {{ localize 'PENOMBRE.ui.nom' }}
-                                </th>
-                                <th>
-                                        {{ localize 'PENOMBRE.Adversaire.FIELDS.description.label' }}
-                                </th>
-                        {{else}}
-                                <th>
-                                        {{ localize 'PENOMBRE.Adversaire.FIELDS.description.label' }}
-                                </th>
-                        {{/if}}
-                        </tr>
-                        <tr>
-                        {{#if unlocked}}
-                                <td>
-                                        <span class="name" data-tooltip="{{{system.description}}}">{{document.name}}</span>
-                                </td>
-                                <td>
-                                        {{formGroup systemFields.description value=systemSource.description localize=true}}
-                                </td>
-                        {{else}}
-                                <td>
-                                        <span class="name-complete">{{document.name}}&nbsp;{{system.description}}</span>
-                                </td>
-                        {{/if}}
-                        </tr>
-                </table>
-                {{#if unlocked}}
-                {{formGroup systemFields.adversite.fields.max value=systemSource.adversite.max localize=true}}
-                {{formGroup systemFields.adversite.fields.valeur value=systemSource.adversite.valeur localize=true}}
-                {{formGroup systemFields.resilience.fields.max value=systemSource.resilience.max localize=true disabled=true}}
-                {{formGroup systemFields.resilience.fields.valeur value=systemSource.resilience.valeur localize=true}}
-                {{formGroup systemFields.dissonance.fields.max value=systemSource.dissonance.max localize=true}}
-                {{formGroup systemFields.dissonance.fields.valeur value=systemSource.dissonance.valeur localize=true}}
-                {{formGroup systemFields.dissonance.fields.harmonique value=systemSource.dissonance.harmonique localize=true}}
+    <div class="infos">
+        <div class="nom{{#if locked}} locked{{/if}}">
+                {{#if locked}}
+                        <div class="name">{{nom}}</div>
+                        <div class="description">{{description}}</div>
                 {{else}}
-                <div class="form-group">
-                        <label>{{localize "PENOMBRE.Adversaire.FIELDS.adversite.max.label"}}</label>
-                        <div class="form-fields">{{system.adversite.max}}</div>
-                </div>
-                <div class="form-group">
-                        <label>{{localize "PENOMBRE.Adversaire.FIELDS.adversite.valeur.label"}}</label>
-                        <div class="form-fields">{{system.adversite.valeur}}</div>
-                </div>
-                <div class="form-group">
-                        <label>{{localize "PENOMBRE.Adversaire.FIELDS.resilience.max.label"}}</label>
-                        <div class="form-fields">{{system.resilience.max}}</div>
-                </div>
-                <div class="form-group">
-                        <label>{{localize "PENOMBRE.Adversaire.FIELDS.resilience.valeur.label"}}</label>
-                        <div class="form-fields">{{system.resilience.valeur}}</div>
-                </div>
-                <div class="form-group">
-                        <label>{{localize "PENOMBRE.Adversaire.FIELDS.dissonance.max.label"}}</label>
-                        <div class="form-fields">{{system.dissonance.max}}</div>
-                </div>
-                <div class="form-group">
-                        <label>{{localize "PENOMBRE.Adversaire.FIELDS.dissonance.valeur.label"}}</label>
-                        <div class="form-fields">{{system.dissonance.valeur}}</div>
-                </div>
-                <div class="form-group">
-                        <label>{{localize "PENOMBRE.Adversaire.FIELDS.dissonance.harmonique.label"}}</label>
-                        <div class="form-fields">{{localize (concat "PENOMBRE.Harmonique." system.dissonance.harmonique ".label")}}</div>
-                </div>
+                                                        
+                        {{formGroup fields.name value=document.name localize=true}}
+                        {{formGroup systemFields.description value=systemSource.description localize=true}}
                 {{/if}}
+        </div>
+        <div class="adversite">
+                <div class="attribut">
+                        <label>Adversité</label> {{numberInput system.adversite.valeur min=0 max=maxAdversite step=1 name="system.adversite.valeur" }} /  {{formInput systemFields.adversite.fields.max value=systemSource.adversite.max localize=true disabled=locked}}
+                </div>
+                <div class="attribut">
+                        <label>Résilience</label> {{numberInput system.resilience.valeur min=0 max=maxResilience step=1 name="system.resilience.valeur" }} /  {{formInput systemFields.resilience.fields.max value=systemSource.resilience.max localize=true disabled=locked}}
+                </div>
+                {{#if (or unlocked hasDissonance)}}
+                        <div class="attribut">
+                                <label>Dissonance</label> {{numberInput system.dissonance.valeur min=0 max=maxDissonance step=1 name="system.dissonance.valeur" }} /  {{formInput systemFields.dissonance.fields.max value=systemSource.dissonance.max localize=true disabled=locked}}
+                        </div>
+                {{/if}}
+        </div>
       </div>
 </div>

@@ -1,539 +1,141 @@
-/* ---------------------------------------------
-        Thème Clair
---------------------------------------------- */
-
-/* ---------------------------------------------
-          Thème Sombre
---------------------------------------------- */
-body {
-  &.theme-light {
-    .penombre {
-      &.adversaire {
-        .adversaire-content {
-          overflow: auto;
-          // width: 100%;
-          font-family: @font-cattedrale;
-          color: @color-primary;
-          font-size: @font-size-base;
-          background-color: @background-light; /* Si et seulement si on est en mode clair (et pas sombre) de la fiche */
-          clear: both;
-
-        }
-      }
-    }
-  }
-
-  &.theme-dark {
-    .penombre {
-      &.adversaire {
-        .adversaire-content {
-          overflow: auto;
-          width: 100%;
-          font-family: @font-cattedrale;
-          color: @color-primary;
-          font-size: @font-size-base;
-          clear: both;
-
-        }
-      }
-    }
-  }
-}
-
-.penombre {
-  /* ---------------------------------------------
-        Eminence
---------------------------------------------- */
-  &.adversaire {
-    width: 100%;
-    .adversaire-content {
-      width: 100%;
-      .centpourcent {
-        width: 100%;
-      }
-
-      // Styles pour les inputs
-      input,
-      select {
-        border-color: @color-primary;
-        color: @color-secondary;
-        font-family: @font-chocolate;
-        font-size: @font-size-midlarge;
-      }
-
-      // Structure principale
-      .adversaire-main {
-        width: 100%;
-        display: table;
-        clear: both;
-      }
-
-      // Colonnes
-      .col-1 {
-        width: 450px;
-        float: left;
-        display: table;
-        clear: both;
-      }
-
-      .col-2 {
-        width: 23px;
-        float: left;
-        height: 500px;
-        padding: 0 3px;
-
-        .grande-frise-verticale-1,
-        .grande-frise-verticale-2,
-        .grande-frise-verticale-3,
-        .grande-frise-verticale-4,
-        .grande-frise-verticale-5 {
-          flex-direction: column;
-        }
-      }
-
-      .col-3 {
-        // width: 625px;
-        margin-left: 473px;
-        // width: 100%;
-        min-width: 635px;
-        // float: left;
-      }
-
-      .col-1-1 {
-        width: 25px;
-        float: left;
-        transform: rotate(180deg);
-      }
-
-      .col-2-1 {
-        width: 9px;
-        float: left;
-      }
-
-      .col-3-1 {
-        width: 408px;
-        float: left;
-        flex-direction: column;
-        padding-left: 4px;
-      }
-
-      // Sections principales avec mixin
-      .eminence-personnage,
-      .eminence-harmoniques,
-      .eminence-conscience {
-        .section-style();
-      }
-
-      .eminence-pouvoirs,
-      .eminence-atouts,
-      .eminence-maitrises,
-      .eminence-pouvoirs-2,
-      .eminence-atouts-2,
-      .eminence-maitrises-2,
-      .eminence-timbre,
-      .eminence-timbre-2,
-      .eminence-recapitulatif {
-        .section-style-2();
-      }
-
-      // Police des textes verticaux
-      .text-vertical-personnage,
-      .text-vertical-harmoniques,
-      .text-vertical-conscience {
-        font-size: @font-size-middle;
-        writing-mode: vertical-rl;
-        text-orientation: sideways-left;
-      }
-
-      // Hauteurs spécifiques
-      .eminence-personnage {
-        min-height: 165px;
-        color: @color-primary;
+.penombre.adversaire {
+  .adversaire-content {
+    .adversaire-main {
+      overflow-y: auto;
+      .adversaire-personnage {
+        display: flex;
         .logo-frame {
-          display: table;
-          float: left;
-          justify-content: center;
-          height: 152px;
-          width: 150px;
-          padding: 1px;
-
           .logo-img {
-            border-radius: @border-radius;
             height: 150px;
             width: auto;
             max-width: 100%;
             display: block;
           }
         }
-
-        .data {
-          float: left;
-          width: 254px;
-          clear: right;
-        }
-      }
-
-      .eminence-harmoniques {
-        min-height: 350px;
-      }
-
-      .eminence-conscience-locked {
-        min-height: 725px;
-      }
-
-      .eminence-conscience-unlocked {
-        min-height: 685px;
-      }
-
-      /*
-      // Styles de texte avec classes utilitaires
-      .text {
-        .font-doree {
-          color: @color-accent;
-        }
-
-        .font-grise {
-          color: @color-secondary;
-        }
-
-        .font-marron {
-          color: @color-primary;
-        }
-
-        .font-chocolate {
-          font-family: @font-chocolate;
-        }
-
-        .font-cattedrale {
-          font-family: @font-cattedrale;
-        }
-      }
-      */
-
-      // Section conscience
-      .eminence-conscience {
-        color: @color-accent;
-
-        // Jetons
-        .div-jetons {
-          width: 400px;
-          display: grid;
-          grid-template-columns: repeat(5, 1fr); /* 5 colonnes égales */
+        .infos {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
           gap: 10px;
-          padding: 10px;
-
-          img.dropshadow-actif,
-          img.dropshadow-inactif {
-            -webkit-filter: drop-shadow(-5px 5px 5px #666666);
-            filter: drop-shadow(-5px 5px 5px #666666);
-
-            &:hover {
-              cursor: pointer;
-            }
-          }
-
-          .jeton {
+          input {
+            margin: 0 5px;
             text-align: center;
           }
-        }
-
-        .cadre-complications-2 {
-          display: table;
-          width: 402px;
-          border: 1px solid #917f35;
-          border-radius: @border-radius-small;
-          padding: 2px;
-          padding-left: 10px;
-
-          // Cases à cocher
-          .div-cases {
+          .nom {
             display: flex;
-            width: 390px;
-            // justify-content: space-between;
-
-            label {
-              float: left;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 10px;
+            input {
+              text-align: left;
             }
-
-            .div-descriptions {
-              input {
-                width: 320px;
-              }
-            }
-
-            .images-cases {
-              display: flex;
-              width: 250px;
-              height: 20px;
-              float: left;
+            &.locked {
               flex-direction: row;
-              justify-content: flex-end;
-
-              .complication-case {
-                float: left;
-                width: @small-case-size;
-                height: @small-case-size;
-
-                &:hover {
-                  cursor: pointer;
-                }
+              justify-content: center;
+              align-items: center;
+              font-size: 1.8rem;
+              .name {
+                color: rgb(5, 82, 5);
+              }
+              .description {
+                color: rgb(146, 126, 11);
               }
             }
           }
-        }
-
-        .cadre-complications {
-          display: table;
-          width: 402px;
-          border: 1px solid #917f35;
-          border-radius: @border-radius-small;
-          padding: 2px;
-          padding-left: 10px;
-
-          label {
-            width: 402px;
-            float: none;
-            clear: both;
-          }
-
-          .ligne-complication {
+          .adversite {
             display: flex;
-            clear: both;
-
-            .div-descriptions-2 {
+            flex-direction: column;
+            gap: 0.5rem;
+            .attribut {
+              display: flex;
+              align-items: center;
+              label {
+                display: inline-block;
+                width: 120px;
+                font-weight: bold;
+              }
               input {
-                width: 600px;
-              }
-            }
-
-            .div-descriptions {
-              float: left;
-              width: 320px;
-            }
-
-            // Cases à cocher
-            .div-cases {
-              float: left;
-              width: 70px;
-
-              .images-cases {
-                display: flex;
-                width: 70px;
-                height: 20px;
-                flex-direction: row;
-                justify-content: flex-end;
-
-                .complication-case {
-                  float: left;
-                  width: @small-case-size;
-                  height: @small-case-size;
-                }
+                margin: 0 5px;
+                width: 50px;
               }
             }
           }
         }
-
-        .note-jetons {
-          text-align: center;
-          color: @color-secondary;
-        }
       }
 
-      // Section harmoniques
-      .eminence-harmoniques {
-        color: @color-secondary;
-        .click:hover {
-          cursor: pointer;
-          -webkit-filter: drop-shadow(0px 0px 6px #af010a);
-          filter: drop-shadow(0px 0px 6px #af010a);
-        }
-        table {
-          tr {
-            &:nth-child(odd),
-            &:nth-child(even) {
-              background-color: transparent;
-            }
-          }
-        }
-
-        .case-de {
-          width: @case-size;
-        }
-
-        .col-3-1 {
-          .rang-2-2 {
-            float: none;
-            width: 405px;
-          }
-        }
-
-        /*
-        .editer-harmoniques {
-          // width: 405px;
-          font-size: @font-size-xlarge;
-        }
-        */
-
-        // Cases de mouvement avec mixin
-        .case-de-mouve-1 {
-          .case-de-mouve(40px);
-
-          .editer-harmoniques {
-            // width: 405px;
-            font-size: @font-size-xlarge;
-          }
-        }
-
-        .case-de-mouve-2 {
-          .case-de-mouve(-40px);
-
-          .editer-harmoniques {
-            // width: 405px;
-            font-size: @font-size-xlarge;
-          }
-        }
-
-        .case-de-mouve-3 {
-          .case-de-mouve(10px);
-
-          .editer-harmoniques {
-            // width: 405px;
-            font-size: @font-size-xlarge;
-          }
-        }
-
-        .case-de-mouve-4 {
-          .case-de-mouve(-5px);
-
-          .editer-harmoniques {
-            // width: 405px;
-            font-size: @font-size-xlarge;
-          }
-        }
-
-        .case-de-mouve-5 {
-          .case-de-mouve(85px);
-
-          .editer-harmoniques {
-            // width: 405px;
-            font-size: @font-size-xlarge;
-          }
-        }
-
-        .flexible {
-          position: relative;
-          display: flex;
-        }
-
-        .absolue {
-          position: absolute;
-          z-index: 5;
-        }
-
-        .de-d-ame-saisie,
-        .de-d-esprit-saisie,
-        .de-d-etincelle-saisie,
-        .de-de-nature-saisie,
-        .de-de-nuit-saisie {
-          margin-top: 25px;
-          margin-left: 10px;
-          width: 70px;
-          font-family: @font-chocolate;
-        }
-
-        // Tailles des dés avec mixin
-        .de-ame,
-        .de-esprit,
-        .de-etincelle,
-        .de-nature,
-        .de-nuit {
-          margin-left: 3px;
-          margin-top: -2px;
-          .dice-element();
-        }
-
-        // Textes gros
-        .text-gros-1,
-        .text-gros-2,
-        .text-gros-3,
-        .text-gros-4,
-        .text-gros-5 {
-          float: none;
-          color: @color-secondary;
-          font-size: @font-size-xlarge;
-        }
-      }
-
-      // Personnage
-      .adversaire-personnage {
-        justify-content: center;
-
-        .logo-frame {
-          display: table;
-          float: left;
-          justify-content: center;
-          height: 152px;
-          width: 150px;
-          padding: 1px;
-
-          .logo-img {
-            border-radius: @border-radius;
-            height: 150px;
-            width: auto;
-            max-width: 100%;
-            display: block;
-          }
-        }
-      }
-
-      // Section Actions
       .adversaire-actions {
-        td {
-          font-family: @font-chocolate;
-          font-size: @font-size-midlarge;
-          color: @color-secondary;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .actions-adverses,
+        .actions-dissonance {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          h2 {
+            font-size: 1.2rem;
+            text-align: center;
+            margin: 0;
+          }
         }
-
-        th {
-          text-align: left;
-        }
-
-        th.item-controls,
-        td.item-controls {
-          width: 70px;
-          font-size: @font-size-base;
+        .actions {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          gap: 10px;
+          .action {
+            position: relative;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            .nom {
+              font-weight: bold;
+              font-style: italic;
+              text-align: center;
+              margin-right: 40px;
+            }
+            .description {
+            }
+            .item-controls {
+                position: absolute;
+                top: 0.5rem;
+                right: 0.5rem;
+            }
+          }
         }
       }
 
-      // Section Intrigues
-      .adversaire-description {
-        td {
-          font-family: @font-chocolate;
-          font-size: @font-size-midlarge;
-          color: @color-secondary;
-        }
-
-        th {
-          text-align: left;
-        }
-      }
-
-      // Section Intrigues
       .adversaire-intrigues {
-        td {
-          font-family: @font-chocolate;
-          font-size: @font-size-midlarge;
-          color: @color-secondary;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        h2 {
+          font-size: 1.2rem;
+          text-align: center;
+          margin: 0;
         }
-
-        th {
-          text-align: left;
-        }
-
-        th.item-controls,
-        td.item-controls {
-          width: 70px;
-          font-size: @font-size-base;
+        .intrigues {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          gap: 10px;
+          .intrigue {
+            position: relative;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            .nom {
+              font-weight: bold;
+              font-style: italic;
+              text-align: center;
+              margin-right: 40px;
+            }
+            .description {
+            }
+            .item-controls {
+              position: absolute;
+              top: 0.5rem;
+              right: 0.5rem;
+            }
+          }
         }
       }
     }

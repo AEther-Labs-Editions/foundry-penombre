@@ -9,7 +9,6 @@ export default class Action extends foundry.abstract.TypeDataModel {
   static defineSchema() {
     const schema = {}
 
-    schema.type = new StringField({})
     schema.type = new StringField({ required: true, nullable: false, initial: SYSTEM.ACTION_TYPES.adverse.id, choices: SYSTEM.ACTION_TYPES })
     schema.description = new HTMLField({})
 
