@@ -410,6 +410,16 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   max-width: 100%;
   display: block;
 }
+.penombre.eminence .eminence-content .eminence-personnage .logo-frame .logo-img-unlocked {
+  border-radius: 6px;
+  height: 150px;
+  width: auto;
+  max-width: 100%;
+  display: block;
+}
+.penombre.eminence .eminence-content .eminence-personnage .logo-frame .logo-img-unlocked:hover {
+  cursor: pointer;
+}
 .penombre.eminence .eminence-content .eminence-personnage .data {
   float: left;
   width: 254px;
@@ -1475,6 +1485,18 @@ body.theme-dark .penombre.adversaire .adversaire-content {
   width: auto;
   max-width: 100%;
   display: block;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .logo-frame .logo-img-unlocked {
+  border: solid;
+  border-width: 2.5px;
+  border-color: #124b63;
+  height: 175px;
+  width: auto;
+  max-width: 100%;
+  display: block;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .logo-frame .logo-img-unlocked:hover {
+  cursor: pointer;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos {
   flex: 1;
