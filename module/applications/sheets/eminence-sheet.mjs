@@ -103,10 +103,10 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
     context.hasAtouts = this.document.system.hasAtouts
 
     // Select options
-    context.harmoniquesChoices = { d4: "D4", d6: "D6", d8: "D8", d10: "D10", d12: "D12" }
+    context.harmoniqueValueChoices = { d4: "D4", d6: "D6", d8: "D8", d10: "D10", d12: "D12" }
     context.potentielChoices = Object.fromEntries(Array.from({ length: SYSTEM.POTENTIEL_MAX }, (_, i) => [i, i]))
 
-    console.log("EminenceSheet._prepareContext", context)
+    console.log("Pénombre | EminenceSheet._prepareContext", context)
     return context
   }
 
@@ -143,7 +143,7 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
         icon: `<i class="fa-regular fa-bolt"></i>`,
         callback: async (li) => {
           const index = li.dataset.index
-          console.log(`EminenceSheet._getJetonConscienceContextOptions: index ${index}`)
+          console.log(`Pénombre | EminenceSheet._getJetonConscienceContextOptions: index ${index}`)
           let jetons = foundry.utils.duplicate(this.document.system.conscience.jetons)
           const currentStatut = jetons[index].statut
           let currentConscience = this.document.system.conscience.valeur
@@ -286,7 +286,7 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
     event.preventDefault()
     const dataset = target.dataset
     const harmonique = dataset.harmonique
-    console.log(`EminenceSheet.#onClicHarmonique: harmonique ${harmonique}`)
+    console.log(`Pénombre | EminenceSheet.#onClicHarmonique: harmonique ${harmonique}`)
 
     await this.actor.rollHarmonique({ harmonique })
   }
@@ -325,7 +325,6 @@ export default class EminenceSheet extends HandlebarsApplicationMixin(sheets.Act
       const item = this.actor.items.get(id)
       if (item) return item.sheet.render({ force: true })
     }
-    console.log("this.actor = ", this.actor)
   }
 
   static async #onDeleteItem(event, target) {
