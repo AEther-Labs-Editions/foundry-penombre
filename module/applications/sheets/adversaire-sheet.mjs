@@ -13,7 +13,7 @@ export default class AdversaireSheet extends HandlebarsApplicationMixin(sheets.A
   static DEFAULT_OPTIONS = {
     classes: ["penombre", "adversaire"],
     position: {
-      width: 575,
+      width: 800,
       height: 780,
     },
     form: {
@@ -88,7 +88,8 @@ export default class AdversaireSheet extends HandlebarsApplicationMixin(sheets.A
     context.unlocked = this.isEditMode
     context.locked = this.isPlayMode
 
-    context.harmoniquesChoices = this.document.system.dissonance.harmonique.choices
+    context.harmoniquesChoices = Object.fromEntries(Object.entries(SYSTEM.HARMONIQUES).map(([key, value]) => [key, { label: game.i18n.localize(value.label) }]))
+
     context.maxAdversite = this.document.system.adversite.max
     context.maxResilience = this.document.system.resilience.max
     context.maxDissonance = this.document.system.dissonance.max
@@ -206,7 +207,6 @@ export default class AdversaireSheet extends HandlebarsApplicationMixin(sheets.A
       const item = this.actor.items.get(id)
       if (item) return item.sheet.render({ force: true })
     }
-    console.log("this.actor = ", this.actor)
   }
 
   static async #onDeleteItem(event, target) {
@@ -215,24 +215,3 @@ export default class AdversaireSheet extends HandlebarsApplicationMixin(sheets.A
     if (id) return await this.actor.deleteEmbeddedDocuments("Item", [id])
   }
 }
-
-/*
-Function foo (name, value, min, max, step) {
-  console.log("foo", name, value, min, max, step)
-  if (name) {
-    // Here you process the template and put it in the DOM
-    var template = $(`range-picker[name="`+name+`"]`).parent().html();
-    console.log("foo template = ", template)
-    var templateScript = Handlebars.compile(template);
-    let result = '';
-    // {{rangePicker name="foo" value=bar min=0 max=10 step=1}}
-    result += `<range-picker name="`+name+`"`+` value="`+value+`" min="`+min+`" max="`+max+`" step="`+step+`">`+
-    `<input type="range" min="`+min+`" max="`+max+`" step="`+step+`">`+
-    `<input type="number" min="`+min+`" max="`+max+`" step="`+step+`></range-picker>`
-    console.log("foo result = ", result)
-    var html = templateScript(result);
-    // Once you have inserted your code in the DOM you can now use jQuery to modify it
-    $(`range-picker[name="`+name+`"]`).parent().html($(`range-picker[name="`+name+`"]`).parent().html(html))
-  }
-}
-*/

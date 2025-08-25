@@ -2,8 +2,6 @@ import { SYSTEM } from "../config/system.mjs"
 
 const { SchemaField, NumberField, StringField } = foundry.data.fields
 
-console.log("Je passe bien par là")
-
 export default class Adversaire extends foundry.abstract.TypeDataModel {
   /** @override */
   static LOCALIZATION_PREFIXES = ["PENOMBRE.Adversaire"]

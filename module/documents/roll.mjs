@@ -93,7 +93,7 @@ export default class PenombreRoll extends Roll {
               }
               return obj
             }, {})
-            console.log("PenombreRoll output", output)
+            console.log("Pénombre | PenombreRoll output", output)
             return output
           },
         },
@@ -170,7 +170,7 @@ export default class PenombreRoll extends Roll {
 
     await roll.evaluate()
 
-    console.log("PenombreRoll roll", roll)
+    console.log("Pénombre | PenombreRoll roll", roll)
 
     return roll
   }
