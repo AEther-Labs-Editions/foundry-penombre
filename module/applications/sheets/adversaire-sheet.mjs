@@ -88,7 +88,8 @@ export default class AdversaireSheet extends HandlebarsApplicationMixin(sheets.A
     context.unlocked = this.isEditMode
     context.locked = this.isPlayMode
 
-    context.harmoniquesChoices = Object.fromEntries(Object.entries(SYSTEM.HARMONIQUES).map(([key]) => [key.id, { label: "{{ localize '"+`${key.label}`+ "' }}" }]))
+    context.harmoniquesChoices = Object.fromEntries(Object.entries(SYSTEM.HARMONIQUES).map(([key]) => [key, { label: game.i18n.localize(key.label) }]))
+
     context.maxAdversite = this.document.system.adversite.max
     context.maxResilience = this.document.system.resilience.max
     context.maxDissonance = this.document.system.dissonance.max
