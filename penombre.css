@@ -1472,6 +1472,9 @@ body.theme-dark .penombre.adversaire .adversaire-content {
   width: 175px;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .logo-frame .logo-img {
+  border: solid;
+  border-width: 2.5px;
+  border-color: #124b63;
   height: 175px;
   width: auto;
   max-width: 100%;
