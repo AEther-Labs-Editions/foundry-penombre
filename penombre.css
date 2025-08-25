@@ -1445,7 +1445,6 @@ body.theme-light .penombre.adversaire .adversaire-content {
 }
 body.theme-dark .penombre.adversaire .adversaire-content {
   overflow: auto;
-  font-family: "CattedraleDemo";
   font-size: 17px;
   clear: both;
 }
@@ -1539,6 +1538,7 @@ body.theme-dark .penombre.adversaire .adversaire-content {
   width: 120px;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .adversite .attribut .harmonique {
+  font-family: "CattedraleDemo";
   margin: 0 5px;
   width: 70px;
   text-align: left;
@@ -1572,9 +1572,6 @@ body.theme-dark .penombre.adversaire .adversaire-content {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
-}
-.penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions .action:nth-child(even) {
-  color: black;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions .action:nth-child(odd) {
   color: #a47c64;
@@ -1615,9 +1612,6 @@ body.theme-dark .penombre.adversaire .adversaire-content {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
-}
-.penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues .intrigues .intrigue:nth-child(even) {
-  color: black;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues .intrigues .intrigue:nth-child(odd) {
   color: #a47c64;
