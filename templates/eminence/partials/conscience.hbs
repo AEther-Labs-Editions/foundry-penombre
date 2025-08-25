@@ -11,13 +11,8 @@
       {{#if unlocked}}       
           {{formGroup systemFields.conscience.fields.max value=systemSource.conscience.max localize=true}}
       {{else}}
-          <div class="form-group">
-            <label>{{localize "PENOMBRE.ui.conscienceVal"}}</label>
-            <div class="form-fields">{{system.conscience.valeur}}</div>
-          </div>
-          <div class="form-group">
-            <label>{{localize "PENOMBRE.ui.conscienceMax"}}</label>
-            <div class="form-fields">{{system.conscience.max}}</div>
+          <div class="form-group ligne-conscience">
+            <label>{{localize "PENOMBRE.ui.conscienceVal"}}</label><span>{{system.conscience.valeur}}</span><span>/</span><label>{{localize "PENOMBRE.ui.conscienceMax"}}</label><span>{{system.conscience.max}}</span>
           </div>
       {{/if}}
 
