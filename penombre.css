@@ -1430,14 +1430,47 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 #interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre section.atout li.roll.die.dice-selected {
   border: solid 2px black;
 }
+/* ---------------------------------------------
+        Thème Clair
+--------------------------------------------- */
+/* ---------------------------------------------
+          Thème Sombre
+--------------------------------------------- */
+body.theme-light .penombre.adversaire .adversaire-content {
+  overflow: auto;
+  font-size: 17px;
+  background-color: #faeed6;
+  /* Si et seulement si on est en mode clair (et pas sombre) de la fiche */
+  clear: both;
+}
+body.theme-dark .penombre.adversaire .adversaire-content {
+  overflow: auto;
+  font-family: "CattedraleDemo";
+  font-size: 17px;
+  clear: both;
+}
 .penombre.adversaire .adversaire-content .adversaire-main {
   overflow-y: auto;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-titre {
+  background-color: #124b63;
+  text-align: center;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-titre h4 {
+  font-family: "CattedraleDemo";
+  font-weight: normal;
+  color: #a47c64;
+  text-transform: uppercase;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage {
   display: flex;
 }
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .logo-frame {
+  height: 175px;
+  width: 175px;
+}
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .logo-frame .logo-img {
-  height: 150px;
+  height: 175px;
   width: auto;
   max-width: 100%;
   display: block;
@@ -1458,6 +1491,9 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   gap: 10px;
   margin-bottom: 10px;
 }
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .nom label {
+  font-family: "CattedraleDemo";
+}
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .nom input {
   text-align: left;
 }
@@ -1468,10 +1504,12 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   font-size: 1.8rem;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .nom.locked .name {
-  color: #055205;
+  font-family: "CattedraleDemo";
+  color: #124b63;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .nom.locked .description {
-  color: #927e0b;
+  font-family: "CattedraleDemo";
+  color: #a47c64;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .adversite {
   display: flex;
@@ -1480,9 +1518,11 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .adversite .attribut {
   display: flex;
-  align-items: center;
+  align-items: left;
+  margin: 0 20px;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .adversite .attribut label {
+  font-family: "CattedraleDemo";
   display: inline-block;
   width: 120px;
   font-weight: bold;
@@ -1490,6 +1530,11 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .adversite .attribut input {
   margin: 0 5px;
   width: 50px;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .adversite .attribut .harmonique {
+  margin: 0 5px;
+  width: 70px;
+  text-align: left;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions {
   display: flex;
@@ -1504,6 +1549,8 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions-adverses h2,
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions-dissonance h2 {
+  color: #124b63;
+  text-transform: uppercase;
   font-size: 1.2rem;
   text-align: center;
   margin: 0;
@@ -1519,11 +1566,20 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   border-radius: 5px;
   padding: 10px;
 }
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions .action:nth-child(even) {
+  color: black;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions .action:nth-child(odd) {
+  color: #a47c64;
+}
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions .action .nom {
   font-weight: bold;
   font-style: italic;
   text-align: center;
   margin-right: 40px;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions .action .description {
+  font-size: 13px;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions .action .item-controls {
   position: absolute;
@@ -1536,6 +1592,8 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   gap: 10px;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues h2 {
+  color: #124b63;
+  text-transform: uppercase;
   font-size: 1.2rem;
   text-align: center;
   margin: 0;
@@ -1551,11 +1609,20 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   border-radius: 5px;
   padding: 10px;
 }
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues .intrigues .intrigue:nth-child(even) {
+  color: black;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues .intrigues .intrigue:nth-child(odd) {
+  color: #a47c64;
+}
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues .intrigues .intrigue .nom {
   font-weight: bold;
   font-style: italic;
   text-align: center;
   margin-right: 40px;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues .intrigues .intrigue .description {
+  font-size: 13px;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues .intrigues .intrigue .item-controls {
   position: absolute;

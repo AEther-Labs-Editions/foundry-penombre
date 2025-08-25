@@ -1,12 +1,73 @@
+// Tailles
+@font-size-small: 13px;
+
+// Couleurs du thème
+@color-primary-clear: #a47c64; // Marron secondaire
+@color-blue: #124b63; // Bleu
+
+
+/* ---------------------------------------------
+        Thème Clair
+--------------------------------------------- */
+
+/* ---------------------------------------------
+          Thème Sombre
+--------------------------------------------- */
+body {
+  &.theme-light {
+    .penombre {
+      &.adversaire {
+        .adversaire-content {
+          overflow: auto;
+          // width: 100%;
+          // color: @color-primary;
+          font-size: @font-size-base;
+          background-color: @background-light; /* Si et seulement si on est en mode clair (et pas sombre) de la fiche */
+          clear: both;
+        }
+      }
+    }
+  }
+
+
+  &.theme-dark {
+    .penombre {
+      &.adversaire {
+        .adversaire-content {
+          overflow: auto;
+          // width: 100%;
+          font-family: @font-cattedrale;
+          // color: @color-primary;
+          font-size: @font-size-base;
+          clear: both;
+        }
+      }
+    }
+  }
+}
+
+
 .penombre.adversaire {
   .adversaire-content {
     .adversaire-main {
       overflow-y: auto;
+      .adversaire-titre {
+        background-color: @color-blue;
+        text-align: center;
+        h4 {
+            font-family: @font-cattedrale;
+            font-weight: normal;
+            color: @color-primary-clear;
+            text-transform: uppercase;
+        }
+      }
       .adversaire-personnage {
         display: flex;
         .logo-frame {
+            height: 175px;
+            width: 175px;
           .logo-img {
-            height: 150px;
+            height: 175px;
             width: auto;
             max-width: 100%;
             display: block;
@@ -26,6 +87,9 @@
             flex-direction: column;
             gap: 10px;
             margin-bottom: 10px;
+            label {
+                font-family: @font-cattedrale;
+            }
             input {
               text-align: left;
             }
@@ -35,10 +99,12 @@
               align-items: center;
               font-size: 1.8rem;
               .name {
-                color: rgb(5, 82, 5);
+                font-family: @font-cattedrale;
+                color: @color-blue;
               }
               .description {
-                color: rgb(146, 126, 11);
+                font-family: @font-cattedrale;
+                color: @color-primary-clear;
               }
             }
           }
@@ -48,8 +114,10 @@
             gap: 0.5rem;
             .attribut {
               display: flex;
-              align-items: center;
+              align-items: left;
+              margin: 0 20px;
               label {
+                font-family: @font-cattedrale;
                 display: inline-block;
                 width: 120px;
                 font-weight: bold;
@@ -57,6 +125,11 @@
               input {
                 margin: 0 5px;
                 width: 50px;
+              }
+              .harmonique {
+                margin: 0 5px;
+                width: 70px;
+                text-align: left;
               }
             }
           }
@@ -73,6 +146,8 @@
           flex-direction: column;
           justify-content: center;
           h2 {
+            color: @color-blue;
+            text-transform: uppercase;
             font-size: 1.2rem;
             text-align: center;
             margin: 0;
@@ -83,6 +158,12 @@
           grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
           gap: 10px;
           .action {
+            &:nth-child(even) {
+            color: black;
+            }
+            &:nth-child(odd) {
+            color: @color-primary-clear
+            }
             position: relative;
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -94,6 +175,7 @@
               margin-right: 40px;
             }
             .description {
+              font-size: @font-size-small;
             }
             .item-controls {
                 position: absolute;
@@ -109,6 +191,8 @@
         flex-direction: column;
         gap: 10px;
         h2 {
+          color: @color-blue;
+          text-transform: uppercase;
           font-size: 1.2rem;
           text-align: center;
           margin: 0;
@@ -118,6 +202,12 @@
           grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
           gap: 10px;
           .intrigue {
+            &:nth-child(even) {
+            color: black;
+            }
+            &:nth-child(odd) {
+            color: @color-primary-clear
+            }
             position: relative;
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -129,6 +219,7 @@
               margin-right: 40px;
             }
             .description {
+              font-size: @font-size-small;
             }
             .item-controls {
               position: absolute;

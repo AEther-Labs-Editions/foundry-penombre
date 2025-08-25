@@ -15,17 +15,22 @@
                 {{/if}}
         </div>
         <div class="adversite">
-                <div class="attribut">
-                        <label>Adversité</label> {{numberInput system.adversite.valeur min=0 max=maxAdversite step=1 name="system.adversite.valeur" }} /  {{formInput systemFields.adversite.fields.max value=systemSource.adversite.max localize=true disabled=locked}}
-                </div>
-                <div class="attribut">
-                        <label>Résilience</label> {{numberInput system.resilience.valeur min=0 max=maxResilience step=1 name="system.resilience.valeur" }} /  {{formInput systemFields.resilience.fields.max value=systemSource.resilience.max localize=true disabled=locked}}
-                </div>
-                {{#if (or unlocked hasDissonance)}}
-                        <div class="attribut">
-                                <label>Dissonance</label> {{numberInput system.dissonance.valeur min=0 max=maxDissonance step=1 name="system.dissonance.valeur" }} /  {{formInput systemFields.dissonance.fields.max value=systemSource.dissonance.max localize=true disabled=locked}}
-                        </div>
+            <div class="attribut">
+                <label>{{ localize 'PENOMBRE.Adversaire.FIELDS.adversite.valeur.label' }}</label> {{numberInput system.adversite.valeur min=0 max=maxAdversite step=1 name="system.adversite.valeur" }} /  {{formInput systemFields.adversite.fields.max value=systemSource.adversite.max localize=true disabled=locked}}
+            </div>
+            <div class="attribut">
+                <label>{{ localize 'PENOMBRE.Adversaire.FIELDS.resilience.valeur.label' }}</label> {{numberInput system.resilience.valeur min=0 max=maxResilience step=1 name="system.resilience.valeur" }} /  {{formInput systemFields.resilience.fields.max value=systemSource.resilience.max localize=true disabled=locked}}
+            </div>
+            {{#if (or unlocked hasDissonance)}}
+            <div class="attribut">
+                <label>{{ localize 'PENOMBRE.Adversaire.FIELDS.dissonance.valeur.label' }}</label> {{numberInput system.dissonance.valeur min=0 max=maxDissonance step=1 name="system.dissonance.valeur" }} /  {{formInput systemFields.dissonance.fields.max value=systemSource.dissonance.max localize=true disabled=locked}}
+                {{#if unlocked}}
+                {{selectOptions harmoniquesChoices selected=systemSource.dissonance.harmonique valueAttr="key" labelAttr="label"}}
+                {{else}}
+                <div class="form-fields harmonique">{{localize (concat "PENOMBRE.Harmonique." system.dissonance.harmonique ".label")}}</div>
                 {{/if}}
+            </div>
+            {{/if}}
         </div>
       </div>
 </div>
