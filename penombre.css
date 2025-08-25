@@ -419,6 +419,7 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 }
 .penombre.eminence .eminence-content .eminence-personnage .logo-frame .logo-img-unlocked:hover {
   cursor: pointer;
+  box-shadow: 0px 0px 0px 2.5px #a56135;
 }
 .penombre.eminence .eminence-content .eminence-personnage .data {
   float: left;
@@ -1497,6 +1498,7 @@ body.theme-dark .penombre.adversaire .adversaire-content {
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .logo-frame .logo-img-unlocked:hover {
   cursor: pointer;
+  box-shadow: 0px 0px 0px 0.75px #124b63;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos {
   flex: 1;
