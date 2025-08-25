@@ -1593,7 +1593,6 @@ body.theme-dark .penombre.adversaire .adversaire-content {
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues {
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues h2 {
   color: #124b63;
