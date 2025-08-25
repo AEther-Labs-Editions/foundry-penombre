@@ -1,5 +1,4 @@
-{{log "personnage" this}}
-{{log "harmoniquesChoices" harmoniquesChoices}}
+{{log "adversaire personnage" this}}
 <div class="adversaire-personnage">
     <div class="logo-frame">
       <img class="logo-img" src="{{document.img}}" {{#if unlocked}}data-action="editImage"{{/if}} data-tooltip="{{document.name}}"/>
@@ -27,7 +26,7 @@
                 <label>{{ localize 'PENOMBRE.Adversaire.FIELDS.dissonance.valeur.label' }}</label> {{numberInput system.dissonance.valeur min=0 max=maxDissonance step=1 name="system.dissonance.valeur" }} /  {{formInput systemFields.dissonance.fields.max value=systemSource.dissonance.max localize=true disabled=locked}}
                 {{#if unlocked}}
                  <select name="system.dissonance.harmonique">
-                {{selectOptions harmoniquesChoices selected=systemSource.dissonance.harmonique valueAttr="key" labelAttr="label"}}
+                    {{selectOptions harmoniquesChoices selected=systemSource.dissonance.harmonique}}
                 </select>
                 {{else}}
                 <div class="form-fields harmonique">{{localize (concat "PENOMBRE.Harmonique." system.dissonance.harmonique ".label")}}</div>
