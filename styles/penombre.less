@@ -203,6 +203,20 @@ body {
               .col-1-2 {
                 float: left;
                 width: 212px;
+
+                div {
+                  display: table;
+
+                  span {
+                    float: none;
+                    clear: both;
+                    height: 15px;
+
+                    &.description {
+                      height: auto;
+                    }
+                  }
+                }
               }
 
               .col-2-2 {
@@ -1227,3 +1241,4 @@ body {
 @import "reserve-collegiale.less";
 @import "dialog.less";
 @import "chat.less";
+@import "adversaire.less";

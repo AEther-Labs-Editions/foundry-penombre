@@ -11,8 +11,14 @@
     {{formGroup systemFields.timbre.fields.peste value=systemSource.timbre.peste localize=true}}
     {{else}}
       <div class="col-1-2">
-      <label class="label-timbre">{{localize "PENOMBRE.ui.timbre"}}</label>
-      <span>{{localize system.timbre.description}}<span>
+        <div>
+          <label class="label-timbre">{{localize "PENOMBRE.ui.timbre"}}</label>
+          <span>.......................................................................................</span>
+          <span>.......................................................................................</span>
+          <span>.......................................................................................</span>
+          <span>.......................................................................................</span>
+          <span>.......................................................................................</span>
+        </div>
       </div>
       <div class="col-2-2">
         {{#each systemFields.timbre.fields.statut.choices as |choice id|}}

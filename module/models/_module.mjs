@@ -5,3 +5,7 @@ export { default as PenombreMaitrise } from "./maitrise.mjs"
 export { default as ReserveCollegiale } from "./reserve-collegiale.mjs"
 export { default as BaseMessageData } from "./base-message.mjs"
 export { default as HarmoniqueMessageData } from "./harmonique-message.mjs"
+
+export { default as PenombreAdversaire } from "./adversaire.mjs"
+export { default as PenombreAction } from "./action.mjs"
+export { default as PenombreIntrigue } from "./intrigue.mjs"

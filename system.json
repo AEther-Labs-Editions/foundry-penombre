@@ -59,12 +59,15 @@
   ],
   "documentTypes": {
     "Actor": {
-      "eminence": {}
+      "eminence": {},
+      "adversaire": {}
     },
     "Item": {
       "pouvoir": { "htmlFields": ["description"] },
       "atout": { "htmlFields": ["description"] },
-      "maitrise": { "htmlFields": ["description"] }
+      "maitrise": { "htmlFields": ["description"] },
+      "action": { "htmlFields": ["description"] },
+      "intrigue": { "htmlFields": ["description"] }
     },
     "ChatMessage": {
       "harmonique": {}
