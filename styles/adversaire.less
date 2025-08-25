@@ -49,8 +49,9 @@ body {
 
 .penombre.adversaire {
   .adversaire-content {
+    overflow-y: auto;
     .adversaire-main {
-      overflow-y: auto;
+      width: 100%;
       .adversaire-titre {
         background-color: @color-blue;
         text-align: center;
@@ -79,13 +80,13 @@ body {
           flex-direction: column;
           gap: 10px;
           input {
-            margin: 0 5px;
             text-align: center;
           }
           .nom {
             display: flex;
             flex-direction: column;
             gap: 10px;
+            margin-left: 20px;
             margin-bottom: 10px;
             label {
                 font-family: @font-cattedrale;
@@ -115,7 +116,7 @@ body {
             .attribut {
               display: flex;
               align-items: left;
-              margin: 0 20px;
+              margin-left: 20px;
               label {
                 font-family: @font-cattedrale;
                 display: inline-block;
@@ -125,6 +126,10 @@ body {
               input {
                 margin: 0 5px;
                 width: 50px;
+              }
+              select {
+                margin: 0 5px;
+                width: 120px;
               }
               .harmonique {
                 margin: 0 5px;

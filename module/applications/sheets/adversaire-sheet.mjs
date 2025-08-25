@@ -13,7 +13,7 @@ export default class AdversaireSheet extends HandlebarsApplicationMixin(sheets.A
   static DEFAULT_OPTIONS = {
     classes: ["penombre", "adversaire"],
     position: {
-      width: 575,
+      width: 800,
       height: 780,
     },
     form: {
