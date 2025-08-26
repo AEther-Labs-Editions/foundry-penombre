@@ -264,6 +264,17 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-t
   float: left;
   width: 212px;
 }
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div {
+  display: table;
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div span {
+  float: none;
+  clear: both;
+  height: 15px;
+}
+body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div span.description {
+  height: auto;
+}
 body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 {
   float: left;
   width: 101px;
@@ -294,32 +305,6 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   /* ---------------------------------------------
         Eminence
 --------------------------------------------- */
-}
-.penombre.eminence .eminence-content {
-  /*
-      // Styles de texte avec classes utilitaires
-      .text {
-        .font-doree {
-          color: @color-accent;
-        }
-
-        .font-grise {
-          color: @color-secondary;
-        }
-
-        .font-marron {
-          color: @color-primary;
-        }
-
-        .font-chocolate {
-          font-family: @font-chocolate;
-        }
-
-        .font-cattedrale {
-          font-family: @font-cattedrale;
-        }
-      }
-      */
 }
 .penombre.eminence .eminence-content .centpourcent {
   width: 100%;
@@ -425,6 +410,17 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
   max-width: 100%;
   display: block;
 }
+.penombre.eminence .eminence-content .eminence-personnage .logo-frame .logo-img-unlocked {
+  border-radius: 6px;
+  height: 150px;
+  width: auto;
+  max-width: 100%;
+  display: block;
+}
+.penombre.eminence .eminence-content .eminence-personnage .logo-frame .logo-img-unlocked:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 2.5px #a56135;
+}
 .penombre.eminence .eminence-content .eminence-personnage .data {
   float: left;
   width: 254px;
@@ -435,6 +431,27 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 }
 .penombre.eminence .eminence-content .eminence-conscience-locked {
   min-height: 725px;
+}
+.penombre.eminence .eminence-content .eminence-conscience-locked .col-3-1 .col-1-3 {
+  display: flex;
+  flex-direction: column;
+}
+.penombre.eminence .eminence-content .eminence-conscience-locked .col-3-1 .col-1-3 .ligne-conscience {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-left: 20px;
+  height: 32px;
+}
+.penombre.eminence .eminence-content .eminence-conscience-locked .col-3-1 .col-1-3 .ligne-conscience label {
+  font-family: "CattedraleDemo";
+  display: inline-block;
+  width: 120px;
+  font-weight: bold;
+}
+.penombre.eminence .eminence-content .eminence-conscience-locked .col-3-1 .col-1-3 .ligne-conscience span {
+  margin: 0 5px;
+  width: 50px;
 }
 .penombre.eminence .eminence-content .eminence-conscience-unlocked {
   min-height: 685px;
@@ -898,7 +915,7 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 .penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts-2 th.item-case-width,
 .penombre.eminence .eminence-content .eminence-atouts .content .atouts-2 td.item-case-width,
 .penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts-2 td.item-case-width {
-  width: 70px;
+  width: 100px;
 }
 .penombre.eminence .eminence-content .eminence-atouts .content .atouts-2 th.item-controls,
 .penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts-2 th.item-controls,
@@ -1454,16 +1471,6 @@ body.theme-dark .penombre.adversaire .adversaire-content {
 .penombre.adversaire .adversaire-content .adversaire-main {
   width: 100%;
 }
-.penombre.adversaire .adversaire-content .adversaire-main .adversaire-titre {
-  background-color: #124b63;
-  text-align: center;
-}
-.penombre.adversaire .adversaire-content .adversaire-main .adversaire-titre h4 {
-  font-family: "CattedraleDemo";
-  font-weight: normal;
-  color: #a47c64;
-  text-transform: uppercase;
-}
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage {
   display: flex;
 }
@@ -1479,6 +1486,19 @@ body.theme-dark .penombre.adversaire .adversaire-content {
   width: auto;
   max-width: 100%;
   display: block;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .logo-frame .logo-img-unlocked {
+  border: solid;
+  border-width: 2.5px;
+  border-color: #124b63;
+  height: 175px;
+  width: auto;
+  max-width: 100%;
+  display: block;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .logo-frame .logo-img-unlocked:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 0.75px #124b63;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos {
   flex: 1;
@@ -1527,6 +1547,7 @@ body.theme-dark .penombre.adversaire .adversaire-content {
   margin-left: 20px;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .adversite .attribut label {
+  align-self: center;
   font-family: "CattedraleDemo";
   display: inline-block;
   width: 120px;

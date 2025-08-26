@@ -51,16 +51,6 @@ body {
     overflow-y: auto;
     .adversaire-main {
       width: 100%;
-      .adversaire-titre {
-        background-color: @color-blue;
-        text-align: center;
-        h4 {
-            font-family: @font-cattedrale;
-            font-weight: normal;
-            color: @color-primary-clear;
-            text-transform: uppercase;
-        }
-      }
       .adversaire-personnage {
         display: flex;
         .logo-frame {
@@ -75,6 +65,20 @@ body {
             max-width: 100%;
             display: block;
           }
+          .logo-img-unlocked {
+            border: solid;
+            border-width: 2.5px;
+            border-color: @color-blue;
+            height: 175px;
+            width: auto;
+            max-width: 100%;
+            display: block;
+            &:hover {
+              cursor: pointer;
+              box-shadow: 0px 0px 0px 0.75px @color-blue;
+            }
+          }
+
         }
         .infos {
           flex: 1;
@@ -120,6 +124,7 @@ body {
               align-items: left;
               margin-left: 20px;
               label {
+                align-self: center;
                 font-family: @font-cattedrale;
                 display: inline-block;
                 width: 120px;
