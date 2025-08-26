@@ -173,10 +173,10 @@ Hooks.on("updateSetting", async (setting, update, options, id) => {
   }
 })
 
-Hooks.on("renderChatMessageHTML", (message, html, context) => {
+Hooks.on("renderChatMessageHTML", async (message, html, context) => {
   console.log("Pénombre | Rendu du message de chat", message, html, context)
 
-  // Les boutons reroll n'est affiché pour le MJ ou le joueur à l'origine du message
+  // Les boutons reroll n'est affiché que pour le MJ ou le joueur à l'origine du message
   if ((game.user.isGM || message.isAuthor) && !message.system.relanceFaite) {
     html.querySelectorAll(".roll.die").forEach((btn) => {
       btn.classList.add("rerollable")
@@ -279,7 +279,7 @@ Hooks.on("renderChatMessageHTML", (message, html, context) => {
   }
 
   // Les boutons pour participer à un jet collégial sont visibles par tous les autres joueurs
-  if (message.system.actionCollegiale && !message.system.actionCollegialeMessageLie && !message.isAuthor) {
+  if (message.system.actionCollegiale && !message.system.actionCollegialeMessageLie && !message.isAuthor && !message.system.messagesLies[game.user.character.id].reponseFaite) {
     html.querySelector(".participate-yes").classList.remove("hidden")
     html.querySelector(".participate-no").classList.remove("hidden")
 
@@ -309,5 +309,37 @@ Hooks.on("renderChatMessageHTML", (message, html, context) => {
       const messageId = ev.target.closest(".chat-message").dataset.messageId
       await game.users.activeGM.query("penombre.updateMessageParticipation", { existingMessageId: messageId, actorId: currentActorId, answer: false })
     })
+  }
+
+  // Gestion de l'affichage
+  if (message.system.actionCollegiale && !message.system.actionCollegialeMessageLie) {
+    console.log("Pénombre | Affichage", message.system)
+    if (message.system.toutesReponsesFaites) {
+      console.log("Pénombre | Affichage | Toutes les réponses ont été faites.")
+      const rollResultOtherDiv = html.querySelector(".roll-result-other")
+
+      const roll = message.rolls[0]
+      const nbSucces = documents.PenombreRoll.analyseRollResult(roll)
+      const autresSucces = Object.entries(message.system.messagesLies).map(([id, value]) => ({
+        actor: game.actors.get(id).name,
+        nbSucces: value.nbSucces,
+      }))
+      const totalSucces = nbSucces + autresSucces.reduce((acc, curr) => acc + curr.nbSucces, 0)
+
+      const hasDifficulte = roll.options.difficulte !== ""
+      const isSuccess = hasDifficulte && totalSucces >= roll.options.difficulte
+
+      const content = await foundry.applications.handlebars.renderTemplate("systems/penombre/templates/chat/action-collegiale.hbs", {
+        autresSucces,
+        hasAutresSucces: autresSucces.length > 0,
+        totalSucces: totalSucces,
+        hasDifficulte: hasDifficulte,
+        difficulte: roll.options.difficulte,
+        isSuccess: isSuccess,
+      })
+      rollResultOtherDiv.innerHTML = content
+    } else {
+      console.log("Pénombre | Affichage | Certaines réponses sont manquantes.")
+    }
   }
 })

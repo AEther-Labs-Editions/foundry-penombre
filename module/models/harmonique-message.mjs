@@ -37,4 +37,9 @@ export default class HarmoniqueMessageData extends BaseMessageData {
       idMessageOrigine: new StringField(),
     })
   }
+
+  // Toutes réponses attendues ont été faites
+  get toutesReponsesFaites() {
+    return Object.values(this.messagesLies).every((msg) => msg.reponseFaite)
+  }
 }
