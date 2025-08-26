@@ -152,7 +152,6 @@ export default class PenombreRoll extends Roll {
 
     const rollOptions = {
       messageType,
-      messagesLies,
       actorId: actor.id,
       harmonique: rollContext.harmonique,
       actionCollegiale: messageType === "principal" ? rollContext.actionCollegiale : true,
@@ -286,27 +285,10 @@ export default class PenombreRoll extends Roll {
     const hasDifficulte = this.options.difficulte !== ""
     const actorIdSource = this.options.actorId
     const actorId = game.user.character?.id
-
-    // { actorId: {nbSuccess}}
-    const messagesLies = this.options.messagesLies
-    let autresSucces = []
-    if (messagesLies) {
-      // Parcourir messagesLies pour extraire un tableau de {actorId, nbSucces}
-      autresSucces = Object.entries(messagesLies).map(([id, value]) => ({
-        actor: game.actors.get(id).name,
-        nbSucces: value.nbSucces,
-      }))
-    }
-    const hasAutresSucces = autresSucces.length > 0
-    const totalSucces = nbSucces + autresSucces.reduce((acc, curr) => acc + curr.nbSucces, 0)
-
-    const isSuccess = hasDifficulte && totalSucces >= this.options.difficulte
+    const isSuccess = hasDifficulte && nbSucces >= this.options.difficulte
 
     return {
       messageType: this.options.messageType,
-      hasAutresSucces,
-      autresSucces,
-      totalSucces,
       harmonique: this.options.harmonique,
       actionCollegiale: this.options.actionCollegiale,
       isActionPrincipale: this.options.messageType === "principal",

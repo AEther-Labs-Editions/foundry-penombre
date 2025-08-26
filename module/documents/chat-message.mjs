@@ -67,15 +67,10 @@ export default class PenombreMessage extends ChatMessage {
       if (answer) {
         // Si la réponse est positive, on enregistre le nombre de succès
         const nbSucces = PenombreRoll.analyseRollResult(newMessage.rolls[0])
-        const roll = message.rolls[0]
-        roll.options.messagesLies[actorId] = {
-          nbSucces: nbSucces,
-        }
         await message.update({
           [`system.messagesLies.${actorId}.messageId`]: newMessageId,
           [`system.messagesLies.${actorId}.reponseFaite`]: true,
           [`system.messagesLies.${actorId}.nbSucces`]: nbSucces,
-          rolls: [roll],
         })
       } else {
         await message.update({
