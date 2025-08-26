@@ -1,5 +1,6 @@
 const { SchemaField, NumberField, StringField, BooleanField, ArrayField, TypedObjectField, DocumentIdField } = foundry.data.fields
 import BaseMessageData from "./base-message.mjs"
+import PenombreRoll from "../documents/roll.mjs"
 
 export default class HarmoniqueMessageData extends BaseMessageData {
   static defineSchema() {
@@ -41,5 +42,174 @@ export default class HarmoniqueMessageData extends BaseMessageData {
   // Toutes réponses attendues ont été faites
   get toutesReponsesFaites() {
     return Object.values(this.messagesLies).every((msg) => msg.reponseFaite)
+  }
+
+  async alterMessageHTML(html) {
+    if (this.actionCollegiale && !this.actionCollegialeMessageLie) {
+      console.log("Pénombre | Affichage", this)
+      if (this.toutesReponsesFaites) {
+        console.log("Pénombre | Affichage | Toutes les réponses ont été faites.")
+        const rollResultOtherDiv = html.querySelector(".roll-result-other")
+
+        const roll = this.parent.rolls[0]
+        const nbSucces = PenombreRoll.analyseRollResult(roll)
+        const autresSucces = Object.entries(this.messagesLies).map(([id, value]) => ({
+          actor: game.actors.get(id).name,
+          nbSucces: value.nbSucces,
+        }))
+        const totalSucces = nbSucces + autresSucces.reduce((acc, curr) => acc + curr.nbSucces, 0)
+
+        const hasDifficulte = roll.options.difficulte !== ""
+        const isSuccess = hasDifficulte && totalSucces >= roll.options.difficulte
+
+        const content = await foundry.applications.handlebars.renderTemplate("systems/penombre/templates/chat/action-collegiale.hbs", {
+          autresSucces,
+          hasAutresSucces: autresSucces.length > 0,
+          totalSucces: totalSucces,
+          hasDifficulte: hasDifficulte,
+          difficulte: roll.options.difficulte,
+          isSuccess: isSuccess,
+        })
+        rollResultOtherDiv.innerHTML = content
+      } else {
+        console.log("Pénombre | Affichage | Certaines réponses sont manquantes.")
+      }
+    }
+  }
+
+  async addListeners(html) {
+    // Les boutons reroll n'est affiché que pour le MJ ou le joueur à l'origine du message
+    if ((game.user.isGM || this.parent.isAuthor) && !this.relanceFaite) {
+      html.querySelectorAll(".roll.die").forEach((btn) => {
+        btn.classList.add("rerollable")
+        btn.addEventListener("click", (ev) => {
+          ev.preventDefault()
+          ev.stopPropagation()
+          // Ajoute la classe css dice-selected
+          ev.currentTarget.classList.toggle("dice-selected")
+        })
+      })
+
+      // S'il reste au moins un jeton de conscience
+      const actor = game.actors.get(this.parent.speaker.actor)
+      if (actor && actor.system.nbJetonsRestants > 0) {
+        html.querySelector(".reroll-conscience").classList.remove("hidden")
+
+        html.querySelector(".reroll-conscience").addEventListener("click", async (ev) => {
+          ev.preventDefault()
+          ev.stopPropagation()
+          const messageId = ev.target.closest(".chat-message").dataset.messageId
+          if (!messageId) return
+          let rerolledDices = []
+          // Remonter dans la structure html pour trouver les éléments dice-selected
+          ev.target
+            .closest(".chat-message")
+            .querySelectorAll(".dice-selected")
+            .forEach((selected) => {
+              rerolledDices.push(selected.dataset.indice)
+            })
+          // Pas de dé sélectionné
+          if (rerolledDices.length === 0) return
+
+          // On vérifie qu'il reste un jeton de la réserve de conscience
+          if (actor.system.nbJetonsRestants === 0) {
+            ui.notifications.warn(game.i18n.format("PENOMBRE.warnings.jetonsConscienceInsuffisants", { actuel: 0, demande: 1 }))
+            return
+          }
+
+          // Dépense d'un jeton de conscience et relance
+          const depense = actor.system.depenserJetons(1)
+          await PenombreRoll.reroll(messageId, rerolledDices)
+
+          // Si c'est un message lié, mettre à jour le message principal
+          if (this.actionCollegialeMessageLie && this.idMessageOrigine) {
+            await game.users.activeGM.query("penombre.updateMessageParticipation", {
+              existingMessageId: this.idMessageOrigine,
+              actorId: actor.id,
+              answer: true,
+              newMessageId: messageId,
+            })
+          }
+        })
+      }
+
+      // S'il reste au moins un jeton dans la réserve collégiale
+      let reserveCollegiale = game.settings.get(SYSTEM.ID, "reserveCollegiale")
+      if (reserveCollegiale.nbJetonsRestants > 0) {
+        html.querySelector(".reroll-reserve").classList.remove("hidden")
+
+        html.querySelector(".reroll-reserve").addEventListener("click", async (ev) => {
+          ev.preventDefault()
+          ev.stopPropagation()
+          const messageId = ev.target.closest(".chat-message").dataset.messageId
+          if (!messageId) return
+          let rerolledDices = []
+          // Remonter dans la structure html pour trouver les éléments dice-selected
+          ev.target
+            .closest(".chat-message")
+            .querySelectorAll(".dice-selected")
+            .forEach((selected) => {
+              rerolledDices.push(selected.dataset.indice)
+            })
+          // Pas de dé sélectionné
+          if (rerolledDices.length === 0) return
+
+          // On vérifie qu'il reste un jeton dans la réserve collégiale
+          reserveCollegiale = game.settings.get(SYSTEM.ID, "reserveCollegiale")
+          if (reserveCollegiale.nbJetonsRestants === 0) {
+            ui.notifications.warn(game.i18n.format("PENOMBRE.warnings.jetonsReserveInsuffisants", { actuel: 0, demande: 1 }), {
+              permanent: true,
+            })
+            return
+          }
+
+          // Dépense d'un jeton de la réserve et relance
+          await game.users.activeGM.query("penombre.updateReserveCollegialeFromRoll", { nbJetons: 1 })
+          await PenombreRoll.reroll(messageId, rerolledDices)
+
+          // Si c'est un message lié, mettre à jour le message principal
+          if (this.actionCollegialeMessageLie && this.idMessageOrigine) {
+            await game.users.activeGM.query("penombre.updateMessageParticipation", {
+              existingMessageId: this.idMessageOrigine,
+              actorId: actor.id,
+              answer: true,
+              newMessageId: messageId,
+            })
+          }
+        })
+      }
+    }
+
+    // Les boutons pour participer à un jet collégial sont visibles par tous les autres joueurs
+    if (this.actionCollegiale && !this.actionCollegialeMessageLie && !this.parent.isAuthor && !this.messagesLies[game.user.character.id].reponseFaite) {
+      html.querySelector(".participate-yes").classList.remove("hidden")
+      html.querySelector(".participate-no").classList.remove("hidden")
+
+      const currentActorId = game.user.character?.id
+
+      html.querySelector(".participate-yes").addEventListener("click", async (ev) => {
+        ev.preventDefault()
+        ev.stopPropagation()
+        const messageId = ev.target.closest(".chat-message").dataset.messageId
+        const harmonique = this.harmonique
+        const actor = game.actors.get(currentActorId)
+        const chatMessage = await actor.rollHarmonique({ harmonique, messageType: "lie", idMessageOrigine: messageId })
+        if (chatMessage) {
+          await game.users.activeGM.query("penombre.updateMessageParticipation", {
+            existingMessageId: messageId,
+            actorId: currentActorId,
+            answer: true,
+            newMessageId: chatMessage.id,
+          })
+        }
+      })
+
+      html.querySelector(".participate-no").addEventListener("click", async (ev) => {
+        ev.preventDefault()
+        ev.stopPropagation()
+        const messageId = ev.target.closest(".chat-message").dataset.messageId
+        await game.users.activeGM.query("penombre.updateMessageParticipation", { existingMessageId: messageId, actorId: currentActorId, answer: false })
+      })
+    }
   }
 }

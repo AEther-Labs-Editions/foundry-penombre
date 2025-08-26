@@ -21,6 +21,14 @@ export default class PenombreMessage extends ChatMessage {
     return game.actors.get(this.speaker.actor)
   }
 
+  /**
+   * Enriches the chat card HTML by updating the sender's avatar and name display.
+   * Depending on content visibility, it uses either the associated actor's image and alias,
+   * or the author's avatar and name. The method creates and replaces the sender's DOM elements
+   * with the appropriate avatar and name.
+   *
+   * @param {HTMLElement} html The chat card HTML element to enrich.
+   */
   _enrichChatCard(html) {
     const actor = this.getAssociatedActor()
 
@@ -52,6 +60,18 @@ export default class PenombreMessage extends ChatMessage {
     sender?.replaceChildren(avatar, name)
   }
 
+  /**
+   * Handles participation in a query message for the Penombre system.
+   * Updates the original message with the actor's response and, if applicable, the number of successes from a new roll.
+   *
+   * @param {Object} params The parameters for handling participation.
+   * @param {string} params.existingMessageId The ID of the existing message to update.
+   * @param {string} params.actorId The ID of the actor responding to the query.
+   * @param {boolean} params.answer Whether the actor's response is positive.
+   * @param {number} [params.nbSucces] The number of successes (optional, recalculated if answer is positive).
+   * @param {string} [params.newMessageId] The ID of the new message containing the actor's roll (optional).
+   * @returns {Promise<void>} Resolves when the message has been updated.
+   */
   static async _handleQueryMessageParticipation({ existingMessageId, actorId, answer, nbSucces, newMessageId }) {
     const message = game.messages.get(existingMessageId)
     let newMessage
