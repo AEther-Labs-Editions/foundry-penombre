@@ -7,12 +7,20 @@ export * as elements from "./module/elements/_module.mjs"
 import * as models from "./module/models/_module.mjs"
 import * as documents from "./module/documents/_module.mjs"
 import * as applications from "./module/applications/_module.mjs"
+import * as helpers from "./module/helpers/_module.mjs"
 
 Hooks.once("init", function () {
   console.info("Pénombre | Initialisation du système...")
 
   globalThis.penombre = game.system
   game.system.CONST = SYSTEM
+
+  game.system.api = {
+    applications,
+    models,
+    documents,
+    helpers,
+  }
 
   CONFIG.Actor.documentClass = documents.PenombreActor
   CONFIG.Actor.dataModels = {
@@ -51,87 +59,8 @@ Hooks.once("init", function () {
     harmonique: models.HarmoniqueMessageData,
   }
 
-  Handlebars.registerHelper("getDiceImage", function (value) {
-    return `/systems/penombre/assets/ui/${value}-marge.png`
-  })
-
-  Handlebars.registerHelper("getJetonImage", function (value) {
-    switch (value) {
-      case true:
-      case "actif":
-        return `systems/penombre/assets/ui/jeton_face_active.png`
-      case false:
-      case "inactif":
-        return `systems/penombre/assets/ui/jeton_face_inactive.png`
-      case "perdu":
-        return `systems/penombre/assets/ui/cercle.png`
-    }
-  })
-
-  Handlebars.registerHelper("times", function (n, block) {
-    let accum = ""
-    for (let i = 1; i <= n; ++i) {
-      block.data.index = i
-      block.data.first = i === 0
-      block.data.last = i === n - 1
-      accum += block.fn(this)
-    }
-    return accum
-  })
-
-  Handlebars.registerHelper("displayNbSuccess", function (value) {
-    const nbSuccess = Math.floor(value / 4)
-    if (nbSuccess === 1) return " (1 succès)"
-    else if (nbSuccess > 1) return ` (${nbSuccess} succès)`
-    else return ""
-  })
-
-  game.settings.register(SYSTEM.ID, "styleJeu", {
-    name: "PENOMBRE.Settings.styleJeu.name",
-    hint: "PENOMBRE.Settings.styleJeu.hint",
-    scope: "world",
-    config: true,
-    default: "demo",
-    type: String,
-    choices: {
-      demo: "PENOMBRE.Settings.styleJeu.demo",
-      standard: "PENOMBRE.Settings.styleJeu.standard",
-      avance: "PENOMBRE.Settings.styleJeu.avance",
-    },
-    requiresReload: true,
-  })
-
-  game.settings.register(SYSTEM.ID, "nbJetons", {
-    name: "PENOMBRE.Settings.nbJetons.name",
-    hint: "PENOMBRE.Settings.nbJetons.hint",
-    scope: "world",
-    config: true,
-    type: Number,
-    default: 10,
-    requiresReload: true,
-  })
-
-  game.settings.register(SYSTEM.ID, "reserveCollegiale", {
-    name: "PENOMBRE.Settings.reserveCollegiale.name",
-    hint: "PENOMBRE.Settings.reserveCollegiale.hint",
-    scope: "world",
-    config: false,
-    type: models.ReserveCollegiale,
-    default: {
-      jetons: {
-        1: { valeur: false },
-        2: { valeur: false },
-        3: { valeur: false },
-        4: { valeur: false },
-        5: { valeur: false },
-        6: { valeur: false },
-        7: { valeur: false },
-        8: { valeur: false },
-        9: { valeur: false },
-        10: { valeur: false },
-      },
-    },
-  })
+  helpers.PenombreSettingsHandler.registerSettings()
+  helpers.registerHandlebars()
 
   console.info("Pénombre | Système initialisé.")
 })
