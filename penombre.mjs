@@ -79,6 +79,13 @@ Hooks.once("init", function () {
     return accum
   })
 
+  Handlebars.registerHelper("displayNbSuccess", function (value) {
+    const nbSuccess = Math.floor(value / 4)
+    if (nbSuccess === 1) return " (1 succès)"
+    else if (nbSuccess > 1) return ` (${nbSuccess} succès)`
+    else return ""
+  })
+
   game.settings.register(SYSTEM.ID, "styleJeu", {
     name: "PENOMBRE.Settings.styleJeu.name",
     hint: "PENOMBRE.Settings.styleJeu.hint",
