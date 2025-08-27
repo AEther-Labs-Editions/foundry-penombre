@@ -18,37 +18,31 @@ body {
     .penombre {
       &.adversaire {
         .adversaire-content {
-          overflow: auto;
-          // width: 100%;
-          // color: @color-primary;
-          font-size: @font-size-base;
           background-color: @background-light; /* Si et seulement si on est en mode clair (et pas sombre) de la fiche */
-          clear: both;
         }
       }
     }
   }
 
-
+  /*
   &.theme-dark {
     .penombre {
       &.adversaire {
         .adversaire-content {
-          overflow: auto;
-          // width: 100%;
-         // color: @color-primary;
-          font-size: @font-size-base;
-          clear: both;
         }
       }
     }
   }
+  */
 }
 
 
 .penombre.adversaire {
   .adversaire-content {
     overflow-y: auto;
+    font-size: @font-size-base;
+    clear: both;
+
     .adversaire-main {
       width: 100%;
       .adversaire-personnage {

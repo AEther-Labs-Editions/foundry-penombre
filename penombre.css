@@ -101,210 +101,164 @@ penombre-toggle-switch[checked] thumb {
           Thème Sombre
 --------------------------------------------- */
 body.theme-light .penombre.eminence .eminence-content {
-  overflow: auto;
-  font-family: "CattedraleDemo";
-  color: #a56135;
-  font-size: 17px;
   background-color: #faeed6;
-  /* Si et seulement si on est en mode clair (et pas sombre) de la fiche */
-  clear: both;
 }
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre,
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 {
-  min-height: 90px;
-  display: table;
-}
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre .cadre-img,
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .cadre-img {
-  width: 100px;
-  float: left;
-}
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre,
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre {
-  float: left;
-  width: 525px;
-  padding-left: 4px;
-}
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .label-timbre,
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .label-timbre {
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .label-timbre {
   color: #56605b;
 }
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .label-peste,
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .label-peste {
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .label-peste {
   color: #917f35;
 }
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre label,
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre label {
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre label {
   display: flex;
   float: none;
 }
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre span,
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre span {
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre span {
   display: flex;
   float: none;
   font-family: "ChocoCovRainBold";
   font-size: 17px;
   color: #56605b;
 }
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .col-1-2,
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 {
-  float: left;
-  width: 212px;
-}
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .col-1-2 div,
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div {
-  display: table;
-}
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .col-1-2 div span,
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div span {
-  float: none;
-  clear: both;
-  height: 15px;
-}
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .col-1-2 div span.description,
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div span.description {
-  height: auto;
-}
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .col-2-2,
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 {
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .col-2-2 {
   float: left;
   width: 101px;
 }
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .col-2-2 img,
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 img {
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .col-2-2 img {
   float: left;
   width: 20px;
 }
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .col-2-2 span,
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 span {
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .col-2-2 span {
   margin-left: 25px;
   width: calc(100% - 25px);
 }
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .col-3-2,
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-3-2 {
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .col-3-2 {
   margin-left: 313px;
   width: calc(100% - 313px);
 }
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre .logo-penombre,
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .logo-penombre {
-  float: none;
-  width: 223px;
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .logo-penombre {
   content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_clair.png");
 }
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre .frise-penombre,
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .frise-penombre {
-  float: left;
-  width: 402px;
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .frise-penombre {
   content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_clair.png");
 }
-body.theme-dark .penombre.eminence .eminence-content {
-  overflow: auto;
-  font-family: "CattedraleDemo";
-  color: #a56135;
-  font-size: 17px;
-  clear: both;
-}
-body.theme-dark .penombre.eminence .eminence-content .eminence-timbre {
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 {
   min-height: 90px;
-  background-color: #2d1000;
-  display: table;
 }
-body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .cadre-img {
-  width: 100px;
-  float: left;
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .logo-penombre {
+  content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_clair.png");
 }
-body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .datas-timbre {
-  float: left;
-  width: 525px;
-  padding-left: 4px;
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .frise-penombre {
+  content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_clair.png");
 }
-body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .logo-penombre {
+body.theme-dark .penombre.eminence .eminence-content .logo-penombre {
   float: none;
   width: 223px;
   content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.png");
 }
-body.theme-dark .penombre.eminence .eminence-content .eminence-timbre .frise-penombre {
-  float: left;
-  width: 402px;
+body.theme-dark .penombre.eminence .eminence-content .frise-penombre {
   content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.png");
 }
-body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 {
+body.theme-dark .penombre.eminence .eminence-timbre-2 {
   min-height: 110px;
-  display: table;
 }
-body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .cadre-img {
-  width: 100px;
-  float: left;
+body.theme-dark .penombre.eminence .eminence-timbre-2 .cadre-img {
   border-radius: 6px;
   background-color: #faeed6;
 }
-body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre {
-  float: left;
-  width: 525px;
-  padding-left: 4px;
-}
-body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .label-timbre {
-  color: #56605b;
-}
-body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .label-peste {
-  color: #917f35;
-}
-body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre label {
-  display: flex;
-  float: none;
-}
-body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre span {
-  display: flex;
-  float: none;
-  font-family: "ChocoCovRainBold";
-  font-size: 17px;
-  color: #56605b;
-}
-body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 {
-  float: left;
-  width: 212px;
-}
-body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div {
-  display: table;
-}
-body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div span {
-  float: none;
-  clear: both;
-  height: 15px;
-}
-body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div span.description {
-  height: auto;
-}
-body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 {
-  float: left;
-  width: 101px;
-}
-body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 img {
-  float: left;
-  width: 20px;
-}
-body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 span {
-  margin-left: 25px;
-  width: calc(100% - 25px);
-}
-body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-3-2 {
-  margin-left: 313px;
-  width: calc(100% - 313px);
-}
-body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .logo-penombre {
-  float: none;
-  width: 223px;
+body.theme-dark .penombre.eminence .eminence-timbre-2 .logo-penombre {
   content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.png");
 }
-body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-penombre {
-  float: left;
-  width: 402px;
+body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.png");
 }
 .penombre {
   /* ---------------------------------------------
         Eminence
 --------------------------------------------- */
+}
+.penombre.eminence .eminence-content {
+  overflow: auto;
+  font-family: "CattedraleDemo";
+  color: #a56135;
+  font-size: 17px;
+  clear: both;
+}
+.penombre.eminence .eminence-content .eminence-timbre,
+.penombre.eminence .eminence-content .eminence-timbre-2 {
+  display: table;
+}
+.penombre.eminence .eminence-content .eminence-timbre .cadre-img,
+.penombre.eminence .eminence-content .eminence-timbre-2 .cadre-img {
+  width: 100px;
+  float: left;
+}
+.penombre.eminence .eminence-content .eminence-timbre .datas-timbre,
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre {
+  float: left;
+  width: 525px;
+  padding-left: 4px;
+}
+.penombre.eminence .eminence-content .eminence-timbre .logo-penombre,
+.penombre.eminence .eminence-content .eminence-timbre-2 .logo-penombre {
+  float: none;
+  width: 223px;
+}
+.penombre.eminence .eminence-content .eminence-timbre .frise-penombre,
+.penombre.eminence .eminence-content .eminence-timbre-2 .frise-penombre {
+  float: left;
+  width: 402px;
+}
+.penombre.eminence .eminence-content .eminence-timbre {
+  min-height: 90px;
+}
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .label-timbre {
+  color: #56605b;
+}
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .label-peste {
+  color: #917f35;
+}
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre label {
+  display: flex;
+  float: none;
+}
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre span {
+  display: flex;
+  float: none;
+  font-family: "ChocoCovRainBold";
+  font-size: 17px;
+  color: #56605b;
+}
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 {
+  float: left;
+  width: 212px;
+}
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div {
+  display: table;
+}
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div span {
+  float: none;
+  clear: both;
+  height: 15px;
+}
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div span.description {
+  height: auto;
+}
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 {
+  float: left;
+  width: 101px;
+}
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 img {
+  float: left;
+  width: 20px;
+}
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 span {
+  margin-left: 25px;
+  width: calc(100% - 25px);
+}
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-3-2 {
+  margin-left: 313px;
+  width: calc(100% - 313px);
 }
 .penombre.eminence .eminence-content .centpourcent {
   width: 100%;
@@ -1453,20 +1407,26 @@ body.theme-dark .penombre.eminence .eminence-content .eminence-timbre-2 .frise-p
 /* ---------------------------------------------
           Thème Sombre
 --------------------------------------------- */
+body {
+  /*
+  &.theme-dark {
+    .penombre {
+      &.adversaire {
+        .adversaire-content {
+        }
+      }
+    }
+  }
+  */
+}
 body.theme-light .penombre.adversaire .adversaire-content {
-  overflow: auto;
-  font-size: 17px;
   background-color: #faeed6;
   /* Si et seulement si on est en mode clair (et pas sombre) de la fiche */
-  clear: both;
-}
-body.theme-dark .penombre.adversaire .adversaire-content {
-  overflow: auto;
-  font-size: 17px;
-  clear: both;
 }
 .penombre.adversaire .adversaire-content {
   overflow-y: auto;
+  font-size: 17px;
+  clear: both;
 }
 .penombre.adversaire .adversaire-content .adversaire-main {
   width: 100%;

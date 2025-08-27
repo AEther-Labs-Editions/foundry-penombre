@@ -154,7 +154,7 @@ body {
     .penombre {
       &.eminence {
         .eminence-content {
-          background-color: @background-light; // Si et seulement si on est en mode clair (et pas sombre) de la fiche
+          background-color: @background-light; /* Si et seulement si on est en mode clair (et pas sombre) de la fiche */
 
           // Section timbre
           .eminence-timbre {
@@ -226,61 +226,28 @@ body {
     }
   }
 
-  &.theme-dark {
+  /*
+  &.theme-light {
     .penombre {
       &.eminence {
         .eminence-content {
-            .logo-penombre {
-              float: none;
-              width: 223px;
-              content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.png");
-            }
-
-            .frise-penombre {
-              content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.png");
-            }
-          }
-
-          // Section timbre
-          .eminence-timbre-2 {
-            min-height: 110px;
-
-            .cadre-img {
-              border-radius: @border-radius;
-              background-color: @background-light;
-            }
-
-            .logo-penombre {
-              content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.png");
-            }
-
-            .frise-penombre {
-              content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.png");
-            }
-          }
-        }
-      }
-    }
-}
-
-.penombre {
-  /* ---------------------------------------------
-        Eminence
---------------------------------------------- */
-  &.eminence {
-    .eminence-content {
           overflow: auto;
+          // width: 100%;
           font-family: @font-cattedrale;
           color: @color-primary;
           font-size: @font-size-base;
+          background-color: @background-light; // Si et seulement si on est en mode clair (et pas sombre) de la fiche
           clear: both;
 
+          // Section timbre
           .eminence-timbre,
           .eminence-timbre-2 {
+            min-height: 90px;
             display: table;
 
             .cadre-img {
               width: 100px;
+              // height: 100px;
               float: left;
             }
 
@@ -288,27 +255,7 @@ body {
               float: left;
               width: 525px;
               padding-left: 4px;
-            }
 
-            .logo-penombre {
-              float: none;
-              width: 223px;
-            }
-
-            .frise-penombre {
-              float: left;
-              width: 402px;
-            }
-          }
-
-          // Section timbre
-          .eminence-timbre {
-            min-height: 90px;
-          }
-
-          // Section timbre
-          .eminence-timbre-2 {
-            .datas-timbre {
               .label-timbre {
                 color: @color-secondary;
               }
@@ -369,7 +316,316 @@ body {
                 width: calc(100% - 313px);
               }
             }
-        }  
+
+            .logo-penombre {
+              float: none;
+              width: 223px;
+              content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_clair.png");
+            }
+
+            .frise-penombre {
+              float: left;
+              width: 402px;
+              content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_clair.png");
+            }
+          }
+        }
+      }
+    }
+  } */
+
+  &.theme-dark {
+    .penombre {
+      &.eminence {
+        .eminence-content {
+            .logo-penombre {
+              float: none;
+              width: 223px;
+              content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.png");
+            }
+
+            .frise-penombre {
+              content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.png");
+            }
+          }
+
+          // Section timbre
+          .eminence-timbre-2 {
+            min-height: 110px;
+
+            .cadre-img {
+              border-radius: @border-radius;
+              background-color: @background-light;
+            }
+
+            .logo-penombre {
+              content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.png");
+            }
+
+            .frise-penombre {
+              content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.png");
+            }
+          }
+        }
+      }
+    }
+  }
+
+/*
+  &.theme-dark {
+    .penombre {
+      &.eminence {
+        .eminence-content {
+          overflow: auto;
+          // width: 100%;
+          font-family: @font-cattedrale;
+          color: @color-primary;
+          font-size: @font-size-base;
+          clear: both;
+
+          // Section timbre
+          .eminence-timbre {
+            min-height: 90px;
+            background-color: @background-dark;
+            display: table;
+
+            .cadre-img {
+              width: 100px;
+              // height: 100px;
+              float: left;
+            }
+
+            .datas-timbre {
+              float: left;
+              width: 525px;
+              padding-left: 4px;
+            }
+
+            .logo-penombre {
+              float: none;
+              width: 223px;
+              content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.png");
+            }
+
+            .frise-penombre {
+              float: left;
+              width: 402px;
+              content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.png");
+            }
+          }
+
+          // Section timbre
+          .eminence-timbre-2 {
+            min-height: 110px;
+            display: table;
+
+            .cadre-img {
+              width: 100px;
+              // height: 100px;
+              float: left;
+              border-radius: @border-radius;
+              background-color: @background-light;
+            }
+
+            .datas-timbre {
+              float: left;
+              width: 525px;
+              padding-left: 4px;
+
+              .label-timbre {
+                color: @color-secondary;
+              }
+
+              .label-peste {
+                color: @color-accent;
+              }
+
+              label {
+                display: flex;
+                float: none;
+              }
+
+              span {
+                display: flex;
+                float: none;
+                font-family: @font-chocolate;
+                font-size: @font-size-base;
+                color: @color-secondary;
+              }
+
+              .col-1-2 {
+                float: left;
+                width: 212px;
+
+                div {
+                  display: table;
+
+                  span {
+                    float: none;
+                    clear: both;
+                    height: 15px;
+
+                    &.description {
+                      height: auto;
+                    }
+                  }
+                }
+              }
+
+              .col-2-2 {
+                float: left;
+                width: 101px;
+
+                img {
+                  float: left;
+                  width: 20px;
+                }
+
+                span {
+                  margin-left: 25px;
+                  width: calc(100% - 25px);
+                }
+              }
+
+              .col-3-2 {
+                margin-left: 313px;
+                width: calc(100% - 313px);
+              }
+            }
+
+            .logo-penombre {
+              float: none;
+              width: 223px;
+              content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.png");
+            }
+
+            .frise-penombre {
+              float: left;
+              width: 402px;
+              content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.png");
+            }
+          }
+        }
+      }
+    }
+  } 
+} */
+
+.penombre {
+/* ---------------------------------------------
+        Eminence
+--------------------------------------------- */
+  &.eminence {
+    .eminence-content {
+          overflow: auto;
+          // width: 100%;
+          font-family: @font-cattedrale;
+          color: @color-primary;
+          font-size: @font-size-base;
+          clear: both;
+
+          .eminence-timbre,
+          .eminence-timbre-2 {
+            display: table;
+
+            .cadre-img {
+              width: 100px;
+              // height: 100px;
+              float: left;
+            }
+
+            .datas-timbre {
+              float: left;
+              width: 525px;
+              padding-left: 4px;
+            }
+
+            .logo-penombre {
+              float: none;
+              width: 223px;
+            }
+
+            .frise-penombre {
+              float: left;
+              width: 402px;
+            }
+          }
+
+
+          // Section timbre
+          .eminence-timbre {
+            min-height: 90px;
+          }
+
+          // Section timbre
+          .eminence-timbre-2 {
+            .datas-timbre {
+              .label-timbre {
+                color: @color-secondary;
+              }
+
+              .label-peste {
+                color: @color-accent;
+              }
+
+              label {
+                display: flex;
+                float: none;
+              }
+
+              span {
+                display: flex;
+                float: none;
+                font-family: @font-chocolate;
+                font-size: @font-size-base;
+                color: @color-secondary;
+              }
+
+              .col-1-2 {
+                float: left;
+                width: 212px;
+
+                div {
+                  display: table;
+
+                  span {
+                    float: none;
+                    clear: both;
+                    height: 15px;
+
+                    &.description {
+                      height: auto;
+                    }
+                  }
+                }
+
+              }
+
+              .col-2-2 {
+                float: left;
+                width: 101px;
+
+                img {
+                  float: left;
+                  width: 20px;
+                }
+
+                span {
+                  margin-left: 25px;
+                  width: calc(100% - 25px);
+                }
+              }
+
+              .col-3-2 {
+                margin-left: 313px;
+                width: calc(100% - 313px);
+              }
+            }
+          }
+        
+      
+    
+
 
       .centpourcent {
         width: 100%;
