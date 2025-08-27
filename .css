@@ -1,0 +1,1614 @@
+penombre-toggle-switch {
+  --toggle-switch-height: 20px;
+  --toggle-switch-width: 36px;
+  --toggle-switch-padding: 3px;
+  --toggle-switch-track-color-unchecked: black;
+  --toggle-switch-track-color-checked: #3ba55d;
+  --toggle-switch-thumb-color: white;
+  --toggle-switch-thumb-width: calc(var(--toggle-switch-height) - var(--toggle-switch-padding) * 2);
+  --toggle-switch-thumb-height: var(--toggle-switch-thumb-width);
+  --toggle-switch-transition-time: 250ms;
+  cursor: var(--cursor-pointer) !important;
+  display: inline-block;
+  width: var(--toggle-switch-width);
+  height: var(--toggle-switch-height);
+}
+penombre-toggle-switch track {
+  background: var(--toggle-switch-track-color-unchecked);
+  border-radius: calc((var(--toggle-switch-height) * 2) / 3);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.45);
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  padding: var(--toggle-switch-padding);
+  width: 100%;
+}
+penombre-toggle-switch thumb {
+  background: var(--toggle-switch-thumb-color);
+  border-radius: 100%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.45);
+  display: block;
+  height: var(--toggle-switch-thumb-height);
+  text-align: center;
+  transition: margin-left var(--toggle-switch-transition-time) ease;
+  width: var(--toggle-switch-thumb-width);
+}
+penombre-toggle-switch[checked] track {
+  background: var(--toggle-switch-track-color-checked);
+}
+penombre-toggle-switch[checked] thumb {
+  margin-left: calc(100% - var(--toggle-switch-thumb-width));
+}
+/* ---------------------------------------------
+        Variables LESS
+--------------------------------------------- */
+/* ---------------------------------------------
+        Fonts
+--------------------------------------------- */
+@font-face {
+  font-family: "CattedraleDemo";
+  src: url(/systems/penombre/fonts/Cattedrale-Demo/Cattedrale-Demo-Regular.ttf);
+}
+@font-face {
+  font-family: "ChocoCovRainBold";
+  src: url(/systems/penombre/fonts/chocolate-covered-raindrops/Chocolate%20Covered%20Raindrops%20BOLD.ttf);
+}
+/* ---------------------------------------------
+        Mixins
+--------------------------------------------- */
+/* ---------------------------------------------
+        Interface de Foundry VTT
+--------------------------------------------- */
+#pause > img {
+  content: url("/systems/penombre/assets/ui/penombre_wheel.webp");
+  height: 192px;
+  width: 192px;
+  top: -45px;
+  left: calc(50% - 96px);
+}
+/* ---------------------------------------------
+        Concerne les pages de journaux
+--------------------------------------------- */
+.journal-header input {
+  font-family: "CattedraleDemo";
+}
+.journal-entry-page h1,
+.journal-entry-page h2,
+.journal-entry-page h3,
+.journal-entry-page h4,
+.journal-entry-page h5,
+.journal-entry-page h6 {
+  font-family: "CattedraleDemo";
+  color: #a56135;
+}
+/* ---------------------------------------------
+        Concerne l'editor
+--------------------------------------------- */
+.penombre .editor-content h1,
+.penombre .editor-content h2,
+.penombre .editor-content h3,
+.penombre .editor-content h4,
+.penombre .editor-content h5,
+.penombre .editor-content h6 {
+  font-family: "CattedraleDemo";
+  color: #a56135;
+}
+/* ---------------------------------------------
+        Thème Clair
+--------------------------------------------- */
+/* ---------------------------------------------
+          Thème Sombre
+--------------------------------------------- */
+body.theme-light .penombre.eminence .eminence-content {
+  background-color: #faeed6;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .label-timbre {
+  color: #56605b;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .label-peste {
+  color: #917f35;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre label {
+  display: flex;
+  float: none;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre span {
+  display: flex;
+  float: none;
+  font-family: "ChocoCovRainBold";
+  font-size: 17px;
+  color: #56605b;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .col-2-2 {
+  float: left;
+  width: 101px;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .col-2-2 img {
+  float: left;
+  width: 20px;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .col-2-2 span {
+  margin-left: 25px;
+  width: calc(100% - 25px);
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .col-3-2 {
+  margin-left: 313px;
+  width: calc(100% - 313px);
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .logo-penombre {
+  content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_clair.png");
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre .frise-penombre {
+  content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_clair.png");
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 {
+  min-height: 90px;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .logo-penombre {
+  content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_clair.png");
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .frise-penombre {
+  content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_clair.png");
+}
+body.theme-dark .penombre.eminence .eminence-content .logo-penombre {
+  float: none;
+  width: 223px;
+  content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.png");
+}
+body.theme-dark .penombre.eminence .eminence-content .frise-penombre {
+  content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.png");
+}
+body.theme-dark .penombre.eminence .eminence-timbre-2 {
+  min-height: 110px;
+}
+body.theme-dark .penombre.eminence .eminence-timbre-2 .cadre-img {
+  border-radius: 6px;
+  background-color: #faeed6;
+}
+body.theme-dark .penombre.eminence .eminence-timbre-2 .logo-penombre {
+  content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.png");
+}
+body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
+  content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.png");
+}
+.penombre {
+  /* ---------------------------------------------
+        Eminence
+--------------------------------------------- */
+}
+.penombre.eminence .eminence-content {
+  overflow: auto;
+  font-family: "CattedraleDemo";
+  color: #a56135;
+  font-size: 17px;
+  clear: both;
+}
+.penombre.eminence .eminence-content .eminence-timbre,
+.penombre.eminence .eminence-content .eminence-timbre-2 {
+  display: table;
+}
+.penombre.eminence .eminence-content .eminence-timbre .cadre-img,
+.penombre.eminence .eminence-content .eminence-timbre-2 .cadre-img {
+  width: 100px;
+  float: left;
+}
+.penombre.eminence .eminence-content .eminence-timbre .datas-timbre,
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre {
+  float: left;
+  width: 525px;
+  padding-left: 4px;
+}
+.penombre.eminence .eminence-content .eminence-timbre .logo-penombre,
+.penombre.eminence .eminence-content .eminence-timbre-2 .logo-penombre {
+  float: none;
+  width: 223px;
+}
+.penombre.eminence .eminence-content .eminence-timbre .frise-penombre,
+.penombre.eminence .eminence-content .eminence-timbre-2 .frise-penombre {
+  float: left;
+  width: 402px;
+}
+.penombre.eminence .eminence-content .eminence-timbre {
+  min-height: 90px;
+}
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .label-timbre {
+  color: #56605b;
+}
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .label-peste {
+  color: #917f35;
+}
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre label {
+  display: flex;
+  float: none;
+}
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre span {
+  display: flex;
+  float: none;
+  font-family: "ChocoCovRainBold";
+  font-size: 17px;
+  color: #56605b;
+}
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 {
+  float: left;
+  width: 212px;
+}
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div {
+  display: table;
+}
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div span {
+  float: none;
+  clear: both;
+  height: 15px;
+}
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div span.description {
+  height: auto;
+}
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 {
+  float: left;
+  width: 101px;
+}
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 img {
+  float: left;
+  width: 20px;
+}
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 span {
+  margin-left: 25px;
+  width: calc(100% - 25px);
+}
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-3-2 {
+  margin-left: 313px;
+  width: calc(100% - 313px);
+}
+.penombre.eminence .eminence-content .centpourcent {
+  width: 100%;
+}
+.penombre.eminence .eminence-content input,
+.penombre.eminence .eminence-content select {
+  border-color: #a56135;
+  color: #56605b;
+  font-family: "ChocoCovRainBold";
+  font-size: 25px;
+}
+.penombre.eminence .eminence-content .eminence-main {
+  width: 100%;
+  display: table;
+  clear: both;
+}
+.penombre.eminence .eminence-content .col-1 {
+  width: 450px;
+  float: left;
+  display: table;
+  clear: both;
+}
+.penombre.eminence .eminence-content .col-2 {
+  width: 23px;
+  float: left;
+  height: 500px;
+  padding: 0 3px;
+}
+.penombre.eminence .eminence-content .col-2 .grande-frise-verticale-1,
+.penombre.eminence .eminence-content .col-2 .grande-frise-verticale-2,
+.penombre.eminence .eminence-content .col-2 .grande-frise-verticale-3,
+.penombre.eminence .eminence-content .col-2 .grande-frise-verticale-4,
+.penombre.eminence .eminence-content .col-2 .grande-frise-verticale-5 {
+  flex-direction: column;
+}
+.penombre.eminence .eminence-content .col-3 {
+  margin-left: 473px;
+  min-width: 635px;
+}
+.penombre.eminence .eminence-content .col-1-1 {
+  width: 25px;
+  float: left;
+  transform: rotate(180deg);
+}
+.penombre.eminence .eminence-content .col-2-1 {
+  width: 9px;
+  float: left;
+}
+.penombre.eminence .eminence-content .col-3-1 {
+  width: 408px;
+  float: left;
+  flex-direction: column;
+  padding-left: 4px;
+}
+.penombre.eminence .eminence-content .eminence-personnage,
+.penombre.eminence .eminence-content .eminence-harmoniques,
+.penombre.eminence .eminence-content .eminence-conscience {
+  float: none;
+  flex-direction: column;
+  border: 1px solid #a56135;
+  padding: 2px;
+  border-radius: 6px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs,
+.penombre.eminence .eminence-content .eminence-atouts,
+.penombre.eminence .eminence-content .eminence-maitrises,
+.penombre.eminence .eminence-content .eminence-pouvoirs-2,
+.penombre.eminence .eminence-content .eminence-atouts-2,
+.penombre.eminence .eminence-content .eminence-maitrises-2,
+.penombre.eminence .eminence-content .eminence-timbre,
+.penombre.eminence .eminence-content .eminence-timbre-2,
+.penombre.eminence .eminence-content .eminence-recapitulatif {
+  min-width: 635px;
+  float: none;
+  flex-direction: column;
+  border: 1px solid #a56135;
+  padding: 2px;
+  border-radius: 6px;
+}
+.penombre.eminence .eminence-content .text-vertical-personnage,
+.penombre.eminence .eminence-content .text-vertical-harmoniques,
+.penombre.eminence .eminence-content .text-vertical-conscience {
+  font-size: 19px;
+  writing-mode: vertical-rl;
+  text-orientation: sideways-left;
+}
+.penombre.eminence .eminence-content .eminence-personnage {
+  min-height: 165px;
+  color: #a56135;
+}
+.penombre.eminence .eminence-content .eminence-personnage .logo-frame {
+  display: table;
+  float: left;
+  justify-content: center;
+  height: 152px;
+  width: 150px;
+  padding: 1px;
+}
+.penombre.eminence .eminence-content .eminence-personnage .logo-frame .logo-img {
+  border-radius: 6px;
+  height: 150px;
+  width: auto;
+  max-width: 100%;
+  display: block;
+}
+.penombre.eminence .eminence-content .eminence-personnage .logo-frame .logo-img-unlocked {
+  border-radius: 6px;
+  height: 150px;
+  width: auto;
+  max-width: 100%;
+  display: block;
+}
+.penombre.eminence .eminence-content .eminence-personnage .logo-frame .logo-img-unlocked:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 2.5px #a56135;
+}
+.penombre.eminence .eminence-content .eminence-personnage .data {
+  float: left;
+  width: 254px;
+  clear: right;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques {
+  min-height: 350px;
+}
+.penombre.eminence .eminence-content .eminence-conscience-locked {
+  min-height: 725px;
+}
+.penombre.eminence .eminence-content .eminence-conscience-locked .col-3-1 .col-1-3 {
+  display: flex;
+  flex-direction: column;
+}
+.penombre.eminence .eminence-content .eminence-conscience-locked .col-3-1 .col-1-3 .ligne-conscience {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-left: 20px;
+  height: 32px;
+}
+.penombre.eminence .eminence-content .eminence-conscience-locked .col-3-1 .col-1-3 .ligne-conscience label {
+  font-family: "CattedraleDemo";
+  display: inline-block;
+  width: 120px;
+  font-weight: bold;
+}
+.penombre.eminence .eminence-content .eminence-conscience-locked .col-3-1 .col-1-3 .ligne-conscience span {
+  margin: 0 5px;
+  width: 50px;
+}
+.penombre.eminence .eminence-content .eminence-conscience-unlocked {
+  min-height: 685px;
+}
+.penombre.eminence .eminence-content .eminence-conscience {
+  color: #917f35;
+}
+.penombre.eminence .eminence-content .eminence-conscience .div-jetons {
+  width: 400px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* 5 colonnes égales */
+  gap: 10px;
+  padding: 10px;
+}
+.penombre.eminence .eminence-content .eminence-conscience .div-jetons img.dropshadow-actif,
+.penombre.eminence .eminence-content .eminence-conscience .div-jetons img.dropshadow-inactif {
+  -webkit-filter: drop-shadow(-5px 5px 5px #666666);
+  filter: drop-shadow(-5px 5px 5px #666666);
+}
+.penombre.eminence .eminence-content .eminence-conscience .div-jetons img.dropshadow-actif:hover,
+.penombre.eminence .eminence-content .eminence-conscience .div-jetons img.dropshadow-inactif:hover {
+  cursor: pointer;
+}
+.penombre.eminence .eminence-content .eminence-conscience .div-jetons .jeton {
+  text-align: center;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications-2 {
+  display: table;
+  width: 402px;
+  border: 1px solid #917f35;
+  border-radius: 4px;
+  padding: 2px;
+  padding-left: 10px;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications-2 .div-cases {
+  display: flex;
+  width: 390px;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications-2 .div-cases label {
+  float: left;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications-2 .div-cases .div-descriptions input {
+  width: 320px;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications-2 .div-cases .images-cases {
+  display: flex;
+  width: 250px;
+  height: 20px;
+  float: left;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications-2 .div-cases .images-cases .complication-case {
+  float: left;
+  width: 20px;
+  height: 20px;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications-2 .div-cases .images-cases .complication-case:hover {
+  cursor: pointer;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications {
+  display: table;
+  width: 402px;
+  border: 1px solid #917f35;
+  border-radius: 4px;
+  padding: 2px;
+  padding-left: 10px;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications label {
+  width: 402px;
+  float: none;
+  clear: both;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication {
+  display: flex;
+  clear: both;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication .div-descriptions-2 input {
+  width: 600px;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication .div-descriptions {
+  float: left;
+  width: 320px;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication .div-cases {
+  float: left;
+  width: 70px;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication .div-cases .images-cases {
+  display: flex;
+  width: 70px;
+  height: 20px;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication .div-cases .images-cases .complication-case {
+  float: left;
+  width: 20px;
+  height: 20px;
+}
+.penombre.eminence .eminence-content .eminence-conscience .note-jetons {
+  text-align: center;
+  color: #56605b;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques {
+  color: #56605b;
+  /*
+        .editer-harmoniques {
+          // width: 405px;
+          font-size: @font-size-xlarge;
+        }
+        */
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .click:hover {
+  cursor: pointer;
+  -webkit-filter: drop-shadow(0px 0px 6px #af010a);
+  filter: drop-shadow(0px 0px 6px #af010a);
+}
+.penombre.eminence .eminence-content .eminence-harmoniques table tr:nth-child(odd),
+.penombre.eminence .eminence-content .eminence-harmoniques table tr:nth-child(even) {
+  background-color: transparent;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .case-de {
+  width: 85px;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .col-3-1 .rang-2-2 {
+  float: none;
+  width: 405px;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-1 {
+  float: none;
+  margin-left: 40px;
+  width: 85px;
+  height: 85px;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-1 .editer-harmoniques {
+  font-size: 30px;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-2 {
+  float: none;
+  margin-left: -40px;
+  width: 85px;
+  height: 85px;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-2 .editer-harmoniques {
+  font-size: 30px;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-3 {
+  float: none;
+  margin-left: 10px;
+  width: 85px;
+  height: 85px;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-3 .editer-harmoniques {
+  font-size: 30px;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-4 {
+  float: none;
+  margin-left: -5px;
+  width: 85px;
+  height: 85px;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-4 .editer-harmoniques {
+  font-size: 30px;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-5 {
+  float: none;
+  margin-left: 85px;
+  width: 85px;
+  height: 85px;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-5 .editer-harmoniques {
+  font-size: 30px;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .flexible {
+  position: relative;
+  display: flex;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .absolue {
+  position: absolute;
+  z-index: 5;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .de-d-ame-saisie,
+.penombre.eminence .eminence-content .eminence-harmoniques .de-d-esprit-saisie,
+.penombre.eminence .eminence-content .eminence-harmoniques .de-d-etincelle-saisie,
+.penombre.eminence .eminence-content .eminence-harmoniques .de-de-nature-saisie,
+.penombre.eminence .eminence-content .eminence-harmoniques .de-de-nuit-saisie {
+  margin-top: 25px;
+  margin-left: 10px;
+  width: 70px;
+  font-family: "ChocoCovRainBold";
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .de-ame,
+.penombre.eminence .eminence-content .eminence-harmoniques .de-esprit,
+.penombre.eminence .eminence-content .eminence-harmoniques .de-etincelle,
+.penombre.eminence .eminence-content .eminence-harmoniques .de-nature,
+.penombre.eminence .eminence-content .eminence-harmoniques .de-nuit {
+  margin-left: 3px;
+  margin-top: -2px;
+  width: 85px;
+  height: 85px;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .text-gros-1,
+.penombre.eminence .eminence-content .eminence-harmoniques .text-gros-2,
+.penombre.eminence .eminence-content .eminence-harmoniques .text-gros-3,
+.penombre.eminence .eminence-content .eminence-harmoniques .text-gros-4,
+.penombre.eminence .eminence-content .eminence-harmoniques .text-gros-5 {
+  float: none;
+  color: #56605b;
+  font-size: 30px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs {
+  min-height: 255px;
+  color: #56605b;
+  text-align: center;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs-2 {
+  min-height: 400px;
+  color: #56605b;
+  text-align: center;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .titre-section-pouvoirs,
+.penombre.eminence .eminence-content .eminence-pouvoirs-2 .titre-section-pouvoirs {
+  font-size: 35px;
+  float: none;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content,
+.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content {
+  text-align: left;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel,
+.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .potentiel {
+  text-align: center;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel,
+.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .potentiel .div-potentiel {
+  position: relative;
+  float: left;
+  text-align: center;
+  width: 100px;
+  height: 200px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel .img-potentiel,
+.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .potentiel .div-potentiel .img-potentiel {
+  width: 100px;
+  height: 100px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel .absolue,
+.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .potentiel .div-potentiel .absolue {
+  position: absolute;
+  z-index: 5;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel .val-potentiel-saisie,
+.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .potentiel .div-potentiel .val-potentiel-saisie {
+  margin-left: -22.5px;
+  margin-top: 42px;
+  width: 55px;
+  z-index: 10;
+  font-size: 30px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel .val-potentiel,
+.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .potentiel .div-potentiel .val-potentiel {
+  margin-left: 41.5px;
+  margin-top: 42px;
+  text-align: center;
+  font-size: 29px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel span,
+.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .potentiel .div-potentiel span {
+  margin-left: -42px;
+  margin-top: 90px;
+  color: #a56135;
+  font-size: 29px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs,
+.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs {
+  margin-left: 100px;
+  width: calc(100% - 103px);
+  min-height: 145px;
+  border: 1px solid #917f35;
+  border-radius: 4px;
+  padding: 2px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs .item-coche,
+.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs .item-coche {
+  width: 55px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs .item-case,
+.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs .item-case {
+  width: 20px;
+  height: 20px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs td,
+.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs td {
+  font-family: "ChocoCovRainBold";
+  font-size: 25px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs th.item-controls,
+.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs th.item-controls,
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs td.item-controls,
+.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs td.item-controls {
+  width: 70px;
+  font-size: 17px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs-2,
+.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs-2 {
+  margin-left: 100px;
+  width: calc(100% - 103px);
+  min-height: 290px;
+  border: 1px solid #917f35;
+  border-radius: 4px;
+  padding: 2px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs-2 .item-coche,
+.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs-2 .item-coche {
+  width: 55px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs-2 .item-case,
+.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs-2 .item-case {
+  width: 20px;
+  height: 20px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs-2 td,
+.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs-2 td {
+  font-family: "ChocoCovRainBold";
+  font-size: 25px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs-2 th.item-controls,
+.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs-2 th.item-controls,
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs-2 td.item-controls,
+.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs-2 td.item-controls {
+  width: 70px;
+  font-size: 17px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs .ligne-pouvoir,
+.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs .ligne-pouvoir,
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs-2 .ligne-pouvoir,
+.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs-2 .ligne-pouvoir {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.penombre.eminence .eminence-content .eminence-atouts {
+  min-height: 255px;
+  color: #56605b;
+  text-align: center;
+}
+.penombre.eminence .eminence-content .eminence-atouts .plusitem {
+  text-align: right;
+}
+.penombre.eminence .eminence-content .eminence-atouts-2 {
+  min-height: 400px;
+  color: #56605b;
+  text-align: center;
+}
+.penombre.eminence .eminence-content .eminence-atouts-2 .plusitem {
+  text-align: right;
+}
+.penombre.eminence .eminence-content .eminence-atouts .titre-section-atouts,
+.penombre.eminence .eminence-content .eminence-atouts-2 .titre-section-atouts {
+  font-size: 35px;
+  float: none;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content {
+  text-align: left;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .potentiel,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content .potentiel {
+  text-align: center;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content .potentiel .div-potentiel {
+  position: relative;
+  float: left;
+  text-align: center;
+  width: 100px;
+  height: 200px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel .img-potentiel,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content .potentiel .div-potentiel .img-potentiel {
+  width: 100px;
+  height: 100px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel .absolue,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content .potentiel .div-potentiel .absolue {
+  position: absolute;
+  z-index: 5;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel .val-potentiel-saisie,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content .potentiel .div-potentiel .val-potentiel-saisie {
+  margin-left: -22.5px;
+  margin-top: 42px;
+  width: 55px;
+  z-index: 10;
+  font-size: 30px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel .val-potentiel,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content .potentiel .div-potentiel .val-potentiel {
+  margin-left: 41.5px;
+  margin-top: 42px;
+  text-align: center;
+  font-size: 29px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel span,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content .potentiel .div-potentiel span {
+  margin-left: -42px;
+  margin-top: 90px;
+  color: #a56135;
+  font-size: 29px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts {
+  margin-left: 100px;
+  width: calc(100% - 103px);
+  min-height: 145px;
+  border: 1px solid #917f35;
+  border-radius: 4px;
+  padding: 2px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts td,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts td {
+  font-family: "ChocoCovRainBold";
+  font-size: 25px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts th.item-case-width,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts th.item-case-width,
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts td.item-case-width,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts td.item-case-width {
+  width: 100px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts th.item-controls,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts th.item-controls,
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts td.item-controls,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts td.item-controls {
+  width: 70px;
+  font-size: 17px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts .item-case,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts .item-case {
+  float: left;
+  width: 20px;
+  height: 20px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts-2,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts-2 {
+  margin-left: 100px;
+  width: calc(100% - 103px);
+  min-height: 290px;
+  border: 1px solid #917f35;
+  border-radius: 4px;
+  padding: 2px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts-2 td,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts-2 td {
+  font-family: "ChocoCovRainBold";
+  font-size: 25px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts-2 th.item-case-width,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts-2 th.item-case-width,
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts-2 td.item-case-width,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts-2 td.item-case-width {
+  width: 100px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts-2 th.item-controls,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts-2 th.item-controls,
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts-2 td.item-controls,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts-2 td.item-controls {
+  width: 70px;
+  font-size: 17px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts-2 .item-case,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts-2 .item-case {
+  float: left;
+  width: 20px;
+  height: 20px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises {
+  min-height: 255px;
+  color: #56605b;
+  text-align: center;
+}
+.penombre.eminence .eminence-content .eminence-maitrises-2 {
+  min-height: 400px;
+  color: #56605b;
+  text-align: center;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .titre-section-maitrises,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .titre-section-maitrises {
+  font-size: 35px;
+  float: none;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .content {
+  text-align: left;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .content .potentiel {
+  text-align: center;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .content .potentiel .div-potentiel {
+  position: relative;
+  float: left;
+  text-align: center;
+  width: 100px;
+  height: 200px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel .img-potentiel,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .content .potentiel .div-potentiel .img-potentiel {
+  width: 100px;
+  height: 100px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel .absolue,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .content .potentiel .div-potentiel .absolue {
+  position: absolute;
+  z-index: 5;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel .val-potentiel-saisie,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .content .potentiel .div-potentiel .val-potentiel-saisie {
+  margin-left: -22.5px;
+  margin-top: 42px;
+  width: 55px;
+  z-index: 10;
+  font-size: 30px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel .val-potentiel,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .content .potentiel .div-potentiel .val-potentiel {
+  margin-left: 41.5px;
+  margin-top: 42px;
+  text-align: center;
+  font-size: 29px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel span,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .content .potentiel .div-potentiel span {
+  margin-left: -42px;
+  margin-top: 90px;
+  color: #a56135;
+  font-size: 29px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises {
+  margin-left: 100px;
+  width: calc(100% - 103px);
+  min-height: 145px;
+  border: 1px solid #917f35;
+  border-radius: 4px;
+  padding: 2px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises td,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises td {
+  font-family: "ChocoCovRainBold";
+  font-size: 25px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises th.item-controls,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises th.item-controls,
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises td.item-controls,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises td.item-controls {
+  width: 70px;
+  font-size: 17px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises-2,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises-2 {
+  margin-left: 100px;
+  width: calc(100% - 103px);
+  min-height: 290px;
+  border: 1px solid #917f35;
+  border-radius: 4px;
+  padding: 2px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises-2 td,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises-2 td {
+  font-family: "ChocoCovRainBold";
+  font-size: 25px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises-2 th.harmonique-width,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises-2 th.harmonique-width,
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises-2 td.harmonique-width,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises-2 td.harmonique-width {
+  width: 70px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises-2 th.item-controls,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises-2 th.item-controls,
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises-2 td.item-controls,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises-2 td.item-controls {
+  width: 70px;
+  font-size: 17px;
+}
+.penombre.eminence .eminence-content .eminence-recapitulatif {
+  min-height: 180px;
+  width: 633px;
+  color: #56605b;
+  text-align: center;
+}
+.penombre.eminence .eminence-content .eminence-recapitulatif .content .tableau {
+  display: table;
+}
+.penombre.eminence .eminence-content .eminence-recapitulatif .content .tableau .div-gauche {
+  float: left;
+  height: 100px;
+  width: 477px;
+}
+.penombre.eminence .eminence-content .eminence-recapitulatif .content .tableau .div-gauche .img-gauche {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.penombre.eminence .eminence-content .eminence-recapitulatif .content .tableau .div-droite {
+  float: left;
+  height: 100px;
+  width: 152px;
+  padding-left: 33px;
+}
+.penombre.eminence .eminence-content .eminence-recapitulatif .content .tableau .div-droite .img-droite {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.penombre.atout .atout-content .standard-form .logo-frame {
+  display: flex;
+  justify-content: space-between;
+}
+.penombre.atout .atout-content .standard-form .logo-frame .logo-img {
+  width: 80px;
+}
+.penombre.atout .atout-content .standard-form .logo-frame .name {
+  width: calc(100% - 90px);
+}
+.penombre.maitrise .maitrise-content .standard-form .logo-frame {
+  display: flex;
+  justify-content: space-between;
+}
+.penombre.maitrise .maitrise-content .standard-form .logo-frame .logo-img {
+  width: 80px;
+}
+.penombre.maitrise .maitrise-content .standard-form .logo-frame .name {
+  width: calc(100% - 90px);
+}
+.penombre.pouvoir .pouvoir-content .standard-form .logo-frame {
+  display: flex;
+  justify-content: space-between;
+}
+.penombre.pouvoir .pouvoir-content .standard-form .logo-frame .logo-img {
+  width: 80px;
+}
+.penombre.pouvoir .pouvoir-content .standard-form .logo-frame .name {
+  width: calc(100% - 90px);
+}
+.penombre.pouvoir .pouvoir-content .standard-form .details {
+  display: flex;
+  justify-content: space-between;
+}
+.penombre.pouvoir .pouvoir-content .standard-form .details select[name="system.type"] {
+  width: 100px;
+}
+.penombre.intrigue .intrigue-content .standard-form .logo-frame {
+  display: flex;
+  justify-content: space-between;
+}
+.penombre.intrigue .intrigue-content .standard-form .logo-frame .logo-img {
+  width: 80px;
+}
+.penombre.intrigue .intrigue-content .standard-form .logo-frame .name {
+  width: calc(100% - 90px);
+}
+.penombre.action .action-content .standard-form .logo-frame {
+  display: flex;
+  justify-content: space-between;
+}
+.penombre.action .action-content .standard-form .logo-frame .logo-img {
+  width: 80px;
+}
+.penombre.action .action-content .standard-form .logo-frame .name {
+  width: calc(100% - 90px);
+}
+#penombre-reserve-collegiale {
+  padding: none;
+}
+#penombre-reserve-collegiale .div-jetons {
+  background-image: url("/systems/penombre/assets/ui/reserve-collegiale.webp");
+  background-repeat: no-repeat;
+  background-size: 550px 550px;
+  width: 740px;
+  height: 790px;
+  padding-left: 157px;
+  padding-top: 159px;
+}
+#penombre-reserve-collegiale .div-jetons .jetons {
+  width: 235px;
+  height: 288px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 colonnes égales */
+  gap: 5px;
+  padding: 10px;
+  /*
+      .absolue {
+        position: absolute;
+        z-index: 5;
+      }
+      */
+}
+#penombre-reserve-collegiale .div-jetons .jetons img.dropshadow-actif,
+#penombre-reserve-collegiale .div-jetons .jetons img.dropshadow-inactif {
+  -webkit-filter: drop-shadow(-5px 5px 5px #666666);
+  filter: drop-shadow(-5px 5px 5px #666666);
+}
+#penombre-reserve-collegiale .div-jetons .jetons img.dropshadow-actif:hover,
+#penombre-reserve-collegiale .div-jetons .jetons img.dropshadow-inactif:hover {
+  cursor: pointer;
+}
+#penombre-reserve-collegiale .div-jetons .jetons .jeton-2,
+#penombre-reserve-collegiale .div-jetons .jetons .jeton-5,
+#penombre-reserve-collegiale .div-jetons .jetons .jeton-8 {
+  margin-top: -36px;
+}
+#penombre-reserve-collegiale .div-jetons .jetons .jeton-10 {
+  margin-top: -36px;
+  margin-left: 75px;
+}
+#penombre-reserve-collegiale .div-jetons .jetons .jeton {
+  text-align: center;
+  width: 68px;
+  height: 68px;
+}
+#penombre-reserve-collegiale .div-jetons-2 .jetons {
+  width: 400px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* 5 colonnes égales */
+  gap: 10px;
+  padding: 10px;
+}
+#penombre-reserve-collegiale .div-jetons-2 .jetons img.dropshadow-actif,
+#penombre-reserve-collegiale .div-jetons-2 .jetons img.dropshadow-inactif {
+  -webkit-filter: drop-shadow(-5px 5px 5px #666666);
+  filter: drop-shadow(-5px 5px 5px #666666);
+}
+#penombre-reserve-collegiale .div-jetons-2 .jetons img.dropshadow-actif:hover,
+#penombre-reserve-collegiale .div-jetons-2 .jetons img.dropshadow-inactif:hover {
+  cursor: pointer;
+}
+#penombre-reserve-collegiale .div-jetons-2 .jetons .jeton {
+  text-align: center;
+}
+.penombre-roll-dialog {
+  display: flex;
+  flex-direction: column;
+}
+.penombre-roll-dialog .line-1 {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+}
+.penombre-roll-dialog .line-1 .part-left-1 fieldset .harmonique {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.penombre-roll-dialog .line-1 .part-left-1 fieldset .harmonique label {
+  font-family: "CattedraleDemo";
+  font-size: 1.8rem;
+  width: 140px;
+  padding-right: 10px;
+}
+.penombre-roll-dialog .line-1 .part-left-1 fieldset .harmonique input {
+  width: 40px;
+}
+.penombre-roll-dialog .line-1 .part-left-1 fieldset .deMerveilleux {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.penombre-roll-dialog .line-1 .part-right-1 {
+  display: flex;
+  flex-direction: column;
+}
+.penombre-roll-dialog .line-1 .part-right-1 .difficulte {
+  margin: 0 4px 10px 0;
+}
+.penombre-roll-dialog .line-1 .part-right-1 fieldset {
+  padding: 5px;
+}
+.penombre-roll-dialog .line-1 .part-right-1 .options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.penombre-roll-dialog .line-1 .part-right-1 .options input {
+  margin-right: 5px;
+}
+.penombre-roll-dialog .line-2 fieldset {
+  padding-top: 0;
+}
+.penombre-roll-dialog .line-2 fieldset .atouts {
+  overflow-y: auto;
+}
+.penombre-roll-dialog .line-2 fieldset .atouts .atout {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.penombre-roll-dialog .line-2 fieldset .atouts .atout.checked {
+  background-color: #917f35;
+  color: white;
+}
+.penombre-roll-dialog .line-2 fieldset .bonus-total {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.penombre-roll-dialog .line-2 fieldset .bonus-total label {
+  margin-right: 10px;
+}
+.penombre-roll-dialog .line-2 fieldset .bonus-total input {
+  text-align: center;
+  width: 40px;
+}
+.penombre-roll-dialog .line-3 {
+  display: table;
+  float: left;
+  width: 100%;
+}
+.penombre-roll-dialog .line-3 .part-left-3 {
+  width: 280px;
+  float: left;
+}
+.penombre-roll-dialog .line-3 .part-left-3 .des-img {
+  float: left;
+  width: 100%;
+}
+.penombre-roll-dialog .line-3 .part-left-3 .des-img img {
+  width: 75px;
+  height: 75px;
+  float: left;
+}
+.penombre-roll-dialog .line-3 .part-left-3 .rollMode {
+  width: calc(100% - 10px);
+}
+.penombre-roll-dialog .line-3 .part-right-3 {
+  margin-left: 285px;
+  width: calc(100% - 285px);
+}
+.penombre-roll-dialog .line-3 .part-right-3 .depensetotal {
+  float: left;
+  width: 100%;
+}
+.penombre-roll-dialog .line-3 .part-right-3 .depensetotal label {
+  width: 200px;
+  float: left;
+}
+.penombre-roll-dialog .line-3 .part-right-3 .depensetotal .form-fields {
+  float: left;
+  width: 40px;
+}
+.penombre-roll-dialog .line-3 .part-right-3 .depensetotal .form-fields input {
+  text-align: center;
+  float: left;
+  width: 40px;
+}
+.theme-dark #interface #sidebar .chat-message,
+.theme-dark #interface #ui-right-column-1 .chat-message {
+  background: #0b0a13e6;
+  color: var(--color-textLight);
+}
+.theme-dark #interface #sidebar .chat-message span,
+.theme-dark #interface #ui-right-column-1 .chat-message span,
+.theme-dark #interface #sidebar .chat-message label,
+.theme-dark #interface #ui-right-column-1 .chat-message label {
+  color: var(--color-textLight);
+}
+.theme-light #interface #sidebar .chat-message,
+.theme-light #interface #ui-right-column-1 .chat-message {
+  background-color: var(--color-light-3);
+  color: #222;
+}
+.theme-light #interface #sidebar .chat-message span,
+.theme-light #interface #ui-right-column-1 .chat-message span,
+.theme-light #interface #sidebar .chat-message label,
+.theme-light #interface #ui-right-column-1 .chat-message label {
+  color: #222;
+}
+#interface #sidebar .chat-message .message-header,
+#interface #ui-right-column-1 .chat-message .message-header {
+  border-bottom: 1px solid #5d142b;
+  display: grid;
+}
+.theme-dark #interface #sidebar .chat-message .message-header,
+.theme-dark #interface #ui-right-column-1 .chat-message .message-header {
+  color: var(--color-textLight);
+}
+.theme-light #interface #sidebar .chat-message .message-header,
+.theme-light #interface #ui-right-column-1 .chat-message .message-header {
+  color: #222;
+}
+#interface #sidebar .chat-message .message-header .message-metadata,
+#interface #ui-right-column-1 .chat-message .message-header .message-metadata {
+  margin-top: -53px;
+}
+#interface #sidebar .chat-message .message-header img,
+#interface #ui-right-column-1 .chat-message .message-header img {
+  max-width: 50px;
+  max-height: 50px;
+  margin-right: 4px;
+}
+#interface #sidebar .chat-message .message-header .title,
+#interface #ui-right-column-1 .chat-message .message-header .title {
+  font-size: 18px;
+  font-weight: bold;
+  display: inline;
+  text-wrap: auto;
+}
+#interface #sidebar .chat-message .message-header .message-sender,
+#interface #ui-right-column-1 .chat-message .message-header .message-sender {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#interface #sidebar .chat-message .message-content .dice-roll.penombre .participate-container,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .participate-container {
+  display: flex;
+  justify-content: space-between;
+}
+#interface #sidebar .chat-message .message-content .dice-roll.penombre .participate-container button,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .participate-container button {
+  flex: 1;
+  margin: 0 4px;
+}
+#interface #sidebar .chat-message .message-content .dice-roll.penombre .dice-result.expanded .dice-tooltip,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .dice-result.expanded .dice-tooltip {
+  grid-template-rows: 1fr;
+}
+#interface #sidebar .chat-message .message-content .dice-roll.penombre .dice-result .dice-tooltip,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .dice-result .dice-tooltip {
+  cursor: var(--cursor-default);
+}
+#interface #sidebar .chat-message .message-content .dice-roll.penombre .dice-result .dice-tooltip .wrapper .reroll-container,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .dice-result .dice-tooltip .wrapper .reroll-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#interface #sidebar .chat-message .message-content .dice-roll.penombre .dice-result .dice-tooltip .wrapper .reroll-container .reroll-conscience.hidden,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .dice-result .dice-tooltip .wrapper .reroll-container .reroll-conscience.hidden {
+  display: none;
+}
+#interface #sidebar .chat-message .message-content .dice-roll.penombre .dice-result .dice-tooltip .wrapper .reroll-container .reroll-reserve.hidden,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .dice-result .dice-tooltip .wrapper .reroll-container .reroll-reserve.hidden {
+  display: none;
+}
+#interface #sidebar .chat-message .message-content .dice-roll.penombre .dice-tooltip .dice-rolls .roll,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .dice-tooltip .dice-rolls .roll {
+  background-image: none;
+}
+#interface #sidebar .chat-message .message-content .dice-roll.penombre section.harmonique li.roll.die,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre section.harmonique li.roll.die {
+  width: 48px;
+  height: 48px;
+}
+#interface #sidebar .chat-message .message-content .dice-roll.penombre section.harmonique li.roll.die.rerollable,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre section.harmonique li.roll.die.rerollable {
+  cursor: var(--cursor-pointer);
+}
+#interface #sidebar .chat-message .message-content .dice-roll.penombre section.harmonique li.roll.die.max,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre section.harmonique li.roll.die.max {
+  filter: sepia(0.9) hue-rotate(10deg) saturate(0.8) brightness(0.85);
+}
+#interface #sidebar .chat-message .message-content .dice-roll.penombre section.harmonique li.roll.die.min,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre section.harmonique li.roll.die.min {
+  filter: sepia(0.7) hue-rotate(-20deg) saturate(2) brightness(1);
+}
+#interface #sidebar .chat-message .message-content .dice-roll.penombre section.harmonique li.roll.die.dice-selected,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre section.harmonique li.roll.die.dice-selected {
+  border: solid 2px black;
+}
+#interface #sidebar .chat-message .message-content .dice-roll.penombre section.atout li.roll.die,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre section.atout li.roll.die {
+  width: 48px;
+  height: 48px;
+  cursor: var(--cursor-pointer);
+}
+#interface #sidebar .chat-message .message-content .dice-roll.penombre section.atout li.roll.die.max,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre section.atout li.roll.die.max {
+  filter: none;
+}
+#interface #sidebar .chat-message .message-content .dice-roll.penombre section.atout li.roll.die.min,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre section.atout li.roll.die.min {
+  filter: none;
+}
+#interface #sidebar .chat-message .message-content .dice-roll.penombre section.atout li.roll.die.dice-selected,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre section.atout li.roll.die.dice-selected {
+  border: solid 2px black;
+}
+/* ---------------------------------------------
+        Thème Clair
+--------------------------------------------- */
+/* ---------------------------------------------
+          Thème Sombre
+--------------------------------------------- */
+body {
+  /*
+  &.theme-dark {
+    .penombre {
+      &.adversaire {
+        .adversaire-content {
+        }
+      }
+    }
+  }
+  */
+}
+body.theme-light .penombre.adversaire .adversaire-content {
+  background-color: #faeed6;
+}
+.penombre.adversaire .adversaire-content {
+  overflow-y: auto;
+  font-size: 17px;
+  clear: both;
+}
+.penombre.adversaire .adversaire-content .adversaire-main {
+  width: 100%;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage {
+  display: flex;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .logo-frame {
+  height: 175px;
+  width: 175px;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .logo-frame .logo-img {
+  border: solid;
+  border-width: 2.5px;
+  border-color: #124b63;
+  height: 175px;
+  width: auto;
+  max-width: 100%;
+  display: block;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .logo-frame .logo-img-unlocked {
+  border: solid;
+  border-width: 2.5px;
+  border-color: #124b63;
+  height: 175px;
+  width: auto;
+  max-width: 100%;
+  display: block;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .logo-frame .logo-img-unlocked:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 0.75px #124b63;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos input {
+  text-align: center;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .nom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .nom label {
+  font-family: "CattedraleDemo";
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .nom input {
+  text-align: left;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .nom.locked {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .nom.locked .name {
+  font-family: "CattedraleDemo";
+  color: #124b63;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .nom.locked .description {
+  font-family: "CattedraleDemo";
+  color: #a47c64;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .adversite {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .adversite .attribut {
+  display: flex;
+  align-items: left;
+  margin-left: 20px;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .adversite .attribut label {
+  align-self: center;
+  font-family: "CattedraleDemo";
+  display: inline-block;
+  width: 120px;
+  font-weight: bold;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .adversite .attribut input {
+  margin: 0 5px;
+  width: 50px;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .adversite .attribut select {
+  margin: 0 5px;
+  width: 120px;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .adversite .attribut .harmonique {
+  font-family: "CattedraleDemo";
+  margin: 0 5px;
+  width: 70px;
+  text-align: left;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions-adverses,
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions-dissonance {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions-adverses h2,
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions-dissonance h2 {
+  color: #124b63;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions .action {
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions .action:nth-child(odd) {
+  color: #a47c64;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions .action .nom {
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  margin-right: 40px;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions .action .description {
+  font-size: 13px;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions .action .item-controls {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues {
+  display: flex;
+  flex-direction: column;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues h2 {
+  color: #124b63;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues .intrigues {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues .intrigues .intrigue {
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues .intrigues .intrigue:nth-child(odd) {
+  color: #a47c64;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues .intrigues .intrigue .nom {
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  margin-right: 40px;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues .intrigues .intrigue .description {
+  font-size: 13px;
+}
+.penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues .intrigues .intrigue .item-controls {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}

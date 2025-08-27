@@ -12,6 +12,7 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
     const schema = {}
 
     // Personnage
+    schema.description = new StringField({})
     schema.peuple = new StringField({ required: true, nullable: false, initial: SYSTEM.PEUPLES.ameAccouchee.id, choices: SYSTEM.PEUPLES })
     schema.cle = new StringField({ required: true, nullable: false, initial: SYSTEM.HARMONIQUES.ame.id, choices: SYSTEM.HARMONIQUES })
     schema.potentiel = new SchemaField({

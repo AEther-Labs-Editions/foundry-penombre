@@ -1,0 +1,237 @@
+// Tailles
+@font-size-small: 13px;
+
+// Couleurs du thème
+@color-primary-clear: #a47c64; // Marron secondaire
+
+
+/* ---------------------------------------------
+        Thème Clair
+--------------------------------------------- */
+
+/* ---------------------------------------------
+          Thème Sombre
+--------------------------------------------- */
+body {
+  &.theme-light {
+    .penombre {
+      &.adversaire {
+        .adversaire-content {
+          background-color: @background-light; // Si et seulement si on est en mode clair (et pas sombre) de la fiche
+        }
+      }
+    }
+  }
+
+  /*
+  &.theme-dark {
+    .penombre {
+      &.adversaire {
+        .adversaire-content {
+        }
+      }
+    }
+  }
+  */
+}
+
+
+.penombre.adversaire {
+  .adversaire-content {
+    overflow-y: auto;
+    font-size: @font-size-base;
+    clear: both;
+
+    .adversaire-main {
+      width: 100%;
+      .adversaire-personnage {
+        display: flex;
+        .logo-frame {
+            height: 175px;
+            width: 175px;
+          .logo-img {
+            border: solid;
+            border-width: 2.5px;
+            border-color: @color-blue;
+            height: 175px;
+            width: auto;
+            max-width: 100%;
+            display: block;
+          }
+          .logo-img-unlocked {
+            border: solid;
+            border-width: 2.5px;
+            border-color: @color-blue;
+            height: 175px;
+            width: auto;
+            max-width: 100%;
+            display: block;
+            &:hover {
+              cursor: pointer;
+              box-shadow: 0px 0px 0px 0.75px @color-blue;
+            }
+          }
+
+        }
+        .infos {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          input {
+            text-align: center;
+          }
+          .nom {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            label {
+                font-family: @font-cattedrale;
+            }
+            input {
+              text-align: left;
+            }
+            &.locked {
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              font-size: 1.8rem;
+              .name {
+                font-family: @font-cattedrale;
+                color: @color-blue;
+              }
+              .description {
+                font-family: @font-cattedrale;
+                color: @color-primary-clear;
+              }
+            }
+          }
+          .adversite {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            .attribut {
+              display: flex;
+              align-items: left;
+              margin-left: 20px;
+              label {
+                align-self: center;
+                font-family: @font-cattedrale;
+                display: inline-block;
+                width: 120px;
+                font-weight: bold;
+              }
+              input {
+                margin: 0 5px;
+                width: 50px;
+              }
+              select {
+                margin: 0 5px;
+                width: 120px;
+              }
+              .harmonique {
+                font-family: @font-cattedrale;
+                margin: 0 5px;
+                width: 70px;
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+
+      .adversaire-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .actions-adverses,
+        .actions-dissonance {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          h2 {
+            color: @color-blue;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            text-align: center;
+            margin: 0;
+          }
+        }
+        .actions {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          gap: 10px;
+          .action {
+            &:nth-child(even) {
+            }
+            &:nth-child(odd) {
+            color: @color-primary-clear
+            }
+            position: relative;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            .nom {
+              font-weight: bold;
+              font-style: italic;
+              text-align: center;
+              margin-right: 40px;
+            }
+            .description {
+              font-size: @font-size-small;
+            }
+            .item-controls {
+                position: absolute;
+                top: 0.5rem;
+                right: 0.5rem;
+            }
+          }
+        }
+      }
+
+      .adversaire-intrigues {
+        display: flex;
+        flex-direction: column;
+        h2 {
+          color: @color-blue;
+          text-transform: uppercase;
+          font-size: 1.2rem;
+          text-align: center;
+          margin: 0;
+        }
+        .intrigues {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          gap: 10px;
+          .intrigue {
+            &:nth-child(even) {
+            }
+            &:nth-child(odd) {
+            color: @color-primary-clear
+            }
+            position: relative;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            .nom {
+              font-weight: bold;
+              font-style: italic;
+              text-align: center;
+              margin-right: 40px;
+            }
+            .description {
+              font-size: @font-size-small;
+            }
+            .item-controls {
+              position: absolute;
+              top: 0.5rem;
+              right: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
