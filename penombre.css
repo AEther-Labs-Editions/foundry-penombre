@@ -275,6 +275,9 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   width: 20px;
   height: 20px;
 }
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div img.case-ronde-note:hover {
+  cursor: pointer;
+}
 .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div img.case-ronde-note1 {
   margin-left: 20px;
   margin-top: 20px;
@@ -297,6 +300,9 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   width: 25px;
   height: 25px;
 }
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div img.case-ronde-cle:hover {
+  cursor: pointer;
+}
 .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 {
   margin-top: 30px;
   float: left;
@@ -309,6 +315,9 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 span {
   margin-left: 25px;
   width: calc(100% - 25px);
+}
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 .statut-timbre-case:hover {
+  cursor: pointer;
 }
 .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-3-2 {
   margin-left: 313px;
@@ -758,6 +767,10 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   width: 20px;
   height: 20px;
 }
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs .item-case:hover,
+.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs .item-case:hover {
+  cursor: pointer;
+}
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs td,
 .penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs td {
   font-family: "ChocoCovRainBold";
@@ -787,6 +800,10 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 .penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs-2 .item-case {
   width: 20px;
   height: 20px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs-2 .item-case:hover,
+.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs-2 .item-case:hover {
+  cursor: pointer;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs-2 td,
 .penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs-2 td {

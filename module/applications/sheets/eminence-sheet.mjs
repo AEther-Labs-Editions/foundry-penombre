@@ -15,6 +15,7 @@ export default class EminenceSheet extends PenombreBaseActorSheet {
       jetHarmonique: EminenceSheet.#onClicHarmonique,
       note: EminenceSheet.#onClicNote,
       statut: EminenceSheet.#onClicStatut,
+      itempouvoircoche: EminenceSheet.#onClicPouvoirCoche,
     },
   }
 
@@ -139,7 +140,7 @@ export default class EminenceSheet extends PenombreBaseActorSheet {
     await this.document.update({ "system.conscience.jetons": jetons })
   }
 
-    static async #onClicNote(event, target) {
+  static async #onClicNote(event, target) {
     event.preventDefault()
     const dataset = target.dataset
     const index = dataset.index // Commence à 0
@@ -166,6 +167,24 @@ export default class EminenceSheet extends PenombreBaseActorSheet {
         await this.document.update({ "system.timbre.note4": !note4 })
         break
     }
+  }
+
+  static async #onClicPouvoirCoche(event, target) {
+    event.preventDefault()
+    const dataset = target.dataset
+    const id = dataset.itemID
+    console.log("this.document = ", this.document)
+    let myItem
+    let coche
+    for (let pouvoir of this.document.items.filter(item => item.type === 'pouvoir')) {
+      if (pouvoir.key === id) {
+        myItem = pouvoir
+        coche = pouvoir.system.utilise
+      }
+    }
+    console.log("myItem = ", myItem)
+    const newCoche = !coche
+    await myItem.update({ "system.utilise": newCoche })
   }
 
 

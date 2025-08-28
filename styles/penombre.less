@@ -406,6 +406,9 @@ body {
 
                   img {
                     &.case-ronde-note {
+                        &:hover {
+                          cursor: pointer;
+                        }
                         .case-ronde-note-element()
                     }
                     &.case-ronde-note1 {
@@ -427,6 +430,9 @@ body {
                     &.case-ronde-cle {
                         margin-left: -40px;
                         margin-top: 10px;
+                        &:hover {
+                          cursor: pointer;
+                        }
                         .case-ronde-cle-element()
                     }
                   }
@@ -446,6 +452,12 @@ body {
                 span {
                   margin-left: 25px;
                   width: calc(100% - 25px);
+                }
+
+                .statut-timbre-case {
+                  &:hover {
+                    cursor: pointer;
+                  }
                 }
               }
 
@@ -968,6 +980,9 @@ body {
             .item-case {
               width: @small-case-size;
               height: @small-case-size;
+              &:hover {
+                cursor: pointer;
+              }
             }
 
             td {
@@ -998,6 +1013,10 @@ body {
             .item-case {
               width: @small-case-size;
               height: @small-case-size;
+              &:hover {
+                cursor: pointer;
+              }
+
             }
 
             td {
