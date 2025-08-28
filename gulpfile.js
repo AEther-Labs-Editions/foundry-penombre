@@ -29,4 +29,3 @@ exports.default = gulp.series(
     watchUpdates
 );
 exports.css = css;
-

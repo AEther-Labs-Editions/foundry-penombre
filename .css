@@ -58,6 +58,7 @@ penombre-toggle-switch[checked] thumb {
   font-family: "NotoMusic";
   src: url(/systems/penombre/fonts/noto-music/NotoMusic-Regular.ttf);
 }
+
 /* ---------------------------------------------
         Mixins
 --------------------------------------------- */
@@ -101,11 +102,9 @@ penombre-toggle-switch[checked] thumb {
 /* ---------------------------------------------
         Thème Clair
 --------------------------------------------- */
-body {
-  /* ---------------------------------------------
-        Thème Sombre
+/* ---------------------------------------------
+          Thème Sombre
 --------------------------------------------- */
-}
 body.theme-light .penombre.eminence .eminence-content {
   background-color: #faeed6;
 }
@@ -127,7 +126,6 @@ body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-ti
   color: #56605b;
 }
 body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .col-2-2 {
-  margin-top: 30px;
   float: left;
   width: 101px;
 }
@@ -251,60 +249,7 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div span.description {
   height: auto;
 }
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div label.croche {
-  font-size: 55px;
-  font-family: "NotoMusic";
-}
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div label.note1 {
-  margin-left: 20px;
-  margin-top: -62px;
-}
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div label.note2 {
-  margin-left: 60px;
-  margin-top: -84px;
-}
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div label.note3 {
-  margin-left: 100px;
-  margin-top: -83px;
-}
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div label.note4 {
-  margin-left: 140px;
-  margin-top: -84px;
-}
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div img.case-ronde-note {
-  width: 20px;
-  height: 20px;
-}
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div img.case-ronde-note:hover {
-  cursor: pointer;
-}
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div img.case-ronde-note1 {
-  margin-left: 20px;
-  margin-top: 20px;
-}
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div img.case-ronde-note2 {
-  margin-left: 60px;
-  margin-top: -35px;
-}
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div img.case-ronde-note3 {
-  margin-left: 100px;
-  margin-top: -35px;
-}
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div img.case-ronde-note4 {
-  margin-left: 140px;
-  margin-top: -35px;
-}
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div img.case-ronde-cle {
-  margin-left: -40px;
-  margin-top: 10px;
-  width: 25px;
-  height: 25px;
-}
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div img.case-ronde-cle:hover {
-  cursor: pointer;
-}
 .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 {
-  margin-top: 30px;
   float: left;
   width: 101px;
 }
@@ -315,9 +260,6 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 span {
   margin-left: 25px;
   width: calc(100% - 25px);
-}
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 .statut-timbre-case:hover {
-  cursor: pointer;
 }
 .penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-3-2 {
   margin-left: 313px;
@@ -409,7 +351,7 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   text-orientation: sideways-left;
 }
 .penombre.eminence .eminence-content .eminence-personnage {
-  min-height: 250px;
+  min-height: 165px;
   color: #a56135;
 }
 .penombre.eminence .eminence-content .eminence-personnage .logo-frame {
@@ -442,15 +384,6 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   float: left;
   width: 254px;
   clear: right;
-}
-.penombre.eminence .eminence-content .eminence-personnage .data .name {
-  font-size: 35px;
-  text-align: center;
-}
-.penombre.eminence .eminence-content .eminence-personnage .data .description {
-  font-size: 19px;
-  color: #124b63;
-  text-align: center;
 }
 .penombre.eminence .eminence-content .eminence-harmoniques {
   min-height: 350px;
@@ -690,9 +623,13 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   color: #56605b;
   font-size: 30px;
 }
-.penombre.eminence .eminence-content .eminence-pouvoirs,
+.penombre.eminence .eminence-content .eminence-pouvoirs {
+  min-height: 255px;
+  color: #56605b;
+  text-align: center;
+}
 .penombre.eminence .eminence-content .eminence-pouvoirs-2 {
-  min-height: 205px;
+  min-height: 400px;
   color: #56605b;
   text-align: center;
 }
@@ -767,10 +704,6 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   width: 20px;
   height: 20px;
 }
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs .item-case:hover,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs .item-case:hover {
-  cursor: pointer;
-}
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs td,
 .penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs td {
   font-family: "ChocoCovRainBold";
@@ -801,10 +734,6 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   width: 20px;
   height: 20px;
 }
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs-2 .item-case:hover,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs-2 .item-case:hover {
-  cursor: pointer;
-}
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs-2 td,
 .penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs-2 td {
   font-family: "ChocoCovRainBold";
@@ -825,13 +754,19 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   align-items: center;
   justify-content: space-between;
 }
-.penombre.eminence .eminence-content .eminence-atouts,
-.penombre.eminence .eminence-content .eminence-atouts-2 {
-  min-height: 205px;
+.penombre.eminence .eminence-content .eminence-atouts {
+  min-height: 255px;
   color: #56605b;
   text-align: center;
 }
-.penombre.eminence .eminence-content .eminence-atouts .plusitem,
+.penombre.eminence .eminence-content .eminence-atouts .plusitem {
+  text-align: right;
+}
+.penombre.eminence .eminence-content .eminence-atouts-2 {
+  min-height: 400px;
+  color: #56605b;
+  text-align: center;
+}
 .penombre.eminence .eminence-content .eminence-atouts-2 .plusitem {
   text-align: right;
 }
@@ -954,9 +889,13 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   width: 20px;
   height: 20px;
 }
-.penombre.eminence .eminence-content .eminence-maitrises,
+.penombre.eminence .eminence-content .eminence-maitrises {
+  min-height: 255px;
+  color: #56605b;
+  text-align: center;
+}
 .penombre.eminence .eminence-content .eminence-maitrises-2 {
-  min-height: 205px;
+  min-height: 400px;
   color: #56605b;
   text-align: center;
 }
@@ -1072,6 +1011,7 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 }
 .penombre.eminence .eminence-content .eminence-recapitulatif .content .tableau .div-gauche {
   float: left;
+  height: 100px;
   width: 477px;
 }
 .penombre.eminence .eminence-content .eminence-recapitulatif .content .tableau .div-gauche .img-gauche {
@@ -1079,7 +1019,8 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   border-bottom-left-radius: 4px;
 }
 .penombre.eminence .eminence-content .eminence-recapitulatif .content .tableau .div-droite {
-  margin-left: 477px;
+  float: left;
+  height: 100px;
   width: 152px;
   padding-left: 33px;
 }
@@ -1143,9 +1084,6 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 }
 .penombre.action .action-content .standard-form .logo-frame .name {
   width: calc(100% - 90px);
-}
-body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
-  background-color: #faeed6;
 }
 #penombre-reserve-collegiale {
   padding: none;
@@ -1488,7 +1426,6 @@ body {
 }
 body.theme-light .penombre.adversaire .adversaire-content {
   background-color: #faeed6;
-  /* Si et seulement si on est en mode clair (et pas sombre) de la fiche */
 }
 .penombre.adversaire .adversaire-content {
   overflow-y: auto;

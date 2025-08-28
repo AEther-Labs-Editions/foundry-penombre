@@ -24,6 +24,9 @@
     },
     "Eminence": {
       "FIELDS": {
+        "description": {
+          "label": "Description"
+        },
         "peuple": {
           "label": "Peuple"
         },

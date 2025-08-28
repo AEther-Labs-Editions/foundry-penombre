@@ -8,13 +8,16 @@
       <img class="logo-img{{#if unlocked}}-unlocked{{/if}}" src="{{document.img}}" {{#if unlocked}}data-action="editImage"{{/if}} data-tooltip="{{document.name}}"/>
     </div>
     <div class="data">
-      {{formGroup fields.name value=document.name localize=true disabled=locked}}
       {{#if unlocked}}
+        {{formGroup fields.name value=document.name localize=true}}
+        {{formGroup systemFields.description value=systemSource.description localize=true}}
         {{formGroup systemFields.peuple value=systemSource.peuple localize=true}}
           {{#if (or isStyleJeuStandard isStyleJeuAvance)}}
           {{formGroup systemFields.cle value=systemSource.cle localize=true}}
           {{/if}}
       {{else}}
+        <div class="name">{{document.name}}</div>
+        <div class="description">{{system.description}}</div>
         <div class="form-group">
           <label>{{localize "PENOMBRE.ui.peuple"}}</label>
           <div class="form-fields">{{localize (concat "PENOMBRE.Peuple." system.peuple ".label")}}</div>
