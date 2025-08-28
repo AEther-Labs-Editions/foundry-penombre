@@ -14,12 +14,11 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
     window: {
       contentClasses: ["penombre-reserve-collegiale-content"],
       title: "PENOMBRE.ReserveCollegiale.title",
-      resizable: true,
       controls: [],
     },
     position: {
-      width: 580,
-      height: 235,
+      width: 585,
+      height: 620,
       top: 80,
       left: 150,
     },
@@ -29,6 +28,13 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
     actions: {
       jeton: PenombreReserveCollegiale.#onClicJeton,
     },
+  }
+
+  /** @inheritDoc */
+  _initializeApplicationOptions(options) {
+    const applicationOptions = super._initializeApplicationOptions(options)
+    applicationOptions.window.resizable = game.settings.get("penombre", "styleJeu") !== "demo"
+    return applicationOptions
   }
 
   /** @override */
