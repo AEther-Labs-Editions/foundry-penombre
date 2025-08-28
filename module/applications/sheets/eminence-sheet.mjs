@@ -10,9 +10,11 @@ export default class EminenceSheet extends PenombreBaseActorSheet {
     },
     actions: {
       jeton: EminenceSheet.#onClicJeton,
-      complication: EminenceSheet.#onClicComplication,
+      complication: EminenceSheet.#onClicStatut,
       create: EminenceSheet.#onCreateItem,
       jetHarmonique: EminenceSheet.#onClicHarmonique,
+      note: EminenceSheet.#onClicNote,
+      statut: EminenceSheet.#onClicStatut,
     },
   }
 
@@ -137,6 +139,36 @@ export default class EminenceSheet extends PenombreBaseActorSheet {
     await this.document.update({ "system.conscience.jetons": jetons })
   }
 
+    static async #onClicNote(event, target) {
+    event.preventDefault()
+    const dataset = target.dataset
+    const index = dataset.index // Commence à 0
+    const cle = this.document.system.timbre.cle
+    const note1 = this.document.system.timbre.note1
+    const note2 = this.document.system.timbre.note2
+    const note3 = this.document.system.timbre.note3
+    const note4 = this.document.system.timbre.note4
+
+    switch (index) {
+      case "0":
+        await this.document.update({ "system.timbre.cle": !cle })
+        break
+      case "1":
+        await this.document.update({ "system.timbre.note1": !note1 })
+        break
+      case "2":
+        await this.document.update({ "system.timbre.note2": !note2 })
+        break
+      case "3":
+        await this.document.update({ "system.timbre.note3": !note3 })
+        break
+      case "4":
+        await this.document.update({ "system.timbre.note4": !note4 })
+        break
+    }
+  }
+
+
   /**
    * Gère les clics sur les éléments de complication dans l'interface.
    *
@@ -156,6 +188,14 @@ export default class EminenceSheet extends PenombreBaseActorSheet {
     if (initialValue === 2 && index === 2) index = 1
     if (initialValue === 3 && index === 3) index = 2
     await this.document.update({ [`system.conscience.complications.${complication}.valeur`]: index })
+  }
+
+    static async #onClicStatut(event, target) {
+    event.preventDefault()
+    const dataset = target.dataset
+    // const statut = dataset.statut
+    let index = dataset.index
+    await this.document.update({ [`system.timbre.statut`]: index })
   }
 
   static async #onClicHarmonique(event, target) {

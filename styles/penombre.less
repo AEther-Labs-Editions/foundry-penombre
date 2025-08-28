@@ -35,6 +35,7 @@
 @border-radius: 6px;
 @border-radius-small: 4px;
 @note-size: 55px;
+@case-cle-size: 25px;
 
 /* ---------------------------------------------
         Fonts
@@ -108,6 +109,19 @@
   font-family: @font-notomusic;
 }
 
+// Mixin pour les éléments de case note
+.case-ronde-note-element(@size: @small-case-size) {
+  width: @size;
+  height: @size;
+}
+
+// Mixin pour les éléments de case cle note
+.case-ronde-cle-element(@size: @case-cle-size) {
+  width: @size;
+  height: @size;
+}
+
+
 
 /* ---------------------------------------------
         Interface de Foundry VTT
@@ -165,9 +179,6 @@
         Thème Clair
 --------------------------------------------- */
 
-/* ---------------------------------------------
-          Thème Sombre
---------------------------------------------- */
 body {
   &.theme-light {
     .penombre {
@@ -200,6 +211,7 @@ body {
               }
 
               .col-2-2 {
+                margin-top: 30px;
                 float: left;
                 width: 101px;
 
@@ -245,6 +257,10 @@ body {
     }
   }
 
+/* ---------------------------------------------
+        Thème Sombre
+--------------------------------------------- */
+
   &.theme-dark {
     .penombre {
       &.eminence {
@@ -283,7 +299,7 @@ body {
 }
 
 .penombre {
-  /* ---------------------------------------------
+/* ---------------------------------------------
         Eminence
 --------------------------------------------- */
   &.eminence {
@@ -377,7 +393,6 @@ body {
                     &.note2 {
                         margin-left: 60px;
                         margin-top: -84px;
-
                     }
                     &.note3 {
                         margin-left: 100px;
@@ -388,10 +403,38 @@ body {
                         margin-top: -84px;
                     }
                   }
+
+                  img {
+                    &.case-ronde-note {
+                        .case-ronde-note-element()
+                    }
+                    &.case-ronde-note1 {
+                        margin-left: 20px;
+                        margin-top: 20px;
+                    }
+                    &.case-ronde-note2 {
+                        margin-left: 60px;
+                        margin-top: -35px;
+                    }
+                    &.case-ronde-note3 {
+                        margin-left: 100px;
+                        margin-top: -35px;
+                    }
+                    &.case-ronde-note4 {
+                        margin-left: 140px;
+                        margin-top: -35px;
+                    }
+                    &.case-ronde-cle {
+                        margin-left: -40px;
+                        margin-top: 10px;
+                        .case-ronde-cle-element()
+                    }
+                  }
                 }
               }
 
               .col-2-2 {
+                margin-top: 30px;
                 float: left;
                 width: 101px;
 
@@ -553,7 +596,7 @@ body {
             text-align: center;
           }
           .description {
-            font-size : @font-size-large;
+            font-size : @font-size-middle;
             color : @color-blue;
             text-align: center;
           }
