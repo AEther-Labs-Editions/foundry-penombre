@@ -35,7 +35,7 @@
                 {{#each pouvoirs as |item id|}}
                 <tr class="item draggable" data-item-id="{{item._id}}">
                     <td class="item-coche">
-                        <img class="item-case" data-action="itempouvoircoche" data-item-id="{{item._id}}" src="systems/penombre/assets/ui/transp_case_{{#if item.system.utilise}}checked{{else}}unchecked{{/if}}.png"></img>
+                        <img class="item-case" data-action="utilisePouvoir" data-item-id="{{item._id}}" src="systems/penombre/assets/ui/transp_case_{{#if item.system.utilise}}checked{{else}}unchecked{{/if}}.png"></img>
                     </td>
                     <td>
                         <span class="item-name" data-tooltip="{{{item.system.description}}}">{{item.name}}</span>

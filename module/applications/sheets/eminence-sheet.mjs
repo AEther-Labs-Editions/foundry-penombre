@@ -10,12 +10,12 @@ export default class EminenceSheet extends PenombreBaseActorSheet {
     },
     actions: {
       jeton: EminenceSheet.#onClicJeton,
-      complication: EminenceSheet.#onClicStatut,
+      complication: EminenceSheet.#onClicComplication,
       create: EminenceSheet.#onCreateItem,
       jetHarmonique: EminenceSheet.#onClicHarmonique,
       note: EminenceSheet.#onClicNote,
       statut: EminenceSheet.#onClicStatut,
-      itempouvoircoche: EminenceSheet.#onClicPouvoirCoche,
+      utilisePouvoir: EminenceSheet.#onClicPouvoirCoche,
     },
   }
 
@@ -169,24 +169,22 @@ export default class EminenceSheet extends PenombreBaseActorSheet {
     }
   }
 
+  /**
+   * Gère le clic pour cocher/décocher l'utilisation d'un pouvoir.
+   *
+   * @param {Event} event L'événement de clic déclenché par l'utilisateur.
+   * @param {HTMLElement} target L'élément HTML cliqué, contenant les attributs data.
+   * @returns {Promise<void>} Résout lorsque la mise à jour du pouvoir est terminée.
+   * @private
+   * @static
+   */
   static async #onClicPouvoirCoche(event, target) {
     event.preventDefault()
     const dataset = target.dataset
-    const id = dataset.itemID
-    console.log("this.document = ", this.document)
-    let myItem
-    let coche
-    for (let pouvoir of this.document.items.filter(item => item.type === 'pouvoir')) {
-      if (pouvoir.key === id) {
-        myItem = pouvoir
-        coche = pouvoir.system.utilise
-      }
-    }
-    console.log("myItem = ", myItem)
-    const newCoche = !coche
-    await myItem.update({ "system.utilise": newCoche })
+    const id = dataset.itemId
+    const pouvoir = this.document.items.get(id)
+    await pouvoir.update({ "system.utilise": !pouvoir.system.utilise })
   }
-
 
   /**
    * Gère les clics sur les éléments de complication dans l'interface.
@@ -209,10 +207,9 @@ export default class EminenceSheet extends PenombreBaseActorSheet {
     await this.document.update({ [`system.conscience.complications.${complication}.valeur`]: index })
   }
 
-    static async #onClicStatut(event, target) {
+  static async #onClicStatut(event, target) {
     event.preventDefault()
     const dataset = target.dataset
-    // const statut = dataset.statut
     let index = dataset.index
     await this.document.update({ [`system.timbre.statut`]: index })
   }
@@ -221,8 +218,6 @@ export default class EminenceSheet extends PenombreBaseActorSheet {
     event.preventDefault()
     const dataset = target.dataset
     const harmonique = dataset.harmonique
-    console.log(`Pénombre | EminenceSheet.#onClicHarmonique: harmonique ${harmonique}`)
-
     await this.actor.rollHarmonique({ harmonique })
   }
 
