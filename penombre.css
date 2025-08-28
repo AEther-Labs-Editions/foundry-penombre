@@ -323,6 +323,9 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   margin-left: 313px;
   width: calc(100% - 313px);
 }
+.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-3-2 .peste-texte {
+  margin-top: 9px;
+}
 .penombre.eminence .eminence-content .centpourcent {
   width: 100%;
 }

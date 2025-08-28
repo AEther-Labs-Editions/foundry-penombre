@@ -5,9 +5,6 @@
       <img class="img-timbre" src="systems/penombre/assets/ui/timbre.png" />
     </div>
     <div class="datas-timbre">
-    {{#if unlocked}}
-    {{formGroup systemFields.timbre.fields.peste value=systemSource.timbre.peste localize=true}}
-    {{else}}
       <div class="col-1-2">
         <div>
           <label class="label-timbre">{{localize "PENOMBRE.ui.timbre"}}</label>
@@ -33,10 +30,14 @@
         {{/each}}
       </div>
       <div class="col-3-2">
-      <label class="label-peste">{{localize "PENOMBRE.ui.peste"}}</label>
-      <span>{{localize system.timbre.peste}}</span>
+      {{#if unlocked}}
+        <label class="label-peste">{{localize "PENOMBRE.ui.peste"}}</label>
+        <input class="input" type="text" name="system.timbre.peste" value="{{systemSource.timbre.peste}}" />
+      {{else}}
+        <label class="label-peste">{{localize "PENOMBRE.ui.peste"}}</label>
+        <span class="peste-texte">{{localize system.timbre.peste}}</span>
+      {{/if}}
       </div>
-    {{/if}}
     </div>
   {{else}}
     <img class="frise-penombre"></img>
