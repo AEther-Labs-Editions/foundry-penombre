@@ -54,6 +54,11 @@ penombre-toggle-switch[checked] thumb {
   font-family: "ChocoCovRainBold";
   src: url(/systems/penombre/fonts/chocolate-covered-raindrops/Chocolate%20Covered%20Raindrops%20BOLD.ttf);
 }
+@font-face {
+  font-family: "NotoMusic";
+  src: url(/systems/penombre/fonts/noto-music/NotoMusic-Regular.ttf);
+}
+
 /* ---------------------------------------------
         Mixins
 --------------------------------------------- */

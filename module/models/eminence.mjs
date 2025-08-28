@@ -1,7 +1,7 @@
 import { SYSTEM } from "../config/system.mjs"
 import PenombreRoll from "../documents/roll.mjs"
 
-const { SchemaField, NumberField, StringField, ArrayField } = foundry.data.fields
+const { SchemaField, NumberField, StringField, ArrayField, BooleanField } = foundry.data.fields
 
 export default class Eminence extends foundry.abstract.TypeDataModel {
   /** @override */
@@ -88,6 +88,11 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
         choices: SYSTEM.TIMBRES,
       }),
       peste: new StringField(),
+      cle: new BooleanField({ initial: false }),
+      note1: new BooleanField({ initial: false }),
+      note2: new BooleanField({ initial: false }),
+      note3: new BooleanField({ initial: false }),
+      note4: new BooleanField({ initial: false }),
     })
 
     // Pouvoirs : sous forme d'un item

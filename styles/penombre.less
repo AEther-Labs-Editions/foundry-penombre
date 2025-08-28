@@ -6,16 +6,21 @@
 
 // Couleurs du thème
 @color-primary: #a56135; // Marron principal
+@color-primary-clear: #a47c64; // Marron secondaire
 @color-secondary: #56605b; // Gris
 @color-accent: #917f35; // Doré
 @background-light: #faeed6; // Fond clair
 @background-dark: #2d1000; // fond frise sombre
+@color-blue: #124b63; // Bleu
 
 // Polices
 @font-cattedrale: "CattedraleDemo";
 @font-chocolate: "ChocoCovRainBold";
+@font-notomusic: "NotoMusic";
+
 
 // Tailles
+@font-size-small: 13px;
 @font-size-base: 17px;
 @font-size-middle: 19px;
 @font-size-midlarge: 25px;
@@ -29,6 +34,7 @@
 @small-case-size: 20px;
 @border-radius: 6px;
 @border-radius-small: 4px;
+@note-size: 55px;
 
 /* ---------------------------------------------
         Fonts
@@ -42,6 +48,12 @@
   font-family: @font-chocolate;
   src: url(/systems/penombre/fonts/chocolate-covered-raindrops/Chocolate%20Covered%20Raindrops%20BOLD.ttf);
 }
+
+@font-face {
+  font-family: @font-notomusic;
+  src: url(/systems/penombre/fonts/noto-music/NotoMusic-Regular.ttf);
+}
+
 
 /* ---------------------------------------------
         Mixins
@@ -89,6 +101,13 @@
   padding: 2px;
   border-radius: @border-radius;
 }
+
+// Mixin pour les éléments de note
+.note-element(@size: @note-size) {
+  font-size: @size;
+  font-family: @font-notomusic;
+}
+
 
 /* ---------------------------------------------
         Interface de Foundry VTT
@@ -346,6 +365,29 @@ body {
                       height: auto;
                     }
                   }
+
+                  label {
+                    &.croche {
+                        .note-element();
+                    }
+                    &.note1 {
+                        margin-left: 20px;
+                        margin-top: -62px;
+                    }
+                    &.note2 {
+                        margin-left: 60px;
+                        margin-top: -84px;
+
+                    }
+                    &.note3 {
+                        margin-left: 100px;
+                        margin-top: -83px;
+                    }
+                    &.note4 {
+                        margin-left: 140px;
+                        margin-top: -84px;
+                    }
+                  }
                 }
               }
 
@@ -511,7 +553,7 @@ body {
             text-align: center;
           }
           .description {
-            size : @font-size-middlelarge;
+            size : @font-size-middle;
             color : @color-blue;
             text-align: center;
           }
@@ -810,7 +852,7 @@ body {
 
       // Section Pouvoirs
       .eminence-pouvoirs {
-        min-height: 255px;
+        min-height: 205px;
         color: @color-secondary;
         text-align: center;
       }
@@ -948,7 +990,7 @@ body {
 
       // Section Atouts
       .eminence-atouts {
-        min-height: 255px;
+        min-height: 205px;
         color: @color-secondary;
         text-align: center;
 
@@ -1089,7 +1131,7 @@ body {
 
       // Section Maîtrises
       .eminence-maitrises {
-        min-height: 255px;
+        min-height: 205px;
         color: @color-secondary;
         text-align: center;
       }
@@ -1215,7 +1257,6 @@ body {
 
             .div-gauche {
               float: left;
-              height: 100px;
               width: 477px;
 
               .img-gauche {
@@ -1225,8 +1266,7 @@ body {
             }
 
             .div-droite {
-              float: left;
-              height: 100px;
+              margin-left: 477px;
               width: 152px;
               padding-left: 33px;
 

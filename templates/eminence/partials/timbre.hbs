@@ -7,6 +7,11 @@
     <div class="datas-timbre">
     {{#if unlocked}}
     {{formGroup systemFields.timbre.fields.description value=systemSource.timbre.description localize=true}}
+    {{formGroup systemFields.timbre.fields.cle value=systemSource.timbre.cle localize=true}}
+    {{formGroup systemFields.timbre.fields.note1 value=systemSource.timbre.note1 localize=true}}
+    {{formGroup systemFields.timbre.fields.note2 value=systemSource.timbre.note2 localize=true}}
+    {{formGroup systemFields.timbre.fields.note3 value=systemSource.timbre.note3 localize=true}}
+    {{formGroup systemFields.timbre.fields.note4 value=systemSource.timbre.note4 localize=true}}
     {{formGroup systemFields.timbre.fields.statut value=systemSource.timbre.statut localize=true}}
     {{formGroup systemFields.timbre.fields.peste value=systemSource.timbre.peste localize=true}}
     {{else}}
@@ -18,6 +23,10 @@
           <span>.......................................................................................</span>
           <span>.......................................................................................</span>
           <span>.......................................................................................</span>
+          <label class="croche note1">&#119136;</label>
+          <label class="croche note2">&#119136;</label>
+          <label class="croche note3">&#119136;</label>
+          <label class="croche note4">&#119136;</label>
         </div>
       </div>
       <div class="col-2-2">
