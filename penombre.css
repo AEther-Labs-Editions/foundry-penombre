@@ -370,7 +370,7 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   text-orientation: sideways-left;
 }
 .penombre.eminence .eminence-content .eminence-personnage {
-  min-height: 165px;
+  min-height: 250px;
   color: #a56135;
 }
 .penombre.eminence .eminence-content .eminence-personnage .logo-frame {
@@ -405,11 +405,11 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   clear: right;
 }
 .penombre.eminence .eminence-content .eminence-personnage .data .name {
-  size: 29px;
+  font-size: 35px;
   text-align: center;
 }
 .penombre.eminence .eminence-content .eminence-personnage .data .description {
-  size: 19px;
+  font-size: 29px;
   color: #124b63;
   text-align: center;
 }
@@ -651,13 +651,9 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   color: #56605b;
   font-size: 30px;
 }
-.penombre.eminence .eminence-content .eminence-pouvoirs {
-  min-height: 205px;
-  color: #56605b;
-  text-align: center;
-}
+.penombre.eminence .eminence-content .eminence-pouvoirs,
 .penombre.eminence .eminence-content .eminence-pouvoirs-2 {
-  min-height: 400px;
+  min-height: 205px;
   color: #56605b;
   text-align: center;
 }
@@ -782,19 +778,13 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   align-items: center;
   justify-content: space-between;
 }
-.penombre.eminence .eminence-content .eminence-atouts {
+.penombre.eminence .eminence-content .eminence-atouts,
+.penombre.eminence .eminence-content .eminence-atouts-2 {
   min-height: 205px;
   color: #56605b;
   text-align: center;
 }
-.penombre.eminence .eminence-content .eminence-atouts .plusitem {
-  text-align: right;
-}
-.penombre.eminence .eminence-content .eminence-atouts-2 {
-  min-height: 400px;
-  color: #56605b;
-  text-align: center;
-}
+.penombre.eminence .eminence-content .eminence-atouts .plusitem,
 .penombre.eminence .eminence-content .eminence-atouts-2 .plusitem {
   text-align: right;
 }
@@ -917,13 +907,9 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   width: 20px;
   height: 20px;
 }
-.penombre.eminence .eminence-content .eminence-maitrises {
-  min-height: 205px;
-  color: #56605b;
-  text-align: center;
-}
+.penombre.eminence .eminence-content .eminence-maitrises,
 .penombre.eminence .eminence-content .eminence-maitrises-2 {
-  min-height: 400px;
+  min-height: 205px;
   color: #56605b;
   text-align: center;
 }
