@@ -413,6 +413,7 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 }
 .penombre.eminence .eminence-content .eminence-personnage {
   min-height: 250px;
+  height: auto;
   color: #a56135;
 }
 .penombre.eminence .eminence-content .eminence-personnage .logo-frame {
@@ -1158,7 +1159,7 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   background-repeat: no-repeat;
   background-size: 550px 550px;
   width: 740px;
-  height: 790px;
+  height: 555px;
   padding-left: 157px;
   padding-top: 159px;
 }
