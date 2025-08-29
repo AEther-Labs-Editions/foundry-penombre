@@ -380,6 +380,7 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   padding-left: 4px;
 }
 .penombre.eminence .eminence-content .eminence-personnage,
+.penombre.eminence .eminence-content .eminence-personnage-2,
 .penombre.eminence .eminence-content .eminence-harmoniques,
 .penombre.eminence .eminence-content .eminence-conscience {
   float: none;
@@ -407,16 +408,23 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 .penombre.eminence .eminence-content .text-vertical-personnage,
 .penombre.eminence .eminence-content .text-vertical-harmoniques,
 .penombre.eminence .eminence-content .text-vertical-conscience {
+  letter-spacing: 5px;
   font-size: 19px;
   writing-mode: vertical-rl;
   text-orientation: sideways-left;
 }
 .penombre.eminence .eminence-content .eminence-personnage {
+  min-height: 175px;
+}
+.penombre.eminence .eminence-content .eminence-personnage-2 {
   min-height: 250px;
-  height: auto;
+}
+.penombre.eminence .eminence-content .eminence-personnage,
+.penombre.eminence .eminence-content .eminence-personnage-2 {
   color: #a56135;
 }
-.penombre.eminence .eminence-content .eminence-personnage .logo-frame {
+.penombre.eminence .eminence-content .eminence-personnage .logo-frame,
+.penombre.eminence .eminence-content .eminence-personnage-2 .logo-frame {
   display: table;
   float: left;
   justify-content: center;
@@ -424,34 +432,40 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   width: 150px;
   padding: 1px;
 }
-.penombre.eminence .eminence-content .eminence-personnage .logo-frame .logo-img {
+.penombre.eminence .eminence-content .eminence-personnage .logo-frame .logo-img,
+.penombre.eminence .eminence-content .eminence-personnage-2 .logo-frame .logo-img {
   border-radius: 6px;
   height: 150px;
   width: auto;
   max-width: 100%;
   display: block;
 }
-.penombre.eminence .eminence-content .eminence-personnage .logo-frame .logo-img-unlocked {
+.penombre.eminence .eminence-content .eminence-personnage .logo-frame .logo-img-unlocked,
+.penombre.eminence .eminence-content .eminence-personnage-2 .logo-frame .logo-img-unlocked {
   border-radius: 6px;
   height: 150px;
   width: auto;
   max-width: 100%;
   display: block;
 }
-.penombre.eminence .eminence-content .eminence-personnage .logo-frame .logo-img-unlocked:hover {
+.penombre.eminence .eminence-content .eminence-personnage .logo-frame .logo-img-unlocked:hover,
+.penombre.eminence .eminence-content .eminence-personnage-2 .logo-frame .logo-img-unlocked:hover {
   cursor: pointer;
   box-shadow: 0px 0px 0px 2.5px #a56135;
 }
-.penombre.eminence .eminence-content .eminence-personnage .data {
+.penombre.eminence .eminence-content .eminence-personnage .data,
+.penombre.eminence .eminence-content .eminence-personnage-2 .data {
   float: left;
   width: 254px;
   clear: right;
 }
-.penombre.eminence .eminence-content .eminence-personnage .data .name {
+.penombre.eminence .eminence-content .eminence-personnage .data .name,
+.penombre.eminence .eminence-content .eminence-personnage-2 .data .name {
   font-size: 35px;
   text-align: center;
 }
-.penombre.eminence .eminence-content .eminence-personnage .data .description {
+.penombre.eminence .eminence-content .eminence-personnage .data .description,
+.penombre.eminence .eminence-content .eminence-personnage-2 .data .description {
   font-size: 19px;
   color: #124b63;
   text-align: center;

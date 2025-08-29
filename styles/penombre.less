@@ -542,6 +542,7 @@ body {
 
       // Sections principales avec mixin
       .eminence-personnage,
+      .eminence-personnage-2,
       .eminence-harmoniques,
       .eminence-conscience {
         .section-style();
@@ -563,6 +564,7 @@ body {
       .text-vertical-personnage,
       .text-vertical-harmoniques,
       .text-vertical-conscience {
+        letter-spacing: 5px;
         font-size: @font-size-middle;
         writing-mode: vertical-rl;
         text-orientation: sideways-left;
@@ -570,8 +572,13 @@ body {
 
       // Hauteurs spécifiques
       .eminence-personnage {
+        min-height: 175px;
+      }
+      .eminence-personnage-2 {
         min-height: 250px;
-        height: auto;
+      }
+      .eminence-personnage,
+      .eminence-personnage-2 {
         color: @color-primary;
         .logo-frame {
           display: table;
