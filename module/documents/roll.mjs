@@ -296,6 +296,7 @@ export default class PenombreRoll extends Roll {
       difficulte: this.options.difficulte,
       nbSucces,
       isSuccess,
+      isPrivate,
       formula: isPrivate ? "???" : this._formula,
       flavor: isPrivate ? null : (flavor ?? this.options.flavor),
       user: game.user.id,
@@ -339,15 +340,31 @@ export default class PenombreRoll extends Roll {
     // Vérifie que le message est un jet de dés de Pénombre
     if (message.isRoll && message.rolls[0] && message.rolls[0] instanceof PenombreRoll) {
       const roll = message.rolls[0]
+
+      // Reprise du choix du rollMode
+      const rollMode = roll.options.rollMode
+      let whisper = null
+      // Self roll
+      if (rollMode === SYSTEM.DICE_ROLL_MODES.SELF) whisper = [game.user.id]
+      // Private or blind roll
+      else if (rollMode === SYSTEM.DICE_ROLL_MODES.PRIVATE || rollMode === SYSTEM.DICE_ROLL_MODES.BLIND) whisper = game.users.filter((u) => u.isGM).map((u) => u.id)
+
+      const blind = rollMode === SYSTEM.DICE_ROLL_MODES.BLIND
+
       if (roll) console.log("Pénombre | Rerolling dice", roll, rerolledDices)
       for (const indice of rerolledDices) {
         const [dieIndex, resultIndex] = indice.split("-").map(Number)
         if (roll.dice[dieIndex] && roll.dice[dieIndex].results[resultIndex]) {
           const formula = `1d${roll.dice[dieIndex].faces}`
-          const newDice = await new Roll(formula).evaluate()
+          const newDice = await new Roll(formula, {}, { rollMode }).evaluate()
+          if (game.modules.get("dice-so-nice")?.active) {
+            const synchronize = !game.user.isGM
+            await game.dice3d.showForRoll(newDice, game.user, synchronize, whisper, blind)
+          }
           roll.dice[dieIndex].results[resultIndex].result = parseInt(newDice.result)
         }
       }
+
       await message.update({ rolls: [roll], "system.relanceFaite": true })
     }
   }

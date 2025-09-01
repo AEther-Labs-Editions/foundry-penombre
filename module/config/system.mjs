@@ -113,6 +113,28 @@ export const DIFFICULTE = Object.freeze({
   },
 })
 
+export const DICE_ROLL_MODES = Object.freeze({
+  /**
+   * This roll is visible to all players.
+   */
+  PUBLIC: "publicroll",
+
+  /**
+   * Rolls of this type are only visible to the player that rolled and any Game Master users.
+   */
+  PRIVATE: "gmroll",
+
+  /**
+   * A private dice roll only visible to Gamemaster users. The rolling player will not see the result of their own roll.
+   */
+  BLIND: "blindroll",
+
+  /**
+   * A private dice roll which is only visible to the user who rolled it.
+   */
+  SELF: "selfroll"
+});
+
 /**
  * Include all constant definitions within the SYSTEM global export
  * @type {Object}
@@ -131,6 +153,7 @@ export const SYSTEM = {
   POTENTIEL_MAX,
   DIFFICULTE,
   ACTION_TYPES: ACTION.ACTION_TYPES,
+  DICE_ROLL_MODES,
 }
 
 /**

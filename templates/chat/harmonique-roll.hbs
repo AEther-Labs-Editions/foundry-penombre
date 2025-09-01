@@ -1,36 +1,39 @@
 {{log "chat harmonique-roll" this}}
 <div class="dice-roll penombre">
-  Jet d'harmonique
-  {{localize (concat "PENOMBRE.ui." harmonique)}}
-  <br />
-  {{#if actionCollegiale}}
-    Action collégiale {{#if isActionPrincipale}}(principale){{else}}(liée){{/if}}<br />
-    {{#if peutParticiper}}
-      <div class="participate-container">
-        <button class="participate-yes hidden">Participer</button>
-        <button class="participate-no hidden">Ne pas participer</button>
-      </div>
+  {{#unless isPrivate}}
+    {{localize "PENOMBRE.ui.jetHarmonique"}}
+    {{localize (concat "PENOMBRE.ui." harmonique)}}
+    <br />
+    {{#if actionCollegiale}}
+      Action collégiale {{#if isActionPrincipale}}(principale){{else}}(liée){{/if}}<br />
+      {{#if peutParticiper}}
+        <div class="participate-container">
+          <button class="participate-yes hidden">Participer</button>
+          <button class="participate-no hidden">Ne pas participer</button>
+        </div>
+      {{/if}}
     {{/if}}
-  {{/if}}
-  <div class="roll-results">
-    <div class="roll-result-self">
-      Succès : {{nbSucces}}
-    </div>
-    {{#unless actionCollegiale}}
-      <div class="roll-result-total">
-        {{#if hasDifficulte}}
-          Difficulté : {{difficulte}} <br />
-          {{#if isSuccess}}
-            C'est une réussite !
-          {{else}}
-            C'est un échec !
-          {{/if}}
-        {{/if}}
+  
+    <div class="roll-results">
+      <div class="roll-result-self">
+        Succès : {{nbSucces}}
       </div>
-    {{else}}
-      <div class="roll-result-other"></div>
-    {{/unless}}
-  </div>
+      {{#unless actionCollegiale}}
+        <div class="roll-result-total">
+          {{#if hasDifficulte}}
+            Difficulté : {{difficulte}} <br />
+            {{#if isSuccess}}
+              C'est une réussite !
+            {{else}}
+              C'est un échec !
+            {{/if}}
+          {{/if}}
+        </div>
+      {{else}}
+        <div class="roll-result-other"></div>
+      {{/unless}}
+    </div>
+  {{/unless}}
   {{#if icon}}
     <span class="part-method" data-tooltip aria-label="{{localize method}}">
       {{{icon}}}
