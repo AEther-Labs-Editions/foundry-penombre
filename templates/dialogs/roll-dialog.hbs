@@ -12,7 +12,7 @@
           </select>
         </div>
         <div class="deMerveilleux">
-          <input type="checkbox" id="deMerveilleux" name="deMerveilleux" /><label>Plutôt le Dé merveilleux</label>
+          <input type="checkbox" id="deMerveilleux" name="deMerveilleux" /><label>{{ localize 'PENOMBRE.ui.plutotDeMerveilleux' }}</label>
         </div>
       </fieldset>
     </div>
@@ -20,7 +20,7 @@
     <div class="part-right-1">
       {{#if (eq messageType "principal")}}
         <div class="form-group difficulte">
-          <label for="difficulte">{{localize "PENOMBRE.ui.difficulte"}}</label>
+          <label for="difficulte">{{localize 'PENOMBRE.ui.difficulte'}}</label>
           <div class="form-fields">
             <select name="difficulte" id="difficulte">
               {{selectOptions choiceDifficulte selected=difficulte localize=true blank=""}}
@@ -29,8 +29,8 @@
         </div>
         <fieldset>
           <div class="options">
-            <input type="checkbox" name="actionCollegiale" id="actionCollegiale"/><label>Action collégiale</label>
-            <input type="checkbox" name="effetMagique" id="effetMagique"/><label>Effet magique</label>
+            <input type="checkbox" name="actionCollegiale" id="actionCollegiale"/><label>{{localize 'PENOMBRE.ui.actionCollegiale' }}</label>
+            <input type="checkbox" name="effetMagique" id="effetMagique"/><label>{{localize 'PENOMBRE.ui.effetMagique' }}</label>
           </div>
         </fieldset>
       {{/if}}
@@ -39,17 +39,17 @@
 
   <div class="line-2">
     <fieldset>
-      <legend>Atouts</legend>
+      <legend>{{ localize 'PENOMBRE.ui.atouts' }}</legend>
       <div class="atouts">
         {{#each atouts}}
           <div class="atout" data-bonus="{{this.system.valeur}}">
             <div class="nom">{{this.name}}</div>
             <div class="level">Niveau : {{this.system.valeur}}</div>
           </div>
-        {{/each}}
+        {{/each}}      
       </div>
       <div class="bonus-total">
-        <label>Bonus total</label>
+        <label>{{ localize 'PENOMBRE.ui.bonusTotal' }}</label>
         <input type="number" id="bonusAtouts" name="bonusAtouts" value={{bonusAtouts}} readonly />
       </div>
     </fieldset>
@@ -59,7 +59,7 @@
     <div class="part-left-3">
 
       <fieldset>
-        <legend>Formule</legend>
+        <legend>{{ localize 'PENOMBRE.ui.formule' }}</legend>
         <input type="text" id="formule" name="formule" value={{formule}} />
       </fieldset>
       <div class="des-img">
@@ -83,19 +83,19 @@
 
     <div class="part-right-3">
       <fieldset>
-        <legend>Jetons</legend>
+        <legend>{{ localize 'PENOMBRE.ui.jetons' }}</legend>
         <div class="depensetotal">
-          <label>Nombre de jetons à dépenser :</label>
+          <label>{{ localize 'PENOMBRE.ui.jetonsDepenser' }}</label>
           <div class="form-fields">
             <input type="number" id="jetons" name="jetons" />
           </div>
         </div>
         <fieldset>
-          <legend>Dépense automatique</legend>
+          <legend>{{ localize 'PENOMBRE.ui.jetonsDepenseAuto' }}</legend>
           <div>            
-            <label>Conscience <span data-tooltip="Nombre de jetons de conscience restant" data-tooltip-direction="UP">({{maxJetonsConscience}})</span></label>
+            <label>{{ localize 'PENOMBRE.Eminence.FIELDS.conscience.valeur.label' }} <span data-tooltip="{{ localize 'PENOMBRE.ui.jetonsConscienceRestant' }}" data-tooltip-direction="UP">({{maxJetonsConscience}})</span></label>
             {{formInput fieldJetonsConscience name="jetonsConscience" id="jetonsConscience"}}
-            <label>Réserve collégiale <span data-tooltip="Nombre de jetons restant dans la réserve collégiale au moment de l'ouverture de cette fenêtre" data-tooltip-direction="UP">({{maxJetonsReserve}})</span></label>
+            <label>{{ localize 'PENOMBRE.ui.reserveCollegiale' }} <span data-tooltip="{{ localize 'PENOMBRE.ui.jetonsConscienceRestantOuvertureFenetre' }}" data-tooltip-direction="UP">({{maxJetonsReserve}})</span></label>
             {{formInput fieldJetonsReserve name="jetonsReserve" id="jetonsReserve"}}
           </div>
         </fieldset>

@@ -76,7 +76,7 @@ export default class PenombreRoll extends Roll {
       rejectClose: false, // Click on Close button will not launch an error
       buttons: [
         {
-          label: "Lancer les dés",
+          label: game.i18n.localize("PENOMBRE.ui.lancerDes"),
           callback: async (event, button, dialog) => {
             const output = Array.from(button.form.elements).reduce((obj, input) => {
               if (input.name) {
