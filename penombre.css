@@ -1216,7 +1216,6 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   height: 68px;
 }
 #penombre-reserve-collegiale .div-jetons-2 .jetons {
-  width: 400px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   /* 5 colonnes égales */

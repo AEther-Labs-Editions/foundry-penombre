@@ -18,7 +18,6 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
     },
     position: {
       width: 585,
-      height: "auto",
       top: 80,
       left: 150,
     },
