@@ -43,7 +43,6 @@ export default class EminenceSheet extends PenombreBaseActorSheet {
     context.jetons = this.document.system.conscience.jetons.slice(0, this.document.system.conscience.max)
     context.nbJetonsRestantsConscience = this.document.system.nbJetonsRestants
 
-
     const styleJeu = game.settings.get("penombre", "styleJeu")
     context.isStyleJeuDemo = styleJeu === "demo"
     context.isStyleJeuStandard = styleJeu === "standard"
