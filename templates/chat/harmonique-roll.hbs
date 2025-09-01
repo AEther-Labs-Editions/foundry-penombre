@@ -1,9 +1,10 @@
 {{log "chat harmonique-roll" this}}
 <div class="dice-roll penombre">
   {{#unless isPrivate}}
-    {{localize "PENOMBRE.ui.jetHarmonique"}}
-    {{localize (concat "PENOMBRE.ui." harmonique)}}
-    <br />
+    <div class="roll-title">
+      {{localize "PENOMBRE.ui.jetHarmonique"}}
+      {{localize (concat "PENOMBRE.ui." harmonique)}}
+    </div>
     {{#if actionCollegiale}}
       Action collégiale {{#if isActionPrincipale}}(principale){{else}}(liée){{/if}}<br />
       {{#if peutParticiper}}

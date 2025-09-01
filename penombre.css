@@ -48,7 +48,7 @@ penombre-toggle-switch[checked] thumb {
 --------------------------------------------- */
 @font-face {
   font-family: "CattedraleDemo";
-  src: url(/systems/penombre/fonts/Cattedrale-Demo/Cattedrale-Demo-Regular.ttf);
+  src: url(/systems/penombre/fonts/cattedrale-regular.otf);
 }
 @font-face {
   font-family: "ChocoCovRainBold";
@@ -1409,6 +1409,18 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+#interface #sidebar .chat-message .message-content .dice-roll.penombre .roll-title,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .roll-title {
+  font-family: "CattedraleDemo";
+  font-size: 1.1rem;
+  text-align: center;
+}
+#interface #sidebar .chat-message .message-content .dice-roll.penombre .roll-results,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .roll-results {
+  font-family: "CattedraleDemo";
+  font-size: 1.1rem;
+  text-align: center;
 }
 #interface #sidebar .chat-message .message-content .dice-roll.penombre .participate-container,
 #interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .participate-container {
