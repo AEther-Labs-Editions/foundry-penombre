@@ -1286,12 +1286,25 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 }
 .penombre-roll-dialog .line-2 fieldset .atouts {
   overflow-y: auto;
+  height: 120px;
+  border: solid;
+  border-width: 1px;
+  border-color: gray;
 }
 .penombre-roll-dialog .line-2 fieldset .atouts .atout {
   margin-top: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-left: 2px;
+  margin-right: 2px;
+  /*
+            &:nth-child(even) {
+          }
+          */
+}
+.penombre-roll-dialog .line-2 fieldset .atouts .atout:nth-child(even) {
+  background-color: silver;
 }
 .penombre-roll-dialog .line-2 fieldset .atouts .atout.checked {
   background-color: #917f35;
@@ -1634,6 +1647,10 @@ body.theme-light .penombre.adversaire .adversaire-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-bottom-style: solid;
+  border-width: 0.5px;
+  border-color: #917f35;
+  margin-top: 7px;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions-adverses h2,
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions-dissonance h2 {
@@ -1647,6 +1664,7 @@ body.theme-light .penombre.adversaire .adversaire-content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 10px;
+  margin-bottom: 5px;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions .action {
   position: relative;
@@ -1674,6 +1692,10 @@ body.theme-light .penombre.adversaire .adversaire-content {
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues {
   display: flex;
   flex-direction: column;
+  margin-bottom: 2px;
+  border-bottom-style: solid;
+  border-width: 0.5px;
+  border-color: #917f35;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues h2 {
   color: #124b63;
@@ -1686,6 +1708,7 @@ body.theme-light .penombre.adversaire .adversaire-content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 10px;
+  margin-bottom: 5px;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues .intrigues .intrigue {
   position: relative;

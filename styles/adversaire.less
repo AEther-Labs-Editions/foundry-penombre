@@ -139,11 +139,18 @@ body {
         display: flex;
         flex-direction: column;
         gap: 10px;
+
+
         .actions-adverses,
         .actions-dissonance {
           display: flex;
           flex-direction: column;
           justify-content: center;
+          border-bottom-style: solid;
+          border-width: 0.5px;
+          border-color: @color-accent;
+          margin-top: 7px;
+
           h2 {
             color: @color-blue;
             text-transform: uppercase;
@@ -156,6 +163,7 @@ body {
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
           gap: 10px;
+          margin-bottom: 5px;
           .action {
             &:nth-child(even) {
             }
@@ -187,6 +195,11 @@ body {
       .adversaire-intrigues {
         display: flex;
         flex-direction: column;
+        margin-bottom: 2px;
+        border-bottom-style: solid;
+        border-width: 0.5px;
+        border-color: @color-accent;
+
         h2 {
           color: @color-blue;
           text-transform: uppercase;
@@ -198,6 +211,7 @@ body {
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
           gap: 10px;
+          margin-bottom: 5px;
           .intrigue {
             &:nth-child(even) {
             }

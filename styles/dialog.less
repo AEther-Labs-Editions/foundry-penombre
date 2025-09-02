@@ -61,12 +61,26 @@
 
       .atouts {
         overflow-y: auto;
+        height: 120px;
+        border: solid;
+        border-width: 1px;
+        border-color: gray;
 
         .atout {
           margin-top: 5px;
           display: flex;
           justify-content: space-between;
           align-items: center;
+          margin-left: 2px;
+          margin-right: 2px;
+
+          &:nth-child(even) {
+            background-color : silver;
+          }
+          /*
+            &:nth-child(even) {
+          }
+          */
 
           &.checked {
             background-color: @color-accent;
