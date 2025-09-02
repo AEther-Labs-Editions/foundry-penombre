@@ -1286,7 +1286,7 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 }
 .penombre-roll-dialog .line-2 fieldset .atouts {
   overflow-y: auto;
-  height: 120px;
+  height: 145px;
   border: solid;
   border-width: 1px;
   border-color: gray;
@@ -1313,7 +1313,7 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 .penombre-roll-dialog .line-2 fieldset .bonus-total {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
 }
 .penombre-roll-dialog .line-2 fieldset .bonus-total label {
@@ -1351,6 +1351,8 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 .penombre-roll-dialog .line-3 .part-right-3 .depensetotal {
   float: left;
   width: 100%;
+  display: flex;
+  align-items: center;
 }
 .penombre-roll-dialog .line-3 .part-right-3 .depensetotal label {
   width: 200px;
