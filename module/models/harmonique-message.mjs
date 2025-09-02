@@ -181,7 +181,8 @@ export default class HarmoniqueMessageData extends BaseMessageData {
     }
 
     // Les boutons pour participer à un jet collégial sont visibles par tous les autres joueurs
-    if (this.actionCollegiale && !this.actionCollegialeMessageLie && !this.parent.isAuthor && !this.messagesLies[game.user.character.id].reponseFaite) {
+    const currentActorId = game.user.character?.id
+    if (this.actionCollegiale && !this.actionCollegialeMessageLie && !this.parent.isAuthor && currentActorId && !this.messagesLies[currentActorId]?.reponseFaite) {
       html.querySelector(".participate-yes").classList.remove("hidden")
       html.querySelector(".participate-no").classList.remove("hidden")
 
