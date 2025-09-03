@@ -46,6 +46,8 @@ export default class AdversaireSheet extends PenombreBaseActorSheet {
     context.maxResilience = this.document.system.resilience.max
     context.maxDissonance = this.document.system.dissonance.max
 
+    context.enrichedDescription = await foundry.applications.ux.TextEditor.implementation.enrichHTML(this.document.system.details, { async: true })
+
     // Select options
     context.harmoniquesChoices = Object.fromEntries(Object.entries(SYSTEM.HARMONIQUES).map(([key, value]) => [key, { label: game.i18n.localize(value.label) }]))
     console.log("AdversaireSheet._prepareContext", context)

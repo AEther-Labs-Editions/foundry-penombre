@@ -1,6 +1,6 @@
 import { SYSTEM } from "../config/system.mjs"
 
-const { SchemaField, NumberField, StringField } = foundry.data.fields
+const { SchemaField, NumberField, StringField, HTMLField } = foundry.data.fields
 
 export default class Adversaire extends foundry.abstract.TypeDataModel {
   /** @override */
@@ -12,6 +12,7 @@ export default class Adversaire extends foundry.abstract.TypeDataModel {
 
     // Personnage
     schema.description = new StringField({})
+    schema.details = new HTMLField({})
     schema.adversite = new SchemaField({
       valeur: new NumberField({ ...requiredInteger, initial: 0, min: 0 }),
       max: new NumberField({ ...requiredInteger, initial: 0, min: 0 }),

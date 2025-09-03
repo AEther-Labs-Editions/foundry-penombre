@@ -1570,6 +1570,15 @@ body.theme-light .penombre.adversaire .adversaire-content {
   font-size: 17px;
   clear: both;
 }
+.penombre.adversaire .adversaire-content details {
+  font-size: 25px;
+}
+.penombre.adversaire .adversaire-content details summary {
+  color: #124b63;
+}
+.penombre.adversaire .adversaire-content details i {
+  color: #124b63;
+}
 .penombre.adversaire .adversaire-content .adversaire-main {
   width: 100%;
 }
