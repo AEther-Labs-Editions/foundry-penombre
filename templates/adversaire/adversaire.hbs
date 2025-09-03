@@ -4,10 +4,20 @@
     {{> "systems/penombre/templates/adversaire/partials/personnage.hbs" }}
 
     <!-- Détails -->
-    <details>
-    <summary><i class="fas fa-comment-pen"></i></summary>
-        {{formInput systemFields.details enriched=enrichedDescription value=system.details name="system.details" toggled=true}}
-    </details>
+    {{#if unlocked}}
+      <details>
+        <summary><i class="fas fa-comment-pen"></i></summary>
+            {{formInput systemFields.details enriched=enrichedDescription value=system.details name="system.details" toggled=true}}
+      </details>
+    {{else}}
+      {{#if (ne system.details "")}}
+      <details>
+        <summary><i class="fas fa-comment-pen"></i></summary>
+            {{{ system.details }}}
+      </details>
+      {{/if}}
+    {{/if}}
+
 
     <!-- Actions -->
     {{> "systems/penombre/templates/adversaire/partials/actions.hbs" }}
