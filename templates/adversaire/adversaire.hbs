@@ -6,13 +6,13 @@
     <!-- Détails -->
     {{#if unlocked}}
       <details>
-        <summary><i class="fas fa-comment-pen"></i></summary>
+        <summary><i class="fas fa-message-pen"></i></summary>
             {{formInput systemFields.details enriched=enrichedDescription value=system.details name="system.details" toggled=true}}
       </details>
     {{else}}
       {{#if (ne system.details "")}}
       <details>
-        <summary><i class="fas fa-comment-pen"></i></summary>
+        <summary><i class="fas fa-message-pen"></i></summary>
             {{{ system.details }}}
       </details>
       {{/if}}
