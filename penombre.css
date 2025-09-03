@@ -1659,7 +1659,7 @@ body.theme-light .penombre.adversaire .adversaire-content {
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .nom.locked .description {
   font-family: "Cattedrale";
-  color: #a47c64;
+  color: #a56135;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .adversite {
   display: flex;
@@ -1728,7 +1728,7 @@ body.theme-light .penombre.adversaire .adversaire-content {
   padding: 10px;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions .action:nth-child(odd) {
-  color: #a47c64;
+  color: #a56135;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions .action .nom {
   font-weight: bold;
@@ -1772,7 +1772,7 @@ body.theme-light .penombre.adversaire .adversaire-content {
   padding: 10px;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues .intrigues .intrigue:nth-child(odd) {
-  color: #a47c64;
+  color: #a56135;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues .intrigues .intrigue .nom {
   font-weight: bold;
