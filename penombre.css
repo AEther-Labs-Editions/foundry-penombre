@@ -1333,6 +1333,9 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
           }
           */
 }
+.penombre-roll-dialog .line-2 fieldset .atouts .atout:hover {
+  cursor: pointer;
+}
 .penombre-roll-dialog .line-2 fieldset .atouts .atout:nth-child(even) {
   background-color: silver;
 }
