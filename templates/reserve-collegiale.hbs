@@ -1,5 +1,11 @@
 {{!log "reserve collegiale" this}}
 <div class="div-jetons{{#if (or isStyleJeuStandard isStyleJeuAvance)}}-2{{/if}}">
+  {{#if (or isStyleJeuStandard isStyleJeuAvance)}}
+  <div class="col-1-1 text-vertical">{{localize "PENOMBRE.ui.reserveCollegiale"}}</div>
+  <div class="col-2-1 frise-verticale">
+    <img class="" src="/systems/penombre/assets/ui/doree.png" alt="|" />
+  </div>
+  {{/if}}
   <div class="jetons jetons-{{ifThen isGM 'gm' 'player'}}">
     {{#each jetons}}
       <div class="jeton {{ifThen this.valeur 'active' 'inactive'}}">

@@ -1245,7 +1245,29 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   width: 68px;
   height: 68px;
 }
+#penombre-reserve-collegiale .div-jetons-2 {
+  display: table;
+}
+#penombre-reserve-collegiale .div-jetons-2 .col-1-1 {
+  width: 25px;
+  float: left;
+  transform: rotate(180deg);
+}
+#penombre-reserve-collegiale .div-jetons-2 .text-vertical {
+  font-family: "Cattedrale";
+  letter-spacing: 5px;
+  color: #917f35;
+  font-size: 19px;
+  writing-mode: vertical-rl;
+  text-orientation: sideways-left;
+}
+#penombre-reserve-collegiale .div-jetons-2 .col-2-1 {
+  width: 9px;
+  float: left;
+}
 #penombre-reserve-collegiale .div-jetons-2 .jetons {
+  margin-left: 35px;
+  width: 500px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   /* 5 colonnes égales */
