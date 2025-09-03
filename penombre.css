@@ -89,12 +89,15 @@ penombre-toggle-switch[checked] thumb {
 /* ---------------------------------------------
         Concerne l'editor
 --------------------------------------------- */
-.penombre .editor-content h1,
-.penombre .editor-content h2,
-.penombre .editor-content h3,
-.penombre .editor-content h4,
-.penombre .editor-content h5,
-.penombre .editor-content h6 {
+.penombre .editor {
+  min-height: 100%;
+}
+.penombre .editor .editor-content h1,
+.penombre .editor .editor-content h2,
+.penombre .editor .editor-content h3,
+.penombre .editor .editor-content h4,
+.penombre .editor .editor-content h5,
+.penombre .editor .editor-content h6 {
   font-family: "Cattedrale";
   color: #a56135;
 }
