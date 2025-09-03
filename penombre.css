@@ -1590,6 +1590,9 @@ body.theme-light .penombre.adversaire .adversaire-content {
   font-family: "Cattedrale";
   color: #a56135;
 }
+.penombre.adversaire .adversaire-content details p {
+  font-size: 13px;
+}
 .penombre.adversaire .adversaire-content .adversaire-main {
   width: 100%;
 }
