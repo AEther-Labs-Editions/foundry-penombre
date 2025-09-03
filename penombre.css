@@ -89,15 +89,12 @@ penombre-toggle-switch[checked] thumb {
 /* ---------------------------------------------
         Concerne l'editor
 --------------------------------------------- */
-.penombre .editor {
-  min-height: 100%;
-}
-.penombre .editor .editor-content h1,
-.penombre .editor .editor-content h2,
-.penombre .editor .editor-content h3,
-.penombre .editor .editor-content h4,
-.penombre .editor .editor-content h5,
-.penombre .editor .editor-content h6 {
+.penombre .editor-content h1,
+.penombre .editor-content h2,
+.penombre .editor-content h3,
+.penombre .editor-content h4,
+.penombre .editor-content h5,
+.penombre .editor-content h6 {
   font-family: "Cattedrale";
   color: #a56135;
 }
@@ -1118,6 +1115,12 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 .penombre.atout .atout-content .standard-form .logo-frame .name {
   width: calc(100% - 90px);
 }
+.penombre.atout .atout-content .standard-form .auto {
+  min-height: 100%;
+}
+.penombre.atout .atout-content .standard-form .auto .editor {
+  min-height: 100%;
+}
 .penombre.maitrise .maitrise-content .standard-form .logo-frame {
   display: flex;
   justify-content: space-between;
@@ -1127,6 +1130,12 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 }
 .penombre.maitrise .maitrise-content .standard-form .logo-frame .name {
   width: calc(100% - 90px);
+}
+.penombre.maitrise .maitrise-content .standard-form .auto {
+  min-height: 100%;
+}
+.penombre.maitrise .maitrise-content .standard-form .auto .editor {
+  min-height: 100%;
 }
 .penombre.pouvoir .pouvoir-content .standard-form .logo-frame {
   display: flex;
@@ -1145,6 +1154,12 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 .penombre.pouvoir .pouvoir-content .standard-form .details select[name="system.type"] {
   width: 100px;
 }
+.penombre.pouvoir .pouvoir-content .standard-form .auto {
+  min-height: 100%;
+}
+.penombre.pouvoir .pouvoir-content .standard-form .auto .editor {
+  min-height: 100%;
+}
 .penombre.intrigue .intrigue-content .standard-form .logo-frame {
   display: flex;
   justify-content: space-between;
@@ -1155,6 +1170,12 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 .penombre.intrigue .intrigue-content .standard-form .logo-frame .name {
   width: calc(100% - 90px);
 }
+.penombre.intrigue .intrigue-content .standard-form .auto {
+  min-height: 100%;
+}
+.penombre.intrigue .intrigue-content .standard-form .auto .editor {
+  min-height: 100%;
+}
 .penombre.action .action-content .standard-form .logo-frame {
   display: flex;
   justify-content: space-between;
@@ -1164,6 +1185,12 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 }
 .penombre.action .action-content .standard-form .logo-frame .name {
   width: calc(100% - 90px);
+}
+.penombre.action .action-content .standard-form .auto {
+  min-height: 100%;
+}
+.penombre.action .action-content .standard-form .auto .editor {
+  min-height: 100%;
 }
 body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   background-color: #faeed6;

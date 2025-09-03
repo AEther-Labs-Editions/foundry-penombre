@@ -4,5 +4,7 @@
         <img class="logo-img" src="{{document.img}}" data-action="editImage" data-tooltip="{{document.name}}" />
         <span class="name">{{formInput fields.name value=item.name localize=true}}</span>
     </div>
-    {{formInput systemFields.description enriched=enrichedDescription value=system.description name="system.description" toggled=true}}
+    <div class="auto">
+        {{formInput systemFields.description enriched=enrichedDescription value=system.description name="system.description" toggled=true}}
+    </div>
 </section>
