@@ -1,0 +1,296 @@
+name: L'Orgue
+type: adversaire
+img: icons/svg/mystery-man.svg
+system:
+  adversite:
+    valeur: 4
+    max: 4
+  resilience:
+    valeur: 20
+    max: 20
+  dissonance:
+    harmonique: ame
+    valeur: 0
+    max: 0
+  description: instrument, relique et désastre élémentaire
+  details: >-
+    <p>La fratrie élémentaire prisonnière de l’orgue est enragée par les
+    conditions de sa libération – que Bohedür soit là ou pas.</p>
+prototypeToken:
+  name: L'Orgue
+  displayName: 0
+  actorLink: false
+  width: 1
+  height: 1
+  texture:
+    src: icons/svg/mystery-man.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: null
+  bar2:
+    attribute: null
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+  flags: {}
+  randomImg: false
+  appendNumber: false
+  prependAdjective: false
+items:
+  - type: action
+    name: Attention, ça explose !
+    system:
+      type: adverse
+      description: >-
+        <p>Des fragments de tuyaux d’orgue et de bois s’échappent dans toutes
+        les directions. Toutes les cibles perdent 2 jetons conscience.</p>
+    _id: QzcAUYsE92LOTX2b
+    img: systems/penombre/assets/icons/action.png
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!cHfFg2FY6El0wLJG.QzcAUYsE92LOTX2b'
+  - type: action
+    name: Hurlevent
+    system:
+      type: adverse
+      description: >-
+        <p>Un sifflement sonne tous ceux qui l’entendent. Toutes les cibles
+        perdent 1 jeton conscience et ne peuvent agir au tour suivant.</p>
+    _id: wxjtQbICzO8ElRxN
+    img: systems/penombre/assets/icons/action.png
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!cHfFg2FY6El0wLJG.wxjtQbICzO8ElRxN'
+  - type: action
+    name: La rage des confinés
+    system:
+      type: adverse
+      description: >-
+        <p>Les élémentäs attaquent en trombe, invisibles ou révélés par la
+        poussière et l’eau qu’ils emportent dans leur tourbillon, propulsant
+        tout ce qu’ils trouvent à leur portée. Toutes les cibles perdent 2
+        jetons conscience.</p>
+    _id: ZfKohb0RxFKzjRhj
+    img: systems/penombre/assets/icons/action.png
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!cHfFg2FY6El0wLJG.ZfKohb0RxFKzjRhj'
+  - type: action
+    name: Des secrets à couper le souffle
+    system:
+      type: adverse
+      description: >-
+        <p>L’essaim élémentaire tente de voler les secrets d’un personnage,
+        aspirant tout son souffle. La cible perd 2 jetons conscience, la
+        capacité de parler et ses atouts jusqu’à la fin du tour suivant.</p>
+    _id: ESDDJIygdoV9cUfd
+    img: systems/penombre/assets/icons/action.png
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!cHfFg2FY6El0wLJG.ESDDJIygdoV9cUfd'
+  - type: intrigue
+    name: Les mystères de Lorgol
+    _id: 7FY1GAn42EFw9C6K
+    img: systems/penombre/assets/icons/intrigue.png
+    system:
+      description: >-
+        <p>L’orgue de Bohedür a espionné l’Étincelle pendant cinq années avant
+        d’être mis au service de la résistance lorgolienne. Cette relique
+        élémentaire contient d ’innombrables bribes du quotidien de la capitale
+        qui pourraient raviver d’anciennes blessures, ou faire la lumière sur
+        certains événements.</p>
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!cHfFg2FY6El0wLJG.7FY1GAn42EFw9C6K'
+  - type: intrigue
+    name: Les échos oubliés
+    _id: oviC4qLvclH3oln5
+    img: systems/penombre/assets/icons/intrigue.png
+    system:
+      description: >-
+        <p>Libérés, les élémentäs finissent par hanter les venelles et les
+        tavernes de Lorgol. En y répétant tout ce qui s’y prononça autrefois,
+        ils suscitent l’émerveillement ou la terreur. Le passé ressurgit, plus
+        vrai que nature, mais pas toujours en accord avec l’Histoire
+        officielle…</p>
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!cHfFg2FY6El0wLJG.oviC4qLvclH3oln5'
+  - type: intrigue
+    name: La colère des sylphes
+    _id: iTrClNuxzK7OQleS
+    img: systems/penombre/assets/icons/intrigue.png
+    system:
+      description: >-
+        <p>Les élémentäs de vent prisonniers de l’orgue, ivres de liberté,
+        devaient être choyés par Bohedür pour accepter leur sort. Finalement
+        entreposés comme un vulgaire outil dans les archives de l’Équerre, ils
+        ont nourri frustration et rancœur à l’égard du nain qui les a
+        abandonnés. De quoi sont-ils capables pour se venger de lui ?</p>
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!cHfFg2FY6El0wLJG.iTrClNuxzK7OQleS'
+effects: []
+folder: 5MWRUnPFoeYSEVsa
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.347'
+  systemId: penombre
+  systemVersion: '0'
+  createdTime: 1756904938668
+  modifiedTime: 1756904938668
+  lastModifiedBy: 6qbNUhuoJ67e6dmf
+_id: cHfFg2FY6El0wLJG
+sort: 0
+ownership:
+  default: 0
+  6qbNUhuoJ67e6dmf: 3
+_key: '!actors!cHfFg2FY6El0wLJG'

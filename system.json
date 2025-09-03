@@ -29,7 +29,15 @@
       "color": "#a4653d",
       "packs": ["journal", "landing-page"],
       "folders": []
+    },
+        {
+      "name": "FR - Kit",
+      "sorting": "a",
+      "color": "#a4653d",
+      "packs": ["pretires-du-kit-1", "adversaires-du-kit-2", "pouvoirs-potentiels-du-kit"],
+      "folders": []
     }
+
   ],
   "packs": [
     {
@@ -50,6 +58,42 @@
       "system": "penombre",
       "path": "packs/landing-page",
       "type": "Scene",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "pretires-du-kit-1",
+      "label": "Prétirés du kit 1",
+      "system": "penombre",
+      "path": "packs/pretires-du-kit-1",
+      "type": "Actor",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "adversaires-du-kit-2",
+      "label": "Adversaires du kit 2",
+      "system": "penombre",
+      "path": "packs/adversaires-du-kit-2",
+      "type": "Actor",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "pouvoirs-potentiels-du-kit",
+      "label": "Pouvoirs potentiels du kit",
+      "system": "penombre",
+      "path": "packs/pouvoirs-potentiels-du-kit",
+      "type": "Item",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"

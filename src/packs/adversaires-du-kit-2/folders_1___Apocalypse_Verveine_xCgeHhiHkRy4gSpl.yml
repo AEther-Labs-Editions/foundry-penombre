@@ -1,0 +1,20 @@
+type: Actor
+folder: null
+name: 1 - Apocalypse Verveine
+color: '#a4653d'
+sorting: a
+_id: xCgeHhiHkRy4gSpl
+description: ''
+sort: 100000
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.347'
+  systemId: penombre
+  systemVersion: '0'
+  createdTime: 1756900225755
+  modifiedTime: 1756900471031
+  lastModifiedBy: 6qbNUhuoJ67e6dmf
+_key: '!folders!xCgeHhiHkRy4gSpl'

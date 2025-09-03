@@ -1,0 +1,368 @@
+name: Elscaliane
+type: adversaire
+img: systems/penombre/assets/portraits/escaliane.png
+system:
+  adversite:
+    valeur: 5
+    max: 5
+  resilience:
+    valeur: 25
+    max: 25
+  dissonance:
+    harmonique: ame
+    valeur: 0
+    max: 0
+  description: âme accouchée, dragon, gardien et meurtrier
+  details: ''
+prototypeToken:
+  name: Elscaliane
+  displayName: 0
+  actorLink: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/penombre/assets/portraits/escaliane.png
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: null
+  bar2:
+    attribute: null
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+  flags: {}
+  randomImg: false
+  appendNumber: false
+  prependAdjective: false
+items:
+  - type: action
+    name: Recomposition mosaïque
+    system:
+      type: adverse
+      description: >-
+        <p>De son souffle puissant ou d’un battement d’ailes, Escaliane balaie
+        les fragments de mosaïque formant ses adversaires. Toutes les cibles
+        perdent 3 jetons conscience.</p>
+    _id: Dxjkqe9nf41CkuPE
+    img: systems/penombre/assets/icons/action.png
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!0URnB9e26IhSFhdQ.Dxjkqe9nf41CkuPE'
+  - type: action
+    name: Fouet fractal
+    system:
+      type: adverse
+      description: >-
+        <p>La queue d’Escaliane se dresse comme un fouet et frappe. 1 cible perd
+        5 jetons conscience.</p>
+    _id: NKOgeYV1bHxnRfNu
+    img: systems/penombre/assets/icons/action.png
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!0URnB9e26IhSFhdQ.NKOgeYV1bHxnRfNu'
+  - type: action
+    name: Stridence du cristal
+    system:
+      type: adverse
+      description: >-
+        <p>Le hurlement d’Escaliane décompose l’âme elle-même. 1 cible perd 3
+        jetons conscience et ne peut pas agir au tour suivant.</p>
+    _id: 3YiejyVkvCx1Ej3w
+    img: systems/penombre/assets/icons/action.png
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!0URnB9e26IhSFhdQ.3YiejyVkvCx1Ej3w'
+  - type: action
+    name: Fétide amertume
+    system:
+      type: adverse
+      description: >-
+        <p>Escaliane irradie la colère, la jalousie, la peur et projette ces
+        émotions comme un souffle fétide. 1 cible perd 3 jetons conscience par
+        tour pendant 3 tours.</p>
+    _id: 6AUJVq5Mrob6vSQB
+    img: systems/penombre/assets/icons/action.png
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!0URnB9e26IhSFhdQ.6AUJVq5Mrob6vSQB'
+  - type: action
+    name: Prison de lianes
+    system:
+      type: adverse
+      description: >-
+        <p>Le dragon ne fait qu’un avec la jungle ! La végétation se retourne
+        contre les mortels et les enserre tandis que le sol se dérobe sous leurs
+        pieds. Aucune des cibles ne peut agir au prochain tour.</p>
+    _id: ld7IguzeOsQv4J9k
+    img: systems/penombre/assets/icons/action.png
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!0URnB9e26IhSFhdQ.ld7IguzeOsQv4J9k'
+  - type: intrigue
+    name: L’évasion
+    _id: x4hMWGPYrZPjR3fg
+    img: systems/penombre/assets/icons/intrigue.png
+    system:
+      description: >-
+        <p>Escaliane se projette hors de la table et s’échappe de la jungle. Le
+        dragon-mosaïque s’infiltre dans le palais et alentour sans jamais «
+        sortir » des structures. Le passage de ce « bas-relief » dans les sols,
+        les murs et les plafonds sème le chaos dans les environs.</p>
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!0URnB9e26IhSFhdQ.x4hMWGPYrZPjR3fg'
+  - type: intrigue
+    name: La salle de l’œuf
+    _id: TqHBte6iyCamWFQQ
+    img: systems/penombre/assets/icons/intrigue.png
+    system:
+      description: >-
+        <p>La « salle de l’œuf » située dans les profondeurs du palais Ovidine
+        peut-elle devenir un incubateur permettant à Escaliane d’acquérir un
+        véritable corps ?</p>
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!0URnB9e26IhSFhdQ.TqHBte6iyCamWFQQ'
+  - type: intrigue
+    name: La haine
+    _id: eIwEKa8pXFfWv4xj
+    img: systems/penombre/assets/icons/intrigue.png
+    system:
+      description: >-
+        <p>Escaliane est une âme orpheline née un instant avant l’assassinat de
+        sa mère par une sirène. L’exploration des méandres, l’accès à la
+        complainte des banshees, ou tout autre moyen de découvrir le secret de
+        sa naissance peut en faire une ennemie farouche de Démoire et de ses
+        sœurs.</p>
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!0URnB9e26IhSFhdQ.eIwEKa8pXFfWv4xj'
+  - type: intrigue
+    name: L’arbre noir
+    _id: mvRZ6tN0ICbYy5vz
+    img: systems/penombre/assets/icons/intrigue.png
+    system:
+      description: >-
+        <p>Un accordé ou un conseil de fées noires est « appelé » dans le salon
+        panoptique, pour expertise Le souffre-jour lui-même s’approche, intrigué
+        par la violence des émotions émanant de la table accouchée. Comment
+        réagiront les puissants de Lorgol si l’arbre prend possession du palais
+        où a été assassiné l’un des leurs, peut-être par des agents dudit arbre
+        ?</p>
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!0URnB9e26IhSFhdQ.mvRZ6tN0ICbYy5vz'
+  - type: intrigue
+    name: Mythe keshite
+    _id: 4CIYJQ5AZT7mAlaw
+    img: systems/penombre/assets/icons/intrigue.png
+    system:
+      description: >-
+        <p>Le dragon de la table n’est qu’une facette d’Escaliane, une créature
+        crainte et révérée dans les jungles keshites. L’artiste qui s’est
+        inspiré de ce mythe traditionnel a créé un pont spirituel entre son
+        œuvre et le monstre d’Albagha, que l’accouchement de Sénescille a ouvert
+        en grand.</p>
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!0URnB9e26IhSFhdQ.4CIYJQ5AZT7mAlaw'
+effects: []
+folder: FabJg0hQC4t7V6dp
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.347'
+  systemId: penombre
+  systemVersion: '0'
+  createdTime: 1756905544674
+  modifiedTime: 1756905544674
+  lastModifiedBy: 6qbNUhuoJ67e6dmf
+_id: 0URnB9e26IhSFhdQ
+sort: 0
+ownership:
+  default: 0
+  6qbNUhuoJ67e6dmf: 3
+_key: '!actors!0URnB9e26IhSFhdQ'

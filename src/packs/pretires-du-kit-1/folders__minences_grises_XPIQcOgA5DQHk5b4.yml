@@ -1,0 +1,20 @@
+type: Actor
+folder: null
+name: Éminences grises
+color: '#a4653d'
+sorting: a
+_id: XPIQcOgA5DQHk5b4
+description: ''
+sort: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.347'
+  systemId: penombre
+  systemVersion: '0'
+  createdTime: 1756900443831
+  modifiedTime: 1756900443831
+  lastModifiedBy: 6qbNUhuoJ67e6dmf
+_key: '!folders!XPIQcOgA5DQHk5b4'
