@@ -1116,7 +1116,7 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   width: calc(100% - 90px);
 }
 .penombre.atout .atout-content .standard-form .auto {
-  min-height: 100%;
+  height: auto;
 }
 .penombre.atout .atout-content .standard-form .auto .editor {
   min-height: 100%;
