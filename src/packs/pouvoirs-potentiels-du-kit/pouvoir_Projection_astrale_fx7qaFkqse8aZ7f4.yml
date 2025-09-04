@@ -1,0 +1,37 @@
+type: pouvoir
+name: Projection astrale
+img: systems/penombre/assets/icons/pouvoir.png
+system:
+  utilise: false
+  description: >-
+    <h1>Projection astrale</h1><p><em>Ma conscience s’ébroue et se répand, à
+    tâtons puis de plus en plus vite.</em></p><p>Le temps d’une scène, Pictelle
+    projette sa forme astrale hors de son corps, inerte le temps de la
+    projection. Ce spectre immatériel peut franchir murs et barreaux. Son rayon
+    d’action est d’environ un bâtiment. Lorsque Pictelle annule sa projection,
+    le nombre de succès de toutes ses actions d’esprit et d’âme diminue de 1
+    jusqu’au prochain repos.</p><p>De plus, chaque fois qu’elle réalise une
+    merveille (p. 31 du kit), son joueur peut lui choisir un nouveau pouvoir
+    dans la liste suivante, ou augmenter de 1 sa valeur de
+    conscience.</p><ul><li><p>Corps astral</p></li><li><p>Des souvenirs en
+    commun</p></li></ul>
+  type: naissance
+effects: []
+folder: InzVxQANkNVMPKdm
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.347'
+  systemId: penombre
+  systemVersion: '0'
+  createdTime: 1756987356873
+  modifiedTime: 1756987356873
+  lastModifiedBy: 6qbNUhuoJ67e6dmf
+_id: fx7qaFkqse8aZ7f4
+sort: 100000
+ownership:
+  default: 0
+  6qbNUhuoJ67e6dmf: 3
+_key: '!items!fx7qaFkqse8aZ7f4'

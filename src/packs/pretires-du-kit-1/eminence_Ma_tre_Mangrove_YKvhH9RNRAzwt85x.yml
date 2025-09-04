@@ -186,7 +186,7 @@ items:
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
-    _key: '!actors.items!qYynLmMdIReTjbrn.c6VIuiN9n547UUqI'
+    _key: '!actors.items!YKvhH9RNRAzwt85x.c6VIuiN9n547UUqI'
   - type: pouvoir
     name: Excès
     _id: eckKviOZrdnPjoVU
@@ -215,7 +215,7 @@ items:
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
-    _key: '!actors.items!qYynLmMdIReTjbrn.eckKviOZrdnPjoVU'
+    _key: '!actors.items!YKvhH9RNRAzwt85x.eckKviOZrdnPjoVU'
   - type: pouvoir
     name: J’ai un plan
     _id: mNsH1HBzYdJeXEqD
@@ -244,7 +244,7 @@ items:
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
-    _key: '!actors.items!qYynLmMdIReTjbrn.mNsH1HBzYdJeXEqD'
+    _key: '!actors.items!YKvhH9RNRAzwt85x.mNsH1HBzYdJeXEqD'
   - type: atout
     name: Je suis le maître, tu es l'élève
     _id: GovLkRJSC9xrV4is
@@ -267,7 +267,7 @@ items:
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
-    _key: '!actors.items!qYynLmMdIReTjbrn.GovLkRJSC9xrV4is'
+    _key: '!actors.items!YKvhH9RNRAzwt85x.GovLkRJSC9xrV4is'
   - type: atout
     name: Les scrupules sont des entraves
     _id: DD5Oipr2gkyb0HaD
@@ -290,7 +290,7 @@ items:
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
-    _key: '!actors.items!qYynLmMdIReTjbrn.DD5Oipr2gkyb0HaD'
+    _key: '!actors.items!YKvhH9RNRAzwt85x.DD5Oipr2gkyb0HaD'
   - type: atout
     name: Principal d'académie obscurantiste
     _id: OewBqk29fv8bFClj
@@ -313,7 +313,7 @@ items:
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
-    _key: '!actors.items!qYynLmMdIReTjbrn.OewBqk29fv8bFClj'
+    _key: '!actors.items!YKvhH9RNRAzwt85x.OewBqk29fv8bFClj'
   - type: atout
     name: Comment cela, colérique ?
     _id: fzDSOKwbcVNKdwOQ
@@ -336,7 +336,7 @@ items:
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
-    _key: '!actors.items!qYynLmMdIReTjbrn.fzDSOKwbcVNKdwOQ'
+    _key: '!actors.items!YKvhH9RNRAzwt85x.fzDSOKwbcVNKdwOQ'
   - type: atout
     name: Je vous méprise
     _id: 45bZdS6PUegQbMB4
@@ -359,7 +359,7 @@ items:
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
-    _key: '!actors.items!qYynLmMdIReTjbrn.45bZdS6PUegQbMB4'
+    _key: '!actors.items!YKvhH9RNRAzwt85x.45bZdS6PUegQbMB4'
   - type: maitrise
     name: Obscurantiste
     _id: z7xckgLN4L33u6XF
@@ -368,15 +368,15 @@ items:
       description: >-
         <h1>Mangrove l’obscurantiste</h1><p><strong>Pour préparer son effet
         magique, Mangrove
-        doit…</strong></p><h6>Prérequis</h6><ul><li><p>torturer son danseur
-        asservi, physiquement ou mentalement, en s’aidant de lanières cloutées,
-        de chaînes, de cages et d’étaux (chaque obscurantiste développe son
-        style, à vous de trouver celui de Mangrove !)</p></li></ul><p><strong>Ce
-        faisant, il…</strong></p><h6>Action magique</h6><ul><li><p>fait produire
-        à son danseur asservi des étincelles bleu nuit ou noires, vectrices
-        d’une magie cauchemardesque et
-        destructrice.</p></li></ul><p><strong>Avec un effet magique de niveau ?
-        …</strong></p><p><strong>il parvient par exemple
+        doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>torturer son
+        danseur asservi</strong>, physiquement ou mentalement, en s’aidant de
+        lanières cloutées, de chaînes, de cages et d’étaux (chaque obscurantiste
+        développe son style, à vous de trouver celui de Mangrove
+        !)</p></li></ul><p><strong>Ce faisant, il…</strong></p><h6>Action
+        magique</h6><ul><li><p><strong>fait produire à son danseur asservi des
+        étincelles</strong> bleu nuit ou noires, vectrices d’une magie
+        cauchemardesque et destructrice.</p></li></ul><p><strong>Avec un effet
+        magique de niveau ? …</strong></p><p><strong>il parvient par exemple
         à…</strong></p><ol><li><p><strong>identifier un effet de magie
         cryptogrammique</strong> (éclipsisme, jornisme, obscurantisme) ;
         projeter des traits de feu, d’acide, ou d’onyx ; aveugler, rendre sourd
@@ -396,14 +396,14 @@ items:
         d’un mortel ;</strong> transférer la vie tel un vampire ; soulager et
         guérir dans un hurlement de souffrance ; tuer à coup sûr ;
         etc.</p></li></ol><p><strong>Mais attention, il risque également
-        de…</strong></p><h6>Incident magique</h6><ul><li><p>regretter un accès
-        de violence. Cette chose délicate semble si fragile, et il est si facile
-        d’en extraire un petit supplément de puissance… Mangrove ressent dans sa
-        chair les sévices qu’il inflige ; un personnage proche est pris de
-        douleurs, de nausées, ou s’évanouit ; le danseur développe une marque
-        étrange, séquelle des tortures qu’il a subies ; le danseur s’affale,
-        inanimé jusqu’au prochain repos ; le danseur meurt, terrifié, exsangue
-        ou désarticulé ; etc.</p></li></ul>
+        de…</strong></p><h6>Incident magique</h6><ul><li><p><strong>regretter un
+        accès de violence.</strong> Cette chose délicate semble si fragile, et
+        il est si facile d’en extraire un petit supplément de puissance…
+        Mangrove ressent dans sa chair les sévices qu’il inflige ; un personnage
+        proche est pris de douleurs, de nausées, ou s’évanouit ; le danseur
+        développe une marque étrange, séquelle des tortures qu’il a subies ; le
+        danseur s’affale, inanimé jusqu’au prochain repos ; le danseur meurt,
+        terrifié, exsangue ou désarticulé ; etc.</p></li></ul>
       harmonique: etincelle
       niveau: 3
       prerequis: torturer son danseur
@@ -422,7 +422,7 @@ items:
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
-    _key: '!actors.items!qYynLmMdIReTjbrn.z7xckgLN4L33u6XF'
+    _key: '!actors.items!YKvhH9RNRAzwt85x.z7xckgLN4L33u6XF'
 effects: []
 folder: XPIQcOgA5DQHk5b4
 ownership:
@@ -436,9 +436,9 @@ _stats:
   coreVersion: '13.347'
   systemId: penombre
   systemVersion: '0'
-  createdTime: 1756979785613
-  modifiedTime: 1756979785613
+  createdTime: 1756985466478
+  modifiedTime: 1756985466608
   lastModifiedBy: 6qbNUhuoJ67e6dmf
-_id: qYynLmMdIReTjbrn
-sort: 0
-_key: '!actors!qYynLmMdIReTjbrn'
+_id: YKvhH9RNRAzwt85x
+sort: 300000
+_key: '!actors!YKvhH9RNRAzwt85x'

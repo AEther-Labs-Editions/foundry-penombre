@@ -24,7 +24,7 @@ system:
     valeur: 7
     max: 9
     jetons:
-      - statut: inactif
+      - statut: actif
       - statut: actif
       - statut: actif
       - statut: actif
@@ -175,6 +175,9 @@ items:
     effects: []
     folder: null
     sort: 0
+    ownership:
+      default: 0
+      6qbNUhuoJ67e6dmf: 3
     flags: {}
     _stats:
       compendiumSource: null
@@ -184,9 +187,7 @@ items:
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
-    ownership:
-      default: 0
-    _key: '!actors.items!h09AyAkCZpu7LUy4.iiPkEFrzVLyHDK3e'
+    _key: '!actors.items!anH4hLsKXR9hCySq.iiPkEFrzVLyHDK3e'
   - name: Charmeur
     type: atout
     _id: g7eL0g7ciiieqI8y
@@ -197,6 +198,9 @@ items:
     effects: []
     folder: null
     sort: 0
+    ownership:
+      default: 0
+      6qbNUhuoJ67e6dmf: 3
     flags: {}
     _stats:
       compendiumSource: null
@@ -206,9 +210,7 @@ items:
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
-    ownership:
-      default: 0
-    _key: '!actors.items!h09AyAkCZpu7LUy4.g7eL0g7ciiieqI8y'
+    _key: '!actors.items!anH4hLsKXR9hCySq.g7eL0g7ciiieqI8y'
   - name: Avec classe et panache
     type: atout
     _id: DUJM1usKqQJEaOND
@@ -219,6 +221,9 @@ items:
     effects: []
     folder: null
     sort: 0
+    ownership:
+      default: 0
+      6qbNUhuoJ67e6dmf: 3
     flags: {}
     _stats:
       compendiumSource: null
@@ -228,9 +233,7 @@ items:
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
-    ownership:
-      default: 0
-    _key: '!actors.items!h09AyAkCZpu7LUy4.DUJM1usKqQJEaOND'
+    _key: '!actors.items!anH4hLsKXR9hCySq.DUJM1usKqQJEaOND'
   - name: Cela m'aide à comprendre ou retrouver mon passé
     type: atout
     _id: lLzuINPmj1jpfuyG
@@ -241,6 +244,9 @@ items:
     effects: []
     folder: null
     sort: 0
+    ownership:
+      default: 0
+      6qbNUhuoJ67e6dmf: 3
     flags: {}
     _stats:
       compendiumSource: null
@@ -250,9 +256,7 @@ items:
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
-    ownership:
-      default: 0
-    _key: '!actors.items!h09AyAkCZpu7LUy4.lLzuINPmj1jpfuyG'
+    _key: '!actors.items!anH4hLsKXR9hCySq.lLzuINPmj1jpfuyG'
   - name: Ma lyre abyssale
     type: atout
     _id: 46p2ljCHjBUikHUV
@@ -263,6 +267,9 @@ items:
     effects: []
     folder: null
     sort: 0
+    ownership:
+      default: 0
+      6qbNUhuoJ67e6dmf: 3
     flags: {}
     _stats:
       compendiumSource: null
@@ -272,9 +279,7 @@ items:
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
-    ownership:
-      default: 0
-    _key: '!actors.items!h09AyAkCZpu7LUy4.46p2ljCHjBUikHUV'
+    _key: '!actors.items!anH4hLsKXR9hCySq.46p2ljCHjBUikHUV'
   - name: Mon professeur était un fin bretteur
     type: atout
     _id: WuvmNn9OnbeVnC6E
@@ -285,6 +290,9 @@ items:
     effects: []
     folder: null
     sort: 0
+    ownership:
+      default: 0
+      6qbNUhuoJ67e6dmf: 3
     flags: {}
     _stats:
       compendiumSource: null
@@ -294,9 +302,7 @@ items:
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
-    ownership:
-      default: 0
-    _key: '!actors.items!h09AyAkCZpu7LUy4.WuvmNn9OnbeVnC6E'
+    _key: '!actors.items!anH4hLsKXR9hCySq.WuvmNn9OnbeVnC6E'
   - type: maitrise
     name: Accord
     _id: 5Ic6MUSIOhqKTizh
@@ -304,41 +310,42 @@ items:
     system:
       description: >-
         <h1>Ackbar l'accordé</h1><p><strong>Pour préparer son effet magique,
-        Ackbar doit…</strong></p><h6>Prérequis</h6><ul><li><p>interpréter un
-        morceau de musique à l’aide de sa lyre abyssale aux accords si
+        Ackbar
+        doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>interpréter un
+        morceau de musique</strong> à l’aide de sa lyre abyssale aux accords si
         exotiques.</p><p></p></li></ul><p><strong>Ce faisant,
-        il…</strong></p><h6>Action magique</h6><ul><li><p>entre en résonance
-        avec l’esprit de sa cible et pénètre cet espace mental tant que dure la
-        musique. Chaque esprit ressemble à une contrée nouvelle et
-        fantasmagorique.</p><p></p></li></ul><p><strong>Avec un effet magique de
-        niveau ? …</strong></p><p><strong>il parvient par exemple
-        à…</strong></p><ol><li><p><strong>identifier</strong> un effet magique
-        d’art ancien (accord, décorum, geste) ; lire les pensées superficielles
-        et les émotions ; etc.</p></li><li><p><strong>modifier</strong> les
-        pensées superficielles et les émotions ; apaiser, mettre en confiance,
-        exalter, encourager, soutenir ; provoquer culpabilité, découragement,
-        déconcentration et désorientation ; faire bégayer ; mettre en colère,
-        enrager ; glisser un message mental ;
-        etc.</p></li><li><p><strong>lire</strong> des souvenirs précis dans la
-        mémoire ; perturber un sens (vue, ouïe, odorat…) ; provoquer un
-        mouvement involontaire, ou réflexe ; faire ressentir une douleur fantôme
-        ; diriger l’attention ; faire accepter un mensonge ; libérer d’une
-        emprise mentale ; créer une barrière mentale ; attaquer l’esprit ;
-        etc.</p></li><li><p><strong>effacer</strong>, modifier ou créer un
-        souvenir précis, ou un lien familial ou affectif ; créer une phobie ;
-        ouvrir un canal télépathique ; rendre invalide pour une scène (endormir,
-        hypnotiser, rendre sourd, aveugle, muet…) ; suggérer une mission ou une
-        action complexe à un personnage ; apporter l’oubli d’un traumatisme
-        psychologique ; provoquer une crise de folie ;
+        il…</strong></p><h6>Action magique</h6><ul><li><p><strong>entre en
+        résonance avec l’esprit de sa cible</strong> et pénètre cet espace
+        mental tant que dure la musique. Chaque esprit ressemble à une contrée
+        nouvelle et fantasmagorique.</p><p></p></li></ul><p><strong>Avec un
+        effet magique de niveau ? …</strong></p><p><strong>il parvient par
+        exemple à…</strong></p><ol><li><p><strong>identifier</strong> un effet
+        magique d’art ancien (accord, décorum, geste) ; lire les pensées
+        superficielles et les émotions ;
+        etc.</p></li><li><p><strong>modifier</strong> les pensées superficielles
+        et les émotions ; apaiser, mettre en confiance, exalter, encourager,
+        soutenir ; provoquer culpabilité, découragement, déconcentration et
+        désorientation ; faire bégayer ; mettre en colère, enrager ; glisser un
+        message mental ; etc.</p></li><li><p><strong>lire</strong> des souvenirs
+        précis dans la mémoire ; perturber un sens (vue, ouïe, odorat…) ;
+        provoquer un mouvement involontaire, ou réflexe ; faire ressentir une
+        douleur fantôme ; diriger l’attention ; faire accepter un mensonge ;
+        libérer d’une emprise mentale ; créer une barrière mentale ; attaquer
+        l’esprit ; etc.</p></li><li><p><strong>effacer</strong>, modifier ou
+        créer un souvenir précis, ou un lien familial ou affectif ; créer une
+        phobie ; ouvrir un canal télépathique ; rendre invalide pour une scène
+        (endormir, hypnotiser, rendre sourd, aveugle, muet…) ; suggérer une
+        mission ou une action complexe à un personnage ; apporter l’oubli d’un
+        traumatisme psychologique ; provoquer une crise de folie ;
         etc.</p></li><li><p><strong>inspirer</strong> une confiance ou une
         terreur absolue ; revivre un souvenir comme s’il était de nouveau réel ;
         rendre amnésique ; prendre le contrôle mental d’un personnage, l’obliger
         à une action complexe, lui imposer une mission ; tuer ;
         etc.</p></li></ol><p><strong>Mais attention, il risque également
-        de…</strong></p><p></p><h6>Incident magique</h6><ul><li><p>attirer les
-        faux-accords, des pratiquants de l’accord bannis par leurs semblables.
-        Ils guettent, assis dans le public ou désincarnés dans l’esprit de leurs
-        victimes, prêts à prendre leur revanche sur les autres
+        de…</strong></p><h6>Incident magique</h6><ul><li><p><strong>attirer les
+        faux-accords</strong>, des pratiquants de l’accord bannis par leurs
+        semblables. Ils guettent, assis dans le public ou désincarnés dans
+        l’esprit de leurs victimes, prêts à prendre leur revanche sur les autres
         accordés.</p></li><li><p>Ackbar subit un effet d’accord en retour ; il
         est provoqué en duel musical ; il accède à un souvenir qu’il aurait
         préféré éviter ; etc.</p></li></ul>
@@ -348,6 +355,9 @@ items:
     effects: []
     folder: null
     sort: 0
+    ownership:
+      default: 0
+      6qbNUhuoJ67e6dmf: 3
     flags: {}
     _stats:
       compendiumSource: null
@@ -357,9 +367,7 @@ items:
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
-    ownership:
-      default: 0
-    _key: '!actors.items!h09AyAkCZpu7LUy4.5Ic6MUSIOhqKTizh'
+    _key: '!actors.items!anH4hLsKXR9hCySq.5Ic6MUSIOhqKTizh'
   - type: maitrise
     name: Brigue
     _id: vvDY6v4GCtWJKc84
@@ -367,14 +375,14 @@ items:
     system:
       description: >-
         <h1>Ackbar le brigand</h1><p><strong>Pour préparer son effet magique,
-        Ackbar doit…</strong></p><h6>Prérequis</h6><ul><li><p>posséder, ou
-        fabriquer, une « penne » animale indispensable à l’action. Il peut
-        s’agir des plumes d’une flèche, d’une simple corde en crins, de lanières
-        de cuir, d’une mouche de pêche, d’un grigri en corne, ou en dents,
-        etc.</p><p></p></li></ul><p><strong>Ce faisant,
-        il…</strong></p><h6>Action magique</h6><ul><li><p>fait corps avec
-        l’Harmonde, qui devient pour lui un terrain de jeu couvert d’agrès
-        improvisés : les tas de paille se changent en trampolines ; les
+        Ackbar doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>posséder,
+        ou fabriquer, une « penne » animale</strong> indispensable à l’action.
+        Il peut s’agir des plumes d’une flèche, d’une simple corde en crins, de
+        lanières de cuir, d’une mouche de pêche, d’un grigri en corne, ou en
+        dents, etc.</p><p></p></li></ul><p><strong>Ce faisant,
+        il…</strong></p><h6>Action magique</h6><ul><li><p><strong>fait corps
+        avec l’Harmonde, qui devient pour lui un terrain de jeu</strong> couvert
+        d’agrès improvisés : les tas de paille se changent en trampolines ; les
         branches, en barres parallèles ; les lierres, en échelles ; les
         enseignes, en trapèzes ; etc.</p><p></p></li></ul><p><strong>Avec un
         effet magique de niveau ? …</strong></p><p><strong>il parvient par
@@ -399,18 +407,22 @@ items:
         vide ; esquiver sans donner l’impression de bouger ; créer une empreinte
         d’un personnage, double réalisant ses propres actions indépendantes ;
         etc.</p></li></ol><p><strong>Mais attention, il risque également
-        de…</strong></p><h6>Incident magique</h6><ul><li><p>se prendre le mur.
-        Les observateurs peuvent l’entrevoir comme un champ de force irisé aux
-        motifs impensables qui apparaît soudain dans l’air. Quelle est cette
-        limite immuable ?</p></li><li><p>Ackbar est pris d’un vertige tenace ;
-        il souffre d’une déchirure musculaire, ou d’une luxation ; il prend
-        soudain conscience de la fragilité de son existence ; etc.</p></li></ul>
+        de…</strong></p><h6>Incident magique</h6><ul><li><p><strong>se prendre
+        le mur.</strong> Les observateurs peuvent l’entrevoir comme un champ de
+        force irisé aux motifs impensables qui apparaît soudain dans l’air.
+        Quelle est cette limite immuable ?</p></li><li><p>Ackbar est pris d’un
+        vertige tenace ; il souffre d’une déchirure musculaire, ou d’une
+        luxation ; il prend soudain conscience de la fragilité de son existence
+        ; etc.</p></li></ul>
       harmonique: nature
       niveau: 2
       prerequis: s'arracher ou se tresser une mèche de poils
     effects: []
     folder: null
     sort: 0
+    ownership:
+      default: 0
+      6qbNUhuoJ67e6dmf: 3
     flags: {}
     _stats:
       compendiumSource: null
@@ -420,9 +432,7 @@ items:
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
-    ownership:
-      default: 0
-    _key: '!actors.items!h09AyAkCZpu7LUy4.vvDY6v4GCtWJKc84'
+    _key: '!actors.items!anH4hLsKXR9hCySq.vvDY6v4GCtWJKc84'
   - type: pouvoir
     name: Plaisir grisant
     _id: Mg0Rj0WAV8o2MDFt
@@ -439,6 +449,9 @@ items:
     effects: []
     folder: lLVYkr2eG13xLU7R
     sort: 200000
+    ownership:
+      default: 0
+      6qbNUhuoJ67e6dmf: 3
     flags: {}
     _stats:
       compendiumSource: null
@@ -448,9 +461,7 @@ items:
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
-    ownership:
-      default: 0
-    _key: '!actors.items!h09AyAkCZpu7LUy4.Mg0Rj0WAV8o2MDFt'
+    _key: '!actors.items!anH4hLsKXR9hCySq.Mg0Rj0WAV8o2MDFt'
   - type: pouvoir
     name: Triomphe
     _id: RJFWJAbPmjoDJcaO
@@ -466,6 +477,9 @@ items:
     effects: []
     folder: lLVYkr2eG13xLU7R
     sort: 150000
+    ownership:
+      default: 0
+      6qbNUhuoJ67e6dmf: 3
     flags: {}
     _stats:
       compendiumSource: null
@@ -475,10 +489,12 @@ items:
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
-    ownership:
-      default: 0
-    _key: '!actors.items!h09AyAkCZpu7LUy4.RJFWJAbPmjoDJcaO'
+    _key: '!actors.items!anH4hLsKXR9hCySq.RJFWJAbPmjoDJcaO'
 effects: []
+ownership:
+  default: 0
+  6qbNUhuoJ67e6dmf: 3
+  RSMv4RnovGURNXaL: 3
 flags: {}
 _stats:
   compendiumSource: null
@@ -487,12 +503,9 @@ _stats:
   coreVersion: '13.347'
   systemId: penombre
   systemVersion: '0'
-  createdTime: 1756932141956
-  modifiedTime: 1756932141956
+  createdTime: 1756985459149
+  modifiedTime: 1756985466608
   lastModifiedBy: 6qbNUhuoJ67e6dmf
-_id: h09AyAkCZpu7LUy4
+_id: anH4hLsKXR9hCySq
 sort: 100000
-ownership:
-  default: 0
-  6qbNUhuoJ67e6dmf: 3
-_key: '!actors!h09AyAkCZpu7LUy4'
+_key: '!actors!anH4hLsKXR9hCySq'

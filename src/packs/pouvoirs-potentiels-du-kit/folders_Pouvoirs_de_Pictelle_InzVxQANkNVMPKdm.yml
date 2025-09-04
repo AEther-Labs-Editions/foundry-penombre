@@ -1,0 +1,20 @@
+type: Item
+folder: null
+name: Pouvoirs de Pictelle
+color: '#a4653d'
+sorting: a
+_id: InzVxQANkNVMPKdm
+description: ''
+sort: 500000
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.347'
+  systemId: penombre
+  systemVersion: '0'
+  createdTime: 1756987356839
+  modifiedTime: 1756987356891
+  lastModifiedBy: 6qbNUhuoJ67e6dmf
+_key: '!folders!InzVxQANkNVMPKdm'
