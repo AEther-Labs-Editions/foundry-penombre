@@ -370,11 +370,11 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   transform: rotate(180deg);
 }
 .penombre.eminence .eminence-content .col-2-1 {
-  width: 9px;
+  width: 12px;
   float: left;
 }
 .penombre.eminence .eminence-content .col-3-1 {
-  width: 408px;
+  width: 404px;
   float: left;
   flex-direction: column;
   padding-left: 4px;
@@ -414,7 +414,7 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   text-orientation: sideways-left;
 }
 .penombre.eminence .eminence-content .eminence-personnage {
-  min-height: 175px;
+  min-height: 190px;
 }
 .penombre.eminence .eminence-content .eminence-personnage-2 {
   min-height: 250px;
@@ -456,7 +456,7 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 .penombre.eminence .eminence-content .eminence-personnage .data,
 .penombre.eminence .eminence-content .eminence-personnage-2 .data {
   float: left;
-  width: 254px;
+  width: 250px;
   clear: right;
 }
 .penombre.eminence .eminence-content .eminence-personnage .data .name,

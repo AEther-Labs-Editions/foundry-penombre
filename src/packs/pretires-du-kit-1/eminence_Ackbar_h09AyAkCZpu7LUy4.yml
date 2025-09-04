@@ -4,7 +4,7 @@ type: eminence
 img: systems/penombre/assets/portraits/ackbar.png
 system:
   peuple: satyre
-  cle: ame
+  cle: nuit
   potentiel:
     pouvoirs: 0
     atouts: 0
@@ -24,7 +24,7 @@ system:
     valeur: 7
     max: 9
     jetons:
-      - statut: actif
+      - statut: inactif
       - statut: actif
       - statut: actif
       - statut: actif
@@ -186,7 +186,7 @@ items:
       lastModifiedBy: null
     ownership:
       default: 0
-    _key: '!actors.items!Ra4Xbmaei9BvWDPD.iiPkEFrzVLyHDK3e'
+    _key: '!actors.items!h09AyAkCZpu7LUy4.iiPkEFrzVLyHDK3e'
   - name: Charmeur
     type: atout
     _id: g7eL0g7ciiieqI8y
@@ -208,7 +208,7 @@ items:
       lastModifiedBy: null
     ownership:
       default: 0
-    _key: '!actors.items!Ra4Xbmaei9BvWDPD.g7eL0g7ciiieqI8y'
+    _key: '!actors.items!h09AyAkCZpu7LUy4.g7eL0g7ciiieqI8y'
   - name: Avec classe et panache
     type: atout
     _id: DUJM1usKqQJEaOND
@@ -230,7 +230,7 @@ items:
       lastModifiedBy: null
     ownership:
       default: 0
-    _key: '!actors.items!Ra4Xbmaei9BvWDPD.DUJM1usKqQJEaOND'
+    _key: '!actors.items!h09AyAkCZpu7LUy4.DUJM1usKqQJEaOND'
   - name: Cela m'aide à comprendre ou retrouver mon passé
     type: atout
     _id: lLzuINPmj1jpfuyG
@@ -252,7 +252,7 @@ items:
       lastModifiedBy: null
     ownership:
       default: 0
-    _key: '!actors.items!Ra4Xbmaei9BvWDPD.lLzuINPmj1jpfuyG'
+    _key: '!actors.items!h09AyAkCZpu7LUy4.lLzuINPmj1jpfuyG'
   - name: Ma lyre abyssale
     type: atout
     _id: 46p2ljCHjBUikHUV
@@ -274,7 +274,7 @@ items:
       lastModifiedBy: null
     ownership:
       default: 0
-    _key: '!actors.items!Ra4Xbmaei9BvWDPD.46p2ljCHjBUikHUV'
+    _key: '!actors.items!h09AyAkCZpu7LUy4.46p2ljCHjBUikHUV'
   - name: Mon professeur était un fin bretteur
     type: atout
     _id: WuvmNn9OnbeVnC6E
@@ -296,7 +296,7 @@ items:
       lastModifiedBy: null
     ownership:
       default: 0
-    _key: '!actors.items!Ra4Xbmaei9BvWDPD.WuvmNn9OnbeVnC6E'
+    _key: '!actors.items!h09AyAkCZpu7LUy4.WuvmNn9OnbeVnC6E'
   - type: maitrise
     name: Accord
     _id: 5Ic6MUSIOhqKTizh
@@ -359,7 +359,7 @@ items:
       lastModifiedBy: null
     ownership:
       default: 0
-    _key: '!actors.items!Ra4Xbmaei9BvWDPD.5Ic6MUSIOhqKTizh'
+    _key: '!actors.items!h09AyAkCZpu7LUy4.5Ic6MUSIOhqKTizh'
   - type: maitrise
     name: Brigue
     _id: vvDY6v4GCtWJKc84
@@ -422,7 +422,7 @@ items:
       lastModifiedBy: null
     ownership:
       default: 0
-    _key: '!actors.items!Ra4Xbmaei9BvWDPD.vvDY6v4GCtWJKc84'
+    _key: '!actors.items!h09AyAkCZpu7LUy4.vvDY6v4GCtWJKc84'
   - type: pouvoir
     name: Plaisir grisant
     _id: Mg0Rj0WAV8o2MDFt
@@ -450,7 +450,7 @@ items:
       lastModifiedBy: null
     ownership:
       default: 0
-    _key: '!actors.items!Ra4Xbmaei9BvWDPD.Mg0Rj0WAV8o2MDFt'
+    _key: '!actors.items!h09AyAkCZpu7LUy4.Mg0Rj0WAV8o2MDFt'
   - type: pouvoir
     name: Triomphe
     _id: RJFWJAbPmjoDJcaO
@@ -477,7 +477,7 @@ items:
       lastModifiedBy: null
     ownership:
       default: 0
-    _key: '!actors.items!Ra4Xbmaei9BvWDPD.RJFWJAbPmjoDJcaO'
+    _key: '!actors.items!h09AyAkCZpu7LUy4.RJFWJAbPmjoDJcaO'
 effects: []
 flags: {}
 _stats:
@@ -487,12 +487,12 @@ _stats:
   coreVersion: '13.347'
   systemId: penombre
   systemVersion: '0'
-  createdTime: 1756900178014
-  modifiedTime: 1756900446795
+  createdTime: 1756932141956
+  modifiedTime: 1756932141956
   lastModifiedBy: 6qbNUhuoJ67e6dmf
-_id: Ra4Xbmaei9BvWDPD
+_id: h09AyAkCZpu7LUy4
 sort: 100000
 ownership:
   default: 0
   6qbNUhuoJ67e6dmf: 3
-_key: '!actors!Ra4Xbmaei9BvWDPD'
+_key: '!actors!h09AyAkCZpu7LUy4'

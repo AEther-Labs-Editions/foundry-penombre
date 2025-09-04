@@ -189,7 +189,7 @@ items:
       lastModifiedBy: null
     ownership:
       default: 0
-    _key: '!actors.items!JuMVAoqP2tvWBQJ9.m7oh2WXepebJSUjC'
+    _key: '!actors.items!XY5I6fZpqIoChtsQ.m7oh2WXepebJSUjC'
   - name: Nous allons trouver mon compromis
     type: atout
     _id: WR4V1qycaSsnVY3g
@@ -211,7 +211,7 @@ items:
       lastModifiedBy: null
     ownership:
       default: 0
-    _key: '!actors.items!JuMVAoqP2tvWBQJ9.WR4V1qycaSsnVY3g'
+    _key: '!actors.items!XY5I6fZpqIoChtsQ.WR4V1qycaSsnVY3g'
   - name: Voix suave et chant mélodieux
     type: atout
     _id: 29h76jB2qBRbrJ2M
@@ -233,7 +233,7 @@ items:
       lastModifiedBy: null
     ownership:
       default: 0
-    _key: '!actors.items!JuMVAoqP2tvWBQJ9.29h76jB2qBRbrJ2M'
+    _key: '!actors.items!XY5I6fZpqIoChtsQ.29h76jB2qBRbrJ2M'
   - name: Femme de cour élevée dans la tradition
     type: atout
     _id: 8xtKAsLFa1UHeSq1
@@ -255,7 +255,7 @@ items:
       lastModifiedBy: null
     ownership:
       default: 0
-    _key: '!actors.items!JuMVAoqP2tvWBQJ9.8xtKAsLFa1UHeSq1'
+    _key: '!actors.items!XY5I6fZpqIoChtsQ.8xtKAsLFa1UHeSq1'
   - name: Beauté à faire ramper un baron
     type: atout
     _id: eqO6yIe5XgAE5t61
@@ -277,7 +277,7 @@ items:
       lastModifiedBy: null
     ownership:
       default: 0
-    _key: '!actors.items!JuMVAoqP2tvWBQJ9.eqO6yIe5XgAE5t61'
+    _key: '!actors.items!XY5I6fZpqIoChtsQ.eqO6yIe5XgAE5t61'
   - name: Pas feutrés
     type: atout
     _id: ajD1AqnvHr9AYhtZ
@@ -299,7 +299,7 @@ items:
       lastModifiedBy: null
     ownership:
       default: 0
-    _key: '!actors.items!JuMVAoqP2tvWBQJ9.ajD1AqnvHr9AYhtZ'
+    _key: '!actors.items!XY5I6fZpqIoChtsQ.ajD1AqnvHr9AYhtZ'
   - type: maitrise
     name: Accord
     _id: UAzZtsJJDxcMBWzt
@@ -362,7 +362,7 @@ items:
       lastModifiedBy: null
     ownership:
       default: 0
-    _key: '!actors.items!JuMVAoqP2tvWBQJ9.UAzZtsJJDxcMBWzt'
+    _key: '!actors.items!XY5I6fZpqIoChtsQ.UAzZtsJJDxcMBWzt'
   - type: pouvoir
     name: Regard médusant
     _id: qGfnqopDq8PRX7uq
@@ -390,7 +390,7 @@ items:
       lastModifiedBy: null
     ownership:
       default: 0
-    _key: '!actors.items!JuMVAoqP2tvWBQJ9.qGfnqopDq8PRX7uq'
+    _key: '!actors.items!XY5I6fZpqIoChtsQ.qGfnqopDq8PRX7uq'
   - type: pouvoir
     name: Venin alchimique
     _id: HIMHYEZgtkO2bez6
@@ -423,7 +423,7 @@ items:
       lastModifiedBy: null
     ownership:
       default: 0
-    _key: '!actors.items!JuMVAoqP2tvWBQJ9.HIMHYEZgtkO2bez6'
+    _key: '!actors.items!XY5I6fZpqIoChtsQ.HIMHYEZgtkO2bez6'
 effects: []
 flags: {}
 _stats:
@@ -433,12 +433,12 @@ _stats:
   coreVersion: '13.347'
   systemId: penombre
   systemVersion: '0'
-  createdTime: 1756902197812
-  modifiedTime: 1756902203031
+  createdTime: 1756932141956
+  modifiedTime: 1756932141956
   lastModifiedBy: 6qbNUhuoJ67e6dmf
-_id: JuMVAoqP2tvWBQJ9
+_id: XY5I6fZpqIoChtsQ
 sort: 200000
 ownership:
   default: 0
   6qbNUhuoJ67e6dmf: 3
-_key: '!actors!JuMVAoqP2tvWBQJ9'
+_key: '!actors!XY5I6fZpqIoChtsQ'
