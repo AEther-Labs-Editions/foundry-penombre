@@ -9,4 +9,6 @@ export { default as AdversaireSheet } from "./sheets/adversaire-sheet.mjs"
 export { default as ActionSheet } from "./sheets/action-sheet.mjs"
 export { default as IntrigueSheet } from "./sheets/intrigue-sheet.mjs"
 
+export { default as PenombreSidebarMenu } from "./sidebar-menu.mjs"
+
 export * as hooks from "../hooks/_module.mjs"

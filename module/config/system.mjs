@@ -132,8 +132,8 @@ export const DICE_ROLL_MODES = Object.freeze({
   /**
    * A private dice roll which is only visible to the user who rolled it.
    */
-  SELF: "selfroll"
-});
+  SELF: "selfroll",
+})
 
 /**
  * Include all constant definitions within the SYSTEM global export

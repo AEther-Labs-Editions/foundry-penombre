@@ -1,5 +1,11 @@
 @import "./elements/_index.less";
 
+
+// Variables CSS
+:root {
+--logo-standard: url('/systems/penombre/assets/ui/jeton_face_active.png');
+}
+
 /* ---------------------------------------------
         Variables LESS
 --------------------------------------------- */
@@ -133,6 +139,17 @@
   width: 192px;
   top: -45px;
   left: calc(50% - 96px);
+}
+
+/* ---------------------------------------------
+        Sidebar
+--------------------------------------------- */
+
+.icon.penombre {
+  background-image: var(--logo-standard);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* ---------------------------------------------
@@ -1331,3 +1348,5 @@ body {
 @import "dialog.less";
 @import "chat.less";
 @import "adversaire.less";
+
+@import "sidebar.less";

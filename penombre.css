@@ -40,6 +40,9 @@ penombre-toggle-switch[checked] track {
 penombre-toggle-switch[checked] thumb {
   margin-left: calc(100% - var(--toggle-switch-thumb-width));
 }
+:root {
+  --logo-standard: url('/systems/penombre/assets/ui/jeton_face_active.png');
+}
 /* ---------------------------------------------
         Variables LESS
 --------------------------------------------- */
@@ -70,6 +73,15 @@ penombre-toggle-switch[checked] thumb {
   width: 192px;
   top: -45px;
   left: calc(50% - 96px);
+}
+/* ---------------------------------------------
+        Sidebar
+--------------------------------------------- */
+.icon.penombre {
+  background-image: var(--logo-standard);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 /* ---------------------------------------------
         Concerne les pages de journaux
@@ -1812,4 +1824,59 @@ body.theme-light .penombre.adversaire .adversaire-content {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
+}
+.penombre-sidebar {
+  flex-direction: column;
+  overflow-y: auto;
+  color: var(--color-text-secondary);
+}
+.penombre-sidebar.active {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+.penombre-sidebar section {
+  gap: 0.5rem;
+}
+.penombre-sidebar section h4 {
+  margin: 0;
+}
+.penombre-sidebar section a.button {
+  flex-basis: 2rem;
+}
+.penombre-sidebar .info {
+  font-size: var(--font-size-13);
+}
+.penombre-sidebar .info .title {
+  margin: 0;
+  font-size: var(--font-size-32);
+  text-align: center;
+  letter-spacing: -0.3px;
+}
+.penombre-sidebar .info .subtitle {
+  margin: -0.5rem 0 0;
+  color: var(--color-text-subtle);
+  text-align: center;
+}
+.penombre-sidebar .info > div {
+  display: flex;
+  justify-content: space-between;
+}
+.penombre-sidebar .info > div .label {
+  color: var(--color-text-emphatic);
+}
+.penombre-sidebar .info > div .value {
+  color: var(--color-text-secondary);
+}
+.penombre-sidebar .info .notification-pip {
+  margin-left: 0.25rem;
+  color: var(--color-text-accent);
+  position: initial;
+}
+#penombre-popout {
+  overflow-y: hidden;
+}
+#penombre-popout .window-content {
+  gap: 1.5rem;
+  overflow-y: auto;
 }

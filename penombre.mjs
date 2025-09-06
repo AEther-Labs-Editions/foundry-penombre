@@ -59,6 +59,14 @@ Hooks.once("init", function () {
     harmonique: models.HarmoniqueMessageData,
   }
 
+  // Ajout d'un nouvel onglet dans la barre latérale
+  CONFIG.ui.sidebar.TABS.penombre = {
+    active: false,
+    icon: `penombre`,
+    tooltip: `Pénombre`,
+  }
+  CONFIG.ui.penombre = applications.PenombreSidebarMenu
+
   helpers.PenombreSettingsHandler.registerSettings()
   helpers.registerHandlebars()
 

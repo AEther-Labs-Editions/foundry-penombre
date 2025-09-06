@@ -3,6 +3,10 @@
   "title": "Pénombre",
   "description": "un jeu de rôle dans les Royaumes crépusculaires d'après les romans de Mathieu Gaborit",
   "authors": [{ "name": "Kristov" }, { "name": "Mystery Man From Outerspace" }],
+  "version": "#{VERSION}#",  
+  "url": "#{URL}#",
+  "manifest": "#{MANIFEST}#",
+  "download": "#{DOWNLOAD}#",  
   "compatibility": {
     "minimum": "13",
     "verified": "13",
@@ -47,7 +51,8 @@
       "path": "packs/journal",
       "type": "JournalEntry",
       "ownership": {
-        "PLAYER": "OBSERVER",
+        "PLAYER": "NONE",
+        "TRUSTED": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
       "flags": {}
@@ -59,7 +64,8 @@
       "path": "packs/landing-page",
       "type": "Scene",
       "ownership": {
-        "PLAYER": "OBSERVER",
+        "PLAYER": "NONE",
+        "TRUSTED": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
       "flags": {}
@@ -71,7 +77,8 @@
       "path": "packs/pretires-du-kit-1",
       "type": "Actor",
       "ownership": {
-        "PLAYER": "OBSERVER",
+        "PLAYER": "NONE",
+        "TRUSTED": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
       "flags": {}
@@ -83,7 +90,8 @@
       "path": "packs/adversaires-du-kit-2",
       "type": "Actor",
       "ownership": {
-        "PLAYER": "OBSERVER",
+        "PLAYER": "NONE",
+        "TRUSTED": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
       "flags": {}
@@ -95,7 +103,8 @@
       "path": "packs/pouvoirs-potentiels-du-kit",
       "type": "Item",
       "ownership": {
-        "PLAYER": "OBSERVER",
+        "PLAYER": "NONE",
+        "TRUSTED": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
       "flags": {}

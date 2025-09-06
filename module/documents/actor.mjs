@@ -1,14 +1,16 @@
 import PenombreRoll from "./roll.mjs"
 export default class PenombreActor extends Actor {
   /**
-   * Rolls a harmonique for the actor, optionally handling collegial actions and posting the result to chat.
+   * Rolls a harmonique for the actor, prompting the user and sending a chat message with the result.
+   * Handles both principal and collegial actions, linking related messages for group rolls.
    *
    * @async
-   * @param {string} harmonique The name of the harmonique to roll.
-   * @param {string} [messageType="principal"/"lie"] The type of roll, defaults to "principal".
-   * @param {Object} [options={}] Additional options for the roll.
-   * @param {string|undefined} [options.rollMode] The roll mode to use.
-   * @returns {Promise<void|null>} Resolves when the roll is completed and the message is posted, or null if cancelled.
+   * @param {Object} options Options for the harmonique roll.
+   * @param {string} options.harmonique The harmonique to roll.
+   * @param {string} [options.messageType="principal"] The type of message ("principal" or "lie").
+   * @param {string|null} [options.idMessageOrigine=null] The ID of the original message if this is a linked message.
+   * @param {string|undefined} [options.rollMode=undefined] The roll mode to use.
+   * @returns {Promise<ChatMessage|null>} The created chat message, or null if the roll was cancelled.
    */
   async rollHarmonique({ harmonique, messageType = "principal", idMessageOrigine = null, rollMode = undefined } = {}) {
     let rollValue = this.system.harmoniques[harmonique].valeur
