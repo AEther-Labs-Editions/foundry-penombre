@@ -25,7 +25,7 @@ export default class ReserveCollegiale extends foundry.abstract.TypeDataModel {
 
   static changeNbJetons(newNbJetons) {
     if (game.settings.get("penombre", "styleJeu") === "demo" && newNbJetons !== 10) {
-      ui.notifications.warn(game.i18n.localize("PENOMBRE.warnings.limiteNbJetonsDemo"), { permanent: true })
+      ui.notifications.error(game.i18n.localize("PENOMBRE.warnings.limiteNbJetonsDemo"), { permanent: true })
     }
   }
 }
