@@ -88,7 +88,14 @@ Hooks.on("updateSetting", async (setting, update, options, id) => {
   if (setting.key === "penombre.nbJetons" && game.user.isGM) {
     console.log("Pénombre | Mise à jour du nombre de jetons dans la réserve collégiale", setting, update, options, id)
     const reserveCollegiale = foundry.utils.duplicate(game.settings.get(SYSTEM.ID, "reserveCollegiale"))
-    const nouveauNbJetons = update.value
+
+    let nouveauNbJetons = update.value
+
+    // En mode Kit de demo, on force le nombre de jetons à 10
+    if (game.settings.get("penombre", "styleJeu") === "demo" && nouveauNbJetons !== 10) {
+      nouveauNbJetons = 10
+      await game.settings.set(SYSTEM.ID, "nbJetons", 10)
+    }
 
     // Ajouter les jetons manquants si le nombre augmente
     for (let i = 1; i <= nouveauNbJetons; i++) {

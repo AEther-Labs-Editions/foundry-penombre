@@ -22,6 +22,7 @@ export default class PenomnreSettingsHandler {
         },
         requiresReload: true,
       },
+
       nbJetons: {
         name: "PENOMBRE.Settings.nbJetons.name",
         hint: "PENOMBRE.Settings.nbJetons.hint",
@@ -30,7 +31,9 @@ export default class PenomnreSettingsHandler {
         default: 10,
         type: Number,
         requiresReload: true,
+        onChange: ReserveCollegiale.changeNbJetons,
       },
+
       reserveCollegiale: {
         name: "PENOMBRE.Settings.reserveCollegiale.name",
         hint: "PENOMBRE.Settings.reserveCollegiale.hint",
