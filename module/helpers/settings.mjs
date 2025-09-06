@@ -1,7 +1,7 @@
 import { SYSTEM_ID } from "../config/system.mjs"
 import ReserveCollegiale from "../models/reserve-collegiale.mjs"
 
-export default class PenomnreSettingsHandler {
+export default class PenombreSettingsHandler {
   /**
    * All settings associated with the system.
    * @type {Record<string, SettingConfig>}

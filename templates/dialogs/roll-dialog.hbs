@@ -33,6 +33,22 @@
             <input type="checkbox" name="effetMagique" id="effetMagique"/><label>{{localize 'PENOMBRE.ui.effetMagique' }}</label>
           </div>
         </fieldset>
+        <div class="form-group effet-magique-niveau" style="display: none;">
+          <label for="effetMagiqueNiveau">{{localize 'PENOMBRE.ui.effetMagiqueNiveau'}}</label>
+          <div class="form-fields">
+            <select name="effetMagiqueNiveau" id="effetMagiqueNiveau">
+              {{selectOptions choiceEffetMagiqueNiveau selected=effetMagiqueNiveau localize=true}}
+            </select>
+          </div>
+        </div>
+        <div class="form-group effet-magique-maitrise" style="display: none;">
+          <label for="effetMagiqueMaitrise">{{localize 'PENOMBRE.ui.effetMagiqueMaitrise'}}</label>
+          <div class="form-fields">
+            <select name="effetMagiqueMaitrise" id="effetMagiqueMaitrise">
+              {{selectOptions choiceEffetMagiqueMaitrise selected=effetMagiqueMaitrise localize=true}}
+            </select>
+          </div>
+        </div>
       {{/if}}
     </div>
   </div>
@@ -85,7 +101,7 @@
       <fieldset>
         <legend>{{ localize 'PENOMBRE.ui.jetons' }}</legend>
         <div class="depensetotal">
-          <label>{{ localize 'PENOMBRE.ui.jetonsDepenser' }}</label>
+          <label id="jetonsDepenserTooltip" data-tooltip="">{{ localize 'PENOMBRE.ui.jetonsDepenser' }}</label>
           <div class="form-fields">
             <input type="number" id="jetons" name="jetons" />
           </div>

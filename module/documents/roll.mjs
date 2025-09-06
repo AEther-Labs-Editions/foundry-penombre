@@ -42,6 +42,13 @@ export default class PenombreRoll extends Roll {
       return acc
     }, {})
 
+    // Niveau de l'effet magique : de 1 à 5
+    const choiceEffetMagiqueNiveau = Object.freeze(Array.from({ length: 5 }, (_, i) => i + 1).reduce((acc, level) => ({ ...acc, [level]: String(level) }), {}))
+
+    // Maîtrises utilisables pour l'effet magique
+    const maitrises = actor.itemTypes.maitrise || []
+    const choiceEffetMagiqueMaitrise = Object.fromEntries(maitrises.map((m) => [m.system.slug, m.name]))
+
     let dialogContext = {
       actor,
       messageType,
@@ -63,6 +70,8 @@ export default class PenombreRoll extends Roll {
       fieldJetonsReserve,
       fieldHarmonique,
       choiceHarmonique,
+      choiceEffetMagiqueNiveau,
+      choiceEffetMagiqueMaitrise,
     }
 
     const content = await foundry.applications.handlebars.renderTemplate("systems/penombre/templates/dialogs/roll-dialog.hbs", dialogContext)
@@ -108,6 +117,21 @@ export default class PenombreRoll extends Roll {
         const actionCollegiale = dialog.element.querySelector("#actionCollegiale")
         if (actionCollegiale) {
           actionCollegiale.addEventListener("change", this._onToggleActionCollegiale.bind(this))
+        }
+        // Effet magique
+        const effetMagique = dialog.element.querySelector("#effetMagique")
+        if (effetMagique) {
+          effetMagique.addEventListener("change", this._onToggleEffetMagique.bind(this))
+        }
+        // Niveau de l'effet magique
+        const effetMagiqueNiveau = dialog.element.querySelector("#effetMagiqueNiveau")
+        if (effetMagiqueNiveau) {
+          effetMagiqueNiveau.addEventListener("change", this._onChangeEffetMagiqueNiveau.bind(this))
+        }
+        // Maîtrise utilisée
+        const effetMagiqueMaitrise = dialog.element.querySelector("#effetMagiqueMaitrise")
+        if (effetMagiqueMaitrise) {
+          effetMagiqueMaitrise.addEventListener("change", this._onChangeEffetMagiqueMaitrise.bind(this))
         }
         // Atouts
         const inputs = dialog.element.querySelectorAll(".atout")
@@ -184,17 +208,31 @@ export default class PenombreRoll extends Roll {
     PenombreRoll._updateNbJetons()
   }
 
-  static _onToggleAtout(event) {
-    let item = event.currentTarget.closest(".atout")
-    item.classList.toggle("checked")
-    // Calcul du bonus total des atouts
-    let bonusTotal = Array.from(document.querySelectorAll(".atout.checked")).reduce((total, atout) => total + Number(atout.dataset.bonus), 0)
-    document.querySelector("#bonusAtouts").value = bonusTotal
+  static _onToggleEffetMagique(event) {
+    const effetMagiqueNiveauDiv = document.querySelector(".form-group.effet-magique-niveau")
+    const effetMagiqueMaitriseDiv = document.querySelector(".form-group.effet-magique-maitrise")
 
-    // Calcul du nombre de jetons à dépenser
-    const jetons = PenombreRoll._updateNbJetons()
-    PenombreRoll._updateFormula()
+    if (event.target.checked) {
+      // Afficher les divs quand la checkbox est cochée
+      if (effetMagiqueNiveauDiv) effetMagiqueNiveauDiv.style.display = "flex"
+      if (effetMagiqueMaitriseDiv) effetMagiqueMaitriseDiv.style.display = "flex"
+    } else {
+      // Masquer les divs quand la checkbox est décochée
+      if (effetMagiqueNiveauDiv) effetMagiqueNiveauDiv.style.display = "none"
+      if (effetMagiqueMaitriseDiv) effetMagiqueMaitriseDiv.style.display = "none"
+    }
+    PenombreRoll._updateNbJetons()
+  }
 
+  static _onChangeEffetMagiqueNiveau(event) {
+    PenombreRoll._updateNbJetons()
+  }
+
+  static _onChangeEffetMagiqueMaitrise(event) {
+    PenombreRoll._updateNbJetons()
+  }
+
+  static _checkCanRoll(jetons) {
     // Vérification des conditions de lancement
     let canRoll = true
     const jetonsConscience = Number(document.querySelector("#jetonsConscience").value) || 0
@@ -205,6 +243,18 @@ export default class PenombreRoll extends Roll {
 
     if (canRoll) document.querySelector('button[type="submit"]').disabled = false
     else document.querySelector('button[type="submit"]').disabled = true
+  }
+
+  static _onToggleAtout(event) {
+    let item = event.currentTarget.closest(".atout")
+    item.classList.toggle("checked")
+    // Calcul du bonus total des atouts
+    let bonusTotal = Array.from(document.querySelectorAll(".atout.checked")).reduce((total, atout) => total + Number(atout.dataset.bonus), 0)
+    document.querySelector("#bonusAtouts").value = bonusTotal
+
+    // Calcul du nombre de jetons à dépenser
+    PenombreRoll._updateNbJetons()
+    PenombreRoll._updateFormula()    
   }
 
   static _onToggleDeMerveilleux(event) {
@@ -271,10 +321,53 @@ export default class PenombreRoll extends Roll {
   }
 
   static _updateNbJetons() {
-    const jetons = Math.max(document.querySelectorAll(".atout.checked").length - 1, 0)
+    // Atouts
+    const jetonsAtouts = Math.max(document.querySelectorAll(".atout.checked").length - 1, 0)
+
+    // Action collégiale
     const actionCollegiale = document.querySelector("#actionCollegiale")?.checked ?? false
+    const jetonActionCollegiale = actionCollegiale ? 1 : 0
+
+    // Dé merveilleux
     const deMerveilleux = document.querySelector("#deMerveilleux").checked
-    document.querySelector("#jetons").value = jetons + (actionCollegiale ? 1 : 0) + (deMerveilleux ? 1 : 0)
+    const jetonDeMerveilleux = deMerveilleux ? 1 : 0
+
+    // Effet magique
+    const effetMagique = document.querySelector("#effetMagique")?.checked ?? false
+    const jetonEffetMagique = effetMagique ? 1 : 0
+
+    // Selon la maitrise magique : 1 jeton par niveau manquant par rapport au niveau de l'effet magique souhaité
+    const niveauEffetMagique = Number(document.querySelector("#effetMagiqueNiveau")?.value || 1)
+    const maitriseSlug = document.querySelector("#effetMagiqueMaitrise")?.value || null
+    const actorId = document.querySelector(".penombre-roll-dialog").dataset.actorId
+    let actor = null
+    if (actorId) actor = game.actors.get(actorId)
+    let niveauMaitrise = 0
+    if (actor && maitriseSlug) {
+      const maitrise = actor.itemTypes.maitrise.find((m) => m.system.slug === maitriseSlug)
+      if (maitrise) niveauMaitrise = maitrise.system.niveau || 0
+    }
+    const jetonsEffetMagiqueMaitrise = Math.max(niveauEffetMagique - niveauMaitrise, 0)
+
+    // Total des jetons à dépenser
+    const jetons = jetonsAtouts + jetonActionCollegiale + jetonDeMerveilleux + jetonEffetMagique + jetonsEffetMagiqueMaitrise
+    document.querySelector("#jetons").value = jetons
+
+    // Met à jour le tooltip pour expliquer chaque partie du total
+    const tooltipLabel = document.querySelector("#jetonsDepenserTooltip")
+    if (tooltipLabel) {
+      const tooltipContent = `
+        • Atouts : ${jetonsAtouts} <br>
+        • Action collégiale : ${jetonActionCollegiale} <br>
+        • Dé merveilleux : ${jetonDeMerveilleux} <br>
+        • Produire effet magique : ${jetonEffetMagique} <br>
+        • Compenser maîtrise magique : ${jetonsEffetMagiqueMaitrise} <br>
+        Total : ${jetons}`
+
+      tooltipLabel.setAttribute("data-tooltip", tooltipContent)
+    }
+
+    PenombreRoll._checkCanRoll(jetons)
     return jetons
   }
   // #endregion Événements du prompt

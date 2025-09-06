@@ -425,7 +425,9 @@
       "actionCollegiale": "Action collégiale",
       "effetMagique": "Effet magique",
       "lancerDes": "Lancer les dés",
-      "jetHarmonique": "Jet d'harmonique"
+      "jetHarmonique": "Jet d'harmonique",
+      "effetMagiqueNiveau": "Niveau de l'effet",
+      "effetMagiqueMaitrise": "Maîtrise utilisée"
     },
     "warnings": {
       "jetonsDepassement": "Trop de jetons sélectionnés",

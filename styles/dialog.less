@@ -37,20 +37,32 @@
     .part-right-1 {
       display: flex;
       flex-direction: column;
-      .difficulte {
+      .form-group.difficulte {
         margin: 0 4px 10px 0;
       }
       fieldset {
         padding: 5px;
-      }
-      .options {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        input {
-          margin-right: 5px;
+        .options {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          input {
+            margin-right: 5px;
+          }
         }
+      }
+      .form-group.effet-magique-niveau, .form-group.effet-magique-maitrise {
+        display: none; // Masqué par défaut
+        label {
+          flex: 2;
+        }
+        .form-fields {
+          select {
+            flex: 1;
+            height: 20px;
+          }
+        }
+      }
       }
     }
   }
@@ -79,7 +91,7 @@
           }
 
           &:nth-child(even) {
-            background-color : silver;
+            background-color: silver;
           }
           /*
             &:nth-child(even) {

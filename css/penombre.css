@@ -1346,25 +1346,39 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   display: flex;
   flex-direction: column;
 }
-.penombre-roll-dialog .line-1 .part-right-1 .difficulte {
+.penombre-roll-dialog .line-1 .part-right-1 .form-group.difficulte {
   margin: 0 4px 10px 0;
 }
 .penombre-roll-dialog .line-1 .part-right-1 fieldset {
   padding: 5px;
 }
-.penombre-roll-dialog .line-1 .part-right-1 .options {
+.penombre-roll-dialog .line-1 .part-right-1 fieldset .options {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.penombre-roll-dialog .line-1 .part-right-1 .options input {
+.penombre-roll-dialog .line-1 .part-right-1 fieldset .options input {
   margin-right: 5px;
 }
-.penombre-roll-dialog .line-1 .part-right-1 .effet-magique-niveau {
+.penombre-roll-dialog .line-1 .part-right-1 .form-group.effet-magique-niveau {
   display: flex;
 }
-.penombre-roll-dialog .line-1 .part-right-1 .effet-magique-niveau .form-fields select {
-  width: 100px;
+.penombre-roll-dialog .line-1 .part-right-1 .form-group.effet-magique-niveau label {
+  flex: 2;
+}
+.penombre-roll-dialog .line-1 .part-right-1 .form-group.effet-magique-niveau .form-fields select {
+  flex: 1;
+  height: 20px;
+}
+.penombre-roll-dialog .line-1 .part-right-1 .form-group.effet-magique-maitrise {
+  display: flex;
+}
+.penombre-roll-dialog .line-1 .part-right-1 .form-group.effet-magique-maitrise label {
+  flex: 2;
+}
+.penombre-roll-dialog .line-1 .part-right-1 .form-group.effet-magique-maitrise .form-fields select {
+  flex: 1;
+  height: 20px;
 }
 .penombre-roll-dialog .line-2 fieldset {
   padding-top: 0;

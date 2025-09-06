@@ -13,7 +13,7 @@
     "maximum": "13"
   },
   "esmodules": ["penombre.mjs"],
-  "styles": ["penombre.css"],
+  "styles": ["css/penombre.css"],
   "languages": [
     {
       "lang": "en",
@@ -130,7 +130,7 @@
   "flags": {
     "hotReload": {
       "extensions": ["css", "html", "hbs", "json"],
-      "paths": ["lang", "templates"]
+      "paths": ["css", "lang", "templates"]
     }
   },
   "background": "/systems/penombre/assets/background/splash_fond_penombre.avif"
