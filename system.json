@@ -121,7 +121,7 @@
   "flags": {
     "hotReload": {
       "extensions": ["css", "html", "hbs", "json"],
-      "paths": ["css", "styles", "lang", "templates"]
+      "paths": ["lang", "templates"]
     }
   },
   "background": "/systems/penombre/assets/background/splash_fond_penombre.avif"
