@@ -21,7 +21,7 @@ export default class Intrigue extends foundry.abstract.TypeDataModel {
     if (!stats.duplicateSource && !stats.compendiumSource && !stats.exportSource) {
       // Image par défaut
       if (!foundry.utils.hasProperty(data, "img")) {
-        updates.img = "systems/penombre/assets/icons/intrigue.png"
+        updates.img = "systems/penombre/assets/icons/intrigue.webp"
       }
     }
     this.parent.updateSource(updates)

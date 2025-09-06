@@ -24,7 +24,7 @@ export default class Maitrise extends foundry.abstract.TypeDataModel {
     if (!stats.duplicateSource && !stats.compendiumSource && !stats.exportSource) {
       // Image par défaut
       if (!foundry.utils.hasProperty(data, "img")) {
-        updates.img = "systems/penombre/assets/icons/maitrise.png"
+        updates.img = "systems/penombre/assets/icons/maitrise.webp"
       }
     }
     this.parent.updateSource(updates)

@@ -22,7 +22,7 @@ export default class Atout extends foundry.abstract.TypeDataModel {
     if (!stats.duplicateSource && !stats.compendiumSource && !stats.exportSource) {
       // Image par défaut
       if (!foundry.utils.hasProperty(data, "img")) {
-        updates.img = "systems/penombre/assets/icons/atout.png"
+        updates.img = "systems/penombre/assets/icons/atout.webp"
       }
     }
     this.parent.updateSource(updates)

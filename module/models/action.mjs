@@ -24,7 +24,7 @@ export default class Action extends foundry.abstract.TypeDataModel {
     if (!stats.duplicateSource && !stats.compendiumSource && !stats.exportSource) {
       // Image par défaut
       if (!foundry.utils.hasProperty(data, "img")) {
-        updates.img = "systems/penombre/assets/icons/action.png"
+        updates.img = "systems/penombre/assets/icons/action.webp"
       }
     }
     this.parent.updateSource(updates)

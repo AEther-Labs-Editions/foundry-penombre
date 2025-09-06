@@ -41,7 +41,7 @@ penombre-toggle-switch[checked] thumb {
   margin-left: calc(100% - var(--toggle-switch-thumb-width));
 }
 :root {
-  --logo-standard: url('/systems/penombre/assets/ui/jeton_face_active.png');
+  --logo-standard: url('/systems/penombre/assets/ui/jeton_fiche.webp');
 }
 /* ---------------------------------------------
         Variables LESS
@@ -156,27 +156,27 @@ body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-ti
   width: calc(100% - 313px);
 }
 body.theme-light .penombre.eminence .eminence-content .eminence-timbre .logo-penombre {
-  content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_clair.png");
+  content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_clair.webp");
 }
 body.theme-light .penombre.eminence .eminence-content .eminence-timbre .frise-penombre {
-  content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_clair.png");
+  content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_clair.webp");
 }
 body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 {
   min-height: 90px;
 }
 body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .logo-penombre {
-  content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_clair.png");
+  content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_clair.webp");
 }
 body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .frise-penombre {
-  content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_clair.png");
+  content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_clair.webp");
 }
 body.theme-dark .penombre.eminence .eminence-content .logo-penombre {
   float: none;
   width: 223px;
-  content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.png");
+  content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.webp");
 }
 body.theme-dark .penombre.eminence .eminence-content .frise-penombre {
-  content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.png");
+  content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.webp");
 }
 body.theme-dark .penombre.eminence .eminence-timbre-2 {
   min-height: 110px;
@@ -186,10 +186,10 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .cadre-img {
   background-color: #faeed6;
 }
 body.theme-dark .penombre.eminence .eminence-timbre-2 .logo-penombre {
-  content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.png");
+  content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.webp");
 }
 body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
-  content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.png");
+  content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.webp");
 }
 .penombre {
   /* ---------------------------------------------
@@ -1124,6 +1124,9 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 .penombre.atout .atout-content .standard-form .logo-frame .logo-img {
   width: 80px;
 }
+.penombre.atout .atout-content .standard-form .logo-frame .logo-img:hover {
+  cursor: pointer;
+}
 .penombre.atout .atout-content .standard-form .logo-frame .name {
   width: calc(100% - 90px);
 }
@@ -1140,6 +1143,9 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 .penombre.maitrise .maitrise-content .standard-form .logo-frame .logo-img {
   width: 80px;
 }
+.penombre.maitrise .maitrise-content .standard-form .logo-frame .logo-img:hover {
+  cursor: pointer;
+}
 .penombre.maitrise .maitrise-content .standard-form .logo-frame .name {
   width: calc(100% - 90px);
 }
@@ -1155,6 +1161,9 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 }
 .penombre.pouvoir .pouvoir-content .standard-form .logo-frame .logo-img {
   width: 80px;
+}
+.penombre.pouvoir .pouvoir-content .standard-form .logo-frame .logo-img:hover {
+  cursor: pointer;
 }
 .penombre.pouvoir .pouvoir-content .standard-form .logo-frame .name {
   width: calc(100% - 90px);
@@ -1179,6 +1188,9 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 .penombre.intrigue .intrigue-content .standard-form .logo-frame .logo-img {
   width: 80px;
 }
+.penombre.intrigue .intrigue-content .standard-form .logo-frame .logo-img:hover {
+  cursor: pointer;
+}
 .penombre.intrigue .intrigue-content .standard-form .logo-frame .name {
   width: calc(100% - 90px);
 }
@@ -1194,6 +1206,9 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 }
 .penombre.action .action-content .standard-form .logo-frame .logo-img {
   width: 80px;
+}
+.penombre.action .action-content .standard-form .logo-frame .logo-img:hover {
+  cursor: pointer;
 }
 .penombre.action .action-content .standard-form .logo-frame .name {
   width: calc(100% - 90px);

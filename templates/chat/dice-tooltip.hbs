@@ -19,7 +19,7 @@
                     {{#each part.rolls as |roll|}}
                     {{!log 'roll' roll @root ../id}}
                         <li class="roll {{roll.classes}}" data-indice="{{@../index}}-{{@index}}">
-                            <img src="/systems/penombre/assets/ui/des_numerotes/d{{../faces}}_{{roll.result}}.png" alt="Dé {{roll.result}}" data-tooltip="{{roll.result}}{{displayNbSuccess roll.result}}" data-tooltip-direction="UP">
+                            <img src="/systems/penombre/assets/ui/des_numerotes/d{{../faces}}_{{roll.result}}.webp" alt="Dé {{roll.result}}" data-tooltip="{{roll.result}}{{displayNbSuccess roll.result}}" data-tooltip-direction="UP">
                         </li>
                     {{/each}}
                     </ol>

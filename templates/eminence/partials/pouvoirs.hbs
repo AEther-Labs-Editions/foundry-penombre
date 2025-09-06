@@ -12,7 +12,7 @@
                 {{else}}
                 <div class="val-potentiel absolue">{{system.potentiel.pouvoirs}}</div>
                 {{/if}}
-                <img class="img-potentiel absolue" src="systems/penombre/assets/ui/potentiel_creux.png" alt="|" />
+                <img class="img-potentiel absolue" src="systems/penombre/assets/ui/potentiel_creux.webp" alt="|" />
             </div>
         </div>
         <div class="pouvoirs{{#if isStyleJeuAvance}}-2{{/if}} absolue">
@@ -35,7 +35,7 @@
                 {{#each pouvoirs as |item id|}}
                 <tr class="item draggable" data-item-id="{{item._id}}">
                     <td class="item-coche">
-                        <img class="item-case" data-action="utilisePouvoir" data-item-id="{{item._id}}" src="systems/penombre/assets/ui/transp_case_{{#if item.system.utilise}}checked{{else}}unchecked{{/if}}.png"></img>
+                        <img class="item-case" data-action="utilisePouvoir" data-item-id="{{item._id}}" src="systems/penombre/assets/ui/transp_case_{{#if item.system.utilise}}checked{{else}}unchecked{{/if}}.webp"></img>
                     </td>
                     <td>
                         <span class="item-name" data-tooltip="{{{item.system.description}}}">{{item.name}}</span>

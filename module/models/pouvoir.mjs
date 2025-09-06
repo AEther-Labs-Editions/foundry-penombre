@@ -25,7 +25,7 @@ export default class Pouvoir extends foundry.abstract.TypeDataModel {
     if (!stats.duplicateSource && !stats.compendiumSource && !stats.exportSource) {
       // Image par défaut
       if (!foundry.utils.hasProperty(data, "img")) {
-        updates.img = "systems/penombre/assets/icons/pouvoir.png"
+        updates.img = "systems/penombre/assets/icons/pouvoir.webp"
       }
     }
     this.parent.updateSource(updates)

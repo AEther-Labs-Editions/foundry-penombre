@@ -3,19 +3,19 @@
  */
 export function registerHandlebars() {
   Handlebars.registerHelper("getDiceImage", function (value) {
-    return `/systems/penombre/assets/ui/${value}-marge.png`
+    return `/systems/penombre/assets/ui/${value}-marge.webp`
   })
 
   Handlebars.registerHelper("getJetonImage", function (value) {
     switch (value) {
       case true:
       case "actif":
-        return `systems/penombre/assets/ui/jeton_face_active.png`
+        return `systems/penombre/assets/ui/jeton_face_active.webp`
       case false:
       case "inactif":
-        return `systems/penombre/assets/ui/jeton_face_inactive.png`
+        return `systems/penombre/assets/ui/jeton_face_inactive.webp`
       case "perdu":
-        return `systems/penombre/assets/ui/cercle.png`
+        return `systems/penombre/assets/ui/cercle.webp`
     }
   })
 

@@ -2,7 +2,7 @@
 <div class="eminence-timbre{{#if (or isStyleJeuStandard isStyleJeuAvance)}}-2{{/if}}">
   {{#if (or isStyleJeuStandard isStyleJeuAvance)}}
     <div class="cadre-img">
-      <img class="img-timbre" src="systems/penombre/assets/ui/timbre.png" />
+      <img class="img-timbre" src="systems/penombre/assets/ui/timbre.webp" />
     </div>
     <div class="datas-timbre">
       <div class="col-1-2">
@@ -16,16 +16,16 @@
           {{#times 4}}
             <label class="croche note{{@index}}">&#119136;</label>
           {{/times}}
-            <img class="case-ronde-note case-ronde-note1" data-action="note" data-index="1" src="systems/penombre/assets/ui/cercle_case_{{#if systemSource.timbre.note1}}checked{{else}}unchecked{{/if}}.png"></img>
-            <img class="case-ronde-note case-ronde-note2" data-action="note" data-index="2" src="systems/penombre/assets/ui/cercle_case_{{#if systemSource.timbre.note2}}checked{{else}}unchecked{{/if}}.png"></img>
-            <img class="case-ronde-note case-ronde-note3" data-action="note" data-index="3" src="systems/penombre/assets/ui/cercle_case_{{#if systemSource.timbre.note3}}checked{{else}}unchecked{{/if}}.png"></img>
-            <img class="case-ronde-note case-ronde-note4" data-action="note" data-index="4" src="systems/penombre/assets/ui/cercle_case_{{#if systemSource.timbre.note4}}checked{{else}}unchecked{{/if}}.png"></img>
-            <img class="case-ronde-cle" data-action="note" data-index="0" src="systems/penombre/assets/ui/cercle_case_{{#if systemSource.timbre.cle}}checked{{else}}unchecked{{/if}}.png"></img>
+            <img class="case-ronde-note case-ronde-note1" data-action="note" data-index="1" src="systems/penombre/assets/ui/cercle_case_{{#if systemSource.timbre.note1}}checked{{else}}unchecked{{/if}}.webp"></img>
+            <img class="case-ronde-note case-ronde-note2" data-action="note" data-index="2" src="systems/penombre/assets/ui/cercle_case_{{#if systemSource.timbre.note2}}checked{{else}}unchecked{{/if}}.webp"></img>
+            <img class="case-ronde-note case-ronde-note3" data-action="note" data-index="3" src="systems/penombre/assets/ui/cercle_case_{{#if systemSource.timbre.note3}}checked{{else}}unchecked{{/if}}.webp"></img>
+            <img class="case-ronde-note case-ronde-note4" data-action="note" data-index="4" src="systems/penombre/assets/ui/cercle_case_{{#if systemSource.timbre.note4}}checked{{else}}unchecked{{/if}}.webp"></img>
+            <img class="case-ronde-cle" data-action="note" data-index="0" src="systems/penombre/assets/ui/cercle_case_{{#if systemSource.timbre.cle}}checked{{else}}unchecked{{/if}}.webp"></img>
         </div>
       </div>
       <div class="col-2-2">
         {{#each systemFields.timbre.fields.statut.choices as |choice id|}}
-        <img class="statut-timbre-case" data-action="statut" data-index="{{@id}}" src="systems/penombre/assets/ui/transp_case_{{#if (eq ../system.timbre.statut @id)}}checked{{else}}unchecked{{/if}}.png" />
+        <img class="statut-timbre-case" data-action="statut" data-index="{{@id}}" src="systems/penombre/assets/ui/transp_case_{{#if (eq ../system.timbre.statut @id)}}checked{{else}}unchecked{{/if}}.webp" />
         <span>{{localize choice.label}}</span>
         {{/each}}
       </div>
