@@ -1,0 +1,35 @@
+type: pouvoir
+name: Venin alchimique
+_id: YpPKcuI0Zi1WcmME
+img: systems/penombre/assets/icons/pouvoir.png
+system:
+  utilise: false
+  description: >-
+    <p><em>D’une caresse mentale, j’ordonne à l’un de mes serpents de distiller
+    son venin.</em></p><p>À l’acquisition de ce pouvoir, choisissez une
+    harmonique.</p><p>En une action, Céliana récolte un venin à consommer plus
+    tard, ou tente de l’inoculer par morsure (action de nature). Jusqu’à la fin
+    de la scène, au choix :</p><ul><li><p>Le nombre de succès des actions en
+    lien avec l’harmonique choisie et réalisées par l’envenimé augmente ou
+    diminue de 1.</p></li><li><p>Les difficultés opposées par l’envenimé
+    augmentent ou diminuent de 1.</p></li></ul><p>Par ailleurs, tous les venins
+    alchimiques peuvent servir d’encres</p><p>de conjuration.</p>
+  type: peuple
+effects: []
+folder: NxgKbO9Dq94f1TSA
+sort: 150000
+ownership:
+  default: 0
+  6qbNUhuoJ67e6dmf: 3
+flags: {}
+_stats:
+  compendiumSource: Actor.FKX0hHU8tV6OekPm.Item.HIMHYEZgtkO2bez6
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.347'
+  systemId: penombre
+  systemVersion: '0'
+  createdTime: 1756899957638
+  modifiedTime: 1756899957638
+  lastModifiedBy: 6qbNUhuoJ67e6dmf
+_key: '!items!YpPKcuI0Zi1WcmME'

@@ -1,0 +1,454 @@
+folder: XPIQcOgA5DQHk5b4
+name: Céliana
+type: eminence
+img: systems/penombre/assets/portraits/celiana.png
+system:
+  peuple: feeNoire
+  cle: ame
+  potentiel:
+    pouvoirs: 0
+    atouts: 0
+    maitrises: 0
+  harmoniques:
+    ame:
+      valeur: d12
+    esprit:
+      valeur: d8
+    etincelle:
+      valeur: d6
+    nature:
+      valeur: d4
+    nuit:
+      valeur: d10
+  conscience:
+    valeur: 7
+    max: 7
+    jetons:
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+    complications:
+      une:
+        description: ''
+        valeur: 0
+      deux:
+        description: ''
+        valeur: 0
+      trois:
+        description: ''
+        valeur: 0
+      quatre:
+        description: ''
+        valeur: 0
+  timbre:
+    statut: harmonieux
+    cle: false
+    note1: false
+    note2: false
+    note3: false
+    note4: false
+    description: ''
+    peste: ''
+  atouts: []
+  maitrises: []
+  description: Méduse spoliée
+prototypeToken:
+  name: Céliana
+  displayName: 0
+  actorLink: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/penombre/assets/portraits/celiana.png
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: null
+  bar2:
+    attribute: null
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+  flags: {}
+  randomImg: false
+  appendNumber: false
+  prependAdjective: false
+items:
+  - name: Chevelure vivante (action gratuite par les serpents)
+    type: pouvoir
+    _id: m7oh2WXepebJSUjC
+    img: systems/penombre/assets/icons/pouvoir.png
+    system:
+      utilise: false
+      type: peuple
+      description: >-
+        <h1>Chevelure vivante</h1><p><em>Abandonne tes épaules tendues aux
+        langues bifides de mes amis…</em></p><p>Faites réaliser une action
+        physique aux serpents de Céliana (cette action ne compte pas dans la
+        limite d'actions par tour). Les serpents peuvent observer, mordre une
+        cible ou Céliana elle-même, l'aider dans sa tâche ou , si elle possède
+        ces autres pouvoirs, injecter du venin alchimique ou fixer d'un regard
+        médusant.</p><p>De plus, chaque fois qu’elle réalise une merveille (p.
+        31 du kit), son joueur peut lui choisir un nouveau pouvoir dans la liste
+        suivante, ou augmenter de 1 sa valeur de
+        conscience.</p><ul><li><p>Regard médusant</p></li><li><p>Venin
+        alchimique</p></li></ul>
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      6qbNUhuoJ67e6dmf: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    _key: '!actors.items!fSG1DvfPoQUix9mA.m7oh2WXepebJSUjC'
+  - name: Nous allons trouver mon compromis
+    type: atout
+    _id: WR4V1qycaSsnVY3g
+    img: systems/penombre/assets/icons/atout.png
+    system:
+      valeur: 3
+      description: ''
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      6qbNUhuoJ67e6dmf: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    _key: '!actors.items!fSG1DvfPoQUix9mA.WR4V1qycaSsnVY3g'
+  - name: Voix suave et chant mélodieux
+    type: atout
+    _id: 29h76jB2qBRbrJ2M
+    img: systems/penombre/assets/icons/atout.png
+    system:
+      valeur: 2
+      description: ''
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      6qbNUhuoJ67e6dmf: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    _key: '!actors.items!fSG1DvfPoQUix9mA.29h76jB2qBRbrJ2M'
+  - name: Femme de cour élevée dans la tradition
+    type: atout
+    _id: 8xtKAsLFa1UHeSq1
+    img: systems/penombre/assets/icons/atout.png
+    system:
+      valeur: 2
+      description: ''
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      6qbNUhuoJ67e6dmf: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    _key: '!actors.items!fSG1DvfPoQUix9mA.8xtKAsLFa1UHeSq1'
+  - name: Beauté à faire ramper un baron
+    type: atout
+    _id: eqO6yIe5XgAE5t61
+    img: systems/penombre/assets/icons/atout.png
+    system:
+      valeur: 2
+      description: ''
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      6qbNUhuoJ67e6dmf: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    _key: '!actors.items!fSG1DvfPoQUix9mA.eqO6yIe5XgAE5t61'
+  - name: Pas feutrés
+    type: atout
+    _id: ajD1AqnvHr9AYhtZ
+    img: systems/penombre/assets/icons/atout.png
+    system:
+      valeur: 1
+      description: ''
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      6qbNUhuoJ67e6dmf: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    _key: '!actors.items!fSG1DvfPoQUix9mA.ajD1AqnvHr9AYhtZ'
+  - type: maitrise
+    name: Accord
+    _id: UAzZtsJJDxcMBWzt
+    img: systems/penombre/assets/icons/maitrise.png
+    system:
+      description: >-
+        <h1>Céliana l'accordée</h1><p><strong>Pour préparer son effet magique,
+        Céliana
+        doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>interpréter un
+        morceau de musique</strong> en le chantant, les serpents agissant comme
+        un chœur sifflant.</p></li></ul><p><strong>Ce faisant,
+        elle…</strong></p><h6>Action magique</h6><ul><li><p><strong>entre en
+        résonance avec l’esprit de sa cible</strong> et pénètre cet espace
+        mental tant que dure cette cantate. Chaque esprit ressemble à une
+        contrée nouvelle et fantasmagorique.</p></li></ul><p><strong>Avec un
+        effet magique de niveau ? …</strong></p><p><strong>elle parvient par
+        exemple à…</strong></p><ol><li><p><strong>identifier</strong> un effet
+        magique d’art ancien (accord, décorum, geste) ; lire les pensées
+        superficielles et les émotions ;
+        etc.</p></li><li><p><strong>modifier</strong> les pensées superficielles
+        et les émotions ; apaiser, mettre en confiance, exalter, encourager,
+        soutenir ; provoquer culpabilité, découragement, déconcentration et
+        désorientation ; faire bégayer ; mettre en colère, enrager ; glisser un
+        message mental ; etc.</p></li><li><p><strong>lire</strong> des souvenirs
+        précis dans la mémoire ; perturber un sens (vue, ouïe, odorat…) ;
+        provoquer un mouvement involontaire, ou réflexe ; faire ressentir une
+        douleur fantôme ; diriger l’attention ; faire accepter un mensonge ;
+        libérer d’une emprise mentale ; créer une barrière mentale ; attaquer
+        l’esprit ; etc.</p></li><li><p><strong>effacer</strong>, modifier ou
+        créer un souvenir précis, ou un lien familial ou affectif ; créer une
+        phobie ; ouvrir un canal télépathique ; rendre invalide pour une scène
+        (endormir, hypnotiser, rendre sourd, aveugle, muet…) ; suggérer une
+        mission ou une action complexe à un personnage ; apporter l’oubli ou
+        l’acceptation d’un traumatisme psychologique ; provoquer une crise de
+        folie ; etc.</p></li><li><p><strong>inspirer</strong> une confiance ou
+        une terreur absolue ; revivre un souvenir comme s’il était de nouveau
+        réel ; rendre amnésique ; prendre le contrôle mental d’un personnage,
+        l’obliger à une action complexe, lui imposer une mission ; tuer ;
+        etc.</p></li></ol><p>Mais attention, elle risque également
+        de…</p><h6>Incident magique</h6><ul><li><p><strong>attirer les
+        faux-accords</strong>, des pratiquants de l’accord bannis par leurs
+        semblables. Ils guettent, assis dans le public ou désincarnés dans
+        l’esprit de leurs victimes, prêts à prendre leur revanche sur les autres
+        accordés.</p></li><li><p>Céliana subit un effet d’accord en retour ;
+        elle est provoquée en duel musical ; elle accède à un souvenir qu’elle
+        aurait préféré éviter ; etc.</p></li></ul>
+      harmonique: ame
+      niveau: 3
+      prerequis: Chanter
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      6qbNUhuoJ67e6dmf: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    _key: '!actors.items!fSG1DvfPoQUix9mA.UAzZtsJJDxcMBWzt'
+  - type: pouvoir
+    name: Regard médusant
+    _id: qGfnqopDq8PRX7uq
+    img: systems/penombre/assets/icons/pouvoir.png
+    system:
+      utilise: false
+      description: >-
+        <p><em>Les méduses ont-elles vraiment perdu leur pouvoir de
+        pétrification ? Il a peut-être juste évolué.</em></p><p>Une action de
+        Céliana incluant un contact visuel avec un personnage imprime dans son
+        esprit un ordre simple auquel il obéit. Cet ordre ne peut pas le mettre
+        en danger, et ne dure que le temps d’une scène.</p>
+      type: peuple
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      6qbNUhuoJ67e6dmf: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    _key: '!actors.items!fSG1DvfPoQUix9mA.qGfnqopDq8PRX7uq'
+  - type: pouvoir
+    name: Venin alchimique
+    _id: HIMHYEZgtkO2bez6
+    img: systems/penombre/assets/icons/pouvoir.png
+    system:
+      utilise: false
+      description: >-
+        <p><em>D’une caresse mentale, j’ordonne à l’un de mes serpents de
+        distiller son venin.</em></p><p>À l’acquisition de ce pouvoir,
+        choisissez une harmonique.</p><p>En une action, Céliana récolte un venin
+        à consommer plus tard, ou tente de l’inoculer par morsure (action de
+        nature). Jusqu’à la fin de la scène, au choix :</p><ul><li><p>Le nombre
+        de succès des actions en lien avec l’harmonique choisie et réalisées par
+        l’envenimé augmente ou diminue de 1.</p></li><li><p>Les difficultés
+        opposées par l’envenimé augmentent ou diminuent de
+        1.</p></li></ul><p>Par ailleurs, tous les venins alchimiques peuvent
+        servir d’encres</p><p>de conjuration.</p>
+      type: peuple
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      6qbNUhuoJ67e6dmf: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    _key: '!actors.items!fSG1DvfPoQUix9mA.HIMHYEZgtkO2bez6'
+effects: []
+ownership:
+  default: 0
+  6qbNUhuoJ67e6dmf: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.347'
+  systemId: penombre
+  systemVersion: '0'
+  createdTime: 1756985461950
+  modifiedTime: 1756985466608
+  lastModifiedBy: 6qbNUhuoJ67e6dmf
+_id: fSG1DvfPoQUix9mA
+sort: 200000
+_key: '!actors!fSG1DvfPoQUix9mA'

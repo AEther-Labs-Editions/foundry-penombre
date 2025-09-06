@@ -1,0 +1,20 @@
+type: Item
+folder: null
+name: Pouvoirs d'Esmeralda
+color: '#a4653d'
+sorting: a
+_id: WiYkAwp3Zlbrgg5T
+description: ''
+sort: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.347'
+  systemId: penombre
+  systemVersion: '0'
+  createdTime: 1756930676479
+  modifiedTime: 1756930676479
+  lastModifiedBy: 6qbNUhuoJ67e6dmf
+_key: '!folders!WiYkAwp3Zlbrgg5T'

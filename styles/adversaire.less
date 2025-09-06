@@ -35,6 +35,36 @@ body {
     font-size: @font-size-base;
     clear: both;
 
+    details {
+      summary {
+        font-size: @font-size-midlarge;
+        color: @color-blue;
+      }
+      i {
+        font-size: @font-size-midlarge;
+        color: @color-blue;
+      }
+
+      .editor {
+        font-size: @font-size-small;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: @font-cattedrale;
+        // text-transform: uppercase;
+        color: @color-primary;
+      }
+
+      p {
+        font-size: @font-size-small;
+      }
+    }
+
     .adversaire-main {
       width: 100%;
       .adversaire-personnage {
@@ -97,7 +127,7 @@ body {
               }
               .description {
                 font-family: @font-cattedrale;
-                color: @color-primary-clear;
+                color: @color-primary;
               }
             }
           }
@@ -139,11 +169,18 @@ body {
         display: flex;
         flex-direction: column;
         gap: 10px;
+
+
         .actions-adverses,
         .actions-dissonance {
           display: flex;
           flex-direction: column;
           justify-content: center;
+          border-bottom-style: solid;
+          border-width: 0.5px;
+          border-color: @color-accent;
+          margin-top: 7px;
+
           h2 {
             color: @color-blue;
             text-transform: uppercase;
@@ -156,11 +193,12 @@ body {
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
           gap: 10px;
+          margin-bottom: 5px;
           .action {
             &:nth-child(even) {
             }
             &:nth-child(odd) {
-            color: @color-primary-clear
+            color: @color-primary
             }
             position: relative;
             border: 1px solid #ccc;
@@ -187,6 +225,11 @@ body {
       .adversaire-intrigues {
         display: flex;
         flex-direction: column;
+        margin-bottom: 2px;
+        border-bottom-style: solid;
+        border-width: 0.5px;
+        border-color: @color-accent;
+
         h2 {
           color: @color-blue;
           text-transform: uppercase;
@@ -198,11 +241,12 @@ body {
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
           gap: 10px;
+          margin-bottom: 5px;
           .intrigue {
             &:nth-child(even) {
             }
             &:nth-child(odd) {
-            color: @color-primary-clear
+            color: @color-primary
             }
             position: relative;
             border: 1px solid #ccc;

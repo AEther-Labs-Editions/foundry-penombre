@@ -1,0 +1,33 @@
+type: pouvoir
+name: Fantasme d’onyx
+img: systems/penombre/assets/icons/pouvoir.png
+system:
+  utilise: false
+  description: >-
+    <h1>Fantasme d’onyx</h1><p><em>Comme des tentacules prudents…</em></p><p>Une
+    action impossible devient possible grâce à l’apparition d’un appendice
+    d’onyx éphémère (ailes, troisième œil, bras supplémentaire, etc.).</p><p>De
+    plus, chaque fois qu’il réalise une merveille (p. 31 du kit), son joueur
+    peut lui choisir un nouveau pouvoir dans la liste suivante, ou augmenter de
+    1 sa valeur de conscience.</p><ul><li><p>Homochromie</p></li><li><p>Suppôt
+    des abysses</p></li></ul>
+  type: naissance
+effects: []
+folder: aPmTjs8cZsnuZFqA
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.347'
+  systemId: penombre
+  systemVersion: '0'
+  createdTime: 1756984075132
+  modifiedTime: 1756984075132
+  lastModifiedBy: 6qbNUhuoJ67e6dmf
+_id: hf9UXAREEna1LrJZ
+sort: 100000
+ownership:
+  default: 0
+  6qbNUhuoJ67e6dmf: 3
+_key: '!items!hf9UXAREEna1LrJZ'

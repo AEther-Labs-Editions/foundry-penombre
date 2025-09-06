@@ -69,8 +69,31 @@ body {
 
   .div-jetons-2 {
 
+    display: table;
+
+    .col-1-1 {
+      width: 25px;
+      float: left;
+      transform: rotate(180deg);
+    }
+    .text-vertical {
+      font-family: @font-cattedrale;
+      letter-spacing: 5px;
+      color: @color-accent;
+      font-size: @font-size-middle;
+      writing-mode: vertical-rl;
+      text-orientation: sideways-left;
+    }
+    .col-2-1 {
+      width: 18px;
+      float: left;
+    }
+
     // Jetons
     .jetons {
+      margin-left: 35px;
+      width: 491px;
+
       display: grid;
       grid-template-columns: repeat(5, 1fr); /* 5 colonnes égales */
       gap: 10px;

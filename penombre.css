@@ -370,11 +370,11 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   transform: rotate(180deg);
 }
 .penombre.eminence .eminence-content .col-2-1 {
-  width: 9px;
+  width: 12px;
   float: left;
 }
 .penombre.eminence .eminence-content .col-3-1 {
-  width: 408px;
+  width: 404px;
   float: left;
   flex-direction: column;
   padding-left: 4px;
@@ -414,7 +414,7 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   text-orientation: sideways-left;
 }
 .penombre.eminence .eminence-content .eminence-personnage {
-  min-height: 175px;
+  min-height: 190px;
 }
 .penombre.eminence .eminence-content .eminence-personnage-2 {
   min-height: 250px;
@@ -456,7 +456,7 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 .penombre.eminence .eminence-content .eminence-personnage .data,
 .penombre.eminence .eminence-content .eminence-personnage-2 .data {
   float: left;
-  width: 254px;
+  width: 250px;
   clear: right;
 }
 .penombre.eminence .eminence-content .eminence-personnage .data .name,
@@ -1115,6 +1115,12 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 .penombre.atout .atout-content .standard-form .logo-frame .name {
   width: calc(100% - 90px);
 }
+.penombre.atout .atout-content .standard-form .auto {
+  min-height: 100%;
+}
+.penombre.atout .atout-content .standard-form .auto .editor {
+  min-height: 100%;
+}
 .penombre.maitrise .maitrise-content .standard-form .logo-frame {
   display: flex;
   justify-content: space-between;
@@ -1124,6 +1130,12 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 }
 .penombre.maitrise .maitrise-content .standard-form .logo-frame .name {
   width: calc(100% - 90px);
+}
+.penombre.maitrise .maitrise-content .standard-form .auto {
+  min-height: 100%;
+}
+.penombre.maitrise .maitrise-content .standard-form .auto .editor {
+  min-height: 100%;
 }
 .penombre.pouvoir .pouvoir-content .standard-form .logo-frame {
   display: flex;
@@ -1142,6 +1154,12 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 .penombre.pouvoir .pouvoir-content .standard-form .details select[name="system.type"] {
   width: 100px;
 }
+.penombre.pouvoir .pouvoir-content .standard-form .auto {
+  min-height: 100%;
+}
+.penombre.pouvoir .pouvoir-content .standard-form .auto .editor {
+  min-height: 100%;
+}
 .penombre.intrigue .intrigue-content .standard-form .logo-frame {
   display: flex;
   justify-content: space-between;
@@ -1152,6 +1170,12 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 .penombre.intrigue .intrigue-content .standard-form .logo-frame .name {
   width: calc(100% - 90px);
 }
+.penombre.intrigue .intrigue-content .standard-form .auto {
+  min-height: 100%;
+}
+.penombre.intrigue .intrigue-content .standard-form .auto .editor {
+  min-height: 100%;
+}
 .penombre.action .action-content .standard-form .logo-frame {
   display: flex;
   justify-content: space-between;
@@ -1161,6 +1185,12 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 }
 .penombre.action .action-content .standard-form .logo-frame .name {
   width: calc(100% - 90px);
+}
+.penombre.action .action-content .standard-form .auto {
+  min-height: 100%;
+}
+.penombre.action .action-content .standard-form .auto .editor {
+  min-height: 100%;
 }
 body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   background-color: #faeed6;
@@ -1215,7 +1245,29 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   width: 68px;
   height: 68px;
 }
+#penombre-reserve-collegiale .div-jetons-2 {
+  display: table;
+}
+#penombre-reserve-collegiale .div-jetons-2 .col-1-1 {
+  width: 25px;
+  float: left;
+  transform: rotate(180deg);
+}
+#penombre-reserve-collegiale .div-jetons-2 .text-vertical {
+  font-family: "Cattedrale";
+  letter-spacing: 5px;
+  color: #917f35;
+  font-size: 19px;
+  writing-mode: vertical-rl;
+  text-orientation: sideways-left;
+}
+#penombre-reserve-collegiale .div-jetons-2 .col-2-1 {
+  width: 18px;
+  float: left;
+}
 #penombre-reserve-collegiale .div-jetons-2 .jetons {
+  margin-left: 35px;
+  width: 491px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   /* 5 colonnes égales */
@@ -1286,12 +1338,28 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 }
 .penombre-roll-dialog .line-2 fieldset .atouts {
   overflow-y: auto;
+  height: 145px;
+  border: solid;
+  border-width: 1px;
+  border-color: gray;
 }
 .penombre-roll-dialog .line-2 fieldset .atouts .atout {
   margin-top: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-left: 2px;
+  margin-right: 2px;
+  /*
+            &:nth-child(even) {
+          }
+          */
+}
+.penombre-roll-dialog .line-2 fieldset .atouts .atout:hover {
+  cursor: pointer;
+}
+.penombre-roll-dialog .line-2 fieldset .atouts .atout:nth-child(even) {
+  background-color: silver;
 }
 .penombre-roll-dialog .line-2 fieldset .atouts .atout.checked {
   background-color: #917f35;
@@ -1300,7 +1368,7 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 .penombre-roll-dialog .line-2 fieldset .bonus-total {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
 }
 .penombre-roll-dialog .line-2 fieldset .bonus-total label {
@@ -1338,6 +1406,8 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 .penombre-roll-dialog .line-3 .part-right-3 .depensetotal {
   float: left;
   width: 100%;
+  display: flex;
+  align-items: center;
 }
 .penombre-roll-dialog .line-3 .part-right-3 .depensetotal label {
   width: 200px;
@@ -1525,6 +1595,29 @@ body.theme-light .penombre.adversaire .adversaire-content {
   font-size: 17px;
   clear: both;
 }
+.penombre.adversaire .adversaire-content details summary {
+  font-size: 25px;
+  color: #124b63;
+}
+.penombre.adversaire .adversaire-content details i {
+  font-size: 25px;
+  color: #124b63;
+}
+.penombre.adversaire .adversaire-content details .editor {
+  font-size: 13px;
+}
+.penombre.adversaire .adversaire-content details h1,
+.penombre.adversaire .adversaire-content details h2,
+.penombre.adversaire .adversaire-content details h3,
+.penombre.adversaire .adversaire-content details h4,
+.penombre.adversaire .adversaire-content details h5,
+.penombre.adversaire .adversaire-content details h6 {
+  font-family: "Cattedrale";
+  color: #a56135;
+}
+.penombre.adversaire .adversaire-content details p {
+  font-size: 13px;
+}
 .penombre.adversaire .adversaire-content .adversaire-main {
   width: 100%;
 }
@@ -1591,7 +1684,7 @@ body.theme-light .penombre.adversaire .adversaire-content {
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .nom.locked .description {
   font-family: "Cattedrale";
-  color: #a47c64;
+  color: #a56135;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .adversite {
   display: flex;
@@ -1634,6 +1727,10 @@ body.theme-light .penombre.adversaire .adversaire-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-bottom-style: solid;
+  border-width: 0.5px;
+  border-color: #917f35;
+  margin-top: 7px;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions-adverses h2,
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions-dissonance h2 {
@@ -1647,6 +1744,7 @@ body.theme-light .penombre.adversaire .adversaire-content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 10px;
+  margin-bottom: 5px;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions .action {
   position: relative;
@@ -1655,7 +1753,7 @@ body.theme-light .penombre.adversaire .adversaire-content {
   padding: 10px;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions .action:nth-child(odd) {
-  color: #a47c64;
+  color: #a56135;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions .action .nom {
   font-weight: bold;
@@ -1674,6 +1772,10 @@ body.theme-light .penombre.adversaire .adversaire-content {
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues {
   display: flex;
   flex-direction: column;
+  margin-bottom: 2px;
+  border-bottom-style: solid;
+  border-width: 0.5px;
+  border-color: #917f35;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues h2 {
   color: #124b63;
@@ -1686,6 +1788,7 @@ body.theme-light .penombre.adversaire .adversaire-content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 10px;
+  margin-bottom: 5px;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues .intrigues .intrigue {
   position: relative;
@@ -1694,7 +1797,7 @@ body.theme-light .penombre.adversaire .adversaire-content {
   padding: 10px;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues .intrigues .intrigue:nth-child(odd) {
-  color: #a47c64;
+  color: #a56135;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues .intrigues .intrigue .nom {
   font-weight: bold;

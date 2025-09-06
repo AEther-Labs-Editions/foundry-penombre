@@ -1,0 +1,33 @@
+name: Spectacle vivant
+type: pouvoir
+_id: nX4gy5Dx1dHloNYL
+img: systems/penombre/assets/icons/pouvoir.png
+system:
+  utilise: false
+  type: peuple
+  description: >-
+    <h1>Spectacle vivant</h1><p><em>Être satyre c'est offrir à l'Harmonde un
+    spectacle quotidien.</em></p><p>Le temps d'une action spectaculaire,
+    utilisez gratuitement le D20 merveilleux en plus du dé harmonique.</p><p>De
+    plus, chaque fois qu’il réalise une merveille (p. 31 du kit), son joueur
+    peut lui choisir un nouveau pouvoir dans la liste suivante, ou augmenter de
+    1 sa valeur de conscience.</p><ul><li><p>Plaisir
+    grisant</p></li><li><p>Triomphe</p></li></ul>
+effects: []
+folder: lLVYkr2eG13xLU7R
+sort: 100000
+ownership:
+  default: 0
+  6qbNUhuoJ67e6dmf: 3
+flags: {}
+_stats:
+  compendiumSource: Actor.mjfSDkvnDay0dXfO.Item.iiPkEFrzVLyHDK3e
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.347'
+  systemId: penombre
+  systemVersion: '0'
+  createdTime: 1756899955731
+  modifiedTime: 1756899955731
+  lastModifiedBy: 6qbNUhuoJ67e6dmf
+_key: '!items!nX4gy5Dx1dHloNYL'
