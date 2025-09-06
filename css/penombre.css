@@ -1360,22 +1360,15 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 .penombre-roll-dialog .line-1 .part-right-1 fieldset .options input {
   margin-right: 5px;
 }
-.penombre-roll-dialog .line-1 .part-right-1 .form-group.effet-magique-niveau {
-  display: flex;
-}
-.penombre-roll-dialog .line-1 .part-right-1 .form-group.effet-magique-niveau label {
-  flex: 2;
-}
-.penombre-roll-dialog .line-1 .part-right-1 .form-group.effet-magique-niveau .form-fields select {
-  flex: 1;
-  height: 20px;
-}
+.penombre-roll-dialog .line-1 .part-right-1 .form-group.effet-magique-niveau,
 .penombre-roll-dialog .line-1 .part-right-1 .form-group.effet-magique-maitrise {
-  display: flex;
+  display: none;
 }
+.penombre-roll-dialog .line-1 .part-right-1 .form-group.effet-magique-niveau label,
 .penombre-roll-dialog .line-1 .part-right-1 .form-group.effet-magique-maitrise label {
   flex: 2;
 }
+.penombre-roll-dialog .line-1 .part-right-1 .form-group.effet-magique-niveau .form-fields select,
 .penombre-roll-dialog .line-1 .part-right-1 .form-group.effet-magique-maitrise .form-fields select {
   flex: 1;
   height: 20px;
@@ -1385,7 +1378,6 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 }
 .penombre-roll-dialog .line-2 fieldset .atouts {
   overflow-y: auto;
-  height: 145px;
   border: solid;
   border-width: 1px;
   border-color: gray;
