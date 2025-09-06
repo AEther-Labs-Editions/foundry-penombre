@@ -1599,7 +1599,7 @@ body.theme-light .penombre.adversaire .adversaire-content {
   font-size: 25px;
   color: #124b63;
 }
-.penombre.adversaire .adversaire-content details i {
+.penombre.adversaire .adversaire-content details i.fa-message-pen {
   font-size: 25px;
   color: #124b63;
 }
