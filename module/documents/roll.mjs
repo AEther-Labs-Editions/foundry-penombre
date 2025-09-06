@@ -108,6 +108,9 @@ export default class PenombreRoll extends Roll {
         },
       ],
       render: (event, dialog) => {
+        // Contrôle le nombre de jetons et active/désactive le bouton de lancement du jet
+        PenombreRoll._updateNbJetons()
+
         // Harmonique
         const harmoniqueSelect = dialog.element.querySelector("#harmonique")
         if (harmoniqueSelect) {
@@ -117,6 +120,11 @@ export default class PenombreRoll extends Roll {
         const actionCollegiale = dialog.element.querySelector("#actionCollegiale")
         if (actionCollegiale) {
           actionCollegiale.addEventListener("change", this._onToggleActionCollegiale.bind(this))
+        }
+        // Case Premier atout pour action collégiale : permet d'avoir le premier atout sans coût en jeton
+        const actionCollegialePremierAtout = dialog.element.querySelector("#actionCollegialePremierAtout")
+        if (actionCollegialePremierAtout) {
+          actionCollegialePremierAtout.addEventListener("change", this._onToggleActionCollegialePremierAtout.bind(this))
         }
         // Effet magique
         const effetMagique = dialog.element.querySelector("#effetMagique")
@@ -205,6 +213,18 @@ export default class PenombreRoll extends Roll {
   }
 
   static _onToggleActionCollegiale(event) {
+    const premierAtoutLabel = document.querySelector("label.premierAtout")
+    if (event.target.checked) {
+      if (premierAtoutLabel) premierAtoutLabel.style.visibility = "visible"
+    } else {
+      if (premierAtoutLabel) premierAtoutLabel.style.visibility = "hidden"
+      const premierAtoutCheckbox = document.querySelector("#actionCollegialePremierAtout")
+      if (premierAtoutCheckbox) premierAtoutCheckbox.checked = false
+    }
+    PenombreRoll._updateNbJetons()
+  }
+
+  static _onToggleActionCollegialePremierAtout(event) {
     PenombreRoll._updateNbJetons()
   }
 
@@ -254,7 +274,7 @@ export default class PenombreRoll extends Roll {
 
     // Calcul du nombre de jetons à dépenser
     PenombreRoll._updateNbJetons()
-    PenombreRoll._updateFormula()    
+    PenombreRoll._updateFormula()
   }
 
   static _onToggleDeMerveilleux(event) {
@@ -321,12 +341,23 @@ export default class PenombreRoll extends Roll {
   }
 
   static _updateNbJetons() {
-    // Atouts
-    const jetonsAtouts = Math.max(document.querySelectorAll(".atout.checked").length - 1, 0)
-
     // Action collégiale
     const actionCollegiale = document.querySelector("#actionCollegiale")?.checked ?? false
     const jetonActionCollegiale = actionCollegiale ? 1 : 0
+
+    // Le joueur a-t-il coché la case "Premier atout pour action collégiale" ?
+    const actionCollegialePremierAtout = document.querySelector("#actionCollegialePremierAtout")?.checked ?? false
+
+    // Atouts : 1 jeton par atout au-delà du premier sinon 1 jeton par atout
+    // Dans le cas d'une action collégiale, le premier atout ne coûte pas de jeton si la case est cochée
+    // Pour une action collégiale liée, si la case est cochée, le premier atout ne coûte pas de jeton
+    const nbAtoutsSelectionnes = Number(document.querySelectorAll(".atout.checked").length)
+    let premierAtoutGratuit = false
+    if ((actionCollegiale && actionCollegialePremierAtout) || !actionCollegiale || (!actionCollegiale && actionCollegialePremierAtout)) {
+      premierAtoutGratuit = true
+    }
+    let jetonsAtouts = nbAtoutsSelectionnes
+    if (premierAtoutGratuit) jetonsAtouts = Math.max(nbAtoutsSelectionnes - 1, 0)
 
     // Dé merveilleux
     const deMerveilleux = document.querySelector("#deMerveilleux").checked
@@ -347,7 +378,7 @@ export default class PenombreRoll extends Roll {
       const maitrise = actor.itemTypes.maitrise.find((m) => m.system.slug === maitriseSlug)
       if (maitrise) niveauMaitrise = maitrise.system.niveau || 0
     }
-    const jetonsEffetMagiqueMaitrise = Math.max(niveauEffetMagique - niveauMaitrise, 0)
+    const jetonsEffetMagiqueMaitrise = effetMagique ? Math.max(niveauEffetMagique - niveauMaitrise, 0) : 0
 
     // Total des jetons à dépenser
     const jetons = jetonsAtouts + jetonActionCollegiale + jetonDeMerveilleux + jetonEffetMagique + jetonsEffetMagiqueMaitrise
@@ -357,7 +388,7 @@ export default class PenombreRoll extends Roll {
     const tooltipLabel = document.querySelector("#jetonsDepenserTooltip")
     if (tooltipLabel) {
       const tooltipContent = `
-        • Atouts : ${jetonsAtouts} <br>
+        • Atouts : ${jetonsAtouts} ${nbAtoutsSelectionnes > 0 && premierAtoutGratuit ? "(Premier atout gratuit)" : ""}<br>
         • Action collégiale : ${jetonActionCollegiale} <br>
         • Dé merveilleux : ${jetonDeMerveilleux} <br>
         • Produire effet magique : ${jetonEffetMagique} <br>

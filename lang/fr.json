@@ -427,7 +427,8 @@
       "lancerDes": "Lancer les dés",
       "jetHarmonique": "Jet d'harmonique",
       "effetMagiqueNiveau": "Niveau de l'effet",
-      "effetMagiqueMaitrise": "Maîtrise utilisée"
+      "effetMagiqueMaitrise": "Maîtrise utilisée",
+      "actionCollegialePremierAtout": "J'ai choisi le premier atout pour l'action collégiale"
     },
     "warnings": {
       "jetonsDepassement": "Trop de jetons sélectionnés",

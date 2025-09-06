@@ -1404,16 +1404,24 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   background-color: #917f35;
   color: white;
 }
-.penombre-roll-dialog .line-2 fieldset .bonus-total {
+.penombre-roll-dialog .line-2 fieldset .options-total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.penombre-roll-dialog .line-2 fieldset .options-total .bonus-total {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
 }
-.penombre-roll-dialog .line-2 fieldset .bonus-total label {
+.penombre-roll-dialog .line-2 fieldset .options-total .bonus-total label {
   margin-right: 10px;
 }
-.penombre-roll-dialog .line-2 fieldset .bonus-total input {
+.penombre-roll-dialog .line-2 fieldset .options-total .bonus-total input {
   text-align: center;
   width: 40px;
 }

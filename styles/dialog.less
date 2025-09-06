@@ -51,7 +51,8 @@
           }
         }
       }
-      .form-group.effet-magique-niveau, .form-group.effet-magique-maitrise {
+      .form-group.effet-magique-niveau,
+      .form-group.effet-magique-maitrise {
         display: none; // Masqué par défaut
         label {
           flex: 2;
@@ -63,8 +64,8 @@
           }
         }
       }
-      }
     }
+  }
 
   .line-2 {
     fieldset {
@@ -103,20 +104,28 @@
         }
       }
 
-      .bonus-total {
+      .options-total {
         display: flex;
         flex-direction: row;
-        // justify-content: flex-start;
-        justify-content: flex-end;
+        justify-content: space-between;
         align-items: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        .bonus-total {
+          display: flex;
+          flex-direction: row;
+          // justify-content: flex-start;
+          justify-content: flex-end;
+          align-items: center;
 
-        label {
-          margin-right: 10px;
-        }
+          label {
+            margin-right: 10px;
+          }
 
-        input {
-          text-align: center;
-          width: 40px;
+          input {
+            text-align: center;
+            width: 40px;
+          }
         }
       }
     }

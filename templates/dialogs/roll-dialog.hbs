@@ -64,9 +64,12 @@
           </div>
         {{/each}}      
       </div>
-      <div class="bonus-total">
-        <label>{{ localize 'PENOMBRE.ui.bonusTotal' }}</label>
-        <input type="number" id="bonusAtouts" name="bonusAtouts" value={{bonusAtouts}} readonly />
+      <div class="options-total">
+        <label class="premierAtout" style="visibility: {{#if (eq messageType "principal")}}hidden{{else}}visible{{/if}};"><input type="checkbox" name="actionCollegialePremierAtout" id="actionCollegialePremierAtout"/>{{localize 'PENOMBRE.ui.actionCollegialePremierAtout' }}</label>
+        <div class="bonus-total">
+          <label>{{ localize 'PENOMBRE.ui.bonusTotal' }}</label>
+          <input type="number" id="bonusAtouts" name="bonusAtouts" value={{bonusAtouts}} readonly />
+        </div>
       </div>
     </fieldset>
   </div>
