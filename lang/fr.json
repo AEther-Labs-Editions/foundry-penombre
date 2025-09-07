@@ -14,13 +14,13 @@
   },
   "PENOMBRE": {
     "Feuille": {
-      "eminence": "Feuille d'Éminence grise",
+      "eminence": "Feuille d’Éminence grise",
       "pouvoir": "Feuille de Pouvoir",
-      "atout": "Feuille d'Atout",
+      "atout": "Feuille d’Atout",
       "maitrise": "Feuille de Maîtrise magique",
-      "adversaire": "Feuille d'Adversaire",
-      "action": "Feuille d'Action",
-      "intrigue": "Feuille d'Intrigue"
+      "adversaire": "Feuille d’Adversaire",
+      "action": "Feuille d’Action",
+      "intrigue": "Feuille d’Intrigue"
     },
     "Eminence": {
       "FIELDS": {
@@ -399,7 +399,7 @@
       "jetonsDepenseAuto": "Dépense automatique",
       "reserveCollegiale": "Réserve collégiale",
       "jetonsConscienceRestant": "Nombre de jetons de conscience restant",
-      "jetonsConscienceRestantOuvertureFenetre": "Nombre de jetons restant dans la réserve collégiale au moment de l'ouverture de cette fenêtre",
+      "jetonsConscienceRestantOuvertureFenetre": "Nombre de jetons restant dans la réserve collégiale au moment de l’ouverture de cette fenêtre",
       "creerJetons": "(pensez à en créer pour préserver vos jetons)",
       "clicJetons": "Clic pour dépenser ou réactiver un jeton. <br>Clic-droit pour perdre ou ajouter un jeton.",
       "timbre": "Timbre",
@@ -426,18 +426,18 @@
       "actionCollegiale": "Action collégiale",
       "effetMagique": "Effet magique",
       "lancerDes": "Lancer les dés",
-      "jetHarmonique": "Jet d'harmonique",
-      "effetMagiqueNiveau": "Niveau de l'effet",
+      "jetHarmonique": "Jet d’harmonique",
+      "effetMagiqueNiveau": "Niveau de l’effet",
       "effetMagiqueMaitrise": "Maîtrise utilisée",
-      "actionCollegialePremierAtout": "J'ai choisi le premier atout pour l'action collégiale",
+      "actionCollegialePremierAtout": "J’ai choisi le premier atout pour l’action collégiale",
       "actionPrincipale": "Action collégiale (principale)",
       "actionLiee": "Action collégiale (liée)",
       "participerOui": "Participer",
       "participerNon": "Ne pas participer",
       "success": "Succès",
       "otherSuccess": "Autres succès",
-      "resultSuccess": "C'est réussi !",
-      "resultEchec": "Le nombre de succès n'est pas suffisant (raté de {x})",
+      "resultSuccess": "C’est réussi !",
+      "resultEchec": "Le nombre de succès n’est pas suffisant (raté de {x})",
       "resultEchecTooltip": "3 options <br> - Réussite mitigée <br> - Prolongation <br> - Échec",
       "relanceConscience": "Relance (Conscience)",
       "relanceReserve": "Relance (Réserve)"
@@ -450,9 +450,9 @@
     },
     "warnings": {
       "jetonsDepassement": "Trop de jetons sélectionnés",
-      "jetonsConscienceInsuffisants": "Vous avez demandé {demande} jeton(s) de conscience alors qu'il ne vous en reste plus que {actuel} !",
-      "jetonsReserveInsuffisants": "Vous avez demandé {demande} jeton(s) de la réserve collégiale alors qu'il n'en reste actuellement plus que {actuel} !",
-      "limiteNbJetonsDemo": "Avec le style de jeu 'Kit de démo', le nombre maximum de jetons dans la réserve collégiale sera forcé à 10."
+      "jetonsConscienceInsuffisants": "Vous avez demandé {demande} jeton(s) de conscience alors qu’il ne vous en reste plus que {actuel} !",
+      "jetonsReserveInsuffisants": "Vous avez demandé {demande} jeton(s) de la réserve collégiale alors qu’il n’en reste actuellement plus que {actuel} !",
+      "limiteNbJetonsDemo": "Avec le style de jeu ’Kit de démo’, le nombre maximum de jetons dans la réserve collégiale sera forcé à 10."
     },
     "Settings": {
       "styleJeu": {
