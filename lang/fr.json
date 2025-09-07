@@ -7,7 +7,7 @@
     "Item": {
       "pouvoir": "Pouvoir",
       "atout": "Atout",
-      "maitrise": "Maitrise magique",
+      "maitrise": "Maîtrise magique",
       "action": "Action",
       "intrigue": "Intrigue"
     }
@@ -17,7 +17,7 @@
       "eminence": "Feuille d'Éminence grise",
       "pouvoir": "Feuille de Pouvoir",
       "atout": "Feuille d'Atout",
-      "maitrise": "Feuille de Maitrise magique",
+      "maitrise": "Feuille de Maîitrise magique",
       "adversaire": "Feuille d'Adversaire",
       "action": "Feuille d'Action",
       "intrigue": "Feuille d'Intrigue"
@@ -44,7 +44,7 @@
         "harmoniques": {
           "ame": {
             "valeur": {
-              "label": "Ame"
+              "label": "Âme"
             }
           },
           "esprit": {
@@ -54,7 +54,7 @@
           },
           "etincelle": {
             "valeur": {
-              "label": "Etincelle"
+              "label": "Étincelle"
             }
           },
           "nature": {
@@ -69,7 +69,7 @@
           }
         },
         "cle": {
-          "label": "Clef"
+          "label": "Clé"
         },
         "gamme": {
           "label": "Gamme"
@@ -152,7 +152,7 @@
           "label": "Peuple"
         },
         "cle": {
-          "label": "Clef"
+          "label": "Clé"
         },
         "gamme": {
           "label": "Gamme"
@@ -187,13 +187,13 @@
     },
     "Harmonique": {
       "ame": {
-        "label": "Ame"
+        "label": "Âme"
       },
       "esprit": {
         "label": "Esprit"
       },
       "etincelle": {
-        "label": "Etincelle"
+        "label": "Étincelle"
       },
       "nature": {
         "label": "Nature"
@@ -222,7 +222,7 @@
         "label": "Minotaure"
       },
       "ameAccouchee": {
-        "label": "Ame accouchée"
+        "label": "Âme accouchée"
       },
       "opalinDeLaRomance": {
         "label": "Opalin de la Romance"
@@ -306,18 +306,18 @@
         },
         "adversite": {
           "valeur": {
-            "label": "Adversite"
+            "label": "Adversité"
           },
           "max": {
-            "label": "Adversite Max"
+            "label": "Adversité Max"
           }
         },
         "resilience": {
           "valeur": {
-            "label": "Resilience"
+            "label": "Résilience"
           },
           "max": {
-            "label": "Resilience Max"
+            "label": "Résilience Max"
           }
         },
         "dissonance": {
@@ -364,9 +364,9 @@
         "harmoniques": "Harmoniques",
         "conscience": "Conscience"
       },
-      "ame": "Ame",
+      "ame": "Âme",
       "esprit": "Esprit",
-      "etincelle": "Etincelle",
+      "etincelle": "Étincelle",
       "nature": "Nature",
       "nuit": "Nuit",
       "actionScelerate": "Action Scélérate",
@@ -377,7 +377,7 @@
       "difficulte": "Difficulté",
       "nom": "Nom",
       "peuple": "Peuple",
-      "cle": "Clef",
+      "cle": "Clé",
       "gamme": "Gamme",
       "ton": "Ton",
       "conscienceVal": "Actuelle",
@@ -389,7 +389,7 @@
       "pouvoirs": "Pouvoirs",
       "atout": "Atout",
       "atouts": "Atouts",
-      "maitrises": "Maitrises magiques",
+      "maitrises": "Maîtrises magiques",
       "actions": "Actions",
       "intrigues": "Intrigues",
       "potentiel": "Potentiel",
@@ -416,7 +416,7 @@
       "actionAdverseNew": "Nouvelle action adverse",
       "intrigueNew": "Nouvelle intrigue",
       "harmonique": "Harmonique",
-      "prerequis": "Prerequis",
+      "prerequis": "Prérequis",
       "niveau": "Niveau",
       "niveau:": "Niveau : ",
       "bonusTotal": "Bonus total",

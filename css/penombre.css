@@ -1573,6 +1573,7 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 }
 #interface #sidebar .chat-message .message-header img,
 #interface #ui-right-column-1 .chat-message .message-header img {
+  border-radius: 2.5px;
   max-width: 50px;
   max-height: 50px;
   margin-right: 4px;
