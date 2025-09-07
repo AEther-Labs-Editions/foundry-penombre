@@ -1556,7 +1556,7 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 }
 #interface #sidebar .chat-message .message-header,
 #interface #ui-right-column-1 .chat-message .message-header {
-  border-bottom: 1px solid #5d142b;
+  border-bottom: 1.5px solid #a56135;
   display: grid;
 }
 .theme-dark #interface #sidebar .chat-message .message-header,
@@ -1574,15 +1574,18 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 #interface #sidebar .chat-message .message-header img,
 #interface #ui-right-column-1 .chat-message .message-header img {
   border-radius: 2.5px;
+  border-left: 0.5px solid #a56135;
+  border-top: 0.5px solid #a56135;
+  border-right: 0.5px solid #a56135;
   max-width: 50px;
   max-height: 50px;
   margin-right: 4px;
 }
 #interface #sidebar .chat-message .message-header .title,
 #interface #ui-right-column-1 .chat-message .message-header .title {
+  color: #a56135;
   font-family: "Cattedrale";
   font-size: 18px;
-  font-weight: bold;
   display: inline;
   text-wrap: auto;
 }
