@@ -1712,6 +1712,8 @@ body {
 body.theme-light .penombre.adversaire .adversaire-content {
   background-color: #faeed6;
   /* Si et seulement si on est en mode clair (et pas sombre) de la fiche */
+  background-image: url("/systems/penombre/assets/ui/fond.webp");
+  background-repeat: repeat;
 }
 .penombre.adversaire .adversaire-content {
   overflow-y: auto;
