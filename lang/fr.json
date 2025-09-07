@@ -420,6 +420,7 @@
       "niveau": "Niveau",
       "niveau:": "Niveau : ",
       "bonusTotal": "Bonus total",
+      "total": "Total",
       "formule": "Formule",
       "plutotDeMerveilleux": "Plutôt le Dé merveilleux",
       "actionCollegiale": "Action collégiale",
@@ -428,7 +429,24 @@
       "jetHarmonique": "Jet d'harmonique",
       "effetMagiqueNiveau": "Niveau de l'effet",
       "effetMagiqueMaitrise": "Maîtrise utilisée",
-      "actionCollegialePremierAtout": "J'ai choisi le premier atout pour l'action collégiale"
+      "actionCollegialePremierAtout": "J'ai choisi le premier atout pour l'action collégiale",
+      "actionPrincipale": "Action collégiale (principale)",
+      "actionLiee": "Action collégiale (liée)",
+      "participerOui": "Participer",
+      "participerNon": "Ne pas participer",
+      "success": "Succès",
+      "otherSuccess": "Autres succès",
+      "resultSuccess": "C'est réussi !",
+      "resultEchec": "Le nombre de succès n'est pas suffisant (raté de {x})",
+      "resultEchecTooltip": "3 options <br> - Réussite mitigée <br> - Prolongation <br> - Échec",
+      "relanceConscience": "Relance (Conscience)",
+      "relanceReserve": "Relance (Réserve)"
+    },
+    "Roll": {
+      "fausseNote": "Fausse note",
+      "envolee": "Envolée",
+      "incidentMagique": "Incident magique",
+      "merveille": "Merveille"
     },
     "warnings": {
       "jetonsDepassement": "Trop de jetons sélectionnés",

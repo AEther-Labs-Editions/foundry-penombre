@@ -1,6 +1,6 @@
 #interface #sidebar,
 #interface #ui-right-column-1 {
-  & .chat-message {
+  & .chat-message {    
     .theme-dark & {
       background: #0b0a13e6;
       color: var(--color-textLight);
@@ -11,6 +11,7 @@
     }
     .theme-light & {
       background-color: var(--color-light-3);
+      background-image: url("/systems/penombre/assets/ui/fond.webp");
       color: #222;
       span,
       label {
@@ -60,6 +61,19 @@
           font-family: "Cattedrale";
           font-size: 1.1rem;
           text-align: center;
+          .roll-result-total {
+            text-align: center;
+            .roll-result-special {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              img {
+                max-width: 32px;
+                max-height: 32px;
+                margin-right: 10px;
+              }
+            }
+          }
         }
         .participate-container {
           display: flex;
@@ -101,10 +115,10 @@
               cursor: var(--cursor-pointer);
             }
             &.max {
-              filter: sepia(0.9) hue-rotate(10deg) saturate(0.8) brightness(0.85);
+              // filter: sepia(0.9) hue-rotate(10deg) saturate(0.8) brightness(0.85);
             }
             &.min {
-              filter: sepia(0.7) hue-rotate(-20deg) saturate(2) brightness(1);
+              // filter: sepia(0.7) hue-rotate(-20deg) saturate(2) brightness(1);
             }
             &.dice-selected {
               border: solid 2px black;
