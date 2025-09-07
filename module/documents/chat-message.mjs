@@ -86,7 +86,8 @@ export default class PenombreMessage extends ChatMessage {
       // Met à jour la réponse de l'acteur dans le message
       if (answer) {
         // Si la réponse est positive, on enregistre le nombre de succès
-        const nbSucces = PenombreRoll.analyseRollResult(newMessage.rolls[0])
+        const rollResults = PenombreRoll.analyseRollResult(newMessage.rolls[0])
+        const nbSucces = rollResults.nbSucces
         await message.update({
           [`system.messagesLies.${actorId}.messageId`]: newMessageId,
           [`system.messagesLies.${actorId}.reponseFaite`]: true,

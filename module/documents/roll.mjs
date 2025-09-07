@@ -1,4 +1,11 @@
 import { SYSTEM } from "../config/system.mjs"
+
+/**
+ * Constantes pour le calcul des succès et types de dés
+ */
+const SUCCESS_DIVISOR = 4
+const MERVEILLEUX_FACES = 20
+
 export default class PenombreRoll extends Roll {
   static DIALOG_TEMPLATE = "modules/penombre/templates/dialogs/roll-dialog.hbs"
 
@@ -405,8 +412,20 @@ export default class PenombreRoll extends Roll {
 
   /** @override */
   async _prepareChatRenderContext({ flavor, isPrivate = false, ...options } = {}) {
-    const nbSucces = PenombreRoll.analyseRollResult(this)
+    const rollResults = PenombreRoll.analyseRollResult(this)
+    const nbSucces = rollResults.nbSucces
+    const isFausseNote = rollResults.isDeHarmoniqueMin
+    const isEnvolee = rollResults.isDeHarmoniqueMax
+    let typeEnvolee = 1
+    if (rollResults.typeDeHarmonique === 8 || rollResults.typeDeHarmonique === 10) typeEnvolee = 2
+    else if (rollResults.typeDeHarmonique === 12) typeEnvolee = 3
+    const isIncidentMagique = rollResults.isDeMerveilleuxMin
+    const isMerveille = rollResults.isDeMerveilleuxMax
     const hasDifficulte = this.options.difficulte !== ""
+    let succesManquants = 0
+    if (hasDifficulte) {
+      succesManquants = Math.max(this.options.difficulte - nbSucces, 0)
+    }
     const actorIdSource = this.options.actorId
     const actorId = game.user.character?.id
     const isSuccess = hasDifficulte && nbSucces >= this.options.difficulte
@@ -419,7 +438,13 @@ export default class PenombreRoll extends Roll {
       hasDifficulte: this.options.difficulte !== "",
       difficulte: this.options.difficulte,
       nbSucces,
+      succesManquants,
       isSuccess,
+      isFausseNote,
+      isEnvolee,
+      typeEnvolee,
+      isIncidentMagique,
+      isMerveille,
       isPrivate,
       formula: isPrivate ? "???" : this._formula,
       flavor: isPrivate ? null : (flavor ?? this.options.flavor),
@@ -431,21 +456,69 @@ export default class PenombreRoll extends Roll {
   }
 
   /**
-   * Analyse le résultat d'un jet et calcule le nombre de succès.
-   * Chaque résultat de dé est divisé par 4 et arrondi à l'entier inférieur pour déterminer le nombre de succès par résultat.
+   * Analyzes the result of a dice roll and returns statistics about successes and special die outcomes.
+   * La formule est de type : dé harmonique / dé merveilleux + dé d'atouts + éventuellement dé merveilleux
    *
-   * @param {Object} roll L'objet Roll contenant les résultats des dés.
-   * @returns {number} Le nombre total de succès calculé à partir du jet : 1 succès par tranche de 4 au dé
+   * @param {Object} roll The roll object containing dice information.
+   * @param {Array<Object>} roll.dice Array of dice objects.
+   * @param {number} roll.dice[].faces Number of faces on the die.
+   * @param {number} roll.dice[].total The total rolled value for the die.
+   * @param {Array<Object>} roll.dice[].results Array of individual roll results for the die.
+   * @param {number} roll.dice[].results[].result The value of each individual roll result.
+   * @returns {Object} An object containing:
+   *   @property {number} nbSucces - The total number of successes.
+   *   @property {boolean} isDeHarmoniqueMin - True if the first die (harmonique) rolled its minimum value.
+   *   @property {boolean} isDeHarmoniqueMax - True if the first die (harmonique) rolled its maximum value.
+   *   @property {boolean} isDeMerveilleuxMin - True if the first die (merveilleux) rolled its minimum value.
+   *   @property {boolean} isDeMerveilleuxMax - True if the first die (merveilleux) rolled its maximum value.
    */
   static analyseRollResult(roll) {
     let nbSucces = 0
-    // Parcourt le tableau et calcule les succès
-    for (const die of roll.dice) {
-      for (const r of die.results) {
-        nbSucces += Math.floor(r.result / 4)
+    let isDeHarmoniqueMin = false
+    let isDeHarmoniqueMax = false
+    let isDeMerveilleuxMin = false
+    let isDeMerveilleuxMax = false
+    let typeDeHarmonique = null
+
+    for (const [index, die] of roll.dice.entries()) {
+      // Traitement du premier dé uniquement (dé harmonique ou merveilleux)
+      if (index === 0) {
+        typeDeHarmonique = die.faces
+        const isMerveilleux = die.faces === MERVEILLEUX_FACES
+
+        // Résultat maximum
+        if (die.total === die.faces) {
+          if (isMerveilleux) {
+            isDeMerveilleuxMax = true
+          } else {
+            isDeHarmoniqueMax = true
+          }
+        }
+
+        // Résultat minimum
+        if (die.total === 1) {
+          if (isMerveilleux) {
+            isDeMerveilleuxMin = true
+          } else {
+            isDeHarmoniqueMin = true
+          }
+        }
+      }
+
+      // Les autres dés peuvent être un dé merveilleux ou des dés d'atouts
+      else if (die.faces === MERVEILLEUX_FACES) {
+        if (die.total === die.faces) isDeMerveilleuxMax = true
+        if (die.total === 1) isDeMerveilleuxMin = true
+      }
+
+      // Calcul des succès pour tous les dés
+      for (const result of die.results) {
+        nbSucces += Math.floor(result.result / SUCCESS_DIVISOR)
       }
     }
-    return nbSucces
+
+    console.log("Pénombre | analyseRollResult", { nbSucces, isDeHarmoniqueMin, isDeHarmoniqueMax, isDeMerveilleuxMin, isDeMerveilleuxMax })
+    return { nbSucces, typeDeHarmonique, isDeHarmoniqueMin, isDeHarmoniqueMax, isDeMerveilleuxMin, isDeMerveilleuxMax }
   }
 
   /**

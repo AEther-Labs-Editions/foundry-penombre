@@ -1,10 +1,10 @@
 <div class="roll-result-total">
-  <div class="autres-succes">{{#if hasAutresSucces}}Autres succès : {{#each autresSucces}}<span data-tooltip="{{this.actor}}">{{this.nbSucces}}</span>{{#if @last}}{{else}}, {{/if}}{{/each}}{{/if}}</div>
-  <div class="total">Total : {{totalSucces}}</div>
+  <div class="autres-succes">{{#if hasAutresSucces}}{{localize "PENOMBRE.ui.otherSuccess"}} : {{#each autresSucces}}<span data-tooltip="{{this.actor}}">{{this.nbSucces}}</span>{{#if @last}}{{else}}, {{/if}}{{/each}}{{/if}}</div>
+  <div class="total">{{localize "PENOMBRE.ui.total"}} : {{totalSucces}}</div>
   {{#if hasDifficulte}}
     <div class="difficulte">
-      <div>Difficulté : {{difficulte}}</div>
-      <div>{{#if isSuccess}} C'est une réussite ! {{else}} C'est un échec ! {{/if}}</div>
+      <div> {{localize "PENOMBRE.ui.difficulte"}} : {{difficulte}}</div>
+      <div>{{#if isSuccess}} {{localize "PENOMBRE.ui.resultSuccess"}} {{else}} <div data-tooltip="{{localize "PENOMBRE.ui.resultEchecTooltip"}}">{{localize "PENOMBRE.ui.resultEchec" x=succesManquants }}</div> {{/if}}</div>
     </div>
   {{/if}}
 </div>

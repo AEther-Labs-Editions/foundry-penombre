@@ -18,13 +18,16 @@ export default class HarmoniqueMessageData extends BaseMessageData {
         }),
       ),
       difficulte: new NumberField({ min: 0, max: 20 }),
+
       // Indique si une relance a été faite dans ce message
       relanceFaite: new BooleanField({ initial: false }),
       actionCollegiale: new BooleanField({ initial: false }),
+
       // Ce message est lié à une action collégiale
       // Si c'est faux et que c'est une action collégiale, alors ce message est le message d'origine
       // Sinon c'est vrai et que c'est une action collégiale, alors ce message est lié à l'action collégiale
       actionCollegialeMessageLie: new BooleanField({ initial: false }),
+
       // Tous les messages liés à ce message dans le cas où c'est le message d'origine de l'action collégiale
       messagesLies: new TypedObjectField(
         new SchemaField({
@@ -52,7 +55,8 @@ export default class HarmoniqueMessageData extends BaseMessageData {
         const rollResultOtherDiv = html.querySelector(".roll-result-other")
 
         const roll = this.parent.rolls[0]
-        const nbSucces = PenombreRoll.analyseRollResult(roll)
+        const rollResults = PenombreRoll.analyseRollResult(roll)
+        const nbSucces = rollResults.nbSucces
         const autresSucces = Object.entries(this.messagesLies).map(([id, value]) => ({
           actor: game.actors.get(id).name,
           nbSucces: value.nbSucces,
