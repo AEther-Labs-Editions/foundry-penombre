@@ -18,6 +18,14 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
   //dice3d: Main class, instantiated and ready to use.
 
   dice3d.addSystem({ id: "penombre", name: "Pénombre" }, "preferred")
+    dice3d.addDicePreset({
+    type: "d2",
+    labels: [
+    "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 1 - pile
+    "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 2 - face
+    ],
+    system: "penombre"
+  })
   dice3d.addDicePreset({
     type: "d4",
     labels: [
@@ -27,7 +35,7 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
     "systems/penombre/assets/dice-so-nice/d-1-envolee.webp",// 4 - 1 succes - 1 envolee
     ],
     system: "penombre"
-    })
+  })
   dice3d.addDicePreset({
     type: "d6",
     labels: [
@@ -40,7 +48,7 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
     ],
     system: "penombre"
   })
-dice3d.addDicePreset({
+  dice3d.addDicePreset({
     type: "d8",
     labels: [
     "systems/penombre/assets/dice-so-nice/d8-fumble.webp",   // 1 fumble
@@ -54,7 +62,7 @@ dice3d.addDicePreset({
     ],
     system: "penombre"
   })
-dice3d.addDicePreset({
+  dice3d.addDicePreset({
     type: "d10",
     labels: [
     "systems/penombre/assets/dice-so-nice/d8-fumble.webp",   // 1 fumble
@@ -69,8 +77,8 @@ dice3d.addDicePreset({
     "systems/penombre/assets/dice-so-nice/d8-2-envolee.webp",// 10 - 2 succes - 2 envolee
     ],
     system: "penombre"
-})
-dice3d.addDicePreset({
+  })
+  dice3d.addDicePreset({
     type: "d12",
     labels: [
     "systems/penombre/assets/dice-so-nice/d8-fumble.webp",   // 1 fumble
@@ -87,8 +95,8 @@ dice3d.addDicePreset({
     "systems/penombre/assets/dice-so-nice/d8-3-envolee.webp",// 12 - 3 succes - 3 envolee
     ],
     system: "penombre"
-})
-dice3d.addDicePreset({
+  })
+  dice3d.addDicePreset({
     type: "d20",
     labels: [
     "systems/penombre/assets/dice-so-nice/d8-fumble.webp",   // 1 fumble
