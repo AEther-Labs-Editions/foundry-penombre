@@ -50,7 +50,7 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
   })
   dice3d.addDicePreset({
     type: "d8",
-    labels: [
+    labels: [ // les images .webp commençant par "d8-" on une plus grande marge que celle commençant par "d-"
     "systems/penombre/assets/dice-so-nice/d8-fumble.webp",   // 1 fumble
     "systems/penombre/assets/dice-so-nice/d8-0-succes.webp", // 2
     "systems/penombre/assets/dice-so-nice/d8-0-succes.webp", // 3
