@@ -13,11 +13,6 @@ export default class PenombreRoll extends Roll {
 
   static TOOLTIP_TEMPLATE = "systems/penombre/templates/chat/dice-tooltip.hbs"
 
-  get isRoll() {
-    //return this.rolls.length > 0
-    return false
-  }
-
   static async prompt(options = {}) {
     const messageType = options.messageType || "principal"
     let messagesLies = {}
@@ -210,6 +205,16 @@ export default class PenombreRoll extends Roll {
      * @param {RollOptions} [options]  Options modifying or describing the Roll
      */
     const roll = new this(formule, options.data, rollOptions)
+    // Le premier dé est toujours le dé d'harmonique
+    roll.dice[0].options.appearance = { system: "penombre" }
+    // Les autres dés sont des dés d'atouts (d6) ou un dé merveilleux (d20)
+    for (let i = 1; i < roll.dice.length; i++) {
+      if (roll.dice[i].faces === MERVEILLEUX_FACES) {
+        roll.dice[i].options.appearance = { system: "penombre" }
+      } else {
+        roll.dice[i].options.appearance = { system: "standard" }
+      }
+    }
 
     await roll.evaluate()
 

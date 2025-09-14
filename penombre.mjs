@@ -234,8 +234,3 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
   })
 })
 
-Hooks.on("diceSoNiceRollStart", (messageId, context) => {
-  console.log("Pénombre | Début du lancer de dés Dice So Nice! pour le message", messageId, context)
-  //Hide this roll
-  //context.blind = true
-})

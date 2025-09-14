@@ -56,7 +56,7 @@ export default class HarmoniqueMessageData extends BaseMessageData {
    * détermine si la difficulté est atteinte, puis affiche le résultat via un template Handlebars.
    *
    * @async
-   * @param {HTMLElement} html - Élément HTML représentant le message à modifier.
+   * @param {HTMLElement} html Élément HTML représentant le message à modifier.
    * @returns {Promise<void>} Résout lorsque le HTML a été mis à jour.
    */
   async alterMessageHTML(html) {
