@@ -29,6 +29,7 @@ export default class PenombreActor extends Actor {
         messagesLies[player.character.id] = {
           messageId: null, // On mettra à jour ce champ plus tard
           reponseFaite: false,
+          participe: false,
           nbSucces: 0,
         }
       }

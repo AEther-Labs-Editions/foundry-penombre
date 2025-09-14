@@ -13,6 +13,11 @@ export default class PenombreRoll extends Roll {
 
   static TOOLTIP_TEMPLATE = "systems/penombre/templates/chat/dice-tooltip.hbs"
 
+  get isRoll() {
+    //return this.rolls.length > 0
+    return false
+  }
+
   static async prompt(options = {}) {
     const messageType = options.messageType || "principal"
     let messagesLies = {}

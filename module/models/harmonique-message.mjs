@@ -21,6 +21,7 @@ export default class HarmoniqueMessageData extends BaseMessageData {
 
       // Indique si une relance a été faite dans ce message
       relanceFaite: new BooleanField({ initial: false }),
+
       actionCollegiale: new BooleanField({ initial: false }),
 
       // Ce message est lié à une action collégiale
@@ -34,6 +35,7 @@ export default class HarmoniqueMessageData extends BaseMessageData {
           messageId: new DocumentIdField(),
           // Indique si une réponse a été faite à ce message : participe ou ne participe pas
           reponseFaite: new BooleanField({ initial: false }),
+          participe: new BooleanField({ initial: false }),
           nbSucces: new NumberField({ initial: 0, min: 0 }),
         }),
         { validateKey: foundry.data.validators.isValidId },
@@ -57,35 +59,67 @@ export default class HarmoniqueMessageData extends BaseMessageData {
    * @returns {Promise<void>} Résout lorsque le HTML a été mis à jour.
    */
   async alterMessageHTML(html) {
-    if (this.actionCollegiale && !this.actionCollegialeMessageLie) {
-      console.log("Pénombre | Affichage", this)
-      if (this.toutesReponsesFaites) {
-        console.log("Pénombre | Affichage | Toutes les réponses ont été faites.")
-        const rollResultOtherDiv = html.querySelector(".roll-result-collegiale")
+    console.log("Pénombre | alterMessageHTML", this)
+    // C'est une action collégiale
+    if (this.actionCollegiale) {
+      let isMessagePrincipal = true
+      // C'est le message principal
+      if (!this.actionCollegialeMessageLie) {
+        // Si toutes les réponses ne sont pas faites
+        if (!this.toutesReponsesFaites) {
+          console.log("Pénombre | alterMessageHTML | Message principal | Certaines réponses sont manquantes.")
+          // Le résultat du dé est masqué
+          const rollResultSelfDiv = html.querySelector(".dice-result")
+          if (rollResultSelfDiv) rollResultSelfDiv.style.display = "none"
+        }
+        // Si toutes les réponses sont faites
+        else {
+          console.log("Pénombre | alterMessageHTML | Toutes les réponses ont été faites.")
+          const rollResultOtherDiv = html.querySelector(".roll-result-collegiale")
 
-        const roll = this.parent.rolls[0]
-        const rollResults = PenombreRoll.analyseRollResult(roll)
-        const nbSucces = rollResults.nbSucces
-        const autresSucces = Object.entries(this.messagesLies).map(([id, value]) => ({
-          actor: game.actors.get(id).name,
-          nbSucces: value.nbSucces,
-        }))
-        const totalSucces = nbSucces + autresSucces.reduce((acc, curr) => acc + curr.nbSucces, 0)
+          const roll = this.parent.rolls[0]
+          const rollResults = PenombreRoll.analyseRollResult(roll)
+          const nbSucces = rollResults.nbSucces
+          const autresSucces = Object.entries(this.messagesLies).map(([id, value]) => ({
+            actor: game.actors.get(id).name,
+            nbSucces: value.nbSucces,
+            participe: value.participe,
+          }))
+          const totalSucces = nbSucces + autresSucces.reduce((acc, curr) => acc + curr.nbSucces, 0)
 
-        const hasDifficulte = roll.options.difficulte !== ""
-        const isSuccess = hasDifficulte && totalSucces >= roll.options.difficulte
+          const hasDifficulte = roll.options.difficulte !== ""
+          const isSuccess = hasDifficulte && totalSucces >= roll.options.difficulte
 
-        const content = await foundry.applications.handlebars.renderTemplate("systems/penombre/templates/chat/action-collegiale.hbs", {
-          autresSucces,
-          hasAutresSucces: autresSucces.length > 0,
-          totalSucces: totalSucces,
-          hasDifficulte: hasDifficulte,
-          difficulte: roll.options.difficulte,
-          isSuccess: isSuccess,
-        })
-        rollResultOtherDiv.innerHTML = content
-      } else {
-        console.log("Pénombre | Affichage | Certaines réponses sont manquantes.")
+          const content = await foundry.applications.handlebars.renderTemplate("systems/penombre/templates/chat/action-collegiale.hbs", {
+            isMessagePrincipal,
+            nbSucces,
+            autresSucces,
+            hasAutresSucces: autresSucces.length > 0,
+            totalSucces: totalSucces,
+            hasDifficulte: hasDifficulte,
+            difficulte: roll.options.difficulte,
+            isSuccess: isSuccess,
+          })
+          rollResultOtherDiv.innerHTML = content
+        }
+      }
+      // C'est un message lié
+      else {
+        isMessagePrincipal = false
+        if (this.toutesReponsesFaites) {
+          const rollResultOtherDiv = html.querySelector(".roll-result-collegiale")
+
+          const roll = this.parent.rolls[0]
+          const rollResults = PenombreRoll.analyseRollResult(roll)
+          const nbSucces = rollResults.nbSucces
+          const content = await foundry.applications.handlebars.renderTemplate("systems/penombre/templates/chat/action-collegiale.hbs", {
+            isMessagePrincipal,
+            nbSucces,
+          })
+          rollResultOtherDiv.innerHTML = content
+        } else {
+          console.log("Pénombre | Affichage | Certaines réponses sont manquantes.")
+        }
       }
     }
   }

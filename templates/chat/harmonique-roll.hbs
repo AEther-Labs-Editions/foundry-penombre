@@ -16,11 +16,13 @@
     {{/if}}
 
     <div class="roll-results">
-      <div class="roll-result-self">
-        {{localize "PENOMBRE.ui.success"}}
-        :
-        {{nbSucces}}
-      </div>
+      {{#unless actionCollegiale}}
+        <div class="roll-result-self">
+          {{localize "PENOMBRE.ui.success"}}
+          :
+          {{nbSucces}}
+        </div>
+      {{/unless}}
       {{#if actionCollegiale}}
         <div class="roll-result-collegiale"></div>
       {{else}}

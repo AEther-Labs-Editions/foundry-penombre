@@ -91,11 +91,13 @@ export default class PenombreMessage extends ChatMessage {
         await message.update({
           [`system.messagesLies.${actorId}.messageId`]: newMessageId,
           [`system.messagesLies.${actorId}.reponseFaite`]: true,
+          [`system.messagesLies.${actorId}.participe`]: true,
           [`system.messagesLies.${actorId}.nbSucces`]: nbSucces,
         })
       } else {
         await message.update({
           [`system.messagesLies.${actorId}.reponseFaite`]: true,
+          [`system.messagesLies.${actorId}.participe`]: false,
         })
       }
     }
