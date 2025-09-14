@@ -19,7 +19,8 @@
       }
     }
     .message-header {
-      border-bottom: 1px solid #5d142b;
+      // border-bottom: 1px solid #5d142b;
+      border-bottom: 1.5px solid @color-primary;
       display: grid;
       .theme-dark & {
         color: var(--color-textLight);
@@ -33,14 +34,19 @@
       }
 
       img {
+        border-radius: @border-radius-tiny;
+        border-left: 0.5px solid @color-primary;
+        border-top: 0.5px solid @color-primary;
+        border-right: 0.5px solid @color-primary;
         max-width: 50px;
         max-height: 50px;
         margin-right: 4px;
       }
       .title {
+        color: @color-primary;
         font-family: "Cattedrale";
-        font-size: 18px;
-        font-weight: bold;
+        font-size: 20px;
+        // font-weight: bold;
         display: inline;
         text-wrap: auto;
       }
