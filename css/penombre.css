@@ -1376,6 +1376,23 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 #penombre-reserve-collegiale .div-jetons-2 .jetons .jeton {
   text-align: center;
 }
+.theme-dark .penombre.roll-dialog .window-content {
+  background: #0b0a13e6;
+  color: var(--color-textLight);
+}
+.theme-dark .penombre.roll-dialog .window-content span,
+.theme-dark .penombre.roll-dialog .window-content label {
+  color: var(--color-textLight);
+}
+.theme-light .penombre.roll-dialog .window-content {
+  background-color: var(--color-light-3);
+  background-image: url("/systems/penombre/assets/ui/fond.webp");
+  color: #222;
+}
+.theme-light .penombre.roll-dialog .window-content span,
+.theme-light .penombre.roll-dialog .window-content label {
+  color: #222;
+}
 .penombre-roll-dialog {
   display: flex;
   flex-direction: column;
