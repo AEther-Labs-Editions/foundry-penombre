@@ -22,9 +22,10 @@ export default class HarmoniqueMessageData extends BaseMessageData {
       // Indique si une relance a été faite dans ce message
       relanceFaite: new BooleanField({ initial: false }),
 
+      // Est-ce une action collégiale ?
       actionCollegiale: new BooleanField({ initial: false }),
 
-      // Ce message est lié à une action collégiale
+      // Est-il lié à une action collégiale ?
       // Si c'est faux et que c'est une action collégiale, alors ce message est le message d'origine
       // Sinon c'est vrai et que c'est une action collégiale, alors ce message est lié à l'action collégiale
       actionCollegialeMessageLie: new BooleanField({ initial: false }),
@@ -117,8 +118,6 @@ export default class HarmoniqueMessageData extends BaseMessageData {
             nbSucces,
           })
           rollResultOtherDiv.innerHTML = content
-        } else {
-          console.log("Pénombre | Affichage | Certaines réponses sont manquantes.")
         }
       }
     }

@@ -560,17 +560,24 @@ export default class PenombreRoll extends Roll {
       const blind = rollMode === SYSTEM.DICE_ROLL_MODES.BLIND
 
       if (roll) console.log("Pénombre | Rerolling dice", roll, rerolledDices)
+
+      const newRolls = []
+
       for (const indice of rerolledDices) {
         const [dieIndex, resultIndex] = indice.split("-").map(Number)
         if (roll.dice[dieIndex] && roll.dice[dieIndex].results[resultIndex]) {
           const formula = `1d${roll.dice[dieIndex].faces}`
           const newDice = await new Roll(formula, {}, { rollMode }).evaluate()
-          if (game.modules.get("dice-so-nice")?.active) {
-            const synchronize = !game.user.isGM
-            await game.dice3d.showForRoll(newDice, game.user, synchronize, whisper, blind)
-          }
+          newRolls.push(newDice)
           roll.dice[dieIndex].results[resultIndex].result = parseInt(newDice.result)
         }
+      }
+
+      // Affichage groupé de tous les nouveaux dés avec Dice So Nice
+      if (game.modules.get("dice-so-nice")?.active && newRolls.length > 0) {
+        const synchronize = !game.user.isGM
+        const showPromises = newRolls.map((newDice) => game.dice3d.showForRoll(newDice, game.user, synchronize, whisper, blind))
+        await Promise.all(showPromises)
       }
 
       await message.update({ rolls: [roll], "system.relanceFaite": true })
