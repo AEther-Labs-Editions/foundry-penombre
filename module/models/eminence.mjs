@@ -244,4 +244,45 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
       this.parent.update({ "system.conscience.jetons": jetons })
     }
   }
+
+  /**
+   * Retire un jeton du pool de conscience, en privilégiant les jetons inactifs.
+   * Si aucun jeton inactif n'est trouvé, retire un jeton actif à la place.
+   * Le jeton retiré voit son statut passé à "perdu" et est déplacé en fin de tableau.
+   * Si un jeton est perdu, la valeur de conscience diminue de 1 (minimum 0).
+   * Met à jour l'objet parent avec la nouvelle valeur de conscience et le tableau de jetons.
+   */
+  perdreUnJeton() {
+    const jetons = foundry.utils.duplicate(this.conscience.jetons)
+    let conscienceActuelle = this.conscience.valeur
+
+    let jetonPerdu = false
+    // On cherche d'abord un jeton inactif à perdre
+    for (let i = 0; i < jetons.length; i++) {
+      if (jetons[i].statut === SYSTEM.JETON_STATUTS.inactif.id) {
+        const jetonSupprime = jetons.splice(i, 1)[0]
+        jetonSupprime.statut = SYSTEM.JETON_STATUTS.perdu.id
+        jetons.push(jetonSupprime)
+        jetonPerdu = true
+        break
+      }
+    }
+    // Si pas de jeton inactif, on perd un jeton actif
+    if (!jetonPerdu) {
+      for (let i = 0; i < jetons.length; i++) {
+        if (jetons[i].statut === SYSTEM.JETON_STATUTS.actif.id) {
+          const jetonSupprime = jetons.splice(i, 1)[0]
+          jetonSupprime.statut = SYSTEM.JETON_STATUTS.perdu.id
+          jetons.push(jetonSupprime)
+          jetonPerdu = true
+          break
+        }
+      }
+    }
+    // Si un jeton a été perdu, on baisse la conscience de 1
+    if (jetonPerdu) {
+      const newConscience = Math.max(conscienceActuelle - 1, 0)
+      this.parent.update({ "system.conscience.valeur": newConscience, "system.conscience.jetons": jetons })
+    }
+  }
 }

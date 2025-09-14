@@ -95,7 +95,7 @@ export default class EminenceSheet extends PenombreBaseActorSheet {
         icon: `<i class="fa-regular fa-bolt"></i>`,
         callback: async (li) => {
           const index = li.dataset.index
-          console.log(`Pénombre | EminenceSheet._getJetonConscienceContextOptions: index ${index}`)
+          // console.log(`Pénombre | EminenceSheet._getJetonConscienceContextOptions: index ${index}`)
           let jetons = foundry.utils.duplicate(this.document.system.conscience.jetons)
           const currentStatut = jetons[index].statut
           let currentConscience = this.document.system.conscience.valeur

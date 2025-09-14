@@ -9,118 +9,118 @@ import * as documents from "./module/documents/_module.mjs"
 import * as applications from "./module/applications/_module.mjs"
 import * as helpers from "./module/helpers/_module.mjs"
 
-
 /**
  * Adds custom dice to Dice So Nice!.
  */
 Hooks.once("diceSoNiceReady", (dice3d) => {
-  //Called once the module is ready to listen to new rolls and display 3D animations.
-  //dice3d: Main class, instantiated and ready to use.
+  // Called once the module is ready to listen to new rolls and display 3D animations.
+  // dice3d: Main class, instantiated and ready to use.
 
   dice3d.addSystem({ id: "penombre", name: "Pénombre" }, "preferred")
-    dice3d.addDicePreset({
+  dice3d.addDicePreset({
     type: "d2",
     labels: [
-    "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 1 - pile
-    "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 2 - face
+      "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 1 - pile
+      "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 2 - face
     ],
-    system: "penombre"
+    system: "penombre",
   })
   dice3d.addDicePreset({
     type: "d4",
     labels: [
-    "systems/penombre/assets/dice-so-nice/d-fumble.webp",   // 1 - fumble
-    "systems/penombre/assets/dice-so-nice/d-0-succes.webp", // 2
-    "systems/penombre/assets/dice-so-nice/d-0-succes.webp", // 3
-    "systems/penombre/assets/dice-so-nice/d-1-envolee.webp",// 4 - 1 succes - 1 envolee
+      "systems/penombre/assets/dice-so-nice/d-fumble.webp", // 1 - fumble
+      "systems/penombre/assets/dice-so-nice/d-0-succes.webp", // 2
+      "systems/penombre/assets/dice-so-nice/d-0-succes.webp", // 3
+      "systems/penombre/assets/dice-so-nice/d-1-envolee.webp", // 4 - 1 succes - 1 envolee
     ],
-    system: "penombre"
+    system: "penombre",
   })
   dice3d.addDicePreset({
     type: "d6",
     labels: [
-    "systems/penombre/assets/dice-so-nice/d-fumble.webp",   // 1 fumble
-    "systems/penombre/assets/dice-so-nice/d-0-succes.webp", // 2
-    "systems/penombre/assets/dice-so-nice/d-0-succes.webp", // 3
-    "systems/penombre/assets/dice-so-nice/d-1-succes.webp", // 4 - 1 succes
-    "systems/penombre/assets/dice-so-nice/d-1-succes.webp", // 5 - 1 succes
-    "systems/penombre/assets/dice-so-nice/d-1-envolee.webp",// 6 - 1 succes - 1 envolee
+      "systems/penombre/assets/dice-so-nice/d-fumble.webp", // 1 fumble
+      "systems/penombre/assets/dice-so-nice/d-0-succes.webp", // 2
+      "systems/penombre/assets/dice-so-nice/d-0-succes.webp", // 3
+      "systems/penombre/assets/dice-so-nice/d-1-succes.webp", // 4 - 1 succes
+      "systems/penombre/assets/dice-so-nice/d-1-succes.webp", // 5 - 1 succes
+      "systems/penombre/assets/dice-so-nice/d-1-envolee.webp", // 6 - 1 succes - 1 envolee
     ],
-    system: "penombre"
+    system: "penombre",
   })
   dice3d.addDicePreset({
     type: "d8",
-    labels: [ // les images .webp commençant par "d8-" on une plus grande marge que celle commençant par "d-"
-    "systems/penombre/assets/dice-so-nice/d8-fumble.webp",   // 1 fumble
-    "systems/penombre/assets/dice-so-nice/d8-0-succes.webp", // 2
-    "systems/penombre/assets/dice-so-nice/d8-0-succes.webp", // 3
-    "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 4 - 1 succes
-    "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 5 - 1 succes
-    "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 6 - 1 succes
-    "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 7 - 1 succes
-    "systems/penombre/assets/dice-so-nice/d8-2-envolee.webp",// 8 - 2 succes - 2 envolee
+    labels: [
+      // Les images .webp commençant par "d8-" on une plus grande marge que celle commençant par "d-"
+      "systems/penombre/assets/dice-so-nice/d8-fumble.webp", // 1 fumble
+      "systems/penombre/assets/dice-so-nice/d8-0-succes.webp", // 2
+      "systems/penombre/assets/dice-so-nice/d8-0-succes.webp", // 3
+      "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 4 - 1 succes
+      "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 5 - 1 succes
+      "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 6 - 1 succes
+      "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 7 - 1 succes
+      "systems/penombre/assets/dice-so-nice/d8-2-envolee.webp", // 8 - 2 succes - 2 envolee
     ],
-    system: "penombre"
+    system: "penombre",
   })
   dice3d.addDicePreset({
     type: "d10",
     labels: [
-    "systems/penombre/assets/dice-so-nice/d8-fumble.webp",   // 1 fumble
-    "systems/penombre/assets/dice-so-nice/d8-0-succes.webp", // 2
-    "systems/penombre/assets/dice-so-nice/d8-0-succes.webp", // 3
-    "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 4 - 1 succes
-    "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 5 - 1 succes
-    "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 6 - 1 succes
-    "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 7 - 1 succes
-    "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 8 - 2 succes
-    "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 9 - 2 succes
-    "systems/penombre/assets/dice-so-nice/d8-2-envolee.webp",// 10 - 2 succes - 2 envolee
+      "systems/penombre/assets/dice-so-nice/d8-fumble.webp", // 1 fumble
+      "systems/penombre/assets/dice-so-nice/d8-0-succes.webp", // 2
+      "systems/penombre/assets/dice-so-nice/d8-0-succes.webp", // 3
+      "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 4 - 1 succes
+      "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 5 - 1 succes
+      "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 6 - 1 succes
+      "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 7 - 1 succes
+      "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 8 - 2 succes
+      "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 9 - 2 succes
+      "systems/penombre/assets/dice-so-nice/d8-2-envolee.webp", // 10 - 2 succes - 2 envolee
     ],
-    system: "penombre"
+    system: "penombre",
   })
   dice3d.addDicePreset({
     type: "d12",
     labels: [
-    "systems/penombre/assets/dice-so-nice/d8-fumble.webp",   // 1 fumble
-    "systems/penombre/assets/dice-so-nice/d8-0-succes.webp", // 2
-    "systems/penombre/assets/dice-so-nice/d8-0-succes.webp", // 3
-    "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 4 - 1 succes
-    "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 5 - 1 succes
-    "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 6 - 1 succes
-    "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 7 - 1 succes
-    "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 8 - 2 succes
-    "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 9 - 2 succes
-    "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 10 - 2 succes
-    "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 11 - 2 succes
-    "systems/penombre/assets/dice-so-nice/d8-3-envolee.webp",// 12 - 3 succes - 3 envolee
+      "systems/penombre/assets/dice-so-nice/d8-fumble.webp", // 1 fumble
+      "systems/penombre/assets/dice-so-nice/d8-0-succes.webp", // 2
+      "systems/penombre/assets/dice-so-nice/d8-0-succes.webp", // 3
+      "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 4 - 1 succes
+      "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 5 - 1 succes
+      "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 6 - 1 succes
+      "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 7 - 1 succes
+      "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 8 - 2 succes
+      "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 9 - 2 succes
+      "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 10 - 2 succes
+      "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 11 - 2 succes
+      "systems/penombre/assets/dice-so-nice/d8-3-envolee.webp", // 12 - 3 succes - 3 envolee
     ],
-    system: "penombre"
+    system: "penombre",
   })
   dice3d.addDicePreset({
     type: "d20",
     labels: [
-    "systems/penombre/assets/dice-so-nice/d8-fumble.webp",   // 1 fumble
-    "systems/penombre/assets/dice-so-nice/d8-0-succes.webp", // 2
-    "systems/penombre/assets/dice-so-nice/d8-0-succes.webp", // 3
-    "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 4 - 1 succes
-    "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 5 - 1 succes
-    "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 6 - 1 succes
-    "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 7 - 1 succes
-    "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 8 - 2 succes
-    "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 9 - 2 succes
-    "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 10 - 2 succes
-    "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 11 - 2 succes
-    "systems/penombre/assets/dice-so-nice/d8-3-succes.webp", // 12 - 3 succes
-    "systems/penombre/assets/dice-so-nice/d8-3-succes.webp", // 13 - 3 succes
-    "systems/penombre/assets/dice-so-nice/d8-3-succes.webp", // 14 - 3 succes
-    "systems/penombre/assets/dice-so-nice/d8-3-succes.webp", // 15 - 3 succes
-    "systems/penombre/assets/dice-so-nice/d8-4-succes.webp", // 16 - 4 succes
-    "systems/penombre/assets/dice-so-nice/d8-4-succes.webp", // 17 - 4 succes
-    "systems/penombre/assets/dice-so-nice/d8-4-succes.webp", // 18 - 4 succes
-    "systems/penombre/assets/dice-so-nice/d8-4-succes.webp", // 19 - 4 succes
-    "systems/penombre/assets/dice-so-nice/d8-merveille.webp",// 20 - 5 succes - merveille
+      "systems/penombre/assets/dice-so-nice/d8-fumble.webp", // 1 fumble
+      "systems/penombre/assets/dice-so-nice/d8-0-succes.webp", // 2
+      "systems/penombre/assets/dice-so-nice/d8-0-succes.webp", // 3
+      "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 4 - 1 succes
+      "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 5 - 1 succes
+      "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 6 - 1 succes
+      "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 7 - 1 succes
+      "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 8 - 2 succes
+      "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 9 - 2 succes
+      "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 10 - 2 succes
+      "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 11 - 2 succes
+      "systems/penombre/assets/dice-so-nice/d8-3-succes.webp", // 12 - 3 succes
+      "systems/penombre/assets/dice-so-nice/d8-3-succes.webp", // 13 - 3 succes
+      "systems/penombre/assets/dice-so-nice/d8-3-succes.webp", // 14 - 3 succes
+      "systems/penombre/assets/dice-so-nice/d8-3-succes.webp", // 15 - 3 succes
+      "systems/penombre/assets/dice-so-nice/d8-4-succes.webp", // 16 - 4 succes
+      "systems/penombre/assets/dice-so-nice/d8-4-succes.webp", // 17 - 4 succes
+      "systems/penombre/assets/dice-so-nice/d8-4-succes.webp", // 18 - 4 succes
+      "systems/penombre/assets/dice-so-nice/d8-4-succes.webp", // 19 - 4 succes
+      "systems/penombre/assets/dice-so-nice/d8-merveille.webp", // 20 - 5 succes - merveille
     ],
-    system: "penombre"
+    system: "penombre",
   })
 })
 
