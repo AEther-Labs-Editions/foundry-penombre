@@ -6,7 +6,7 @@
       {{localize (concat "PENOMBRE.ui." harmonique)}}
     </div>
     {{#if actionCollegiale}}
-      {{#if isActionPrincipale}}{{localize "PENOMBRE.ui.actionPrincipale"}}{{else}}{{localize "PENOMBRE.ui.actionLiee"}}{{/if}}<br />
+      <div class="roll-infos">{{#if isActionPrincipale}}{{localize "PENOMBRE.ui.actionPrincipale"}}{{else}}{{localize "PENOMBRE.ui.actionLiee"}}{{/if}}</div>
       {{#if peutParticiper}}
         <div class="participate-container">
           <button class="participate-yes hidden">{{localize "PENOMBRE.ui.participerOui"}}</button>
@@ -14,38 +14,43 @@
         </div>
       {{/if}}
     {{/if}}
-  
+
     <div class="roll-results">
       <div class="roll-result-self">
-        {{localize "PENOMBRE.ui.success"}} : {{nbSucces}}
+        {{localize "PENOMBRE.ui.success"}}
+        :
+        {{nbSucces}}
       </div>
-      {{#unless actionCollegiale}}
+      {{#if actionCollegiale}}
+        <div class="roll-result-collegiale"></div>
+      {{else}}
         <div class="roll-result-total">
           {{#if hasDifficulte}}
-            {{localize "PENOMBRE.ui.difficulte"}} : {{difficulte}} <br />
+            {{localize "PENOMBRE.ui.difficulte"}}
+            :
+            {{difficulte}}
+            <br />
             {{#if isSuccess}}
               {{localize "PENOMBRE.ui.resultSuccess"}}
             {{else}}
-              <div data-tooltip="{{localize "PENOMBRE.ui.resultEchecTooltip"}}">{{localize "PENOMBRE.ui.resultEchec" x=succesManquants }}</div>
+              <div data-tooltip="{{localize 'PENOMBRE.ui.resultEchecTooltip'}}">{{localize "PENOMBRE.ui.resultEchec" x=succesManquants}}</div>
             {{/if}}
           {{/if}}
           <!-- Cas particuliers -->
           {{#if isFausseNote}}
-            <div class="roll-result-special"><img src="systems/penombre/assets/ui/fausse_note.webp">{{localize "PENOMBRE.Roll.fausseNote"}}</div>
+            <div class="roll-result-special"><img src="systems/penombre/assets/ui/fausse_note.webp" />{{localize "PENOMBRE.Roll.fausseNote"}}</div>
           {{/if}}
           {{#if isEnvolee}}
-            <div class="roll-result-special"><img src="{{ concat 'systems/penombre/assets/ui/envolee_' typeEnvolee '.webp' }}">{{localize "PENOMBRE.Roll.envolee"}}</div>
+            <div class="roll-result-special"><img src="{{concat 'systems/penombre/assets/ui/envolee_' typeEnvolee '.webp'}}" />{{localize "PENOMBRE.Roll.envolee"}}</div>
           {{/if}}
           {{#if isIncidentMagique}}
-            <div class="roll-result-special"><img src="systems/penombre/assets/ui/incident_magique.webp">{{localize "PENOMBRE.Roll.incidentMagique"}}</div>
+            <div class="roll-result-special"><img src="systems/penombre/assets/ui/incident_magique.webp" />{{localize "PENOMBRE.Roll.incidentMagique"}}</div>
           {{/if}}
           {{#if isMerveille}}
-            <div class="roll-result-special"><img src="systems/penombre/assets/ui/merveille.webp">{{localize "PENOMBRE.Roll.merveille"}}</div>
+            <div class="roll-result-special"><img src="systems/penombre/assets/ui/merveille.webp" />{{localize "PENOMBRE.Roll.merveille"}}</div>
           {{/if}}
         </div>
-      {{else}}
-        <div class="roll-result-other"></div>
-      {{/unless}}
+      {{/if}}
     </div>
   {{/unless}}
   {{#if icon}}

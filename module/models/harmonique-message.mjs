@@ -47,12 +47,21 @@ export default class HarmoniqueMessageData extends BaseMessageData {
     return Object.values(this.messagesLies).every((msg) => msg.reponseFaite)
   }
 
+  /**
+   * Modifie le contenu HTML d'un message en fonction de l'état d'une action collégiale.
+   * Si toutes les réponses sont faites, calcule le nombre total de succès à partir du jet principal et des messages liés,
+   * détermine si la difficulté est atteinte, puis affiche le résultat via un template Handlebars.
+   *
+   * @async
+   * @param {HTMLElement} html - Élément HTML représentant le message à modifier.
+   * @returns {Promise<void>} Résout lorsque le HTML a été mis à jour.
+   */
   async alterMessageHTML(html) {
     if (this.actionCollegiale && !this.actionCollegialeMessageLie) {
       console.log("Pénombre | Affichage", this)
       if (this.toutesReponsesFaites) {
         console.log("Pénombre | Affichage | Toutes les réponses ont été faites.")
-        const rollResultOtherDiv = html.querySelector(".roll-result-other")
+        const rollResultOtherDiv = html.querySelector(".roll-result-collegiale")
 
         const roll = this.parent.rolls[0]
         const rollResults = PenombreRoll.analyseRollResult(roll)

@@ -352,6 +352,8 @@ export default class PenombreRoll extends Roll {
     const actionCollegiale = document.querySelector("#actionCollegiale")?.checked ?? false
     const jetonActionCollegiale = actionCollegiale ? 1 : 0
 
+    const actionCollegialeLiee = document.querySelector("#actionCollegiale")?.checked === undefined // Si on ne trouve pas la checkbox, c'est que c'est une action collégiale liée
+
     // Le joueur a-t-il coché la case "Premier atout pour action collégiale" ?
     const actionCollegialePremierAtout = document.querySelector("#actionCollegialePremierAtout")?.checked ?? false
 
@@ -360,7 +362,11 @@ export default class PenombreRoll extends Roll {
     // Pour une action collégiale liée, si la case est cochée, le premier atout ne coûte pas de jeton
     const nbAtoutsSelectionnes = Number(document.querySelectorAll(".atout.checked").length)
     let premierAtoutGratuit = false
-    if ((actionCollegiale && actionCollegialePremierAtout) || !actionCollegiale || (!actionCollegiale && actionCollegialePremierAtout)) {
+    if (
+      (actionCollegiale && actionCollegialePremierAtout) ||
+      (!actionCollegiale && !actionCollegialeLiee) ||
+      (!actionCollegiale && actionCollegialeLiee && actionCollegialePremierAtout)
+    ) {
       premierAtoutGratuit = true
     }
     let jetonsAtouts = nbAtoutsSelectionnes

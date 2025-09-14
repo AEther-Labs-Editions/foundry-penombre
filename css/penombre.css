@@ -1602,6 +1602,18 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   font-size: 1.1rem;
   text-align: center;
 }
+#interface #sidebar .chat-message .message-content .dice-roll.penombre .roll-infos,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .roll-infos {
+  font-family: "Cattedrale";
+  font-size: 1rem;
+  text-align: center;
+  margin: 2px 0 2px 0;
+}
+#interface #sidebar .chat-message .message-content .dice-roll.penombre .participate-container button,
+#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .participate-container button {
+  font-family: "Cattedrale";
+  font-size: 0.9rem;
+}
 #interface #sidebar .chat-message .message-content .dice-roll.penombre .roll-results,
 #interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .roll-results {
   font-family: "Cattedrale";
