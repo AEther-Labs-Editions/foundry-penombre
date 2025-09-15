@@ -76,18 +76,21 @@
 
   <div class="line-3">
     <div class="part-left-3">
-
       <fieldset>
         <legend>{{ localize 'PENOMBRE.ui.formule' }}</legend>
-        <input type="text" id="formule" name="formule" value={{formule}} />
+        <div class="formuleElements">
+          <label>{{localize 'PENOMBRE.ui.bonus'}}</label>
+          <input type="text" id="autreBonus" name="autreBonus" data-tooltip="{{localize 'PENOMBRE.ui.autreBonusTooltip'}}"/>
+          <input type="text" id="formule" name="formule" value={{formule}} readonly/>
+        </div>
       </fieldset>
       <div class="des-img">
-        <img width="75" src="/systems/penombre/assets/ui/d4.webp" />
-        <img width="75" src="/systems/penombre/assets/ui/d6.webp" />
-        <img width="75" src="/systems/penombre/assets/ui/d8.webp" />
-        <img width="75" src="/systems/penombre/assets/ui/d10.webp" />
-        <img width="75" src="/systems/penombre/assets/ui/d12.webp" />
-        <img width="75" src="/systems/penombre/assets/ui/d20.webp" />
+        <img src="/systems/penombre/assets/ui/d4.webp" />
+        <img src="/systems/penombre/assets/ui/d6.webp" />
+        <img src="/systems/penombre/assets/ui/d8.webp" />
+        <img src="/systems/penombre/assets/ui/d10.webp" />
+        <img src="/systems/penombre/assets/ui/d12.webp" />
+        <img src="/systems/penombre/assets/ui/d20.webp" />
       </div>
       <br />&nbsp;<br />
       <div class="form-group rollMode">

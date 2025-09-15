@@ -160,6 +160,11 @@ export default class PenombreRoll extends Roll {
         if (cbDeMerveilleux) {
           cbDeMerveilleux.addEventListener("change", this._onToggleDeMerveilleux.bind(this))
         }
+        // Bonus de formule
+        const autreBonus = dialog.element.querySelector("#autreBonus")
+        if (autreBonus) {
+          autreBonus.addEventListener("change", this._onChangeAutreBonus.bind(this))
+        }
         // Jetons
         const jetonsConscience = dialog.element.querySelector("#jetonsConscience")
         if (jetonsConscience) {
@@ -224,11 +229,25 @@ export default class PenombreRoll extends Roll {
   }
 
   // #region Événements du prompt
+  /**
+   * Gère l'événement de changement pour la sélection de l'harmonique.
+   * Met à jour la formule et définit le texte du label harmonique avec la valeur localisée correspondant à l'option sélectionnée.
+   *
+   * @param {Event} event L'événement de changement déclenché par la sélection de l'harmonique.
+   */
   static _onChangeHarmonique(event) {
     PenombreRoll._updateFormula()
     document.querySelector("#harmonique-label").textContent = game.i18n.localize(`PENOMBRE.ui.${event.target.options[event.target.selectedIndex].value}`)
   }
 
+  /**
+   * Gère le basculement de la case "Action collégiale".
+   * Affiche ou masque le label "premierAtout" selon l'état de la case.
+   * Si décochée, décoche également la case "actionCollegialePremierAtout".
+   * Met à jour le nombre de jetons en appelant PenombreRoll._updateNbJetons().
+   *
+   * @param {Event} event L'événement déclenché par le changement de la case à cocher.
+   */
   static _onToggleActionCollegiale(event) {
     const premierAtoutLabel = document.querySelector("label.premierAtout")
     if (event.target.checked) {
@@ -241,6 +260,13 @@ export default class PenombreRoll extends Roll {
     PenombreRoll._updateNbJetons()
   }
 
+  /**
+   * Gère le basculement de la case "Premier atout pour action collégiale".
+   * Met à jour le nombre de jetons à dépenser en appelant PenombreRoll._updateNbJetons().
+   *
+   * @param {Event} event L'événement déclenché par le changement de la case à cocher.
+   * @private
+   */
   static _onToggleActionCollegialePremierAtout(event) {
     PenombreRoll._updateNbJetons()
   }
@@ -299,6 +325,10 @@ export default class PenombreRoll extends Roll {
     PenombreRoll._updateFormula()
   }
 
+  static _onChangeAutreBonus(event) {
+    PenombreRoll._updateFormula()
+  }
+
   static _onChangeJetons(event) {
     let canRoll = true
     const jetonsConscience = Number(document.querySelector("#jetonsConscience").value) || 0
@@ -350,11 +380,46 @@ export default class PenombreRoll extends Roll {
     const harmoniqueDice = actor.system.harmoniques[harmonique].valeur
     const deMerveilleux = document.querySelector("#deMerveilleux").checked
     const bonusAtouts = document.querySelector("#bonusAtouts").value
+    const autreBonus = document.querySelector("#autreBonus").value
+
     let formule = deMerveilleux ? `1d20` : `1${harmoniqueDice}`
     if (bonusAtouts > 0) {
       formule += ` + ${bonusAtouts}d6`
     }
+    if (autreBonus && PenombreRoll._isValidDiceFormula(autreBonus)) {
+      formule += ` + ${autreBonus}`
+    }
     document.querySelector("#formule").value = formule
+  }
+
+  /**
+   * Valide qu'une chaîne de caractères correspond à une formule de dé valide.
+   * Accepte uniquement les formats : 1d20 ou xd6 (où x est un nombre positif)
+   *
+   * @param {string} formula La formule à valider
+   * @returns {boolean} True si la formule est valide, false sinon
+   */
+  static _isValidDiceFormula(formula) {
+    if (!formula || typeof formula !== "string") return false
+
+    const trimmedFormula = formula.trim()
+
+    // Expression régulière pour valider uniquement 1d20 ou xd6 (x > 0)
+    // ^1d20$ : exactement 1d20
+    // ^\d+d6$ : un ou plusieurs chiffres suivis de d6
+    const dicePattern = /^(1d20|\d+d6)$/i
+
+    if (!dicePattern.test(trimmedFormula)) return false
+
+    // Vérification supplémentaire pour s'assurer que x dans xd6 est positif
+    const d6Match = trimmedFormula.match(/^(\d+)d6$/i)
+    if (d6Match) {
+      const numberOfDice = parseInt(d6Match[1], 10)
+      return numberOfDice > 0
+    }
+
+    // Si c'est 1d20, c'est valide
+    return true
   }
 
   static _updateNbJetons() {

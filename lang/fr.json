@@ -420,6 +420,8 @@
       "niveau": "Niveau",
       "niveau:": "Niveau : ",
       "bonusTotal": "Bonus total",
+      "bonus": "Bonus",
+      "autreBonusTooltip": "Vous pouvez saisir un bonus sous la forme 1d20 ou xd6, x étant un nombre entier.",
       "total": "Total",
       "formule": "Formule",
       "plutotDeMerveilleux": "Plutôt le Dé merveilleux",
