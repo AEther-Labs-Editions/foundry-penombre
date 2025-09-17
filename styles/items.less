@@ -1,3 +1,17 @@
+.theme-light {
+  .penombre {
+    &.atout .atout-content,
+    &.maitrise .maitrise-content,
+    &.pouvoir .pouvoir-content,
+    &.intrigue .intrigue-content,
+    &.action .action-content  {
+      background-color: @background-light; // Si et seulement si on est en mode clair (et pas sombre) de la fiche
+      background-image: url("/systems/penombre/assets/background/fond-coupe.webp");
+      background-repeat: repeat;
+    }
+  }
+}
+
 .penombre {
   &.atout {
     height: 100%;

@@ -120,7 +120,7 @@ body {
 }
 body.theme-light .penombre.eminence .eminence-content {
   background-color: #faeed6;
-  background-image: url("/systems/penombre/assets/ui/fond.webp");
+  background-image: url("/systems/penombre/assets/background/fond.webp");
   background-repeat: repeat;
 }
 body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .label-timbre {
@@ -1119,6 +1119,15 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
+.theme-light .penombre.atout .atout-content,
+.theme-light .penombre.maitrise .maitrise-content,
+.theme-light .penombre.pouvoir .pouvoir-content,
+.theme-light .penombre.intrigue .intrigue-content,
+.theme-light .penombre.action .action-content {
+  background-color: #faeed6;
+  background-image: url("/systems/penombre/assets/background/fond-coupe.webp");
+  background-repeat: repeat;
+}
 .penombre.atout {
   height: 100%;
 }
@@ -1385,9 +1394,9 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   color: var(--color-textLight);
 }
 .theme-light .penombre.roll-dialog .window-content {
-  background-color: var(--color-light-3);
-  background-image: url("/systems/penombre/assets/ui/fond.webp");
-  color: #222;
+  background-color: #faeed6;
+  background-image: url("/systems/penombre/assets/background/fond-coupe.webp");
+  background-repeat: repeat;
 }
 .theme-light .penombre.roll-dialog .window-content span,
 .theme-light .penombre.roll-dialog .window-content label {
@@ -1517,6 +1526,8 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 .penombre-roll-dialog .line-3 .part-left-3 .formuleElements {
   display: flex;
   flex-direction: row;
+  margin-left: 10px;
+  right: 10px;
 }
 .penombre-roll-dialog .line-3 .part-left-3 .formuleElements label {
   width: 50px;
@@ -1762,7 +1773,7 @@ body {
 body.theme-light .penombre.adversaire .adversaire-content {
   background-color: #faeed6;
   /* Si et seulement si on est en mode clair (et pas sombre) de la fiche */
-  background-image: url("/systems/penombre/assets/ui/fond.webp");
+  background-image: url("/systems/penombre/assets/background/fond-coupe.webp");
   background-repeat: repeat;
 }
 .penombre.adversaire .adversaire-content {
