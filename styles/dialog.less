@@ -9,9 +9,10 @@
       }
     }
     .theme-light & {
-      background-color: var(--color-light-3);
-      background-image: url("/systems/penombre/assets/ui/fond.webp");
-      color: #222;
+      background-color: @background-light; // Si et seulement si on est en mode clair (et pas sombre) de la fiche
+      background-image: url("/systems/penombre/assets/background/fond-coupe.webp");
+      background-repeat: repeat;
+      // color: #222;
       span,
       label {
         color: #222;
@@ -164,6 +165,8 @@
       .formuleElements {
         display: flex;
         flex-direction: row;
+        margin-left: 10px;
+        right: 10px;
         label {
           width: 50px;
           margin-right: 10px;
