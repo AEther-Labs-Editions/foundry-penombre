@@ -1467,11 +1467,12 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   height: 20px;
 }
 .penombre-roll-dialog .line-2 fieldset {
-  padding: 0;
+  padding: 0 0 0 15px;
 }
 .penombre-roll-dialog .line-2 fieldset .atouts {
   overflow-y: auto;
-  padding: 0 3px 0 2px;
+  padding: 0 3px 0 3px;
+  margin-left: -15px;
 }
 .penombre-roll-dialog .line-2 fieldset .atouts .atout {
   display: flex;
@@ -1522,7 +1523,7 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   margin-right: 10px;
 }
 .penombre-roll-dialog .line-3 .part-left-3 fieldset {
-  padding: 5px 0 10px 0;
+  padding: 5px 0 10px 15px;
 }
 .penombre-roll-dialog .line-3 .part-left-3 .formuleElements {
   display: flex;
@@ -1531,6 +1532,7 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 .penombre-roll-dialog .line-3 .part-left-3 .formuleElements label {
   width: 50px;
   margin-right: 10px;
+  margin-left: -20px;
   text-align: right;
   display: flex;
   align-items: center;
