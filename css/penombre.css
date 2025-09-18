@@ -1729,7 +1729,7 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 }
 #interface #sidebar .chat-message .message-content .dice-roll.penombre section.atout li.roll.die.dice-selected,
 #interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre section.atout li.roll.die.dice-selected {
-  border: solid 2px black;
+  border: solid 2px darkgray;
 }
 /* ---------------------------------------------
         Thème Clair
