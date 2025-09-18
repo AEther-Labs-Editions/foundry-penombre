@@ -1590,8 +1590,9 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 }
 .theme-light #interface #sidebar .chat-message,
 .theme-light #interface #ui-right-column-1 .chat-message {
-  background-color: var(--color-light-3);
-  background-image: url("/systems/penombre/assets/ui/fond.webp");
+  background-color: #faeed6;
+  background-image: url("/systems/penombre/assets/background/fond-coupe-petit.webp");
+  background-repeat: repeat;
   color: #222;
 }
 .theme-light #interface #sidebar .chat-message span,

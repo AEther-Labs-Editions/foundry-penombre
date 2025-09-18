@@ -10,8 +10,9 @@
       }
     }
     .theme-light & {
-      background-color: var(--color-light-3);
-      background-image: url("/systems/penombre/assets/ui/fond.webp");
+      background-color: @background-light; // Si et seulement si on est en mode clair (et pas sombre) de la fiche
+      background-image: url("/systems/penombre/assets/background/fond-coupe-petit.webp");
+      background-repeat: repeat;
       color: #222;
       span,
       label {
