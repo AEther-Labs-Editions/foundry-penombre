@@ -1385,22 +1385,10 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 #penombre-reserve-collegiale .div-jetons-2 .jetons .jeton {
   text-align: center;
 }
-.theme-dark .penombre.roll-dialog .window-content {
-  background: #0b0a13e6;
-  color: var(--color-textLight);
-}
-.theme-dark .penombre.roll-dialog .window-content span,
-.theme-dark .penombre.roll-dialog .window-content label {
-  color: var(--color-textLight);
-}
 .theme-light .penombre.roll-dialog .window-content {
   background-color: #faeed6;
   background-image: url("/systems/penombre/assets/background/fond-coupe.webp");
   background-repeat: repeat;
-}
-.theme-light .penombre.roll-dialog .window-content span,
-.theme-light .penombre.roll-dialog .window-content label {
-  color: #222;
 }
 .penombre-roll-dialog {
   display: flex;
@@ -1586,33 +1574,22 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 .theme-dark #interface #ui-right-column-1 .chat-message span,
 .theme-dark #interface #sidebar .chat-message label,
 .theme-dark #interface #ui-right-column-1 .chat-message label {
-  color: var(--color-textLight);
+  color: white;
+}
+.theme-dark #interface #sidebar .chat-message button,
+.theme-dark #interface #ui-right-column-1 .chat-message button {
+  color: white;
 }
 .theme-light #interface #sidebar .chat-message,
 .theme-light #interface #ui-right-column-1 .chat-message {
   background-color: #faeed6;
   background-image: url("/systems/penombre/assets/background/fond-coupe-petit.webp");
   background-repeat: repeat;
-  color: #222;
-}
-.theme-light #interface #sidebar .chat-message span,
-.theme-light #interface #ui-right-column-1 .chat-message span,
-.theme-light #interface #sidebar .chat-message label,
-.theme-light #interface #ui-right-column-1 .chat-message label {
-  color: #222;
 }
 #interface #sidebar .chat-message .message-header,
 #interface #ui-right-column-1 .chat-message .message-header {
   border-bottom: 1.5px solid #a56135;
   display: grid;
-}
-.theme-dark #interface #sidebar .chat-message .message-header,
-.theme-dark #interface #ui-right-column-1 .chat-message .message-header {
-  color: var(--color-textLight);
-}
-.theme-light #interface #sidebar .chat-message .message-header,
-.theme-light #interface #ui-right-column-1 .chat-message .message-header {
-  color: #222;
 }
 #interface #sidebar .chat-message .message-header .message-metadata,
 #interface #ui-right-column-1 .chat-message .message-header .message-metadata {
@@ -1734,7 +1711,7 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 }
 #interface #sidebar .chat-message .message-content .dice-roll.penombre section.harmonique li.roll.die.dice-selected,
 #interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre section.harmonique li.roll.die.dice-selected {
-  border: solid 2px black;
+  border: solid 2px darkgray;
 }
 #interface #sidebar .chat-message .message-content .dice-roll.penombre section.atout li.roll.die,
 #interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre section.atout li.roll.die {

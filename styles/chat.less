@@ -6,17 +6,21 @@
       color: var(--color-textLight);
       span,
       label {
-        color: var(--color-textLight);
+        // color: var(--color-textLight);
+        color: white;
+      }
+      button {
+        color: white;
       }
     }
     .theme-light & {
       background-color: @background-light; // Si et seulement si on est en mode clair (et pas sombre) de la fiche
       background-image: url("/systems/penombre/assets/background/fond-coupe-petit.webp");
       background-repeat: repeat;
-      color: #222;
+      // color: #222;
       span,
       label {
-        color: #222;
+       // color: #222;
       }
     }
     .message-header {
@@ -24,10 +28,10 @@
       border-bottom: 1.5px solid @color-primary;
       display: grid;
       .theme-dark & {
-        color: var(--color-textLight);
+        // color: var(--color-textLight);
       }
       .theme-light & {
-        color: #222;
+        // color: #222;
       }
 
       .message-metadata {
@@ -72,7 +76,7 @@
           margin: 5px 0 5px 0;
         }
         .participate-container {
-          margin-bottom: 5px;;
+          margin-bottom: 5px;
           button {
             font-family: "Cattedrale";
             font-size: 1rem;
@@ -142,7 +146,7 @@
               // filter: sepia(0.7) hue-rotate(-20deg) saturate(2) brightness(1);
             }
             &.dice-selected {
-              border: solid 2px black;
+              border: solid 2px darkgray;
             }
           }
         }
