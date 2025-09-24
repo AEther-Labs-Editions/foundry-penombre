@@ -1,7 +1,7 @@
 
 <h2>Système <em>Pénombre</em> pour Foundry Virtual TableTop</h2>
 
-![Cover](./assets/background/splash_fond_penombre.avif)
+![Cover](./assets/ui/logo_penombre_sur_fond_sombre_ombre_portee.webp)
 
 <p>Ce système vous permet de jouer au jeu de rôle "<em>Pénombre</em>" sur la plateforme de jeu Foundry Virtual Tabletop.</p>
 
