@@ -481,6 +481,13 @@
       "support": "Support",
       "discordLaFonderie": "Discord de la Fonderie",
       "discordLaFonderieTooltip": "Rejoignez le serveur francophone dédié à Foundry VTT",
+
+      "discordAetherLabs": "Discord d’Æther Labs",
+      "discordAetherLabsTooltip": "Rejoignez le serveur d’Æther Labs",
+
+      "ressourcesAetherLabs": "Ressources pour Pénombre",
+      "ressourcesAetherLabsTooltip": "Rejoignez le site d’Æther Labs",
+
       "menu": "Système",
       "reserve": "Réserve collégiale",
       "reserveTooltip": "Ouvre la Réserve collégiale"
