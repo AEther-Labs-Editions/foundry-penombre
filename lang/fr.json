@@ -441,8 +441,8 @@
       "resultSuccess": "C’est réussi !",
       "resultEchec": "Le nombre de succès n’est pas suffisant (raté de {x})",
       "resultEchecTooltip": "3 options <br> - Réussite mitigée <br> - Prolongation <br> - Échec",
-      "relanceConscience": "Relance (Conscience)",
-      "relanceReserve": "Relance (Réserve)"
+      "relanceConscience": "Relance (conscience)",
+      "relanceReserve": "Relance (réserve)"
     },
     "Roll": {
       "fausseNote": "Fausse note",
@@ -454,7 +454,7 @@
       "jetonsDepassement": "Trop de jetons sélectionnés",
       "jetonsConscienceInsuffisants": "Vous avez demandé {demande} jeton(s) de conscience alors qu’il ne vous en reste plus que {actuel} !",
       "jetonsReserveInsuffisants": "Vous avez demandé {demande} jeton(s) de la réserve collégiale alors qu’il n’en reste actuellement plus que {actuel} !",
-      "limiteNbJetonsDemo": "Avec le style de jeu ’Kit de démo’, le nombre maximum de jetons dans la réserve collégiale sera forcé à 10."
+      "limiteNbJetonsDemo": "Avec le style de jeu « Kit de démo », le nombre maximum de jetons dans la réserve collégiale sera forcé à 10."
     },
     "Settings": {
       "styleJeu": {
