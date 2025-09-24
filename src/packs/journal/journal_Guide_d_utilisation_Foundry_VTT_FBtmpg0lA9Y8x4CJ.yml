@@ -220,7 +220,8 @@ pages:
         cette adresse : <a
         href="https://www.aether-labs.fr/ressources/ressources-penombre">https://www.aether-labs.fr/ressources/ressources-penombre</a>.</p><p>Vous
         pouvez aussi faire l'acquisition de ce kit, sous forme papier, en
-        achetant le coffret.</p>
+        achetant le coffret : <a
+        href="https://www.aether-labs.fr/product-page/le-premier-cahier-gris-coffret-de-d%C3%A9couverte-pour-p%C3%A9nombre">https://www.aether-labs.fr/product-page/le-premier-cahier-gris-coffret-de-d%C3%A9couverte-pour-p%C3%A9nombre</a>.</p>
     video:
       controls: true
       volume: 0.5
@@ -238,7 +239,7 @@ pages:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: 6qbNUhuoJ67e6dmf
-      modifiedTime: 1758729916880
+      modifiedTime: 1758741347757
     _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.BZxxmPzLiWLN1I72'
 folder: null
 categories: []
