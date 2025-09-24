@@ -1,0 +1,261 @@
+name: Guide d'utilisation Foundry VTT
+pages:
+  - sort: 62500
+    name: Comment lancer les dés
+    type: text
+    _id: NbsQ1cortQsp55q0
+    system: {}
+    title:
+      show: true
+      level: 1
+    image: {}
+    text:
+      format: 1
+      content: >-
+        <p>Vous ne pouvez lancer les dés qu'en Mode Jouer.</p><p>Pour lancer les
+        dés, cliquez sur l'icône du dé harmonique applicable, dans la zone
+        Harmoniques.</p><img
+        src="systems/penombre/assets/guide/fiche_mode_jouer.webp" alt="Fiche"
+        /><p>Un dialogue de lancer fera alors son apparition.</p><img
+        src="systems/penombre/assets/guide/fiche_jet.webp" alt="Dialogue de
+        lancer" /><h2>Si vous utilisez des atouts</h2><p>Cliquez sur les atouts
+        applicables.</p><p>Si vous avec cliqué sur des atouts, pensez à répartir
+        les éventuels jetons de réserves nécessaires et dépensés entre votre
+        conscience et la réserve collégiale (zone "Dépense
+        automatique").</p><p>Si le total des jetons dépensés ici n'est pas égal
+        au nombre des "Jetons à dépenser", vous ne pourrez pas lancer les
+        dés.</p><h2>Si vous lancez une action collégiale</h2><p>Pensez à faire
+        de même.</p>
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    category: null
+    ownership:
+      default: -1
+      6qbNUhuoJ67e6dmf: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: 6qbNUhuoJ67e6dmf
+      modifiedTime: 1758729778952
+    _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.NbsQ1cortQsp55q0'
+  - sort: 50000
+    name: Comment utiliser la fiche d'Éminence grise
+    type: text
+    _id: Lvwsq6UuIDwfw4qS
+    system: {}
+    title:
+      show: true
+      level: 1
+    image: {}
+    text:
+      format: 1
+      content: >-
+        <p>Dans cette version kit de démo, vous n'aurez pas à remplir vous-même
+        la fiche de PJ (Éminence grise) ; en effet, le MJ (Psycholune) devrait
+        vous fournir l'un des prétirés de ce kit.</p><p></p><h2>Description de
+        la fiche</h2><p>La fiche d'Éminence grise est très semblable à la fiche
+        papier "standard", mise à disposition ici : <a
+        href="https://www.aether-labs.fr/ressources/ressources-penombre">https://www.aether-labs.fr/ressources/ressources-penombre</a></p><p></p><img
+        src="systems/penombre/assets/guide/fiche_mode_jouer.webp" alt="Fiche en
+        Mode Jouer" /><p></p><h2>Mode Éditer / Mode Jouer</h2><p>Il existe deux
+        modes pour la fiche, sélectionnables grâce au bouton en haut à
+        gauche.</p><ul><li><p>Le Mode Jouer (voir figure
+        ci-dessus).</p></li><li><p>Le Mode Éditer (voir figure
+        ci-dessous).</p></li></ul><img
+        src="systems/penombre/assets/guide/fiche_mode_editer.webp" alt="Fiche en
+        Mode Éditer" /><p></p><h2>Moduler les jetons de conscience</h2><p>Les
+        jetons de conscience se modulent aussi bien en Mode Jouer qu'en Mode
+        Éditer.</p><div><ul><li><p>Clic pour dépenser ou réactiver un
+        jeton.</p></li><li><p>Clic-droit pour perdre ou ajouter un
+        jeton.</p></li></ul><p>Par contre, la modification du max de conscience
+        ne s'effectue qu'en Mode Éditer.</p><p><strong>Attention :</strong> les
+        jetons de conscience sont aussi susceptibles d'être modulés
+        automatiquement lorsque vous paramétrez le dialogue de lancer de
+        dés.</p><p></p></div><div><h2>Ajouter/modifier des
+        complications</h2></div><p>Les ajouts/modifications de complications se
+        font en Mode Éditer.</p><p></p><h2>Ajouter/modifier/supprimer un
+        pouvoir, un atout ou une maîtrise magique</h2><p>Les
+        ajouts/modifications d'items se font en Mode Éditer.</p><ul><li><p>Clic
+        sur l'icône + pour ajouter un item à la liste.</p></li><li><p>Clic sur
+        l'icône Modifier (crayon dans carré) pour le
+        modifier.</p></li><li><p>Clic sur l'icône Supprimer (corbeille) pour le
+        supprimer (attention, cette suppression est immédiate et
+        définitive).</p></li></ul><p>Vous pouvez glisser-déposer des items vers
+        et depuis votre fiche d'Éminence grise.</p><p></p><h3>Lorsque vous
+        modifiez un item</h3><p>Une fenêtre d'édition apparaît.</p><img
+        src="systems/penombre/assets/guide/fiche_edit_item.webp" alt="Fenêtre
+        d'édition d'item" /><p><strong>Attention :</strong> n'effectuez pas de
+        modifications de polices dans la description, autre que celle appliquée
+        automatiquement par la gestion des titres. Cela cause un bug qui casse
+        l'interface de la fiche du système.</p>
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    category: null
+    ownership:
+      default: -1
+      6qbNUhuoJ67e6dmf: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: 6qbNUhuoJ67e6dmf
+      modifiedTime: 1758729975495
+    _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.Lvwsq6UuIDwfw4qS'
+  - sort: 0
+    name: Introduction
+    type: text
+    _id: cZw3YYM2pYzW2CUS
+    system: {}
+    title:
+      show: true
+      level: 1
+    image: {}
+    text:
+      format: 1
+      content: >-
+        <p style="text-align:center">Voici un système gratuit pour Foundry VTT,
+        publié avec l'aimable autorisation exceptionnelle des éditions Æther
+        Labs. Ce système utilise des droits d’exploitation et/ou des droits
+        d’auteurs qui sont la propriété des éditions Æther Labs, avec l’aimable
+        autorisation de Mnémos.</p><p style="text-align:center">Il est limité,
+        pour l'instant, à la version kit de démo du jeu.</p><img
+        src="systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.webp" /><p
+        style="text-align:center">Le jeu de rôle dans les Royaumes
+        crépusculaires</p><p style="text-align:center">d'après les romans de
+        Mathieu Gaborit</p><blockquote><p>« On parle de vous. Vos futurs
+        compagnons sont curieux et espèrent vous voir. On prétend que vous
+        cherchez un prétexte pour attirer l’attention des Psycholunes, que votre
+        attitude est une manœuvre pour susciter l’intérêt des meilleurs
+        professeurs. Certains trouvent même que vous mériteriez une bonne leçon
+        afin de garder un souvenir des lieux. Il faut bien s’assurer que vous
+        êtes digne du Souffre-jour. »</p></blockquote><p
+        style="text-align:center">PÉNOMBRE est un jeu des éditions Æther Labs,
+        sous licence Mnémos. Tous droits réservés.</p>
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    category: null
+    ownership:
+      default: -1
+      6qbNUhuoJ67e6dmf: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: 6qbNUhuoJ67e6dmf
+      modifiedTime: 1758729864205
+    _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.cZw3YYM2pYzW2CUS'
+  - sort: 56250
+    name: Comment gérer la réserve collégiale
+    type: text
+    _id: xiY0OhRbvnWPbRWb
+    system: {}
+    title:
+      show: true
+      level: 1
+    image: {}
+    text:
+      format: 1
+      content: >-
+        <img src="systems/penombre/assets/guide/fiche_reserve_collegiale.webp"
+        alt="Réserve collégiale" /><h2>Réserve gérée par l'ensemble des
+        joueuses</h2><p>Cette réserve est commune à l'ensemble des joueuses. Ce
+        que vous y faites est répercuté chez les autres joueuses et
+        vice-versa.</p><h2>Moduler les jetons de la réserve
+        collégiale</h2><div><ul><li><p>Clic pour dépenser ou réactiver un
+        jeton.</p></li></ul><p><strong>Attention :</strong> les jetons de la
+        réserve collégiale sont aussi susceptibles d'être modulés
+        automatiquement lorsque vous paramétrez votre dialogue de lancer de
+        dés.</p></div>
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    category: null
+    ownership:
+      default: -1
+      6qbNUhuoJ67e6dmf: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: 6qbNUhuoJ67e6dmf
+      modifiedTime: 1758728798693
+    _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.xiY0OhRbvnWPbRWb'
+  - sort: 25000
+    name: Se procurer le kit de démo du jeu
+    type: text
+    _id: BZxxmPzLiWLN1I72
+    system: {}
+    title:
+      show: true
+      level: 1
+    image: {}
+    text:
+      format: 1
+      content: >-
+        <p>Vous pouvez vous procurer gratuitement le pdf du kit de démo du jeu à
+        cette adresse : <a
+        href="https://www.aether-labs.fr/ressources/ressources-penombre">https://www.aether-labs.fr/ressources/ressources-penombre</a>.</p><p>Vous
+        pouvez aussi faire l'acquisition de ce kit, sous forme papier, en
+        achetant le coffret.</p>
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    category: null
+    ownership:
+      default: -1
+      6qbNUhuoJ67e6dmf: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: 6qbNUhuoJ67e6dmf
+      modifiedTime: 1758729916880
+    _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.BZxxmPzLiWLN1I72'
+folder: null
+categories: []
+ownership:
+  default: 0
+  6qbNUhuoJ67e6dmf: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.348'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1758727820853
+  modifiedTime: 1758727820853
+  lastModifiedBy: 6qbNUhuoJ67e6dmf
+_id: FBtmpg0lA9Y8x4CJ
+sort: 0
+_key: '!journal!FBtmpg0lA9Y8x4CJ'
