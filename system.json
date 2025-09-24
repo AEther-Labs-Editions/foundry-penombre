@@ -1,7 +1,7 @@
 {
   "id": "penombre",
   "title": "Pénombre",
-  "description": "un jeu de rôle dans les Royaumes crépusculaires d'après les romans de Mathieu Gaborit",
+  "description": "Un jeu de rôle dans les Royaumes crépusculaires d'après les romans de Mathieu Gaborit",
   "authors": [{ "name": "Kristov" }, { "name": "Mystery Man From Outerspace" }],
   "version": "#{VERSION}#",  
   "url": "#{URL}#",
@@ -54,8 +54,7 @@
         "PLAYER": "NONE",
         "TRUSTED": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      }
     },
     {
       "name": "landing-page",
@@ -67,8 +66,7 @@
         "PLAYER": "NONE",
         "TRUSTED": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      }
     },
     {
       "name": "pretires-du-kit-1",
@@ -80,8 +78,7 @@
         "PLAYER": "NONE",
         "TRUSTED": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      }
     },
     {
       "name": "adversaires-du-kit-2",
@@ -93,8 +90,7 @@
         "PLAYER": "NONE",
         "TRUSTED": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      }
     },
     {
       "name": "pouvoirs-potentiels-du-kit",
@@ -106,8 +102,7 @@
         "PLAYER": "NONE",
         "TRUSTED": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      }
     }
   ],
   "documentTypes": {
