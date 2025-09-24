@@ -1,7 +1,17 @@
 
 <h2>Système <em>Pénombre</em> pour Foundry Virtual TableTop</h2>
 
-<p>Ceci est une application qui permet de jouer au jeu de rôle "<em>Pénombre</em>" sur la plateforme de jeu Foundry Virtual Tabletop.</p>
+![Cover](./assets/background/splash_fond_penombre.avif)
+
+<p>Ce système vous permet de jouer au jeu de rôle "<em>Pénombre</em>" sur la plateforme de jeu Foundry Virtual Tabletop.</p>
+
+<p align="center">
+    <img alt="Foundry Version 13 support" src="https://img.shields.io/badge/Foundry-v13-informational">
+    <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/AEther-Labs-Editions/foundry-penombre"> 
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/AEther-Labs-Editions/foundry-penombre">
+    <img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/AEther-Labs-Editions/foundry-penombre?label=latest%20release" /> 
+</p>
+
 
 <h2>Contributeurs</h2>
 <p>Ce système est développé par Kristov et Mystery Man From Outerspace, et publié avec l'accord des auteurs et ayants droits.</p>
@@ -18,10 +28,10 @@ PÉNOMBRE est un jeu des éditions Æther Labs, sous licence Mnémos. Tous droit
 
 <h2>Communauté</h2>
 
+<p>Rejoignez le serveur discord <a href="https://discord.gg/c9duF7TQ">Æther Labs</a> et ses nombreux canaux consacrés à Pénombre.</p>
+
 <p>Rejoignez-nous sur le serveur <a href="https://discord.com/invite/pPSDNJk">Discord francophone dédié à Foundry Virtual Tabletop</a></p>
 <p>Nous serons ravis d'y avoir vos retours sur le système, des signalements de bug, des idées d'amélioration, ou simplement des encouragements !</p>
-
-<p>Rejoignez le serveur discord <a href="https://discord.gg/c9duF7TQ">Æther Labs</a> et ses nombreux canaux consacrés à Pénombre.</p>
 
 <h2>Licences</h2>
 <ul>
