@@ -31,7 +31,7 @@
       "name": "FR - Système",
       "sorting": "a",
       "color": "#a4653d",
-      "packs": ["journal", "landing-page"],
+      "packs": ["fr-aides-de-jeu", "scenes"],
       "folders": []
     },
         {
@@ -45,10 +45,10 @@
   ],
   "packs": [
     {
-      "name": "journal",
-      "label": "FR - Journal",
+      "name": "fr-aides-de-jeu",
+      "label": "FR - Aides de jeu",
       "system": "penombre",
-      "path": "packs/journal",
+      "path": "packs/fr-aides-de-jeu",
       "type": "JournalEntry",
       "ownership": {
         "PLAYER": "NONE",
@@ -57,10 +57,10 @@
       }
     },
     {
-      "name": "landing-page",
-      "label": "Landing Page",
+      "name": "scenes",
+      "label": "Scènes",
       "system": "penombre",
-      "path": "packs/landing-page",
+      "path": "packs/scenes",
       "type": "Scene",
       "ownership": {
         "PLAYER": "NONE",
