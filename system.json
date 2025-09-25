@@ -46,7 +46,7 @@
   "packs": [
     {
       "name": "fr-aides-de-jeu",
-      "label": "FR - Aides de jeu",
+      "label": "Aides de jeu",
       "system": "penombre",
       "path": "packs/fr-aides-de-jeu",
       "type": "JournalEntry",
