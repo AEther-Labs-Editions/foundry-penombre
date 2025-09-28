@@ -12,7 +12,7 @@ export default class PenombreSettingsHandler {
         name: "PENOMBRE.Settings.styleJeu.name",
         hint: "PENOMBRE.Settings.styleJeu.hint",
         scope: "world",
-        config: true,
+        config: false,
         default: "demo",
         type: String,
         choices: {
@@ -27,7 +27,7 @@ export default class PenombreSettingsHandler {
         name: "PENOMBRE.Settings.nbJetons.name",
         hint: "PENOMBRE.Settings.nbJetons.hint",
         scope: "world",
-        config: true,
+        config: false,
         default: 10,
         type: Number,
         requiresReload: true,
