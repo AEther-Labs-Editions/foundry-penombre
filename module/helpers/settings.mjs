@@ -55,6 +55,14 @@ export default class PenombreSettingsHandler {
           },
         },
       },
+
+      worldKey: {
+        name: "Unique world key",
+        scope: "world",
+        config: false,
+        type: String,
+        default: "",
+      },
     }
   }
 

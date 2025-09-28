@@ -109,7 +109,7 @@ export default class PenombreRoll extends Roll {
               }
               return obj
             }, {})
-            console.log("Pénombre | PenombreRoll output", output)
+            // console.log("Pénombre | PenombreRoll output", output)
             return output
           },
         },
@@ -223,7 +223,7 @@ export default class PenombreRoll extends Roll {
 
     await roll.evaluate()
 
-    console.log("Pénombre | PenombreRoll roll", roll)
+    if (CONFIG.debug.penombre?.rolls) console.debug("Pénombre | PenombreRoll | roll", roll)
 
     return roll
   }
@@ -598,7 +598,8 @@ export default class PenombreRoll extends Roll {
       }
     }
 
-    console.log("Pénombre | analyseRollResult", { nbSucces, isDeHarmoniqueMin, isDeHarmoniqueMax, isDeMerveilleuxMin, isDeMerveilleuxMax })
+    if (CONFIG.debug.penombre?.rolls)
+      console.debug("Pénombre | Roll | analyseRollResult", { nbSucces, isDeHarmoniqueMin, isDeHarmoniqueMax, isDeMerveilleuxMin, isDeMerveilleuxMax })
     return { nbSucces, typeDeHarmonique, isDeHarmoniqueMin, isDeHarmoniqueMax, isDeMerveilleuxMin, isDeMerveilleuxMax }
   }
 
@@ -629,7 +630,7 @@ export default class PenombreRoll extends Roll {
 
       const blind = rollMode === SYSTEM.DICE_ROLL_MODES.BLIND
 
-      if (roll) console.log("Pénombre | Rerolling dice", roll, rerolledDices)
+      if (CONFIG.debug.penombre?.rolls && roll) console.debug("Pénombre | Reroll", roll, rerolledDices)
 
       const newRolls = []
 

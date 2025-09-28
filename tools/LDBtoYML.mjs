@@ -5,6 +5,7 @@ import path from "path"
 const MODULE_ID = process.cwd()
 const yaml = true
 const log = true
+const omitVolatile = true
 
 const packs = await fs.readdir("./packs")
 for (const pack of packs) {
@@ -23,6 +24,7 @@ for (const pack of packs) {
     yaml,
     transformName,
     log,
+    omitVolatile,
   })
 }
 /**

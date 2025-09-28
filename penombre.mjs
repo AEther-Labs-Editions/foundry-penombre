@@ -73,9 +73,52 @@ Hooks.once("init", function () {
   console.info("Pénombre | Système initialisé.")
 })
 
+/**
+ * Register world usage statistics
+ * @param {string} registerKey
+ */
+function registerWorldCount(registerKey) {
+  if (game.user.isGM) {
+    let worldKey = game.settings.get(registerKey, "worldKey")
+    if (worldKey === undefined || worldKey === "") {
+      worldKey = foundry.utils.randomID(32)
+      game.settings.set(registerKey, "worldKey", worldKey)
+    }
+
+    // Simple API counter
+    const worldData = {
+      register_key: registerKey,
+      world_key: worldKey,
+      foundry_version: `${game.release.generation}.${game.release.build}`,
+      system_name: game.system.id,
+      system_version: game.system.version,
+    }
+
+    let apiURL = "https://worlds.qawstats.info/worlds-counter"
+    $.ajax({
+      url: apiURL,
+      type: "POST",
+      data: JSON.stringify(worldData),
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      async: false,
+    })
+  }
+}
+
 Hooks.once("ready", function () {
   game.system.applicationReserveCollegiale = new applications.PenombreReserveCollegiale()
   game.system.applicationReserveCollegiale.render({ force: true })
+  if (!CONFIG.debug.penombre) {
+    CONFIG.debug.penombre = {
+      reserve: false,
+      rolls: false,
+      sheets: false,
+      chat: false,
+    }
+  }
+  // Statistics
+  registerWorldCount("penombre")
 })
 
 Hooks.on("updateSetting", async (setting, update, options, id) => {
@@ -86,7 +129,7 @@ Hooks.on("updateSetting", async (setting, update, options, id) => {
 
   // Mise à jour du nombre de jetons dans la réserve collégiale
   if (setting.key === "penombre.nbJetons" && game.user.isGM) {
-    console.log("Pénombre | Mise à jour du nombre de jetons dans la réserve collégiale", setting, update, options, id)
+    if (CONFIG.debug.penombre?.reserve) console.debug("Pénombre | Mise à jour du nombre de jetons dans la réserve collégiale", setting, update, options, id)
     const reserveCollegiale = foundry.utils.duplicate(game.settings.get(SYSTEM.ID, "reserveCollegiale"))
 
     let nouveauNbJetons = update.value
@@ -234,3 +277,14 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
   })
 })
 
+/**
+ * Hook appelé juste avant que Dice So Nice affiche le résultat d'un jet de dés.
+ *
+ * @param {string} messageId L'identifiant unique du message à récupérer.
+ * @returns {Message|null} L'objet message s'il est trouvé, sinon null.
+ */
+Hooks.on("diceSoNiceMessageProcessed", (messageId, interception) => {
+  const message = game.messages.get(messageId)
+  // Si c'est une action collégiale principale et que toutes les réponses ne sont pas faites, les dés ne doivent pas être affichés
+  if (message.system.actionCollegiale && !message.system.actionCollegialeMessageLie && !message.system.toutesReponsesFaites) interception.willTrigger3DRoll = false
+})

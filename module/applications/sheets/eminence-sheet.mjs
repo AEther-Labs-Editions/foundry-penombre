@@ -58,7 +58,7 @@ export default class EminenceSheet extends PenombreBaseActorSheet {
     context.harmoniqueValueChoices = { d4: "D4", d6: "D6", d8: "D8", d10: "D10", d12: "D12" }
     context.potentielChoices = Object.fromEntries(Array.from({ length: SYSTEM.POTENTIEL_MAX }, (_, i) => [i, i]))
 
-    console.log("Pénombre | EminenceSheet._prepareContext", context)
+    if (CONFIG.debug.penombre?.sheets) console.debug("Pénombre | EminenceSheet | prepareContext", context)
     return context
   }
 
@@ -95,7 +95,6 @@ export default class EminenceSheet extends PenombreBaseActorSheet {
         icon: `<i class="fa-regular fa-bolt"></i>`,
         callback: async (li) => {
           const index = li.dataset.index
-          // Console.log(`Pénombre | EminenceSheet._getJetonConscienceContextOptions: index ${index}`)
           let jetons = foundry.utils.duplicate(this.document.system.conscience.jetons)
           const currentStatut = jetons[index].statut
           let currentConscience = this.document.system.conscience.valeur

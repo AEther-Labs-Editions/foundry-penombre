@@ -60,7 +60,7 @@ export default class HarmoniqueMessageData extends BaseMessageData {
    * @returns {Promise<void>} Résout lorsque le HTML a été mis à jour.
    */
   async alterMessageHTML(html) {
-    console.log("Pénombre | alterMessageHTML", this)
+    if (CONFIG.debug.penombre?.chat) console.debug("Pénombre | alterMessageHTML", this)
     // C'est une action collégiale
     if (this.actionCollegiale) {
       let isMessagePrincipal = true
@@ -68,14 +68,14 @@ export default class HarmoniqueMessageData extends BaseMessageData {
       if (!this.actionCollegialeMessageLie) {
         // Si toutes les réponses ne sont pas faites
         if (!this.toutesReponsesFaites) {
-          console.log("Pénombre | alterMessageHTML | Message principal | Certaines réponses sont manquantes.")
+          if (CONFIG.debug.penombre?.chat) console.debug("Pénombre | alterMessageHTML | Message principal | Certaines réponses sont manquantes.", this)
           // Le résultat du dé est masqué
           const rollResultSelfDiv = html.querySelector(".dice-result")
           if (rollResultSelfDiv) rollResultSelfDiv.style.display = "none"
         }
         // Si toutes les réponses sont faites
         else {
-          console.log("Pénombre | alterMessageHTML | Toutes les réponses ont été faites.")
+          if (CONFIG.debug.penombre?.chat) console.debug("Pénombre | alterMessageHTML | Toutes les réponses ont été faites.", this)
           const rollResultOtherDiv = html.querySelector(".roll-result-collegiale")
 
           const roll = this.parent.rolls[0]
