@@ -81,7 +81,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: systems/penombre/assets/portraits/ackbar.webp
+    src: systems/penombre/assets/tokens/ackbar_token.webp
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -490,8 +490,8 @@ _stats:
   systemId: penombre
   systemVersion: '0'
   createdTime: 1757150754023
-  modifiedTime: 1759053018856
-  lastModifiedBy: ZPVZnAUjZn9mQP2q
+  modifiedTime: 1759088533376
+  lastModifiedBy: 6qbNUhuoJ67e6dmf
 _id: M6ted8636DNMiLp5
 sort: 100000
 ownership:

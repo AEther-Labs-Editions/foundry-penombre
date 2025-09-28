@@ -80,7 +80,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: systems/penombre/assets/portraits/esmeralda.webp
+    src: systems/penombre/assets/tokens/esmeralda_token.webp
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -491,8 +491,8 @@ _stats:
   systemId: penombre
   systemVersion: '0'
   createdTime: 1757150754023
-  modifiedTime: 1759053020863
-  lastModifiedBy: ZPVZnAUjZn9mQP2q
+  modifiedTime: 1759088727254
+  lastModifiedBy: 6qbNUhuoJ67e6dmf
 _id: TFv6M7pZu7hWYOuq
 sort: 200000
 ownership:
