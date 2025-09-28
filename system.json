@@ -29,14 +29,14 @@
   "packFolders": [
     {
       "name": "Kit Demo",
-      "sorting": "a",
+      "sorting": "m",
       "color": "#a4653d",
-      "packs": ["pretires-du-kit-1", "adversaires-du-kit-2", "pouvoirs-potentiels-du-kit"],
+      "packs": ["kit-pretires", "kit-pouvoirs-potentiels", "kit-adversaires"],
       "folders": []
     },
     {
       "name": "Système",
-      "sorting": "a",
+      "sorting": "m",
       "color": "#a4653d",
       "packs": ["journal", "landing-page"],
       "folders": []
@@ -45,7 +45,7 @@
   "packs": [
     {
       "name": "journal",
-      "label": "FR - Journal",
+      "label": "Journaux",
       "system": "penombre",
       "path": "packs/journal",
       "type": "JournalEntry",
@@ -57,7 +57,7 @@
     },
     {
       "name": "landing-page",
-      "label": "Landing Page",
+      "label": "Page d'accueuil",
       "system": "penombre",
       "path": "packs/landing-page",
       "type": "Scene",
@@ -68,10 +68,10 @@
       }
     },
     {
-      "name": "pretires-du-kit-1",
-      "label": "Prétirés du kit 1",
+      "name": "kit-pretires",
+      "label": "Kit - Prétirés",
       "system": "penombre",
-      "path": "packs/pretires-du-kit-1",
+      "path": "packs/kit-pretires",
       "type": "Actor",
       "ownership": {
         "PLAYER": "NONE",
@@ -80,10 +80,10 @@
       }
     },
     {
-      "name": "adversaires-du-kit-2",
-      "label": "Adversaires du kit 2",
+      "name": "kit-adversaires",
+      "label": "Kit - Adversaires",
       "system": "penombre",
-      "path": "packs/adversaires-du-kit-2",
+      "path": "packs/kit-adversaires",
       "type": "Actor",
       "ownership": {
         "PLAYER": "NONE",
@@ -92,10 +92,10 @@
       }
     },
     {
-      "name": "pouvoirs-potentiels-du-kit",
-      "label": "Pouvoirs potentiels du kit",
+      "name": "kit-pouvoirs-potentiels",
+      "label": "Kit - Pouvoirs potentiels",
       "system": "penombre",
-      "path": "packs/pouvoirs-potentiels-du-kit",
+      "path": "packs/kit-pouvoirs-potentiels",
       "type": "Item",
       "ownership": {
         "PLAYER": "NONE",
