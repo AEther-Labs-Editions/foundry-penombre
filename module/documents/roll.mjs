@@ -210,17 +210,20 @@ export default class PenombreRoll extends Roll {
      * @param {RollOptions} [options]  Options modifying or describing the Roll
      */
     const roll = new this(formule, options.data, rollOptions)
-    // Le premier dé est toujours le dé d'harmonique
-    roll.dice[0].options.appearance = { system: "penombre" }
-    // Les autres dés sont des dés d'atouts (d6) ou un dé merveilleux (d20)
-    for (let i = 1; i < roll.dice.length; i++) {
-      if (roll.dice[i].faces === MERVEILLEUX_FACES) {
-        roll.dice[i].options.appearance = { system: "penombre" }
-      } else {
-        roll.dice[i].options.appearance = { system: "standard" }
+
+    // Apparence des dés le module Dice So Nice est activé et que le système de dés Pénombre est chargé
+    if (game.modules.get("dice-so-nice")?.active && game.dice3d.getLoadedDiceSystems().has("penombre")) {
+      // Le premier dé est toujours le dé d'harmonique
+      roll.dice[0].options.appearance = { system: "penombre" }
+      // Les autres dés sont des dés d'atouts (d6) ou un dé merveilleux (d20)
+      for (let i = 1; i < roll.dice.length; i++) {
+        if (roll.dice[i].faces === MERVEILLEUX_FACES) {
+          roll.dice[i].options.appearance = { system: "penombre" }
+        } else {
+          roll.dice[i].options.appearance = { system: "standard" }
+        }
       }
     }
-
     await roll.evaluate()
 
     if (CONFIG.debug.penombre?.rolls) console.debug("Pénombre | PenombreRoll | roll", roll)
