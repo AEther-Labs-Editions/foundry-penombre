@@ -80,7 +80,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: systems/penombre/assets/portraits/maitre_mangrove.webp
+    src: systems/penombre/assets/tokens/maitre_mangrove_token.webp
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -425,8 +425,8 @@ _stats:
   systemId: penombre
   systemVersion: '0'
   createdTime: 1757150754023
-  modifiedTime: 1759053023183
-  lastModifiedBy: ZPVZnAUjZn9mQP2q
+  modifiedTime: 1759088608647
+  lastModifiedBy: 6qbNUhuoJ67e6dmf
 _id: oQfBudRYF5bAOKQP
 sort: 400000
 ownership:

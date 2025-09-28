@@ -80,7 +80,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: systems/penombre/assets/portraits/pictelle.webp
+    src: systems/penombre/assets/tokens/pictelle_token.webp
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -438,8 +438,8 @@ _stats:
   systemId: penombre
   systemVersion: '0'
   createdTime: 1757150754023
-  modifiedTime: 1759053025465
-  lastModifiedBy: ZPVZnAUjZn9mQP2q
+  modifiedTime: 1759088651066
+  lastModifiedBy: 6qbNUhuoJ67e6dmf
 _id: DbCe1FxHzlnyGxA5
 sort: 600000
 ownership:

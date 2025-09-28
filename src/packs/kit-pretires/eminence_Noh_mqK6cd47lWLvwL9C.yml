@@ -80,7 +80,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: systems/penombre/assets/portraits/noh.webp
+    src: systems/penombre/assets/tokens/noh_token.webp
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -423,8 +423,8 @@ _stats:
   systemId: penombre
   systemVersion: '0'
   createdTime: 1757150754023
-  modifiedTime: 1759053024285
-  lastModifiedBy: ZPVZnAUjZn9mQP2q
+  modifiedTime: 1759088628517
+  lastModifiedBy: 6qbNUhuoJ67e6dmf
 _id: mqK6cd47lWLvwL9C
 sort: 500000
 ownership:
