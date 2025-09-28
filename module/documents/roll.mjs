@@ -109,7 +109,7 @@ export default class PenombreRoll extends Roll {
               }
               return obj
             }, {})
-            // console.log("Pénombre | PenombreRoll output", output)
+            // Console.log("Pénombre | PenombreRoll output", output)
             return output
           },
         },
@@ -211,7 +211,7 @@ export default class PenombreRoll extends Roll {
      */
     const roll = new this(formule, options.data, rollOptions)
 
-    // Apparence des dés le module Dice So Nice est activé et que le système de dés Pénombre est chargé
+    // Apparence des dés si le module Dice So Nice est activé et que le système de dés Pénombre est chargé
     if (game.modules.get("dice-so-nice")?.active && game.dice3d.getLoadedDiceSystems().has("penombre")) {
       // Le premier dé est toujours le dé d'harmonique
       roll.dice[0].options.appearance = { system: "penombre" }
@@ -637,6 +637,7 @@ export default class PenombreRoll extends Roll {
 
       const newRolls = []
 
+      // TODO : Lorsque le système de dés Pénombre sera géré : gérer la relance d'un dé merveilleux
       for (const indice of rerolledDices) {
         const [dieIndex, resultIndex] = indice.split("-").map(Number)
         if (roll.dice[dieIndex] && roll.dice[dieIndex].results[resultIndex]) {
