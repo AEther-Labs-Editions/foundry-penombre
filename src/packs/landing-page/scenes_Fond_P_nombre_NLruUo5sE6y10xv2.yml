@@ -1,6 +1,5 @@
 name: Fond Pénombre
 navigation: false
-navOrder: 0
 navName: ''
 background:
   src: systems/penombre/assets/background/splash_fond_penombre.avif
@@ -16,7 +15,7 @@ background:
   alphaThreshold: 0
 foreground: null
 foregroundElevation: 20
-thumb: systems/penombre/assets/scenes/6wSNgNq8eGqYCFH2-thumb.webp
+thumb: ''
 width: 1351
 height: 768
 padding: 0.25
@@ -85,21 +84,22 @@ journal: null
 journalEntryPage: null
 weather: ''
 folder: null
-ownership:
-  default: 0
-  oquiocNsoBkfmqxs: 3
 flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '13.346'
-  systemId: penombre
-  systemVersion: 0.0.1beta
-  createdTime: 1750320905839
-  modifiedTime: 1752222190929
-  lastModifiedBy: 6qbNUhuoJ67e6dmf
   exportSource: null
-_id: 6wSNgNq8eGqYCFH2
+  coreVersion: '13.348'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1759054254528
+  modifiedTime: 1759054254528
+  lastModifiedBy: ZPVZnAUjZn9mQP2q
+ownership:
+  default: 0
+  ZPVZnAUjZn9mQP2q: 3
+navOrder: 0
+_id: NLruUo5sE6y10xv2
 active: false
-sort: 200000
-_key: '!scenes!6wSNgNq8eGqYCFH2'
+sort: 0
+_key: '!scenes!NLruUo5sE6y10xv2'

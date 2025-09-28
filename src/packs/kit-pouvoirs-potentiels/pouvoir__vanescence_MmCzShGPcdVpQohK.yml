@@ -1,0 +1,29 @@
+type: pouvoir
+name: Évanescence
+img: systems/penombre/assets/icons/pouvoir.webp
+system:
+  utilise: false
+  description: >-
+    <h1>Évanescence</h1><p><em>As-tu déjà essayé de porter une écharpe de brume
+    ?</em></p><p>Esmeralda esquive automatiquement une menace physique portée
+    contre elle (attaque, piège, chute de pierres…)</p>
+  type: naissance
+effects: []
+folder: WiYkAwp3Zlbrgg5T
+ownership:
+  default: 0
+  6qbNUhuoJ67e6dmf: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.347'
+  systemId: penombre
+  systemVersion: '0'
+  createdTime: 1757151275137
+  modifiedTime: 1757151275137
+  lastModifiedBy: 6qbNUhuoJ67e6dmf
+_id: MmCzShGPcdVpQohK
+sort: 300000
+_key: '!items!MmCzShGPcdVpQohK'

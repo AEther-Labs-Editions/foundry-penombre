@@ -1,0 +1,30 @@
+type: pouvoir
+name: Suppôt des abysses
+img: systems/penombre/assets/icons/pouvoir.webp
+system:
+  utilise: false
+  description: >-
+    <h1>Suppôt des abysses</h1><p><em>L’énergie ténébreuse sédimentée de ma
+    vieille carcasse peut transformer n’importe quel liquide sans âme en encre
+    contrefaite.</em></p><p>Le temps d’une scène, Noh accepte une complication «
+    offrande de sang (3) » et ignore tous les prérequis d’onyxium.</p>
+  type: naissance
+effects: []
+folder: aPmTjs8cZsnuZFqA
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.347'
+  systemId: penombre
+  systemVersion: '0'
+  createdTime: 1757151279914
+  modifiedTime: 1757151279914
+  lastModifiedBy: 6qbNUhuoJ67e6dmf
+_id: zTZWllWvGgegI6pW
+sort: 200000
+ownership:
+  default: 0
+  6qbNUhuoJ67e6dmf: 3
+_key: '!items!zTZWllWvGgegI6pW'

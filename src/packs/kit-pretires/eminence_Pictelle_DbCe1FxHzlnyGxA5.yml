@@ -1,0 +1,448 @@
+name: Pictelle
+type: eminence
+img: systems/penombre/assets/portraits/pictelle.webp
+system:
+  peuple: ameAccouchee
+  cle: nature
+  potentiel:
+    pouvoirs: 0
+    atouts: 0
+    maitrises: 0
+  harmoniques:
+    ame:
+      valeur: d6
+    esprit:
+      valeur: d8
+    etincelle:
+      valeur: d10
+    nature:
+      valeur: d12
+    nuit:
+      valeur: d4
+  conscience:
+    valeur: 7
+    max: 7
+    jetons:
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+    complications:
+      une:
+        description: ''
+        valeur: 0
+      deux:
+        description: ''
+        valeur: 0
+      trois:
+        description: ''
+        valeur: 0
+      quatre:
+        description: ''
+        valeur: 0
+  timbre:
+    statut: harmonieux
+    description: ''
+    peste: ''
+    cle: false
+    note1: false
+    note2: false
+    note3: false
+    note4: false
+  atouts: []
+  maitrises: []
+  description: armure élémentaliste
+prototypeToken:
+  name: Pictelle
+  displayName: 0
+  actorLink: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/penombre/assets/portraits/pictelle.webp
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: null
+  bar2:
+    attribute: null
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 0
+    subject:
+      scale: 1
+      texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+  flags: {}
+  randomImg: false
+  appendNumber: false
+  prependAdjective: false
+items:
+  - type: pouvoir
+    name: Projection astrale
+    _id: dn1Mlb2IzNodNOHG
+    img: systems/penombre/assets/icons/pouvoir.webp
+    system:
+      utilise: false
+      description: >-
+        <h1>Projection astrale</h1><p><em>Ma conscience s’ébroue et se répand, à
+        tâtons puis de plus en plus vite.</em></p><p>Le temps d’une scène,
+        Pictelle projette sa forme astrale hors de son corps, inerte le temps de
+        la projection. Ce spectre immatériel peut franchir murs et barreaux. Son
+        rayon d’action est d’environ un bâtiment. Lorsque Pictelle annule sa
+        projection, le nombre de succès de toutes ses actions d’esprit et d’âme
+        diminue de 1 jusqu’au prochain repos.</p><p>De plus, chaque fois qu’elle
+        réalise une merveille (p. 31 du kit), son joueur peut lui choisir un
+        nouveau pouvoir dans la liste suivante, ou augmenter de 1 sa valeur de
+        conscience.</p><ul><li><p>Corps astral</p></li><li><p>Des souvenirs en
+        commun</p></li></ul>
+      type: naissance
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!DbCe1FxHzlnyGxA5.dn1Mlb2IzNodNOHG'
+  - type: pouvoir
+    name: Corps astral
+    _id: 81Zb61P16m0hJGhl
+    img: systems/penombre/assets/icons/pouvoir.webp
+    system:
+      utilise: false
+      description: >-
+        <h1>Corps astral</h1><p><em>Je la découvre enfin, cette femme au corps
+        souple et laiteux.</em></p><p>Lors d’une projection astrale, le spectre
+        immatériel de Pictelle agit physiquement, comme s’il était matériel, et
+        peut par exemple manipuler des objets. Dans ce cas, le spectre ne peut
+        plus agir de manière immatérielle (retraverser les murs, etc.) jusqu’à
+        la fin de la projection.</p>
+      type: naissance
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!DbCe1FxHzlnyGxA5.81Zb61P16m0hJGhl'
+  - type: pouvoir
+    name: Des souvenirs en commun
+    _id: mbYezAmk4lp2Z618
+    img: systems/penombre/assets/icons/pouvoir.webp
+    system:
+      utilise: false
+      description: >-
+        <h1>Des souvenirs en commun</h1><p><em>Nos esprits sont connectés, il
+        nous suffit de lire en eux.</em></p><p>Le temps d’une action, Pictelle
+        laisse un autre personnage proche utiliser un de ses atouts, ou se sert
+        de l’un des siens. Chacun lit un souvenir dans la mémoire de
+        l’autre.</p>
+      type: naissance
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!DbCe1FxHzlnyGxA5.mbYezAmk4lp2Z618'
+  - type: atout
+    name: Je suis faite pour protéger
+    _id: uGf1un3NKt49ZApX
+    img: systems/penombre/assets/icons/atout.webp
+    system:
+      description: ''
+      valeur: 3
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!DbCe1FxHzlnyGxA5.uGf1un3NKt49ZApX'
+  - type: atout
+    name: Née avec une hallebarde dans la main
+    _id: iv6DoMrkKDTBflJq
+    img: systems/penombre/assets/icons/atout.webp
+    system:
+      description: ''
+      valeur: 2
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!DbCe1FxHzlnyGxA5.iv6DoMrkKDTBflJq'
+  - type: atout
+    name: Avide d'attention et de reconnaissance
+    _id: GCYjYqPnabBRsH4s
+    img: systems/penombre/assets/icons/atout.webp
+    system:
+      description: ''
+      valeur: 2
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!DbCe1FxHzlnyGxA5.GCYjYqPnabBRsH4s'
+  - type: atout
+    name: Affinité pour l'élément terre
+    _id: rzOnHRlCBHTXJXzT
+    img: systems/penombre/assets/icons/atout.webp
+    system:
+      description: ''
+      valeur: 2
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!DbCe1FxHzlnyGxA5.rzOnHRlCBHTXJXzT'
+  - type: atout
+    name: Très à l'aise avec les vieilles choses
+    _id: 8rHEo2PiGDHK1ChU
+    img: systems/penombre/assets/icons/atout.webp
+    system:
+      description: ''
+      valeur: 1
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!DbCe1FxHzlnyGxA5.8rHEo2PiGDHK1ChU'
+  - type: maitrise
+    name: Élémentalisme
+    _id: JWi3H3iftzLjNFJP
+    img: systems/penombre/assets/icons/maitrise.webp
+    system:
+      description: >-
+        <h1>Pictelle l’élémentaliste</h1><p><strong>Pour préparer son effet
+        magique, Pictelle
+        doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>faire naître des
+        éléments présents dans le décor, ou libérer de son contenant, une
+        créature élémentaire</strong> primitive nommée élémentä – un homoncule
+        fortement teinté par son matériau d’origine.</p></li></ul><p><strong>Ce
+        faisant, elle…</strong></p><h6>Action
+        magique</h6><ul><li><p><strong>utilise l’élémentä</strong> en
+        l’effritant, le dispersant, le façonnant ou le consommant comme une
+        drogue afin d’en tirer des informations, archiver des connaissances
+        cryptées, s’approprier son énergie élémentaire ou la projeter
+        magiquement.</p></li></ul><p><strong>Avec un effet magique de niveau ?
+        …</strong></p><p><strong>elle parvient par exemple
+        à…</strong></p><ol><li><p><strong>identifier</strong> un effet magique
+        de magie naturelle (brigue, élémentalisme, magie des saisons) ;
+        ressentir l’émotion de la matière ; confier à la matière un mot à
+        répéter ; faire se déplacer une pierre ; améliorer n’importe quelle
+        capacité physique ou mentale ; etc.</p></li><li><p><strong>obtenir des
+        informations grossières</strong> mémorisées par la matière comme avec un
+        jeune enfant ; confier à la matière un long message à répéter ;
+        transmuter une matière en une autre, sans en changer l’état liquide,
+        solide, ou gazeux (affûter ou émousser une lame, souder deux métaux,
+        rendre l’air irrespirable, changer l’eau en alcool …) ; contrôler les
+        mouvements d’un feu, de l’eau, du vent, ou un soubresaut tellurique ;
+        devenir brûlant, ou glacé ; etc.</p></li><li><p><strong>obtenir des
+        informations précises</strong> mémorisées par la matière ; envoyer un
+        messager élémentaire parler à un personnage ; se rendre insensible à un
+        élément, ou utiliser un élément comme protection ; remodeler et façonner
+        la matière, modifier sa forme, son état et sa densité (liquéfier un
+        rocher, s’armer d’une lame de feu, animer une statue, etc.) ;
+        etc.</p></li><li><p><strong>se dissimuler</strong> dans un élément, et
+        voyager au travers ; ccomplir des prouesses physiques impossibles ;
+        augmenter ou diminuer la quantité d’un matériau ; transmuter
+        temporairement son corps en feu, en eau ;
+        etc.</p></li><li><p><strong>coder</strong> un livre entier dans une
+        flamme ou une goutte d’eau ; transmuter entièrement un élément en un
+        autre (l’eau en feu…) ; changer définitivement un mortel en golem
+        élémentaire ; etc.</p></li></ol><p><strong>Mais attention, elle risque
+        également de…</strong></p><h6>Incident magique</h6><ul><li><p><strong>se
+        brûler les ailes.</strong> Elle note une complication de niveau 3
+        correspondant à un épuisement physique ou mental, une grave brûlure, un
+        étouffement, une déshydratation sévère,
+        etc.</p></li></ul><p>OU</p><h6>Incident
+        magique</h6><ul><li><p><strong>se laisser submerger.</strong> L’élémentä
+        se retourne contre elle, à moins que des scories s’incarnent dans un
+        esprit frappeur. La créature est un opposant de difficulté égale au
+        nombre de succès obtenus sur l’action de maîtrise magique.</p></li></ul>
+      harmonique: nature
+      niveau: 3
+      prerequis: consommer un élémentä
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!DbCe1FxHzlnyGxA5.JWi3H3iftzLjNFJP'
+effects: []
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.348'
+  systemId: penombre
+  systemVersion: '0'
+  createdTime: 1757150754023
+  modifiedTime: 1759053025465
+  lastModifiedBy: ZPVZnAUjZn9mQP2q
+_id: DbCe1FxHzlnyGxA5
+sort: 600000
+ownership:
+  default: 0
+  6qbNUhuoJ67e6dmf: 3
+_key: '!actors!DbCe1FxHzlnyGxA5'

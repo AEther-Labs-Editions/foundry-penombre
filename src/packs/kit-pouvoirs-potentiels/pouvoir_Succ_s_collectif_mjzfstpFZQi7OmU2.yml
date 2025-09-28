@@ -1,0 +1,33 @@
+type: pouvoir
+name: Succès collectif
+img: systems/penombre/assets/icons/pouvoir.webp
+system:
+  utilise: false
+  description: >-
+    <h1>Succès collectif</h1><p><em>Marcher ensemble est un début ; travailler
+    ensemble est une victoire.</em></p><p>Lors d’une action collégiale incluant
+    Mangrove, le nombre de succès total augmente du nombre de
+    participants.</p><p>De plus, chaque fois qu’il réalise une merveille (p. 31
+    du kit), son joueur peut lui choisir un nouveau pouvoir dans la liste
+    suivante, ou augmenter de 1 sa valeur de
+    conscience.</p><ul><li><p>Excès</p></li><li><p>J’ai un plan</p></li></ul>
+  type: naissance
+effects: []
+folder: vhalCys8j2xMMuD5
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.347'
+  systemId: penombre
+  systemVersion: '0'
+  createdTime: 1757151278297
+  modifiedTime: 1757151278297
+  lastModifiedBy: 6qbNUhuoJ67e6dmf
+_id: mjzfstpFZQi7OmU2
+sort: 0
+ownership:
+  default: 0
+  6qbNUhuoJ67e6dmf: 3
+_key: '!items!mjzfstpFZQi7OmU2'

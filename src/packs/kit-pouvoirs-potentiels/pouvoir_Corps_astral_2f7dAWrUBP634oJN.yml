@@ -1,0 +1,32 @@
+type: pouvoir
+name: Corps astral
+img: systems/penombre/assets/icons/pouvoir.webp
+system:
+  utilise: false
+  description: >-
+    <h1>Corps astral</h1><p><em>Je la découvre enfin, cette femme au corps
+    souple et laiteux.</em></p><p>Lors d’une projection astrale, le spectre
+    immatériel de Pictelle agit physiquement, comme s’il était matériel, et peut
+    par exemple manipuler des objets. Dans ce cas, le spectre ne peut plus agir
+    de manière immatérielle (retraverser les murs, etc.) jusqu’à la fin de la
+    projection.</p>
+  type: naissance
+effects: []
+folder: InzVxQANkNVMPKdm
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.347'
+  systemId: penombre
+  systemVersion: '0'
+  createdTime: 1757151281460
+  modifiedTime: 1757151281460
+  lastModifiedBy: 6qbNUhuoJ67e6dmf
+_id: 2f7dAWrUBP634oJN
+sort: 300000
+ownership:
+  default: 0
+  6qbNUhuoJ67e6dmf: 3
+_key: '!items!2f7dAWrUBP634oJN'

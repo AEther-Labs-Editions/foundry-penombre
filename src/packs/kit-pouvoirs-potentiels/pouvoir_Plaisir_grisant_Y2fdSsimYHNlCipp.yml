@@ -1,0 +1,31 @@
+type: pouvoir
+name: Plaisir grisant
+_id: Y2fdSsimYHNlCipp
+img: systems/penombre/assets/icons/pouvoir.webp
+system:
+  utilise: false
+  description: >-
+    <h1>Plaisir grisant</h1><p><em>Tu ignores jusqu’où tout cela va fatalement
+    nous mener. Moi, je sais.</em></p><p>À l’acquisition de ce pouvoir,
+    choisissez une activité de loisir (musique, poésie, nourriture,
+    sexe…)</p><p>Après qu’Ackbar a pratiqué ce loisir, le dé harmonique d’une de
+    ses actions affiche sa valeur maximale.</p>
+  type: naissance
+effects: []
+folder: lLVYkr2eG13xLU7R
+sort: 50000
+ownership:
+  default: 0
+  6qbNUhuoJ67e6dmf: 3
+flags: {}
+_stats:
+  compendiumSource: Actor.BrdkcvlYsY1CiYkT.Item.e00K3H0J7Zm2df8w
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.347'
+  systemId: penombre
+  systemVersion: '0'
+  createdTime: 1757151273463
+  modifiedTime: 1757151273463
+  lastModifiedBy: 6qbNUhuoJ67e6dmf
+_key: '!items!Y2fdSsimYHNlCipp'

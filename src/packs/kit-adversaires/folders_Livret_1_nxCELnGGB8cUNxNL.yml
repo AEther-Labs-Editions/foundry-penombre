@@ -1,0 +1,20 @@
+type: Actor
+folder: null
+name: Livret 1
+color: '#a4653d'
+sorting: a
+_id: nxCELnGGB8cUNxNL
+description: ''
+sort: 400000
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.348'
+  systemId: penombre
+  systemVersion: '0'
+  createdTime: 1757150985936
+  modifiedTime: 1759053190838
+  lastModifiedBy: ZPVZnAUjZn9mQP2q
+_key: '!folders!nxCELnGGB8cUNxNL'
