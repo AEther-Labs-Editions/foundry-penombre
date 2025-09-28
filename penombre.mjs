@@ -73,6 +73,39 @@ Hooks.once("init", function () {
   console.info("Pénombre | Système initialisé.")
 })
 
+/**
+ * Register world usage statistics
+ * @param {string} registerKey
+ */
+function registerWorldCount(registerKey) {
+  if (game.user.isGM) {
+    let worldKey = game.settings.get(registerKey, "worldKey")
+    if (worldKey === undefined || worldKey === "") {
+      worldKey = foundry.utils.randomID(32)
+      game.settings.set(registerKey, "worldKey", worldKey)
+    }
+
+    // Simple API counter
+    const worldData = {
+      register_key: registerKey,
+      world_key: worldKey,
+      foundry_version: `${game.release.generation}.${game.release.build}`,
+      system_name: game.system.id,
+      system_version: game.system.version,
+    }
+
+    let apiURL = "https://worlds.qawstats.info/worlds-counter"
+    $.ajax({
+      url: apiURL,
+      type: "POST",
+      data: JSON.stringify(worldData),
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      async: false,
+    })
+  }
+}
+
 Hooks.once("ready", function () {
   game.system.applicationReserveCollegiale = new applications.PenombreReserveCollegiale()
   game.system.applicationReserveCollegiale.render({ force: true })
@@ -84,6 +117,8 @@ Hooks.once("ready", function () {
       chat: false,
     }
   }
+  // Statistics
+  registerWorldCount("penombre")
 })
 
 Hooks.on("updateSetting", async (setting, update, options, id) => {
