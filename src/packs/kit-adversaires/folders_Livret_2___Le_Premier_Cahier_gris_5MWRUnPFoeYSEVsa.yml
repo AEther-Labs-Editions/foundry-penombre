@@ -1,0 +1,20 @@
+type: Actor
+folder: null
+name: Livret 2 - Le Premier Cahier gris
+color: '#a4653d'
+sorting: m
+_id: 5MWRUnPFoeYSEVsa
+description: ''
+sort: 300000
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.348'
+  systemId: penombre
+  systemVersion: '0'
+  createdTime: 1757150984077
+  modifiedTime: 1759053175374
+  lastModifiedBy: ZPVZnAUjZn9mQP2q
+_key: '!folders!5MWRUnPFoeYSEVsa'

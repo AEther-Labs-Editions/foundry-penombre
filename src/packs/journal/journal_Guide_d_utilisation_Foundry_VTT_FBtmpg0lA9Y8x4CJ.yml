@@ -39,12 +39,12 @@ pages:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: "13.348"
+      coreVersion: '13.348'
       systemId: penombre
-      systemVersion: "#{VERSION}#"
+      systemVersion: '#{VERSION}#'
       lastModifiedBy: 6qbNUhuoJ67e6dmf
       modifiedTime: 1758729778952
-    _key: "!journal.pages!FBtmpg0lA9Y8x4CJ.NbsQ1cortQsp55q0"
+    _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.NbsQ1cortQsp55q0'
   - sort: 50000
     name: Comment utiliser la fiche d'Éminence grise
     type: text
@@ -108,12 +108,12 @@ pages:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: "13.348"
+      coreVersion: '13.348'
       systemId: penombre
-      systemVersion: "#{VERSION}#"
+      systemVersion: '#{VERSION}#'
       lastModifiedBy: 6qbNUhuoJ67e6dmf
       modifiedTime: 1758729975495
-    _key: "!journal.pages!FBtmpg0lA9Y8x4CJ.Lvwsq6UuIDwfw4qS"
+    _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.Lvwsq6UuIDwfw4qS'
   - sort: 0
     name: Introduction
     type: text
@@ -157,12 +157,12 @@ pages:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: "13.348"
+      coreVersion: '13.348'
       systemId: penombre
-      systemVersion: "#{VERSION}#"
+      systemVersion: '#{VERSION}#'
       lastModifiedBy: 6qbNUhuoJ67e6dmf
       modifiedTime: 1758729864205
-    _key: "!journal.pages!FBtmpg0lA9Y8x4CJ.cZw3YYM2pYzW2CUS"
+    _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.cZw3YYM2pYzW2CUS'
   - sort: 56250
     name: Comment gérer la réserve collégiale
     type: text
@@ -198,12 +198,12 @@ pages:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: "13.348"
+      coreVersion: '13.348'
       systemId: penombre
-      systemVersion: "#{VERSION}#"
+      systemVersion: '#{VERSION}#'
       lastModifiedBy: 6qbNUhuoJ67e6dmf
       modifiedTime: 1758728798693
-    _key: "!journal.pages!FBtmpg0lA9Y8x4CJ.xiY0OhRbvnWPbRWb"
+    _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.xiY0OhRbvnWPbRWb'
   - sort: 25000
     name: Se procurer le kit de démo du jeu
     type: text
@@ -235,12 +235,12 @@ pages:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: "13.348"
+      coreVersion: '13.348'
       systemId: penombre
-      systemVersion: "#{VERSION}#"
+      systemVersion: '#{VERSION}#'
       lastModifiedBy: 6qbNUhuoJ67e6dmf
       modifiedTime: 1758741347757
-    _key: "!journal.pages!FBtmpg0lA9Y8x4CJ.BZxxmPzLiWLN1I72"
+    _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.BZxxmPzLiWLN1I72'
 folder: null
 categories: []
 ownership:
@@ -251,12 +251,12 @@ _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: "13.348"
+  coreVersion: '13.348'
   systemId: penombre
-  systemVersion: "#{VERSION}#"
+  systemVersion: '#{VERSION}#'
   createdTime: 1758727820853
   modifiedTime: 1758727820853
   lastModifiedBy: 6qbNUhuoJ67e6dmf
 _id: FBtmpg0lA9Y8x4CJ
 sort: 0
-_key: "!journal!FBtmpg0lA9Y8x4CJ"
+_key: '!journal!FBtmpg0lA9Y8x4CJ'

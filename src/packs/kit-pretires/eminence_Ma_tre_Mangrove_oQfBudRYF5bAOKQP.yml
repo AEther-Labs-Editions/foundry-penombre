@@ -1,0 +1,435 @@
+name: Maître Mangrove
+type: eminence
+img: systems/penombre/assets/portraits/maitre_mangrove.webp
+system:
+  peuple: humain
+  cle: etincelle
+  potentiel:
+    pouvoirs: 0
+    atouts: 0
+    maitrises: 0
+  harmoniques:
+    ame:
+      valeur: d8
+    esprit:
+      valeur: d10
+    etincelle:
+      valeur: d12
+    nature:
+      valeur: d6
+    nuit:
+      valeur: d4
+  conscience:
+    valeur: 7
+    max: 7
+    jetons:
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+    complications:
+      une:
+        description: ''
+        valeur: 0
+      deux:
+        description: ''
+        valeur: 0
+      trois:
+        description: ''
+        valeur: 0
+      quatre:
+        description: ''
+        valeur: 0
+  timbre:
+    statut: harmonieux
+    description: ''
+    peste: ''
+    cle: false
+    note1: false
+    note2: false
+    note3: false
+    note4: false
+  atouts: []
+  maitrises: []
+  description: Principal d'académie
+prototypeToken:
+  name: Maître Mangrove
+  displayName: 0
+  actorLink: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/penombre/assets/portraits/maitre_mangrove.webp
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: null
+  bar2:
+    attribute: null
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 0
+    subject:
+      scale: 1
+      texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+  flags: {}
+  randomImg: false
+  appendNumber: false
+  prependAdjective: false
+items:
+  - type: pouvoir
+    name: Succès collectif
+    _id: c6VIuiN9n547UUqI
+    img: systems/penombre/assets/icons/pouvoir.webp
+    system:
+      utilise: false
+      description: >-
+        <h1>Succès collectif</h1><p><em>Marcher ensemble est un début ;
+        travailler ensemble est une victoire.</em></p><p>Lors d’une action
+        collégiale incluant Mangrove, le nombre de succès total augmente du
+        nombre de participants.</p><p>De plus, chaque fois qu’il réalise une
+        merveille (p. 31 du kit), son joueur peut lui choisir un nouveau pouvoir
+        dans la liste suivante, ou augmenter de 1 sa valeur de
+        conscience.</p><ul><li><p>Excès</p></li><li><p>J’ai un
+        plan</p></li></ul>
+      type: naissance
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!oQfBudRYF5bAOKQP.c6VIuiN9n547UUqI'
+  - type: pouvoir
+    name: Excès
+    _id: eckKviOZrdnPjoVU
+    img: systems/penombre/assets/icons/pouvoir.webp
+    system:
+      utilise: false
+      description: >-
+        <h1>Excès</h1><p><em>Je n’échoue pas : soit je réussis, soit je réussis
+        mieux. Peu importent les sacrifices</em>.</p><p>Le temps d’une scène, le
+        nombre de succès de toutes les actions d’étincelle réalisées par
+        Mangrove augmente de 2. Puis, jusqu’au prochain repos, il diminue de
+        1.</p>
+      type: naissance
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!oQfBudRYF5bAOKQP.eckKviOZrdnPjoVU'
+  - type: pouvoir
+    name: J’ai un plan
+    _id: mNsH1HBzYdJeXEqD
+    img: systems/penombre/assets/icons/pouvoir.webp
+    system:
+      utilise: false
+      description: >-
+        <h1>J’ai un plan</h1><p><em>L’issue de cette guerre reste à écrire.
+        Sois-en la plume.</em></p><p>Une action devient automatique car un
+        élément est remplacé par un autre (une fenêtre fermée s’ouvre, un garde
+        s’avère être un ami, Mangrove trouve un objet opportun…). Ce pouvoir n’a
+        aucun effet sur les adversaires déjà déclarés ou en combat.</p>
+      type: naissance
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!oQfBudRYF5bAOKQP.mNsH1HBzYdJeXEqD'
+  - type: atout
+    name: Je suis le maître, tu es l'élève
+    _id: GovLkRJSC9xrV4is
+    img: systems/penombre/assets/icons/atout.webp
+    system:
+      description: ''
+      valeur: 3
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!oQfBudRYF5bAOKQP.GovLkRJSC9xrV4is'
+  - type: atout
+    name: Les scrupules sont des entraves
+    _id: DD5Oipr2gkyb0HaD
+    img: systems/penombre/assets/icons/atout.webp
+    system:
+      description: ''
+      valeur: 2
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!oQfBudRYF5bAOKQP.DD5Oipr2gkyb0HaD'
+  - type: atout
+    name: Principal d'académie obscurantiste
+    _id: OewBqk29fv8bFClj
+    img: systems/penombre/assets/icons/atout.webp
+    system:
+      description: ''
+      valeur: 2
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!oQfBudRYF5bAOKQP.OewBqk29fv8bFClj'
+  - type: atout
+    name: Comment cela, colérique ?
+    _id: fzDSOKwbcVNKdwOQ
+    img: systems/penombre/assets/icons/atout.webp
+    system:
+      description: ''
+      valeur: 2
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!oQfBudRYF5bAOKQP.fzDSOKwbcVNKdwOQ'
+  - type: atout
+    name: Je vous méprise
+    _id: 45bZdS6PUegQbMB4
+    img: systems/penombre/assets/icons/atout.webp
+    system:
+      description: ''
+      valeur: 1
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!oQfBudRYF5bAOKQP.45bZdS6PUegQbMB4'
+  - type: maitrise
+    name: Obscurantiste
+    _id: z7xckgLN4L33u6XF
+    img: systems/penombre/assets/icons/maitrise.webp
+    system:
+      description: >-
+        <h1>Mangrove l’obscurantiste</h1><p><strong>Pour préparer son effet
+        magique, Mangrove
+        doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>torturer son
+        danseur asservi</strong>, physiquement ou mentalement, en s’aidant de
+        lanières cloutées, de chaînes, de cages et d’étaux (chaque obscurantiste
+        développe son style, à vous de trouver celui de Mangrove
+        !)</p></li></ul><p><strong>Ce faisant, il…</strong></p><h6>Action
+        magique</h6><ul><li><p><strong>fait produire à son danseur asservi des
+        étincelles</strong> bleu nuit ou noires, vectrices d’une magie
+        cauchemardesque et destructrice.</p></li></ul><p><strong>Avec un effet
+        magique de niveau ? …</strong></p><p><strong>il parvient par exemple
+        à…</strong></p><ol><li><p><strong>identifier un effet de magie
+        cryptogrammique</strong> (éclipsisme, jornisme, obscurantisme) ;
+        projeter des traits de feu, d’acide, ou d’onyx ; aveugler, rendre sourd
+        ou muet en oblitérant l’organe concerné le temps d’une scène ; effrayer
+        ; provoquer un spasme, ou une douleur ; créer l’obscurité, ou voir dans
+        les ténèbres ; etc.</p></li><li><p><strong>amadouer un démon ;</strong>
+        créer une nuée de vermine ; créer un champ de force ou un bouclier
+        ténébreux ; affaiblir ou accroître des capacités physiques ; susciter la
+        colère et la haine ; forcer à fuir ; etc.</p></li><li><p><strong>imposer
+        une action à un démon ;</strong> créer une illusion cauchemardesque ;
+        tétaniser un danseur ; disparaître et réapparaître ailleurs ; créer un
+        piège d’onyx pour entraver ou blesser ; faire attaquer les ombres ;
+        maudire ; etc.</p></li><li><p><strong>prendre le contrôle mental d’un
+        démon ;</strong> imposer une action à un mortel ; voyager par les ombres
+        ; ravager et briser l’esprit de manière indétectable ; amputer dans une
+        gerbe de sang ; etc.</p></li><li><p><strong>prendre le contrôle mental
+        d’un mortel ;</strong> transférer la vie tel un vampire ; soulager et
+        guérir dans un hurlement de souffrance ; tuer à coup sûr ;
+        etc.</p></li></ol><p><strong>Mais attention, il risque également
+        de…</strong></p><h6>Incident magique</h6><ul><li><p><strong>regretter un
+        accès de violence.</strong> Cette chose délicate semble si fragile, et
+        il est si facile d’en extraire un petit supplément de puissance…
+        Mangrove ressent dans sa chair les sévices qu’il inflige ; un personnage
+        proche est pris de douleurs, de nausées, ou s’évanouit ; le danseur
+        développe une marque étrange, séquelle des tortures qu’il a subies ; le
+        danseur s’affale, inanimé jusqu’au prochain repos ; le danseur meurt,
+        terrifié, exsangue ou désarticulé ; etc.</p></li></ul>
+      harmonique: etincelle
+      niveau: 3
+      prerequis: torturer son danseur
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.347'
+      systemId: penombre
+      systemVersion: '0'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!oQfBudRYF5bAOKQP.z7xckgLN4L33u6XF'
+effects: []
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.348'
+  systemId: penombre
+  systemVersion: '0'
+  createdTime: 1757150754023
+  modifiedTime: 1759053023183
+  lastModifiedBy: ZPVZnAUjZn9mQP2q
+_id: oQfBudRYF5bAOKQP
+sort: 400000
+ownership:
+  default: 0
+  6qbNUhuoJ67e6dmf: 3
+_key: '!actors!oQfBudRYF5bAOKQP'

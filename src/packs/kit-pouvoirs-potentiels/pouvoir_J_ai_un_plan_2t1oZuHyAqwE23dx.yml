@@ -1,0 +1,31 @@
+type: pouvoir
+name: J’ai un plan
+img: systems/penombre/assets/icons/pouvoir.webp
+system:
+  utilise: false
+  description: >-
+    <h1>J’ai un plan</h1><p><em>L’issue de cette guerre reste à écrire. Sois-en
+    la plume.</em></p><p>Une action devient automatique car un élément est
+    remplacé par un autre (une fenêtre fermée s’ouvre, un garde s’avère être un
+    ami, Mangrove trouve un objet opportun…). Ce pouvoir n’a aucun effet sur les
+    adversaires déjà déclarés ou en combat.</p>
+  type: naissance
+effects: []
+folder: vhalCys8j2xMMuD5
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.347'
+  systemId: penombre
+  systemVersion: '0'
+  createdTime: 1757151278297
+  modifiedTime: 1757151278297
+  lastModifiedBy: 6qbNUhuoJ67e6dmf
+_id: 2t1oZuHyAqwE23dx
+sort: 0
+ownership:
+  default: 0
+  6qbNUhuoJ67e6dmf: 3
+_key: '!items!2t1oZuHyAqwE23dx'
