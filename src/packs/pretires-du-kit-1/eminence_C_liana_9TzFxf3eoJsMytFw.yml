@@ -1,4 +1,4 @@
-folder: XPIQcOgA5DQHk5b4
+folder: null
 name: Céliana
 type: eminence
 img: systems/penombre/assets/portraits/celiana.webp
@@ -431,14 +431,14 @@ _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.347'
+  coreVersion: '13.348'
   systemId: penombre
   systemVersion: '0'
   createdTime: 1757150754023
-  modifiedTime: 1757150754023
-  lastModifiedBy: 6qbNUhuoJ67e6dmf
+  modifiedTime: 1759053022021
+  lastModifiedBy: ZPVZnAUjZn9mQP2q
 _id: 9TzFxf3eoJsMytFw
-sort: 0
+sort: 300000
 ownership:
   default: 0
   6qbNUhuoJ67e6dmf: 3

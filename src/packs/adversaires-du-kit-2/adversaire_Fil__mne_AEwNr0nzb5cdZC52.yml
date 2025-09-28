@@ -12,7 +12,7 @@ system:
     harmonique: ame
     valeur: 0
     max: 0
-  description: âme damnée de l'échevin des Mille Tours, brigande, droguéee aux élémentäs
+  description: âme damnée de l'échevin des Mille Tours, brigande, droguée aux élémentäs
   details: >-
     <p>De la classe, du talent, une vraie vision au long cours, et aucune pitié
     : il fallait toutes ces qualités pour écraser la guilde des Bourbelangues.
@@ -329,12 +329,12 @@ _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.347'
+  coreVersion: '13.348'
   systemId: penombre
-  systemVersion: '0'
+  systemVersion: '#{VERSION}#'
   createdTime: 1757150984250
-  modifiedTime: 1757150984250
-  lastModifiedBy: 6qbNUhuoJ67e6dmf
+  modifiedTime: 1759053325278
+  lastModifiedBy: ZPVZnAUjZn9mQP2q
 _id: AEwNr0nzb5cdZC52
 sort: 0
 ownership:

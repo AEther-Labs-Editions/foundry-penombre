@@ -221,14 +221,14 @@ _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.347'
+  coreVersion: '13.348'
   systemId: penombre
   systemVersion: '0'
   createdTime: 1757150984250
-  modifiedTime: 1757150984250
-  lastModifiedBy: 6qbNUhuoJ67e6dmf
+  modifiedTime: 1759053288932
+  lastModifiedBy: ZPVZnAUjZn9mQP2q
 _id: wnuSE45nJ13oVRQr
-sort: 100000
+sort: -100000
 ownership:
   default: 0
   6qbNUhuoJ67e6dmf: 3

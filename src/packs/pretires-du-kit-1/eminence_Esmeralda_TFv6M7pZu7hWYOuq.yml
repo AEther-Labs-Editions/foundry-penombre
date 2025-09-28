@@ -481,20 +481,20 @@ items:
       default: 0
     _key: '!actors.items!TFv6M7pZu7hWYOuq.DQY7PMB9y4tYDytr'
 effects: []
-folder: XPIQcOgA5DQHk5b4
+folder: null
 flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.347'
+  coreVersion: '13.348'
   systemId: penombre
   systemVersion: '0'
   createdTime: 1757150754023
-  modifiedTime: 1757150754023
-  lastModifiedBy: 6qbNUhuoJ67e6dmf
+  modifiedTime: 1759053020863
+  lastModifiedBy: ZPVZnAUjZn9mQP2q
 _id: TFv6M7pZu7hWYOuq
-sort: 0
+sort: 200000
 ownership:
   default: 0
   6qbNUhuoJ67e6dmf: 3

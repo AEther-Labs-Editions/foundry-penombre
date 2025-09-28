@@ -28,20 +28,19 @@
   ],
   "packFolders": [
     {
-      "name": "FR - Système",
-      "sorting": "a",
-      "color": "#a4653d",
-      "packs": ["journal", "landing-page"],
-      "folders": []
-    },
-        {
-      "name": "FR - Kit",
+      "name": "Kit Demo",
       "sorting": "a",
       "color": "#a4653d",
       "packs": ["pretires-du-kit-1", "adversaires-du-kit-2", "pouvoirs-potentiels-du-kit"],
       "folders": []
+    },
+    {
+      "name": "Système",
+      "sorting": "a",
+      "color": "#a4653d",
+      "packs": ["journal", "landing-page"],
+      "folders": []
     }
-
   ],
   "packs": [
     {
