@@ -51,7 +51,7 @@
       "path": "packs/journal",
       "type": "JournalEntry",
       "ownership": {
-        "PLAYER": "NONE",
+        "PLAYER": "OBSERVER",
         "TRUSTED": "OBSERVER",
         "ASSISTANT": "OWNER"
       }
