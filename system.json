@@ -38,35 +38,11 @@
       "name": "Système",
       "sorting": "m",
       "color": "#a4653d",
-      "packs": ["journal", "landing-page"],
+      "packs": ["journal", "scenes"],
       "folders": []
     }
   ],
   "packs": [
-    {
-      "name": "journal",
-      "label": "Journaux",
-      "system": "penombre",
-      "path": "packs/journal",
-      "type": "JournalEntry",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "TRUSTED": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "landing-page",
-      "label": "Page d'accueuil",
-      "system": "penombre",
-      "path": "packs/landing-page",
-      "type": "Scene",
-      "ownership": {
-        "PLAYER": "NONE",
-        "TRUSTED": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
     {
       "name": "kit-pretires",
       "label": "Kit - Prétirés",
@@ -97,6 +73,30 @@
       "system": "penombre",
       "path": "packs/kit-pouvoirs-potentiels",
       "type": "Item",
+      "ownership": {
+        "PLAYER": "NONE",
+        "TRUSTED": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+        {
+      "name": "journal",
+      "label": "Journaux",
+      "system": "penombre",
+      "path": "packs/journal",
+      "type": "JournalEntry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "TRUSTED": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "scenes",
+      "label": "Images & Scènes",
+      "system": "penombre",
+      "path": "packs/scenes",
+      "type": "Scene",
       "ownership": {
         "PLAYER": "NONE",
         "TRUSTED": "OBSERVER",
