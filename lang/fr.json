@@ -442,7 +442,9 @@
       "resultEchec": "Le nombre de succès n’est pas suffisant (raté de {x})",
       "resultEchecTooltip": "3 options <br> - Réussite mitigée <br> - Prolongation <br> - Échec",
       "relanceConscience": "Relance (conscience)",
-      "relanceReserve": "Relance (réserve)"
+      "relanceReserve": "Relance (réserve)",
+      "utilise": "Utilisé",
+      "valeur": "Valeur"
     },
     "Roll": {
       "fausseNote": "Fausse note",
