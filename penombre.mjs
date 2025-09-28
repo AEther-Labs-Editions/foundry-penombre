@@ -234,3 +234,14 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
   })
 })
 
+/**
+ * Hook appelé juste avant que Dice So Nice affiche le résultat d'un jet de dés.
+ *
+ * @param {string} messageId L'identifiant unique du message à récupérer.
+ * @returns {Message|null} L'objet message s'il est trouvé, sinon null.
+ */
+Hooks.on("diceSoNiceMessageProcessed", (messageId, interception) => {
+  const message = game.messages.get(messageId)
+  // Si c'est une action collégiale principale et que toutes les réponses ne sont pas faites, les dés ne doivent pas être affichés
+  if (message.system.actionCollegiale && !message.system.actionCollegialeMessageLie && !message.system.toutesReponsesFaites) interception.willTrigger3DRoll = false
+})
