@@ -20,7 +20,7 @@ pages:
         et situé sous l’Harmonde, territoire des démons et des hauts diables.
         Dirigé par la Bête. Ses portes sont gardées par les minotaures et les
         nains du clan de l’Obsidienne.</span></p></li><li><p><span
-        class="fontstyle1"><strong>Accod </strong></span><span
+        class="fontstyle1"><strong>Accord </strong></span><span
         class="fontstyle3"><strong>(12) :</strong> Forme de magie basée sur la
         musique et influant sur l’esprit.</span></p></li><li><p><span
         class="fontstyle1"><strong>Adelguêne </strong></span><span
@@ -337,12 +337,12 @@ pages:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '13.346'
+      coreVersion: '13.348'
       systemId: penombre
       systemVersion: 0.0.1beta
       createdTime: null
-      modifiedTime: 1750333501397
-      lastModifiedBy: oquiocNsoBkfmqxs
+      modifiedTime: 1759064300074
+      lastModifiedBy: 6qbNUhuoJ67e6dmf
       exportSource: null
     category: null
     _key: '!journal.pages!mafnTeAkFCC8H1fk.8Oo1ITrDFqrK02m9'
