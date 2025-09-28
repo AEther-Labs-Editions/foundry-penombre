@@ -76,6 +76,14 @@ Hooks.once("init", function () {
 Hooks.once("ready", function () {
   game.system.applicationReserveCollegiale = new applications.PenombreReserveCollegiale()
   game.system.applicationReserveCollegiale.render({ force: true })
+  if (!CONFIG.debug.penombre) {
+    CONFIG.debug.penombre = {
+      reserve: false,
+      rolls: false,
+      sheets: false,
+      chat: false,
+    }
+  }
 })
 
 Hooks.on("updateSetting", async (setting, update, options, id) => {
@@ -86,7 +94,7 @@ Hooks.on("updateSetting", async (setting, update, options, id) => {
 
   // Mise à jour du nombre de jetons dans la réserve collégiale
   if (setting.key === "penombre.nbJetons" && game.user.isGM) {
-    console.log("Pénombre | Mise à jour du nombre de jetons dans la réserve collégiale", setting, update, options, id)
+    if (CONFIG.debug.penombre?.reserve) console.debug("Pénombre | Mise à jour du nombre de jetons dans la réserve collégiale", setting, update, options, id)
     const reserveCollegiale = foundry.utils.duplicate(game.settings.get(SYSTEM.ID, "reserveCollegiale"))
 
     let nouveauNbJetons = update.value

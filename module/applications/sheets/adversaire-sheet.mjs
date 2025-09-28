@@ -50,7 +50,7 @@ export default class AdversaireSheet extends PenombreBaseActorSheet {
 
     // Select options
     context.harmoniquesChoices = Object.fromEntries(Object.entries(SYSTEM.HARMONIQUES).map(([key, value]) => [key, { label: game.i18n.localize(value.label) }]))
-    console.log("AdversaireSheet._prepareContext", context)
+    if (CONFIG.debug.penombre?.sheets) console.debug("Pénombre | AdversaireSheet | prepareContext", context)
     return context
   }
 

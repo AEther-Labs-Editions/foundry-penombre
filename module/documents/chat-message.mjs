@@ -82,7 +82,7 @@ export default class PenombreMessage extends ChatMessage {
 
     // Vérifie que le message est un jet de dés de Pénombre
     if (message.isRoll && message.rolls[0] && message.rolls[0] instanceof PenombreRoll) {
-      console.log("Pénombre | Participation au jet", existingMessageId, actorId, answer, nbSucces, newMessageId)
+      if (CONFIG.debug.penombre?.chat) console.debug("Pénombre | Participation au jet", existingMessageId, actorId, answer, nbSucces, newMessageId)
       // Met à jour la réponse de l'acteur dans le message
       if (answer) {
         // Si la réponse est positive, on enregistre le nombre de succès
