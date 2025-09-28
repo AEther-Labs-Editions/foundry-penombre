@@ -6,7 +6,7 @@ styles/**/*.css
 node_modules/
 
 # Foundry VTT
-packs
+/packs
 
 # GitHub
 .github/copilot-instructions.md
