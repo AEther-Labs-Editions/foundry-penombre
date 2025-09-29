@@ -22,6 +22,9 @@ export default class HarmoniqueMessageData extends BaseMessageData {
       // Indique si une relance a été faite dans ce message
       relanceFaite: new BooleanField({ initial: false }),
 
+      // Indique si le message a déjà été traité par DiceSoNice
+      dsnDejaTraite: new BooleanField({ initial: false }),
+
       // Est-ce une action collégiale ?
       actionCollegiale: new BooleanField({ initial: false }),
 
@@ -56,10 +59,11 @@ export default class HarmoniqueMessageData extends BaseMessageData {
    * détermine si la difficulté est atteinte, puis affiche le résultat via un template Handlebars.
    *
    * @async
+   * @param {PenombreMessage} message Le document ChatMessage en cours de rendu.
    * @param {HTMLElement} html Élément HTML représentant le message à modifier.
    * @returns {Promise<void>} Résout lorsque le HTML a été mis à jour.
    */
-  async alterMessageHTML(html) {
+  async alterMessageHTML(message, html) {
     if (CONFIG.debug.penombre?.chat) console.debug("Pénombre | alterMessageHTML", this)
     // C'est une action collégiale
     if (this.actionCollegiale) {
@@ -90,6 +94,14 @@ export default class HarmoniqueMessageData extends BaseMessageData {
 
           const hasDifficulte = roll.options.difficulte !== ""
           const isSuccess = hasDifficulte && totalSucces >= roll.options.difficulte
+
+          // Si le joueur est à l'origine du message, affichage du résultat du roll dans Dice So Nice (visible par tous les joueurs)
+          if (game.modules.get("dice-so-nice")?.active && game.user.id === this.parent.author.id && message.system.dsnDejaTraite === false) {
+            // Paramètres : roll, user, synchronize, whisper, blind
+            // @param {Boolean} synchronize if the animation needs to be shown to other players. Default: false
+            await game.dice3d.showForRoll(roll, game.user, true)
+            await message.update({ "system.dsnDejaTraite": true })
+          }
 
           const content = await foundry.applications.handlebars.renderTemplate("systems/penombre/templates/chat/action-collegiale.hbs", {
             isMessagePrincipal,

@@ -9,7 +9,7 @@ import PenombreMessage from "../documents/chat-message.mjs"
  */
 export async function renderChatMessageHTML(message, html, context) {
   if (message.system.alterMessageHTML instanceof Function) {
-    await message.system.alterMessageHTML(html)
+    await message.system.alterMessageHTML(message, html)
   }
   if (message.system.addListeners instanceof Function) {
     await message.system.addListeners(html)

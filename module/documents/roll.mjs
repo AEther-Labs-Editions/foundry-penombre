@@ -651,6 +651,11 @@ export default class PenombreRoll extends Roll {
       // Affichage groupé de tous les nouveaux dés avec Dice So Nice
       if (game.modules.get("dice-so-nice")?.active && newRolls.length > 0) {
         const synchronize = !game.user.isGM
+        // Paramètres : roll, user, synchronize, whisper, blind
+        // * @param {Boolean} synchronize if the animation needs to be shown to other players. Default: false
+        // * @param {Array} whisper list of users or userId who can see the roll, set it to null if everyone can see. Default: null
+        // * @param {Boolean} blind if the roll is blind for the current user. Default: false
+
         const showPromises = newRolls.map((newDice) => game.dice3d.showForRoll(newDice, game.user, synchronize, whisper, blind))
         await Promise.all(showPromises)
       }
