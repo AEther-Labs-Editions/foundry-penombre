@@ -1,7 +1,7 @@
 {{!log "adversaire personnage" this}}
 <div class="adversaire-personnage">
     <div class="logo-frame">
-      <img class="logo-img{{#if unlocked}}-unlocked{{/if}}" src="{{document.img}}" {{#if unlocked}}data-action="editImage"{{/if}} data-tooltip="{{document.name}}"/>
+      <img class="logo-img{{#if unlocked}}-unlocked{{/if}}" src="{{document.img}}" {{#if unlocked}}data-action="editImage" data-edit="img"{{/if}} data-tooltip="{{document.name}}"/>
     </div>
     <div class="infos">
         <div class="nom{{#if locked}} locked{{/if}}">
