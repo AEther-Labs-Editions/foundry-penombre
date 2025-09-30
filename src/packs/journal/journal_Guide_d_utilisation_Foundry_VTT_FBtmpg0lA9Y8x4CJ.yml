@@ -14,50 +14,57 @@ pages:
       content: >-
         <p>Vous ne pouvez lancer les dés qu'en Mode Jouer.</p><p>Pour lancer les
         dés, cliquez sur l'icône du dé harmonique applicable, dans la zone
-        Harmoniques.</p><img
+        <strong>Harmoniques</strong>.</p><img
         src="systems/penombre/assets/guide/fiche_mode_jouer.webp" alt="Fiche"
         /><p>Un dialogue de lancer fera alors son apparition.</p><img
         src="systems/penombre/assets/guide/fiche_jet.webp" alt="Dialogue de
-        lancer" /><p></p><p>La visibilité du jet reprend par défaut celle choisi
-        dans les options du tchat.</p><p>Le calcul du coût en jetons est
-        automatique en fonction des choix.</p><p>La case <strong>Bonus
-        total</strong> permet de voir la somme des niveaux des atouts
-        sélectionnés.</p><p>Le champ <strong>Bonus</strong> dans la partie
-        Formule permet de saisir un bonus sous la forme 1d20 ou xd6.<br
-        /></p><h2>Si vous utilisez des atouts</h2><p>Cliquez sur les atouts
-        applicables.</p><p>Si vous avez cliqué sur des atouts, pensez à répartir
-        l'éventuelle dépense en jetons entre votre conscience et la réserve
-        collégiale (zone "Dépense automatique").</p><p>Si le total des jetons
-        dépensés ici n'est pas égal au nombre des "Jetons à dépenser", vous ne
+        lancer" /><p></p><p>La visibilité du jet reprend par défaut celle
+        choisie dans les options du tchat.</p><p>Le calcul du coût en jetons est
+        effectué automatiquement en fonction des choix.</p><p>La case
+        <strong>Bonus total</strong> permet de voir la somme des niveaux des
+        atouts sélectionnés.</p><p>Le champ <strong>Bonus</strong> dans la zone
+        <strong>Formule</strong> permet de saisir un bonus sous la forme 1d20 ou
+        bien xd6 (x étant un entier).<br /></p><h2>Si vous utilisez des
+        atouts</h2><p>Cliquez sur les atouts applicables.</p><p>Si vous avez
+        cliqué sur des atouts, pensez à répartir l'éventuelle dépense en jetons
+        entre votre conscience et la réserve collégiale (zone <strong>Dépense
+        automatique</strong>).</p><p>Si le total des jetons dépensés ici n'est
+        pas égal au nombre des <strong>Jetons à dépenser</strong>, vous ne
         pourrez pas lancer les dés.</p><p>Le maximum de chaque source de jetons
         correspond au nombre de jetons disponibles lorsque la fenêtre de
         dialogue s'est ouverte.</p><p>Lorsque vous déplacez le sélecteur de la
-        Réserve collégiale, un message d'avertissement apparait si le nombre
-        réel de jetons est inférieur à celui que vous avez choisi.</p><p>Si
-        c'est une action normale, le premier atout est gratuit.</p><p>Si c'est
-        une action collégiale, le premier atout n'est pas gratuit, sauf si vous
-        cochez la case "J'ai choisi le premier atout …"</p><h2>Si vous lancez
-        une action collégiale</h2><p>La première étape est la même que pour une
-        action normale.</p><p>Par contre le résultat n'est pas affiché dans le
-        message de tchat avant que l'action soit finalisée.</p><p>Tous les
-        joueurs connectés, à l'exception du MJ, vont voir dans le message de
-        tchat deux boutons : Participer et Ne pas participer.</p><p>SI un joueur
-        participe, une fenêtre de dialogue apparait pour lui permettre de
-        réaliser son jet de dés. Si un joueur ne participe pas, il doit cliquer
-        sur le bouton pour que le jet collégiale aiile jusqu'au
-        bout.</p><p>Lorsque tous les joueurs auront fait leur choix, le message
-        initial sera mis à jour avec les succès de tout le monde, et le résultat
-        sera visible. A noter que dans Autres succès, une info-bulle sur le
-        nombre de succès permet de connaitre le personnage à
-        l'origine.</p><p>Tous les participants peuvent choisir de relancer tout
-        ou une partie de leurs dés.</p><p>Comme le lancer est visible au moment
-        où le joueur lance les dés, il est fortement conseillé de discuter tous
-        ensemble avant que chacun commence à cliquer sur le bouton Lancer les
-        dés.</p><h2>Relance</h2><p>Pour chaque jet de dé, il est possible de
-        faire une et une seule relance. Les boutons de relance sont visibles
-        dans le tchat en fonction des réserves non vide.</p><p>Il suffit de
-        sélectionner les dés à relancer et de cliquer sur le bouton : le message
-        sera mis à jour avec le nouveau résultat.</p>
+        <strong>Réserve collégiale</strong>, un message d'avertissement apparaît
+        si le nombre réel de jetons est inférieur à celui que vous avez
+        choisi.</p><p>Si c'est une action standard, le premier atout est
+        gratuit.</p><p>Si c'est une action collégiale, le premier atout n'est
+        pas gratuit, sauf si vous cochez la case <strong>J'ai choisi le premier
+        atout</strong>…</p><p>Les réserves sollicitées seront mises à jour de
+        façon automatique.</p><h2>Si vous lancez une action collégiale</h2><p>La
+        première étape est la même que pour une action standard.</p><p>Par
+        contre, le résultat initial ne sera pas affiché dans le message de tchat
+        avant que l'action soit finalisée.</p><p>Toutes les joueuses connectées,
+        à l'exception du MJ, vont voir dans le message de tchat deux boutons :
+        <strong>Participer</strong> et <strong>Ne pas
+        participer</strong>.</p><p>SI une joueuse participe, une fenêtre de
+        dialogue apparaîtra pour lui permettre de réaliser son jet de dés. Si
+        une joueuse ne participe pas, elle devra cliquer sur le bouton
+        <strong>Ne pas participer </strong>pour que le jet collégial aille
+        jusqu'au bout.</p><p>Lorsque toutes les joueuses auront fait leur choix,
+        le message initial sera mis à jour avec les succès de tout le monde, et
+        le résultat sera visible dans le tchat. À noter que dans <strong>Autres
+        succès</strong>, une info-bulle sur le nombre de succès permet de
+        connaître le personnage à l'origine du jet.</p><p>Tous les participants
+        peuvent choisir de relancer tout ou partie de leurs
+        dés.</p><p><strong>Remarque :</strong> comme le lancer est visible au
+        moment où la joueuse lance les dés, il est fortement conseillé de
+        discuter tous ensemble avant que chacun commence à cliquer sur le bouton
+        <strong>Lancer les dés</strong>.</p><h2>Relance</h2><p>Pour chaque jet
+        de dés, il est possible de faire une et une seule relance. Les boutons
+        de relance sont visibles dans le tchat en fonction de l'état des
+        réserves (vides, non vides).</p><p>Il suffit de sélectionner les dés à
+        relancer et de cliquer sur un bouton <strong>Relance (…)</strong> ; le
+        message initial sera mis à jour avec le nouveau résultat.</p><p>Là
+        aussi, la réserve sollicitée sera mise à jour de façon automatique.</p>
     video:
       controls: true
       volume: 0.5
@@ -74,8 +81,8 @@ pages:
       coreVersion: '13.348'
       systemId: penombre
       systemVersion: '#{VERSION}#'
-      lastModifiedBy: ZPVZnAUjZn9mQP2q
-      modifiedTime: 1759212205548
+      lastModifiedBy: 6qbNUhuoJ67e6dmf
+      modifiedTime: 1759223437172
     _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.NbsQ1cortQsp55q0'
   - sort: 50000
     name: Comment utiliser la fiche d'Éminence grise
