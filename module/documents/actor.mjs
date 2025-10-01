@@ -53,14 +53,14 @@ export default class PenombreActor extends Actor {
 
     // Gestion des cas particuliers : perte ou gain de jetons de conscience
     const rollResults = PenombreRoll.analyseRollResult(roll)
-    // Fausse note (1 sur le dé merveilleux) : perte d'un jeton
-    if (rollResults.isDeMerveilleuxMin) {
+    // Fausse note (1 sur le dé harmonique) : perte d'un jeton
+    if (rollResults.isDeHarmoniqueMin) {
       await this.system.perdreUnJeton()
     }
 
-    // Envolée (20 sur le dé merveilleux) : un jeton dépensé est réactivé
+    // Envolée (20 sur le dé harmonique) : un jeton dépensé est réactivé
     // Le premier jeton inactif est réactivé
-    if (rollResults.isDeMerveilleuxMax) {
+    if (rollResults.isDeHarmoniqueMax) {
       const jetons = foundry.utils.duplicate(this.system.conscience.jetons)
       for (let i = 0; i < jetons.length; i++) {
         if (jetons[i].statut === SYSTEM.JETON_STATUTS.inactif.id) {
