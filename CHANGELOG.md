@@ -1,3 +1,7 @@
+1.1.1
+- Correction de Fausse note (1 au dé) et Envolée (max au dé) qui était sur le dé merveilleux au lieu du dé harmonique
+- Guide utilisateur : clarification et correction de quelques fautes d'orthographe
+
 1.1.0
 - Mise à jour des tokens des prétirés (merci Prêtre)
 - Amélioration pour permettre l'édition de l'image des acteurs par le module Tokenizer
