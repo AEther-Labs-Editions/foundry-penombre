@@ -45,10 +45,10 @@ pages:
         avant que l'action soit finalisée.</p><p>Toutes les joueuses connectées,
         à l'exception du MJ, vont voir dans le message de tchat deux boutons :
         <strong>Participer</strong> et <strong>Ne pas
-        participer</strong>.</p><p>SI une joueuse participe, une fenêtre de
+        participer</strong>.</p><p>Si une joueuse participe, une fenêtre de
         dialogue apparaîtra pour lui permettre de réaliser son jet de dés. Si
         une joueuse ne participe pas, elle devra cliquer sur le bouton
-        <strong>Ne pas participer </strong>pour que le jet collégial aille
+        <strong>Ne pas participer</strong> pour que le jet collégial aille
         jusqu'au bout.</p><p>Lorsque toutes les joueuses auront fait leur choix,
         le message initial sera mis à jour avec les succès de tout le monde, et
         le résultat sera visible dans le tchat. À noter que dans <strong>Autres
@@ -57,7 +57,7 @@ pages:
         peuvent choisir de relancer tout ou partie de leurs
         dés.</p><p><strong>Remarque :</strong> comme le lancer est visible au
         moment où la joueuse lance les dés, il est fortement conseillé de
-        discuter tous ensemble avant que chacun commence à cliquer sur le bouton
+        discuter tous ensemble avant que chacune commence à cliquer sur le bouton
         <strong>Lancer les dés</strong>.</p><h2>Relance</h2><p>Pour chaque jet
         de dés, il est possible de faire une et une seule relance. Les boutons
         de relance sont visibles dans le tchat en fonction de l'état des
@@ -109,13 +109,13 @@ pages:
         ci-dessus).</p></li><li><p>Le Mode Éditer (voir figure
         ci-dessous).</p></li></ul><img
         src="systems/penombre/assets/guide/fiche_mode_editer.webp" alt="Fiche en
-        Mode Éditer" /><p></p><h2>Moduler les jetons de conscience</h2><p>Les
-        jetons de conscience se modulent aussi bien en Mode Jouer qu'en Mode
+        Mode Éditer" /><p></p><h2>Modifier les jetons de conscience</h2><p>Les
+        jetons de conscience se modifient aussi bien en Mode Jouer qu'en Mode
         Éditer.</p><div><ul><li><p>Clic pour dépenser ou réactiver un
-        jeton.</p></li><li><p>Clic-droit pour perdre ou ajouter un
-        jeton.</p></li></ul><p>Par contre, la modification du max de conscience
+        jeton.</p></li><li><p>Clic droit pour perdre ou ajouter un
+        jeton.</p></li></ul><p>Par contre, la modification du maximum de conscience
         ne s'effectue qu'en Mode Éditer.</p><p><strong>Attention :</strong> les
-        jetons de conscience sont aussi susceptibles d'être modulés
+        jetons de conscience sont aussi susceptibles d'être modifiés
         automatiquement lorsque vous paramétrez le dialogue de lancer de
         dés.</p><p></p></div><div><h2>Ajouter/modifier des
         complications</h2></div><p>Les ajouts/modifications de complications se
@@ -218,10 +218,10 @@ pages:
         alt="Réserve collégiale" /><h2>Réserve gérée par l'ensemble des
         joueuses</h2><p>Cette réserve est commune à l'ensemble des joueuses. Ce
         que vous y faites est répercuté chez les autres joueuses et
-        vice-versa.</p><h2>Moduler les jetons de la réserve
+        vice-versa.</p><h2>Modifier les jetons de la réserve
         collégiale</h2><div><ul><li><p>Clic pour dépenser ou réactiver un
         jeton.</p></li></ul><p><strong>Attention :</strong> les jetons de la
-        réserve collégiale sont aussi susceptibles d'être modulés
+        réserve collégiale sont aussi susceptibles d'être modifiés
         automatiquement lorsque vous paramétrez votre dialogue de lancer de
         dés.</p></div>
     video:
