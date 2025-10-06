@@ -1,0 +1,418 @@
+name: Nuane
+type: eminence
+img: icons/svg/mystery-man.svg
+system:
+  peuple: geant
+  cle: ame
+  potentiel:
+    pouvoirs: 0
+    atouts: 0
+    maitrises: 0
+  harmoniques:
+    ame:
+      valeur: d10
+    esprit:
+      valeur: d12
+    etincelle:
+      valeur: d8
+    nature:
+      valeur: d4
+    nuit:
+      valeur: d6
+  conscience:
+    valeur: 7
+    max: 7
+    jetons:
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+    complications:
+      une:
+        description: ''
+        valeur: 0
+      deux:
+        description: ''
+        valeur: 0
+      trois:
+        description: ''
+        valeur: 0
+      quatre:
+        description: ''
+        valeur: 0
+  timbre:
+    statut: harmonieux
+    cle: false
+    note1: false
+    note2: false
+    note3: false
+    note4: false
+  atouts: []
+  maitrises: []
+  description: ''
+prototypeToken:
+  name: Nuane
+  displayName: 0
+  actorLink: false
+  width: 1
+  height: 1
+  texture:
+    src: icons/svg/mystery-man.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: null
+  bar2:
+    attribute: null
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+  flags: {}
+  randomImg: false
+  appendNumber: false
+  prependAdjective: false
+items:
+  - type: pouvoir
+    name: Gigantisme
+    _id: JH8QonoEyn5xS6wZ
+    img: systems/penombre/assets/icons/pouvoir.webp
+    system:
+      utilise: false
+      description: >-
+        <h1>Gigantisme</h1><p><em>On n’est jamais si grand que quand on se sent
+        à nouveau libre. Ou l’inverse.</em></p><p>Aussi longtemps que Nuane le
+        souhaite, sa taille redevient celle d’un géant (6 à 8 mètres). Les
+        objets sont inutilisables sous cette forme.</p><p>Jusqu’au premier
+        coucher de soleil, le nombre de succès de toutes ses actions d’étincelle
+        et de nature augmente de 2, mais celui de toutes ses actions d’esprit,
+        d’âme et de nuit diminue de 1.</p><p>De plus, chaque fois qu’elle
+        réalise une merveille (p. 31 du kit), son joueur peut lui choisir un
+        nouveau pouvoir dans la liste suivante, ou augmenter de 1 sa valeur de
+        conscience.</p><ul><li><p>Iris de focalisation</p></li><li><p>Colosse
+        tonitruant</p></li></ul>
+      type: naissance
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      6qbNUhuoJ67e6dmf: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.350'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!SFHFf0wYLKoOZiZw.JH8QonoEyn5xS6wZ'
+  - type: pouvoir
+    name: Iris de focalisation
+    _id: aGXCDKWCRRbzoPZI
+    img: systems/penombre/assets/icons/pouvoir.webp
+    system:
+      utilise: false
+      description: >-
+        <h1>Iris de focalisation</h1><p><em>Mon sens de l’observation est
+        d’utilité publique !</em></p><p>Lors d’une action d’étincelle de Nuane,
+        votre dé harmonique affiche sa valeur maximale.</p>
+      type: naissance
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      6qbNUhuoJ67e6dmf: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.350'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!SFHFf0wYLKoOZiZw.aGXCDKWCRRbzoPZI'
+  - type: pouvoir
+    name: Colosse tonitruant
+    _id: du0nG2KFiSjrepUu
+    img: systems/penombre/assets/icons/pouvoir.webp
+    system:
+      utilise: false
+      description: >-
+        <h1>Colosse tonitruant</h1><p><em>Mes rires dérident les murs des palais
+        !</em></p><p>Le temps d’une scène, toute action de Nuane pour attirer
+        l’attention par la voix devient automatique. De plus, le nombre de
+        succès de toutes ses actions d’étincelle augmente de 1.</p>
+      type: naissance
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      6qbNUhuoJ67e6dmf: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.350'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!SFHFf0wYLKoOZiZw.du0nG2KFiSjrepUu'
+  - type: atout
+    name: L'Harmonde est ma toile
+    _id: YjXfZghlT9xOVQpJ
+    img: systems/penombre/assets/icons/atout.webp
+    system:
+      description: ''
+      valeur: 3
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      6qbNUhuoJ67e6dmf: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.350'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!SFHFf0wYLKoOZiZw.YjXfZghlT9xOVQpJ'
+  - type: atout
+    name: J'ai visité tant de royaumes
+    _id: 0ElmUNJ8Vyw9OfEZ
+    img: systems/penombre/assets/icons/atout.webp
+    system:
+      description: ''
+      valeur: 3
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      6qbNUhuoJ67e6dmf: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.350'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!SFHFf0wYLKoOZiZw.0ElmUNJ8Vyw9OfEZ'
+  - type: atout
+    name: Votre bouche dit un chose mais votre esprit en dit une autre
+    _id: yGzmDBt1pLp7ssoq
+    img: systems/penombre/assets/icons/atout.webp
+    system:
+      description: ''
+      valeur: 2
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      6qbNUhuoJ67e6dmf: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.350'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!SFHFf0wYLKoOZiZw.yGzmDBt1pLp7ssoq'
+  - type: atout
+    name: Questrice de la trame et des pigments
+    _id: rKw4WvPgTdT9HV0K
+    img: systems/penombre/assets/icons/atout.webp
+    system:
+      description: ''
+      valeur: 2
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      6qbNUhuoJ67e6dmf: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.350'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!SFHFf0wYLKoOZiZw.rKw4WvPgTdT9HV0K'
+  - type: maitrise
+    name: Décorum
+    _id: eQcYrCCI1smRHFtv
+    img: systems/penombre/assets/icons/maitrise.webp
+    system:
+      slug: ''
+      description: >-
+        <h1>Nuane l’artiste du décorum</h1><p><strong>Note :</strong> Nuane est
+        un personnage bonus pouvant être utilisé avec le coffret de découverte
+        de Pénombre. Si Nuane et Esmeralda se retrouvent dans un même groupe,
+        cette dernière peut perdre la maîtrise magique « Décorum » et la
+        remplacer par une augmentation de sa maîtrise magique « Prisme » à
+        3.</p><p></p><p><strong>Pour préparer son effet magique, Nuane
+        doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>réaliser une
+        esquisse</strong>, un croquis, un tableau, voire une fresque picturale
+        dans laquelle, toujours, on retrouve la présence
+        d’Agone.</p></li></ul><p><strong>Ce faisant, il…</strong></p><h6>Action
+        magique</h6><ul><li><p><strong>redessine la réalité</strong> comme si il
+        corrigeait l’œuvre maladroite d’un artiste débutant. L’Harmonde inanimé
+        se recompose sous son trait.</p></li></ul><p><strong>Avec un effet
+        magique de niveau ? …</strong></p><p><strong>il parvient par exemple
+        à…</strong></p><ol><li><p><strong>identifier</strong> un effet magique
+        d’art ancien (accord, décorum, geste) ; ajouter ou gommer un détail sur
+        un objet ; embellir ou enlaidir sans dénaturer ;
+        etc.</p></li><li><p><strong>remplacer</strong> une couleur par une autre
+        ; rendre un objet méconnaissable ; créer un mirage ou une illusion
+        réaliste, mais immatérielle ; modifier une perspective pour agrandir,
+        réduire, approcher ou éloigner ; etc.</p></li><li><p><strong>créer ou
+        effacer</strong> temporairement un élément de décor ; déplacer
+        définitivement un élément existant ; rendre translucide ; détruire,
+        abîmer ou réparer un élément de décor ; créer un point faible ;
+        etc.</p></li><li><p><strong>créer ou effacer</strong> un élément de
+        décor de manière permanente ; rendre un objet invisible ;
+        etc.</p></li><li><p><strong>créer</strong> un tableau-monde connecté à
+        l’Harmonde ; ouvrir un portail entre deux lieux distants ;
+        etc.</p></li></ol><p><strong>Mais attention, il risque également
+        de…</strong></p><h6>Incident magique</h6><ul><li><p><strong>faire de sa
+        vie une œuvre.</strong> En prenant l’Harmonde pour toile, Nuane doit
+        s’attendre à une réaction de sa part ! Nuane se retrouve prisonnier d’un
+        méandre ; plusieurs réalités se superposent autour de lui, ou pire, en
+        lui ; son environnement se transforme d’une manière imprévisible ; sa
+        maladresse suscite la colère des témoins alentour, ou de l’Harmonde
+        lui-même qui déchaîne les éléments contre lui ; etc.</p></li></ul>
+      harmonique: ame
+      niveau: 3
+      prerequis: Peindre
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      6qbNUhuoJ67e6dmf: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.350'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!SFHFf0wYLKoOZiZw.eQcYrCCI1smRHFtv'
+effects: []
+folder: null
+ownership:
+  default: 0
+  6qbNUhuoJ67e6dmf: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.350'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1759787151631
+  modifiedTime: 1759787151631
+  lastModifiedBy: 6qbNUhuoJ67e6dmf
+_id: SFHFf0wYLKoOZiZw
+sort: 0
+_key: '!actors!SFHFf0wYLKoOZiZw'

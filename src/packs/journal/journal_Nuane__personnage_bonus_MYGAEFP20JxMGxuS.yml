@@ -1,0 +1,154 @@
+name: Nuane, personnage bonus
+_id: MYGAEFP20JxMGxuS
+pages:
+  - sort: 100000
+    name: Nuane, peintre de l’harmonie
+    type: text
+    _id: 8mWkxg0yo5bT6y83
+    system: {}
+    title:
+      show: true
+      level: 1
+    image: {}
+    text:
+      format: 1
+      content: >-
+        <h2><span class="fontstyle0"
+        style="font-size:12pt">PERSONNALITÉ</span></h2><p><span
+        class="fontstyle2">Nuane arpente – c’est dans sa nature. Des steppes
+        lyphaniennes aux cités-états princéennes, des jungles boucanières aux
+        déserts de Keshe puis aux monts Drakoniens, la recherche de toutes les
+        nuances de la palette harmonique ne connaît aucune
+        frontière.</span></p><p><span class="fontstyle2">Nuane peint, en quête
+        de cette Muse rêvée par les Inspirés – ces illuminés des Terres veuves.
+        Pour découvrir la toile derrière la peinture et le vernis, comprendre la
+        trame de l’Harmonde. Le Souffrejour est une étape décisive de sa quête,
+        car c’est une certitude : à sa façon, l’arbre noir plonge ses racines
+        dans les pigments de la réalité. Les toiles de Nuane ne sont pas de
+        simples paysages, ou de banals portraits : elles approchent la structure
+        et le dynamisme de l’Harmonde, voire le modèle selon son ressenti du
+        moment.</span></p><p></p><h2><span class="fontstyle0"
+        style="font-size:12pt">SUGGESTIONS D’INTERPRÉTATION
+        :</span></h2><p><span class="fontstyle2">Nuane
+        est…</span></p><ul><li><p><span class="fontstyle2">Une peintresse des
+        paysages de l’Harmonde</span></p></li><li><p><span class="fontstyle2">Un
+        voyageur habité par une quête</span></p></li><li><p><span
+        class="fontstyle2">Une artiste peu intéressée par la politique et les
+        affaires quotidiennes du collège</span></p></li><li><p><span
+        class="fontstyle2">Un érudit curieux et
+        attentif</span></p></li></ul><p></p><h2><span class="fontstyle0"
+        style="font-size:12pt">PORTRAIT</span></h2><p><span
+        class="fontstyle2">Nuane appartient au peuple des géants, dont la taille
+        naturelle avoisine les sept mètres, mais contraint la sienne – la
+        plupart du temps – à celle d'un simple humain. Comme tous ceux de son
+        espèce, Nuane n’a pas de genre défini, et se peint homme ou femme selon
+        son humeur du moment.</span></p><p><span class="fontstyle2">Cela n’a
+        guère d’importance, en comparaison de sa quête, et l’artiste apprécie
+        peu d’y perdre sa vision globale de l’Harmonde.</span></p><p><span
+        class="fontstyle2">Son visage ovale est encadré d’une chevelure blonde
+        et ses yeux d’or et de jade semblent toujours se focaliser sur un point
+        au-delà de la réalité. Rêve-t-il, ou perçoit-elle ce qui échappe au
+        commun des mortels ?</span></p><p></p><h2><span class="fontstyle0"
+        style="font-size:12pt">POUVOIRS</span></h2><p><span
+        class="fontstyle2">Nuane débute le jeu avec le pouvoir
+        Gigantisme.</span></p><p><span class="fontstyle2">De plus, chaque fois
+        qu’une merveille est réalisée (p. 31), son joueur peut lui choisir un
+        nouveau pouvoir dans la liste suivante, ou augmenter de 1 sa valeur de
+        conscience.</span></p><p></p><p><span class="fontstyle0"
+        style="font-size:12pt"><strong>Pouvoir de naissance :
+        Gigantisme</strong></span></p><p><span class="fontstyle4"><em>On n’est
+        jamais si grand que quand on se sent à nouveau libre. Ou
+        l’inverse.</em></span></p><p><span class="fontstyle2">Aussi longtemps
+        que Nuane le souhaite, sa taille redevient celle d’un géant (6 à 8
+        mètres). Les objets sont inutilisables sous cette
+        forme.</span></p><p><span class="fontstyle2">Jusqu’au premier coucher de
+        soleil, le nombre de succès de toutes ses actions d’étincelle et de
+        nature augmente de 2, mais celui de toutes ses actions d’esprit, d’âme
+        et de nuit diminue de 1.</span></p><p></p><p><span class="fontstyle0"
+        style="font-size:12pt"><strong>Iris de
+        focalisation</strong></span></p><p><span class="fontstyle4"><em>Mon sens
+        de l’observation est d’utilité publique !</em></span></p><p><span
+        class="fontstyle2">Lors d’une action d’étincelle de Nuane, votre dé
+        harmonique affiche sa valeur maximale.</span></p><p></p><p><span
+        class="fontstyle0" style="font-size:12pt"><strong>Colosse
+        tonitruant</strong></span></p><p><span class="fontstyle4"><em>Mes rires
+        dérident les murs des palais !</em></span></p><p><span
+        class="fontstyle2">Le temps d’une scène, toute action de Nuane pour
+        attirer l’attention par la voix devient automatique. De plus, le nombre
+        de succès de toutes ses actions d’étincelle augmente de
+        1.</span></p><p></p><p><span class="fontstyle4"><strong>Note :</strong>
+        Nuane est un personnage bonus pouvant être utilisé avec le coffret de
+        découverte de </span><span class="fontstyle2">Pénombre</span><span
+        class="fontstyle4">. Si Nuane et Esmeralda se retrouvent dans un même
+        groupe, cette dernière peut perdre la maîtrise magique « Décorum » et la
+        remplacer par une augmentation de sa maîtrise magique « Prisme » à
+        3.</span></p>
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    category: null
+    ownership:
+      default: -1
+      6qbNUhuoJ67e6dmf: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.350'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1759787482610
+      modifiedTime: 1759788113839
+      lastModifiedBy: 6qbNUhuoJ67e6dmf
+    _key: '!journal.pages!MYGAEFP20JxMGxuS.8mWkxg0yo5bT6y83'
+  - sort: 200000
+    name: Feuille de personnage
+    type: pdf
+    _id: 9wo8P50RyOgZfKJ2
+    system: {}
+    title:
+      show: true
+      level: 1
+    image: {}
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/penombre/assets/pdf/nuane-fdp.pdf
+    category: null
+    ownership:
+      default: -1
+      6qbNUhuoJ67e6dmf: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.350'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1759788054805
+      modifiedTime: 1759788073581
+      lastModifiedBy: 6qbNUhuoJ67e6dmf
+    _key: '!journal.pages!MYGAEFP20JxMGxuS.9wo8P50RyOgZfKJ2'
+folder: null
+categories: []
+sort: 0
+ownership:
+  default: 0
+  6qbNUhuoJ67e6dmf: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.350'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1759787465425
+  modifiedTime: 1759787465425
+  lastModifiedBy: 6qbNUhuoJ67e6dmf
+_key: '!journal!MYGAEFP20JxMGxuS'
