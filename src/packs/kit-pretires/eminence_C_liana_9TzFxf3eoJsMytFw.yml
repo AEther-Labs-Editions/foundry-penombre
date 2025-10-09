@@ -3,7 +3,7 @@ name: Céliana
 type: eminence
 img: systems/penombre/assets/portraits/celiana.webp
 system:
-  peuple: feeNoire
+  peuple: meduse
   cle: ame
   potentiel:
     pouvoirs: 0
@@ -431,11 +431,11 @@ _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.348'
+  coreVersion: '13.350'
   systemId: penombre
-  systemVersion: '0'
+  systemVersion: '#{VERSION}#'
   createdTime: 1757150754023
-  modifiedTime: 1759088560441
+  modifiedTime: 1760018676307
   lastModifiedBy: 6qbNUhuoJ67e6dmf
 _id: 9TzFxf3eoJsMytFw
 sort: 300000
