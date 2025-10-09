@@ -1718,7 +1718,7 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   cursor: pointer;
 }
 .penombre-roll-dialog .line-2 fieldset .atouts .atout:nth-child(even) {
-  background-color: silver;
+  /* background-color: silver; */
 }
 .penombre-roll-dialog .line-2 fieldset .atouts .atout.checked {
   background-color: #917f35;
