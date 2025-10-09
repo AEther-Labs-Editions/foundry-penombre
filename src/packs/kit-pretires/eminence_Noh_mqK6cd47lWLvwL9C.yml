@@ -395,7 +395,7 @@ items:
         addiction peut aussi le pousser à tout négliger pour trouver une
         nouvelle dose.</p></li></ul>
       harmonique: nuit
-      niveau: 1
+      niveau: 3
       prerequis: consommer une boulette noire d'onyx
     effects: []
     folder: null
@@ -405,10 +405,11 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '13.350'
       systemId: penombre
-      systemVersion: '0'
-      lastModifiedBy: null
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: 6qbNUhuoJ67e6dmf
+      modifiedTime: 1760025100407
     ownership:
       default: 0
     _key: '!actors.items!mqK6cd47lWLvwL9C.7Z4CKIzjIB850SyJ'
