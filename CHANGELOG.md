@@ -1,3 +1,11 @@
+1.1.2
+- Ajout prétiré bonus : Nuane (ajout fiche d'acteur dans le compendium + ajout description dans le journal du compendium)
+- Correction du peuple de Céliana dans le compendium
+- Correction du niveau de maîtrise magique de Noh dans le compendium
+- Suppression de l'alternance de fonds pour les atouts dans le prompt de lancer de dés
+- Suppression du trop plein de police gothique dans le tchat
+
+
 1.1.1
 - Correction de Fausse note (1 au dé) et Envolée (max au dé) qui était sur le dé merveilleux au lieu du dé harmonique
 - Guide utilisateur : clarification et correction de quelques fautes d'orthographe
