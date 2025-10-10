@@ -1718,7 +1718,7 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   cursor: pointer;
 }
 .penombre-roll-dialog .line-2 fieldset .atouts .atout:nth-child(even) {
-  background-color: silver;
+  /* background-color: silver; */
 }
 .penombre-roll-dialog .line-2 fieldset .atouts .atout.checked {
   background-color: #917f35;
@@ -1873,7 +1873,7 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 }
 #interface #sidebar .chat-message .message-content .dice-roll.penombre .roll-infos,
 #interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .roll-infos {
-  font-family: "Cattedrale";
+  /* font-family: "Cattedrale"; */
   font-size: 1rem;
   text-align: center;
   margin: 5px 0 5px 0;
@@ -1889,8 +1889,10 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 }
 #interface #sidebar .chat-message .message-content .dice-roll.penombre .roll-results,
 #interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .roll-results {
-  font-family: "Cattedrale";
-  font-size: 1.1rem;
+  /* font-family: "Cattedrale"; */
+  /* font-size: 1.1rem; */
+  font-size: 1rem;
+  font-weight: bold;
   text-align: center;
 }
 #interface #sidebar .chat-message .message-content .dice-roll.penombre .roll-results .roll-result-total,
