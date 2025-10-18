@@ -1,3 +1,7 @@
+1.2.0
+- Support de Popout. Limitation : la molette de la souris ne marche pas pour les dépenses automatiques de jetons.
+- Ajout du drop d'harmonique dans la barre de raccourcis
+
 1.1.2
 - Ajout prétiré bonus : Nuane (ajout fiche d'acteur dans le compendium + ajout description dans le journal du compendium)
 - Correction du peuple de Céliana dans le compendium

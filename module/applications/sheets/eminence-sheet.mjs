@@ -117,6 +117,28 @@ export default class EminenceSheet extends PenombreBaseActorSheet {
     ]
   }
 
+  /** @override */
+  _onDragStart(event) {
+    const target = event.currentTarget
+    let dragData
+
+    if (target.classList.contains("jetHarmonique")) {
+      const type = "penombre.harmonique"
+      const harmonique = target.dataset.harmonique
+      let valeur = this.actor.system.harmoniques[harmonique].valeur
+      dragData = {
+        type,
+        actorName: this.actor.name,
+        actorId: this.actor.id,
+        harmonique,
+        valeur,
+      }
+      event.dataTransfer.setData("text/plain", JSON.stringify(dragData))
+    }
+    // Sinon dataset contient itemUuid, itemId, itemType
+    else super._onDragStart(event)
+  }
+
   /**
    * Handle clicking on Document's elements.
    * @param {Event} event The click event triggered by the user.

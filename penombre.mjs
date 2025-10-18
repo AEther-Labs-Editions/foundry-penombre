@@ -173,3 +173,10 @@ Hooks.on("diceSoNiceMessageProcessed", (messageId, interception) => {
   // Si c'est une action collégiale principale et que toutes les réponses ne sont pas faites, les dés ne doivent pas être affichés
   if (message.system.actionCollegiale && !message.system.actionCollegialeMessageLie && !message.system.toutesReponsesFaites) interception.willTrigger3DRoll = false
 })
+
+Hooks.on("hotbarDrop", (bar, data, slot) => {
+  if (["penombre.harmonique"].includes(data.type)) {
+    helpers.Macros.create(data, slot)
+    return false
+  }
+})
