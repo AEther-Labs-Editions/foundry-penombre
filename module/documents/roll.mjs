@@ -116,63 +116,63 @@ export default class PenombreRoll extends Roll {
       ],
       render: (event, dialog) => {
         // Contrôle le nombre de jetons et active/désactive le bouton de lancement du jet
-        PenombreRoll._updateNbJetons()
+        PenombreRoll._updateNbJetons(dialog.element)
 
         // Harmonique
         const harmoniqueSelect = dialog.element.querySelector("#harmonique")
         if (harmoniqueSelect) {
-          harmoniqueSelect.addEventListener("change", this._onChangeHarmonique.bind(this))
+          harmoniqueSelect.addEventListener("change", (evt) => this._onChangeHarmonique(evt, dialog.element))
         }
         // Action collégiale
         const actionCollegiale = dialog.element.querySelector("#actionCollegiale")
         if (actionCollegiale) {
-          actionCollegiale.addEventListener("change", this._onToggleActionCollegiale.bind(this))
+          actionCollegiale.addEventListener("change", (evt) => this._onToggleActionCollegiale(evt, dialog.element))
         }
         // Case Premier atout pour action collégiale : permet d'avoir le premier atout sans coût en jeton
         const actionCollegialePremierAtout = dialog.element.querySelector("#actionCollegialePremierAtout")
         if (actionCollegialePremierAtout) {
-          actionCollegialePremierAtout.addEventListener("change", this._onToggleActionCollegialePremierAtout.bind(this))
+          actionCollegialePremierAtout.addEventListener("change", (evt) => this._onToggleActionCollegialePremierAtout(evt, dialog.element))
         }
         // Effet magique
         const effetMagique = dialog.element.querySelector("#effetMagique")
         if (effetMagique) {
-          effetMagique.addEventListener("change", this._onToggleEffetMagique.bind(this))
+          effetMagique.addEventListener("change", (evt) => this._onToggleEffetMagique(evt, dialog.element))
         }
         // Niveau de l'effet magique
         const effetMagiqueNiveau = dialog.element.querySelector("#effetMagiqueNiveau")
         if (effetMagiqueNiveau) {
-          effetMagiqueNiveau.addEventListener("change", this._onChangeEffetMagiqueNiveau.bind(this))
+          effetMagiqueNiveau.addEventListener("change", (evt) => this._onChangeEffetMagiqueNiveau(evt, dialog.element))
         }
         // Maîtrise utilisée
         const effetMagiqueMaitrise = dialog.element.querySelector("#effetMagiqueMaitrise")
         if (effetMagiqueMaitrise) {
-          effetMagiqueMaitrise.addEventListener("change", this._onChangeEffetMagiqueMaitrise.bind(this))
+          effetMagiqueMaitrise.addEventListener("change", (evt) => this._onChangeEffetMagiqueMaitrise(evt, dialog.element))
         }
         // Atouts
         const inputs = dialog.element.querySelectorAll(".atout")
         if (inputs) {
           inputs.forEach((input) => {
-            input.addEventListener("click", this._onToggleAtout.bind(this))
+            input.addEventListener("click", (evt) => this._onToggleAtout(evt, dialog.element))
           })
         }
         // Dé merveilleux
         const cbDeMerveilleux = dialog.element.querySelector("#deMerveilleux")
         if (cbDeMerveilleux) {
-          cbDeMerveilleux.addEventListener("change", this._onToggleDeMerveilleux.bind(this))
+          cbDeMerveilleux.addEventListener("change", (evt) => this._onToggleDeMerveilleux(evt, dialog.element))
         }
         // Bonus de formule
         const autreBonus = dialog.element.querySelector("#autreBonus")
         if (autreBonus) {
-          autreBonus.addEventListener("change", this._onChangeAutreBonus.bind(this))
+          autreBonus.addEventListener("change", (evt) => this._onChangeAutreBonus(evt, dialog.element))
         }
         // Jetons
         const jetonsConscience = dialog.element.querySelector("#jetonsConscience")
         if (jetonsConscience) {
-          jetonsConscience.addEventListener("change", this._onChangeJetons.bind(this))
+          jetonsConscience.addEventListener("change", (evt) => this._onChangeJetons(evt, dialog.element))
         }
         const jetonsReserve = dialog.element.querySelector("#jetonsReserve")
         if (jetonsReserve) {
-          jetonsReserve.addEventListener("change", this._onChangeJetons.bind(this))
+          jetonsReserve.addEventListener("change", (evt) => this._onChangeJetons(evt, dialog.element))
         }
       },
     })
@@ -181,13 +181,13 @@ export default class PenombreRoll extends Roll {
     if (rollContext === null) return
 
     // Dépense de jetons de la réserve collégiale
-    const jetonsReserveDepenses = jetonsReserve.value !== "" ? Number(jetonsReserve.value) : 0
+    const jetonsReserveDepenses = rollContext.jetonsReserve !== "" ? Number(rollContext.jetonsReserve) : 0
     if (jetonsReserveDepenses !== 0) {
       await game.users.activeGM.query("penombre.updateReserveCollegialeFromRoll", { nbJetons: jetonsReserveDepenses })
     }
 
     // Dépense de jetons de la conscience
-    const jetonsConscienceDepenses = jetonsConscience.value !== "" ? Number(jetonsConscience.value) : 0
+    const jetonsConscienceDepenses = rollContext.jetonsConscience !== "" ? Number(rollContext.jetonsConscience) : 0
     if (jetonsConscienceDepenses !== 0) {
       const depense = await actor.system.depenserJetons(jetonsConscienceDepenses)
     }
@@ -237,10 +237,14 @@ export default class PenombreRoll extends Roll {
    * Met à jour la formule et définit le texte du label harmonique avec la valeur localisée correspondant à l'option sélectionnée.
    *
    * @param {Event} event L'événement de changement déclenché par la sélection de l'harmonique.
+   * @param {HTMLElement} dialogElement L'élément DOM de la fenêtre de dialogue
    */
-  static _onChangeHarmonique(event) {
-    PenombreRoll._updateFormula()
-    document.querySelector("#harmonique-label").textContent = game.i18n.localize(`PENOMBRE.ui.${event.target.options[event.target.selectedIndex].value}`)
+  static _onChangeHarmonique(event, dialogElement) {
+    PenombreRoll._updateFormula(dialogElement)
+    const harmoniqueLabel = dialogElement.querySelector("#harmonique-label")
+    if (harmoniqueLabel) {
+      harmoniqueLabel.textContent = game.i18n.localize(`PENOMBRE.ui.${event.target.options[event.target.selectedIndex].value}`)
+    }
   }
 
   /**
@@ -250,17 +254,18 @@ export default class PenombreRoll extends Roll {
    * Met à jour le nombre de jetons en appelant PenombreRoll._updateNbJetons().
    *
    * @param {Event} event L'événement déclenché par le changement de la case à cocher.
+   * @param {HTMLElement} dialogElement L'élément DOM de la fenêtre de dialogue
    */
-  static _onToggleActionCollegiale(event) {
-    const premierAtoutLabel = document.querySelector("label.premierAtout")
+  static _onToggleActionCollegiale(event, dialogElement) {
+    const premierAtoutLabel = dialogElement.querySelector("label.premierAtout")
     if (event.target.checked) {
       if (premierAtoutLabel) premierAtoutLabel.style.visibility = "visible"
     } else {
       if (premierAtoutLabel) premierAtoutLabel.style.visibility = "hidden"
-      const premierAtoutCheckbox = document.querySelector("#actionCollegialePremierAtout")
+      const premierAtoutCheckbox = dialogElement.querySelector("#actionCollegialePremierAtout")
       if (premierAtoutCheckbox) premierAtoutCheckbox.checked = false
     }
-    PenombreRoll._updateNbJetons()
+    PenombreRoll._updateNbJetons(dialogElement)
   }
 
   /**
@@ -268,15 +273,16 @@ export default class PenombreRoll extends Roll {
    * Met à jour le nombre de jetons à dépenser en appelant PenombreRoll._updateNbJetons().
    *
    * @param {Event} event L'événement déclenché par le changement de la case à cocher.
+   * @param {HTMLElement} dialogElement L'élément DOM de la fenêtre de dialogue
    * @private
    */
-  static _onToggleActionCollegialePremierAtout(event) {
-    PenombreRoll._updateNbJetons()
+  static _onToggleActionCollegialePremierAtout(event, dialogElement) {
+    PenombreRoll._updateNbJetons(dialogElement)
   }
 
-  static _onToggleEffetMagique(event) {
-    const effetMagiqueNiveauDiv = document.querySelector(".form-group.effet-magique-niveau")
-    const effetMagiqueMaitriseDiv = document.querySelector(".form-group.effet-magique-maitrise")
+  static _onToggleEffetMagique(event, dialogElement) {
+    const effetMagiqueNiveauDiv = dialogElement.querySelector(".form-group.effet-magique-niveau")
+    const effetMagiqueMaitriseDiv = dialogElement.querySelector(".form-group.effet-magique-maitrise")
 
     if (event.target.checked) {
       // Afficher les divs quand la checkbox est cochée
@@ -287,65 +293,65 @@ export default class PenombreRoll extends Roll {
       if (effetMagiqueNiveauDiv) effetMagiqueNiveauDiv.style.display = "none"
       if (effetMagiqueMaitriseDiv) effetMagiqueMaitriseDiv.style.display = "none"
     }
-    PenombreRoll._updateNbJetons()
+    PenombreRoll._updateNbJetons(dialogElement)
   }
 
-  static _onChangeEffetMagiqueNiveau(event) {
-    PenombreRoll._updateNbJetons()
+  static _onChangeEffetMagiqueNiveau(event, dialogElement) {
+    PenombreRoll._updateNbJetons(dialogElement)
   }
 
-  static _onChangeEffetMagiqueMaitrise(event) {
-    PenombreRoll._updateNbJetons()
+  static _onChangeEffetMagiqueMaitrise(event, dialogElement) {
+    PenombreRoll._updateNbJetons(dialogElement)
   }
 
-  static _checkCanRoll(jetons) {
+  static _checkCanRoll(jetons, dialogElement) {
     // Vérification des conditions de lancement
     let canRoll = true
-    const jetonsConscience = Number(document.querySelector("#jetonsConscience").value) || 0
-    const jetonsReserve = Number(document.querySelector("#jetonsReserve").value) || 0
+    const jetonsConscience = Number(dialogElement.querySelector("#jetonsConscience").value) || 0
+    const jetonsReserve = Number(dialogElement.querySelector("#jetonsReserve").value) || 0
     const jetonsTotal = jetonsConscience + jetonsReserve
 
     if (jetonsTotal !== jetons) canRoll = false
 
-    if (canRoll) document.querySelector('button[type="submit"]').disabled = false
-    else document.querySelector('button[type="submit"]').disabled = true
+    if (canRoll) dialogElement.querySelector('button[type="submit"]').disabled = false
+    else dialogElement.querySelector('button[type="submit"]').disabled = true
   }
 
-  static _onToggleAtout(event) {
+  static _onToggleAtout(event, dialogElement) {
     let item = event.currentTarget.closest(".atout")
     item.classList.toggle("checked")
     // Calcul du bonus total des atouts
-    let bonusTotal = Array.from(document.querySelectorAll(".atout.checked")).reduce((total, atout) => total + Number(atout.dataset.bonus), 0)
-    document.querySelector("#bonusAtouts").value = bonusTotal
+    let bonusTotal = Array.from(dialogElement.querySelectorAll(".atout.checked")).reduce((total, atout) => total + Number(atout.dataset.bonus), 0)
+    dialogElement.querySelector("#bonusAtouts").value = bonusTotal
 
     // Calcul du nombre de jetons à dépenser
-    PenombreRoll._updateNbJetons()
-    PenombreRoll._updateFormula()
+    PenombreRoll._updateNbJetons(dialogElement)
+    PenombreRoll._updateFormula(dialogElement)
   }
 
-  static _onToggleDeMerveilleux(event) {
-    PenombreRoll._updateNbJetons()
-    PenombreRoll._updateFormula()
+  static _onToggleDeMerveilleux(event, dialogElement) {
+    PenombreRoll._updateNbJetons(dialogElement)
+    PenombreRoll._updateFormula(dialogElement)
   }
 
-  static _onChangeAutreBonus(event) {
-    PenombreRoll._updateFormula()
+  static _onChangeAutreBonus(event, dialogElement) {
+    PenombreRoll._updateFormula(dialogElement)
   }
 
-  static _onChangeJetons(event) {
+  static _onChangeJetons(event, dialogElement) {
     let canRoll = true
-    const jetonsConscience = Number(document.querySelector("#jetonsConscience").value) || 0
-    const jetonsReserve = Number(document.querySelector("#jetonsReserve").value) || 0
+    const jetonsConscience = Number(dialogElement.querySelector("#jetonsConscience").value) || 0
+    const jetonsReserve = Number(dialogElement.querySelector("#jetonsReserve").value) || 0
     const jetonsTotal = jetonsConscience + jetonsReserve
 
-    const jetons = Number(document.querySelector("#jetons").value)
+    const jetons = Number(dialogElement.querySelector("#jetons").value)
 
     if (jetonsTotal > jetons) {
       ui.notifications.warn(game.i18n.localize("PENOMBRE.warnings.jetonsDepassement"))
     }
 
     // Vérification du nombre de jetons disponibles
-    const id = document.querySelector(".penombre-roll-dialog").dataset.actorId
+    const id = dialogElement.querySelector(".penombre-roll-dialog").dataset.actorId
     let actor
     if (id) actor = game.actors.get(id)
     if (!actor) return
@@ -370,20 +376,20 @@ export default class PenombreRoll extends Roll {
     // Permet le lancer ou non
     if (jetonsTotal !== jetons) canRoll = false
 
-    if (canRoll) document.querySelector('button[type="submit"]').disabled = false
-    else document.querySelector('button[type="submit"]').disabled = true
+    if (canRoll) dialogElement.querySelector('button[type="submit"]').disabled = false
+    else dialogElement.querySelector('button[type="submit"]').disabled = true
   }
 
-  static _updateFormula() {
-    const harmonique = document.querySelector("#harmonique").value
-    const id = document.querySelector(".penombre-roll-dialog").dataset.actorId
+  static _updateFormula(dialogElement) {
+    const harmonique = dialogElement.querySelector("#harmonique").value
+    const id = dialogElement.querySelector(".penombre-roll-dialog").dataset.actorId
     let actor
     if (id) actor = game.actors.get(id)
     if (!actor) return
     const harmoniqueDice = actor.system.harmoniques[harmonique].valeur
-    const deMerveilleux = document.querySelector("#deMerveilleux").checked
-    const bonusAtouts = document.querySelector("#bonusAtouts").value
-    const autreBonus = document.querySelector("#autreBonus").value
+    const deMerveilleux = dialogElement.querySelector("#deMerveilleux").checked
+    const bonusAtouts = dialogElement.querySelector("#bonusAtouts").value
+    const autreBonus = dialogElement.querySelector("#autreBonus").value
 
     let formule = deMerveilleux ? `1d20` : `1${harmoniqueDice}`
     if (bonusAtouts > 0) {
@@ -392,7 +398,7 @@ export default class PenombreRoll extends Roll {
     if (autreBonus && PenombreRoll._isValidDiceFormula(autreBonus)) {
       formule += ` + ${autreBonus}`
     }
-    document.querySelector("#formule").value = formule
+    dialogElement.querySelector("#formule").value = formule
   }
 
   /**
@@ -425,20 +431,20 @@ export default class PenombreRoll extends Roll {
     return true
   }
 
-  static _updateNbJetons() {
+  static _updateNbJetons(dialogElement) {
     // Action collégiale
-    const actionCollegiale = document.querySelector("#actionCollegiale")?.checked ?? false
+    const actionCollegiale = dialogElement.querySelector("#actionCollegiale")?.checked ?? false
     const jetonActionCollegiale = actionCollegiale ? 1 : 0
 
-    const actionCollegialeLiee = document.querySelector("#actionCollegiale")?.checked === undefined // Si on ne trouve pas la checkbox, c'est que c'est une action collégiale liée
+    const actionCollegialeLiee = dialogElement.querySelector("#actionCollegiale")?.checked === undefined // Si on ne trouve pas la checkbox, c'est que c'est une action collégiale liée
 
     // Le joueur a-t-il coché la case "Premier atout pour action collégiale" ?
-    const actionCollegialePremierAtout = document.querySelector("#actionCollegialePremierAtout")?.checked ?? false
+    const actionCollegialePremierAtout = dialogElement.querySelector("#actionCollegialePremierAtout")?.checked ?? false
 
     // Atouts : 1 jeton par atout au-delà du premier sinon 1 jeton par atout
     // Dans le cas d'une action collégiale, le premier atout ne coûte pas de jeton si la case est cochée
     // Pour une action collégiale liée, si la case est cochée, le premier atout ne coûte pas de jeton
-    const nbAtoutsSelectionnes = Number(document.querySelectorAll(".atout.checked").length)
+    const nbAtoutsSelectionnes = Number(dialogElement.querySelectorAll(".atout.checked").length)
     let premierAtoutGratuit = false
     if (
       (actionCollegiale && actionCollegialePremierAtout) ||
@@ -451,17 +457,17 @@ export default class PenombreRoll extends Roll {
     if (premierAtoutGratuit) jetonsAtouts = Math.max(nbAtoutsSelectionnes - 1, 0)
 
     // Dé merveilleux
-    const deMerveilleux = document.querySelector("#deMerveilleux").checked
+    const deMerveilleux = dialogElement.querySelector("#deMerveilleux").checked
     const jetonDeMerveilleux = deMerveilleux ? 1 : 0
 
     // Effet magique
-    const effetMagique = document.querySelector("#effetMagique")?.checked ?? false
+    const effetMagique = dialogElement.querySelector("#effetMagique")?.checked ?? false
     const jetonEffetMagique = effetMagique ? 1 : 0
 
     // Selon la maitrise magique : 1 jeton par niveau manquant par rapport au niveau de l'effet magique souhaité
-    const niveauEffetMagique = Number(document.querySelector("#effetMagiqueNiveau")?.value || 1)
-    const maitriseSlug = document.querySelector("#effetMagiqueMaitrise")?.value || null
-    const actorId = document.querySelector(".penombre-roll-dialog").dataset.actorId
+    const niveauEffetMagique = Number(dialogElement.querySelector("#effetMagiqueNiveau")?.value || 1)
+    const maitriseSlug = dialogElement.querySelector("#effetMagiqueMaitrise")?.value || null
+    const actorId = dialogElement.querySelector(".penombre-roll-dialog").dataset.actorId
     let actor = null
     if (actorId) actor = game.actors.get(actorId)
     let niveauMaitrise = 0
@@ -473,10 +479,10 @@ export default class PenombreRoll extends Roll {
 
     // Total des jetons à dépenser
     const jetons = jetonsAtouts + jetonActionCollegiale + jetonDeMerveilleux + jetonEffetMagique + jetonsEffetMagiqueMaitrise
-    document.querySelector("#jetons").value = jetons
+    dialogElement.querySelector("#jetons").value = jetons
 
     // Met à jour le tooltip pour expliquer chaque partie du total
-    const tooltipLabel = document.querySelector("#jetonsDepenserTooltip")
+    const tooltipLabel = dialogElement.querySelector("#jetonsDepenserTooltip")
     if (tooltipLabel) {
       const tooltipContent = `
         • Atouts : ${jetonsAtouts} ${nbAtoutsSelectionnes > 0 && premierAtoutGratuit ? "(Premier atout gratuit)" : ""}<br>
@@ -489,7 +495,7 @@ export default class PenombreRoll extends Roll {
       tooltipLabel.setAttribute("data-tooltip", tooltipContent)
     }
 
-    PenombreRoll._checkCanRoll(jetons)
+    PenombreRoll._checkCanRoll(jetons, dialogElement)
     return jetons
   }
   // #endregion Événements du prompt
