@@ -64,7 +64,16 @@ pages:
         réserves (vides, non vides).</p><p>Il suffit de sélectionner les dés à
         relancer et de cliquer sur un bouton <strong>Relance (…)</strong> ; le
         message initial sera mis à jour avec le nouveau résultat.</p><p>Là
-        aussi, la réserve sollicitée sera mise à jour de façon automatique.</p>
+        aussi, la réserve sollicitée sera mise à jour de façon
+        automatique.</p><h2>Créer un raccourci dans la barre des
+        raccourcis</h2><p>Vous pouvez <span style="color:rgb(239, 230,
+        216);font-family:Signika, 'Palatino Linotype',
+        sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(11,
+        10, 19,
+        0.9);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline
+        !important;float:none">glisser-déposer le dé d'harmonique dans la barre
+        des raccourcis pour créer un raccourci pour ce jet d'harmonique. L'image
+        du raccourci est la valeur du dé d'harmonique.</span></p>
     video:
       controls: true
       volume: 0.5
@@ -81,8 +90,8 @@ pages:
       coreVersion: '13.348'
       systemId: penombre
       systemVersion: '#{VERSION}#'
-      lastModifiedBy: 6qbNUhuoJ67e6dmf
-      modifiedTime: 1759223437172
+      lastModifiedBy: ZPVZnAUjZn9mQP2q
+      modifiedTime: 1760877166541
     _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.NbsQ1cortQsp55q0'
   - sort: 50000
     name: Comment utiliser la fiche d'Éminence grise
@@ -109,26 +118,26 @@ pages:
         ci-dessus).</p></li><li><p>Le Mode Éditer (voir figure
         ci-dessous).</p></li></ul><img
         src="systems/penombre/assets/guide/fiche_mode_editer.webp" alt="Fiche en
-        Mode Éditer" /><p></p><h2>Moduler les jetons de conscience</h2><p>Les
-        jetons de conscience se modulent aussi bien en Mode Jouer qu'en Mode
-        Éditer.</p><div><ul><li><p>Clic pour dépenser ou réactiver un
+        Mode Éditer" /><p></p><h2>Modifier les jetons de conscience</h2><p>Les
+        jetons de conscience peuvent être modifiés aussi bien en Mode Jouer
+        qu'en Mode Éditer.</p><div><ul><li><p>Clic pour dépenser ou réactiver un
         jeton.</p></li><li><p>Clic-droit pour perdre ou ajouter un
         jeton.</p></li></ul><p>Par contre, la modification du max de conscience
         ne s'effectue qu'en Mode Éditer.</p><p><strong>Attention :</strong> les
-        jetons de conscience sont aussi susceptibles d'être modulés
+        jetons de conscience sont aussi susceptibles d'être modifiés
         automatiquement lorsque vous paramétrez le dialogue de lancer de
         dés.</p><p></p></div><div><h2>Ajouter/modifier des
         complications</h2></div><p>Les ajouts/modifications de complications se
         font en Mode Éditer.</p><p></p><h2>Ajouter/modifier/supprimer un
-        pouvoir, un atout ou une maîtrise magique</h2><p>Les
-        ajouts/modifications d'items se font en Mode Éditer.</p><ul><li><p>Clic
-        sur l'icône + pour ajouter un item à la liste.</p></li><li><p>Clic sur
+        pouvoir, un atout ou une maîtrise magique</h2><p>Les ajouts et
+        modifications d'objets se font en Mode Éditer.</p><ul><li><p>Clic sur
+        l'icône + pour ajouter un objet à la liste.</p></li><li><p>Clic sur
         l'icône Modifier (crayon dans carré) pour le
         modifier.</p></li><li><p>Clic sur l'icône Supprimer (corbeille) pour le
-        supprimer (attention, cette suppression est immédiate et
-        définitive).</p></li></ul><p>Vous pouvez glisser-déposer des items vers
+        supprimer. Attention, cette suppression est immédiate et
+        définitive.</p></li></ul><p>Vous pouvez glisser-déposer des objets vers
         et depuis votre fiche d'Éminence grise.</p><p></p><h3>Lorsque vous
-        modifiez un item</h3><p>Une fenêtre d'édition apparaît.</p><img
+        modifiez un objet</h3><p>Une fenêtre d'édition apparaît.</p><img
         src="systems/penombre/assets/guide/fiche_edit_item.webp" alt="Fenêtre
         d'édition d'item" /><p><strong>Attention :</strong> n'effectuez pas de
         modifications de polices dans la description, autre que celle appliquée
@@ -150,8 +159,8 @@ pages:
       coreVersion: '13.348'
       systemId: penombre
       systemVersion: '#{VERSION}#'
-      lastModifiedBy: 6qbNUhuoJ67e6dmf
-      modifiedTime: 1758729975495
+      lastModifiedBy: ZPVZnAUjZn9mQP2q
+      modifiedTime: 1760876837187
     _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.Lvwsq6UuIDwfw4qS'
   - sort: 0
     name: Introduction
