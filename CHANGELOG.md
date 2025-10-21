@@ -1,3 +1,6 @@
+1.2.1
+- Le drop d'harmonique dans barre de raccourcis se fait à partir du dé et non plus du nom de l'harmonique
+
 1.2.0
 - Support de Popout. Limitation : la molette de la souris ne marche pas pour les dépenses automatiques de jetons.
 - Ajout du drop d'harmonique dans la barre de raccourcis

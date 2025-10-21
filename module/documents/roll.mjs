@@ -649,6 +649,24 @@ export default class PenombreRoll extends Roll {
         if (roll.dice[dieIndex] && roll.dice[dieIndex].results[resultIndex]) {
           const formula = `1d${roll.dice[dieIndex].faces}`
           const newDice = await new Roll(formula, {}, { rollMode }).evaluate()
+
+          // Ajout MMFO : avec DsN, les dés relancés sont : soit spécial si harmonique, soit standards si bonus
+          
+          // Apparence des dés si le module Dice So Nice est activé et que le système de dés Pénombre est chargé
+          if (game.modules.get("dice-so-nice")?.active && game.dice3d.getLoadedDiceSystems().has("penombre")) {
+            if (dieIndex === 0) {
+              // Le premier dé est toujours le dé d'harmonique
+              newDice.dice[0].options.appearance = { system: "penombre" }
+            } else {
+              if (newDice.dice[0].faces === MERVEILLEUX_FACES) {
+                newDice.dice[0].options.appearance = { system: "penombre" }
+              } else {
+                newDice.dice[0].options.appearance = { system: "standard" }
+              }
+            }
+          }
+          // Fin d'ajout MMFO
+
           newRolls.push(newDice)
           roll.dice[dieIndex].results[resultIndex].result = parseInt(newDice.result)
         }
