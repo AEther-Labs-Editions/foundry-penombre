@@ -59,6 +59,7 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
 
   /** @override */
   _onDragStart(event) {
+    console.log('_onDragStart()')
     const target = event.currentTarget
     let dragData
 
@@ -69,7 +70,7 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
       }
       event.dataTransfer.setData("text/plain", JSON.stringify(dragData))
     }
-    // Sinon dataset autre chose
+    // Sinon dataset contient autre chose
     else super._onDragStart(event)
   }
 
