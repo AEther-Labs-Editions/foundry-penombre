@@ -175,7 +175,7 @@ Hooks.on("diceSoNiceMessageProcessed", (messageId, interception) => {
 })
 
 Hooks.on("hotbarDrop", (bar, data, slot) => {
-  if (["penombre.harmonique"].includes(data.type)) {
+  if (["penombre.harmonique"].includes(data.type) || ["penombre.reserveCollegialeDnD"].includes(data.type)) {
     helpers.Macros.create(data, slot)
     return false
   }

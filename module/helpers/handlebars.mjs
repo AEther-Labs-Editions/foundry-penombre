@@ -3,7 +3,7 @@
  */
 export function registerHandlebars() {
   Handlebars.registerHelper("getDiceImage", function (value) {
-    return `/systems/penombre/assets/ui/${value}-marge.webp`
+    return `systems/penombre/assets/ui/${value}-marge.webp`
   })
 
   Handlebars.registerHelper("getJetonImage", function (value) {

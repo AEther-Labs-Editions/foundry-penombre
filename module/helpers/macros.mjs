@@ -10,12 +10,22 @@ export default class Macros {
       case "penombre.harmonique":
         foundry.utils.mergeObject(macroData, {
           name: `Jet de ${game.i18n.localize(`PENOMBRE.ui.${dropData.harmonique}`)} (${dropData.actorName})`,
-          img: `/systems/penombre/assets/ui/${dropData.valeur}.webp`,
+          img: `systems/penombre/assets/ui/${dropData.valeur}.webp`,
           command: `await game.system.api.helpers.Macros.rollHarmonique("${dropData.actorId}", "${dropData.harmonique}")`,
           flags: { "penombre.macros.harmonique": true },
         })
         break
-      default:
+
+      case "penombre.reserveCollegialeDnD":
+        foundry.utils.mergeObject(macroData, {
+          name: `Ouvrir Réserve collégiale`,
+          img: `systems/penombre/assets/ui/reserve-collegiale.webp`,
+          command: `await game.system.applicationReserveCollegiale.render({ force: true })`,
+          flags: { "penombre.macros.reserveCollegialeDnD": true },
+        })
+        break
+
+        default:
         return
     }
 

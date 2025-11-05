@@ -57,6 +57,22 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
     }
   }
 
+  /** @override */
+  _onDragStart(event) {
+    const target = event.currentTarget
+    let dragData
+
+    if (target.classList.contains("reserveCollegialeDnD")) {
+      const type = "penombre.reserveCollegialeDnD"
+      dragData = {
+        type,
+      }
+      event.dataTransfer.setData("text/plain", JSON.stringify(dragData))
+    }
+    // Sinon dataset autre chose
+    else super._onDragStart(event)
+  }
+
   /**
    * Handle clicking on Document's elements.
    * @param {Event} event The click event triggered by the user.
