@@ -5,9 +5,11 @@ export default class Macros {
    * @param {number} slot         The hotbar slot to use
    */
   static async create(dropData, slot) {
-    const macroData = { type: "script", scope: "actor" }
+    let macroData
+    // const macroData = { type: "script", scope: "actor" }
     switch (dropData.type) {
       case "penombre.harmonique":
+        macroData = { type: "script", scope: "actor" }
         foundry.utils.mergeObject(macroData, {
           name: `Jet de ${game.i18n.localize(`PENOMBRE.ui.${dropData.harmonique}`)} (${dropData.actorName})`,
           img: `systems/penombre/assets/ui/${dropData.valeur}.webp`,
@@ -17,6 +19,7 @@ export default class Macros {
         break
 
       case "penombre.reserveCollegialeDnD":
+        macroData = { type: "script" /*, scope: "speaker" */ }
         foundry.utils.mergeObject(macroData, {
           name: `Ouvrir Réserve collégiale`,
           img: `systems/penombre/assets/ui/reserve-collegiale.webp`,
