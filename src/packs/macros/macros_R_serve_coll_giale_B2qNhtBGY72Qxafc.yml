@@ -1,0 +1,24 @@
+name: Réserve collégiale
+type: script
+command: 'game.system.applicationReserveCollegiale.render({ force: true })'
+img: systems/penombre/assets/ui/reserve-collegiale.webp
+author: ZPVZnAUjZn9mQP2q
+scope: global
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.350'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1762466293548
+  modifiedTime: 1762466293548
+  lastModifiedBy: ZPVZnAUjZn9mQP2q
+ownership:
+  default: 0
+  ZPVZnAUjZn9mQP2q: 3
+_id: B2qNhtBGY72Qxafc
+sort: 0
+_key: '!macros!B2qNhtBGY72Qxafc'

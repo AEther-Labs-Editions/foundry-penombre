@@ -38,7 +38,7 @@
       "name": "Système",
       "sorting": "m",
       "color": "#a4653d",
-      "packs": ["journal", "scenes"],
+      "packs": ["journal", "scenes", "macros"],
       "folders": []
     }
   ],
@@ -97,6 +97,18 @@
       "system": "penombre",
       "path": "packs/scenes",
       "type": "Scene",
+      "ownership": {
+        "PLAYER": "NONE",
+        "TRUSTED": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "macros",
+      "label": "Macros",
+      "system": "penombre",
+      "path": "packs/macros",
+      "type": "Macro",
       "ownership": {
         "PLAYER": "NONE",
         "TRUSTED": "OBSERVER",

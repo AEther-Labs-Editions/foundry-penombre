@@ -227,12 +227,14 @@ pages:
         alt="Réserve collégiale" /><h2>Réserve gérée par l'ensemble des
         joueuses</h2><p>Cette réserve est commune à l'ensemble des joueuses. Ce
         que vous y faites est répercuté chez les autres joueuses et
-        vice-versa.</p><h2>Moduler les jetons de la réserve
-        collégiale</h2><div><ul><li><p>Clic pour dépenser ou réactiver un
-        jeton.</p></li></ul><p><strong>Attention :</strong> les jetons de la
-        réserve collégiale sont aussi susceptibles d'être modulés
-        automatiquement lorsque vous paramétrez votre dialogue de lancer de
-        dés.</p></div>
+        vice-versa.</p><h2>Modifier les jetons de la réserve
+        collégiale</h2><div><p>Clic pour dépenser ou réactiver un
+        jeton.</p><p><strong>Attention :</strong> les jetons de la réserve
+        collégiale sont aussi susceptibles d'être modifiés automatiquement
+        lorsque vous paramétrez votre dialogue de lancer de dés.</p><h2>Macro
+        Réserve collégiale</h2><p>Vous trouverez dans le compendium Macros la
+        macro Réserve collégiale à partager avec vos joueuses. Elle permet
+        d'ouvrir la fenêtre de gestion de la réserve collégiale.</p><div>
     video:
       controls: true
       volume: 0.5
