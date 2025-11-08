@@ -1,3 +1,6 @@
+1.2.2
+- Ajout d'un compendium Macros avec la macro Réserve collégiale
+
 1.2.1
 - Le drop d'harmonique dans barre de raccourcis se fait à partir du dé et non plus du nom de l'harmonique
 

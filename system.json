@@ -139,5 +139,5 @@
       "paths": ["css", "lang", "templates"]
     }
   },
-  "background": "/systems/penombre/assets/background/splash_fond_penombre.avif"
+  "background": "systems/penombre/assets/background/splash_fond_penombre.avif"
 }
