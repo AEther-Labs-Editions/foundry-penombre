@@ -45,6 +45,7 @@
   "packs": [
     {
       "name": "kit-pretires",
+      "banner": "systems/penombre/assets/banners/actor-banner.webp",
       "label": "Kit - Prétirés",
       "system": "penombre",
       "path": "packs/kit-pretires",
@@ -57,6 +58,7 @@
     },
     {
       "name": "kit-adversaires",
+      "banner": "systems/penombre/assets/banners/actor-banner.webp",
       "label": "Kit - Adversaires",
       "system": "penombre",
       "path": "packs/kit-adversaires",
@@ -69,6 +71,7 @@
     },
     {
       "name": "kit-pouvoirs-potentiels",
+      "banner": "systems/penombre/assets/banners/item-banner.webp",
       "label": "Kit - Pouvoirs potentiels",
       "system": "penombre",
       "path": "packs/kit-pouvoirs-potentiels",
