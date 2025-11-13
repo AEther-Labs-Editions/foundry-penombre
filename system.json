@@ -65,7 +65,7 @@
       "type": "Actor",
       "ownership": {
         "PLAYER": "NONE",
-        "TRUSTED": "OBSERVER",
+        "TRUSTED": "NONE",
         "ASSISTANT": "OWNER"
       }
     },
@@ -113,7 +113,7 @@
       "path": "packs/macros",
       "type": "Macro",
       "ownership": {
-        "PLAYER": "NONE",
+        "PLAYER": "OBSERVER",
         "TRUSTED": "OBSERVER",
         "ASSISTANT": "OWNER"
       }
