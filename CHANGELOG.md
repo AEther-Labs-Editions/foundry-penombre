@@ -1,3 +1,6 @@
+1.3.1
+Version complète du système débloquée sur GameOnTabletop
+
 1.3.0
 - Bannières personnalisées pour les compendiums du Kit Demo
 - Compendiums : Adversaires non visibles par un joueur de confiance, Macros visibles par un joueur
