@@ -1,5 +1,5 @@
 1.3.1
-Version complète du système débloquée sur GameOnTabletop
+- Version complète du système débloquée sur GameOnTabletop
 
 1.3.0
 - Bannières personnalisées pour les compendiums du Kit Demo
