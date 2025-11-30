@@ -1,11 +1,17 @@
 1.3.0
-- Bannières personnalisées pour les compendiums du Kit Demo
+- Bannières personnalisées pour les compendiums du Kit de Demo
 - Compendiums : Adversaires non visibles par un joueur de confiance, Macros visibles par un joueur
-- Effets magiques multiples autorisés pour un jet d'harmonie
-- Version complète du système débloquée sur GameOnTabletop :
-- Autres styles de jeu débloqués
-- Guide d'utilisation Foundry VTT édité en conséquence
+- Effets magiques multiples autorisés pour un jet d'harmonique
 
+Version complète du système débloquée sur GameOnTabletop : les autres styles de jeu sont débloqués (Standard et Règles avancées)
+- Réserve collégiale : possibilité de dépasser 10 pour les styles de jeu Standard et Règles avancées
+- Mise à jour du guide d'utilisation Foundry VTT
+- Changements de la fiches Eminence
+  - Possibilité de sélectionner le peuple : ce qui met à jour automatiquement la Gamme et le Ton
+  - Possibilité de sélectionner la Clé
+  - Ajout de la partition : 1 case Clé et 4 cases Notes. Possibilité de cocher ces 5 cases.
+  - Timbre : Possibilité de cocher Harmonieux, Faux ou Dissonant
+  - Peste : Champ éditable
 
 1.2.2
 - Ajout d'un compendium Macros avec la macro Réserve collégiale

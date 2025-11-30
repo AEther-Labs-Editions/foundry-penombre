@@ -103,8 +103,8 @@ pages:
         <p>Dans cette version kit de démo, vous n'aurez pas à remplir vous-même
         la fiche de PJ (Éminence grise) ; en effet, le MJ (Psycholune) devrait
         vous fournir l'un des prétirés de ce kit.</p><p></p><h2>Description de
-        la fiche</h2><p>La fiche d'Éminence grise est très semblable à la fiche
-        papier "standard", mise à disposition ici : <a
+        la fiche avec le style Kit de démo</h2><p>La fiche d'Éminence grise est
+        très semblable à la fiche papier "standard", mise à disposition ici : <a
         href="https://www.aether-labs.fr/ressources/ressources-penombre">https://www.aether-labs.fr/ressources/ressources-penombre</a></p><p></p><img
         src="systems/penombre/assets/guide/fiche_mode_jouer.webp" alt="Fiche en
         Mode Jouer" /><p></p><h2>Mode Éditer / Mode Jouer</h2><p>Il existe deux
@@ -151,11 +151,11 @@ pages:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.348'
+      coreVersion: '13.351'
       systemId: penombre
       systemVersion: '#{VERSION}#'
-      lastModifiedBy: ZPVZnAUjZn9mQP2q
-      modifiedTime: 1760876837187
+      lastModifiedBy: ljzL3FBlhW4qIK9g
+      modifiedTime: 1764527849147
     _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.Lvwsq6UuIDwfw4qS'
   - sort: 0
     name: Introduction
@@ -299,15 +299,17 @@ pages:
       format: 1
       content: >-
         <p>D'autres styles de jeu ont été débloqués lors d'un palier de
-        financement du jeu <em>Pénombre</em> sur la plateforme
-        GameOnTabletop.</p><p>Pour y accéder :</p><ul><li><p>Cliquez sur l'icône
+        financement du jeu <em>Pénombre</em> sur la plateforme Game On
+        Tabletop.</p><p>Pour y accéder :</p><ul><li><p>Cliquez sur l'icône
         Paramètres (deux roues dentées) à droite.</p></li><li><p>Cliquez sur le
         bouton Configurer les paramètres.</p></li><li><p>Cliquez sur l'intitulé
         <em>Pénombre</em>.</p></li><li><p>Là, vous pouvez sélectionner le style
-        de jeu ; il en existe trois : Kit de Démo, Standard et Règles avancées.
-        Vous pouvez également définir le nombre maximum de jetons disponibles
-        dans la Réserve Collégiale (10 par
-        défaut).</p></li></ul><p></p><p></p><p></p>
+        de jeu. Il en existe trois : Kit de Démo, Standard et Règles avancées.
+        </p></li><li><p>Vous pouvez également définir le nombre maximum de
+        jetons disponibles dans la Réserve Collégiale (10 par défaut).
+        Attention, dans le style Kit de Démo, il <strong>faut</strong> que le
+        nombre de jetons soit
+        <strong>10</strong>.</p></li></ul><p></p><p></p><p></p>
     video:
       controls: true
       volume: 0.5
@@ -325,8 +327,8 @@ pages:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       createdTime: 1764519300560
-      modifiedTime: 1764520023826
-      lastModifiedBy: xu8p7UMcYrInjBEg
+      modifiedTime: 1764527783039
+      lastModifiedBy: ljzL3FBlhW4qIK9g
     _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.bkfTETg2uFTXRoc3'
 folder: null
 categories: []
