@@ -2,6 +2,10 @@
 - Bannières personnalisées pour les compendiums du Kit Demo
 - Compendiums : Adversaires non visibles par un joueur de confiance, Macros visibles par un joueur
 - Effets magiques multiples autorisés pour un jet d'harmonie
+- Version complète du système débloquée sur GameOnTabletop :
+- Autres styles de jeu débloqués
+- Guide d'utilisation Foundry VTT édité en conséquence
+
 
 1.2.2
 - Ajout d'un compendium Macros avec la macro Réserve collégiale
