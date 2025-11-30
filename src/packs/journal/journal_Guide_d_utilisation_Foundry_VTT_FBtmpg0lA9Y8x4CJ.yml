@@ -286,6 +286,48 @@ pages:
       lastModifiedBy: 6qbNUhuoJ67e6dmf
       modifiedTime: 1758741347757
     _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.BZxxmPzLiWLN1I72'
+  - sort: 162500
+    name: Comment modifier le style de jeu
+    type: text
+    _id: bkfTETg2uFTXRoc3
+    system: {}
+    title:
+      show: true
+      level: 1
+    image: {}
+    text:
+      format: 1
+      content: >-
+        <p>D'autres styles de jeu ont été débloqués lors d'un palier de
+        financement du jeu <em>Pénombre</em> sur la plateforme
+        GameOnTabletop.</p><p>Pour y accéder :</p><ul><li><p>Cliquez sur l'icône
+        Paramètres (deux roues dentées) à droite.</p></li><li><p>Cliquez sur le
+        bouton Configurer les paramètres.</p></li><li><p>Cliquez sur l'intitulé
+        <em>Pénombre</em>.</p></li><li><p>Là, vous pouvez sélectionner le style
+        de jeu ; il en existe trois : Kit de Démo, Standard et Règles avancées.
+        Vous pouvez également définir le nombre maximum de jetons disponibles
+        dans la Réserve Collégiale (10 par
+        défaut).</p></li></ul><p></p><p></p><p></p>
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    category: null
+    ownership:
+      default: -1
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1764519300560
+      modifiedTime: 1764520023826
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.bkfTETg2uFTXRoc3'
 folder: null
 categories: []
 ownership:

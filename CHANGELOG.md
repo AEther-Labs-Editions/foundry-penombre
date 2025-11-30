@@ -1,5 +1,7 @@
 1.4.0
-- Version complète du système débloquée sur GameOnTabletop
+- Version complète du système débloquée sur GameOnTabletop :
+- Autres styles de jeu débloqués
+- Guide d'utilisation Foundry VTT édité en conséquence
 
 1.3.0
 - Bannières personnalisées pour les compendiums du Kit Demo
