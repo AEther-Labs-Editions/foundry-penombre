@@ -434,7 +434,8 @@ export default class PenombreRoll extends Roll {
   static _updateNbJetons(dialogElement) {
     // Action collégiale
     const actionCollegiale = dialogElement.querySelector("#actionCollegiale")?.checked ?? false
-    const jetonActionCollegiale = actionCollegiale ? 1 : 0
+    const messageType = dialogElement.querySelector(".messageType").innerHTML
+    const jetonActionCollegiale = (actionCollegiale && messageType != "lie") ? 1 : 0
 
     const actionCollegialeLiee = dialogElement.querySelector("#actionCollegiale")?.checked === undefined // Si on ne trouve pas la checkbox, c'est que c'est une action collégiale liée
 

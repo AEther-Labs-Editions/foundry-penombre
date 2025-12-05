@@ -28,7 +28,12 @@
         </div>
         <fieldset>
           <div class="options">
+            <div class="messageType" style="display: none;">{{messageType}}</div>
+            {{#if (eq messageType "lie")}} 
+            <input type="checkbox" name="actionCollegiale" id="actionCollegiale" checked disabled/><label>{{localize 'PENOMBRE.ui.actionCollegiale' }}</label>
+            {{else}}
             <input type="checkbox" name="actionCollegiale" id="actionCollegiale"/><label>{{localize 'PENOMBRE.ui.actionCollegiale' }}</label>
+            {{/if}}
             <input type="checkbox" name="effetMagique" id="effetMagique"/><label>{{localize 'PENOMBRE.ui.effetMagique' }}</label>
           </div>
         </fieldset>
