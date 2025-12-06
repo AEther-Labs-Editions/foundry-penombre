@@ -58,17 +58,22 @@ pages:
         dés.</p><p><strong>Remarque :</strong> comme le lancer est visible au
         moment où la joueuse lance les dés, il est fortement conseillé de
         discuter tous ensemble avant que chacun commence à cliquer sur le bouton
-        <strong>Lancer les dés</strong>.</p><h2>Relance</h2><p>Pour chaque jet
-        de dés, il est possible de faire une et une seule relance. Les boutons
-        de relance sont visibles dans le tchat en fonction de l'état des
-        réserves (vides, non vides).</p><p>Il suffit de sélectionner les dés à
-        relancer et de cliquer sur un bouton <strong>Relance (…)</strong> ; le
-        message initial sera mis à jour avec le nouveau résultat.</p><p>Là
-        aussi, la réserve sollicitée sera mise à jour de façon
-        automatique.</p><h2>Créer un raccourci dans la barre des
-        raccourcis</h2><p>Vous pouvez glisser-déposer le dé d'harmonique dans la
-        barre des raccourcis pour créer un raccourci pour ce jet d'harmonique.
-        L'image du raccourci est la valeur du dé d'harmonique.</p>
+        <strong>Lancer les dés</strong>.</p><p><strong>Remarque importante
+        :</strong> pour que le système fonctionne correctement, il est impératif
+        qu'une Éminence grise soit sélectionnée pour chacune des joueuses (voir
+        : <strong>Personnage du joueur</strong> ci-dessous).</p><img
+        src="systems/penombre/assets/guide/selection_personnage_joueur.webp"
+        /><p></p><h2>Relance</h2><p>Pour chaque jet de dés, il est possible de
+        faire une et une seule relance. Les boutons de relance sont visibles
+        dans le tchat en fonction de l'état des réserves (vides, non
+        vides).</p><p>Il suffit de sélectionner les dés à relancer et de cliquer
+        sur un bouton <strong>Relance (…)</strong> ; le message initial sera mis
+        à jour avec le nouveau résultat.</p><p>Là aussi, la réserve sollicitée
+        sera mise à jour de façon automatique.</p><h2>Créer un raccourci dans la
+        barre des raccourcis</h2><p>Vous pouvez glisser-déposer le dé
+        d'harmonique dans la barre des raccourcis pour créer un raccourci pour
+        ce jet d'harmonique. L'image du raccourci est la valeur du dé
+        d'harmonique.</p>
     video:
       controls: true
       volume: 0.5
@@ -82,11 +87,11 @@ pages:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.350'
+      coreVersion: '13.351'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: xu8p7UMcYrInjBEg
-      modifiedTime: 1762871089562
+      modifiedTime: 1765029314826
     _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.NbsQ1cortQsp55q0'
   - sort: 50000
     name: Comment utiliser la fiche d'Éminence grise
