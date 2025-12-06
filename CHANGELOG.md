@@ -1,3 +1,7 @@
+1.3.1
+- Correction du bug rendant le premier atout gratuit pour les autres éminences participant à une action collégiale (ce qui était erroné)
+- Intégration de la vidéo YouTube de présentation du système par le sieur Carter
+
 1.3.0
 - Bannières personnalisées pour les compendiums du Kit de Demo
 - Compendiums : Adversaires non visibles par un joueur de confiance, Macros visibles par un joueur
