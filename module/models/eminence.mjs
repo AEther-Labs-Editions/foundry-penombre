@@ -201,6 +201,25 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
     }
   }
 
+  /** @inheritDoc */
+  async _preCreate(data, options, user) {
+    const allowed = await super._preCreate(data, options, user)
+    if (allowed === false) return false
+
+    // Mise à jour du token prototype pour qu'il soit lié à l'acteur et ait la vision activée
+    const updates = {
+      prototypeToken: {
+        actorLink: true,
+        disposition: CONST.TOKEN_DISPOSITIONS.FRIENDLY,
+        sight: {
+          enabled: true,
+          visionMode: "basic",
+        },
+      },
+    }
+    this.parent.updateSource(updates)
+  }
+
   /** @override */
   async _preUpdate(changed, options, user) {
     if (foundry.utils.hasProperty(changed, "system.conscience.max")) {

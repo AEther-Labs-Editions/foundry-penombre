@@ -1,3 +1,6 @@
+1.3.2
+- Configuration par défaut du token d'une éminence : Lié à l'acteur, Disposition Amicale, Vision activée, Mode de vision standard
+
 1.3.1
 - Correction du bug rendant le premier atout gratuit pour les autres éminences participant à une action collégiale
 - Partie support : intégration du lien vers la vidéo YouTube de présentation du système par Carter
