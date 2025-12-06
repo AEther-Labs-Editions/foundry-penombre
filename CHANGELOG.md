@@ -1,6 +1,7 @@
 1.3.1
-- Correction du bug rendant le premier atout gratuit pour les autres éminences participant à une action collégiale (ce qui était erroné)
-- Intégration de la vidéo YouTube de présentation du système par le sieur Carter
+- Correction du bug rendant le premier atout gratuit pour les autres éminences participant à une action collégiale
+- Partie support : intégration du lien vers la vidéo YouTube de présentation du système par Carter
+- Au chargement du monde : ajout d'un contrôle qui vérifie la configuration d'une éminence pour un utilisateur
 
 1.3.0
 - Bannières personnalisées pour les compendiums du Kit de Demo
