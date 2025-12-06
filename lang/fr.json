@@ -456,7 +456,8 @@
       "jetonsDepassement": "Trop de jetons sélectionnés",
       "jetonsConscienceInsuffisants": "Vous avez demandé {demande} jeton(s) de conscience alors qu’il ne vous en reste plus que {actuel} !",
       "jetonsReserveInsuffisants": "Vous avez demandé {demande} jeton(s) de la réserve collégiale alors qu’il n’en reste actuellement plus que {actuel} !",
-      "limiteNbJetonsDemo": "Avec le style de jeu « Kit de démo », le nombre maximum de jetons dans la réserve collégiale sera forcé à 10."
+      "limiteNbJetonsDemo": "Avec le style de jeu « Kit de démo », le nombre maximum de jetons dans la réserve collégiale sera forcé à 10.",
+      "userSansActeur": "L’utilisateur {user} n’a pas d’acteur associé."
     },
     "Settings": {
       "styleJeu": {
