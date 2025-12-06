@@ -1,3 +1,9 @@
+1.3.3
+- CombatTracker : gestion de l'initiative par drag n drop
+  - Suppression de l'affichage de l'initiative
+  - Suppression de boutons de relance de l'initiative
+  - Au démarrage du combat, les éminences sont avant les adversaires
+
 1.3.2
 - Configuration par défaut du token d'une éminence : Lié à l'acteur, Disposition Amicale, Vision activée, Mode de vision standard
 

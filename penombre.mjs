@@ -67,6 +67,10 @@ Hooks.once("init", function () {
   }
   CONFIG.ui.penombre = applications.PenombreSidebarMenu
 
+  // Modification du Combat
+  CONFIG.ui.combat = applications.PenombreCombatTracker
+  CONFIG.Combat.documentClass = documents.PenombreCombat
+
   helpers.PenombreSettingsHandler.registerSettings()
   helpers.registerHandlebars()
 

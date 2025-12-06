@@ -10,5 +10,6 @@ export { default as ActionSheet } from "./sheets/action-sheet.mjs"
 export { default as IntrigueSheet } from "./sheets/intrigue-sheet.mjs"
 
 export { default as PenombreSidebarMenu } from "./sidebar-menu.mjs"
+export { default as PenombreCombatTracker } from "./combat-tracker.mjs"
 
 export * as hooks from "../hooks/_module.mjs"
