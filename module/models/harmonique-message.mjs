@@ -171,7 +171,7 @@ export default class HarmoniqueMessageData extends BaseMessageData {
 
           // On vérifie qu'il reste un jeton de la réserve de conscience
           if (actor.system.nbJetonsRestants === 0) {
-            ui.notifications.warn(game.i18n.format("PENOMBRE.warnings.jetonsConscienceInsuffisants", { actuel: 0, demande: 1 }))
+            ui.notifications.warn(game.i18n.format("PENOMBRE.Warnings.jetonsConscienceInsuffisants", { actuel: 0, demande: 1 }))
             return
           }
 
@@ -215,7 +215,7 @@ export default class HarmoniqueMessageData extends BaseMessageData {
           // On vérifie qu'il reste un jeton dans la réserve collégiale
           reserveCollegiale = game.settings.get(SYSTEM.ID, "reserveCollegiale")
           if (reserveCollegiale.nbJetonsRestants === 0) {
-            ui.notifications.warn(game.i18n.format("PENOMBRE.warnings.jetonsReserveInsuffisants", { actuel: 0, demande: 1 }), {
+            ui.notifications.warn(game.i18n.format("PENOMBRE.Warnings.jetonsReserveInsuffisants", { actuel: 0, demande: 1 }), {
               permanent: true,
             })
             return

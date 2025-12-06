@@ -347,7 +347,7 @@ export default class PenombreRoll extends Roll {
     const jetons = Number(dialogElement.querySelector("#jetons").value)
 
     if (jetonsTotal > jetons) {
-      ui.notifications.warn(game.i18n.localize("PENOMBRE.warnings.jetonsDepassement"))
+      ui.notifications.warn(game.i18n.localize("PENOMBRE.Warnings.jetonsDepassement"))
     }
 
     // Vérification du nombre de jetons disponibles
@@ -359,7 +359,7 @@ export default class PenombreRoll extends Roll {
     // Jetons de conscience
     const nbJetonsRestantsConscience = actor.system.nbJetonsRestants
     if (jetonsConscience > nbJetonsRestantsConscience) {
-      ui.notifications.warn(game.i18n.format("PENOMBRE.warnings.jetonsConscienceInsuffisants", { actuel: nbJetonsRestantsConscience, demande: jetonsConscience }))
+      ui.notifications.warn(game.i18n.format("PENOMBRE.Warnings.jetonsConscienceInsuffisants", { actuel: nbJetonsRestantsConscience, demande: jetonsConscience }))
       canRoll = false
     }
 
@@ -367,7 +367,7 @@ export default class PenombreRoll extends Roll {
     const reserveCollegiale = game.settings.get("penombre", "reserveCollegiale")
     const nbJetonsRestantsReserveCollegiale = reserveCollegiale.nbJetonsRestants
     if (jetonsReserve > nbJetonsRestantsReserveCollegiale) {
-      ui.notifications.warn(game.i18n.format("PENOMBRE.warnings.jetonsReserveInsuffisants", { actuel: nbJetonsRestantsReserveCollegiale, demande: jetonsReserve }), {
+      ui.notifications.warn(game.i18n.format("PENOMBRE.Warnings.jetonsReserveInsuffisants", { actuel: nbJetonsRestantsReserveCollegiale, demande: jetonsReserve }), {
         permanent: true,
       })
       canRoll = false

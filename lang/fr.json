@@ -452,7 +452,7 @@
       "incidentMagique": "Incident magique",
       "merveille": "Merveille"
     },
-    "warnings": {
+    "Warnings": {
       "jetonsDepassement": "Trop de jetons sélectionnés",
       "jetonsConscienceInsuffisants": "Vous avez demandé {demande} jeton(s) de conscience alors qu’il ne vous en reste plus que {actuel} !",
       "jetonsReserveInsuffisants": "Vous avez demandé {demande} jeton(s) de la réserve collégiale alors qu’il n’en reste actuellement plus que {actuel} !",
@@ -492,8 +492,8 @@
       "reserveTooltip": "Ouvre la Réserve collégiale",
       "bugReport": "Signaler un bug",
       "bugReportTooltip": "Signaler un bug ou faire une suggestion d’amélioration sur GitHub",
-      "video": "Présentation par Carter",
-      "videoTooltip": "Lancer la présentation vidéo YouTube de Carter"
+      "video": "Présentation vidéo du système",
+      "videoTooltip": "Lancer la vidéo YouTube de présentation du système réalisée par Carter"
     }
   }
 }
