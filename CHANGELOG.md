@@ -1,3 +1,6 @@
+1.4.0
+- Ajout des dés virtuels Pénombre
+
 1.3.2
 - Configuration par défaut du token d'une éminence : Lié à l'acteur, Disposition Amicale, Vision activée, Mode de vision standard
 - CombatTracker : gestion de l'initiative par drag'n'drop
