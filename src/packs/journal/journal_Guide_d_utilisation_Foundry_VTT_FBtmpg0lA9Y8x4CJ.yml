@@ -356,7 +356,7 @@ pages:
         l'initiative (inutile dans <em>Pénombre</em>).</p></li><li><p>Le système
         a supprimé les boutons de relance de l'initiative (inutiles dans
         <em>Pénombre</em>).</p></li><li><p>Au démarrage du combat, les éminences
-        sont placés automatiquement avant les adversaires, comme le suggèrent
+        sont placées automatiquement avant les adversaires, comme le suggèrent
         les règles.</p><img
         src="systems/penombre/assets/guide/combat_tracker.png" /></li></ul>
     video:
@@ -376,7 +376,7 @@ pages:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       createdTime: 1765099228822
-      modifiedTime: 1765100834211
+      modifiedTime: 1765101277019
       lastModifiedBy: xu8p7UMcYrInjBEg
     _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.P27arfJEB6MZewCH'
 folder: null
