@@ -1,4 +1,5 @@
-1.3.3
+1.4.0
+- ajout des dés virtuels Pénombre du palier du Crowdfunding à 100.000 €
 - CombatTracker : gestion de l'initiative par drag'n'drop
   - Suppression de l'affichage de l'initiative
   - Suppression de boutons de relance de l'initiative
