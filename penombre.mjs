@@ -211,7 +211,7 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
   * - "default" only register the colorset
   * - "preferred" apply the colorset if the player didn't already change his dice appearance for this world. 
   */
-  dice3d.addColorset({colorset: "penombre"}, "Default")
+  dice3d.addColorset("penombre", "Preferred")
   dice3d.addColorset({
     name: 'penombre',
     description: "Pénombre/Brun",
@@ -223,7 +223,7 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
     material: 'glass',
   });
 
-  dice3d.addColorset({colorset: "penombre2"}, "Default")
+  dice3d.addColorset("penombre2", "Default")
   dice3d.addColorset({
     name: 'penombre2',
     description: "Pénombre/Bleu",

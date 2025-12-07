@@ -220,7 +220,7 @@ export default class PenombreRoll extends Roll {
         if (roll.dice[i].faces === MERVEILLEUX_FACES) {
           roll.dice[i].options.appearance = { system: "penombre", colorset: "penombre" }
         } else {
-          roll.dice[i].options.appearance = { system: "penombre2", colorset:"penombre2" }
+          roll.dice[i].options.appearance = { system: "penombre2", colorset: "penombre2" }
         }
       }
     }
