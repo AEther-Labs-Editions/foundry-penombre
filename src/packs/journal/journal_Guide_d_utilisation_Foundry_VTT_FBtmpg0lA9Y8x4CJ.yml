@@ -335,6 +335,50 @@ pages:
       modifiedTime: 1764527783039
       lastModifiedBy: ljzL3FBlhW4qIK9g
     _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.bkfTETg2uFTXRoc3'
+  - sort: 112500
+    name: Comment gérer les combats
+    type: text
+    _id: P27arfJEB6MZewCH
+    system: {}
+    title:
+      show: true
+      level: 1
+    image: {}
+    text:
+      format: 1
+      content: >-
+        <h2>Ce qui perdure</h2><p>Pour gérer les combats, placez comme à
+        l'habitude les acteurs dans le <strong>Combat
+        Tracker</strong>.</p><h2>Ce qui change</h2><ul><li><p>Gestion de
+        l'initiative par drag'n'drop : vous pouvez à tout moment réorganiser
+        l'ordre de combat par glisser-déposer dans le <strong>Combat
+        Tracker</strong>.</p></li><li><p>Le système a supprimé l'affichage de
+        l'initiative (inutile dans <em>Pénombre</em>).</p></li><li><p>Le système
+        a supprimé les boutons de relance de l'initiative (inutiles dans
+        <em>Pénombre</em>).</p></li><li><p>Au démarrage du combat, les Éminences
+        sont placées automatiquement avant les adversaires, comme le suggèrent
+        les règles.</p><img
+        src="systems/penombre/assets/guide/combat_tracker.webp"/></li></ul>
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    category: null
+    ownership:
+      default: -1
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1765099228822
+      modifiedTime: 1765101875010
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.P27arfJEB6MZewCH'
 folder: null
 categories: []
 ownership:
