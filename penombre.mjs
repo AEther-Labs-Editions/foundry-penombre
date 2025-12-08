@@ -9,7 +9,6 @@ import * as models from "./module/models/_module.mjs"
 import * as documents from "./module/documents/_module.mjs"
 import * as applications from "./module/applications/_module.mjs"
 import * as helpers from "./module/helpers/_module.mjs"
-// import * as settings from "./module/helpers/settings.mjs"
 
 Hooks.once("init", function () {
   console.info("Pénombre | Initialisation du système...")
