@@ -476,7 +476,7 @@
         "hint": "Nombre maximum de jetons disponibles dans la Réserve Collégiale."
       },
       "desSpeciaux": {
-        "name": "Utiliser les dés virtuels Pénombre",
+        "name": "Activer les dés virtuels Pénombre",
         "hint": "Utiliser les dés virtuels spéciaux pour Pénombre depuis le module Dice-so-Nice (si activé)."
       }
     },
