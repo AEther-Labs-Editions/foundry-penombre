@@ -1,4 +1,5 @@
 import { SYSTEM } from "./module/config/system.mjs"
+
 globalThis.SYSTEM = SYSTEM // Expose the SYSTEM object to the global scope
 
 export * as elements from "./module/elements/_module.mjs"
@@ -8,6 +9,7 @@ import * as models from "./module/models/_module.mjs"
 import * as documents from "./module/documents/_module.mjs"
 import * as applications from "./module/applications/_module.mjs"
 import * as helpers from "./module/helpers/_module.mjs"
+// import * as settings from "./module/helpers/settings.mjs"
 
 Hooks.once("init", function () {
   console.info("Pénombre | Initialisation du système...")
@@ -195,13 +197,17 @@ Hooks.on("hotbarDrop", (bar, data, slot) => {
 })
 
 
-
 /**
  * Adds custom dice to Dice So Nice!.
  */
 Hooks.once("diceSoNiceReady", (dice3d) => {
   // Called once the module is ready to listen to new rolls and display 3D animations.
   // dice3d: Main class, instantiated and ready to use.
+
+  let desSpeciaux = game.settings.get(SYSTEM.ID, "desSpeciaux")
+  console.log("desSpeciaux", desSpeciaux)
+  if (desSpeciaux) {
+
 
   /**
   * Add a colorset (theme)
@@ -448,4 +454,5 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
     ],
     system: "penombre2",
   })
+  }
 })

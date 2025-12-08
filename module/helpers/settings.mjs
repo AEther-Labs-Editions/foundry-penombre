@@ -34,6 +34,16 @@ export default class PenombreSettingsHandler {
         onChange: ReserveCollegiale.changeNbJetons,
       },
 
+      desSpeciaux: {
+        name: "PENOMBRE.Settings.desSpeciaux.name",
+        hint: "PENOMBRE.Settings.desSpeciaux.hint",
+        scope: "world",
+        config: true,
+        default: true,
+        type: Boolean,
+        requiresReload: true,
+      },
+
       reserveCollegiale: {
         name: "PENOMBRE.Settings.reserveCollegiale.name",
         hint: "PENOMBRE.Settings.reserveCollegiale.hint",
