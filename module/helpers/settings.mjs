@@ -37,7 +37,7 @@ export default class PenombreSettingsHandler {
       desSpeciaux: {
         name: "PENOMBRE.Settings.desSpeciaux.name",
         hint: "PENOMBRE.Settings.desSpeciaux.hint",
-        scope: "world",
+        scope: "client",
         config: true,
         default: true,
         type: Boolean,
