@@ -217,7 +217,6 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
     * - "default" only register the colorset
     * - "preferred" apply the colorset if the player didn't already change his dice appearance for this world. 
     */
-    dice3d.addColorset("penombre", "Preferred")
     dice3d.addColorset({
       name: 'penombre',
       description: "Pénombre/Brun",
@@ -227,9 +226,8 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
       texture: 'water',
       edge: '#b3944f',
       material: 'glass',
-    });
+    }, "preferred");
 
-    dice3d.addColorset("penombre2", "Default")
     dice3d.addColorset({
       name: 'penombre2',
       description: "Pénombre/Bleu",
@@ -239,9 +237,9 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
       texture: 'water',
       edge: '#84b3e3',
       material: 'glass',
-    });
+    }, "default");
 
-    dice3d.addSystem({ id: "penombre", name: "Pénombre" }, "Preferred")
+    dice3d.addSystem({ id: "penombre", name: "Pénombre" }, "preferred")
     dice3d.addDicePreset({
       type: "d2",
       labels: [
@@ -348,7 +346,7 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
       system: "penombre",
     })
 
-    dice3d.addSystem({ id: "penombre2", name: "Pénombre2" }, "Default")
+    dice3d.addSystem({ id: "penombre2", name: "Pénombre2" }, "default")
     dice3d.addDicePreset({
       type: "d2",
       labels: [
