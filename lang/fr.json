@@ -477,7 +477,7 @@
       },
       "desSpeciaux": {
         "name": "Utiliser les dés virtuels Pénombre",
-        "hint": "Utiliser les dés virtuels spéciaux pour Pénombre dans le module Dice-so-Nice (si activé)."
+        "hint": "Utiliser les dés virtuels spéciaux pour Pénombre depuis le module Dice-so-Nice (si activé)."
       }
     },
     "ReserveCollegiale": {
