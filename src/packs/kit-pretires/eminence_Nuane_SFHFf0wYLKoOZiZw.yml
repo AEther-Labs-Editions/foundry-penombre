@@ -407,12 +407,12 @@ _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.350'
+  coreVersion: '13.351'
   systemId: penombre
   systemVersion: '#{VERSION}#'
   createdTime: 1759787151631
-  modifiedTime: 1759787151631
-  lastModifiedBy: 6qbNUhuoJ67e6dmf
+  modifiedTime: 1765297869070
+  lastModifiedBy: xu8p7UMcYrInjBEg
 _id: SFHFf0wYLKoOZiZw
-sort: 0
+sort: 100000
 _key: '!actors!SFHFf0wYLKoOZiZw'
