@@ -204,9 +204,8 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
   // dice3d: Main class, instantiated and ready to use.
 
   let desSpeciaux = game.settings.get(SYSTEM.ID, "desSpeciaux")
-  console.log("desSpeciaux", desSpeciaux)
+  // console.log("desSpeciaux", desSpeciaux)
   if (desSpeciaux) {
-
 
     /**
     * Add a colorset (theme)
@@ -225,7 +224,7 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
       texture: 'water',
       edge: '#b3944f',
       material: 'glass',
-    }, "preferred");
+    }, "default");
 
     dice3d.addColorset({
       name: 'penombre2',
@@ -238,7 +237,7 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
       material: 'glass',
     }, "default");
 
-    dice3d.addSystem({ id: "penombre", name: "Pénombre" }, "preferred")
+    dice3d.addSystem({ id: "penombre", name: "Pénombre" }, "default")
     dice3d.addDicePreset({
       type: "d2",
       labels: [

@@ -212,7 +212,9 @@ export default class PenombreRoll extends Roll {
     const roll = new this(formule, options.data, rollOptions)
 
     // Apparence des dés si le module Dice So Nice est activé et que le système de dés Pénombre est chargé
-    if (game.modules.get("dice-so-nice")?.active && game.dice3d.getLoadedDiceSystems().has("penombre") && game.dice3d.getLoadedDiceSystems().has("penombre2")) {
+    const desSpeciaux = game.settings.get(SYSTEM.ID, "desSpeciaux")
+    // if (game.modules.get("dice-so-nice")?.active && game.dice3d.getLoadedDiceSystems().has("penombre") && game.dice3d.getLoadedDiceSystems().has("penombre2")) {
+    if (game.modules.get("dice-so-nice")?.active && desSpeciaux) {
       // Le premier dé est toujours le dé d'harmonique
       roll.dice[0].options.appearance = { system: "penombre", colorset: "penombre" }
       // Les autres dés sont des dés d'atouts (d6) ou un dé merveilleux (d20)
@@ -222,6 +224,10 @@ export default class PenombreRoll extends Roll {
         } else {
           roll.dice[i].options.appearance = { system: "penombre2", colorset: "penombre2" }
         }
+      }
+    } else if (game.modules.get("dice-so-nice")?.active) {
+      for (let i = 1; i < roll.dice.length; i++) {
+        roll.dice[i].options.appearance = { system: "standard" }
       }
     }
     await roll.evaluate()
@@ -654,7 +660,9 @@ export default class PenombreRoll extends Roll {
           // Ajout MMFO : avec DsN, les dés relancés sont : soit spécial si harmonique, soit standards si bonus
 
           // Apparence des dés si le module Dice So Nice est activé et que le système de dés Pénombre est chargé
-          if (game.modules.get("dice-so-nice")?.active && game.dice3d.getLoadedDiceSystems().has("penombre") && game.dice3d.getLoadedDiceSystems().has("penombre2")) {
+          const desSpeciaux = game.settings.get(SYSTEM.ID, "desSpeciaux")
+          // if (game.modules.get("dice-so-nice")?.active && game.dice3d.getLoadedDiceSystems().has("penombre") && game.dice3d.getLoadedDiceSystems().has("penombre2")) {
+          if (game.modules.get("dice-so-nice")?.active && desSpeciaux) {
             if (dieIndex === 0) {
               // Le premier dé est toujours le dé d'harmonique
               newDice.dice[0].options.appearance = { system: "penombre", colorset: "penombre" }
@@ -665,6 +673,8 @@ export default class PenombreRoll extends Roll {
                 newDice.dice[0].options.appearance = { system: "penombre2", colorset: "penombre2" }
               }
             }
+          } else if (game.modules.get("dice-so-nice")?.active) {
+            newDice.dice[0].options.appearance = { system: "standard" }
           }
           // Fin d'ajout MMFO
 
