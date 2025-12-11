@@ -226,7 +226,7 @@ export default class PenombreRoll extends Roll {
         }
       }
     } else if (game.modules.get("dice-so-nice")?.active) {
-      for (let i = 1; i < roll.dice.length; i++) {
+      for (let i = 0; i < roll.dice.length; i++) {
         roll.dice[i].options.appearance = { system: "standard" }
       }
     }
