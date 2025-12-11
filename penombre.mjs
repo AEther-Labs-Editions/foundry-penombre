@@ -224,7 +224,7 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
       texture: 'water',
       edge: '#b3944f',
       material: 'glass',
-    }, "default");
+    }, "preferred");
 
     dice3d.addColorset({
       name: 'penombre2',
@@ -237,7 +237,7 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
       material: 'glass',
     }, "default");
 
-    dice3d.addSystem({ id: "penombre", name: "Pénombre" }, "default")
+    dice3d.addSystem({ id: "penombre", name: "Pénombre" }, "preferred")
     dice3d.addDicePreset({
       type: "d2",
       labels: [

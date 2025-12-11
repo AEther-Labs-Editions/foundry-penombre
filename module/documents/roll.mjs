@@ -213,8 +213,8 @@ export default class PenombreRoll extends Roll {
 
     // Apparence des dés si le module Dice So Nice est activé et que le système de dés Pénombre est chargé
     const desSpeciaux = game.settings.get(SYSTEM.ID, "desSpeciaux")
-    // if (game.modules.get("dice-so-nice")?.active && game.dice3d.getLoadedDiceSystems().has("penombre") && game.dice3d.getLoadedDiceSystems().has("penombre2")) {
-    if (game.modules.get("dice-so-nice")?.active && desSpeciaux) {
+    if (game.modules.get("dice-so-nice")?.active && game.dice3d.getLoadedDiceSystems().has("penombre") && game.dice3d.getLoadedDiceSystems().has("penombre2")) {
+    // if (game.modules.get("dice-so-nice")?.active && desSpeciaux) {
       // Le premier dé est toujours le dé d'harmonique
       roll.dice[0].options.appearance = { system: "penombre", colorset: "penombre" }
       // Les autres dés sont des dés d'atouts (d6) ou un dé merveilleux (d20)
@@ -661,8 +661,8 @@ export default class PenombreRoll extends Roll {
 
           // Apparence des dés si le module Dice So Nice est activé et que le système de dés Pénombre est chargé
           const desSpeciaux = game.settings.get(SYSTEM.ID, "desSpeciaux")
-          // if (game.modules.get("dice-so-nice")?.active && game.dice3d.getLoadedDiceSystems().has("penombre") && game.dice3d.getLoadedDiceSystems().has("penombre2")) {
-          if (game.modules.get("dice-so-nice")?.active && desSpeciaux) {
+          if (game.modules.get("dice-so-nice")?.active && game.dice3d.getLoadedDiceSystems().has("penombre") && game.dice3d.getLoadedDiceSystems().has("penombre2")) {
+          // if (game.modules.get("dice-so-nice")?.active && desSpeciaux) {
             if (dieIndex === 0) {
               // Le premier dé est toujours le dé d'harmonique
               newDice.dice[0].options.appearance = { system: "penombre", colorset: "penombre" }
