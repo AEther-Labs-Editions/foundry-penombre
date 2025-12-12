@@ -462,7 +462,7 @@ items:
         obscènes. Un « gardien » sans visage apparaît ; Esmeralda est aveuglée
         par la débauche de détails qui l’entourent, ses sens saturés devenant
         ininterprétables ; etc.</p></li></ul>
-      harmonique: nature
+      harmonique: nuit
       niveau: 2
       prerequis: utiliser son vitricle
     effects: []
@@ -473,10 +473,11 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '13.351'
       systemId: penombre
-      systemVersion: '0'
-      lastModifiedBy: null
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: xu8p7UMcYrInjBEg
+      modifiedTime: 1765553547780
     ownership:
       default: 0
     _key: '!actors.items!TFv6M7pZu7hWYOuq.DQY7PMB9y4tYDytr'
