@@ -1,0 +1,33 @@
+type: pouvoir
+name: Sillon
+_id: CmljLjHLz5fG3qwU
+img: systems/penombre/assets/icons/pouvoir.webp
+system:
+  utilise: false
+  description: >-
+    <p><em>Rien n’entrave ma route ni ne perturbe mon pas. RIEN !</em></p><p>Une
+    action impliquant un déplacement impossible (sur l’eau, par exemple) devient
+    possible.</p><p>Une action pour trouver de l’eau, de la nourriture et un
+    abri en milieu naturel devient automatique.</p><p>De plus, chaque fois
+    qu’elle réalise une merveille (p. 31 du kit), son joueur peut lui choisir un
+    nouveau pouvoir dans la liste suivante, ou augmenter de 1 sa valeur de
+    conscience.</p><ul><li><p>Musc</p></li><li><p>Empathie animale</p></li></ul>
+  type: naissance
+effects: []
+folder: zEYIYQqCE0AVnpOY
+sort: 100000
+ownership:
+  default: 0
+  xu8p7UMcYrInjBEg: 3
+flags: {}
+_stats:
+  compendiumSource: Actor.5QcXKsO6EhthchrC.Item.GqDFbFgAqRijZnVC
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1765936260681
+  modifiedTime: 1765936260681
+  lastModifiedBy: xu8p7UMcYrInjBEg
+_key: '!items!CmljLjHLz5fG3qwU'

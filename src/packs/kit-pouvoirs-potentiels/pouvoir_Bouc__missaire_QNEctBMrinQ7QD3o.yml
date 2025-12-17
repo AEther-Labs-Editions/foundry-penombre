@@ -1,0 +1,32 @@
+type: pouvoir
+name: Bouc émissaire
+_id: QNEctBMrinQ7QD3o
+img: systems/penombre/assets/icons/pouvoir.webp
+system:
+  utilise: false
+  description: >-
+    <p><em>Des intrigues de palais initiées par des satyres ont, jadis, incité
+    les autorités à prendre des mesures radicales pour décourager ceux qui
+    tenteraient, à l’avenir, de se présenter aux portes de la
+    cité.</em></p><p>Une action pour attirer l’attention, ou convaincre de sa
+    culpabilité devient automatique. La prochaine action des opposants et
+    adversaires ne peut cibler que Tétras.</p>
+  type: naissance
+effects: []
+folder: IxCLMJlUPYUhtQ3N
+sort: 100000
+ownership:
+  default: 0
+  xu8p7UMcYrInjBEg: 3
+flags: {}
+_stats:
+  compendiumSource: Actor.zmaO58a96eDAyOb3.Item.YNYJMr905wDMqgXN
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1765936267582
+  modifiedTime: 1765936267582
+  lastModifiedBy: xu8p7UMcYrInjBEg
+_key: '!items!QNEctBMrinQ7QD3o'

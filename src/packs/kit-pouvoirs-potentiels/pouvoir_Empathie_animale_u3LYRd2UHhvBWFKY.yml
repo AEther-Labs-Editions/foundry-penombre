@@ -1,0 +1,31 @@
+type: pouvoir
+name: Empathie animale
+_id: u3LYRd2UHhvBWFKY
+img: systems/penombre/assets/icons/pouvoir.webp
+system:
+  utilise: false
+  description: >-
+    <p><em>Les animaux alentour ne sont ni une menace, ni insignifiants : ils
+    sont la harde.</em></p><p>Le temps d’une scène, un animal sous le contrôle
+    du psycholune fait confiance à Geysir. Il n’est pas agressif, une
+    conversation sommaire peut avoir lieu, et il peut recevoir un ordre simple à
+    exécuter sans délai. Cela ne peut pas le mettre en danger.</p>
+  type: naissance
+effects: []
+folder: zEYIYQqCE0AVnpOY
+sort: 150000
+ownership:
+  default: 0
+  xu8p7UMcYrInjBEg: 3
+flags: {}
+_stats:
+  compendiumSource: Actor.5QcXKsO6EhthchrC.Item.bbgRALa7rxxR6Ltm
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1765936260681
+  modifiedTime: 1765936260681
+  lastModifiedBy: xu8p7UMcYrInjBEg
+_key: '!items!u3LYRd2UHhvBWFKY'
