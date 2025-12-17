@@ -375,7 +375,7 @@ items:
         exemple, le démon doit agir sur un individu, un groupe, ou une foule, ou
         infiltrer un bâtiment qui peut être proche, ou lointain.</p></li></ul>
       harmonique: nuit
-      niveau: 5
+      niveau: 1
       prerequis: tracer le contour d’une ombre à l’encre de son sang
     effects: []
     folder: null
@@ -391,7 +391,8 @@ items:
       coreVersion: '13.351'
       systemId: penombre
       systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
+      lastModifiedBy: xu8p7UMcYrInjBEg
+      modifiedTime: 1765952225723
     _key: '!actors.items!8b7IMewxDXREJDvf.5N4i9Yfb27Cl6Qry'
   - type: pouvoir
     name: Bouc émissaire
