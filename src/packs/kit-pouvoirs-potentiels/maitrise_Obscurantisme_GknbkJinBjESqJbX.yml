@@ -35,12 +35,12 @@ system:
     etc.</p></li></ol><p><strong>Mais attention, il risque également
     de…</strong></p><h6>Incident magique</h6><ul><li><p><strong>regretter un
     accès de violence.</strong> Cette chose délicate semble si fragile, et il
-    est si facile d’en extraire un petit supplément de puissance… <span
-    class="fontstyle0">L’obscurantiste</span> ressent dans sa chair les sévices
-    qu’il inflige ; un personnage proche est pris de douleurs, de nausées, ou
-    s’évanouit ; le danseur développe une marque étrange, séquelle des tortures
-    qu’il a subies ; le danseur s’affale, inanimé jusqu’au prochain repos ; le
-    danseur meurt, terrifié, exsangue ou désarticulé ; etc.</p></li></ul>
+    est si facile d’en extraire un petit supplément de puissance…
+    L’obscurantiste ressent dans sa chair les sévices qu’il inflige ; un
+    personnage proche est pris de douleurs, de nausées, ou s’évanouit ; le
+    danseur développe une marque étrange, séquelle des tortures qu’il a subies ;
+    le danseur s’affale, inanimé jusqu’au prochain repos ; le danseur meurt,
+    terrifié, exsangue ou désarticulé ; etc.</p></li></ul>
   harmonique: etincelle
   niveau: 1
   prerequis: torturer son danseur asservi
@@ -55,12 +55,12 @@ _stats:
   coreVersion: '13.351'
   systemId: penombre
   systemVersion: '#{VERSION}#'
-  createdTime: 1765950983205
-  modifiedTime: 1765950983205
+  createdTime: 1765953693815
+  modifiedTime: 1765953693830
   lastModifiedBy: xu8p7UMcYrInjBEg
 ownership:
   default: 0
   xu8p7UMcYrInjBEg: 3
-_id: zuG2LIwI13X505MY
-sort: 0
-_key: '!items!zuG2LIwI13X505MY'
+_id: GknbkJinBjESqJbX
+sort: 25000
+_key: '!items!GknbkJinBjESqJbX'
