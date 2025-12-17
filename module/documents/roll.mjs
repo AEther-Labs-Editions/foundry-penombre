@@ -212,22 +212,24 @@ export default class PenombreRoll extends Roll {
     const roll = new this(formule, options.data, rollOptions)
 
     // Apparence des dés si le module Dice So Nice est activé et que le système de dés Pénombre est chargé
-    const desSpeciaux = game.settings.get(SYSTEM.ID, "desSpeciaux")
-    if (game.modules.get("dice-so-nice")?.active && game.dice3d.getLoadedDiceSystems().has("penombre") && game.dice3d.getLoadedDiceSystems().has("penombre2")) {
-    // if (game.modules.get("dice-so-nice")?.active && desSpeciaux) {
-      // Le premier dé est toujours le dé d'harmonique
-      roll.dice[0].options.appearance = { system: "penombre", colorset: "penombre" }
-      // Les autres dés sont des dés d'atouts (d6) ou un dé merveilleux (d20)
-      for (let i = 1; i < roll.dice.length; i++) {
-        if (roll.dice[i].faces === MERVEILLEUX_FACES) {
-          roll.dice[i].options.appearance = { system: "penombre", colorset: "penombre" }
-        } else {
-          roll.dice[i].options.appearance = { system: "penombre2", colorset: "penombre2" }
+    const desSpeciaux = await game.settings.get(SYSTEM.ID, "desSpeciaux")
+    if (game.modules.get("dice-so-nice")?.active) {
+      if (desSpeciaux) {
+      // if (game.dice3d.getLoadedDiceSystems().has("penombre") && game.dice3d.getLoadedDiceSystems().has("penombre2")) {
+        // Le premier dé est toujours le dé d'harmonique
+        roll.dice[0].options.appearance = { colorset: "penombre", system: "penombre" }
+        // Les autres dés sont des dés d'atouts (d6) ou un dé merveilleux (d20)
+        for (let i = 1; i < roll.dice.length; i++) {
+          if (roll.dice[i].faces === MERVEILLEUX_FACES) {
+            roll.dice[i].options.appearance = { colorset: "penombre", system: "penombre" }
+          } else {
+            roll.dice[i].options.appearance = { colorset: "penombre2", system: "penombre2" }
+          }
         }
-      }
-    } else if (game.modules.get("dice-so-nice")?.active) {
-      for (let i = 0; i < roll.dice.length; i++) {
-        roll.dice[i].options.appearance = { system: "standard" }
+      } else {
+        for (let i = 0; i < roll.dice.length; i++) {
+          roll.dice[i].options.appearance = { system: "standard" }
+        }
       }
     }
     await roll.evaluate()
@@ -660,21 +662,23 @@ export default class PenombreRoll extends Roll {
           // Ajout MMFO : avec DsN, les dés relancés sont : soit spécial si harmonique, soit standards si bonus
 
           // Apparence des dés si le module Dice So Nice est activé et que le système de dés Pénombre est chargé
-          const desSpeciaux = game.settings.get(SYSTEM.ID, "desSpeciaux")
-          if (game.modules.get("dice-so-nice")?.active && game.dice3d.getLoadedDiceSystems().has("penombre") && game.dice3d.getLoadedDiceSystems().has("penombre2")) {
-          // if (game.modules.get("dice-so-nice")?.active && desSpeciaux) {
-            if (dieIndex === 0) {
-              // Le premier dé est toujours le dé d'harmonique
-              newDice.dice[0].options.appearance = { system: "penombre", colorset: "penombre" }
-            } else {
-              if (newDice.dice[0].faces === MERVEILLEUX_FACES) {
-                newDice.dice[0].options.appearance = { system: "penombre", colorset: "penombre" }
+          const desSpeciaux = await game.settings.get(SYSTEM.ID, "desSpeciaux")
+          if (game.modules.get("dice-so-nice")?.active) {
+            if (desSpeciaux) {
+            // if (game.dice3d.getLoadedDiceSystems().has("penombre") && game.dice3d.getLoadedDiceSystems().has("penombre2")) {
+              if (dieIndex === 0) {
+                // Le premier dé est toujours le dé d'harmonique
+                newDice.dice[0].options.appearance = { colorset: "penombre", system: "penombre" }
               } else {
-                newDice.dice[0].options.appearance = { system: "penombre2", colorset: "penombre2" }
+                if (newDice.dice[0].faces === MERVEILLEUX_FACES) {
+                  newDice.dice[0].options.appearance = { colorset: "penombre", system: "penombre" }
+                } else {
+                  newDice.dice[0].options.appearance = { colorset: "penombre2", system: "penombre2" }
+                }
               }
-            }
-          } else if (game.modules.get("dice-so-nice")?.active) {
+            } else {
             newDice.dice[0].options.appearance = { system: "standard" }
+            }
           }
           // Fin d'ajout MMFO
 
