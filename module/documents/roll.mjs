@@ -221,7 +221,6 @@ export default class PenombreRoll extends Roll {
         roll.dice[0].options.appearance =
         {
           colorset: "penombre",
-          category: "Pénombre",
           foreground: '#7d3339',
           background: "#b3944f",
           texture: 'water',
@@ -236,7 +235,6 @@ export default class PenombreRoll extends Roll {
             roll.dice[i].options.appearance =
             {
               colorset: "penombre",
-              category: "Pénombre",
               foreground: '#7d3339',
               background: "#b3944f",
               texture: 'water',

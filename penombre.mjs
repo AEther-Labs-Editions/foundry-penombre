@@ -254,10 +254,10 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
     dice3d.addDicePreset({
       type: "d4",
       labels: [
-        "systems/penombre/assets/dice-so-nice-2/d-fumble.webp", // 1 - fumble
+        "systems/penombre/assets/dice-so-nice/d-fumble.webp", // 1 - fumble
         "0", // 2
         "0", // 3
-        "systems/penombre/assets/dice-so-nice-2/d-1-envolee.webp", // 4 - 1 succes - 1 envolee
+        "systems/penombre/assets/dice-so-nice/d-1-envolee.webp", // 4 - 1 succes - 1 envolee
       ],
       system: "penombre2",
     })
