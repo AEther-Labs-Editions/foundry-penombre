@@ -222,7 +222,7 @@ export default class PenombreRoll extends Roll {
         {
           colorset: "penombre",
           category: "Pénombre",
-          foreground: '#000000',
+          foreground: '#7d3339',
           background: "#b3944f",
           texture: 'water',
           edge: '#b3944f',
@@ -237,7 +237,7 @@ export default class PenombreRoll extends Roll {
             {
               colorset: "penombre",
               category: "Pénombre",
-              foreground: '#000000',
+              foreground: '#7d3339',
               background: "#b3944f",
               texture: 'water',
               edge: '#b3944f',
@@ -707,7 +707,7 @@ export default class PenombreRoll extends Roll {
                 newDice.dice[0].options.appearance =
                 {
                   colorset: "penombre",
-                  foreground: '#000000',
+                  foreground: '#7d3339',
                   background: "#b3944f",
                   texture: 'water',
                   edge: '#b3944f',
@@ -720,7 +720,7 @@ export default class PenombreRoll extends Roll {
                   newDice.dice[0].options.appearance =
                   {
                     colorset: "penombre",
-                    foreground: '#000000',
+                    foreground: '#7d3339',
                     background: "#b3944f",
                     texture: 'water',
                     edge: '#b3944f',
