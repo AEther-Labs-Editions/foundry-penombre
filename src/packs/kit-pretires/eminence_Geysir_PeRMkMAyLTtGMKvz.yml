@@ -186,7 +186,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!lA2vZdJVj00xm5Ui.GqDFbFgAqRijZnVC'
+    _key: '!actors.items!PeRMkMAyLTtGMKvz.GqDFbFgAqRijZnVC'
   - type: atout
     name: Armure de cuir repoussé
     _id: 4QucvYHwwuL7ey0w
@@ -209,7 +209,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!lA2vZdJVj00xm5Ui.4QucvYHwwuL7ey0w'
+    _key: '!actors.items!PeRMkMAyLTtGMKvz.4QucvYHwwuL7ey0w'
   - type: atout
     name: Totem loup
     _id: TAarGRH2i5YiI6V0
@@ -232,7 +232,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!lA2vZdJVj00xm5Ui.TAarGRH2i5YiI6V0'
+    _key: '!actors.items!PeRMkMAyLTtGMKvz.TAarGRH2i5YiI6V0'
   - type: atout
     name: Je ne laisse personne en arrière
     _id: S5NjhlAGQh5MUZpE
@@ -255,7 +255,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!lA2vZdJVj00xm5Ui.S5NjhlAGQh5MUZpE'
+    _key: '!actors.items!PeRMkMAyLTtGMKvz.S5NjhlAGQh5MUZpE'
   - type: atout
     name: 'Je ne suis pas têtue : ma solution est juste la meilleure !'
     _id: p6VVz6BzuQSLoArq
@@ -278,7 +278,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!lA2vZdJVj00xm5Ui.p6VVz6BzuQSLoArq'
+    _key: '!actors.items!PeRMkMAyLTtGMKvz.p6VVz6BzuQSLoArq'
   - type: maitrise
     name: Brigue
     _id: vvDY6v4GCtWJKc84
@@ -287,22 +287,23 @@ items:
       description: >-
         <h1>Geysir la brigande</h1><p><strong>Pour préparer son effet magique,
         Geysir doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>posséder,
-        ou fabriquer, une « penne » animale</strong> indispensable à l’action.
-        Il peut s’agir des plumes d’une flèche, d’une simple corde en crins, de
-        lanières de cuir, d’une mouche de pêche, d’un grigri en corne, ou en
-        dents, etc.</p><p></p></li></ul><p><strong>Ce faisant,
-        il…</strong></p><h6>Action magique</h6><ul><li><p><strong>fait corps
-        avec l’Harmonde, qui devient pour lui un terrain de jeu</strong> couvert
-        d’agrès improvisés : les tas de paille se changent en trampolines ; les
-        branches, en barres parallèles ; les lierres, en échelles ; les
-        enseignes, en trapèzes ; etc.</p><p></p></li></ul><p><strong>Avec un
-        effet magique de niveau ? …</strong></p><p><strong>il parvient par
-        exemple à…</strong></p><ol><li><p><strong>identifier</strong> un effet
-        magique de magie naturelle (brigue, élémentalisme, magie des saisons) ;
-        ralentir une glissade ; se rattraper à une aspérité ; appeler, amadouer,
-        effrayer ou ressentir les émotions d’une bête sauvage ; repérer des
-        traces animales, ou un passage naturel ; devenir plus fort, plus souple,
-        plus habile ; placer une botte secrète ; trouver un point d’eau ;
+        ou fabriquer, une « penne » animale</strong> indispensable à
+        l’action.Elle peut s’agir des plumes d’une flèche, d’une simple corde en
+        crins, de lanières de cuir, d’une mouche de pêche, d’un grigri en corne,
+        ou en dents, etc.</p><p></p></li></ul><p><strong>Ce faisant,
+        elle…</strong></p><h6>Action magique</h6><ul><li><p><strong>fait corps
+        avec l’Harmonde, qui devient pour elle un terrain de jeu</strong>
+        couvert d’agrès improvisés : les tas de paille se changent en
+        trampolines ; les branches, en barres parallèles ; les lierres, en
+        échelles ; les enseignes, en trapèzes ;
+        etc.</p><p></p></li></ul><p><strong>Avec un effet magique de niveau ?
+        …</strong></p><p><strong>elle parvient par exemple
+        à…</strong></p><ol><li><p><strong>identifier</strong> un effet magique
+        de magie naturelle (brigue, élémentalisme, magie des saisons) ; ralentir
+        une glissade ; se rattraper à une aspérité ; appeler, amadouer, effrayer
+        ou ressentir les émotions d’une bête sauvage ; repérer des traces
+        animales, ou un passage naturel ; devenir plus fort, plus souple, plus
+        habile ; placer une botte secrète ; trouver un point d’eau ;
         etc.</p></li><li><p><strong>amortir</strong> une chute libre ; escalader
         comme une araignée ; marcher sur un fil ; parler aux animaux ; dévier
         les coups ou les flèches à mains nues ; tirer une flèche rebondissante
@@ -344,7 +345,7 @@ items:
     ownership:
       default: 0
       xu8p7UMcYrInjBEg: 3
-    _key: '!actors.items!lA2vZdJVj00xm5Ui.vvDY6v4GCtWJKc84'
+    _key: '!actors.items!PeRMkMAyLTtGMKvz.vvDY6v4GCtWJKc84'
   - type: pouvoir
     name: Musc
     _id: Kq8qvH9hfKzH4PPw
@@ -371,7 +372,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!lA2vZdJVj00xm5Ui.Kq8qvH9hfKzH4PPw'
+    _key: '!actors.items!PeRMkMAyLTtGMKvz.Kq8qvH9hfKzH4PPw'
   - type: pouvoir
     name: Empathie animale
     _id: bbgRALa7rxxR6Ltm
@@ -400,7 +401,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!lA2vZdJVj00xm5Ui.bbgRALa7rxxR6Ltm'
+    _key: '!actors.items!PeRMkMAyLTtGMKvz.bbgRALa7rxxR6Ltm'
 effects: []
 folder: null
 ownership:
@@ -414,9 +415,9 @@ _stats:
   coreVersion: '13.351'
   systemId: penombre
   systemVersion: '#{VERSION}#'
-  createdTime: 1765936372167
-  modifiedTime: 1765939795292
+  createdTime: 1765953224633
+  modifiedTime: 1765953224633
   lastModifiedBy: xu8p7UMcYrInjBEg
-_id: lA2vZdJVj00xm5Ui
-sort: 100000
-_key: '!actors!lA2vZdJVj00xm5Ui'
+_id: PeRMkMAyLTtGMKvz
+sort: 0
+_key: '!actors!PeRMkMAyLTtGMKvz'
