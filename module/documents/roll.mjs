@@ -214,16 +214,50 @@ export default class PenombreRoll extends Roll {
     // Apparence des dés si le module Dice So Nice est activé et que le système de dés Pénombre est chargé
     const desSpeciaux = await game.settings.get(SYSTEM.ID, "desSpeciaux")
     if (game.modules.get("dice-so-nice")?.active) {
-      if (desSpeciaux) {
-      // if (game.dice3d.getLoadedDiceSystems().has("penombre") && game.dice3d.getLoadedDiceSystems().has("penombre2")) {
+      console.log("desSpeciaux", desSpeciaux)
+      console.log("game.dice3d.getLoadedDiceSystems().has('penombre')", game.dice3d.getLoadedDiceSystems().has("penombre"))
+      if (game.dice3d.getLoadedDiceSystems().has("penombre") && desSpeciaux) {
         // Le premier dé est toujours le dé d'harmonique
-        roll.dice[0].options.appearance = { colorset: "penombre", system: "penombre" }
+        roll.dice[0].options.appearance =
+        {
+          colorset: "penombre",
+          category: "Pénombre",
+          foreground: '#000000',
+          background: "#b3944f",
+          texture: 'water',
+          edge: '#b3944f',
+          material: 'glass',
+          font: 'Cattedrale',
+          system: "penombre"
+        }
         // Les autres dés sont des dés d'atouts (d6) ou un dé merveilleux (d20)
         for (let i = 1; i < roll.dice.length; i++) {
           if (roll.dice[i].faces === MERVEILLEUX_FACES) {
-            roll.dice[i].options.appearance = { colorset: "penombre", system: "penombre" }
+            roll.dice[i].options.appearance =
+            {
+              colorset: "penombre",
+              category: "Pénombre",
+              foreground: '#000000',
+              background: "#b3944f",
+              texture: 'water',
+              edge: '#b3944f',
+              material: 'glass',
+              font: 'Cattedrale',
+              system: "penombre"
+            }
           } else {
-            roll.dice[i].options.appearance = { colorset: "penombre2", system: "penombre2" }
+            roll.dice[i].options.appearance =
+            {
+              colorset: "penombre2",
+              foreground: '#ffffff',
+              background: "#84b3e3",
+              texture: 'water',
+              edge: '#84b3e3',
+              material: 'glass',
+              font: 'Cattedrale',
+              system: "penombre"
+            }
+
           }
         }
       } else {
@@ -663,17 +697,49 @@ export default class PenombreRoll extends Roll {
 
           // Apparence des dés si le module Dice So Nice est activé et que le système de dés Pénombre est chargé
           const desSpeciaux = await game.settings.get(SYSTEM.ID, "desSpeciaux")
+          console.log("desSpeciaux", desSpeciaux)
           if (game.modules.get("dice-so-nice")?.active) {
-            if (desSpeciaux) {
-            // if (game.dice3d.getLoadedDiceSystems().has("penombre") && game.dice3d.getLoadedDiceSystems().has("penombre2")) {
+            // if (desSpeciaux) {
+            console.log("game.dice3d.getLoadedDiceSystems().has('penombre')", game.dice3d.getLoadedDiceSystems().has("penombre"))
+            if (game.dice3d.getLoadedDiceSystems().has("penombre") && desSpeciaux) {
               if (dieIndex === 0) {
                 // Le premier dé est toujours le dé d'harmonique
-                newDice.dice[0].options.appearance = { colorset: "penombre", system: "penombre" }
+                newDice.dice[0].options.appearance =
+                {
+                  colorset: "penombre",
+                  foreground: '#000000',
+                  background: "#b3944f",
+                  texture: 'water',
+                  edge: '#b3944f',
+                  material: 'glass',
+                  font: 'Cattedrale',
+                  system: "penombre"
+                }
               } else {
                 if (newDice.dice[0].faces === MERVEILLEUX_FACES) {
-                  newDice.dice[0].options.appearance = { colorset: "penombre", system: "penombre" }
+                  newDice.dice[0].options.appearance =
+                  {
+                    colorset: "penombre",
+                    foreground: '#000000',
+                    background: "#b3944f",
+                    texture: 'water',
+                    edge: '#b3944f',
+                    material: 'glass',
+                    font: 'Cattedrale',
+                    system: "penombre"
+                  }
                 } else {
-                  newDice.dice[0].options.appearance = { colorset: "penombre2", system: "penombre2" }
+                  newDice.dice[0].options.appearance =
+                  {
+                    colorset: "penombre2",
+                    foreground: '#ffffff',
+                    background: "#84b3e3",
+                    texture: 'water',
+                    edge: '#84b3e3',
+                    material: 'glass',
+                    font: 'Cattedrale',
+                    system: "penombre"
+                  }
                 }
               }
             } else {

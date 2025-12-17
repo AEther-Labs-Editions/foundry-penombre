@@ -215,29 +215,34 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
     * - "default" only register the colorset
     * - "preferred" apply the colorset if the player didn't already change his dice appearance for this world. 
     */
+
+    /*
     dice3d.addColorset({
       name: 'penombre',
       description: "Pénombre/Brun",
       category: "Pénombre",
-      foreground: '#b3944f',
+      foreground: '#000000',
       background: "#b3944f",
       texture: 'water',
       edge: '#b3944f',
       material: 'glass',
-    }, "default");
+      font: 'Cattedrale',
+    }, "preferred");
 
     dice3d.addColorset({
       name: 'penombre2',
       description: "Pénombre/Bleu",
       category: "Pénombre",
-      foreground: '#84b3e3',
+      foreground: '#ffffff',
       background: "#84b3e3",
       texture: 'water',
       edge: '#84b3e3',
       material: 'glass',
+      font: 'Cattedrale',
     }, "default");
 
-        dice3d.addSystem({ id: "penombre2", name: "Pénombre2" }, "default")
+ 
+    dice3d.addSystem({ id: "penombre2", name: "Pénombre2" }, "default")
     dice3d.addDicePreset({
       type: "d2",
       labels: [
@@ -343,13 +348,15 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
       ],
       system: "penombre2",
     })
+
+    */
  
     dice3d.addSystem({ id: "penombre", name: "Pénombre" }, "preferred")
     dice3d.addDicePreset({
       type: "d2",
       labels: [
-        "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 1 - pile
-        "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 2 - face
+        "1", // 1 - pile
+        "2", // 2 - face
       ],
       system: "penombre",
     })
@@ -357,8 +364,8 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
       type: "d4",
       labels: [
         "systems/penombre/assets/dice-so-nice/d-fumble.webp", // 1 - fumble
-        "systems/penombre/assets/dice-so-nice/d-0-succes.webp", // 2
-        "systems/penombre/assets/dice-so-nice/d-0-succes.webp", // 3
+        "0", // 2
+        "0", // 3
         "systems/penombre/assets/dice-so-nice/d-1-envolee.webp", // 4 - 1 succes - 1 envolee
       ],
       system: "penombre",
@@ -367,10 +374,10 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
       type: "d6",
       labels: [
         "systems/penombre/assets/dice-so-nice/d-fumble.webp", // 1 fumble
-        "systems/penombre/assets/dice-so-nice/d-0-succes.webp", // 2
-        "systems/penombre/assets/dice-so-nice/d-0-succes.webp", // 3
-        "systems/penombre/assets/dice-so-nice/d-1-succes.webp", // 4 - 1 succes
-        "systems/penombre/assets/dice-so-nice/d-1-succes.webp", // 5 - 1 succes
+        "0", // 2
+        "0", // 3
+        "1", // 4 - 1 succes
+        "1", // 5 - 1 succes
         "systems/penombre/assets/dice-so-nice/d-1-envolee.webp", // 6 - 1 succes - 1 envolee
       ],
       system: "penombre",
@@ -380,12 +387,12 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
       labels: [
         // Les images .webp commençant par "d8-" on une plus grande marge que celle commençant par "d-"
         "systems/penombre/assets/dice-so-nice/d8-fumble.webp", // 1 fumble
-        "systems/penombre/assets/dice-so-nice/d8-0-succes.webp", // 2
-        "systems/penombre/assets/dice-so-nice/d8-0-succes.webp", // 3
-        "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 4 - 1 succes
-        "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 5 - 1 succes
-        "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 6 - 1 succes
-        "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 7 - 1 succes
+        "0", // 2
+        "0", // 3
+        "1", // 4 - 1 succes
+        "1", // 5 - 1 succes
+        "1", // 6 - 1 succes
+        "1", // 7 - 1 succes
         "systems/penombre/assets/dice-so-nice/d8-2-envolee.webp", // 8 - 2 succes - 2 envolee
       ],
       system: "penombre",
@@ -394,14 +401,14 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
       type: "d10",
       labels: [
         "systems/penombre/assets/dice-so-nice/d8-fumble.webp", // 1 fumble
-        "systems/penombre/assets/dice-so-nice/d8-0-succes.webp", // 2
-        "systems/penombre/assets/dice-so-nice/d8-0-succes.webp", // 3
-        "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 4 - 1 succes
-        "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 5 - 1 succes
-        "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 6 - 1 succes
-        "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 7 - 1 succes
-        "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 8 - 2 succes
-        "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 9 - 2 succes
+        "0", // 2
+        "0", // 3
+        "1", // 4 - 1 succes
+        "1", // 5 - 1 succes
+        "1", // 6 - 1 succes
+        "1", // 7 - 1 succes
+        "2", // 8 - 2 succes
+        "2", // 9 - 2 succes
         "systems/penombre/assets/dice-so-nice/d8-2-envolee.webp", // 10 - 2 succes - 2 envolee
       ],
       system: "penombre",
@@ -410,16 +417,16 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
       type: "d12",
       labels: [
         "systems/penombre/assets/dice-so-nice/d8-fumble.webp", // 1 fumble
-        "systems/penombre/assets/dice-so-nice/d8-0-succes.webp", // 2
-        "systems/penombre/assets/dice-so-nice/d8-0-succes.webp", // 3
-        "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 4 - 1 succes
-        "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 5 - 1 succes
-        "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 6 - 1 succes
-        "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 7 - 1 succes
-        "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 8 - 2 succes
-        "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 9 - 2 succes
-        "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 10 - 2 succes
-        "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 11 - 2 succes
+        "0", // 2
+        "0", // 3
+        "1", // 4 - 1 succes
+        "1", // 5 - 1 succes
+        "1", // 6 - 1 succes
+        "1", // 7 - 1 succes
+        "2", // 8 - 2 succes
+        "2", // 9 - 2 succes
+        "2", // 10 - 2 succes
+        "2", // 11 - 2 succes
         "systems/penombre/assets/dice-so-nice/d8-3-envolee.webp", // 12 - 3 succes - 3 envolee
       ],
       system: "penombre",
@@ -428,24 +435,24 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
       type: "d20",
       labels: [
         "systems/penombre/assets/dice-so-nice/d8-fumble.webp", // 1 fumble
-        "systems/penombre/assets/dice-so-nice/d8-0-succes.webp", // 2
-        "systems/penombre/assets/dice-so-nice/d8-0-succes.webp", // 3
-        "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 4 - 1 succes
-        "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 5 - 1 succes
-        "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 6 - 1 succes
-        "systems/penombre/assets/dice-so-nice/d8-1-succes.webp", // 7 - 1 succes
-        "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 8 - 2 succes
-        "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 9 - 2 succes
-        "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 10 - 2 succes
-        "systems/penombre/assets/dice-so-nice/d8-2-succes.webp", // 11 - 2 succes
-        "systems/penombre/assets/dice-so-nice/d8-3-succes.webp", // 12 - 3 succes
-        "systems/penombre/assets/dice-so-nice/d8-3-succes.webp", // 13 - 3 succes
-        "systems/penombre/assets/dice-so-nice/d8-3-succes.webp", // 14 - 3 succes
-        "systems/penombre/assets/dice-so-nice/d8-3-succes.webp", // 15 - 3 succes
-        "systems/penombre/assets/dice-so-nice/d8-4-succes.webp", // 16 - 4 succes
-        "systems/penombre/assets/dice-so-nice/d8-4-succes.webp", // 17 - 4 succes
-        "systems/penombre/assets/dice-so-nice/d8-4-succes.webp", // 18 - 4 succes
-        "systems/penombre/assets/dice-so-nice/d8-4-succes.webp", // 19 - 4 succes
+        "0", // 2
+        "0", // 3
+        "1", // 4 - 1 succes
+        "1", // 5 - 1 succes
+        "1", // 6 - 1 succes
+        "1", // 7 - 1 succes
+        "2", // 8 - 2 succes
+        "2", // 9 - 2 succes
+        "2", // 10 - 2 succes
+        "2", // 11 - 2 succes
+        "3", // 12 - 3 succes
+        "3", // 13 - 3 succes
+        "3", // 14 - 3 succes
+        "3", // 15 - 3 succes
+        "4", // 16 - 4 succes
+        "4", // 17 - 4 succes
+        "4", // 18 - 4 succes
+        "4", // 19 - 4 succes
         "systems/penombre/assets/dice-so-nice/d8-merveille.webp", // 20 - 5 succes - merveille
       ],
       system: "penombre",
