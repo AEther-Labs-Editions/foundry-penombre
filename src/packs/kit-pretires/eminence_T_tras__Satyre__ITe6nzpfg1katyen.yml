@@ -1,5 +1,5 @@
 folder: null
-name: Tétras (Faune)
+name: Tétras (Satyre)
 type: eminence
 img: systems/penombre/assets/portraits/tetras.webp
 system:
@@ -22,7 +22,7 @@ system:
       valeur: d10
   conscience:
     valeur: 7
-    max: 7
+    max: 9
     jetons:
       - statut: actif
       - statut: actif
@@ -155,9 +155,253 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
 items:
+  - type: atout
+    name: C’est nouveau pour moi, ça !
+    _id: DWKTJlEwebkkveyT
+    img: systems/penombre/assets/icons/atout.webp
+    system:
+      description: ''
+      valeur: 3
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!ITe6nzpfg1katyen.DWKTJlEwebkkveyT'
+  - type: atout
+    name: Des cornes ? Une couronne, et autant de dagues !
+    _id: 6X2W22oziPWiUSJf
+    img: systems/penombre/assets/icons/atout.webp
+    system:
+      description: ''
+      valeur: 2
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!ITe6nzpfg1katyen.6X2W22oziPWiUSJf'
+  - type: atout
+    name: Des histoires abyssales, en veux-tu ? En voilà !
+    _id: iMGlw53nklZ3Gogu
+    img: systems/penombre/assets/icons/atout.webp
+    system:
+      description: ''
+      valeur: 2
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!ITe6nzpfg1katyen.iMGlw53nklZ3Gogu'
+  - type: atout
+    name: Un sang d’encre
+    _id: REzbCjigjGAMwLcE
+    img: systems/penombre/assets/icons/atout.webp
+    system:
+      description: ''
+      valeur: 2
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!ITe6nzpfg1katyen.REzbCjigjGAMwLcE'
+  - type: atout
+    name: Om me dit trouble
+    _id: MMMte3eIV87dhPbx
+    img: systems/penombre/assets/icons/atout.webp
+    system:
+      description: ''
+      valeur: 1
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!ITe6nzpfg1katyen.MMMte3eIV87dhPbx'
+  - type: maitrise
+    name: Geste
+    _id: tkbqDZHRR6IAlkGy
+    img: systems/penombre/assets/icons/maitrise.webp
+    system:
+      slug: ''
+      description: >-
+        <h1>Tétras, l’harmoniste de la geste</h1><p><strong>Pour préparer son
+        effet magique, Tétras
+        doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>utiliser sa
+        voix</strong> pour crier, déclamer, réciter, murmurer, ou marmonner un
+        texte poétique.</p></li></ul><p><strong>Ce faisant,
+        il…</strong></p><h6>Action magique</h6><ul><li><p><strong>altère le
+        cours du temps.</strong> Il peut, comme avec les flots bouillonnants
+        d’une rivière, lire les marques du passé sur ses berges, deviner les
+        remous à venir, accélérer ou ralentir son écoulement, faire ricocher un
+        objet à sa surface, etc.</p></li></ul><p><strong>Avec un effet magique
+        de niveau ? …</strong></p><p><strong>il parvient par exemple
+        à…</strong></p><ol><li><p><strong>identifier</strong> un effet magique
+        d’art ancien (accord, décorum, geste) ; restaurer ou vieillir un objet ;
+        provoquer une érosion accélérée ; exacerber la peur de la mort en la
+        montrant ; etc.</p></li><li><p><strong>voir le passé ou l’avenir proche
+        ;</strong> ralentir ou accélérer un mouvement ; faire fluctuer le temps
+        autour d’un personnage ; comprendre et parler un dialecte inconnu ;
+        soulager la fatigue en faisant oublier au corps le temps qui passe ;
+        etc.</p></li><li><p><strong>faire apparaître</strong> une vision du
+        passé proche, ou de l’avenir proche ; voir le passé lointain d’un lieu
+        ou d’un objet ; obtenir une information historique précise ; parler avec
+        un mort ; formuler une prophétie ; etc.</p></li><li><p><strong>figer
+        dans le temps ;</strong> rajeunir ou faire vieillir le corps d’un
+        personnage ; entrevoir une destinée ; nécroser et scléroser la chair ;
+        éviter la mort ; invoquer le souvenir d’un personnage du passé et
+        contrôler ses actions ; etc.</p></li><li><p><strong>dissimuler</strong>
+        dans le temps et ressurgir au même endroit, plus tard ; se déplacer
+        instantanément vers un espace lointain par un repli du temps ;
+        réincarner le passé comme si c’était le présent ; avancer ou revenir de
+        quelques instants dans le temps ; modifier le temps pour accélérer une
+        guérison ; etc.</p></li></ol><p><strong>Mais attention, il risque
+        également de…</strong></p><h6>Incident
+        magique</h6><ul><li><p><strong>sombrer dans la mélancolie.</strong> À la
+        moindre hésitation, Tétras se retrouve emporté par les flots du temps,
+        ballotté par les voix muettes de l’Harmonde et écorché par les écueils
+        de son destin incertain. il fait des rêves persistants ; il est hanté
+        par une présence ou des souvenirs étrangers ; il est pris de doute,
+        voire plonge dans une profonde dépression ; etc.</p></li></ul>
+      harmonique: ame
+      niveau: 2
+      prerequis: se lancer dans une tirade
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!ITe6nzpfg1katyen.tkbqDZHRR6IAlkGy'
+  - type: maitrise
+    name: Conjuration
+    _id: 5N4i9Yfb27Cl6Qry
+    img: systems/penombre/assets/icons/maitrise.webp
+    system:
+      slug: ''
+      description: >-
+        <h1>Tétras le conjurateur</h1><p><strong>Pour préparer son effet
+        magique, Tétras
+        doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>tracer les
+        contours d’une ombre</strong> à l’encre de son
+        sang.</p></li></ul><p><strong>Cette action le fait entrer en résonance
+        avec…</strong></p><h6>Harmonique : nuit</h6><p><strong>Ce faisant,
+        il…</strong></p><h6>Action magique</h6><ul><li><p><strong>pactise avec
+        le démon né de cette ombre.</strong> Le démon exécute la mission qui lui
+        est confiée, et le conjurateur le rémunère. La connivence qui les unit
+        doit être enregistrée auprès d’un advocatus diaboli et coûte d’autant
+        plus cher que l’effet souhaité est élevé.</p></li></ul><p><strong>Avec
+        un effet magique de niveau ? …</strong></p><p><strong>il conjure un
+        démon capable par exemple
+        de…</strong></p><ol><li><p><strong>identifier</strong> un effet magique
+        d’art noir (conjuration, omnium, prisme) ; chercher un objet ;
+        transporter une charge ou un message, y compris en volant ; faire une
+        bêtise, ou divertir ; faire peur ; mordre, griffer, piétiner ; servir de
+        réveil chaque matin ; donner une propriété nouvelle à un objet ;
+        etc.</p></li><li><p><strong>mener</strong> une enquête sommaire ; servir
+        d’escorte ou de garde ; se faire discret, se camoufler et épier ;
+        utiliser une arme ou un objet sophistiqué ;
+        etc.</p></li><li><p><strong>filer</strong> un suspect ; comprendre des
+        indices ; servir de partenaire lors d’une réception mondaine ; pratiquer
+        un art ; partager des connaissances sur un sujet précis ; se battre
+        comme un soldat ; etc.le et gagner en assurance ; prendre le contrôle
+        mental d’une bête sauvage ; etc.</p></li><li><p><strong>mener</strong>
+        une troupe ; échafauder un complot ; séduire ; pratiquer une maîtrise
+        magique, sauf la conjuration ; disposer d’un savoir unique ; usurper une
+        identité ; se battre comme un duelliste renommé ;
+        etc.</p></li><li><p><strong>exceller</strong> dans tous les domaines ;
+        conjurer de nouveaux démons ; etc.</p></li></ol><p><strong>Mais
+        attention, il risque également de…</strong></p><h6>Incident
+        magique</h6><ul><li><p><strong>laisser la porte ouverte.</strong>
+        L’ombre laisse s’échapper bien plus que le démon appelé. Cela peut
+        valoir au conjurateur une sanction de la part du Clergé obscur. Qui a
+        fui ?</p><p><strong>NOTE :</strong> Dans le tableau de difficultés des
+        effets magiques (voir p. 26), les paramètres « cible » et « distance »
+        font référence à la cible désignée au démon pour sa mission. Par
+        exemple, le démon doit agir sur un individu, un groupe, ou une foule, ou
+        infiltrer un bâtiment qui peut être proche, ou lointain.</p></li></ul>
+      harmonique: nuit
+      niveau: 1
+      prerequis: tracer le contour d’une ombre à l’encre de son sang
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!ITe6nzpfg1katyen.5N4i9Yfb27Cl6Qry'
   - name: Spectacle vivant
     type: pouvoir
-    _id: nX4gy5Dx1dHloNYL
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
@@ -186,253 +430,11 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!LJW0knwTj0BrAs6f.nX4gy5Dx1dHloNYL'
-  - type: atout
-    name: C’est nouveau pour moi, ça !
-    _id: DWKTJlEwebkkveyT
-    img: systems/penombre/assets/icons/atout.webp
-    system:
-      description: ''
-      valeur: 3
-    effects: []
-    folder: null
-    sort: 0
-    ownership:
-      default: 0
-      xu8p7UMcYrInjBEg: 3
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.351'
-      systemId: penombre
-      systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
-    _key: '!actors.items!LJW0knwTj0BrAs6f.DWKTJlEwebkkveyT'
-  - type: atout
-    name: Des cornes ? Une couronne, et autant de dagues !
-    _id: 6X2W22oziPWiUSJf
-    img: systems/penombre/assets/icons/atout.webp
-    system:
-      description: ''
-      valeur: 2
-    effects: []
-    folder: null
-    sort: 0
-    ownership:
-      default: 0
-      xu8p7UMcYrInjBEg: 3
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.351'
-      systemId: penombre
-      systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
-    _key: '!actors.items!LJW0knwTj0BrAs6f.6X2W22oziPWiUSJf'
-  - type: atout
-    name: Des histoires abyssales, en veux-tu ? En voilà !
-    _id: iMGlw53nklZ3Gogu
-    img: systems/penombre/assets/icons/atout.webp
-    system:
-      description: ''
-      valeur: 2
-    effects: []
-    folder: null
-    sort: 0
-    ownership:
-      default: 0
-      xu8p7UMcYrInjBEg: 3
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.351'
-      systemId: penombre
-      systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
-    _key: '!actors.items!LJW0knwTj0BrAs6f.iMGlw53nklZ3Gogu'
-  - type: atout
-    name: Un sang d’encre
-    _id: REzbCjigjGAMwLcE
-    img: systems/penombre/assets/icons/atout.webp
-    system:
-      description: ''
-      valeur: 2
-    effects: []
-    folder: null
-    sort: 0
-    ownership:
-      default: 0
-      xu8p7UMcYrInjBEg: 3
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.351'
-      systemId: penombre
-      systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
-    _key: '!actors.items!LJW0knwTj0BrAs6f.REzbCjigjGAMwLcE'
-  - type: atout
-    name: Om me dit trouble
-    _id: MMMte3eIV87dhPbx
-    img: systems/penombre/assets/icons/atout.webp
-    system:
-      description: ''
-      valeur: 1
-    effects: []
-    folder: null
-    sort: 0
-    ownership:
-      default: 0
-      xu8p7UMcYrInjBEg: 3
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.351'
-      systemId: penombre
-      systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
-    _key: '!actors.items!LJW0knwTj0BrAs6f.MMMte3eIV87dhPbx'
-  - type: maitrise
-    name: Geste
-    _id: tkbqDZHRR6IAlkGy
-    img: systems/penombre/assets/icons/maitrise.webp
-    system:
-      slug: ''
-      description: >-
-        <p><strong>Pour préparer son effet magique, Tétras
-        doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>utiliser sa
-        voix</strong> pour crier, déclamer, réciter, murmurer, ou marmonner un
-        texte poétique.</p></li></ul><p><strong>Ce faisant,
-        elle…</strong></p><h6>Action magique</h6><ul><li><p><strong>altère le
-        cours du temps.</strong> Elle peut, comme avec les flots bouillonnants
-        d’une rivière, lire les marques du passé sur ses berges, deviner les
-        remous à venir, accélérer ou ralentir son écoulement, faire ricocher un
-        objet à sa surface, etc.</p></li></ul><p><strong>Avec un effet magique
-        de niveau ? …</strong></p><p><strong>elle parvient par exemple
-        à…</strong></p><ol><li><p><strong>identifier</strong> un effet magique
-        d’art ancien (accord, décorum, geste) ; restaurer ou vieillir un objet ;
-        provoquer une érosion accélérée ; exacerber la peur de la mort en la
-        montrant ; etc.</p></li><li><p><strong>voir le passé ou l’avenir proche
-        ;</strong> ralentir ou accélérer un mouvement ; faire fluctuer le temps
-        autour d’un personnage ; comprendre et parler un dialecte inconnu ;
-        soulager la fatigue en faisant oublier au corps le temps qui passe ;
-        etc.</p></li><li><p><strong>faire apparaître</strong> une vision du
-        passé proche, ou de l’avenir proche ; voir le passé lointain d’un lieu
-        ou d’un objet ; obtenir une information historique précise ; parler avec
-        un mort ; formuler une prophétie ; etc.</p></li><li><p><strong>figer
-        dans le temps ;</strong> rajeunir ou faire vieillir le corps d’un
-        personnage ; entrevoir une destinée ; nécroser et scléroser la chair ;
-        éviter la mort ; invoquer le souvenir d’un personnage du passé et
-        contrôler ses actions ; etc.</p></li><li><p><strong>dissimuler</strong>
-        dans le temps et ressurgir au même endroit, plus tard ; se déplacer
-        instantanément vers un espace lointain par un repli du temps ;
-        réincarner le passé comme si c’était le présent ; avancer ou revenir de
-        quelques instants dans le temps ; modifier le temps pour accélérer une
-        guérison ; etc.</p></li></ol><p><strong>Mais attention, elle risque
-        également de…</strong></p><h6>Incident
-        magique</h6><ul><li><p><strong>sombrer dans la mélancolie.</strong> À la
-        moindre hésitation, Tétras se retrouve emportée par les flots du temps,
-        ballottée par les voix muettes de l’Harmonde et écorchée par les écueils
-        de son destin incertain. Elle fait des rêves persistants ; elle est
-        hanté par une présence ou des souvenirs étrangers ; elle est prise de
-        doute, voire plonge dans une profonde dépression ; etc.</p></li></ul>
-      harmonique: ame
-      niveau: 2
-      prerequis: se lancer dans une tirade
-    effects: []
-    folder: null
-    sort: 0
-    ownership:
-      default: 0
-      xu8p7UMcYrInjBEg: 3
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.351'
-      systemId: penombre
-      systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
-    _key: '!actors.items!LJW0knwTj0BrAs6f.tkbqDZHRR6IAlkGy'
-  - type: maitrise
-    name: Conjuration
-    _id: 5N4i9Yfb27Cl6Qry
-    img: systems/penombre/assets/icons/maitrise.webp
-    system:
-      slug: ''
-      description: >-
-        <p><strong>Pour préparer son effet magique, Tétras
-        doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>tracer les
-        contours d’une ombre</strong> à l’encre de son
-        sang.</p></li></ul><p><strong>Cette action la fait entrer en résonance
-        avec…</strong></p><h6>Harmonique : nuit</h6><p><strong>Ce faisant,
-        elle…</strong></p><h6>Action magique</h6><ul><li><p><strong>pactise avec
-        le démon né de cette ombre.</strong> Le démon exécute la mission qui lui
-        est confiée, et le conjurateur le rémunère. La connivence qui les unit
-        doit être enregistrée auprès d’un advocatus diaboli et coûte d’autant
-        plus cher que l’effet souhaité est élevé.</p></li></ul><p><strong>Avec
-        un effet magique de niveau ? …</strong></p><p><strong>elle conjure un
-        démon capable par exemple
-        de…</strong></p><ol><li><p><strong>identifier</strong> un effet magique
-        d’art noir (conjuration, omnium, prisme) ; chercher un objet ;
-        transporter une charge ou un message, y compris en volant ; faire une
-        bêtise, ou divertir ; faire peur ; mordre, griffer, piétiner ; servir de
-        réveil chaque matin ; donner une propriété nouvelle à un objet ;
-        etc.</p></li><li><p><strong>mener</strong> une enquête sommaire ; servir
-        d’escorte ou de garde ; se faire discret, se camoufler et épier ;
-        utiliser une arme ou un objet sophistiqué ;
-        etc.</p></li><li><p><strong>filer</strong> un suspect ; comprendre des
-        indices ; servir de partenaire lors d’une réception mondaine ; pratiquer
-        un art ; partager des connaissances sur un sujet précis ; se battre
-        comme un soldat ; etc.le et gagner en assurance ; prendre le contrôle
-        mental d’une bête sauvage ; etc.</p></li><li><p><strong>mener</strong>
-        une troupe ; échafauder un complot ; séduire ; pratiquer une maîtrise
-        magique, sauf la conjuration ; disposer d’un savoir unique ; usurper une
-        identité ; se battre comme un duelliste renommé ;
-        etc.</p></li><li><p><strong>exceller</strong> dans tous les domaines ;
-        conjurer de nouveaux démons ; etc.</p></li></ol><p><strong>Mais
-        attention, elle risque également de…</strong></p><h6>Incident
-        magique</h6><ul><li><p><strong>laisser la porte ouverte.</strong>
-        L’ombre laisse s’échapper bien plus que le démon appelé. Cela peut
-        valoir au conjurateur une sanction de la part du Clergé obscur. Qui a
-        fui ?</p><p><strong>NOTE :</strong> Dans le tableau de difficultés des
-        effets magiques (voir p. 26), les paramètres « cible » et « distance »
-        font référence à la cible désignée au démon pour sa mission. Par
-        exemple, le démon doit agir sur un individu, un groupe, ou une foule, ou
-        infiltrer un bâtiment qui peut être proche, ou lointain.</p></li></ul>
-      harmonique: nuit
-      niveau: 1
-      prerequis: tracer le contour d’une ombre à l’encre de son sang
-    effects: []
-    folder: null
-    sort: 0
-    ownership:
-      default: 0
-      xu8p7UMcYrInjBEg: 3
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.351'
-      systemId: penombre
-      systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
-    _key: '!actors.items!LJW0knwTj0BrAs6f.5N4i9Yfb27Cl6Qry'
+    _id: W6JqZUg9BRq4NW48
+    _key: '!actors.items!ITe6nzpfg1katyen.W6JqZUg9BRq4NW48'
   - type: pouvoir
     name: Bouc émissaire
-    _id: YNYJMr905wDMqgXN
+    _id: QNEctBMrinQ7QD3o
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
@@ -445,8 +447,8 @@ items:
         adversaires ne peut cibler que Tétras.</p>
       type: naissance
     effects: []
-    folder: null
-    sort: 0
+    folder: IxCLMJlUPYUhtQ3N
+    sort: 100000
     ownership:
       default: 0
       xu8p7UMcYrInjBEg: 3
@@ -459,10 +461,10 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!LJW0knwTj0BrAs6f.YNYJMr905wDMqgXN'
+    _key: '!actors.items!ITe6nzpfg1katyen.QNEctBMrinQ7QD3o'
   - type: pouvoir
     name: Chevreau des abysses
-    _id: 9sxZj7doSD7YX3Cl
+    _id: fNYa63J0BKAPD1YI
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
@@ -473,8 +475,8 @@ items:
         automatique.</p>
       type: naissance
     effects: []
-    folder: null
-    sort: 0
+    folder: IxCLMJlUPYUhtQ3N
+    sort: 200000
     ownership:
       default: 0
       xu8p7UMcYrInjBEg: 3
@@ -487,7 +489,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!LJW0knwTj0BrAs6f.9sxZj7doSD7YX3Cl'
+    _key: '!actors.items!ITe6nzpfg1katyen.fNYa63J0BKAPD1YI'
 effects: []
 ownership:
   default: 0
@@ -500,9 +502,9 @@ _stats:
   coreVersion: '13.351'
   systemId: penombre
   systemVersion: '#{VERSION}#'
-  createdTime: 1765953014319
-  modifiedTime: 1765953014319
+  createdTime: 1765956893726
+  modifiedTime: 1765956893765
   lastModifiedBy: xu8p7UMcYrInjBEg
-_id: LJW0knwTj0BrAs6f
-sort: 0
-_key: '!actors!LJW0knwTj0BrAs6f'
+_id: ITe6nzpfg1katyen
+sort: 200000
+_key: '!actors!ITe6nzpfg1katyen'
