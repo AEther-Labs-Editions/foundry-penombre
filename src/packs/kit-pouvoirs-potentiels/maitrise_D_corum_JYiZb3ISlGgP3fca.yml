@@ -1,0 +1,60 @@
+type: maitrise
+name: Décorum
+_id: JYiZb3ISlGgP3fca
+img: systems/penombre/assets/icons/maitrise.webp
+system:
+  description: >-
+    <p><strong>Pour préparer son effet magique, un harmoniste du décorum
+    doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>réaliser une
+    esquisse</strong>, un croquis, un tableau, voire une fresque
+    picturale.</p></li></ul><p><strong>Cette action le fait entrer en résonance
+    avec…</strong></p><h6>Harmonique : âme</h6><p><strong>Ce faisant,
+    il…</strong></p><h6>Action magique</h6><ul><li><p><strong>redessine la
+    réalité</strong> comme s’il corrigeait l’œuvre maladroite d’un artiste
+    débutant. L’Harmonde inanimé se recompose sous son
+    trait.</p></li></ul><p><strong>Avec un effet magique de niveau ?
+    …</strong></p><p><strong>il parvient par exemple
+    à…</strong></p><ol><li><p><strong>identifier</strong> un effet magique d’art
+    ancien (accord, décorum, geste) ; ajouter ou gommer un détail sur un objet ;
+    embellir ou enlaidir sans dénaturer ;
+    etc.</p></li><li><p><strong>remplacer</strong> une couleur par une autre ;
+    rendre un objet méconnaissable ; créer un mirage ou une illusion réaliste,
+    mais immatérielle ; modifier une perspective pour agrandir, réduire,
+    approcher ou éloigner ; etc.</p></li><li><p><strong>créer ou
+    effacer</strong> temporairement un élément de décor ; déplacer
+    définitivement un élément existant ; rendre translucide ; détruire, abîmer
+    ou réparer un élément de décor ; créer un point faible ;
+    etc.</p></li><li><p><strong>créer ou effacer</strong> un élément de décor de
+    manière permanente ; rendre un objet invisible ;
+    etc.</p></li><li><p><strong>créer</strong> un tableau-monde connecté à
+    l’Harmonde ; ouvrir un portail entre deux lieux distants ;
+    etc.</p></li></ol><p><strong>Mais attention, il risque également
+    de…</strong></p><h6>Incident magique</h6><ul><li><p><strong>voir son œuvre
+    lui échapper.</strong> En prenant l’Harmonde pour toile, l’artiste doit
+    s’attendre à le voir réagir. L’artiste se retrouve prisonnier d’un méandre ;
+    plusieurs réalités se superposent autour de lui, ou pire, en lui ; son
+    environnement se transforme d’une manière imprévisible ; sa maladresse
+    suscite la colère des témoins alentour, ou de l’Harmonde lui-même qui
+    déchaîne les éléments contre lui ; etc.</p></li></ul>
+  harmonique: ame
+  niveau: 1
+  prerequis: réaliser une esquisse
+  slug: ''
+effects: []
+folder: t49tGfu5DfWzhLvI
+sort: 250000
+flags: {}
+_stats:
+  compendiumSource: Actor.YXDxBPyNZyRxUrcf.Item.h8hFhHnLAAMMkC3Q
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1765943368698
+  modifiedTime: 1765943368698
+  lastModifiedBy: xu8p7UMcYrInjBEg
+ownership:
+  default: 0
+  xu8p7UMcYrInjBEg: 3
+_key: '!items!JYiZb3ISlGgP3fca'

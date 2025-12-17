@@ -1,0 +1,66 @@
+type: maitrise
+name: Jornisme
+img: systems/penombre/assets/icons/maitrise.webp
+system:
+  slug: ''
+  description: >-
+    <p><strong>Pour préparer son effet magique, un jorniste
+    doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>guider mentalement
+    son danseur asservi</strong> pour qu’il accomplisse une danse, ne s’aidant
+    des mains que pour l’encourager.</p></li></ul><p><strong>Cette action le
+    fait entrer en résonance avec…</strong></p><h6>Harmonique :
+    étincelle</h6><p><strong>Ce faisant, il…</strong></p><h6>Action
+    magique</h6><ul><li><p>fait produire à son danseur des étincelles blanches,
+    nacrées et ambrées adaptées à une magie bienveillante et
+    protectrice.</p></li></ul><p><strong>Avec un effet magique de niveau ?
+    …</strong></p><p><strong>il parvient par exemple
+    à…</strong></p><ol><li><p><strong>identifier</strong> un effet magique
+    cryptogrammique (éclipsisme, jornisme, obscurantisme) ; appeler, amadouer un
+    animal domestique ; produire de la lumière ; créer une ambiance chaleureuse
+    ; résister à la chaleur et au froid ; apporter du soutien à une action ;
+    apaiser, réconforter, encourager ;
+    etc.</p></li><li><p><strong>produire</strong> ou purifier de l’eau ; créer
+    une barrière de lumière étincelante ; faire réaliser une action physique à
+    son danseur, comme s’il était affranchi ; renforcer le corps ; guérir dans
+    un halo d’étincelles lumineuses ;
+    etc.</p></li><li><p><strong>produire</strong> ou purifier de la nourriture ;
+    discuter avec un animal ; rendre un objet insaisissable, ou impossible à
+    voler ; paraître parfaitement sympathique ; discerner la vérité ; voir
+    au-delà des apparences ; etc.</p></li><li><p><strong>ressentir</strong> la
+    clé harmonique d’un personnage ; créer une illusion idyllique ; améliorer
+    les récoltes ; faire pousser une plante, ou discuter avec elle ; empêcher un
+    démon de s’approcher, ou faire s’évaporer l’onyx ; commander aux animaux ;
+    régénérer un membre ; manipuler par télékinésie ;
+    etc.</p></li><li><p><strong>frapper</strong> d’un trait de lumière
+    paralysant ; imposer un silence total ; ramener à la vie un personnage qui
+    vient de mourir ; rendre fertile, ou faire tomber enceinte ;
+    etc.</p></li></ol><p><strong>Mais attention, il risque également
+    de…</strong></p><h6>Incident magique</h6><ul><li><p><strong>provoquer les
+    prédateurs – les danseurs en ont plein.</strong> Un chat apparaît et tente
+    de dévorer le danseur du jorniste ; un piège se referme sur le danseur du
+    jorniste, et un petit chasseur approche pour s’en emparer ; des corbeaux
+    veulent enlever le danseur du jorniste ; le mage sent son danseur taraudé
+    entre le lien empathique qu’ils partagent et un étrange appel lointain ;
+    etc.</p></li></ul>
+  harmonique: etincelle
+  niveau: 1
+  prerequis: guider mentalement son danseur asservi
+effects: []
+folder: t49tGfu5DfWzhLvI
+ownership:
+  default: 0
+  xu8p7UMcYrInjBEg: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1765946986604
+  modifiedTime: 1765946986612
+  lastModifiedBy: xu8p7UMcYrInjBEg
+_id: ePUFSz00Gg8iWPt0
+sort: 256250
+_key: '!items!ePUFSz00Gg8iWPt0'

@@ -1,0 +1,75 @@
+type: maitrise
+name: Élémentalisme
+img: systems/penombre/assets/icons/maitrise.webp
+system:
+  description: >-
+    <p><strong>Pour préparer son effet magique, un élémentaliste
+    doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>faire naître des
+    éléments présents dans le décor, ou libérer de son contenant, une créature
+    élémentaire</strong> primitive nommée élémentä – un homoncule fortement
+    teinté par son matériau d’origine.</p></li></ul><p><strong>Cette action le
+    fait entrer en résonance avec…</strong></p><h6>Harmonique :
+    nature</h6><p><strong>Ce faisant, il…</strong></p><h6>Action
+    magique</h6><ul><li><p><strong>utilise l’élémentä</strong> en l’effritant,
+    le dispersant, le façonnant ou le consommant comme une drogue afin d’en
+    tirer des informations, archiver des connaissances cryptées, s’approprier
+    son énergie élémentaire ou la projeter
+    magiquement.</p></li></ul><p><strong>Avec un effet magique de niveau ?
+    …</strong></p><p><strong>il parvient par exemple
+    à…</strong></p><ol><li><p><strong>identifier</strong> un effet magique de
+    magie naturelle (brigue, élémentalisme, magie des saisons) ; ressentir
+    l’émotion de la matière ; confier à la matière un mot à répéter ; faire se
+    déplacer une pierre ; améliorer n’importe quelle capacité physique ou
+    mentale ; etc.</p></li><li><p><strong>obtenir des informations
+    grossières</strong> mémorisées par la matière comme avec un jeune enfant ;
+    confier à la matière un long message à répéter ; transmuter une matière en
+    une autre, sans en changer l’état liquide, solide, ou gazeux (affûter ou
+    émousser une lame, souder deux métaux, rendre l’air irrespirable, changer
+    l’eau en alcool …) ; contrôler les mouvements d’un feu, de l’eau, du vent,
+    ou un soubresaut tellurique ; devenir brûlant, ou glacé ;
+    etc.</p></li><li><p><strong>obtenir des informations précises</strong>
+    mémorisées par la matière ; envoyer un messager élémentaire parler à un
+    personnage ; se rendre insensible à un élément, ou utiliser un élément comme
+    protection ; remodeler et façonner la matière, modifier sa forme, son état
+    et sa densité (liquéfier un rocher, s’armer d’une lame de feu, animer une
+    statue, etc.) ; etc.</p></li><li><p><strong>se dissimuler</strong> dans un
+    élément, et voyager au travers ; accomplir des prouesses physiques
+    impossibles ; augmenter ou diminuer la quantité d’un matériau ; transmuter
+    temporairement son corps en feu, en eau ;
+    etc.</p></li><li><p><strong>coder</strong> un livre entier dans une flamme
+    ou une goutte d’eau ; transmuter entièrement un élément en un autre (l’eau
+    en feu…) ; changer définitivement un mortel en golem élémentaire ;
+    etc.</p></li></ol><p><strong>Mais attention, il risque également
+    de…</strong></p><h6>Incident magique</h6><ul><li><p><strong>se brûler les
+    ailes.</strong> il note une complication de niveau 3 correspondant à un
+    épuisement physique ou mental, une grave brûlure, un étouffement, une
+    déshydratation sévère, etc.</p></li></ul><p>OU</p><h6>Incident
+    magique</h6><ul><li><p><strong>se laisser submerger.</strong> L’élémentä se
+    retourne contre lui, à moins que des scories s’incarnent dans un esprit
+    frappeur. La créature est un opposant de difficulté égale au nombre de
+    succès obtenus sur l’action de maîtrise magique.</p></li></ul>
+  harmonique: nature
+  niveau: 1
+  prerequis: >-
+    faire naître des éléments présents dans le décor, ou libérer de son
+    contenant, une créature élémentaire
+  slug: ''
+effects: []
+folder: t49tGfu5DfWzhLvI
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1765946207898
+  modifiedTime: 1765946207909
+  lastModifiedBy: xu8p7UMcYrInjBEg
+ownership:
+  default: 0
+  xu8p7UMcYrInjBEg: 3
+_id: owWAW9H1hWTlTL5r
+sort: 275000
+_key: '!items!owWAW9H1hWTlTL5r'

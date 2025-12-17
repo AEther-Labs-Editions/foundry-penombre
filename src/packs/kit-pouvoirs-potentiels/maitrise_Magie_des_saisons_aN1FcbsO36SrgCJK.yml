@@ -1,0 +1,70 @@
+type: maitrise
+name: Magie des saisons
+img: systems/penombre/assets/icons/maitrise.webp
+system:
+  slug: ''
+  description: >-
+    <p><strong>Pour préparer son effet magique, un mage des saisons
+    doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>« semer » du pollen
+    sacré</strong> dans un geste rituel.</p></li></ul><p><strong>Cette action le
+    fait entrer en résonance avec…</strong></p><h6>Harmonique :
+    nature</h6><p><strong>Ce faisant, il…</strong></p><h6>Action
+    magique</h6><ul><li><p><strong>invoque la puissance des saisons</strong>,
+    éveille les forces occultes de la nature, modifie le temps qu’il fait,
+    etc.</p></li></ul><p><strong>il parvient par exemple
+    à…</strong></p><ol><li><p><strong>identifier</strong> un effet magique de
+    magie naturelle (brigue, élémentalisme, magie des saisons) ; transmettre un
+    message porté par une feuille dans le vent ; ressentir l’émotion d’une
+    plante ; ralentir ou accélérer la croissance, la maturation ou le
+    flétrissement d’un végétal ; gâter ou conserver une denrée ; créer une
+    plaque de givre, ou un parterre de fleurs ;
+    etc.</p></li><li><p><strong>parler</strong> à une plante comme avec un jeune
+    enfant ; faire pousser un champignon mouchard, parasite, ou de sauf-conduit
+    ; appeler le froid, la chaleur, un soleil aveuglant, les nuages ou la pluie
+    ; provoquer un mouvement dans un végétal existant pour entraver, agripper ou
+    fouetter de ses branches ; etc.</p></li><li><p><strong>entretenir</strong>
+    une conversation soutenue avec une plante ; engourdir ; soutenir et
+    maintenir en vie ; provoquer une allergie ; invoquer une nuée de vermines ;
+    faire pousser un végétal en un clin d’œil ; provoquer le déplacement d’un
+    végétal, comme si c’était un animal ; rendre invisible derrière un voile de
+    pollen ; etc.</p></li><li><p><strong>provoquer</strong> une hibernation ;
+    geler, ou dégeler ; déclencher une crise d’asthme sévère ; créer un
+    labyrinthe luxuriant, un abri, un pont, ou une prison végétale ;
+    etc.</p></li><li><p><strong>provoquer </strong>une tempête brutale ; faire
+    bourgeonner ou pourrir la chair ; égayer ou engourdir l’esprit ; rendre
+    immédiatement fertile, ou stérile ; ressusciter un végétal mort ; créer
+    temporairement un lien végétal semblable à celui des lutins ; entrer en
+    communication avec une dame des saisons pour lui poser une question, ou
+    faire advenir sa saison en avance ; etc.</p></li></ol><p><strong>Mais
+    attention, il risque également de…</strong></p><h6>Incident
+    magique</h6><ul><li><p><strong>contrarier la nature.</strong> Ces mages de
+    la nature s’en croient les maîtres ou les champions. Ils ne restent que de
+    simples apprentis sorciers, en vérité, et la nature échappe parfois à leur
+    emprise.</p><p>Le mage éternue et renverse ses pollens ; une plante proche
+    fane, ou devient parasitée ; un champ voisin sèche sur pied, ou subit les
+    attaques d’insectes ravageurs ; un orage éclate ; il se met à grêler ; un
+    bosquet s’anime et devient agressif ; les saisons sont perturbées ; une
+    licorne, un pégase, ou un dragon apparaît ; une nouvelle espèce naît ;
+    etc.</p></li></ul>
+  harmonique: nature
+  niveau: 1
+  prerequis: « semer » du pollen sacré
+effects: []
+folder: t49tGfu5DfWzhLvI
+ownership:
+  default: 0
+  xu8p7UMcYrInjBEg: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1765949750850
+  modifiedTime: 1765949750850
+  lastModifiedBy: xu8p7UMcYrInjBEg
+_id: aN1FcbsO36SrgCJK
+sort: 0
+_key: '!items!aN1FcbsO36SrgCJK'
