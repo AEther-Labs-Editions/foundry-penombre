@@ -264,12 +264,12 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
     dice3d.addDicePreset({
       type: "d6",
       labels: [
-        "0", // 1 fumble
+        "0", // 1 pas de fumble
         "0", // 2
         "0", // 3
         "1", // 4 - 1 succes
         "1", // 5 - 1 succes
-        "1", // 6 - 1 succes - 1 envolee
+        "1", // 6 - 1 succes - pas d'envolee
       ],
       system: "penombre2",
     })
@@ -277,21 +277,21 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
       type: "d8",
       labels: [
         // Les images .webp commençant par "d8-" on une plus grande marge que celle commençant par "d-"
-        "systems/penombre/assets/dice-so-nice-2/d8-fumble.webp", // 1 fumble
+        "systems/penombre/assets/dice-so-nice/d8-fumble.webp", // 1 fumble
         "0", // 2
         "0", // 3
         "1", // 4 - 1 succes
         "1", // 5 - 1 succes
         "1", // 6 - 1 succes
         "1", // 7 - 1 succes
-        "systems/penombre/assets/dice-so-nice-/d8-2-envolee.webp", // 8 - 2 succes - 2 envolee
+        "systems/penombre/assets/dice-so-nice/d8-2-envolee.webp", // 8 - 2 succes - 2 envolee
       ],
       system: "penombre2",
     })
     dice3d.addDicePreset({
       type: "d10",
       labels: [
-        "systems/penombre/assets/dice-so-nice-2/d8-fumble.webp", // 1 fumble
+        "systems/penombre/assets/dice-so-nice/d8-fumble.webp", // 1 fumble
         "0", // 2
         "0", // 3
         "1", // 4 - 1 succes
@@ -300,14 +300,14 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
         "1", // 7 - 1 succes
         "2", // 8 - 2 succes
         "2", // 9 - 2 succes
-        "systems/penombre/assets/dice-so-nice-2/d8-2-envolee.webp", // 10 - 2 succes - 2 envolee
+        "systems/penombre/assets/dice-so-nice/d8-2-envolee.webp", // 10 - 2 succes - 2 envolee
       ],
       system: "penombre2",
     })
     dice3d.addDicePreset({
       type: "d12",
       labels: [
-        "systems/penombre/assets/dice-so-nice-2/d8-fumble.webp", // 1 fumble
+        "systems/penombre/assets/dice-so-nice/d8-fumble.webp", // 1 fumble
         "0", // 2
         "0", // 3
         "1", // 4 - 1 succes
@@ -318,14 +318,14 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
         "2", // 9 - 2 succes
         "2", // 10 - 2 succes
         "2", // 11 - 2 succes
-        "systems/penombre/assets/dice-so-nice-2/d8-3-envolee.webp", // 12 - 3 succes - 3 envolee
+        "systems/penombre/assets/dice-so-nice/d8-3-envolee.webp", // 12 - 3 succes - 3 envolee
       ],
       system: "penombre2",
     })
     dice3d.addDicePreset({
       type: "d20",
       labels: [
-        "systems/penombre/assets/dice-so-nice-2/d8-fumble.webp", // 1 fumble
+        "systems/penombre/assets/dice-so-nice/d8-fumble.webp", // 1 fumble
         "0", // 2
         "0", // 3
         "1", // 4 - 1 succes
@@ -344,7 +344,7 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
         "4", // 17 - 4 succes
         "4", // 18 - 4 succes
         "4", // 19 - 4 succes
-        "systems/penombre/assets/dice-so-nice-2/d8-merveille.webp", // 20 - 5 succes - merveille
+        "systems/penombre/assets/dice-so-nice/d8-merveille.webp", // 20 - 5 succes - merveille
       ],
       system: "penombre2",
     })
