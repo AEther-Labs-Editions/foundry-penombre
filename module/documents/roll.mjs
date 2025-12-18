@@ -213,27 +213,28 @@ export default class PenombreRoll extends Roll {
 
     // Apparence des dés si le module Dice So Nice est activé et que le système de dés Pénombre est chargé
     const desSpeciaux = await game.settings.get(SYSTEM.ID, "desSpeciaux")
+    const desSpeciauxTexture = await game.settings.get(SYSTEM.ID, "desSpeciauxTexture")
     if (game.modules.get("dice-so-nice")?.active) {
       console.log("desSpeciaux", desSpeciaux)
       console.log("game.dice3d.getLoadedDiceSystems().has('penombre')", game.dice3d.getLoadedDiceSystems().has("penombre"))
       if (game.dice3d.getLoadedDiceSystems().has("penombre") && desSpeciaux) {
         // Le premier dé est toujours le dé d'harmonique
-        roll.dice[0].options.appearance =
-        {
-          colorset: "penombre",
-          foreground: '#7d3339',
-          background: "#b3944f",
-          texture: 'water',
-          edge: '#b3944f',
-          material: 'glass',
-          font: 'Cattedrale',
-          system: "penombre"
-        }
-        // Les autres dés sont des dés d'atouts (d6) ou un dé merveilleux (d20)
-        for (let i = 1; i < roll.dice.length; i++) {
-          if (roll.dice[i].faces === MERVEILLEUX_FACES) {
-            roll.dice[i].options.appearance =
-            {
+        if (desSpeciauxTexture) {
+          roll.dice[0].options.appearance =
+          {
+            colorset: "penombre",
+            foreground: '#7d3339',
+            background: "#b3944f",
+            texture: 'penombre_texture_beige_et_dore',
+            edge: '#b3944f',
+            material: 'glass',
+            font: 'Cattedrale',
+            system: "penombre"
+          }
+        } else {
+          if (desSpeciauxTexture) {
+            roll.dice[0].options.appearance =
+              {
               colorset: "penombre",
               foreground: '#7d3339',
               background: "#b3944f",
@@ -243,19 +244,62 @@ export default class PenombreRoll extends Roll {
               font: 'Cattedrale',
               system: "penombre"
             }
-          } else {
-            roll.dice[i].options.appearance =
-            {
-              colorset: "penombre2",
-              foreground: '#ffffff',
-              background: "#84b3e3",
-              texture: 'water',
-              edge: '#84b3e3',
-              material: 'glass',
-              font: 'Cattedrale',
-              system: "penombre"
+          }
+        }
+        // Les autres dés sont des dés d'atouts (d6) ou un dé merveilleux (d20)
+        for (let i = 1; i < roll.dice.length; i++) {
+          if (roll.dice[i].faces === MERVEILLEUX_FACES) {
+            if (desSpeciauxTexture) {
+              roll.dice[i].options.appearance =
+              {
+                colorset: "penombre",
+                foreground: '#7d3339',
+                background: "#ffffff",
+                texture: 'penombre_texture_beige_et_dore',
+                edge: '#b3944f',
+                material: 'glass',
+                font: 'Cattedrale',
+                system: "penombre"
+              }
+            }  else {
+              roll.dice[i].options.appearance =
+              {
+                colorset: "penombre",
+                foreground: '#7d3339',
+                background: "#b3944f",
+                texture: 'water',
+                edge: '#b3944f',
+                material: 'glass',
+                font: 'Cattedrale',
+                system: "penombre"
+              }
             }
-
+          } else {
+            if (desSpeciauxTexture) {
+              roll.dice[i].options.appearance =
+              {
+                colorset: "penombre2",
+                foreground: '#ffffff',
+                background: "#ffffff",
+                texture: 'penombre_texture_bleu_argente',
+                edge: '#84b3e3',
+                material: 'glass',
+                font: 'Cattedrale',
+                system: "penombre"
+              }
+            } else {
+              roll.dice[i].options.appearance =
+              {
+                colorset: "penombre2",
+                foreground: '#ffffff',
+                background: "#84b3e3",
+                texture: 'water',
+                edge: '#84b3e3',
+                material: 'glass',
+                font: 'Cattedrale',
+                system: "penombre"
+              }
+            }
           }
         }
       } else {
@@ -695,6 +739,7 @@ export default class PenombreRoll extends Roll {
 
           // Apparence des dés si le module Dice So Nice est activé et que le système de dés Pénombre est chargé
           const desSpeciaux = await game.settings.get(SYSTEM.ID, "desSpeciaux")
+          const desSpeciauxTexture = await game.settings.get(SYSTEM.ID, "desSpeciauxTexture")
           console.log("desSpeciaux", desSpeciaux)
           if (game.modules.get("dice-so-nice")?.active) {
             // if (desSpeciaux) {
@@ -702,19 +747,19 @@ export default class PenombreRoll extends Roll {
             if (game.dice3d.getLoadedDiceSystems().has("penombre") && desSpeciaux) {
               if (dieIndex === 0) {
                 // Le premier dé est toujours le dé d'harmonique
-                newDice.dice[0].options.appearance =
-                {
-                  colorset: "penombre",
-                  foreground: '#7d3339',
-                  background: "#b3944f",
-                  texture: 'water',
-                  edge: '#b3944f',
-                  material: 'glass',
-                  font: 'Cattedrale',
-                  system: "penombre"
-                }
-              } else {
-                if (newDice.dice[0].faces === MERVEILLEUX_FACES) {
+                if (desSpeciauxTexture) {
+                  newDice.dice[0].options.appearance =
+                  {
+                    colorset: "penombre",
+                    foreground: '#7d3339',
+                    background: "#ffffff",
+                    texture: 'penombre_texture_beige_et_dore',
+                    edge: '#b3944f',
+                    material: 'glass',
+                    font: 'Cattedrale',
+                    system: "penombre"
+                  }
+                } else {
                   newDice.dice[0].options.appearance =
                   {
                     colorset: "penombre",
@@ -726,17 +771,59 @@ export default class PenombreRoll extends Roll {
                     font: 'Cattedrale',
                     system: "penombre"
                   }
+                }
+              } else {
+                if (newDice.dice[0].faces === MERVEILLEUX_FACES) {
+                  if (desSpeciauxTexture) {
+                    newDice.dice[0].options.appearance =
+                    {
+                      colorset: "penombre",
+                      foreground: '#7d3339',
+                      background: "#ffffff",
+                      texture: 'penombre_texture_beige_et_dore',
+                      edge: '#b3944f',
+                      material: 'glass',
+                      font: 'Cattedrale',
+                      system: "penombre"
+                    }
+                  } else {
+                    newDice.dice[0].options.appearance =
+                    {
+                      colorset: "penombre",
+                      foreground: '#7d3339',
+                      background: "#b3944f",
+                      texture: 'water',
+                      edge: '#b3944f',
+                      material: 'glass',
+                      font: 'Cattedrale',
+                      system: "penombre"
+                    }
+                  }
                 } else {
-                  newDice.dice[0].options.appearance =
-                  {
-                    colorset: "penombre2",
-                    foreground: '#ffffff',
-                    background: "#84b3e3",
-                    texture: 'water',
-                    edge: '#84b3e3',
-                    material: 'glass',
-                    font: 'Cattedrale',
-                    system: "penombre"
+                  if (desSpeciauxTexture) {
+                    newDice.dice[0].options.appearance =
+                    {
+                      colorset: "penombre2",
+                      foreground: '#ffffff',
+                      background: "#ffffff",
+                      texture: 'penombre_texture_bleu_argente',
+                      edge: '#84b3e3',
+                      material: 'glass',
+                      font: 'Cattedrale',
+                      system: "penombre"
+                    }
+                  } else {
+                    newDice.dice[0].options.appearance =
+                    {
+                      colorset: "penombre2",
+                      foreground: '#ffffff',
+                      background: "#84b3e3",
+                      texture: 'water',
+                      edge: '#84b3e3',
+                      material: 'glass',
+                      font: 'Cattedrale',
+                      system: "penombre"
+                    }
                   }
                 }
               }

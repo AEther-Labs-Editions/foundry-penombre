@@ -261,6 +261,22 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
       ],
       system: "penombre2",
     })
+
+    dice3d.addTexture("penombre_texture_beige_et_dore", {
+    name: "Pénombre beige",
+    composite: "source-in",
+    source: "systems/penombre/assets/dice-so-nice/penombre_texture_beige_et_dore.webp",
+    bump: "" //can be empty
+    });
+
+    dice3d.addTexture("penombre_texture_bleu_argente", {
+    name: "Pénombre doré",
+    composite: "source-in",
+    source: "systems/penombre/assets/dice-so-nice/penombre_texture_bleu_argente.webp",
+    bump: "" //can be empty
+    });
+
+
     dice3d.addDicePreset({
       type: "d6",
       labels: [
