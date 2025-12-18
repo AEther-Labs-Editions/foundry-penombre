@@ -239,7 +239,7 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
       font: 'Cattedrale',
     }, "default");
 
-     dice3d.addTexture("penombre_texture_beige_et_dore", {
+    dice3d.addTexture("penombre_texture_beige_et_dore", {
     name: "Pénombre/Beige",
     composite: "source-in",
     source: "systems/penombre/assets/dice-so-nice/penombre_texture_beige_et_dore.webp",

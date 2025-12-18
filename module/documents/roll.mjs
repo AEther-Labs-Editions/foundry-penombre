@@ -254,7 +254,7 @@ export default class PenombreRoll extends Roll {
               {
                 colorset: "penombre",
                 foreground: '#7d3339',
-                background: "#ffffff",
+                // background: "#ffffff",
                 texture: 'penombre_texture_beige_et_dore',
                 edge: '#b3944f',
                 material: 'glass',
@@ -280,7 +280,7 @@ export default class PenombreRoll extends Roll {
               {
                 colorset: "penombre2",
                 foreground: '#ffffff',
-                background: "#ffffff",
+                // background: "#ffffff",
                 texture: 'penombre_texture_bleu_argente',
                 edge: '#84b3e3',
                 material: 'glass',
@@ -752,7 +752,7 @@ export default class PenombreRoll extends Roll {
                   {
                     colorset: "penombre",
                     foreground: '#7d3339',
-                    background: "#ffffff",
+                    // background: "#ffffff",
                     texture: 'penombre_texture_beige_et_dore',
                     edge: '#b3944f',
                     material: 'glass',
@@ -779,7 +779,7 @@ export default class PenombreRoll extends Roll {
                     {
                       colorset: "penombre",
                       foreground: '#7d3339',
-                      background: "#ffffff",
+                      // background: "#ffffff",
                       texture: 'penombre_texture_beige_et_dore',
                       edge: '#b3944f',
                       material: 'glass',
@@ -805,7 +805,7 @@ export default class PenombreRoll extends Roll {
                     {
                       colorset: "penombre2",
                       foreground: '#ffffff',
-                      background: "#ffffff",
+                      // background: "#ffffff",
                       texture: 'penombre_texture_bleu_argente',
                       edge: '#84b3e3',
                       material: 'glass',
