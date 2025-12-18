@@ -218,7 +218,7 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
 
     dice3d.addColorset({
       name: 'penombre',
-      description: "Pénombre/Brun",
+      description: "Pénombre/Beige",
       category: "Pénombre",
       foreground: '#7d3339',
       background: "#b3944f",
