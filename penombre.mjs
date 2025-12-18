@@ -220,7 +220,7 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
       name: 'penombre',
       description: "Pénombre/Brun",
       category: "Pénombre",
-      foreground: '#000000',
+      foreground: '#7d3339',
       background: "#b3944f",
       texture: 'water',
       edge: '#b3944f',
