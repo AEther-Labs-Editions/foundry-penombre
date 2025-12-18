@@ -216,7 +216,6 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
     * - "preferred" apply the colorset if the player didn't already change his dice appearance for this world. 
     */
 
-    /*
     dice3d.addColorset({
       name: 'penombre',
       description: "Pénombre/Brun",
@@ -240,7 +239,6 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
       material: 'glass',
       font: 'Cattedrale',
     }, "default");
-    */
  
     dice3d.addSystem({ id: "penombre2", name: "Pénombre2" }, "default")
     dice3d.addDicePreset({
