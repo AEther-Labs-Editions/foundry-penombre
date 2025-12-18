@@ -240,13 +240,13 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
     }, "default");
 
      dice3d.addTexture("penombre_texture_beige_et_dore", {
-    name: "Pénombre beige",
+    name: "Pénombre/Beige",
     composite: "source-in",
     source: "systems/penombre/assets/dice-so-nice/penombre_texture_beige_et_dore.webp",
     bump: "" //can be empty
     });
     dice3d.addTexture("penombre_texture_bleu_argente", {
-    name: "Pénombre bleu",
+    name: "Pénombre/Bleu",
     composite: "source-in",
     source: "systems/penombre/assets/dice-so-nice/penombre_texture_bleu_argente.webp",
     bump: "" //can be empty
