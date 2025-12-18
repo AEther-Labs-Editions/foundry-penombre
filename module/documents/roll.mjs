@@ -740,10 +740,8 @@ export default class PenombreRoll extends Roll {
           // Apparence des dés si le module Dice So Nice est activé et que le système de dés Pénombre est chargé
           const desSpeciaux = await game.settings.get(SYSTEM.ID, "desSpeciaux")
           const desSpeciauxTexture = await game.settings.get(SYSTEM.ID, "desSpeciauxTexture")
-          console.log("desSpeciaux", desSpeciaux)
+          // console.log("desSpeciaux", desSpeciaux)
           if (game.modules.get("dice-so-nice")?.active) {
-            // if (desSpeciaux) {
-            console.log("game.dice3d.getLoadedDiceSystems().has('penombre')", game.dice3d.getLoadedDiceSystems().has("penombre"))
             if (game.dice3d.getLoadedDiceSystems().has("penombre") && desSpeciaux) {
               if (dieIndex === 0) {
                 // Le premier dé est toujours le dé d'harmonique
