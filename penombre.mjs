@@ -227,7 +227,6 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
       material: 'glass',
       font: 'Cattedrale',
     }, "preferred");
-
     dice3d.addColorset({
       name: 'penombre2',
       description: "Pénombre/Bleu",
@@ -239,7 +238,20 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
       material: 'glass',
       font: 'Cattedrale',
     }, "default");
- 
+
+     dice3d.addTexture("penombre_texture_beige_et_dore", {
+    name: "Pénombre beige",
+    composite: "source-in",
+    source: "systems/penombre/assets/dice-so-nice/penombre_texture_beige_et_dore.webp",
+    bump: "" //can be empty
+    });
+    dice3d.addTexture("penombre_texture_bleu_argente", {
+    name: "Pénombre bleu",
+    composite: "source-in",
+    source: "systems/penombre/assets/dice-so-nice/penombre_texture_bleu_argente.webp",
+    bump: "" //can be empty
+    });
+
     dice3d.addSystem({ id: "penombre2", name: "Pénombre2" }, "default")
     dice3d.addDicePreset({
       type: "d2",
@@ -259,21 +271,6 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
       ],
       system: "penombre2",
     })
-
-    dice3d.addTexture("penombre_texture_beige_et_dore", {
-    name: "Pénombre beige",
-    composite: "source-in",
-    source: "systems/penombre/assets/dice-so-nice/penombre_texture_beige_et_dore.webp",
-    bump: "" //can be empty
-    });
-
-    dice3d.addTexture("penombre_texture_bleu_argente", {
-    name: "Pénombre bleu",
-    composite: "source-in",
-    source: "systems/penombre/assets/dice-so-nice/penombre_texture_bleu_argente.webp",
-    bump: "" //can be empty
-    });
-
 
     dice3d.addDicePreset({
       type: "d6",
