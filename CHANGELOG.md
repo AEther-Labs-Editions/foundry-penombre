@@ -1,5 +1,6 @@
 1.4.0
 - Ajout des dés virtuels Pénombre visibles sous Dice So Nice! (utilisation configurable dans les paramètres du système)
+- Le Guide d'utilisation Foundry VTT dans les Journaux fait maintenant mention de la gestion des dés virtuels Pénombre
 - Ajout de la fiche Tétras (faune) en tant qu'Éminence (compendium 'Kit - Prétirés')
 - Ajout de la fiche Tétras (satyre) en tant qu'Éminence (compendium 'Kit - Prétirés')
 - Ajout de la fiche Geysir en tant qu'Éminence (compendium 'Kit - Prétirés')
@@ -11,7 +12,7 @@
   - Suppression de l'affichage de l'initiative
   - Suppression de boutons de relance de l'initiative
   - Au démarrage du combat, les éminences sont avant les adversaires
-- Le Guide du système dans les Journaux fait maintenant mention de la gestion du CombatTracker
+- Le Guide d'utilisation Foundry VTT dans les Journaux fait maintenant mention de la gestion du CombatTracker
 
 1.3.1
 - Correction du bug rendant le premier atout gratuit pour les autres éminences participant à une action collégiale
@@ -53,7 +54,7 @@ Version complète du système débloquée sur GameOnTabletop : les autres styles
 
 1.1.1
 - Correction de Fausse note (1 au dé) et Envolée (max au dé) qui était sur le dé merveilleux au lieu du dé harmonique
-- Guide utilisateur : clarification et correction de quelques fautes d'orthographe
+- Guide d'utilisation Foundry VTT : clarification et correction de quelques fautes d'orthographe
 
 1.1.0
 - Mise à jour des tokens des prétirés (merci Prêtre)
