@@ -1,3 +1,10 @@
+1.4.0
+- Ajout des dés virtuels Pénombre (utilisation configurable dans les paramètres)
+- Ajout de la fiche Tétras (faune) en tant qu'Éminence (compendium 'Kit - Prétirés')
+- Ajout de la fiche Tétras (satyre) en tant qu'Éminence (compendium 'Kit - Prétirés')
+- Ajout de la fiche Geysir en tant qu'Éminence (compendium 'Kit - Prétirés')
+- Ajout des fiches de synthèse des maîtrises magiques sous forme d'objets (compendium 'Kit - Pouvoirs potentiels')
+
 1.3.2
 - Configuration par défaut du token d'une éminence : Lié à l'acteur, Disposition Amicale, Vision activée, Mode de vision standard
 - CombatTracker : gestion de l'initiative par drag'n'drop
