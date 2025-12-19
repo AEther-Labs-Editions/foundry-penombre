@@ -1,5 +1,5 @@
 1.4.0
-- Ajout des dés virtuels Pénombre (utilisation configurable dans les paramètres)
+- Ajout des dés virtuels Pénombre visibles sous Dice So Nice! (utilisation configurable dans les paramètres du système)
 - Ajout de la fiche Tétras (faune) en tant qu'Éminence (compendium 'Kit - Prétirés')
 - Ajout de la fiche Tétras (satyre) en tant qu'Éminence (compendium 'Kit - Prétirés')
 - Ajout de la fiche Geysir en tant qu'Éminence (compendium 'Kit - Prétirés')
