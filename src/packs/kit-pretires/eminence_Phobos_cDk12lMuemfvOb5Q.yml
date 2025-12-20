@@ -161,7 +161,8 @@ items:
     img: systems/penombre/assets/icons/maitrise.webp
     system:
       description: >-
-        <p><strong>Pour préparer son effet magique, un élémentaliste
+        <h1>Phobos l’élémentaliste</h1><p><strong>Pour préparer son effet
+        magique, Phobos
         doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>faire naître des
         éléments présents dans le décor, ou libérer de son contenant, une
         créature élémentaire</strong> primitive nommée élémentä – un homoncule
@@ -228,7 +229,7 @@ items:
     ownership:
       default: 0
       xu8p7UMcYrInjBEg: 3
-    _key: '!actors.items!ifkpxGG67VXi46NR.sNC1WBI8lsxC6yKM'
+    _key: '!actors.items!cDk12lMuemfvOb5Q.sNC1WBI8lsxC6yKM'
   - type: atout
     name: Je règle les conflits d’un seul coup
     _id: 9OlDPuG5Nlc3FO2V
@@ -251,7 +252,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!ifkpxGG67VXi46NR.9OlDPuG5Nlc3FO2V'
+    _key: '!actors.items!cDk12lMuemfvOb5Q.9OlDPuG5Nlc3FO2V'
   - type: atout
     name: Alchimiste de guerre kheshite
     _id: Hrwuq8m3vqVT8rYD
@@ -274,7 +275,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!ifkpxGG67VXi46NR.Hrwuq8m3vqVT8rYD'
+    _key: '!actors.items!cDk12lMuemfvOb5Q.Hrwuq8m3vqVT8rYD'
   - type: atout
     name: Obéissez-moi !
     _id: msDi9uBvcYYN8Xon
@@ -297,7 +298,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!ifkpxGG67VXi46NR.msDi9uBvcYYN8Xon'
+    _key: '!actors.items!cDk12lMuemfvOb5Q.msDi9uBvcYYN8Xon'
   - type: atout
     name: Prenons le temps de nous calmer
     _id: zix2xhuDXxszYntt
@@ -320,7 +321,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!ifkpxGG67VXi46NR.zix2xhuDXxszYntt'
+    _key: '!actors.items!cDk12lMuemfvOb5Q.zix2xhuDXxszYntt'
   - type: pouvoir
     name: Embrasie
     _id: 8BlTlYVvsl11gS92
@@ -352,7 +353,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!ifkpxGG67VXi46NR.8BlTlYVvsl11gS92'
+    _key: '!actors.items!cDk12lMuemfvOb5Q.8BlTlYVvsl11gS92'
   - type: pouvoir
     name: Embrasie ardente
     _id: dM5Pewhoyhq6r34W
@@ -380,7 +381,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!ifkpxGG67VXi46NR.dM5Pewhoyhq6r34W'
+    _key: '!actors.items!cDk12lMuemfvOb5Q.dM5Pewhoyhq6r34W'
   - type: pouvoir
     name: Leçon de l'ascèse
     _id: hGSlEepnfXs8kglO
@@ -408,7 +409,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!ifkpxGG67VXi46NR.hGSlEepnfXs8kglO'
+    _key: '!actors.items!cDk12lMuemfvOb5Q.hGSlEepnfXs8kglO'
 effects: []
 ownership:
   default: 0
@@ -421,9 +422,9 @@ _stats:
   coreVersion: '13.351'
   systemId: penombre
   systemVersion: '#{VERSION}#'
-  createdTime: 1766219643356
-  modifiedTime: 1766219643356
+  createdTime: 1766220032820
+  modifiedTime: 1766220032820
   lastModifiedBy: xu8p7UMcYrInjBEg
-_id: ifkpxGG67VXi46NR
+_id: cDk12lMuemfvOb5Q
 sort: 0
-_key: '!actors!ifkpxGG67VXi46NR'
+_key: '!actors!cDk12lMuemfvOb5Q'
