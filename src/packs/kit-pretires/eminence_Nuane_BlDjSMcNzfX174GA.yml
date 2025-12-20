@@ -3,7 +3,7 @@ type: eminence
 img: icons/svg/mystery-man.svg
 system:
   peuple: geant
-  cle: ame
+  cle: esprit
   potentiel:
     pouvoirs: 0
     atouts: 0
@@ -68,13 +68,14 @@ system:
     note2: false
     note3: false
     note4: false
+    peste: ''
   atouts: []
   maitrises: []
   description: ''
 prototypeToken:
   name: Nuane
   displayName: 0
-  actorLink: false
+  actorLink: true
   width: 1
   height: 1
   texture:
@@ -92,7 +93,7 @@ prototypeToken:
   lockRotation: false
   rotation: 0
   alpha: 1
-  disposition: -1
+  disposition: 1
   displayBars: 0
   bar1:
     attribute: null
@@ -121,7 +122,7 @@ prototypeToken:
       min: 0
       max: 1
   sight:
-    enabled: false
+    enabled: true
     range: 0
     angle: 360
     visionMode: basic
@@ -183,11 +184,11 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.350'
+      coreVersion: '13.351'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!SFHFf0wYLKoOZiZw.JH8QonoEyn5xS6wZ'
+    _key: '!actors.items!BlDjSMcNzfX174GA.JH8QonoEyn5xS6wZ'
   - type: pouvoir
     name: Iris de focalisation
     _id: aGXCDKWCRRbzoPZI
@@ -210,11 +211,11 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.350'
+      coreVersion: '13.351'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!SFHFf0wYLKoOZiZw.aGXCDKWCRRbzoPZI'
+    _key: '!actors.items!BlDjSMcNzfX174GA.aGXCDKWCRRbzoPZI'
   - type: pouvoir
     name: Colosse tonitruant
     _id: du0nG2KFiSjrepUu
@@ -238,11 +239,11 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.350'
+      coreVersion: '13.351'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!SFHFf0wYLKoOZiZw.du0nG2KFiSjrepUu'
+    _key: '!actors.items!BlDjSMcNzfX174GA.du0nG2KFiSjrepUu'
   - type: atout
     name: L'Harmonde est ma toile
     _id: YjXfZghlT9xOVQpJ
@@ -261,11 +262,11 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.350'
+      coreVersion: '13.351'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!SFHFf0wYLKoOZiZw.YjXfZghlT9xOVQpJ'
+    _key: '!actors.items!BlDjSMcNzfX174GA.YjXfZghlT9xOVQpJ'
   - type: atout
     name: J'ai visité tant de royaumes
     _id: 0ElmUNJ8Vyw9OfEZ
@@ -284,11 +285,11 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.350'
+      coreVersion: '13.351'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!SFHFf0wYLKoOZiZw.0ElmUNJ8Vyw9OfEZ'
+    _key: '!actors.items!BlDjSMcNzfX174GA.0ElmUNJ8Vyw9OfEZ'
   - type: atout
     name: Votre bouche dit un chose mais votre esprit en dit une autre
     _id: yGzmDBt1pLp7ssoq
@@ -307,11 +308,11 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.350'
+      coreVersion: '13.351'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!SFHFf0wYLKoOZiZw.yGzmDBt1pLp7ssoq'
+    _key: '!actors.items!BlDjSMcNzfX174GA.yGzmDBt1pLp7ssoq'
   - type: atout
     name: Questrice de la trame et des pigments
     _id: rKw4WvPgTdT9HV0K
@@ -330,11 +331,11 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.350'
+      coreVersion: '13.351'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!SFHFf0wYLKoOZiZw.rKw4WvPgTdT9HV0K'
+    _key: '!actors.items!BlDjSMcNzfX174GA.rKw4WvPgTdT9HV0K'
   - type: maitrise
     name: Décorum
     _id: eQcYrCCI1smRHFtv
@@ -392,16 +393,17 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.350'
+      coreVersion: '13.351'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!SFHFf0wYLKoOZiZw.eQcYrCCI1smRHFtv'
+    _key: '!actors.items!BlDjSMcNzfX174GA.eQcYrCCI1smRHFtv'
 effects: []
 folder: null
 ownership:
   default: 0
   6qbNUhuoJ67e6dmf: 3
+  xu8p7UMcYrInjBEg: 3
 flags: {}
 _stats:
   compendiumSource: null
@@ -410,9 +412,9 @@ _stats:
   coreVersion: '13.351'
   systemId: penombre
   systemVersion: '#{VERSION}#'
-  createdTime: 1759787151631
-  modifiedTime: 1765939795292
+  createdTime: 1766220355144
+  modifiedTime: 1766220355144
   lastModifiedBy: xu8p7UMcYrInjBEg
-_id: SFHFf0wYLKoOZiZw
-sort: 400000
-_key: '!actors!SFHFf0wYLKoOZiZw'
+_id: BlDjSMcNzfX174GA
+sort: 0
+_key: '!actors!BlDjSMcNzfX174GA'
