@@ -14,22 +14,23 @@ system:
     diminue de 1.</p></li><li><p>Les difficultés opposées par l’envenimé
     augmentent ou diminuent de 1.</p></li></ul><p>Par ailleurs, tous les venins
     alchimiques peuvent servir d’encres</p><p>de conjuration.</p>
-  type: peuple
+  type: naissance
 effects: []
 folder: NxgKbO9Dq94f1TSA
 sort: 150000
 ownership:
   default: 0
   6qbNUhuoJ67e6dmf: 3
+  xu8p7UMcYrInjBEg: 3
 flags: {}
 _stats:
   compendiumSource: Actor.FKX0hHU8tV6OekPm.Item.HIMHYEZgtkO2bez6
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.347'
+  coreVersion: '13.351'
   systemId: penombre
-  systemVersion: '0'
-  createdTime: 1757151276783
-  modifiedTime: 1757151276783
-  lastModifiedBy: 6qbNUhuoJ67e6dmf
+  systemVersion: '#{VERSION}#'
+  createdTime: 1766222002823
+  modifiedTime: 1766222002823
+  lastModifiedBy: xu8p7UMcYrInjBEg
 _key: '!items!YpPKcuI0Zi1WcmME'

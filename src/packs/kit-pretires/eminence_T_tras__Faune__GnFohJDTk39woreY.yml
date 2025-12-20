@@ -1,5 +1,5 @@
 folder: null
-name: Tétras (Satyre)
+name: Tétras (Faune)
 type: eminence
 img: systems/penombre/assets/portraits/tetras.webp
 system:
@@ -22,7 +22,7 @@ system:
       valeur: d10
   conscience:
     valeur: 7
-    max: 9
+    max: 7
     jetons:
       - statut: actif
       - statut: actif
@@ -155,6 +155,38 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
 items:
+  - name: Spectacle vivant
+    type: pouvoir
+    _id: nX4gy5Dx1dHloNYL
+    img: systems/penombre/assets/icons/pouvoir.webp
+    system:
+      utilise: false
+      type: naissance
+      description: >-
+        <h1>Spectacle vivant</h1><p><em>Être satyre c'est offrir à l'Harmonde un
+        spectacle quotidien.</em></p><p>Le temps d'une action spectaculaire,
+        utilisez gratuitement le D20 merveilleux en plus du dé
+        harmonique.</p><p>De plus, chaque fois qu’il réalise une merveille (p.
+        31 du kit), son joueur peut lui choisir un nouveau pouvoir dans la liste
+        suivante, ou augmenter de 1 sa valeur de conscience.</p><ul><li><p>Bouc
+        émissaire</p></li><li><p>Chevreau des abysses</p></li></ul>
+    effects: []
+    folder: IxCLMJlUPYUhtQ3N
+    sort: 300000
+    ownership:
+      default: 0
+      6qbNUhuoJ67e6dmf: 3
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!GnFohJDTk39woreY.nX4gy5Dx1dHloNYL'
   - type: atout
     name: C’est nouveau pour moi, ça !
     _id: DWKTJlEwebkkveyT
@@ -177,7 +209,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!ITe6nzpfg1katyen.DWKTJlEwebkkveyT'
+    _key: '!actors.items!GnFohJDTk39woreY.DWKTJlEwebkkveyT'
   - type: atout
     name: Des cornes ? Une couronne, et autant de dagues !
     _id: 6X2W22oziPWiUSJf
@@ -200,7 +232,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!ITe6nzpfg1katyen.6X2W22oziPWiUSJf'
+    _key: '!actors.items!GnFohJDTk39woreY.6X2W22oziPWiUSJf'
   - type: atout
     name: Des histoires abyssales, en veux-tu ? En voilà !
     _id: iMGlw53nklZ3Gogu
@@ -223,7 +255,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!ITe6nzpfg1katyen.iMGlw53nklZ3Gogu'
+    _key: '!actors.items!GnFohJDTk39woreY.iMGlw53nklZ3Gogu'
   - type: atout
     name: Un sang d’encre
     _id: REzbCjigjGAMwLcE
@@ -246,7 +278,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!ITe6nzpfg1katyen.REzbCjigjGAMwLcE'
+    _key: '!actors.items!GnFohJDTk39woreY.REzbCjigjGAMwLcE'
   - type: atout
     name: Om me dit trouble
     _id: MMMte3eIV87dhPbx
@@ -269,7 +301,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!ITe6nzpfg1katyen.MMMte3eIV87dhPbx'
+    _key: '!actors.items!GnFohJDTk39woreY.MMMte3eIV87dhPbx'
   - type: maitrise
     name: Geste
     _id: tkbqDZHRR6IAlkGy
@@ -282,12 +314,12 @@ items:
         doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>utiliser sa
         voix</strong> pour crier, déclamer, réciter, murmurer, ou marmonner un
         texte poétique.</p></li></ul><p><strong>Ce faisant,
-        il…</strong></p><h6>Action magique</h6><ul><li><p><strong>altère le
-        cours du temps.</strong> Il peut, comme avec les flots bouillonnants
+        elle…</strong></p><h6>Action magique</h6><ul><li><p><strong>altère le
+        cours du temps.</strong> Elle peut, comme avec les flots bouillonnants
         d’une rivière, lire les marques du passé sur ses berges, deviner les
         remous à venir, accélérer ou ralentir son écoulement, faire ricocher un
         objet à sa surface, etc.</p></li></ul><p><strong>Avec un effet magique
-        de niveau ? …</strong></p><p><strong>il parvient par exemple
+        de niveau ? …</strong></p><p><strong>elle parvient par exemple
         à…</strong></p><ol><li><p><strong>identifier</strong> un effet magique
         d’art ancien (accord, décorum, geste) ; restaurer ou vieillir un objet ;
         provoquer une érosion accélérée ; exacerber la peur de la mort en la
@@ -307,14 +339,14 @@ items:
         instantanément vers un espace lointain par un repli du temps ;
         réincarner le passé comme si c’était le présent ; avancer ou revenir de
         quelques instants dans le temps ; modifier le temps pour accélérer une
-        guérison ; etc.</p></li></ol><p><strong>Mais attention, il risque
+        guérison ; etc.</p></li></ol><p><strong>Mais attention, elle risque
         également de…</strong></p><h6>Incident
         magique</h6><ul><li><p><strong>sombrer dans la mélancolie.</strong> À la
-        moindre hésitation, Tétras se retrouve emporté par les flots du temps,
-        ballotté par les voix muettes de l’Harmonde et écorché par les écueils
-        de son destin incertain. il fait des rêves persistants ; il est hanté
-        par une présence ou des souvenirs étrangers ; il est pris de doute,
-        voire plonge dans une profonde dépression ; etc.</p></li></ul>
+        moindre hésitation, Tétras se retrouve emportée par les flots du temps,
+        ballottée par les voix muettes de l’Harmonde et écorchée par les écueils
+        de son destin incertain. Elle fait des rêves persistants ; elle est
+        hanté par une présence ou des souvenirs étrangers ; elle est prise de
+        doute, voire plonge dans une profonde dépression ; etc.</p></li></ul>
       harmonique: ame
       niveau: 2
       prerequis: se lancer dans une tirade
@@ -333,7 +365,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!ITe6nzpfg1katyen.tkbqDZHRR6IAlkGy'
+    _key: '!actors.items!GnFohJDTk39woreY.tkbqDZHRR6IAlkGy'
   - type: maitrise
     name: Conjuration
     _id: 5N4i9Yfb27Cl6Qry
@@ -341,18 +373,18 @@ items:
     system:
       slug: ''
       description: >-
-        <h1>Tétras le conjurateur</h1><p><strong>Pour préparer son effet
+        <h1>Tétras la conjuratrice</h1><p><strong>Pour préparer son effet
         magique, Tétras
         doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>tracer les
         contours d’une ombre</strong> à l’encre de son
-        sang.</p></li></ul><p><strong>Cette action le fait entrer en résonance
+        sang.</p></li></ul><p><strong>Cette action la fait entrer en résonance
         avec…</strong></p><h6>Harmonique : nuit</h6><p><strong>Ce faisant,
-        il…</strong></p><h6>Action magique</h6><ul><li><p><strong>pactise avec
+        elle…</strong></p><h6>Action magique</h6><ul><li><p><strong>pactise avec
         le démon né de cette ombre.</strong> Le démon exécute la mission qui lui
         est confiée, et le conjurateur le rémunère. La connivence qui les unit
         doit être enregistrée auprès d’un advocatus diaboli et coûte d’autant
         plus cher que l’effet souhaité est élevé.</p></li></ul><p><strong>Avec
-        un effet magique de niveau ? …</strong></p><p><strong>il conjure un
+        un effet magique de niveau ? …</strong></p><p><strong>elle conjure un
         démon capable par exemple
         de…</strong></p><ol><li><p><strong>identifier</strong> un effet magique
         d’art noir (conjuration, omnium, prisme) ; chercher un objet ;
@@ -372,7 +404,7 @@ items:
         identité ; se battre comme un duelliste renommé ;
         etc.</p></li><li><p><strong>exceller</strong> dans tous les domaines ;
         conjurer de nouveaux démons ; etc.</p></li></ol><p><strong>Mais
-        attention, il risque également de…</strong></p><h6>Incident
+        attention, elle risque également de…</strong></p><h6>Incident
         magique</h6><ul><li><p><strong>laisser la porte ouverte.</strong>
         L’ombre laisse s’échapper bien plus que le démon appelé. Cela peut
         valoir au conjurateur une sanction de la part du Clergé obscur. Qui a
@@ -399,42 +431,10 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!ITe6nzpfg1katyen.5N4i9Yfb27Cl6Qry'
-  - name: Spectacle vivant
-    type: pouvoir
-    img: systems/penombre/assets/icons/pouvoir.webp
-    system:
-      utilise: false
-      type: peuple
-      description: >-
-        <h1>Spectacle vivant</h1><p><em>Être satyre c'est offrir à l'Harmonde un
-        spectacle quotidien.</em></p><p>Le temps d'une action spectaculaire,
-        utilisez gratuitement le D20 merveilleux en plus du dé
-        harmonique.</p><p>De plus, chaque fois qu’il réalise une merveille (p.
-        31 du kit), son joueur peut lui choisir un nouveau pouvoir dans la liste
-        suivante, ou augmenter de 1 sa valeur de conscience.</p><ul><li><p>Bouc
-        émissaire</p></li><li><p>Chevreau des abysses</p></li></ul>
-    effects: []
-    folder: IxCLMJlUPYUhtQ3N
-    sort: 300000
-    ownership:
-      default: 0
-      6qbNUhuoJ67e6dmf: 3
-      xu8p7UMcYrInjBEg: 3
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.351'
-      systemId: penombre
-      systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
-    _id: W6JqZUg9BRq4NW48
-    _key: '!actors.items!ITe6nzpfg1katyen.W6JqZUg9BRq4NW48'
+    _key: '!actors.items!GnFohJDTk39woreY.5N4i9Yfb27Cl6Qry'
   - type: pouvoir
     name: Bouc émissaire
-    _id: QNEctBMrinQ7QD3o
+    _id: YNYJMr905wDMqgXN
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
@@ -447,8 +447,8 @@ items:
         adversaires ne peut cibler que Tétras.</p>
       type: naissance
     effects: []
-    folder: IxCLMJlUPYUhtQ3N
-    sort: 100000
+    folder: null
+    sort: 0
     ownership:
       default: 0
       xu8p7UMcYrInjBEg: 3
@@ -461,10 +461,10 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!ITe6nzpfg1katyen.QNEctBMrinQ7QD3o'
+    _key: '!actors.items!GnFohJDTk39woreY.YNYJMr905wDMqgXN'
   - type: pouvoir
     name: Chevreau des abysses
-    _id: fNYa63J0BKAPD1YI
+    _id: 9sxZj7doSD7YX3Cl
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
@@ -475,8 +475,8 @@ items:
         automatique.</p>
       type: naissance
     effects: []
-    folder: IxCLMJlUPYUhtQ3N
-    sort: 200000
+    folder: null
+    sort: 0
     ownership:
       default: 0
       xu8p7UMcYrInjBEg: 3
@@ -489,7 +489,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!ITe6nzpfg1katyen.fNYa63J0BKAPD1YI'
+    _key: '!actors.items!GnFohJDTk39woreY.9sxZj7doSD7YX3Cl'
 effects: []
 ownership:
   default: 0
@@ -502,9 +502,9 @@ _stats:
   coreVersion: '13.351'
   systemId: penombre
   systemVersion: '#{VERSION}#'
-  createdTime: 1765956893726
-  modifiedTime: 1765956893765
+  createdTime: 1766221678272
+  modifiedTime: 1766221678310
   lastModifiedBy: xu8p7UMcYrInjBEg
-_id: ITe6nzpfg1katyen
+_id: GnFohJDTk39woreY
 sort: 200000
-_key: '!actors!ITe6nzpfg1katyen'
+_key: '!actors!GnFohJDTk39woreY'

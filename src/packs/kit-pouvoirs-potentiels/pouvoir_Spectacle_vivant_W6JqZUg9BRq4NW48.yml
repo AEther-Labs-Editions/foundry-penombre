@@ -3,7 +3,7 @@ type: pouvoir
 img: systems/penombre/assets/icons/pouvoir.webp
 system:
   utilise: false
-  type: peuple
+  type: naissance
   description: >-
     <h1>Spectacle vivant</h1><p><em>Être satyre c'est offrir à l'Harmonde un
     spectacle quotidien.</em></p><p>Le temps d'une action spectaculaire,
@@ -27,8 +27,8 @@ _stats:
   coreVersion: '13.351'
   systemId: penombre
   systemVersion: '#{VERSION}#'
-  createdTime: 1765936267582
-  modifiedTime: 1765936267582
+  createdTime: 1766222007600
+  modifiedTime: 1766222007600
   lastModifiedBy: xu8p7UMcYrInjBEg
 _id: W6JqZUg9BRq4NW48
 _key: '!items!W6JqZUg9BRq4NW48'
