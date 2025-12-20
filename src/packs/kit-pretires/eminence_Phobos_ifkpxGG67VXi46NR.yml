@@ -1,0 +1,429 @@
+folder: null
+name: Phobos
+type: eminence
+img: systems/penombre/assets/portraits/phobos.webp
+system:
+  peuple: ogre
+  cle: nature
+  potentiel:
+    pouvoirs: 0
+    atouts: 0
+    maitrises: 0
+  harmoniques:
+    ame:
+      valeur: d8
+    esprit:
+      valeur: d6
+    etincelle:
+      valeur: d10
+    nature:
+      valeur: d12
+    nuit:
+      valeur: d4
+  conscience:
+    valeur: 7
+    max: 7
+    jetons:
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+    complications:
+      une:
+        description: ''
+        valeur: 0
+      deux:
+        description: ''
+        valeur: 0
+      trois:
+        description: ''
+        valeur: 0
+      quatre:
+        description: ''
+        valeur: 0
+  timbre:
+    statut: harmonieux
+    cle: false
+    note1: false
+    note2: false
+    note3: false
+    note4: false
+    peste: ''
+  atouts: []
+  maitrises: []
+  description: Ogre tourmenté
+prototypeToken:
+  name: Phobos
+  displayName: 0
+  actorLink: true
+  width: 1
+  height: 1
+  texture:
+    src: systems/penombre/assets/tokens/phobos_token.webp
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: 1
+  displayBars: 0
+  bar1:
+    attribute: null
+  bar2:
+    attribute: null
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: true
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 0
+    subject:
+      scale: 1
+      texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+  flags: {}
+  randomImg: false
+  appendNumber: false
+  prependAdjective: false
+items:
+  - type: maitrise
+    name: Élémentalisme
+    _id: sNC1WBI8lsxC6yKM
+    img: systems/penombre/assets/icons/maitrise.webp
+    system:
+      description: >-
+        <p><strong>Pour préparer son effet magique, un élémentaliste
+        doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>faire naître des
+        éléments présents dans le décor, ou libérer de son contenant, une
+        créature élémentaire</strong> primitive nommée élémentä – un homoncule
+        fortement teinté par son matériau
+        d’origine.</p></li></ul><p><strong>Cette action le fait entrer en
+        résonance avec…</strong></p><h6>Harmonique : nature</h6><p><strong>Ce
+        faisant, il…</strong></p><h6>Action
+        magique</h6><ul><li><p><strong>utilise l’élémentä</strong> en
+        l’effritant, le dispersant, le façonnant ou le consommant comme une
+        drogue afin d’en tirer des informations, archiver des connaissances
+        cryptées, s’approprier son énergie élémentaire ou la projeter
+        magiquement.</p></li></ul><p><strong>Avec un effet magique de niveau ?
+        …</strong></p><p><strong>il parvient par exemple
+        à…</strong></p><ol><li><p><strong>identifier</strong> un effet magique
+        de magie naturelle (brigue, élémentalisme, magie des saisons) ;
+        ressentir l’émotion de la matière ; confier à la matière un mot à
+        répéter ; faire se déplacer une pierre ; améliorer n’importe quelle
+        capacité physique ou mentale ; etc.</p></li><li><p><strong>obtenir des
+        informations grossières</strong> mémorisées par la matière comme avec un
+        jeune enfant ; confier à la matière un long message à répéter ;
+        transmuter une matière en une autre, sans en changer l’état liquide,
+        solide, ou gazeux (affûter ou émousser une lame, souder deux métaux,
+        rendre l’air irrespirable, changer l’eau en alcool …) ; contrôler les
+        mouvements d’un feu, de l’eau, du vent, ou un soubresaut tellurique ;
+        devenir brûlant, ou glacé ; etc.</p></li><li><p><strong>obtenir des
+        informations précises</strong> mémorisées par la matière ; envoyer un
+        messager élémentaire parler à un personnage ; se rendre insensible à un
+        élément, ou utiliser un élément comme protection ; remodeler et façonner
+        la matière, modifier sa forme, son état et sa densité (liquéfier un
+        rocher, s’armer d’une lame de feu, animer une statue, etc.) ;
+        etc.</p></li><li><p><strong>se dissimuler</strong> dans un élément, et
+        voyager au travers ; accomplir des prouesses physiques impossibles ;
+        augmenter ou diminuer la quantité d’un matériau ; transmuter
+        temporairement son corps en feu, en eau ;
+        etc.</p></li><li><p><strong>coder</strong> un livre entier dans une
+        flamme ou une goutte d’eau ; transmuter entièrement un élément en un
+        autre (l’eau en feu…) ; changer définitivement un mortel en golem
+        élémentaire ; etc.</p></li></ol><p><strong>Mais attention, il risque
+        également de…</strong></p><h6>Incident magique</h6><ul><li><p><strong>se
+        brûler les ailes.</strong> il note une complication de niveau 3
+        correspondant à un épuisement physique ou mental, une grave brûlure, un
+        étouffement, une déshydratation sévère,
+        etc.</p></li></ul><p>OU</p><h6>Incident
+        magique</h6><ul><li><p><strong>se laisser submerger.</strong> L’élémentä
+        se retourne contre lui, à moins que des scories s’incarnent dans un
+        esprit frappeur. La créature est un opposant de difficulté égale au
+        nombre de succès obtenus sur l’action de maîtrise magique.</p></li></ul>
+      harmonique: nature
+      niveau: 3
+      prerequis: consommer un élémentä
+      slug: ''
+    effects: []
+    folder: t49tGfu5DfWzhLvI
+    sort: 500000
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    _key: '!actors.items!ifkpxGG67VXi46NR.sNC1WBI8lsxC6yKM'
+  - type: atout
+    name: Je règle les conflits d’un seul coup
+    _id: 9OlDPuG5Nlc3FO2V
+    img: systems/penombre/assets/icons/atout.webp
+    system:
+      description: ''
+      valeur: 3
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!ifkpxGG67VXi46NR.9OlDPuG5Nlc3FO2V'
+  - type: atout
+    name: Alchimiste de guerre kheshite
+    _id: Hrwuq8m3vqVT8rYD
+    img: systems/penombre/assets/icons/atout.webp
+    system:
+      description: ''
+      valeur: 3
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!ifkpxGG67VXi46NR.Hrwuq8m3vqVT8rYD'
+  - type: atout
+    name: Obéissez-moi !
+    _id: msDi9uBvcYYN8Xon
+    img: systems/penombre/assets/icons/atout.webp
+    system:
+      description: ''
+      valeur: 2
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!ifkpxGG67VXi46NR.msDi9uBvcYYN8Xon'
+  - type: atout
+    name: Prenons le temps de nous calmer
+    _id: zix2xhuDXxszYntt
+    img: systems/penombre/assets/icons/atout.webp
+    system:
+      description: ''
+      valeur: 2
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!ifkpxGG67VXi46NR.zix2xhuDXxszYntt'
+  - type: pouvoir
+    name: Embrasie
+    _id: 8BlTlYVvsl11gS92
+    img: systems/penombre/assets/icons/pouvoir.webp
+    system:
+      utilise: false
+      description: >-
+        <h1>Embrasie</h1><p><em>L’impulsion de l’embrasie est capable de
+        décupler vos forces quand le soleil est au zénith.</em></p><p>Le temps
+        d’une scène baignée par un soleil puissant, le nombre de succès de
+        toutes les actions brutales réalisées par Phobos augmente de 2.</p><p>De
+        plus, chaque fois qu’il réalise une merveille (p. 31 du kit), son joueur
+        peut lui choisir un nouveau pouvoir dans la liste suivante, ou augmenter
+        de 1 sa valeur de conscience.</p><ul><li><p>Embrasie
+        ardente</p></li><li><p>Leçon de l'ascèse</p></li></ul>
+      type: naissance
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!ifkpxGG67VXi46NR.8BlTlYVvsl11gS92'
+  - type: pouvoir
+    name: Embrasie ardente
+    _id: dM5Pewhoyhq6r34W
+    img: systems/penombre/assets/icons/pouvoir.webp
+    system:
+      utilise: false
+      description: >-
+        <h1>Embrasie ardente</h1><p><em>Pour lui, l’embrasie est plus qu’une
+        impulsion, c’est un vertige.</em></p><p>Lors de l’utilisation
+        d’embrasie, le nombre de succès d’une action réalisée par Phobos
+        augmente de 2.</p>
+      type: naissance
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!ifkpxGG67VXi46NR.dM5Pewhoyhq6r34W'
+  - type: pouvoir
+    name: Leçon de l'ascèse
+    _id: hGSlEepnfXs8kglO
+    img: systems/penombre/assets/icons/pouvoir.webp
+    system:
+      utilise: false
+      description: >-
+        <h1>Leçon de l'ascèse</h1><p><em>Le respect… Faut aller le chercher,
+        faut creuser profond pour en trouver et se donner la force de tenir
+        droit.</em></p><p>Une action de Phobos pour résister à un contrôle –
+        physique ou mental – devient automatique.</p>
+      type: naissance
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!ifkpxGG67VXi46NR.hGSlEepnfXs8kglO'
+effects: []
+ownership:
+  default: 0
+  xu8p7UMcYrInjBEg: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1766219643356
+  modifiedTime: 1766219643356
+  lastModifiedBy: xu8p7UMcYrInjBEg
+_id: ifkpxGG67VXi46NR
+sort: 0
+_key: '!actors!ifkpxGG67VXi46NR'
