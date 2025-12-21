@@ -1,6 +1,6 @@
 1.4.0
 - Ajout des dés virtuels Pénombre visibles sous Dice So Nice! (utilisation configurable dans les paramètres du système)
-- Le Guide d'utilisation Foundry VTT dans les Journaux fait maintenant mention de la gestion des dés virtuels Pénombre
+- Ajout des dés virtuels Pénombre dans le Guide d'utilisation du système
 - Ajout de la fiche Tétras (faune) en tant qu'Éminence (compendium 'Kit - Prétirés')
 - Ajout de la fiche Tétras (satyre) en tant qu'Éminence (compendium 'Kit - Prétirés')
 - Ajout de la fiche Geysir en tant qu'Éminence (compendium 'Kit - Prétirés')

@@ -214,90 +214,79 @@ export default class PenombreRoll extends Roll {
     // Apparence des dés si le module Dice So Nice est activé et que le système de dés Pénombre est chargé
     const desSpeciaux = await game.settings.get(SYSTEM.ID, "desSpeciaux")
     const desSpeciauxTexture = await game.settings.get(SYSTEM.ID, "desSpeciauxTexture")
+
     if (game.modules.get("dice-so-nice")?.active) {
-      console.log("desSpeciaux", desSpeciaux)
-      console.log("game.dice3d.getLoadedDiceSystems().has('penombre')", game.dice3d.getLoadedDiceSystems().has("penombre"))
       if (game.dice3d.getLoadedDiceSystems().has("penombre") && desSpeciaux) {
         // Le premier dé est toujours le dé d'harmonique
         if (desSpeciauxTexture) {
-          roll.dice[0].options.appearance =
-          {
-            colorset: "penombre",
-            foreground: '#7d3339',
+          roll.dice[0].options.appearance = {
+            colorset: "penombre-beige",
+            foreground: "#7d3339",
             background: "#b3944f",
-            texture: 'penombre_texture_beige_et_dore',
-            edge: '#b3944f',
-            material: 'glass',
-            font: 'Cattedrale',
-            system: "penombre"
+            texture: "penombre_texture_beige_et_dore",
+            edge: "#b3944f",
+            material: "glass",
+            font: "Cattedrale",
+            system: "penombre",
           }
         } else {
-          if (desSpeciauxTexture) {
-            roll.dice[0].options.appearance =
-              {
-              colorset: "penombre",
-              foreground: '#7d3339',
-              background: "#b3944f",
-              texture: 'water',
-              edge: '#b3944f',
-              material: 'glass',
-              font: 'Cattedrale',
-              system: "penombre"
-            }
+          roll.dice[0].options.appearance = {
+            colorset: "penombre-beige",
+            foreground: "#7d3339",
+            background: "#b3944f",
+            texture: "water",
+            edge: "#b3944f",
+            material: "glass",
+            font: "Cattedrale",
+            system: "penombre",
           }
         }
         // Les autres dés sont des dés d'atouts (d6) ou un dé merveilleux (d20)
         for (let i = 1; i < roll.dice.length; i++) {
           if (roll.dice[i].faces === MERVEILLEUX_FACES) {
             if (desSpeciauxTexture) {
-              roll.dice[i].options.appearance =
-              {
-                colorset: "penombre",
-                foreground: '#7d3339',
-                // background: "#ffffff",
-                texture: 'penombre_texture_beige_et_dore',
-                edge: '#b3944f',
-                material: 'glass',
-                font: 'Cattedrale',
-                system: "penombre"
+              roll.dice[i].options.appearance = {
+                colorset: "penombre-beige",
+                foreground: "#7d3339",
+                texture: "penombre_texture_beige_et_dore",
+                edge: "#b3944f",
+                material: "glass",
+                font: "Cattedrale",
+                system: "penombre",
               }
-            }  else {
-              roll.dice[i].options.appearance =
-              {
-                colorset: "penombre",
-                foreground: '#7d3339',
+            } else {
+              roll.dice[i].options.appearance = {
+                colorset: "penombre-beige",
+                foreground: "#7d3339",
                 background: "#b3944f",
-                texture: 'water',
-                edge: '#b3944f',
-                material: 'glass',
-                font: 'Cattedrale',
-                system: "penombre"
+                texture: "water",
+                edge: "#b3944f",
+                material: "glass",
+                font: "Cattedrale",
+                system: "penombre",
               }
             }
           } else {
             if (desSpeciauxTexture) {
-              roll.dice[i].options.appearance =
-              {
-                colorset: "penombre2",
-                foreground: '#ffffff',
-                // background: "#ffffff",
-                texture: 'penombre_texture_bleu_argente',
-                edge: '#84b3e3',
-                material: 'glass',
-                font: 'Cattedrale',
-                system: "penombre"
+              roll.dice[i].options.appearance = {
+                colorset: "penombre-bleu",
+                foreground: "#ffffff",
+                texture: "penombre_texture_bleu_argente",
+                edge: "#84b3e3",
+                material: "glass",
+                font: "Cattedrale",
+                system: "penombre-sans",
               }
             } else {
-              roll.dice[i].options.appearance =
-              {
-                colorset: "penombre2",
-                foreground: '#ffffff',
+              roll.dice[i].options.appearance = {
+                colorset: "penombre-bleu",
+                foreground: "#ffffff",
                 background: "#84b3e3",
-                texture: 'water',
-                edge: '#84b3e3',
-                material: 'glass',
-                font: 'Cattedrale',
-                system: "penombre"
+                texture: "water",
+                edge: "#84b3e3",
+                material: "glass",
+                font: "Cattedrale",
+                system: "penombre-sans",
               }
             }
           }
@@ -735,101 +724,90 @@ export default class PenombreRoll extends Roll {
           const formula = `1d${roll.dice[dieIndex].faces}`
           const newDice = await new Roll(formula, {}, { rollMode }).evaluate()
 
-          // Ajout MMFO : avec DsN, les dés relancés sont : soit spécial si harmonique, soit standards si bonus
-
+          // Avec DsN, les dés relancés sont : soit spécial si harmonique, soit standards si bonus
           // Apparence des dés si le module Dice So Nice est activé et que le système de dés Pénombre est chargé
           const desSpeciaux = await game.settings.get(SYSTEM.ID, "desSpeciaux")
           const desSpeciauxTexture = await game.settings.get(SYSTEM.ID, "desSpeciauxTexture")
-          // console.log("desSpeciaux", desSpeciaux)
+
           if (game.modules.get("dice-so-nice")?.active) {
             if (game.dice3d.getLoadedDiceSystems().has("penombre") && desSpeciaux) {
+              // Le premier dé est toujours le dé d'harmonique
               if (dieIndex === 0) {
-                // Le premier dé est toujours le dé d'harmonique
                 if (desSpeciauxTexture) {
-                  newDice.dice[0].options.appearance =
-                  {
-                    colorset: "penombre",
-                    foreground: '#7d3339',
-                    // background: "#ffffff",
-                    texture: 'penombre_texture_beige_et_dore',
-                    edge: '#b3944f',
-                    material: 'glass',
-                    font: 'Cattedrale',
-                    system: "penombre"
+                  newDice.dice[0].options.appearance = {
+                    colorset: "penombre-beige",
+                    foreground: "#7d3339",
+                    texture: "penombre_texture_beige_et_dore",
+                    edge: "#b3944f",
+                    material: "glass",
+                    font: "Cattedrale",
+                    system: "penombre",
                   }
                 } else {
-                  newDice.dice[0].options.appearance =
-                  {
-                    colorset: "penombre",
-                    foreground: '#7d3339',
+                  newDice.dice[0].options.appearance = {
+                    colorset: "penombre-beige",
+                    foreground: "#7d3339",
                     background: "#b3944f",
-                    texture: 'water',
-                    edge: '#b3944f',
-                    material: 'glass',
-                    font: 'Cattedrale',
-                    system: "penombre"
+                    texture: "water",
+                    edge: "#b3944f",
+                    material: "glass",
+                    font: "Cattedrale",
+                    system: "penombre",
                   }
                 }
               } else {
                 if (newDice.dice[0].faces === MERVEILLEUX_FACES) {
                   if (desSpeciauxTexture) {
-                    newDice.dice[0].options.appearance =
-                    {
-                      colorset: "penombre",
-                      foreground: '#7d3339',
-                      // background: "#ffffff",
-                      texture: 'penombre_texture_beige_et_dore',
-                      edge: '#b3944f',
-                      material: 'glass',
-                      font: 'Cattedrale',
-                      system: "penombre"
+                    newDice.dice[0].options.appearance = {
+                      colorset: "penombre-beige",
+                      foreground: "#7d3339",
+                      texture: "penombre_texture_beige_et_dore",
+                      edge: "#b3944f",
+                      material: "glass",
+                      font: "Cattedrale",
+                      system: "penombre",
                     }
                   } else {
-                    newDice.dice[0].options.appearance =
-                    {
-                      colorset: "penombre",
-                      foreground: '#7d3339',
+                    newDice.dice[0].options.appearance = {
+                      colorset: "penombre-beige",
+                      foreground: "#7d3339",
                       background: "#b3944f",
-                      texture: 'water',
-                      edge: '#b3944f',
-                      material: 'glass',
-                      font: 'Cattedrale',
-                      system: "penombre"
+                      texture: "water",
+                      edge: "#b3944f",
+                      material: "glass",
+                      font: "Cattedrale",
+                      system: "penombre",
                     }
                   }
                 } else {
                   if (desSpeciauxTexture) {
-                    newDice.dice[0].options.appearance =
-                    {
-                      colorset: "penombre2",
-                      foreground: '#ffffff',
-                      // background: "#ffffff",
-                      texture: 'penombre_texture_bleu_argente',
-                      edge: '#84b3e3',
-                      material: 'glass',
-                      font: 'Cattedrale',
-                      system: "penombre"
+                    newDice.dice[0].options.appearance = {
+                      colorset: "penombre-bleu",
+                      foreground: "#ffffff",
+                      texture: "penombre_texture_bleu_argente",
+                      edge: "#84b3e3",
+                      material: "glass",
+                      font: "Cattedrale",
+                      system: "penombre-sans",
                     }
                   } else {
-                    newDice.dice[0].options.appearance =
-                    {
-                      colorset: "penombre2",
-                      foreground: '#ffffff',
+                    newDice.dice[0].options.appearance = {
+                      colorset: "penombre-bleu",
+                      foreground: "#ffffff",
                       background: "#84b3e3",
-                      texture: 'water',
-                      edge: '#84b3e3',
-                      material: 'glass',
-                      font: 'Cattedrale',
-                      system: "penombre"
+                      texture: "water",
+                      edge: "#84b3e3",
+                      material: "glass",
+                      font: "Cattedrale",
+                      system: "penombre-sans",
                     }
                   }
                 }
               }
             } else {
-            newDice.dice[0].options.appearance = { system: "standard" }
+              newDice.dice[0].options.appearance = { system: "standard" }
             }
           }
-          // Fin d'ajout MMFO
 
           newRolls.push(newDice)
           roll.dice[dieIndex].results[resultIndex].result = parseInt(newDice.result)
