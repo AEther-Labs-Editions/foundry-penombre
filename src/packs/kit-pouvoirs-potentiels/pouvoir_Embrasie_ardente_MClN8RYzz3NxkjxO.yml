@@ -1,0 +1,29 @@
+type: pouvoir
+name: Embrasie ardente
+_id: MClN8RYzz3NxkjxO
+img: systems/penombre/assets/icons/pouvoir.webp
+system:
+  utilise: false
+  description: >-
+    <h1>Embrasie ardente</h1><p><em>Pour lui, l’embrasie est plus qu’une
+    impulsion, c’est un vertige.</em></p><p>Lors de l’utilisation d’embrasie, le
+    nombre de succès d’une action réalisée par Phobos augmente de 2.</p>
+  type: naissance
+effects: []
+folder: m9M0QYBctzJtZPI0
+sort: 200000
+ownership:
+  default: 0
+  xu8p7UMcYrInjBEg: 3
+flags: {}
+_stats:
+  compendiumSource: Actor.nFJHc5zFwQCFcssw.Item.dM5Pewhoyhq6r34W
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1766219616569
+  modifiedTime: 1766219616569
+  lastModifiedBy: xu8p7UMcYrInjBEg
+_key: '!items!MClN8RYzz3NxkjxO'

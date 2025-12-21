@@ -1,4 +1,5 @@
 import { SYSTEM } from "./module/config/system.mjs"
+
 globalThis.SYSTEM = SYSTEM // Expose the SYSTEM object to the global scope
 
 export * as elements from "./module/elements/_module.mjs"
@@ -192,4 +193,277 @@ Hooks.on("hotbarDrop", (bar, data, slot) => {
     helpers.Macros.create(data, slot)
     return false
   }
+})
+
+/**
+ * Adds custom dice to Dice So Nice!.
+ */
+Hooks.once("diceSoNiceReady", (dice3d) => {
+  // Called once the module is ready to listen to new rolls and display 3D animations.
+  // dice3d: Main class, instantiated and ready to use.
+
+  /**
+   * Add a colorset (theme)
+   * @param {Object} colorset (see below)
+   * @param {string} mode= "default","preferred"
+   * The "mode" parameter have 2 modes :
+   * - "default" only register the colorset
+   * - "preferred" apply the colorset if the player didn't already change his dice appearance for this world.
+   */
+
+  dice3d.addColorset(
+    {
+      name: "penombre-beige",
+      description: "Pénombre (Beige)",
+      category: "Pénombre",
+      foreground: "#7d3339",
+      background: "#b3944f",
+      texture: "water",
+      edge: "#b3944f",
+      material: "glass",
+      font: "Cattedrale",
+    },
+    "preferred",
+  )
+  dice3d.addColorset(
+    {
+      name: "penombre-bleu",
+      description: "Pénombre (Bleu)",
+      category: "Pénombre",
+      foreground: "#ffffff",
+      background: "#84b3e3",
+      texture: "water",
+      edge: "#84b3e3",
+      material: "glass",
+      font: "Cattedrale",
+    },
+    "default",
+  )
+
+  dice3d.addTexture("penombre_texture_beige_et_dore", {
+    name: "Pénombre (Beige)",
+    composite: "source-in",
+    source: "systems/penombre/assets/dice-so-nice/penombre_texture_beige_et_dore.webp",
+    bump: "", // Can be empty
+  })
+  dice3d.addTexture("penombre_texture_bleu_argente", {
+    name: "Pénombre (Bleu)",
+    composite: "source-in",
+    source: "systems/penombre/assets/dice-so-nice/penombre_texture_bleu_argente.webp",
+    bump: "", // Can be empty
+  })
+
+  dice3d.addSystem({ id: "penombre-sans", name: "Pénombre sans symboles sur d6" }, "default")
+  dice3d.addDicePreset({
+    type: "d2",
+    labels: [
+      "1", // 1 - pile
+      "2", // 2 - face
+    ],
+    system: "penombre-sans",
+  })
+  dice3d.addDicePreset({
+    type: "d4",
+    labels: [
+      "systems/penombre/assets/dice-so-nice/d-fumble.webp", // 1 - fumble
+      "0", // 2
+      "0", // 3
+      "systems/penombre/assets/dice-so-nice/d-1-envolee.webp", // 4 - 1 succes - 1 envolee
+    ],
+    system: "penombre-sans",
+  })
+  dice3d.addDicePreset({
+    type: "d6",
+    labels: [
+      "0", // 1 pas de fumble
+      "0", // 2
+      "0", // 3
+      "1", // 4 - 1 succes
+      "1", // 5 - 1 succes
+      "1", // 6 - 1 succes - pas d'envolee
+    ],
+    system: "penombre-sans",
+  })
+  dice3d.addDicePreset({
+    type: "d8",
+    labels: [
+      // Les images .webp commençant par "d8-" on une plus grande marge que celle commençant par "d-"
+      "systems/penombre/assets/dice-so-nice/d8-fumble.webp", // 1 fumble
+      "0", // 2
+      "0", // 3
+      "1", // 4 - 1 succes
+      "1", // 5 - 1 succes
+      "1", // 6 - 1 succes
+      "1", // 7 - 1 succes
+      "systems/penombre/assets/dice-so-nice/d8-2-envolee.webp", // 8 - 2 succes - 2 envolee
+    ],
+    system: "penombre-sans",
+  })
+  dice3d.addDicePreset({
+    type: "d10",
+    labels: [
+      "systems/penombre/assets/dice-so-nice/d8-fumble.webp", // 1 fumble
+      "0", // 2
+      "0", // 3
+      "1", // 4 - 1 succes
+      "1", // 5 - 1 succes
+      "1", // 6 - 1 succes
+      "1", // 7 - 1 succes
+      "2", // 8 - 2 succes
+      "2", // 9 - 2 succes
+      "systems/penombre/assets/dice-so-nice/d8-2-envolee.webp", // 10 - 2 succes - 2 envolee
+    ],
+    system: "penombre-sans",
+  })
+  dice3d.addDicePreset({
+    type: "d12",
+    labels: [
+      "systems/penombre/assets/dice-so-nice/d8-fumble.webp", // 1 fumble
+      "0", // 2
+      "0", // 3
+      "1", // 4 - 1 succes
+      "1", // 5 - 1 succes
+      "1", // 6 - 1 succes
+      "1", // 7 - 1 succes
+      "2", // 8 - 2 succes
+      "2", // 9 - 2 succes
+      "2", // 10 - 2 succes
+      "2", // 11 - 2 succes
+      "systems/penombre/assets/dice-so-nice/d8-3-envolee.webp", // 12 - 3 succes - 3 envolee
+    ],
+    system: "penombre-sans",
+  })
+  dice3d.addDicePreset({
+    type: "d20",
+    labels: [
+      "systems/penombre/assets/dice-so-nice/d8-fumble.webp", // 1 fumble
+      "0", // 2
+      "0", // 3
+      "1", // 4 - 1 succes
+      "1", // 5 - 1 succes
+      "1", // 6 - 1 succes
+      "1", // 7 - 1 succes
+      "2", // 8 - 2 succes
+      "2", // 9 - 2 succes
+      "2", // 10 - 2 succes
+      "2", // 11 - 2 succes
+      "3", // 12 - 3 succes
+      "3", // 13 - 3 succes
+      "3", // 14 - 3 succes
+      "3", // 15 - 3 succes
+      "4", // 16 - 4 succes
+      "4", // 17 - 4 succes
+      "4", // 18 - 4 succes
+      "4", // 19 - 4 succes
+      "systems/penombre/assets/dice-so-nice/d8-merveille.webp", // 20 - 5 succes - merveille
+    ],
+    system: "penombre-sans",
+  })
+
+  dice3d.addSystem({ id: "penombre", name: "Pénombre avec symboles" }, "preferred")
+  dice3d.addDicePreset({
+    type: "d2",
+    labels: [
+      "1", // 1 - pile
+      "2", // 2 - face
+    ],
+    system: "penombre",
+  })
+  dice3d.addDicePreset({
+    type: "d4",
+    labels: [
+      "systems/penombre/assets/dice-so-nice/d-fumble.webp", // 1 - fumble
+      "0", // 2
+      "0", // 3
+      "systems/penombre/assets/dice-so-nice/d-1-envolee.webp", // 4 - 1 succes - 1 envolee
+    ],
+    system: "penombre",
+  })
+  dice3d.addDicePreset({
+    type: "d6",
+    labels: [
+      "systems/penombre/assets/dice-so-nice/d-fumble.webp", // 1 fumble
+      "0", // 2
+      "0", // 3
+      "1", // 4 - 1 succes
+      "1", // 5 - 1 succes
+      "systems/penombre/assets/dice-so-nice/d-1-envolee.webp", // 6 - 1 succes - 1 envolee
+    ],
+    system: "penombre",
+  })
+  dice3d.addDicePreset({
+    type: "d8",
+    labels: [
+      // Les images .webp commençant par "d8-" on une plus grande marge que celle commençant par "d-"
+      "systems/penombre/assets/dice-so-nice/d8-fumble.webp", // 1 fumble
+      "0", // 2
+      "0", // 3
+      "1", // 4 - 1 succes
+      "1", // 5 - 1 succes
+      "1", // 6 - 1 succes
+      "1", // 7 - 1 succes
+      "systems/penombre/assets/dice-so-nice/d8-2-envolee.webp", // 8 - 2 succes - 2 envolee
+    ],
+    system: "penombre",
+  })
+  dice3d.addDicePreset({
+    type: "d10",
+    labels: [
+      "systems/penombre/assets/dice-so-nice/d8-fumble.webp", // 1 fumble
+      "0", // 2
+      "0", // 3
+      "1", // 4 - 1 succes
+      "1", // 5 - 1 succes
+      "1", // 6 - 1 succes
+      "1", // 7 - 1 succes
+      "2", // 8 - 2 succes
+      "2", // 9 - 2 succes
+      "systems/penombre/assets/dice-so-nice/d8-2-envolee.webp", // 10 - 2 succes - 2 envolee
+    ],
+    system: "penombre",
+  })
+  dice3d.addDicePreset({
+    type: "d12",
+    labels: [
+      "systems/penombre/assets/dice-so-nice/d8-fumble.webp", // 1 fumble
+      "0", // 2
+      "0", // 3
+      "1", // 4 - 1 succes
+      "1", // 5 - 1 succes
+      "1", // 6 - 1 succes
+      "1", // 7 - 1 succes
+      "2", // 8 - 2 succes
+      "2", // 9 - 2 succes
+      "2", // 10 - 2 succes
+      "2", // 11 - 2 succes
+      "systems/penombre/assets/dice-so-nice/d8-3-envolee.webp", // 12 - 3 succes - 3 envolee
+    ],
+    system: "penombre",
+  })
+  dice3d.addDicePreset({
+    type: "d20",
+    labels: [
+      "systems/penombre/assets/dice-so-nice/d8-fumble.webp", // 1 fumble
+      "0", // 2
+      "0", // 3
+      "1", // 4 - 1 succes
+      "1", // 5 - 1 succes
+      "1", // 6 - 1 succes
+      "1", // 7 - 1 succes
+      "2", // 8 - 2 succes
+      "2", // 9 - 2 succes
+      "2", // 10 - 2 succes
+      "2", // 11 - 2 succes
+      "3", // 12 - 3 succes
+      "3", // 13 - 3 succes
+      "3", // 14 - 3 succes
+      "3", // 15 - 3 succes
+      "4", // 16 - 4 succes
+      "4", // 17 - 4 succes
+      "4", // 18 - 4 succes
+      "4", // 19 - 4 succes
+      "systems/penombre/assets/dice-so-nice/d8-merveille.webp", // 20 - 5 succes - merveille
+    ],
+    system: "penombre",
+  })
 })

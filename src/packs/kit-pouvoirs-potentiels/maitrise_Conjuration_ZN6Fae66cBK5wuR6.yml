@@ -1,0 +1,66 @@
+type: maitrise
+name: Conjuration
+_id: ZN6Fae66cBK5wuR6
+img: systems/penombre/assets/icons/maitrise.webp
+system:
+  slug: ''
+  description: >-
+    <p><strong>Pour préparer son effet magique, un conjurateur
+    doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>tracer les contours
+    d’une ombre</strong> à l’aide d’un pinceau et d’une encre de conjuration
+    (officielle ou frelatée).</p></li></ul><p><strong>Cette action le fait
+    entrer en résonance avec…</strong></p><h6>Harmonique :
+    nuit</h6><p><strong>Ce faisant, il…</strong></p><h6>Action
+    magique</h6><ul><li><p><strong>pactise avec le démon né de cette
+    ombre.</strong> Le démon exécute la mission qui lui est confiée, et le
+    conjurateur le rémunère. La connivence qui les unit doit être enregistrée
+    auprès d’un advocatus diaboli et coûte d’autant plus cher que l’effet
+    souhaité est élevé.</p></li></ul><p><strong>Avec un effet magique de niveau
+    ? …</strong></p><p><strong>il conjure un démon capable par exemple
+    de…</strong></p><ol><li><p><strong>identifier</strong> un effet magique
+    d’art noir (conjuration, omnium, prisme) ; chercher un objet ; transporter
+    une charge ou un message, y compris en volant ; faire une bêtise, ou
+    divertir ; faire peur ; mordre, griffer, piétiner ; servir de réveil chaque
+    matin ; donner une propriété nouvelle à un objet ;
+    etc.</p></li><li><p><strong>mener</strong> une enquête sommaire ; servir
+    d’escorte ou de garde ; se faire discret, se camoufler et épier ; utiliser
+    une arme ou un objet sophistiqué ;
+    etc.</p></li><li><p><strong>filer</strong> un suspect ; comprendre des
+    indices ; servir de partenaire lors d’une réception mondaine ; pratiquer un
+    art ; partager des connaissances sur un sujet précis ; se battre comme un
+    soldat ; etc.le et gagner en assurance ; prendre le contrôle mental d’une
+    bête sauvage ; etc.</p></li><li><p><strong>mener</strong> une troupe ;
+    échafauder un complot ; séduire ; pratiquer une maîtrise magique, sauf la
+    conjuration ; disposer d’un savoir unique ; usurper une identité ; se battre
+    comme un duelliste renommé ; etc.</p></li><li><p><strong>exceller</strong>
+    dans tous les domaines ; conjurer de nouveaux démons ;
+    etc.</p></li></ol><p><strong>Mais attention, il risque également
+    de…</strong></p><h6>Incident magique</h6><ul><li><p><strong>laisser la porte
+    ouverte.</strong> L’ombre laisse s’échapper bien plus que le démon appelé.
+    Cela peut valoir au conjurateur une sanction de la part du Clergé obscur.
+    Qui a fui ?</p><p><strong>NOTE :</strong> Dans le tableau de difficultés des
+    effets magiques (voir p. 26), les paramètres « cible » et « distance » font
+    référence à la cible désignée au démon pour sa mission. Par exemple, le
+    démon doit agir sur un individu, un groupe, ou une foule, ou infiltrer un
+    bâtiment qui peut être proche, ou lointain.</p></li></ul>
+  harmonique: nuit
+  niveau: 1
+  prerequis: tracer le contour d’une ombre
+effects: []
+folder: t49tGfu5DfWzhLvI
+sort: 300000
+ownership:
+  default: 0
+  xu8p7UMcYrInjBEg: 3
+flags: {}
+_stats:
+  compendiumSource: Actor.7CcGfb05ll4Gvgyw.Item.5N4i9Yfb27Cl6Qry
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1765943368698
+  modifiedTime: 1765943368698
+  lastModifiedBy: xu8p7UMcYrInjBEg
+_key: '!items!ZN6Fae66cBK5wuR6'

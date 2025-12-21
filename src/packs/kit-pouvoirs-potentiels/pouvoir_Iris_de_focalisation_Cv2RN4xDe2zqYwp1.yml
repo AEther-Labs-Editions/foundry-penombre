@@ -1,0 +1,30 @@
+type: pouvoir
+name: Iris de focalisation
+_id: Cv2RN4xDe2zqYwp1
+img: systems/penombre/assets/icons/pouvoir.webp
+system:
+  utilise: false
+  description: >-
+    <h1>Iris de focalisation</h1><p><em>Mon sens de l’observation est d’utilité
+    publique !</em></p><p>Lors d’une action d’étincelle de Nuane, votre dé
+    harmonique affiche sa valeur maximale.</p>
+  type: naissance
+effects: []
+folder: AXh0qA385ZNM1DD8
+sort: 200000
+ownership:
+  default: 0
+  6qbNUhuoJ67e6dmf: 3
+  xu8p7UMcYrInjBEg: 3
+flags: {}
+_stats:
+  compendiumSource: Actor.EZCgkxXexF0pRf7Y.Item.aGXCDKWCRRbzoPZI
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1765936279126
+  modifiedTime: 1765936279126
+  lastModifiedBy: xu8p7UMcYrInjBEg
+_key: '!items!Cv2RN4xDe2zqYwp1'

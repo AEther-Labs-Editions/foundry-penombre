@@ -1,0 +1,65 @@
+type: maitrise
+name: Onyxium
+img: systems/penombre/assets/icons/maitrise.webp
+system:
+  description: >-
+    <p><strong>Pour préparer son effet magique, un artiste de l’onyxium
+    doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>onyxer</strong>. Il
+    inocule à une cible, ou s’inocule à lui-même de l’onyx contenu dans un objet
+    consommable, ou une boulette de drogue noire.</p></li></ul><p>Cette action
+    le fait entrer en résonance avec…</p><h6>Harmonique : nuit</h6><p><strong>Ce
+    faisant, il…</strong></p><h6>Action magique</h6><ul><li><p><strong>confère à
+    l’onyxé des capacités démoniaque</strong>s, ou les moyens de générer une
+    émanation d’onyx soudaine qui pollue et modifie l’environnement et les
+    organismes.</p></li></ul><p><strong>Avec un effet magique de niveau ?
+    …</strong></p><p><strong>il parvient par exemple
+    à…</strong></p><ol><li><p><strong>identifier</strong> un effet magique d’art
+    noir (conjuration, onyxium, prisme) ; répandre une nappe d’onyx effrayante ;
+    détecter l’onyx, la porte noire ou le conjurateur le plus proche ; voir dans
+    le noir, développer des sens, une force, une souplesse et une prestance
+    démoniaques ; etc.</p></li><li><p><strong>espionner</strong> les Abysses ,
+    un démon connu ou un haut diable ; créer une zone d’ombre ; épier depuis une
+    ombre comme s’il s’y trouvait ; imprégner une zone d’onyx qui englue et
+    entrave ceux qui la parcourent ; parler d’égal à égal avec un démon ;
+    etc.</p></li><li><p><strong>obliger</strong> un démon à une action, ou une
+    mission ; utiliser les ombres comme des portails pour se déplacer ; acquérir
+    un appendice démoniaque temporaire (griffes, ailes, queue préhensile…) ;
+    projeter de l’onyx sous forme de flèches ou de crachats ; commander à une
+    ombre de manipuler un objet, ou attaquer ;
+    etc.</p></li><li><p><strong>provoquer</strong> une crise de folie ou de
+    paranoïa ; animer son ombre comme un double, et la jouer ; transmuter une
+    matière en onyx, ou en ombre ; prendre le contrôle mental d’un démon ;
+    etc.</p></li><li><p><strong>devenir</strong> définitivement un démon ou un
+    horla ; provoquer une immense marée d’onyx corrosive ; ouvrir une nouvelle
+    porte noire ; etc.</p></li></ol><p><strong>Mais attention, il risque
+    également de…</strong></p><h6>Incident
+    magique</h6><ul><li><p><strong>souffrir du mal des Abysses.</strong>
+    L’onyxium provoque toujours chez l’onyxé l’apparition d’une complication de
+    niveau 3 : une crise de manque, un vertige, la sensation de devenir un démon
+    ou un haut diable. L’onyxé peut par ailleurs être envahi de pensées
+    démoniaques parasites, ou voir apparaître sur son corps un stigmate abyssal.
+    Cette addiction peut aussi le pousser à tout négliger pour trouver une
+    nouvelle dose.</p></li></ul>
+  harmonique: nuit
+  niveau: 1
+  prerequis: onyxer
+  slug: ''
+effects: []
+folder: t49tGfu5DfWzhLvI
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1765951205982
+  modifiedTime: 1765951205982
+  lastModifiedBy: xu8p7UMcYrInjBEg
+ownership:
+  default: 0
+  xu8p7UMcYrInjBEg: 3
+_id: G0RPT3Y0rBdDOBal
+sort: 0
+_key: '!items!G0RPT3Y0rBdDOBal'

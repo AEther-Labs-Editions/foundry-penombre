@@ -1,0 +1,37 @@
+type: pouvoir
+name: Gigantisme
+_id: ZkZuaC4nVwbYgDXi
+img: systems/penombre/assets/icons/pouvoir.webp
+system:
+  utilise: false
+  description: >-
+    <h1>Gigantisme</h1><p><em>On n’est jamais si grand que quand on se sent à
+    nouveau libre. Ou l’inverse.</em></p><p>Aussi longtemps que Nuane le
+    souhaite, sa taille redevient celle d’un géant (6 à 8 mètres). Les objets
+    sont inutilisables sous cette forme.</p><p>Jusqu’au premier coucher de
+    soleil, le nombre de succès de toutes ses actions d’étincelle et de nature
+    augmente de 2, mais celui de toutes ses actions d’esprit, d’âme et de nuit
+    diminue de 1.</p><p>De plus, chaque fois qu’elle réalise une merveille (p.
+    31 du kit), son joueur peut lui choisir un nouveau pouvoir dans la liste
+    suivante, ou augmenter de 1 sa valeur de conscience.</p><ul><li><p>Iris de
+    focalisation</p></li><li><p>Colosse tonitruant</p></li></ul>
+  type: naissance
+effects: []
+folder: AXh0qA385ZNM1DD8
+sort: 100000
+ownership:
+  default: 0
+  6qbNUhuoJ67e6dmf: 3
+  xu8p7UMcYrInjBEg: 3
+flags: {}
+_stats:
+  compendiumSource: Actor.EZCgkxXexF0pRf7Y.Item.JH8QonoEyn5xS6wZ
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1765936279126
+  modifiedTime: 1765936279126
+  lastModifiedBy: xu8p7UMcYrInjBEg
+_key: '!items!ZkZuaC4nVwbYgDXi'

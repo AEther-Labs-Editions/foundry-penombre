@@ -1,0 +1,66 @@
+type: maitrise
+name: Obscurantisme
+img: systems/penombre/assets/icons/maitrise.webp
+system:
+  description: >-
+    <p><strong>Pour préparer son effet magique, un obscurantiste
+    doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>torturer son danseur
+    asservi</strong>, physiquement ou mentalement, en s’aidant de lanières
+    cloutées, de chaînes, de cages et d’étaux (chaque obscurantiste développe
+    son style, à vous de trouver celui de Mangrove
+    !)</p></li></ul><p><strong>Cette action le fait entrer en résonance
+    avec…</strong></p><h6>Harmonique : étincelle</h6><p><strong>Ce faisant,
+    il…</strong></p><h6>Action magique</h6><ul><li><p><strong>fait produire à
+    son danseur asservi des étincelles</strong> bleu nuit ou noires, vectrices
+    d’une magie cauchemardesque et destructrice.</p></li></ul><p><strong>Avec un
+    effet magique de niveau ? …</strong></p><p><strong>il parvient par exemple
+    à…</strong></p><ol><li><p><strong>identifier un effet de magie
+    cryptogrammique</strong> (éclipsisme, jornisme, obscurantisme) ; projeter
+    des traits de feu, d’acide, ou d’onyx ; aveugler, rendre sourd ou muet en
+    oblitérant l’organe concerné le temps d’une scène ; effrayer ; provoquer un
+    spasme, ou une douleur ; créer l’obscurité, ou voir dans les ténèbres ;
+    etc.</p></li><li><p><strong>amadouer un démon ;</strong> créer une nuée de
+    vermine ; créer un champ de force ou un bouclier ténébreux ; affaiblir ou
+    accroître des capacités physiques ; susciter la colère et la haine ; forcer
+    à fuir ; etc.</p></li><li><p><strong>imposer une action à un démon
+    ;</strong> créer une illusion cauchemardesque ; tétaniser un danseur ;
+    disparaître et réapparaître ailleurs ; créer un piège d’onyx pour entraver
+    ou blesser ; faire attaquer les ombres ; maudire ;
+    etc.</p></li><li><p><strong>prendre le contrôle mental d’un démon ;</strong>
+    imposer une action à un mortel ; voyager par les ombres ; ravager et briser
+    l’esprit de manière indétectable ; amputer dans une gerbe de sang ;
+    etc.</p></li><li><p><strong>prendre le contrôle mental d’un mortel
+    ;</strong> transférer la vie tel un vampire ; soulager et guérir dans un
+    hurlement de souffrance ; tuer à coup sûr ;
+    etc.</p></li></ol><p><strong>Mais attention, il risque également
+    de…</strong></p><h6>Incident magique</h6><ul><li><p><strong>regretter un
+    accès de violence.</strong> Cette chose délicate semble si fragile, et il
+    est si facile d’en extraire un petit supplément de puissance…
+    L’obscurantiste ressent dans sa chair les sévices qu’il inflige ; un
+    personnage proche est pris de douleurs, de nausées, ou s’évanouit ; le
+    danseur développe une marque étrange, séquelle des tortures qu’il a subies ;
+    le danseur s’affale, inanimé jusqu’au prochain repos ; le danseur meurt,
+    terrifié, exsangue ou désarticulé ; etc.</p></li></ul>
+  harmonique: etincelle
+  niveau: 1
+  prerequis: torturer son danseur asservi
+  slug: ''
+effects: []
+folder: t49tGfu5DfWzhLvI
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1765953693815
+  modifiedTime: 1765953693830
+  lastModifiedBy: xu8p7UMcYrInjBEg
+ownership:
+  default: 0
+  xu8p7UMcYrInjBEg: 3
+_id: GknbkJinBjESqJbX
+sort: 25000
+_key: '!items!GknbkJinBjESqJbX'

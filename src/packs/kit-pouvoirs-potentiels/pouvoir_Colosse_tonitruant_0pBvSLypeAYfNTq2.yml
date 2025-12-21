@@ -1,0 +1,31 @@
+type: pouvoir
+name: Colosse tonitruant
+_id: 0pBvSLypeAYfNTq2
+img: systems/penombre/assets/icons/pouvoir.webp
+system:
+  utilise: false
+  description: >-
+    <h1>Colosse tonitruant</h1><p><em>Mes rires dérident les murs des palais
+    !</em></p><p>Le temps d’une scène, toute action de Nuane pour attirer
+    l’attention par la voix devient automatique. De plus, le nombre de succès de
+    toutes ses actions d’étincelle augmente de 1.</p>
+  type: naissance
+effects: []
+folder: AXh0qA385ZNM1DD8
+sort: 150000
+ownership:
+  default: 0
+  6qbNUhuoJ67e6dmf: 3
+  xu8p7UMcYrInjBEg: 3
+flags: {}
+_stats:
+  compendiumSource: Actor.EZCgkxXexF0pRf7Y.Item.du0nG2KFiSjrepUu
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1765936279126
+  modifiedTime: 1765936279126
+  lastModifiedBy: xu8p7UMcYrInjBEg
+_key: '!items!0pBvSLypeAYfNTq2'

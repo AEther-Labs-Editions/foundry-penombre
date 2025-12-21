@@ -1,0 +1,20 @@
+type: Item
+folder: null
+name: Pouvoirs de Geysir
+color: '#a4653d'
+sorting: a
+_id: zEYIYQqCE0AVnpOY
+description: ''
+sort: 700000
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1765936260677
+  modifiedTime: 1765936260688
+  lastModifiedBy: xu8p7UMcYrInjBEg
+_key: '!folders!zEYIYQqCE0AVnpOY'

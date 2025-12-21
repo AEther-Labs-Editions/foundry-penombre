@@ -353,7 +353,7 @@ items:
       default: 0
     _key: '!actors.items!oQfBudRYF5bAOKQP.45bZdS6PUegQbMB4'
   - type: maitrise
-    name: Obscurantiste
+    name: Obscurantisme
     _id: z7xckgLN4L33u6XF
     img: systems/penombre/assets/icons/maitrise.webp
     system:
@@ -407,10 +407,11 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '13.351'
       systemId: penombre
       systemVersion: '0'
-      lastModifiedBy: null
+      lastModifiedBy: xu8p7UMcYrInjBEg
+      modifiedTime: 1765951340788
     ownership:
       default: 0
     _key: '!actors.items!oQfBudRYF5bAOKQP.z7xckgLN4L33u6XF'
@@ -421,14 +422,14 @@ _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.348'
+  coreVersion: '13.351'
   systemId: penombre
   systemVersion: '0'
   createdTime: 1757150754023
-  modifiedTime: 1759088608647
-  lastModifiedBy: 6qbNUhuoJ67e6dmf
+  modifiedTime: 1765939795292
+  lastModifiedBy: xu8p7UMcYrInjBEg
 _id: oQfBudRYF5bAOKQP
-sort: 400000
+sort: 800000
 ownership:
   default: 0
   6qbNUhuoJ67e6dmf: 3

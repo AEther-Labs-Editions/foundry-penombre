@@ -77,7 +77,7 @@ system:
 prototypeToken:
   name: Ackbar
   displayName: 0
-  actorLink: false
+  actorLink: true
   width: 1
   height: 1
   texture:
@@ -95,7 +95,7 @@ prototypeToken:
   lockRotation: false
   rotation: 0
   alpha: 1
-  disposition: -1
+  disposition: 1
   displayBars: 0
   bar1:
     attribute: null
@@ -124,7 +124,7 @@ prototypeToken:
       min: 0
       max: 1
   sight:
-    enabled: false
+    enabled: true
     range: 0
     angle: 360
     visionMode: basic
@@ -162,7 +162,7 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
-      type: peuple
+      type: naissance
       description: >-
         <h1>Spectacle vivant</h1><p><em>Être satyre c'est offrir à l'Harmonde un
         spectacle quotidien.</em></p><p>Le temps d'une action spectaculaire,
@@ -180,13 +180,13 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '13.351'
       systemId: penombre
-      systemVersion: '0'
+      systemVersion: '#{VERSION}#'
       lastModifiedBy: null
     ownership:
       default: 0
-    _key: '!actors.items!M6ted8636DNMiLp5.iiPkEFrzVLyHDK3e'
+    _key: '!actors.items!4GMzCvvA8UBx3rLn.iiPkEFrzVLyHDK3e'
   - name: Charmeur
     type: atout
     _id: g7eL0g7ciiieqI8y
@@ -202,13 +202,13 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '13.351'
       systemId: penombre
-      systemVersion: '0'
+      systemVersion: '#{VERSION}#'
       lastModifiedBy: null
     ownership:
       default: 0
-    _key: '!actors.items!M6ted8636DNMiLp5.g7eL0g7ciiieqI8y'
+    _key: '!actors.items!4GMzCvvA8UBx3rLn.g7eL0g7ciiieqI8y'
   - name: Avec classe et panache
     type: atout
     _id: DUJM1usKqQJEaOND
@@ -224,13 +224,13 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '13.351'
       systemId: penombre
-      systemVersion: '0'
+      systemVersion: '#{VERSION}#'
       lastModifiedBy: null
     ownership:
       default: 0
-    _key: '!actors.items!M6ted8636DNMiLp5.DUJM1usKqQJEaOND'
+    _key: '!actors.items!4GMzCvvA8UBx3rLn.DUJM1usKqQJEaOND'
   - name: Cela m'aide à comprendre ou retrouver mon passé
     type: atout
     _id: lLzuINPmj1jpfuyG
@@ -246,13 +246,13 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '13.351'
       systemId: penombre
-      systemVersion: '0'
+      systemVersion: '#{VERSION}#'
       lastModifiedBy: null
     ownership:
       default: 0
-    _key: '!actors.items!M6ted8636DNMiLp5.lLzuINPmj1jpfuyG'
+    _key: '!actors.items!4GMzCvvA8UBx3rLn.lLzuINPmj1jpfuyG'
   - name: Ma lyre abyssale
     type: atout
     _id: 46p2ljCHjBUikHUV
@@ -268,13 +268,13 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '13.351'
       systemId: penombre
-      systemVersion: '0'
+      systemVersion: '#{VERSION}#'
       lastModifiedBy: null
     ownership:
       default: 0
-    _key: '!actors.items!M6ted8636DNMiLp5.46p2ljCHjBUikHUV'
+    _key: '!actors.items!4GMzCvvA8UBx3rLn.46p2ljCHjBUikHUV'
   - name: Mon professeur était un fin bretteur
     type: atout
     _id: WuvmNn9OnbeVnC6E
@@ -290,13 +290,13 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '13.351'
       systemId: penombre
-      systemVersion: '0'
+      systemVersion: '#{VERSION}#'
       lastModifiedBy: null
     ownership:
       default: 0
-    _key: '!actors.items!M6ted8636DNMiLp5.WuvmNn9OnbeVnC6E'
+    _key: '!actors.items!4GMzCvvA8UBx3rLn.WuvmNn9OnbeVnC6E'
   - type: maitrise
     name: Accord
     _id: 5Ic6MUSIOhqKTizh
@@ -346,6 +346,7 @@ items:
       harmonique: ame
       niveau: 1
       prerequis: jouer de la lyre
+      slug: ''
     effects: []
     folder: null
     sort: 0
@@ -354,13 +355,13 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '13.351'
       systemId: penombre
-      systemVersion: '0'
+      systemVersion: '#{VERSION}#'
       lastModifiedBy: null
     ownership:
       default: 0
-    _key: '!actors.items!M6ted8636DNMiLp5.5Ic6MUSIOhqKTizh'
+    _key: '!actors.items!4GMzCvvA8UBx3rLn.5Ic6MUSIOhqKTizh'
   - type: maitrise
     name: Brigue
     _id: vvDY6v4GCtWJKc84
@@ -410,6 +411,7 @@ items:
       harmonique: nature
       niveau: 2
       prerequis: s'arracher ou se tresser une mèche de poils
+      slug: ''
     effects: []
     folder: null
     sort: 0
@@ -418,13 +420,13 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '13.351'
       systemId: penombre
-      systemVersion: '0'
+      systemVersion: '#{VERSION}#'
       lastModifiedBy: null
     ownership:
       default: 0
-    _key: '!actors.items!M6ted8636DNMiLp5.vvDY6v4GCtWJKc84'
+    _key: '!actors.items!4GMzCvvA8UBx3rLn.vvDY6v4GCtWJKc84'
   - type: pouvoir
     name: Plaisir grisant
     _id: Mg0Rj0WAV8o2MDFt
@@ -446,13 +448,13 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '13.351'
       systemId: penombre
-      systemVersion: '0'
+      systemVersion: '#{VERSION}#'
       lastModifiedBy: null
     ownership:
       default: 0
-    _key: '!actors.items!M6ted8636DNMiLp5.Mg0Rj0WAV8o2MDFt'
+    _key: '!actors.items!4GMzCvvA8UBx3rLn.Mg0Rj0WAV8o2MDFt'
   - type: pouvoir
     name: Triomphe
     _id: RJFWJAbPmjoDJcaO
@@ -473,28 +475,29 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '13.351'
       systemId: penombre
-      systemVersion: '0'
+      systemVersion: '#{VERSION}#'
       lastModifiedBy: null
     ownership:
       default: 0
-    _key: '!actors.items!M6ted8636DNMiLp5.RJFWJAbPmjoDJcaO'
+    _key: '!actors.items!4GMzCvvA8UBx3rLn.RJFWJAbPmjoDJcaO'
 effects: []
 flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.348'
+  coreVersion: '13.351'
   systemId: penombre
-  systemVersion: '0'
-  createdTime: 1757150754023
-  modifiedTime: 1759088533376
-  lastModifiedBy: 6qbNUhuoJ67e6dmf
-_id: M6ted8636DNMiLp5
-sort: 100000
+  systemVersion: '#{VERSION}#'
+  createdTime: 1766221661793
+  modifiedTime: 1766221678310
+  lastModifiedBy: xu8p7UMcYrInjBEg
 ownership:
   default: 0
-  6qbNUhuoJ67e6dmf: 3
-_key: '!actors!M6ted8636DNMiLp5'
+  xu8p7UMcYrInjBEg: 3
+  ORErmDAzpGl565fD: 3
+_id: 4GMzCvvA8UBx3rLn
+sort: 400000
+_key: '!actors!4GMzCvvA8UBx3rLn'

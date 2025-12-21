@@ -10,22 +10,23 @@ system:
     contact visuel avec un personnage imprime dans son esprit un ordre simple
     auquel il obéit. Cet ordre ne peut pas le mettre en danger, et ne dure que
     le temps d’une scène.</p>
-  type: peuple
+  type: naissance
 effects: []
 folder: NxgKbO9Dq94f1TSA
 sort: 200000
 ownership:
   default: 0
   6qbNUhuoJ67e6dmf: 3
+  xu8p7UMcYrInjBEg: 3
 flags: {}
 _stats:
   compendiumSource: Actor.FKX0hHU8tV6OekPm.Item.qGfnqopDq8PRX7uq
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.347'
+  coreVersion: '13.351'
   systemId: penombre
-  systemVersion: '0'
-  createdTime: 1757151276783
-  modifiedTime: 1757151276783
-  lastModifiedBy: 6qbNUhuoJ67e6dmf
+  systemVersion: '#{VERSION}#'
+  createdTime: 1766222002823
+  modifiedTime: 1766222002823
+  lastModifiedBy: xu8p7UMcYrInjBEg
 _key: '!items!WPk2DchHsULcr5I4'

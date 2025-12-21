@@ -1,0 +1,20 @@
+type: Item
+folder: null
+name: Pouvoirs de Tétras
+color: '#a4653d'
+sorting: a
+_id: IxCLMJlUPYUhtQ3N
+description: ''
+sort: 1400000
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1766222007595
+  modifiedTime: 1766222007606
+  lastModifiedBy: xu8p7UMcYrInjBEg
+_key: '!folders!IxCLMJlUPYUhtQ3N'

@@ -1,0 +1,66 @@
+type: maitrise
+name: Geste
+img: systems/penombre/assets/icons/maitrise.webp
+system:
+  slug: ''
+  description: >-
+    <p><strong>Pour préparer son effet magique, un harmoniste de la geste
+    doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>utiliser sa
+    voix</strong> pour crier, déclamer, réciter, murmurer, ou marmonner un texte
+    poétique.</p></li></ul><p><strong>Cette action le fait entrer en résonance
+    avec…</strong></p><h6>Harmonique : âme</h6><p><strong>Ce faisant,
+    il…</strong></p><h6>Action magique</h6><ul><li><p><strong>altère le cours du
+    temps.</strong> Il peut, comme avec les flots bouillonnants d’une rivière,
+    lire les marques du passé sur ses berges, deviner les remous à venir,
+    accélérer ou ralentir son écoulement, faire ricocher un objet à sa surface,
+    etc.</p></li></ul><p><strong>Avec un effet magique de niveau ?
+    …</strong></p><p><strong>il parvient par exemple
+    à…</strong></p><ol><li><p><strong>identifier</strong> un effet magique d’art
+    ancien (accord, décorum, geste) ; restaurer ou vieillir un objet ; provoquer
+    une érosion accélérée ; exacerber la peur de la mort en la montrant ;
+    etc.</p></li><li><p><strong>voir le passé ou l’avenir proche ;</strong>
+    ralentir ou accélérer un mouvement ; faire fluctuer le temps autour d’un
+    personnage ; comprendre et parler un dialecte inconnu ; soulager la fatigue
+    en faisant oublier au corps le temps qui passe ;
+    etc.</p></li><li><p><strong>faire apparaître</strong> une vision du passé
+    proche, ou de l’avenir proche ; voir le passé lointain d’un lieu ou d’un
+    objet ; obtenir une information historique précise ; parler avec un mort ;
+    formuler une prophétie ; etc.</p></li><li><p><strong>figer dans le temps
+    ;</strong> rajeunir ou faire vieillir le corps d’un personnage ; entrevoir
+    une destinée ; nécroser et scléroser la chair ; éviter la mort ; invoquer le
+    souvenir d’un personnage du passé et contrôler ses actions ;
+    etc.</p></li><li><p><strong>dissimuler</strong> dans le temps et ressurgir
+    au même endroit, plus tard ; se déplacer instantanément vers un espace
+    lointain par un repli du temps ; réincarner le passé comme si c’était le
+    présent ; avancer ou revenir de quelques instants dans le temps ; modifier
+    le temps pour accélérer une guérison ; etc.</p></li></ol><p><strong>Mais
+    attention, il risque également de…</strong></p><h6>Incident
+    magique</h6><ul><li><p><strong>sombrer dans la mélancolie.</strong> À la
+    moindre hésitation, l’harmoniste se retrouve emporté par les flots du temps,
+    ballotté par les voix muettes de l’Harmonde et écorché par les écueils de
+    son destin incertain. L’harmoniste fait des rêves persistants ; l’harmoniste
+    est hanté par une présence ou des souvenirs étrangers ; l’harmoniste est
+    pris de doute, voire plonge dans une profonde dépression ;
+    etc.</p></li></ul>
+  harmonique: ame
+  niveau: 1
+  prerequis: utiliser sa voix
+effects: []
+folder: t49tGfu5DfWzhLvI
+ownership:
+  default: 0
+  xu8p7UMcYrInjBEg: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1765946220517
+  modifiedTime: 1765946220524
+  lastModifiedBy: xu8p7UMcYrInjBEg
+_id: UjVnOOV07b7wlvGO
+sort: 262500
+_key: '!items!UjVnOOV07b7wlvGO'

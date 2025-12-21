@@ -1,0 +1,30 @@
+type: pouvoir
+name: Chevreau des abysses
+_id: fNYa63J0BKAPD1YI
+img: systems/penombre/assets/icons/pouvoir.webp
+system:
+  utilise: false
+  description: >-
+    <p><em>Mes deux cuisses animales au poil long s’achèvent sur des sabots
+    noircis et taillés en pointe.</em></p><p>Une action de Tétras pour
+    cabrioler, escalader, ou parcourir une longue distance devient
+    automatique.</p>
+  type: naissance
+effects: []
+folder: IxCLMJlUPYUhtQ3N
+sort: 200000
+ownership:
+  default: 0
+  xu8p7UMcYrInjBEg: 3
+flags: {}
+_stats:
+  compendiumSource: Actor.zmaO58a96eDAyOb3.Item.9sxZj7doSD7YX3Cl
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1766222007600
+  modifiedTime: 1766222007600
+  lastModifiedBy: xu8p7UMcYrInjBEg
+_key: '!items!fNYa63J0BKAPD1YI'

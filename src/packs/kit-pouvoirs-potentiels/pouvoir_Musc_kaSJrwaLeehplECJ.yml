@@ -1,0 +1,29 @@
+type: pouvoir
+name: Musc
+_id: kaSJrwaLeehplECJ
+img: systems/penombre/assets/icons/pouvoir.webp
+system:
+  utilise: false
+  description: >-
+    <p><em>Tu doutes de moi ? Attends… Laisse-moi m’ébrouer…</em></p><p>Le temps
+    d’une scène, Geysir émet des phéromones augmentant de 1 le nombre de succès
+    de toutes ses actions pour convaincre, séduire ou dominer.</p>
+  type: naissance
+effects: []
+folder: zEYIYQqCE0AVnpOY
+sort: 200000
+ownership:
+  default: 0
+  xu8p7UMcYrInjBEg: 3
+flags: {}
+_stats:
+  compendiumSource: Actor.5QcXKsO6EhthchrC.Item.Kq8qvH9hfKzH4PPw
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1765936260681
+  modifiedTime: 1765936260681
+  lastModifiedBy: xu8p7UMcYrInjBEg
+_key: '!items!kaSJrwaLeehplECJ'

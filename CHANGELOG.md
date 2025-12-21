@@ -1,10 +1,20 @@
+1.4.0
+- Ajout des dés virtuels Pénombre visibles sous Dice So Nice! (utilisation configurable dans les paramètres du système)
+- Ajout des dés virtuels Pénombre dans le Guide d'utilisation du système
+- Ajout de la fiche Tétras (faune) en tant qu'Éminence (compendium 'Kit - Prétirés')
+- Ajout de la fiche Tétras (satyre) en tant qu'Éminence (compendium 'Kit - Prétirés')
+- Ajout de la fiche Geysir en tant qu'Éminence (compendium 'Kit - Prétirés')
+- Ajout de la fiche Phobos en tant qu'Éminence (compendium 'Kit - Prétirés')
+- Correction de la fiche Nuane
+- Ajout des fiches de synthèse des maîtrises magiques sous forme d'objets (compendium 'Kit - Pouvoirs potentiels')
+
 1.3.2
 - Configuration par défaut du token d'une éminence : Lié à l'acteur, Disposition Amicale, Vision activée, Mode de vision standard
 - CombatTracker : gestion de l'initiative par drag'n'drop
   - Suppression de l'affichage de l'initiative
   - Suppression de boutons de relance de l'initiative
   - Au démarrage du combat, les éminences sont avant les adversaires
-- Le Guide du système dans les Journaux fait maintenant mention de la gestion du CombatTracker
+- Le Guide d'utilisation Foundry VTT dans les Journaux fait maintenant mention de la gestion du CombatTracker
 
 1.3.1
 - Correction du bug rendant le premier atout gratuit pour les autres éminences participant à une action collégiale
@@ -33,7 +43,7 @@ Version complète du système débloquée sur GameOnTabletop : les autres styles
 - Le drop d'harmonique dans barre de raccourcis se fait à partir du dé et non plus du nom de l'harmonique
 
 1.2.0
-- Support de Popout. Limitation : la molette de la souris ne marche pas pour les dépenses automatiques de jetons.
+- Support de Popout. Limitation : la molette de la souris ne marche pas pour les dépenses automatiques de jetons
 - Ajout du drop d'harmonique dans la barre de raccourcis
 
 1.1.2
@@ -46,13 +56,13 @@ Version complète du système débloquée sur GameOnTabletop : les autres styles
 
 1.1.1
 - Correction de Fausse note (1 au dé) et Envolée (max au dé) qui était sur le dé merveilleux au lieu du dé harmonique
-- Guide utilisateur : clarification et correction de quelques fautes d'orthographe
+- Guide d'utilisation Foundry VTT dans les Journaux : clarification et correction de quelques fautes d'orthographe
 
 1.1.0
 - Mise à jour des tokens des prétirés (merci Prêtre)
 - Amélioration pour permettre l'édition de l'image des acteurs par le module Tokenizer
-- Jet collégial et Dice So Nice : les dés du jet initial sont affichés en même temps que le dernier participant.
-- Ajout de compléments dans le guide utilisateur
+- Jet collégial et Dice So Nice! : les dés du jet initial sont affichés en même temps que le dernier participant
+- Ajout de compléments dans le guide d'utilisation Foundry VTT dans les Journaux
 - Mise à jour des Github actions pour un déploiement automatique dans Foundry
 
 1.0.0
