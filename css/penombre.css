@@ -1417,21 +1417,28 @@ body.theme-light .penombre.adversaire .adversaire-content {
 }
 .penombre.maitrise .maitrise-content .standard-form {
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .penombre.maitrise .maitrise-content .standard-form .auto {
   overflow-y: auto;
-  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 .penombre.maitrise .maitrise-content .standard-form .auto .editor {
   overflow-y: auto;
+  flex: 1;
   min-height: 250px;
 }
 .penombre.maitrise .maitrise-content .standard-form .auto .editor .editor-container {
   min-height: 250px;
+  height: 100%;
 }
 .penombre.maitrise .maitrise-content .standard-form .logo-frame {
   display: flex;
   justify-content: space-between;
+  flex-shrink: 0;
 }
 .penombre.maitrise .maitrise-content .standard-form .logo-frame .logo-img {
   width: 80px;

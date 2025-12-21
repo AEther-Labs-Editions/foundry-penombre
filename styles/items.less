@@ -61,14 +61,23 @@
 
     .maitrise-content .standard-form {
       height: 100%;
+      display: flex;
+      flex-direction: column;
+      
       .auto {
         overflow-y: auto;
-        height: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        
         .editor {
-            overflow-y: auto;
-            min-height: 250px;
+          overflow-y: auto;
+          flex: 1;
+          min-height: 250px;
+          
           .editor-container {
             min-height: 250px;
+            height: 100%;
           }
         }
       }
@@ -76,6 +85,7 @@
       .logo-frame {
         display: flex;
         justify-content: space-between;
+        flex-shrink: 0;
 
         .logo-img {
         width: 80px;
