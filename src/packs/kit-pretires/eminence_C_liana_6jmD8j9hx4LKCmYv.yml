@@ -21,16 +21,16 @@ system:
     nuit:
       valeur: d10
   conscience:
-    valeur: 5
+    valeur: 7
     max: 7
     jetons:
-      - statut: inactif
       - statut: actif
       - statut: actif
       - statut: actif
       - statut: actif
-      - statut: perdu
-      - statut: perdu
+      - statut: actif
+      - statut: actif
+      - statut: actif
       - statut: perdu
       - statut: perdu
       - statut: perdu
@@ -436,7 +436,7 @@ _stats:
   systemId: penombre
   systemVersion: '#{VERSION}#'
   createdTime: 1766221663679
-  modifiedTime: 1766221678310
+  modifiedTime: 1766312287633
   lastModifiedBy: xu8p7UMcYrInjBEg
 ownership:
   default: 0

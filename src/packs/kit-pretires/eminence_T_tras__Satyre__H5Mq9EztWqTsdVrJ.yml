@@ -22,7 +22,7 @@ system:
       valeur: d10
   conscience:
     valeur: 7
-    max: 9
+    max: 7
     jetons:
       - statut: actif
       - statut: actif
@@ -503,7 +503,7 @@ _stats:
   systemId: penombre
   systemVersion: '#{VERSION}#'
   createdTime: 1766221680008
-  modifiedTime: 1766221680008
+  modifiedTime: 1766312277323
   lastModifiedBy: xu8p7UMcYrInjBEg
 _id: H5Mq9EztWqTsdVrJ
 sort: 0
