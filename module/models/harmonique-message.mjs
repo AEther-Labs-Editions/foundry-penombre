@@ -94,6 +94,10 @@ export default class HarmoniqueMessageData extends BaseMessageData {
 
           const hasDifficulte = roll.options.difficulte !== ""
           const isSuccess = hasDifficulte && totalSucces >= roll.options.difficulte
+          let succesManquants = 0
+          if (hasDifficulte && !isSuccess) {
+            succesManquants = Math.max(roll.options.difficulte - totalSucces, 0)
+          }
 
           // Si le joueur est à l'origine du message, affichage du résultat du roll dans Dice So Nice (visible par tous les joueurs)
           if (game.modules.get("dice-so-nice")?.active && game.user.id === this.parent.author.id && message.system.dsnDejaTraite === false) {
@@ -108,10 +112,11 @@ export default class HarmoniqueMessageData extends BaseMessageData {
             nbSucces,
             autresSucces,
             hasAutresSucces: autresSucces.length > 0,
-            totalSucces: totalSucces,
-            hasDifficulte: hasDifficulte,
+            totalSucces,
+            hasDifficulte,
             difficulte: roll.options.difficulte,
-            isSuccess: isSuccess,
+            isSuccess,
+            succesManquants,
           })
           rollResultOtherDiv.innerHTML = content
         }
