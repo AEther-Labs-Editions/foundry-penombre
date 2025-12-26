@@ -253,7 +253,7 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
     bump: "", // Can be empty
   })
 
-  dice3d.addSystem({ id: "penombre-sans", name: "Pénombre sans symboles sur d6" }, "default")
+  dice3d.addSystem({ id: "penombre-sans", name: "Pénombre sans symboles sur d6", group: "Pénombre" }, "default")
   dice3d.addDicePreset({
     type: "d2",
     labels: [
@@ -360,7 +360,7 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
     system: "penombre-sans",
   })
 
-  dice3d.addSystem({ id: "penombre", name: "Pénombre avec symboles" }, "preferred")
+  dice3d.addSystem({ id: "penombre", name: "Pénombre avec symboles", group: "Pénombre" }, "default")
   dice3d.addDicePreset({
     type: "d2",
     labels: [
