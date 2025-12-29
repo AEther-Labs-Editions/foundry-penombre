@@ -1,0 +1,30 @@
+type: pouvoir
+name: Des souvenirs en commun
+_id: za6gYQ02DMhFCD6S
+img: systems/penombre/assets/icons/pouvoir.webp
+system:
+  utilise: false
+  description: >-
+    <h1>Des souvenirs en commun</h1><p><em>Nos esprits sont connectés, il nous
+    suffit de lire en eux.</em></p><p>Le temps d’une action, Rio Rim laisse un
+    autre personnage proche utiliser un de ses atouts, ou se sert de l’un des
+    siens. Chacun lit un souvenir dans la mémoire de l’autre.</p>
+  type: naissance
+effects: []
+folder: qVct9xQnKUe30M0h
+sort: 200000
+ownership:
+  default: 0
+  xu8p7UMcYrInjBEg: 3
+flags: {}
+_stats:
+  compendiumSource: Actor.5x572RDqcoefZNWX.Item.bHtXbUKnUeigmc0T
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1767004720285
+  modifiedTime: 1767004720285
+  lastModifiedBy: xu8p7UMcYrInjBEg
+_key: '!items!za6gYQ02DMhFCD6S'

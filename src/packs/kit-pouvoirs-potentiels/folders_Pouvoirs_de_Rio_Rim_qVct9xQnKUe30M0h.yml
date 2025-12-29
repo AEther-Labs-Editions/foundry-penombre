@@ -1,0 +1,20 @@
+type: Item
+folder: null
+name: Pouvoirs de Rio Rim
+color: '#a4653d'
+sorting: a
+_id: qVct9xQnKUe30M0h
+description: ''
+sort: 1500000
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1767004720280
+  modifiedTime: 1767004720293
+  lastModifiedBy: xu8p7UMcYrInjBEg
+_key: '!folders!qVct9xQnKUe30M0h'
