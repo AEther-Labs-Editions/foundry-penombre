@@ -22,7 +22,7 @@ system:
       valeur: d10
   conscience:
     valeur: 7
-    max: 7
+    max: 9
     jetons:
       - statut: actif
       - statut: actif
@@ -72,7 +72,7 @@ system:
     peste: ''
   atouts: []
   maitrises: []
-  description: Engeance de Pan et de Lilith
+  description: engeance de Pan et de Lilith
 prototypeToken:
   name: Tétras (homme)
   displayName: 0
@@ -177,7 +177,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!H5Mq9EztWqTsdVrJ.DWKTJlEwebkkveyT'
+    _key: '!actors.items!GydFc7LKi7gaD7ch.DWKTJlEwebkkveyT'
   - type: atout
     name: Des cornes ? Une couronne, et autant de dagues !
     _id: 6X2W22oziPWiUSJf
@@ -200,7 +200,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!H5Mq9EztWqTsdVrJ.6X2W22oziPWiUSJf'
+    _key: '!actors.items!GydFc7LKi7gaD7ch.6X2W22oziPWiUSJf'
   - type: atout
     name: Des histoires abyssales, en veux-tu ? En voilà !
     _id: iMGlw53nklZ3Gogu
@@ -223,7 +223,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!H5Mq9EztWqTsdVrJ.iMGlw53nklZ3Gogu'
+    _key: '!actors.items!GydFc7LKi7gaD7ch.iMGlw53nklZ3Gogu'
   - type: atout
     name: Un sang d’encre
     _id: REzbCjigjGAMwLcE
@@ -246,7 +246,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!H5Mq9EztWqTsdVrJ.REzbCjigjGAMwLcE'
+    _key: '!actors.items!GydFc7LKi7gaD7ch.REzbCjigjGAMwLcE'
   - type: atout
     name: Om me dit trouble
     _id: MMMte3eIV87dhPbx
@@ -269,7 +269,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!H5Mq9EztWqTsdVrJ.MMMte3eIV87dhPbx'
+    _key: '!actors.items!GydFc7LKi7gaD7ch.MMMte3eIV87dhPbx'
   - type: maitrise
     name: Geste
     _id: tkbqDZHRR6IAlkGy
@@ -333,7 +333,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!H5Mq9EztWqTsdVrJ.tkbqDZHRR6IAlkGy'
+    _key: '!actors.items!GydFc7LKi7gaD7ch.tkbqDZHRR6IAlkGy'
   - type: maitrise
     name: Conjuration
     _id: 5N4i9Yfb27Cl6Qry
@@ -399,7 +399,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!H5Mq9EztWqTsdVrJ.5N4i9Yfb27Cl6Qry'
+    _key: '!actors.items!GydFc7LKi7gaD7ch.5N4i9Yfb27Cl6Qry'
   - name: Spectacle vivant
     type: pouvoir
     img: systems/penombre/assets/icons/pouvoir.webp
@@ -431,7 +431,7 @@ items:
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
     _id: W6JqZUg9BRq4NW48
-    _key: '!actors.items!H5Mq9EztWqTsdVrJ.W6JqZUg9BRq4NW48'
+    _key: '!actors.items!GydFc7LKi7gaD7ch.W6JqZUg9BRq4NW48'
   - type: pouvoir
     name: Bouc émissaire
     _id: QNEctBMrinQ7QD3o
@@ -461,7 +461,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!H5Mq9EztWqTsdVrJ.QNEctBMrinQ7QD3o'
+    _key: '!actors.items!GydFc7LKi7gaD7ch.QNEctBMrinQ7QD3o'
   - type: pouvoir
     name: Chevreau des abysses
     _id: fNYa63J0BKAPD1YI
@@ -489,7 +489,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!H5Mq9EztWqTsdVrJ.fNYa63J0BKAPD1YI'
+    _key: '!actors.items!GydFc7LKi7gaD7ch.fNYa63J0BKAPD1YI'
 effects: []
 ownership:
   default: 0
@@ -502,9 +502,9 @@ _stats:
   coreVersion: '13.351'
   systemId: penombre
   systemVersion: '#{VERSION}#'
-  createdTime: 1766221680008
-  modifiedTime: 1766312277323
+  createdTime: 1767010538186
+  modifiedTime: 1767010538244
   lastModifiedBy: xu8p7UMcYrInjBEg
-_id: H5Mq9EztWqTsdVrJ
-sort: 0
-_key: '!actors!H5Mq9EztWqTsdVrJ'
+_id: GydFc7LKi7gaD7ch
+sort: 200000
+_key: '!actors!GydFc7LKi7gaD7ch'

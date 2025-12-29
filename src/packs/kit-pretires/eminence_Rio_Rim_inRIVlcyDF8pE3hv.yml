@@ -72,7 +72,7 @@ system:
     peste: ''
   atouts: []
   maitrises: []
-  description: Miroir, mon beau miroir
+  description: miroir, mon beau miroir
 prototypeToken:
   name: Rio Rim
   displayName: 0
@@ -177,7 +177,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!IAlaCxKOwsQzHWS9.LqKXGLCOAhttbEUj'
+    _key: '!actors.items!inRIVlcyDF8pE3hv.LqKXGLCOAhttbEUj'
   - type: atout
     name: Miroir, miroir…
     _id: Ds95cysgPK3juJWa
@@ -200,7 +200,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!IAlaCxKOwsQzHWS9.Ds95cysgPK3juJWa'
+    _key: '!actors.items!inRIVlcyDF8pE3hv.Ds95cysgPK3juJWa'
   - type: atout
     name: Trésor des gouvernantes
     _id: ISOo7guF7Dvas6w6
@@ -223,7 +223,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!IAlaCxKOwsQzHWS9.ISOo7guF7Dvas6w6'
+    _key: '!actors.items!inRIVlcyDF8pE3hv.ISOo7guF7Dvas6w6'
   - type: atout
     name: Petit pantin de bois
     _id: 8PB4U0cQ8w5FIqC2
@@ -246,7 +246,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!IAlaCxKOwsQzHWS9.8PB4U0cQ8w5FIqC2'
+    _key: '!actors.items!inRIVlcyDF8pE3hv.8PB4U0cQ8w5FIqC2'
   - type: atout
     name: Reflet de ma mère
     _id: hixRIHnQay6Ze5YU
@@ -269,7 +269,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!IAlaCxKOwsQzHWS9.hixRIHnQay6Ze5YU'
+    _key: '!actors.items!inRIVlcyDF8pE3hv.hixRIHnQay6Ze5YU'
   - type: maitrise
     name: Éclipsisme
     img: systems/penombre/assets/icons/maitrise.webp
@@ -341,7 +341,7 @@ items:
       default: 0
       xu8p7UMcYrInjBEg: 3
     _id: utQSRHkKCOJCdxCb
-    _key: '!actors.items!IAlaCxKOwsQzHWS9.utQSRHkKCOJCdxCb'
+    _key: '!actors.items!inRIVlcyDF8pE3hv.utQSRHkKCOJCdxCb'
   - type: pouvoir
     name: Âme dominante
     _id: XgtNz61Ho7h4R34P
@@ -378,7 +378,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!IAlaCxKOwsQzHWS9.XgtNz61Ho7h4R34P'
+    _key: '!actors.items!inRIVlcyDF8pE3hv.XgtNz61Ho7h4R34P'
   - type: pouvoir
     name: Des souvenirs en commun
     _id: bHtXbUKnUeigmc0T
@@ -407,7 +407,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!IAlaCxKOwsQzHWS9.bHtXbUKnUeigmc0T'
+    _key: '!actors.items!inRIVlcyDF8pE3hv.bHtXbUKnUeigmc0T'
   - type: pouvoir
     name: Projection astrale
     _id: cZNk0ausVBCL5lW6
@@ -438,7 +438,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!IAlaCxKOwsQzHWS9.cZNk0ausVBCL5lW6'
+    _key: '!actors.items!inRIVlcyDF8pE3hv.cZNk0ausVBCL5lW6'
 effects: []
 ownership:
   default: 0
@@ -451,9 +451,9 @@ _stats:
   coreVersion: '13.351'
   systemId: penombre
   systemVersion: '#{VERSION}#'
-  createdTime: 1767005082528
-  modifiedTime: 1767005082528
+  createdTime: 1767010533586
+  modifiedTime: 1767010538244
   lastModifiedBy: xu8p7UMcYrInjBEg
-_id: IAlaCxKOwsQzHWS9
-sort: 0
-_key: '!actors!IAlaCxKOwsQzHWS9'
+_id: inRIVlcyDF8pE3hv
+sort: 100000
+_key: '!actors!inRIVlcyDF8pE3hv'
