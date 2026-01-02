@@ -1,0 +1,33 @@
+type: pouvoir
+name: Projection astrale
+_id: zf3UuH4LiL1oYDmv
+img: systems/penombre/assets/icons/pouvoir.webp
+system:
+  utilise: false
+  description: >-
+    <h1>Projection astrale</h1><p><em>Ma conscience s’ébroue et se répand, à
+    tâtons puis de plus en plus vite.</em></p><p>Le temps d’une scène, Rio Rim
+    projette sa forme astrale hors de son corps, inerte le temps de la
+    projection. Ce spectre immatériel peut franchir murs et barreaux. Son rayon
+    d’action est d’environ un bâtiment. Lorsqu’il ou elle annule sa projection,
+    le nombre de succès de toutes ses actions d’esprit et d’âme diminue de 1
+    jusqu’au prochain repos.</p>
+  type: naissance
+effects: []
+folder: qVct9xQnKUe30M0h
+sort: 300000
+ownership:
+  default: 0
+  xu8p7UMcYrInjBEg: 3
+flags: {}
+_stats:
+  compendiumSource: Actor.5x572RDqcoefZNWX.Item.cZNk0ausVBCL5lW6
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1767004720285
+  modifiedTime: 1767004720285
+  lastModifiedBy: xu8p7UMcYrInjBEg
+_key: '!items!zf3UuH4LiL1oYDmv'

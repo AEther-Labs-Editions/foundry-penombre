@@ -1,0 +1,38 @@
+type: pouvoir
+name: Âme dominante
+_id: d1NQT5MQKM8aFxQR
+img: systems/penombre/assets/icons/pouvoir.webp
+system:
+  utilise: false
+  description: >-
+    <h1>Âme dominante</h1><p><em>Je serai toi.</em></p><p>Rio Rim prend le
+    contrôle, aussi longtemps qu’il ou elle le souhaite, d’un autre personnage
+    consentant ou épuisé qui lui est proche. Par la suite, il ou elle le
+    contrôle tant qu’il se trouve proche, et la coercition peut être relâchée
+    sans rompre le lien. Chaque lien avec un nouveau personnage diminue de 1 la
+    valeur de conscience maximale de Rio Rim, ce qui peut le ou la troubler,
+    l’épuiser, voire le ou la tuer. Rompre un lien est une action automatique
+    qui ne restaure pas la valeur de conscience maximale.</p><p>De plus, chaque
+    fois qu’il ou elle réalise une merveille (p. 31 du kit), son joueur peut lui
+    choisir un nouveau pouvoir dans la liste suivante, ou augmenter de 1 sa
+    valeur de conscience.</p><ul><li><p>Des souvenirs en
+    commun</p></li><li><p>Projection astrale</p></li></ul>
+  type: naissance
+effects: []
+folder: qVct9xQnKUe30M0h
+sort: 100000
+ownership:
+  default: 0
+  xu8p7UMcYrInjBEg: 3
+flags: {}
+_stats:
+  compendiumSource: Actor.5x572RDqcoefZNWX.Item.XgtNz61Ho7h4R34P
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1767004720285
+  modifiedTime: 1767004720285
+  lastModifiedBy: xu8p7UMcYrInjBEg
+_key: '!items!d1NQT5MQKM8aFxQR'

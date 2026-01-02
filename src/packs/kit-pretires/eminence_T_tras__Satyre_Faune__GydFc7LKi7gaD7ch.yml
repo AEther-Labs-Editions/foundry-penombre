@@ -1,5 +1,5 @@
 folder: null
-name: Tétras (Satyre)
+name: Tétras (Satyre/Faune)
 type: eminence
 img: systems/penombre/assets/portraits/tetras.webp
 system:
@@ -72,9 +72,9 @@ system:
     peste: ''
   atouts: []
   maitrises: []
-  description: Engeance de Pan et de Lilith
+  description: engeance de Pan et de Lilith
 prototypeToken:
-  name: Tétras (homme)
+  name: Tétras (homme/femme)
   displayName: 0
   actorLink: true
   width: 1
@@ -177,7 +177,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!H5Mq9EztWqTsdVrJ.DWKTJlEwebkkveyT'
+    _key: '!actors.items!GydFc7LKi7gaD7ch.DWKTJlEwebkkveyT'
   - type: atout
     name: Des cornes ? Une couronne, et autant de dagues !
     _id: 6X2W22oziPWiUSJf
@@ -200,7 +200,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!H5Mq9EztWqTsdVrJ.6X2W22oziPWiUSJf'
+    _key: '!actors.items!GydFc7LKi7gaD7ch.6X2W22oziPWiUSJf'
   - type: atout
     name: Des histoires abyssales, en veux-tu ? En voilà !
     _id: iMGlw53nklZ3Gogu
@@ -223,7 +223,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!H5Mq9EztWqTsdVrJ.iMGlw53nklZ3Gogu'
+    _key: '!actors.items!GydFc7LKi7gaD7ch.iMGlw53nklZ3Gogu'
   - type: atout
     name: Un sang d’encre
     _id: REzbCjigjGAMwLcE
@@ -246,7 +246,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!H5Mq9EztWqTsdVrJ.REzbCjigjGAMwLcE'
+    _key: '!actors.items!GydFc7LKi7gaD7ch.REzbCjigjGAMwLcE'
   - type: atout
     name: Om me dit trouble
     _id: MMMte3eIV87dhPbx
@@ -269,7 +269,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!H5Mq9EztWqTsdVrJ.MMMte3eIV87dhPbx'
+    _key: '!actors.items!GydFc7LKi7gaD7ch.MMMte3eIV87dhPbx'
   - type: maitrise
     name: Geste
     _id: tkbqDZHRR6IAlkGy
@@ -281,42 +281,43 @@ items:
         effet magique, Tétras
         doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>utiliser sa
         voix</strong> pour crier, déclamer, réciter, murmurer, ou marmonner un
-        texte poétique.</p></li></ul><p><strong>Ce faisant,
-        il…</strong></p><h6>Action magique</h6><ul><li><p><strong>altère le
-        cours du temps.</strong> Il peut, comme avec les flots bouillonnants
-        d’une rivière, lire les marques du passé sur ses berges, deviner les
-        remous à venir, accélérer ou ralentir son écoulement, faire ricocher un
-        objet à sa surface, etc.</p></li></ul><p><strong>Avec un effet magique
-        de niveau ? …</strong></p><p><strong>il parvient par exemple
-        à…</strong></p><ol><li><p><strong>identifier</strong> un effet magique
-        d’art ancien (accord, décorum, geste) ; restaurer ou vieillir un objet ;
-        provoquer une érosion accélérée ; exacerber la peur de la mort en la
-        montrant ; etc.</p></li><li><p><strong>voir le passé ou l’avenir proche
-        ;</strong> ralentir ou accélérer un mouvement ; faire fluctuer le temps
-        autour d’un personnage ; comprendre et parler un dialecte inconnu ;
-        soulager la fatigue en faisant oublier au corps le temps qui passe ;
-        etc.</p></li><li><p><strong>faire apparaître</strong> une vision du
-        passé proche, ou de l’avenir proche ; voir le passé lointain d’un lieu
-        ou d’un objet ; obtenir une information historique précise ; parler avec
-        un mort ; formuler une prophétie ; etc.</p></li><li><p><strong>figer
-        dans le temps ;</strong> rajeunir ou faire vieillir le corps d’un
-        personnage ; entrevoir une destinée ; nécroser et scléroser la chair ;
-        éviter la mort ; invoquer le souvenir d’un personnage du passé et
-        contrôler ses actions ; etc.</p></li><li><p><strong>dissimuler</strong>
-        dans le temps et ressurgir au même endroit, plus tard ; se déplacer
-        instantanément vers un espace lointain par un repli du temps ;
-        réincarner le passé comme si c’était le présent ; avancer ou revenir de
-        quelques instants dans le temps ; modifier le temps pour accélérer une
-        guérison ; etc.</p></li></ol><p><strong>Mais attention, il risque
-        également de…</strong></p><h6>Incident
-        magique</h6><ul><li><p><strong>sombrer dans la mélancolie.</strong> À la
-        moindre hésitation, Tétras se retrouve emporté par les flots du temps,
-        ballotté par les voix muettes de l’Harmonde et écorché par les écueils
-        de son destin incertain. il fait des rêves persistants ; il est hanté
-        par une présence ou des souvenirs étrangers ; il est pris de doute,
+        texte poétique.</p></li></ul><p><strong>Ce faisant, il ou
+        elle…</strong></p><h6>Action magique</h6><ul><li><p><strong>altère le
+        cours du temps.</strong> Il ou elle peut, comme avec les flots
+        bouillonnants d’une rivière, lire les marques du passé sur ses berges,
+        deviner les remous à venir, accélérer ou ralentir son écoulement, faire
+        ricocher un objet à sa surface, etc.</p></li></ul><p><strong>Avec un
+        effet magique de niveau ? …</strong></p><p><strong>il ou elle parvient
+        par exemple à…</strong></p><ol><li><p><strong>identifier</strong> un
+        effet magique d’art ancien (accord, décorum, geste) ; restaurer ou
+        vieillir un objet ; provoquer une érosion accélérée ; exacerber la peur
+        de la mort en la montrant ; etc.</p></li><li><p><strong>voir le passé ou
+        l’avenir proche ;</strong> ralentir ou accélérer un mouvement ; faire
+        fluctuer le temps autour d’un personnage ; comprendre et parler un
+        dialecte inconnu ; soulager la fatigue en faisant oublier au corps le
+        temps qui passe ; etc.</p></li><li><p><strong>faire apparaître</strong>
+        une vision du passé proche, ou de l’avenir proche ; voir le passé
+        lointain d’un lieu ou d’un objet ; obtenir une information historique
+        précise ; parler avec un mort ; formuler une prophétie ;
+        etc.</p></li><li><p><strong>figer dans le temps ;</strong> rajeunir ou
+        faire vieillir le corps d’un personnage ; entrevoir une destinée ;
+        nécroser et scléroser la chair ; éviter la mort ; invoquer le souvenir
+        d’un personnage du passé et contrôler ses actions ;
+        etc.</p></li><li><p><strong>dissimuler</strong> dans le temps et
+        ressurgir au même endroit, plus tard ; se déplacer instantanément vers
+        un espace lointain par un repli du temps ; réincarner le passé comme si
+        c’était le présent ; avancer ou revenir de quelques instants dans le
+        temps ; modifier le temps pour accélérer une guérison ;
+        etc.</p></li></ol><p><strong>Mais attention, il ou elle risque également
+        de…</strong></p><h6>Incident magique</h6><ul><li><p><strong>sombrer dans
+        la mélancolie.</strong> À la moindre hésitation, Tétras se retrouve
+        emporté(e) par les flots du temps, ballotté(e) par les voix muettes de
+        l’Harmonde et écorché(e) par les écueils de son destin incertain. il ou
+        elle fait des rêves persistants ; il ou elle est hanté(e) par une
+        présence ou des souvenirs étrangers ; il ou elle est pris(e) de doute,
         voire plonge dans une profonde dépression ; etc.</p></li></ul>
       harmonique: ame
-      niveau: 2
+      niveau: 1
       prerequis: se lancer dans une tirade
     effects: []
     folder: null
@@ -332,8 +333,9 @@ items:
       coreVersion: '13.351'
       systemId: penombre
       systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
-    _key: '!actors.items!H5Mq9EztWqTsdVrJ.tkbqDZHRR6IAlkGy'
+      lastModifiedBy: xu8p7UMcYrInjBEg
+      modifiedTime: 1767012904348
+    _key: '!actors.items!GydFc7LKi7gaD7ch.tkbqDZHRR6IAlkGy'
   - type: maitrise
     name: Conjuration
     _id: 5N4i9Yfb27Cl6Qry
@@ -345,15 +347,16 @@ items:
         magique, Tétras
         doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>tracer les
         contours d’une ombre</strong> à l’encre de son
-        sang.</p></li></ul><p><strong>Cette action le fait entrer en résonance
-        avec…</strong></p><h6>Harmonique : nuit</h6><p><strong>Ce faisant,
-        il…</strong></p><h6>Action magique</h6><ul><li><p><strong>pactise avec
-        le démon né de cette ombre.</strong> Le démon exécute la mission qui lui
-        est confiée, et le conjurateur le rémunère. La connivence qui les unit
-        doit être enregistrée auprès d’un advocatus diaboli et coûte d’autant
-        plus cher que l’effet souhaité est élevé.</p></li></ul><p><strong>Avec
-        un effet magique de niveau ? …</strong></p><p><strong>il conjure un
-        démon capable par exemple
+        sang.</p></li></ul><p><strong>Cette action le ou la fait entrer en
+        résonance avec…</strong></p><h6>Harmonique : nuit</h6><p><strong>Ce
+        faisant, il ou elle…</strong></p><h6>Action
+        magique</h6><ul><li><p><strong>pactise avec le démon né de cette
+        ombre.</strong> Le démon exécute la mission qui lui est confiée, et le
+        conjurateur le rémunère. La connivence qui les unit doit être
+        enregistrée auprès d’un advocatus diaboli et coûte d’autant plus cher
+        que l’effet souhaité est élevé.</p></li></ul><p><strong>Avec un effet
+        magique de niveau ? …</strong></p><p><strong>il ou elle conjure un démon
+        capable par exemple
         de…</strong></p><ol><li><p><strong>identifier</strong> un effet magique
         d’art noir (conjuration, omnium, prisme) ; chercher un objet ;
         transporter une charge ou un message, y compris en volant ; faire une
@@ -372,7 +375,7 @@ items:
         identité ; se battre comme un duelliste renommé ;
         etc.</p></li><li><p><strong>exceller</strong> dans tous les domaines ;
         conjurer de nouveaux démons ; etc.</p></li></ol><p><strong>Mais
-        attention, il risque également de…</strong></p><h6>Incident
+        attention, il ou elle risque également de…</strong></p><h6>Incident
         magique</h6><ul><li><p><strong>laisser la porte ouverte.</strong>
         L’ombre laisse s’échapper bien plus que le démon appelé. Cela peut
         valoir au conjurateur une sanction de la part du Clergé obscur. Qui a
@@ -398,8 +401,9 @@ items:
       coreVersion: '13.351'
       systemId: penombre
       systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
-    _key: '!actors.items!H5Mq9EztWqTsdVrJ.5N4i9Yfb27Cl6Qry'
+      lastModifiedBy: xu8p7UMcYrInjBEg
+      modifiedTime: 1767013038736
+    _key: '!actors.items!GydFc7LKi7gaD7ch.5N4i9Yfb27Cl6Qry'
   - name: Spectacle vivant
     type: pouvoir
     img: systems/penombre/assets/icons/pouvoir.webp
@@ -410,10 +414,11 @@ items:
         <h1>Spectacle vivant</h1><p><em>Être satyre c'est offrir à l'Harmonde un
         spectacle quotidien.</em></p><p>Le temps d'une action spectaculaire,
         utilisez gratuitement le D20 merveilleux en plus du dé
-        harmonique.</p><p>De plus, chaque fois qu’il réalise une merveille (p.
-        31 du kit), son joueur peut lui choisir un nouveau pouvoir dans la liste
-        suivante, ou augmenter de 1 sa valeur de conscience.</p><ul><li><p>Bouc
-        émissaire</p></li><li><p>Chevreau des abysses</p></li></ul>
+        harmonique.</p><p>De plus, chaque fois qu’il ou elle réalise une
+        merveille (p. 31 du kit), son joueur peut lui choisir un nouveau pouvoir
+        dans la liste suivante, ou augmenter de 1 sa valeur de
+        conscience.</p><ul><li><p>Bouc émissaire</p></li><li><p>Chevreau des
+        abysses</p></li></ul>
     effects: []
     folder: IxCLMJlUPYUhtQ3N
     sort: 300000
@@ -429,9 +434,10 @@ items:
       coreVersion: '13.351'
       systemId: penombre
       systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
+      lastModifiedBy: xu8p7UMcYrInjBEg
+      modifiedTime: 1767012729744
     _id: W6JqZUg9BRq4NW48
-    _key: '!actors.items!H5Mq9EztWqTsdVrJ.W6JqZUg9BRq4NW48'
+    _key: '!actors.items!GydFc7LKi7gaD7ch.W6JqZUg9BRq4NW48'
   - type: pouvoir
     name: Bouc émissaire
     _id: QNEctBMrinQ7QD3o
@@ -461,7 +467,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!H5Mq9EztWqTsdVrJ.QNEctBMrinQ7QD3o'
+    _key: '!actors.items!GydFc7LKi7gaD7ch.QNEctBMrinQ7QD3o'
   - type: pouvoir
     name: Chevreau des abysses
     _id: fNYa63J0BKAPD1YI
@@ -489,7 +495,7 @@ items:
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
-    _key: '!actors.items!H5Mq9EztWqTsdVrJ.fNYa63J0BKAPD1YI'
+    _key: '!actors.items!GydFc7LKi7gaD7ch.fNYa63J0BKAPD1YI'
 effects: []
 ownership:
   default: 0
@@ -502,9 +508,9 @@ _stats:
   coreVersion: '13.351'
   systemId: penombre
   systemVersion: '#{VERSION}#'
-  createdTime: 1766221680008
-  modifiedTime: 1766312277323
+  createdTime: 1767010538186
+  modifiedTime: 1767016206922
   lastModifiedBy: xu8p7UMcYrInjBEg
-_id: H5Mq9EztWqTsdVrJ
-sort: 0
-_key: '!actors!H5Mq9EztWqTsdVrJ'
+_id: GydFc7LKi7gaD7ch
+sort: 200000
+_key: '!actors!GydFc7LKi7gaD7ch'

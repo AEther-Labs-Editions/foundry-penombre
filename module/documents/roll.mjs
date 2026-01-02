@@ -275,7 +275,7 @@ export default class PenombreRoll extends Roll {
                 edge: "#84b3e3",
                 material: "glass",
                 font: "Cattedrale",
-                system: "penombre-sans",
+                system: "penombre",
               }
             } else {
               roll.dice[i].options.appearance = {
@@ -286,7 +286,7 @@ export default class PenombreRoll extends Roll {
                 edge: "#84b3e3",
                 material: "glass",
                 font: "Cattedrale",
-                system: "penombre-sans",
+                system: "penombre",
               }
             }
           }
@@ -788,7 +788,7 @@ export default class PenombreRoll extends Roll {
                       edge: "#84b3e3",
                       material: "glass",
                       font: "Cattedrale",
-                      system: "penombre-sans",
+                      system: "penombre",
                     }
                   } else {
                     newDice.dice[0].options.appearance = {
@@ -799,7 +799,7 @@ export default class PenombreRoll extends Roll {
                       edge: "#84b3e3",
                       material: "glass",
                       font: "Cattedrale",
-                      system: "penombre-sans",
+                      system: "penombre",
                     }
                   }
                 }
