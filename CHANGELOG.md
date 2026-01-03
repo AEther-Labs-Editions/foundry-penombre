@@ -9,6 +9,7 @@
 - Ajout de la fiche de l'éminence Rio Rim dans le compendium 'Kit - Prétirés'
 - Correction de la fiche de Nuane
 - Ajout des fiches de synthèse des maîtrises magiques dans le compendium 'Kit - Pouvoirs potentiels'
+- Correction du bug sur l'image des items qui n'est pas sauvegardée
 
 1.3.2
 - Configuration par défaut du token d'une éminence : Lié à l'acteur, Disposition Amicale, Vision activée, Mode de vision standard
