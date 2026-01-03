@@ -476,12 +476,12 @@
         "hint": "Nombre maximum de jetons disponibles dans la Réserve Collégiale."
       },
       "desSpeciaux": {
-        "name": "Activer les dés virtuels Pénombre",
-        "hint": "Utiliser les dés virtuels spéciaux pour Pénombre depuis le module Dice So Nice! (si activé)."
+        "name": "Activer les dés Pénombre",
+        "hint": "Utiliser les dés spéciaux Pénombre quand le module Dice So Nice est activé."
       },
       "desSpeciauxTexture": {
-        "name": "Activer les textures des dés virtuels Pénombre",
-        "hint": "Utiliser les textures des dés virtuels spéciaux pour Pénombre depuis le module Dice So Nice! (si activé)."
+        "name": "Activer les textures des dés Pénombre",
+        "hint": "Utiliser les textures des dés spéciaux Pénombre quand le module Dice So Nice est activé."
       }
     },
     "ReserveCollegiale": {

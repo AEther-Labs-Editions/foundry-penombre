@@ -1,12 +1,14 @@
 1.4.0
-- Ajout des dés virtuels Pénombre visibles sous Dice So Nice! (utilisation configurable dans les paramètres du système)
-- Ajout des dés virtuels Pénombre dans le Guide d'utilisation du système
-- Ajout de la fiche Tétras (faune) en tant qu'Éminence (compendium 'Kit - Prétirés')
-- Ajout de la fiche Tétras (satyre) en tant qu'Éminence (compendium 'Kit - Prétirés')
-- Ajout de la fiche Geysir en tant qu'Éminence (compendium 'Kit - Prétirés')
-- Ajout de la fiche Phobos en tant qu'Éminence (compendium 'Kit - Prétirés')
-- Correction de la fiche Nuane
-- Ajout des fiches de synthèse des maîtrises magiques sous forme d'objets (compendium 'Kit - Pouvoirs potentiels')
+- Ajout des dés virtuels Pénombre visibles sous Dice So Nice!
+  - Ajout de l'option Activer les dés Pénombre
+  - Ajout de l'option Activer les textures des dés Pénombre
+- Mise à jour du Guide d'utilisation du système à propos des dés Pénombre
+- Ajout de la fiche de l'éminence Tétras dans le compendium 'Kit - Prétirés'
+- Ajout de la fiche de l'éminence Geysir dans le compendium 'Kit - Prétirés'
+- Ajout de la fiche de l'éminence Phobos dans le compendium 'Kit - Prétirés'
+- Ajout de la fiche de l'éminence Rio Rim dans le compendium 'Kit - Prétirés'
+- Correction de la fiche de Nuane
+- Ajout des fiches de synthèse des maîtrises magiques dans le compendium 'Kit - Pouvoirs potentiels'
 
 1.3.2
 - Configuration par défaut du token d'une éminence : Lié à l'acteur, Disposition Amicale, Vision activée, Mode de vision standard
