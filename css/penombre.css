@@ -1390,35 +1390,28 @@ body.theme-light .penombre.adversaire .adversaire-content {
   background-image: url("/systems/penombre/assets/background/fond-coupe.webp");
   background-repeat: repeat;
 }
-.penombre.atout {
-  height: 100%;
-}
 .penombre.atout .atout-content .standard-form {
   height: 100%;
-  /*
-      .auto {
-        // height: auto;
-        min-height: 100%;
-        .editor {
-        min-height: 100%;
-        }
-      }
-      */
+  display: flex;
+  flex-direction: column;
 }
 .penombre.atout .atout-content .standard-form .auto {
-  overflow-y: auto;
-  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 .penombre.atout .atout-content .standard-form .auto .editor {
+  flex: 1;
+  min-height: 0;
   overflow-y: auto;
-  min-height: 250px;
 }
 .penombre.atout .atout-content .standard-form .auto .editor .editor-container {
-  min-height: 250px;
+  height: 100%;
 }
 .penombre.atout .atout-content .standard-form .logo-frame {
   display: flex;
   justify-content: space-between;
+  flex-shrink: 0;
 }
 .penombre.atout .atout-content .standard-form .logo-frame .logo-img {
   width: 80px;
@@ -1429,27 +1422,22 @@ body.theme-light .penombre.adversaire .adversaire-content {
 .penombre.atout .atout-content .standard-form .logo-frame .name {
   width: calc(100% - 90px);
 }
-.penombre.maitrise {
-  height: 100%;
-}
 .penombre.maitrise .maitrise-content .standard-form {
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 .penombre.maitrise .maitrise-content .standard-form .auto {
-  overflow-y: auto;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 .penombre.maitrise .maitrise-content .standard-form .auto .editor {
-  overflow-y: auto;
   flex: 1;
-  min-height: 250px;
+  min-height: 0;
+  overflow-y: auto;
 }
 .penombre.maitrise .maitrise-content .standard-form .auto .editor .editor-container {
-  min-height: 250px;
   height: 100%;
 }
 .penombre.maitrise .maitrise-content .standard-form .logo-frame {
@@ -1468,21 +1456,26 @@ body.theme-light .penombre.adversaire .adversaire-content {
 }
 .penombre.pouvoir .pouvoir-content .standard-form {
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .penombre.pouvoir .pouvoir-content .standard-form .auto {
-  overflow-y: auto;
-  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 .penombre.pouvoir .pouvoir-content .standard-form .auto .editor {
+  flex: 1;
+  min-height: 0;
   overflow-y: auto;
-  min-height: 250px;
 }
 .penombre.pouvoir .pouvoir-content .standard-form .auto .editor .editor-container {
-  min-height: 250px;
+  height: 100%;
 }
 .penombre.pouvoir .pouvoir-content .standard-form .logo-frame {
   display: flex;
   justify-content: space-between;
+  flex-shrink: 0;
 }
 .penombre.pouvoir .pouvoir-content .standard-form .logo-frame .logo-img {
   width: 80px;
@@ -1493,33 +1486,28 @@ body.theme-light .penombre.adversaire .adversaire-content {
 .penombre.pouvoir .pouvoir-content .standard-form .logo-frame .name {
   width: calc(100% - 90px);
 }
-.penombre.pouvoir .pouvoir-content .standard-form .details {
-  display: flex;
-  justify-content: space-between;
-}
-.penombre.pouvoir .pouvoir-content .standard-form .details select[name="system.type"] {
-  width: 100px;
-}
-.penombre.intrigue {
-  height: 100%;
-}
 .penombre.intrigue .intrigue-content .standard-form {
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .penombre.intrigue .intrigue-content .standard-form .auto {
-  overflow-y: auto;
-  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 .penombre.intrigue .intrigue-content .standard-form .auto .editor {
+  flex: 1;
+  min-height: 0;
   overflow-y: auto;
-  min-height: 250px;
 }
 .penombre.intrigue .intrigue-content .standard-form .auto .editor .editor-container {
-  min-height: 250px;
+  height: 100%;
 }
 .penombre.intrigue .intrigue-content .standard-form .logo-frame {
   display: flex;
   justify-content: space-between;
+  flex-shrink: 0;
 }
 .penombre.intrigue .intrigue-content .standard-form .logo-frame .logo-img {
   width: 80px;
@@ -1530,26 +1518,28 @@ body.theme-light .penombre.adversaire .adversaire-content {
 .penombre.intrigue .intrigue-content .standard-form .logo-frame .name {
   width: calc(100% - 90px);
 }
-.penombre.action {
-  height: 100%;
-}
 .penombre.action .action-content .standard-form {
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .penombre.action .action-content .standard-form .auto {
-  overflow-y: auto;
-  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 .penombre.action .action-content .standard-form .auto .editor {
+  flex: 1;
+  min-height: 0;
   overflow-y: auto;
-  min-height: 250px;
 }
 .penombre.action .action-content .standard-form .auto .editor .editor-container {
-  min-height: 250px;
+  height: 100%;
 }
 .penombre.action .action-content .standard-form .logo-frame {
   display: flex;
   justify-content: space-between;
+  flex-shrink: 0;
 }
 .penombre.action .action-content .standard-form .logo-frame .logo-img {
   width: 80px;
