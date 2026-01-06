@@ -15,7 +15,6 @@
                 <img class="img-potentiel absolue" src="systems/penombre/assets/ui/potentiel_creux.webp" alt="|" />
             </div>
         </div>
-
         <div class="atouts{{#if isStyleJeuAvance}}-2{{/if}} absolue">
             <table class="item-list centpourcent">
                 <tr class="centpourcent">
@@ -27,7 +26,7 @@
                     </th>
                     <th class="item-controls">
                         {{#if unlocked}}
-                            <a class="item-control" data-tooltip="{{ localize 'PENOMBRE.ui.create' item='un atout' }}" data-action="create" data-type="atout"><i class="fas fa-plus"></i></a>
+                            <a class="plusitem item-control" data-tooltip="{{ localize 'PENOMBRE.ui.create' item='un atout' }}" data-action="create" data-type="atout"><i class="fas fa-plus"></i></a>
                         {{/if}}
                     </th>
                 </tr>
