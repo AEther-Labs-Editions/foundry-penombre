@@ -729,6 +729,7 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 .penombre.eminence .eminence-content .eminence-pouvoirs .titre-section-pouvoirs,
 .penombre.eminence .eminence-content .eminence-pouvoirs-2 .titre-section-pouvoirs {
   font-size: 35px;
+  margin-left: 100px;
   float: none;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .content,
@@ -813,6 +814,12 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   width: 70px;
   font-size: 17px;
 }
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs th.item-controls .plusitem,
+.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs th.item-controls .plusitem,
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs td.item-controls .plusitem,
+.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs td.item-controls .plusitem {
+  float: right;
+}
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs-2,
 .penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs-2 {
   margin-left: 100px;
@@ -861,13 +868,10 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   color: #56605b;
   text-align: center;
 }
-.penombre.eminence .eminence-content .eminence-atouts .plusitem,
-.penombre.eminence .eminence-content .eminence-atouts-2 .plusitem {
-  text-align: right;
-}
 .penombre.eminence .eminence-content .eminence-atouts .titre-section-atouts,
 .penombre.eminence .eminence-content .eminence-atouts-2 .titre-section-atouts {
   font-size: 35px;
+  margin-left: 100px;
   float: none;
 }
 .penombre.eminence .eminence-content .eminence-atouts .content,
@@ -945,6 +949,12 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   width: 70px;
   font-size: 17px;
 }
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts th.item-controls .plusitem,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts th.item-controls .plusitem,
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts td.item-controls .plusitem,
+.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts td.item-controls .plusitem {
+  float: right;
+}
 .penombre.eminence .eminence-content .eminence-atouts .content .atouts .item-case,
 .penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts .item-case {
   float: left;
@@ -993,6 +1003,7 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 .penombre.eminence .eminence-content .eminence-maitrises .titre-section-maitrises,
 .penombre.eminence .eminence-content .eminence-maitrises-2 .titre-section-maitrises {
   font-size: 35px;
+  margin-left: 100px;
   float: none;
 }
 .penombre.eminence .eminence-content .eminence-maitrises .content,
@@ -1063,6 +1074,12 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 .penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises td.item-controls {
   width: 70px;
   font-size: 17px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises th.item-controls .plusitem,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises th.item-controls .plusitem,
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises td.item-controls .plusitem,
+.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises td.item-controls .plusitem {
+  float: right;
 }
 .penombre.eminence .eminence-content .eminence-maitrises .content .maitrises-2,
 .penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises-2 {
