@@ -1,3 +1,8 @@
+1.4.1
+- Améliorations
+  - Eminence : quelques améliorations sur l'alignement sur l'affichage des pouvoirs, atouts etc... 
+  - Objets : l'ascenseur vertical apparait uniquement quand c'est nécessaire et meilleurs gestion de la place restante après le texte
+
 1.4.0
 - Ajout des dés virtuels Pénombre visibles sous Dice So Nice!
   - Ajout de l'option Activer les dés Pénombre
