@@ -114,4 +114,197 @@ body {
       }
     }
   }
+
+  // Section Factions
+  .div-factions {
+    margin-top: 20px;
+    padding: 15px;
+    border-top: 2px solid @color-accent;
+
+    .factions-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+
+      h2 {
+        font-family: @font-cattedrale;
+        color: @color-accent;
+        margin: 0;
+        font-size: @font-size-middle;
+      }
+
+      .btn-create-faction {
+        background: @color-accent;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 3px;
+
+        &:hover {
+          background: darken(@color-accent, 10%);
+        }
+      }
+    }
+
+    .factions-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .faction {
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      padding: 10px;
+      border: 1px solid @color-accent;
+
+      .faction-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        border-bottom: 1px solid @color-accent;
+        padding-bottom: 8px;
+
+        .faction-nom {
+          font-family: @font-cattedrale;
+          font-size: 1.1rem;
+          background: transparent;
+          border: none;
+          border-bottom: 1px dashed @color-accent;
+          flex: 1;
+          margin-right: 10px;
+          color: @color-accent;
+
+          &:focus {
+            outline: none;
+            border-bottom: 1px solid @color-accent;
+          }
+        }
+
+        .btn-delete-faction {
+          background: none;
+          border: none;
+          color: #c0392b;
+          cursor: pointer;
+          padding: 3px 6px;
+
+          &:hover {
+            color: #e74c3c;
+          }
+        }
+      }
+
+      .faction-section {
+        margin-bottom: 10px;
+
+        .section-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 5px;
+
+          .section-title {
+            font-weight: bold;
+            font-size: 0.9rem;
+            color: @color-accent;
+          }
+
+          .btn-add {
+            background: none;
+            border: none;
+            color: @color-accent;
+            cursor: pointer;
+            padding: 2px 5px;
+
+            &:hover {
+              color: darken(@color-accent, 10%);
+            }
+          }
+        }
+
+        .elements-list {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+        }
+
+        .faction-element {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 5px 8px;
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 3px;
+
+          .element-nom {
+            flex: 1;
+            background: transparent;
+            border: none;
+            border-bottom: 1px dashed transparent;
+            font-size: 0.9rem;
+
+            &:focus {
+              outline: none;
+              border-bottom: 1px dashed @color-accent;
+            }
+          }
+
+          .element-valeur {
+            display: flex;
+            gap: 4px;
+
+            .valeur-pip {
+              width: 14px;
+              height: 14px;
+              border: 2px solid @color-accent;
+              border-radius: 50%;
+              cursor: pointer;
+              transition: background-color 0.2s;
+
+              &.active {
+                background: @color-accent;
+              }
+
+              &:hover {
+                background: lighten(@color-accent, 20%);
+              }
+            }
+          }
+
+          .btn-delete-element {
+            background: none;
+            border: none;
+            color: #999;
+            cursor: pointer;
+            padding: 0 3px;
+
+            &:hover {
+              color: #c0392b;
+            }
+          }
+        }
+
+        &.faction-complications {
+          .faction-element {
+            background: rgba(192, 57, 43, 0.15);
+
+            .element-valeur .valeur-pip {
+              border-color: #c0392b;
+
+              &.active {
+                background: #c0392b;
+              }
+
+              &:hover {
+                background: lighten(#c0392b, 20%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

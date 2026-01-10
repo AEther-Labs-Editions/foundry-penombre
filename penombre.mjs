@@ -52,6 +52,14 @@ Hooks.once("init", function () {
   CONFIG.queries["penombre.updateReserveCollegialeFromRoll"] = applications.PenombreReserveCollegiale._handleQueryUpdateReserveCollegialeFromRoll
   CONFIG.queries["penombre.updateMessageParticipation"] = documents.PenombreMessage._handleQueryMessageParticipation
 
+  // Queries pour les factions
+  CONFIG.queries["penombre.createFaction"] = applications.PenombreReserveCollegiale._handleQueryCreateFaction
+  CONFIG.queries["penombre.deleteFaction"] = applications.PenombreReserveCollegiale._handleQueryDeleteFaction
+  CONFIG.queries["penombre.createFactionElement"] = applications.PenombreReserveCollegiale._handleQueryCreateFactionElement
+  CONFIG.queries["penombre.deleteFactionElement"] = applications.PenombreReserveCollegiale._handleQueryDeleteFactionElement
+  CONFIG.queries["penombre.updateFactionElement"] = applications.PenombreReserveCollegiale._handleQueryUpdateFactionElement
+  CONFIG.queries["penombre.updateFactionName"] = applications.PenombreReserveCollegiale._handleQueryUpdateFactionName
+
   CONFIG.Dice.rolls.push(documents.PenombreRoll)
 
   CONFIG.ChatMessage.documentClass = documents.PenombreMessage

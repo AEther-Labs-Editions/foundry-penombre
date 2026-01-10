@@ -487,6 +487,20 @@
     "ReserveCollegiale": {
       "title": "Réserve Collégiale"
     },
+    "Factions": {
+      "title": "Factions",
+      "creer": "Créer une faction",
+      "nouvelleFaction": "Nouvelle faction",
+      "supprimerFaction": "Supprimer la faction",
+      "confirmerSuppression": "Êtes-vous sûr de vouloir supprimer cette faction et tous ses éléments ?",
+      "ajouterAtout": "Ajouter un atout",
+      "ajouterComplication": "Ajouter une complication",
+      "nouvelAtout": "Nouvel atout",
+      "nouvelleComplication": "Nouvelle complication",
+      "atoutsFaction": "Atouts de faction",
+      "complicationsFaction": "Complications de faction",
+      "complications": "Complications"
+    },
     "Sidebar": {
       "title": "Pénombre",
       "support": "Support",

@@ -1644,6 +1644,165 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 #penombre-reserve-collegiale .div-jetons-2 .jetons .jeton {
   text-align: center;
 }
+#penombre-reserve-collegiale .div-factions {
+  margin-top: 20px;
+  padding: 15px;
+  border-top: 2px solid #917f35;
+}
+#penombre-reserve-collegiale .div-factions .factions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+#penombre-reserve-collegiale .div-factions .factions-header h2 {
+  font-family: "Cattedrale";
+  color: #917f35;
+  margin: 0;
+  font-size: 19px;
+}
+#penombre-reserve-collegiale .div-factions .factions-header .btn-create-faction {
+  background: #917f35;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+#penombre-reserve-collegiale .div-factions .factions-header .btn-create-faction:hover {
+  background: #6c5e27;
+}
+#penombre-reserve-collegiale .div-factions .factions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#penombre-reserve-collegiale .div-factions .faction {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #917f35;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #917f35;
+  padding-bottom: 8px;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-header .faction-nom {
+  font-family: "Cattedrale";
+  font-size: 1.1rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1px dashed #917f35;
+  flex: 1;
+  margin-right: 10px;
+  color: #917f35;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-header .faction-nom:focus {
+  outline: none;
+  border-bottom: 1px solid #917f35;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-header .btn-delete-faction {
+  background: none;
+  border: none;
+  color: #c0392b;
+  cursor: pointer;
+  padding: 3px 6px;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-header .btn-delete-faction:hover {
+  color: #e74c3c;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section {
+  margin-bottom: 10px;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .section-header .section-title {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #917f35;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .section-header .btn-add {
+  background: none;
+  border: none;
+  color: #917f35;
+  cursor: pointer;
+  padding: 2px 5px;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .section-header .btn-add:hover {
+  color: #6c5e27;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .elements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element .element-nom {
+  flex: 1;
+  background: transparent;
+  border: none;
+  border-bottom: 1px dashed transparent;
+  font-size: 0.9rem;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element .element-nom:focus {
+  outline: none;
+  border-bottom: 1px dashed #917f35;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element .element-valeur {
+  display: flex;
+  gap: 4px;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element .element-valeur .valeur-pip {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #917f35;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element .element-valeur .valeur-pip.active {
+  background: #917f35;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element .element-valeur .valeur-pip:hover {
+  background: #c7b465;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element .btn-delete-element {
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  padding: 0 3px;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element .btn-delete-element:hover {
+  color: #c0392b;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section.faction-complications .faction-element {
+  background: rgba(192, 57, 43, 0.15);
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section.faction-complications .faction-element .element-valeur .valeur-pip {
+  border-color: #c0392b;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section.faction-complications .faction-element .element-valeur .valeur-pip.active {
+  background: #c0392b;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section.faction-complications .faction-element .element-valeur .valeur-pip:hover {
+  background: #df7c72;
+}
 .theme-light .penombre.roll-dialog .window-content {
   background-color: #faeed6;
   background-image: url("/systems/penombre/assets/background/fond-coupe.webp");
@@ -1720,6 +1879,7 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   overflow-y: auto;
   padding: 0 3px 0 3px;
   margin-left: -15px;
+  max-height: 200px;
 }
 .penombre-roll-dialog .line-2 fieldset .atouts .atout {
   display: flex;
@@ -1737,6 +1897,19 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 .penombre-roll-dialog .line-2 fieldset .atouts .atout.checked {
   background-color: #917f35;
   color: white;
+}
+.penombre-roll-dialog .line-2 fieldset .atouts .faction-separator {
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: #917f35;
+  margin: 8px 0 4px 0;
+  padding-top: 5px;
+  border-top: 1px dashed #917f35;
+}
+.penombre-roll-dialog .line-2 fieldset .atouts .faction-atout .faction-tag {
+  font-size: 0.75rem;
+  color: #888;
+  font-style: italic;
 }
 .penombre-roll-dialog .line-2 fieldset .options-total {
   display: flex;

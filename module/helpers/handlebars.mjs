@@ -36,4 +36,24 @@ export function registerHandlebars() {
     else if (nbSuccess > 1) return ` (${nbSuccess} succès)`
     else return ""
   })
+
+  /**
+   * Génère un tableau de nombres de start à end (exclusif).
+   * Usage : {{#each (range 1 4)}} ... {{/each}}
+   */
+  Handlebars.registerHelper("range", function (start, end) {
+    const result = []
+    for (let i = start; i < end; i++) {
+      result.push(i)
+    }
+    return result
+  })
+
+  /**
+   * Retourne true si a <= b.
+   * Usage : {{#if (lte valeur @index)}} ... {{/if}}
+   */
+  Handlebars.registerHelper("lte", function (a, b) {
+    return a <= b
+  })
 }

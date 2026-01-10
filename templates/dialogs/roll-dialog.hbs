@@ -56,12 +56,24 @@
     <fieldset>
       <legend>{{ localize 'PENOMBRE.ui.atouts' }}</legend>
       <div class="atouts">
+        {{!-- Atouts du personnage --}}
         {{#each atouts}}
-          <div class="atout" data-bonus="{{this.system.valeur}}">
+          <div class="atout character-atout" data-bonus="{{this.system.valeur}}" data-type="character">
             <div class="nom">{{this.name}}</div>
-            <div class="level">Niveau : {{this.system.valeur}}</div>
+            <div class="level">{{localize 'PENOMBRE.ui.niveau'}} {{this.system.valeur}}</div>
           </div>
-        {{/each}}      
+        {{/each}}
+
+        {{!-- Atouts de faction --}}
+        {{#if factionAtouts.length}}
+        <div class="faction-separator">{{localize 'PENOMBRE.Factions.atoutsFaction'}}</div>
+        {{#each factionAtouts}}
+          <div class="atout faction-atout" data-bonus="{{this.valeur}}" data-type="faction" data-faction-id="{{this.factionId}}" data-element-id="{{this.id}}">
+            <div class="nom">{{this.name}} <span class="faction-tag">({{this.factionNom}})</span></div>
+            <div class="level">{{localize 'PENOMBRE.ui.niveau'}} {{this.valeur}}</div>
+          </div>
+        {{/each}}
+        {{/if}}
       </div>
       <div class="options-total">
         <label class="premierAtout" style="visibility: {{#if (eq messageType "principal")}}hidden{{else}}visible{{/if}};"><input type="checkbox" name="actionCollegialePremierAtout" id="actionCollegialePremierAtout"/>{{localize 'PENOMBRE.ui.actionCollegialePremierAtout' }}</label>

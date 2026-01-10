@@ -56,6 +56,10 @@ export default class PenombreRoll extends Roll {
     const maitrises = actor.itemTypes.maitrise || []
     const choiceEffetMagiqueMaitrise = Object.fromEntries(maitrises.map((m) => [m.system.slug, m.name]))
 
+    // Récupération des atouts de faction
+    const reserveCollegiale = await game.settings.get("penombre", "reserveCollegiale")
+    const factionAtouts = reserveCollegiale.allFactionAtouts || []
+
     let dialogContext = {
       actor,
       messageType,
@@ -68,6 +72,7 @@ export default class PenombreRoll extends Roll {
       bonusAtouts,
       deMerveilleux,
       atouts,
+      factionAtouts,
       label: game.i18n.localize(`PENOMBRE.ui.${harmonique}`),
       choiceDifficulte,
       canRoll: true,

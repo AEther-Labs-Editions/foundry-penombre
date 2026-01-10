@@ -1,16 +1,103 @@
 {{!log "reserve collegiale" this}}
-<div class="div-jetons{{#if (or isStyleJeuStandard isStyleJeuAvance)}}-2{{/if}}">
-  {{#if (or isStyleJeuStandard isStyleJeuAvance)}}
-  <div class="col-1-1 text-vertical">{{localize "PENOMBRE.ui.reserveCollegiale"}}</div>
-  <div class="col-2-1 frise-verticale">
-    <img class="" src="systems/penombre/assets/ui/doree.webp" alt="|" />
+<div class="reserve-collegiale-container">
+  <div class="div-jetons{{#if (or isStyleJeuStandard isStyleJeuAvance)}}-2{{/if}}">
+    {{#if (or isStyleJeuStandard isStyleJeuAvance)}}
+    <div class="col-1-1 text-vertical">{{localize "PENOMBRE.ui.reserveCollegiale"}}</div>
+    <div class="col-2-1 frise-verticale">
+      <img class="" src="systems/penombre/assets/ui/doree.webp" alt="|" />
+    </div>
+    {{/if}}
+    <div class="jetons jetons-{{ifThen isGM 'gm' 'player'}}">
+      {{#each jetons}}
+        <div class="jeton {{ifThen this.valeur 'active' 'inactive'}}">
+          <img class="jeton jeton-{{@key}} absolue jeton-contextmenu dropshadow-{{ifThen this.valeur 'actif' 'inactif'}}" data-action="jeton" data-index="{{@key}}" src="{{getJetonImage this.valeur}}"  data-tooltip="{{localize 'PENOMBRE.ui.jeton'}} {{@key}}"></img>
+        </div>
+      {{/each}}
+    </div>
   </div>
-  {{/if}}
-  <div class="jetons jetons-{{ifThen isGM 'gm' 'player'}}">
-    {{#each jetons}}
-      <div class="jeton {{ifThen this.valeur 'active' 'inactive'}}">
-        <img class="jeton jeton-{{@key}} absolue jeton-contextmenu dropshadow-{{ifThen this.valeur 'actif' 'inactif'}}" data-action="jeton" data-index="{{@key}}" src="{{getJetonImage this.valeur}}"  data-tooltip="{{localize 'PENOMBRE.ui.jeton'}} {{@key}}"></img>
+
+  {{!-- Section Factions (modes standard et avancé uniquement) --}}
+  {{#if (or isStyleJeuStandard isStyleJeuAvance)}}
+  <div class="div-factions">
+  <div class="factions-header">
+    <h2>{{localize "PENOMBRE.Factions.title"}}</h2>
+    <button type="button" class="btn-create-faction" data-action="createFaction" data-tooltip="{{localize 'PENOMBRE.Factions.creer'}}">
+      <i class="fa-solid fa-plus"></i>
+    </button>
+  </div>
+
+  <div class="factions-list">
+    {{#each factions as |faction factionId|}}
+    <div class="faction" data-faction-id="{{factionId}}">
+      <div class="faction-header">
+        <input type="text" class="faction-nom" value="{{faction.nom}}" data-faction-id="{{factionId}}" />
+        <button type="button" class="btn-delete-faction" data-action="deleteFaction" data-faction-id="{{factionId}}" data-tooltip="{{localize 'PENOMBRE.ui.delete'}}">
+          <i class="fa-solid fa-trash"></i>
+        </button>
       </div>
+
+      {{!-- Section Atouts --}}
+      <div class="faction-section faction-atouts">
+        <div class="section-header">
+          <span class="section-title">{{localize "PENOMBRE.ui.atouts"}}</span>
+          <button type="button" class="btn-add" data-action="createFactionAtout" data-faction-id="{{factionId}}" data-tooltip="{{localize 'PENOMBRE.Factions.ajouterAtout'}}">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="elements-list">
+          {{#each faction.atouts as |atout atoutId|}}
+          <div class="faction-element atout" data-element-id="{{atoutId}}">
+            <input type="text" class="element-nom" value="{{atout.nom}}" data-faction-id="{{factionId}}" data-element-id="{{atoutId}}" data-element-type="atout" />
+            <div class="element-valeur">
+              {{#each (range 1 4) as |level|}}
+              <span class="valeur-pip {{#if (lte level atout.valeur)}}active{{/if}}"
+                    data-action="changeFactionElementValeur"
+                    data-faction-id="{{factionId}}"
+                    data-element-id="{{atoutId}}"
+                    data-element-type="atout"
+                    data-valeur="{{level}}"></span>
+              {{/each}}
+            </div>
+            <button type="button" class="btn-delete-element" data-action="deleteFactionElement" data-faction-id="{{factionId}}" data-element-id="{{atoutId}}" data-element-type="atout" data-tooltip="{{localize 'PENOMBRE.ui.delete'}}">
+              <i class="fa-solid fa-times"></i>
+            </button>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+
+      {{!-- Section Complications --}}
+      <div class="faction-section faction-complications">
+        <div class="section-header">
+          <span class="section-title">{{localize "PENOMBRE.Factions.complications"}}</span>
+          <button type="button" class="btn-add" data-action="createFactionComplication" data-faction-id="{{factionId}}" data-tooltip="{{localize 'PENOMBRE.Factions.ajouterComplication'}}">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="elements-list">
+          {{#each faction.complications as |comp compId|}}
+          <div class="faction-element complication" data-element-id="{{compId}}">
+            <input type="text" class="element-nom" value="{{comp.nom}}" data-faction-id="{{factionId}}" data-element-id="{{compId}}" data-element-type="complication" />
+            <div class="element-valeur">
+              {{#each (range 1 4) as |level|}}
+              <span class="valeur-pip {{#if (lte level comp.valeur)}}active{{/if}}"
+                    data-action="changeFactionElementValeur"
+                    data-faction-id="{{factionId}}"
+                    data-element-id="{{compId}}"
+                    data-element-type="complication"
+                    data-valeur="{{level}}"></span>
+              {{/each}}
+            </div>
+            <button type="button" class="btn-delete-element" data-action="deleteFactionElement" data-faction-id="{{factionId}}" data-element-id="{{compId}}" data-element-type="complication" data-tooltip="{{localize 'PENOMBRE.ui.delete'}}">
+              <i class="fa-solid fa-times"></i>
+            </button>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
     {{/each}}
   </div>
+</div>
+{{/if}}
 </div>

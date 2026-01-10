@@ -73,6 +73,7 @@ export default class PenombreSettingsHandler {
             9: { valeur: false },
             10: { valeur: false },
           },
+          factions: {},
         },
       },
 
