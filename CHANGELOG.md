@@ -1,3 +1,6 @@
+1.4.2
+- Dice so Nice: Le système de dés Pénombre avec symboles est activé par défaut.
+
 1.4.1
 - Améliorations
   - Eminence : quelques améliorations sur l'alignement sur l'affichage des pouvoirs, atouts etc... 

@@ -360,7 +360,7 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
     system: "penombre-sans",
   })
 
-  dice3d.addSystem({ id: "penombre", name: "Pénombre avec symboles", group: "Pénombre" }, "default")
+  dice3d.addSystem({ id: "penombre", name: "Pénombre avec symboles", group: "Pénombre" }, "preferred")
   dice3d.addDicePreset({
     type: "d2",
     labels: [
