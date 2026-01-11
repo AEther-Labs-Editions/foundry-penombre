@@ -1,6 +1,6 @@
 type: maitrise
 name: Jornisme
-img: systems/penombre/assets/icons/maitrise.webp
+img: systems/penombre/assets/magies/magie_jornisme.webp
 system:
   slug: ''
   description: >-
@@ -59,8 +59,8 @@ _stats:
   systemId: penombre
   systemVersion: '#{VERSION}#'
   createdTime: 1765946986604
-  modifiedTime: 1765946986612
-  lastModifiedBy: xu8p7UMcYrInjBEg
+  modifiedTime: 1768140254162
+  lastModifiedBy: 48UBcifP4R5B9bjf
 _id: ePUFSz00Gg8iWPt0
 sort: 256250
 _key: '!items!ePUFSz00Gg8iWPt0'

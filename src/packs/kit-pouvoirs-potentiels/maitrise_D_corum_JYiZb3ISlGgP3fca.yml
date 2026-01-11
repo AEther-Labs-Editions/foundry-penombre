@@ -1,7 +1,7 @@
 type: maitrise
 name: Décorum
 _id: JYiZb3ISlGgP3fca
-img: systems/penombre/assets/icons/maitrise.webp
+img: systems/penombre/assets/magies/magie_decorum.webp
 system:
   description: >-
     <p><strong>Pour préparer son effet magique, un harmoniste du décorum
@@ -52,8 +52,8 @@ _stats:
   systemId: penombre
   systemVersion: '#{VERSION}#'
   createdTime: 1765943368698
-  modifiedTime: 1765943368698
-  lastModifiedBy: xu8p7UMcYrInjBEg
+  modifiedTime: 1768140198054
+  lastModifiedBy: 48UBcifP4R5B9bjf
 ownership:
   default: 0
   xu8p7UMcYrInjBEg: 3

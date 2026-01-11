@@ -1,6 +1,6 @@
 type: maitrise
 name: Prisme
-img: systems/penombre/assets/icons/maitrise.webp
+img: systems/penombre/assets/magies/magie_prisme.webp
 system:
   description: >-
     <p><strong>Pour préparer son effet magique, un artiste du prisme
@@ -65,8 +65,8 @@ _stats:
   systemId: penombre
   systemVersion: '#{VERSION}#'
   createdTime: 1765950985869
-  modifiedTime: 1765950985882
-  lastModifiedBy: xu8p7UMcYrInjBEg
+  modifiedTime: 1768140307000
+  lastModifiedBy: 48UBcifP4R5B9bjf
 ownership:
   default: 0
   xu8p7UMcYrInjBEg: 3

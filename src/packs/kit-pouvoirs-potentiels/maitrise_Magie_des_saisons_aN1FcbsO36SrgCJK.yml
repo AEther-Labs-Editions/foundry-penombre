@@ -1,6 +1,6 @@
 type: maitrise
 name: Magie des saisons
-img: systems/penombre/assets/icons/maitrise.webp
+img: systems/penombre/assets/magies/magie_saisons.webp
 system:
   slug: ''
   description: >-
@@ -63,8 +63,8 @@ _stats:
   systemId: penombre
   systemVersion: '#{VERSION}#'
   createdTime: 1765949750850
-  modifiedTime: 1765949750850
-  lastModifiedBy: xu8p7UMcYrInjBEg
+  modifiedTime: 1768140273165
+  lastModifiedBy: 48UBcifP4R5B9bjf
 _id: aN1FcbsO36SrgCJK
 sort: 0
 _key: '!items!aN1FcbsO36SrgCJK'

@@ -1,6 +1,6 @@
 type: maitrise
 name: Onyxium
-img: systems/penombre/assets/icons/maitrise.webp
+img: systems/penombre/assets/magies/magie_onyxium.webp
 system:
   description: >-
     <p><strong>Pour préparer son effet magique, un artiste de l’onyxium
@@ -55,8 +55,8 @@ _stats:
   systemId: penombre
   systemVersion: '#{VERSION}#'
   createdTime: 1765951205982
-  modifiedTime: 1765951205982
-  lastModifiedBy: xu8p7UMcYrInjBEg
+  modifiedTime: 1768140294788
+  lastModifiedBy: 48UBcifP4R5B9bjf
 ownership:
   default: 0
   xu8p7UMcYrInjBEg: 3

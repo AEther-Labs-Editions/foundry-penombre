@@ -1,6 +1,6 @@
 type: maitrise
 name: Élémentalisme
-img: systems/penombre/assets/icons/maitrise.webp
+img: systems/penombre/assets/magies/magie_elementalisme.webp
 system:
   description: >-
     <p><strong>Pour préparer son effet magique, un élémentaliste
@@ -65,8 +65,8 @@ _stats:
   systemId: penombre
   systemVersion: '#{VERSION}#'
   createdTime: 1765946207898
-  modifiedTime: 1765946207909
-  lastModifiedBy: xu8p7UMcYrInjBEg
+  modifiedTime: 1768140224031
+  lastModifiedBy: 48UBcifP4R5B9bjf
 ownership:
   default: 0
   xu8p7UMcYrInjBEg: 3

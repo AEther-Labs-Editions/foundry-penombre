@@ -1,7 +1,7 @@
 type: maitrise
 name: Conjuration
 _id: ZN6Fae66cBK5wuR6
-img: systems/penombre/assets/icons/maitrise.webp
+img: systems/penombre/assets/magies/magie_conjuration.webp
 system:
   slug: ''
   description: >-
@@ -61,6 +61,6 @@ _stats:
   systemId: penombre
   systemVersion: '#{VERSION}#'
   createdTime: 1765943368698
-  modifiedTime: 1765943368698
-  lastModifiedBy: xu8p7UMcYrInjBEg
+  modifiedTime: 1768140186309
+  lastModifiedBy: 48UBcifP4R5B9bjf
 _key: '!items!ZN6Fae66cBK5wuR6'

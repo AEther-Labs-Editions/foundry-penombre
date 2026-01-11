@@ -1,6 +1,6 @@
 type: maitrise
 name: Geste
-img: systems/penombre/assets/icons/maitrise.webp
+img: systems/penombre/assets/magies/magie_geste.webp
 system:
   slug: ''
   description: >-
@@ -59,8 +59,8 @@ _stats:
   systemId: penombre
   systemVersion: '#{VERSION}#'
   createdTime: 1765946220517
-  modifiedTime: 1765946220524
-  lastModifiedBy: xu8p7UMcYrInjBEg
+  modifiedTime: 1768140233259
+  lastModifiedBy: 48UBcifP4R5B9bjf
 _id: UjVnOOV07b7wlvGO
 sort: 262500
 _key: '!items!UjVnOOV07b7wlvGO'
