@@ -45,7 +45,7 @@ system:
   prerequis: onyxer
   slug: ''
 effects: []
-folder: t49tGfu5DfWzhLvI
+folder: null
 flags: {}
 _stats:
   compendiumSource: null
@@ -54,12 +54,12 @@ _stats:
   coreVersion: '13.351'
   systemId: penombre
   systemVersion: '#{VERSION}#'
-  createdTime: 1765951205982
-  modifiedTime: 1768140294788
-  lastModifiedBy: 48UBcifP4R5B9bjf
+  createdTime: 1768646772155
+  modifiedTime: 1768646772155
+  lastModifiedBy: Te7kFyBlWwcbrQd4
 ownership:
   default: 0
-  xu8p7UMcYrInjBEg: 3
-_id: G0RPT3Y0rBdDOBal
+  Te7kFyBlWwcbrQd4: 3
+_id: TbqhMNtcgyUC2QH3
 sort: 0
-_key: '!items!G0RPT3Y0rBdDOBal'
+_key: '!items!TbqhMNtcgyUC2QH3'

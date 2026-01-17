@@ -55,7 +55,7 @@ system:
     contenant, une créature élémentaire
   slug: ''
 effects: []
-folder: t49tGfu5DfWzhLvI
+folder: null
 flags: {}
 _stats:
   compendiumSource: null
@@ -64,12 +64,12 @@ _stats:
   coreVersion: '13.351'
   systemId: penombre
   systemVersion: '#{VERSION}#'
-  createdTime: 1765946207898
-  modifiedTime: 1768140224031
-  lastModifiedBy: 48UBcifP4R5B9bjf
+  createdTime: 1768646765451
+  modifiedTime: 1768646768984
+  lastModifiedBy: Te7kFyBlWwcbrQd4
 ownership:
   default: 0
-  xu8p7UMcYrInjBEg: 3
-_id: owWAW9H1hWTlTL5r
-sort: 275000
-_key: '!items!owWAW9H1hWTlTL5r'
+  Te7kFyBlWwcbrQd4: 3
+_id: SPhAeTjndrblVara
+sort: 700000
+_key: '!items!SPhAeTjndrblVara'

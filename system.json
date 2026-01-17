@@ -3,10 +3,10 @@
   "title": "Pénombre",
   "description": "Un jeu de rôle dans les Royaumes crépusculaires d'après les romans de Mathieu Gaborit",
   "authors": [{ "name": "Kristov" }, { "name": "Mystery Man From Outerspace" }],
-  "version": "#{VERSION}#",  
+  "version": "#{VERSION}#",
   "url": "#{URL}#",
   "manifest": "#{MANIFEST}#",
-  "download": "#{DOWNLOAD}#",  
+  "download": "#{DOWNLOAD}#",
   "compatibility": {
     "minimum": "13",
     "verified": "13",
@@ -38,7 +38,7 @@
       "name": "Système",
       "sorting": "m",
       "color": "#a4653d",
-      "packs": ["journal", "scenes", "macros"],
+      "packs": ["maitrises-magiques", "journal", "scenes", "macros"],
       "folders": []
     }
   ],
@@ -82,7 +82,19 @@
         "ASSISTANT": "OWNER"
       }
     },
-        {
+    {
+      "name": "maitrises-magiques",
+      "label": "Maitrises magiques",
+      "system": "penombre",
+      "path": "packs/maitrises-magiques",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "TRUSTED": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
       "name": "journal",
       "label": "Journaux",
       "system": "penombre",

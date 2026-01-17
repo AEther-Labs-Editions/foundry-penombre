@@ -55,7 +55,7 @@ system:
   prerequis: travailler la lumière
   slug: ''
 effects: []
-folder: t49tGfu5DfWzhLvI
+folder: null
 flags: {}
 _stats:
   compendiumSource: null
@@ -64,12 +64,12 @@ _stats:
   coreVersion: '13.351'
   systemId: penombre
   systemVersion: '#{VERSION}#'
-  createdTime: 1765950985869
-  modifiedTime: 1768140307000
-  lastModifiedBy: 48UBcifP4R5B9bjf
+  createdTime: 1768646773193
+  modifiedTime: 1768646773193
+  lastModifiedBy: Te7kFyBlWwcbrQd4
 ownership:
   default: 0
-  xu8p7UMcYrInjBEg: 3
-_id: 6iPX8lnioCugMVXQ
-sort: 50000
-_key: '!items!6iPX8lnioCugMVXQ'
+  Te7kFyBlWwcbrQd4: 3
+_id: uuoPIhHrTLpCXj0C
+sort: 0
+_key: '!items!uuoPIhHrTLpCXj0C'
