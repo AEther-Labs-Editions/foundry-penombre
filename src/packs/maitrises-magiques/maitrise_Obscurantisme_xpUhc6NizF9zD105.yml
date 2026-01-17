@@ -46,7 +46,7 @@ system:
   prerequis: torturer son danseur asservi
   slug: ''
 effects: []
-folder: t49tGfu5DfWzhLvI
+folder: null
 flags: {}
 _stats:
   compendiumSource: null
@@ -55,12 +55,12 @@ _stats:
   coreVersion: '13.351'
   systemId: penombre
   systemVersion: '#{VERSION}#'
-  createdTime: 1765953693815
-  modifiedTime: 1768140284960
-  lastModifiedBy: 48UBcifP4R5B9bjf
+  createdTime: 1768646770433
+  modifiedTime: 1768646770433
+  lastModifiedBy: Te7kFyBlWwcbrQd4
 ownership:
   default: 0
-  xu8p7UMcYrInjBEg: 3
-_id: GknbkJinBjESqJbX
-sort: 25000
-_key: '!items!GknbkJinBjESqJbX'
+  Te7kFyBlWwcbrQd4: 3
+_id: xpUhc6NizF9zD105
+sort: 0
+_key: '!items!xpUhc6NizF9zD105'

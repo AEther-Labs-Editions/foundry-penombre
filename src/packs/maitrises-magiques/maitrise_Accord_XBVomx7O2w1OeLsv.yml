@@ -1,6 +1,5 @@
 type: maitrise
 name: Accord
-_id: MMi43fiOMdOENGNw
 img: systems/penombre/assets/magies/magie_accord.webp
 system:
   description: >-
@@ -48,20 +47,21 @@ system:
   prerequis: interpréter un morceau de musique
   slug: ''
 effects: []
-folder: t49tGfu5DfWzhLvI
-sort: 100000
+folder: null
 flags: {}
 _stats:
-  compendiumSource: Actor.vMW97PU22SNuZkd3.Item.5Ic6MUSIOhqKTizh
+  compendiumSource: null
   duplicateSource: null
   exportSource: null
   coreVersion: '13.351'
   systemId: penombre
   systemVersion: '#{VERSION}#'
-  createdTime: 1765943368698
-  modifiedTime: 1768140156728
-  lastModifiedBy: 48UBcifP4R5B9bjf
+  createdTime: 1768646739893
+  modifiedTime: 1768646768984
+  lastModifiedBy: Te7kFyBlWwcbrQd4
 ownership:
   default: 0
-  xu8p7UMcYrInjBEg: 3
-_key: '!items!MMi43fiOMdOENGNw'
+  Te7kFyBlWwcbrQd4: 3
+_id: XBVomx7O2w1OeLsv
+sort: 100000
+_key: '!items!XBVomx7O2w1OeLsv'

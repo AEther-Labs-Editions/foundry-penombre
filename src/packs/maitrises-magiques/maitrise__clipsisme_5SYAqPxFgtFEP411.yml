@@ -50,21 +50,21 @@ system:
   prerequis: guider et commander la danse de son danseur asservi
   slug: ''
 effects: []
-folder: t49tGfu5DfWzhLvI
-sort: 250000
+folder: null
 flags: {}
 _stats:
-  compendiumSource: Actor.YXDxBPyNZyRxUrcf.Item.h8hFhHnLAAMMkC3Q
-  duplicateSource: Item.JYiZb3ISlGgP3fca
+  compendiumSource: null
+  duplicateSource: null
   exportSource: null
   coreVersion: '13.351'
   systemId: penombre
   systemVersion: '#{VERSION}#'
-  createdTime: 1765943368698
-  modifiedTime: 1768140210684
-  lastModifiedBy: 48UBcifP4R5B9bjf
+  createdTime: 1768646743673
+  modifiedTime: 1768646768984
+  lastModifiedBy: Te7kFyBlWwcbrQd4
 ownership:
   default: 0
-  xu8p7UMcYrInjBEg: 3
-_id: utQSRHkKCOJCdxCb
-_key: '!items!utQSRHkKCOJCdxCb'
+  Te7kFyBlWwcbrQd4: 3
+_id: 5SYAqPxFgtFEP411
+sort: 600000
+_key: '!items!5SYAqPxFgtFEP411'

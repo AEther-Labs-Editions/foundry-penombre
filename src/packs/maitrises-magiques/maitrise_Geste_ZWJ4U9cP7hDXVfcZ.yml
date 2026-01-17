@@ -46,10 +46,7 @@ system:
   niveau: 1
   prerequis: utiliser sa voix
 effects: []
-folder: t49tGfu5DfWzhLvI
-ownership:
-  default: 0
-  xu8p7UMcYrInjBEg: 3
+folder: null
 flags: {}
 _stats:
   compendiumSource: null
@@ -58,9 +55,12 @@ _stats:
   coreVersion: '13.351'
   systemId: penombre
   systemVersion: '#{VERSION}#'
-  createdTime: 1765946220517
-  modifiedTime: 1768140233259
-  lastModifiedBy: 48UBcifP4R5B9bjf
-_id: UjVnOOV07b7wlvGO
-sort: 262500
-_key: '!items!UjVnOOV07b7wlvGO'
+  createdTime: 1768646766354
+  modifiedTime: 1768646768984
+  lastModifiedBy: Te7kFyBlWwcbrQd4
+ownership:
+  default: 0
+  Te7kFyBlWwcbrQd4: 3
+_id: ZWJ4U9cP7hDXVfcZ
+sort: 800000
+_key: '!items!ZWJ4U9cP7hDXVfcZ'

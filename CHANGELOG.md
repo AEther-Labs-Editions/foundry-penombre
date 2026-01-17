@@ -1,3 +1,7 @@
+1.4.3
+- Déplacement des maitrises magiques du compendium Pouvoirs potentiels dans le dossier Kit Demo vers un compendium Maitrises magiques dans le dossier Système
+- Ajout des icônes des maitrises magiques
+
 1.4.2
 - Dice so Nice: Le système de dés Pénombre avec symboles est activé par défaut.
 

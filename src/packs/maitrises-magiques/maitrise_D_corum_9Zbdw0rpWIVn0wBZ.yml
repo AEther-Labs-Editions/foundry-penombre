@@ -1,6 +1,5 @@
 type: maitrise
 name: Décorum
-_id: JYiZb3ISlGgP3fca
 img: systems/penombre/assets/magies/magie_decorum.webp
 system:
   description: >-
@@ -41,20 +40,21 @@ system:
   prerequis: réaliser une esquisse
   slug: ''
 effects: []
-folder: t49tGfu5DfWzhLvI
-sort: 250000
+folder: null
 flags: {}
 _stats:
-  compendiumSource: Actor.YXDxBPyNZyRxUrcf.Item.h8hFhHnLAAMMkC3Q
+  compendiumSource: null
   duplicateSource: null
   exportSource: null
   coreVersion: '13.351'
   systemId: penombre
   systemVersion: '#{VERSION}#'
-  createdTime: 1765943368698
-  modifiedTime: 1768140198054
-  lastModifiedBy: 48UBcifP4R5B9bjf
+  createdTime: 1768646742758
+  modifiedTime: 1768646768984
+  lastModifiedBy: Te7kFyBlWwcbrQd4
 ownership:
   default: 0
-  xu8p7UMcYrInjBEg: 3
-_key: '!items!JYiZb3ISlGgP3fca'
+  Te7kFyBlWwcbrQd4: 3
+_id: 9Zbdw0rpWIVn0wBZ
+sort: 500000
+_key: '!items!9Zbdw0rpWIVn0wBZ'

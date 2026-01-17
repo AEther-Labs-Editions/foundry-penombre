@@ -46,10 +46,7 @@ system:
   niveau: 1
   prerequis: guider mentalement son danseur asservi
 effects: []
-folder: t49tGfu5DfWzhLvI
-ownership:
-  default: 0
-  xu8p7UMcYrInjBEg: 3
+folder: null
 flags: {}
 _stats:
   compendiumSource: null
@@ -58,9 +55,12 @@ _stats:
   coreVersion: '13.351'
   systemId: penombre
   systemVersion: '#{VERSION}#'
-  createdTime: 1765946986604
-  modifiedTime: 1768140254162
-  lastModifiedBy: 48UBcifP4R5B9bjf
-_id: ePUFSz00Gg8iWPt0
-sort: 256250
-_key: '!items!ePUFSz00Gg8iWPt0'
+  createdTime: 1768646767524
+  modifiedTime: 1768646768984
+  lastModifiedBy: Te7kFyBlWwcbrQd4
+ownership:
+  default: 0
+  Te7kFyBlWwcbrQd4: 3
+_id: kjTrSa4Hd9Jiwd9u
+sort: 900000
+_key: '!items!kjTrSa4Hd9Jiwd9u'

@@ -50,10 +50,7 @@ system:
   niveau: 1
   prerequis: « semer » du pollen sacré
 effects: []
-folder: t49tGfu5DfWzhLvI
-ownership:
-  default: 0
-  xu8p7UMcYrInjBEg: 3
+folder: null
 flags: {}
 _stats:
   compendiumSource: null
@@ -62,9 +59,12 @@ _stats:
   coreVersion: '13.351'
   systemId: penombre
   systemVersion: '#{VERSION}#'
-  createdTime: 1765949750850
-  modifiedTime: 1768140273165
-  lastModifiedBy: 48UBcifP4R5B9bjf
-_id: aN1FcbsO36SrgCJK
-sort: 0
-_key: '!items!aN1FcbsO36SrgCJK'
+  createdTime: 1768646768972
+  modifiedTime: 1768646768984
+  lastModifiedBy: Te7kFyBlWwcbrQd4
+ownership:
+  default: 0
+  Te7kFyBlWwcbrQd4: 3
+_id: rdvODIdupJzgcsay
+sort: 200000
+_key: '!items!rdvODIdupJzgcsay'

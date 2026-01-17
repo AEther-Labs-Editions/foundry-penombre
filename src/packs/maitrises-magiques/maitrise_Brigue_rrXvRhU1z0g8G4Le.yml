@@ -1,6 +1,5 @@
 type: maitrise
 name: Brigue
-_id: i6S83eYjR1Gt7VF2
 img: systems/penombre/assets/magies/magie_brigue.webp
 system:
   description: >-
@@ -50,20 +49,21 @@ system:
   prerequis: posséder, ou fabriquer, une « penne » animale
   slug: ''
 effects: []
-folder: t49tGfu5DfWzhLvI
-sort: 200000
+folder: null
 flags: {}
 _stats:
-  compendiumSource: Actor.vMW97PU22SNuZkd3.Item.vvDY6v4GCtWJKc84
+  compendiumSource: null
   duplicateSource: null
   exportSource: null
   coreVersion: '13.351'
   systemId: penombre
   systemVersion: '#{VERSION}#'
-  createdTime: 1765943368698
-  modifiedTime: 1768140174997
-  lastModifiedBy: 48UBcifP4R5B9bjf
+  createdTime: 1768646740857
+  modifiedTime: 1768646768984
+  lastModifiedBy: Te7kFyBlWwcbrQd4
 ownership:
   default: 0
-  xu8p7UMcYrInjBEg: 3
-_key: '!items!i6S83eYjR1Gt7VF2'
+  Te7kFyBlWwcbrQd4: 3
+_id: rrXvRhU1z0g8G4Le
+sort: 300000
+_key: '!items!rrXvRhU1z0g8G4Le'

@@ -1,6 +1,5 @@
 type: maitrise
 name: Conjuration
-_id: ZN6Fae66cBK5wuR6
 img: systems/penombre/assets/magies/magie_conjuration.webp
 system:
   slug: ''
@@ -47,20 +46,21 @@ system:
   niveau: 1
   prerequis: tracer le contour d’une ombre
 effects: []
-folder: t49tGfu5DfWzhLvI
-sort: 300000
-ownership:
-  default: 0
-  xu8p7UMcYrInjBEg: 3
+folder: null
 flags: {}
 _stats:
-  compendiumSource: Actor.7CcGfb05ll4Gvgyw.Item.5N4i9Yfb27Cl6Qry
+  compendiumSource: null
   duplicateSource: null
   exportSource: null
   coreVersion: '13.351'
   systemId: penombre
   systemVersion: '#{VERSION}#'
-  createdTime: 1765943368698
-  modifiedTime: 1768140186309
-  lastModifiedBy: 48UBcifP4R5B9bjf
-_key: '!items!ZN6Fae66cBK5wuR6'
+  createdTime: 1768646741817
+  modifiedTime: 1768646768984
+  lastModifiedBy: Te7kFyBlWwcbrQd4
+ownership:
+  default: 0
+  Te7kFyBlWwcbrQd4: 3
+_id: iA1Mv8ALgcXET0Yx
+sort: 400000
+_key: '!items!iA1Mv8ALgcXET0Yx'
