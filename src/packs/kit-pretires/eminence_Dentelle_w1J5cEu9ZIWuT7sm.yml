@@ -334,7 +334,7 @@ items:
         prisme est aveuglé par la débauche de détails qui l’entourent, ses sens
         saturés devenant ininterprétables ; etc.</p></li></ul>
       harmonique: nuit
-      niveau: 1
+      niveau: 3
       prerequis: utiliser sa canne blanche comme sonde
       slug: ''
     effects: []
@@ -347,7 +347,8 @@ items:
       coreVersion: '13.351'
       systemId: penombre
       systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
+      lastModifiedBy: xu8p7UMcYrInjBEg
+      modifiedTime: 1769161777231
     ownership:
       default: 0
       Te7kFyBlWwcbrQd4: 3
