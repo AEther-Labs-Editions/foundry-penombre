@@ -172,7 +172,7 @@
       "path": "packs/echos-journal",
       "type": "JournalEntry",
       "ownership": {
-        "PLAYER": "OBSERVER",
+        "PLAYER": "NONE",
         "TRUSTED": "OBSERVER",
         "ASSISTANT": "OWNER"
       }
@@ -184,7 +184,7 @@
       "path": "packs/echos-scenes",
       "type": "Scene",
       "ownership": {
-        "PLAYER": "OBSERVER",
+        "PLAYER": "NONE",
         "TRUSTED": "OBSERVER",
         "ASSISTANT": "OWNER"
       }
@@ -208,7 +208,7 @@
       "path": "packs/plenitude-journal",
       "type": "JournalEntry",
       "ownership": {
-        "PLAYER": "OBSERVER",
+        "PLAYER": "NONE",
         "TRUSTED": "OBSERVER",
         "ASSISTANT": "OWNER"
       }
@@ -220,7 +220,7 @@
       "path": "packs/plenitude-scenes",
       "type": "Scene",
       "ownership": {
-        "PLAYER": "OBSERVER",
+        "PLAYER": "NONE",
         "TRUSTED": "OBSERVER",
         "ASSISTANT": "OWNER"
       }
