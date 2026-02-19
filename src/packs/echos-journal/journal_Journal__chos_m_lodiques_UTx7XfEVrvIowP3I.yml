@@ -1,0 +1,151 @@
+name: Journal Échos mélodiques
+_id: UTx7XfEVrvIowP3I
+pages:
+  - sort: 100000
+    name: Anémone
+    type: image
+    _id: hIhB2YuAeBIotIFi
+    system: {}
+    title:
+      show: true
+      level: 1
+    image:
+      caption: Anémone
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: >-
+      systems/penombre/assets/scenarios/echos-melodiques/portraits/P_anemone.webp
+    category: null
+    ownership:
+      default: -1
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770575437698
+      modifiedTime: 1770575483887
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!journal.pages!UTx7XfEVrvIowP3I.hIhB2YuAeBIotIFi'
+  - sort: 200000
+    name: Férale
+    type: image
+    _id: 8WXDylR5U18cpANY
+    system: {}
+    title:
+      show: true
+      level: 1
+    image:
+      caption: Férale
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/penombre/assets/scenarios/echos-melodiques/portraits/P_ferale.webp
+    category: null
+    ownership:
+      default: -1
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770575518539
+      modifiedTime: 1770630831085
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!journal.pages!UTx7XfEVrvIowP3I.8WXDylR5U18cpANY'
+  - sort: 300000
+    name: Harpelle
+    type: image
+    _id: raFBzuDVgXuzsoEV
+    system: {}
+    title:
+      show: true
+      level: 1
+    image:
+      caption: Harpelle
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: >-
+      systems/penombre/assets/scenarios/echos-melodiques/portraits/P_harpelle.webp
+    category: null
+    ownership:
+      default: -1
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770575566272
+      modifiedTime: 1770575576378
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!journal.pages!UTx7XfEVrvIowP3I.raFBzuDVgXuzsoEV'
+  - sort: 0
+    name: Les Deux Tours
+    type: image
+    _id: pyg3KnNXF4wveKF8
+    system: {}
+    title:
+      show: true
+      level: 1
+    image:
+      caption: Les Deux Tours
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/penombre/assets/scenarios/echos-melodiques/portraits/P_2tours.webp
+    category: null
+    ownership:
+      default: -1
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770576879102
+      modifiedTime: 1770577804647
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!journal.pages!UTx7XfEVrvIowP3I.pyg3KnNXF4wveKF8'
+folder: null
+categories: []
+sort: 0
+ownership:
+  default: 0
+  xu8p7UMcYrInjBEg: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1770575353233
+  modifiedTime: 1770575385192
+  lastModifiedBy: xu8p7UMcYrInjBEg
+_key: '!journal!UTx7XfEVrvIowP3I'

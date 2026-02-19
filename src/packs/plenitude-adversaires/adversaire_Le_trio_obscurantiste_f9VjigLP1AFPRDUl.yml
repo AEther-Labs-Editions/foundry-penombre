@@ -1,0 +1,313 @@
+name: Le trio obscurantiste
+type: adversaire
+_id: f9VjigLP1AFPRDUl
+img: systems/penombre/assets/scenarios/plenitude/portraits/P_trio-obscur.webp
+system:
+  details: >-
+    <p><span class="fontstyle0">Le groupe comprend trois
+    membres.</span></p><ul><li><p><span class="fontstyle3">Holst </span><span
+    class="fontstyle0">est un vieux mage blasé qui, par lassitude, ne pratique
+    quasiment plus son art. Il use de ses relations pour trouver des ressources
+    pour ses compères, en particulier des danseurs.</span></p></li><li><p><span
+    class="fontstyle3">Bellicène </span><span class="fontstyle0">est un marchand
+    sadique converti à l’obscurantisme. Inféodé à l’Esthète, une
+    princesse-marchande connue pour ses méthodes vicieuses, il fait tout pour
+    lui plaire et a plusieurs fois accompli ses basses
+    besognes.</span></p></li><li><p><span class="fontstyle3">Anténidal
+    </span><span class="fontstyle0">est une jeune idéaliste qui idolâtre un
+    passé qu’elle n’a pas connu.</span></p></li></ul><p><span
+    class="fontstyle0">Ensemble, ils se sont mis en quête du mouvement perpétuel
+    et travaillent à une mélodie capable de faire évoluer leurs danseurs dans un
+    ballet sans fin. Ils cherchent un accordé pour tester leurs théories. En
+    attendant, ils effectuent diverses tâches pour le compte de
+    l’Esthète.</span></p><p><span class="fontstyle0">Ils partagent un sous-sol
+    humide desservi par un unique escalier extérieur et une lourde porte cloutée
+    que l’Esthète leur a « généreusement » mis à disposition – un moyen de
+    garder une forme de pression sur eux. Des matelas ont été installés dans les
+    alcôves de l’unique pièce, à la fois lieu de vie et laboratoire. L’endroit
+    est éclairé par un soupirail trop étroit pour laisser passer un
+    gnome.</span></p>
+  adversite:
+    valeur: 3
+    max: 3
+  resilience:
+    valeur: 15
+    max: 15
+  dissonance:
+    harmonique: ame
+    valeur: 0
+    max: 0
+  description: ''
+prototypeToken:
+  name: Le trio obscurantiste
+  displayName: 0
+  actorLink: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/penombre/assets/scenarios/plenitude/portraits/P_trio-obscur.webp
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: null
+  bar2:
+    attribute: null
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+  flags: {}
+  randomImg: false
+  appendNumber: false
+  prependAdjective: false
+items:
+  - type: action
+    name: Ballet
+    system:
+      type: adverse
+      description: >-
+        <p><span class="fontstyle0">Sous la direction de Holst, Anténidal et
+        Bellicène lancent leurs danseurs dans un ballet conjoint et créent un
+        puissant sort d’attaque. Toutes les Éminences grises ciblées perdent 2
+        jetons conscience.</span></p>
+    _id: HrbQ8MFBwCOZxAhk
+    img: systems/penombre/assets/icons/action.webp
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770569845521
+      modifiedTime: 1770569879748
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!actors.items!f9VjigLP1AFPRDUl.HrbQ8MFBwCOZxAhk'
+  - type: action
+    name: Danse coordonnée
+    system:
+      type: adverse
+      description: >-
+        <p><span class="fontstyle0">Chaque obscurantiste fait effectuer les
+        mêmes pas à son danseur, provoquant une multitude de déflagrations qui
+        saturent les lieux. Toutes les Éminences grises ciblées perdent 1 jeton
+        conscience et 1 succès sur leur action suivante.</span></p>
+    _id: vnWSZmh7PA4N06eR
+    img: systems/penombre/assets/icons/action.webp
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770569899023
+      modifiedTime: 1770569930373
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!actors.items!f9VjigLP1AFPRDUl.vnWSZmh7PA4N06eR'
+  - type: action
+    name: Support d’un prince-marchand
+    system:
+      type: adverse
+      description: >-
+        <p><span class="fontstyle0">Des hommes de l’Esthète, soutien du trio,
+        surgissent et attaquent une cible avant de disparaître ! 1 Éminence
+        grise perd 3 jetons conscience.</span></p>
+    _id: pHgyyKsu9fSc1dyf
+    img: systems/penombre/assets/icons/action.webp
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770569944888
+      modifiedTime: 1770569971874
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!actors.items!f9VjigLP1AFPRDUl.pHgyyKsu9fSc1dyf'
+  - type: intrigue
+    name: Liaisons dangereuses
+    _id: ATPq6J0Yx4iEyY60
+    img: systems/penombre/assets/icons/intrigue.webp
+    system:
+      description: >-
+        <p><span class="fontstyle0">Les trois obscurantistes sont dans une
+        situation précaire qui dépend fortement de l’Esthète. Les Éminences
+        grises pourraient en tirer parti en leur proposant un pacte. Que cherche
+        à obtenir le trio ? Qu’en pensera le Souffre-jour – s’il l’apprend
+        ?</span></p>
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770569979788
+      modifiedTime: 1770570023970
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!actors.items!f9VjigLP1AFPRDUl.ATPq6J0Yx4iEyY60'
+  - type: intrigue
+    name: Un peu perdus
+    _id: 7g2F2O5gu20rWLaY
+    img: systems/penombre/assets/icons/intrigue.webp
+    system:
+      description: >-
+        <p><span class="fontstyle0">Comme leurs confrères, les trois
+        obscurantistes œuvrent discrètement à la restauration du
+        Cryptogramme-magicien, mais cela leur semble un objectif bien lointain.
+        Pourraient-ils accepter une mission plus concrète ?</span></p>
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770570037928
+      modifiedTime: 1770570076670
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!actors.items!f9VjigLP1AFPRDUl.7g2F2O5gu20rWLaY'
+  - type: intrigue
+    name: Rallumer le feu
+    _id: kdQuLUoybnnvSWbR
+    img: systems/penombre/assets/icons/intrigue.webp
+    system:
+      description: >-
+        <p><span class="fontstyle0">Les membres du trio sont prisonniers de
+        l’Esthète, de leur passé et de leur idéologie. Cela limite leurs
+        capacités. Il ne manque pourtant pas grand-chose pour que leur rage
+        explose. Trouver un débouché à leur recherche sur le mouvement
+        perpétuel, par exemple. Voilà qui leur donnerait des ailes – pour le
+        meilleur et pour le pire.</span></p>
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770570092273
+      modifiedTime: 1770570130279
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!actors.items!f9VjigLP1AFPRDUl.kdQuLUoybnnvSWbR'
+effects: []
+folder: null
+sort: 0
+ownership:
+  default: 0
+  xu8p7UMcYrInjBEg: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1770567884106
+  modifiedTime: 1770575279733
+  lastModifiedBy: xu8p7UMcYrInjBEg
+_key: '!actors!f9VjigLP1AFPRDUl'

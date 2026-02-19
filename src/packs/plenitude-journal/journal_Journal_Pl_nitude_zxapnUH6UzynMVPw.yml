@@ -1,0 +1,213 @@
+name: Journal Plénitude
+_id: zxapnUH6UzynMVPw
+pages:
+  - sort: 100000
+    name: Adaméliandre
+    type: image
+    _id: KeKHMOLhga5Auxe8
+    system: {}
+    title:
+      show: true
+      level: 1
+    image:
+      caption: Adaméliandre
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/penombre/assets/scenarios/plenitude/portraits/P_adameliandre.webp
+    category: null
+    ownership:
+      default: -1
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770575717028
+      modifiedTime: 1770575732973
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!journal.pages!zxapnUH6UzynMVPw.KeKHMOLhga5Auxe8'
+  - sort: 200000
+    name: Alimondo
+    type: image
+    _id: gYlqnBBQzbopw58a
+    system: {}
+    title:
+      show: true
+      level: 1
+    image:
+      caption: Alimondo
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/penombre/assets/scenarios/plenitude/portraits/P_alimondo.webp
+    category: null
+    ownership:
+      default: -1
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770575761665
+      modifiedTime: 1770575779259
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!journal.pages!zxapnUH6UzynMVPw.gYlqnBBQzbopw58a'
+  - sort: 300000
+    name: Cyriaque Steyr d'Olgard, le Premier Baron
+    type: image
+    _id: 1HuyoW9xmiASV34W
+    system: {}
+    title:
+      show: true
+      level: 1
+    image:
+      caption: Cyriaque Steyr d'Olgard, le Premier Baron
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/penombre/assets/scenarios/plenitude/portraits/P_baron.webp
+    category: null
+    ownership:
+      default: -1
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770575809774
+      modifiedTime: 1770577142769
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!journal.pages!zxapnUH6UzynMVPw.1HuyoW9xmiASV34W'
+  - sort: 0
+    name: Le Danseur mort
+    type: image
+    _id: uBGh6XpAwu4wgnRW
+    system: {}
+    title:
+      show: true
+      level: 1
+    image:
+      caption: Le Danseur mort
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/penombre/assets/scenarios/plenitude/portraits/P_danseur-mort.webp
+    category: null
+    ownership:
+      default: -1
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770575853244
+      modifiedTime: 1770577313661
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!journal.pages!zxapnUH6UzynMVPw.uBGh6XpAwu4wgnRW'
+  - sort: 500000
+    name: Mandigo
+    type: image
+    _id: WPMweWeXA4KDK5Qd
+    system: {}
+    title:
+      show: true
+      level: 1
+    image:
+      caption: Mandigo
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/penombre/assets/scenarios/plenitude/portraits/P_mandigo.webp
+    category: null
+    ownership:
+      default: -1
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770575890498
+      modifiedTime: 1770575900443
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!journal.pages!zxapnUH6UzynMVPw.WPMweWeXA4KDK5Qd'
+  - sort: 600000
+    name: Le Trio obscurantiste
+    type: image
+    _id: QadEI2vzEMMpmecU
+    system: {}
+    title:
+      show: true
+      level: 1
+    image:
+      caption: Le Trio obscurantiste
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/penombre/assets/scenarios/plenitude/portraits/P_trio-obscur.webp
+    category: null
+    ownership:
+      default: -1
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770575970604
+      modifiedTime: 1770575979757
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!journal.pages!zxapnUH6UzynMVPw.QadEI2vzEMMpmecU'
+folder: null
+categories: []
+sort: 0
+ownership:
+  default: 0
+  xu8p7UMcYrInjBEg: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1770575670102
+  modifiedTime: 1770575670102
+  lastModifiedBy: xu8p7UMcYrInjBEg
+_key: '!journal!zxapnUH6UzynMVPw'
