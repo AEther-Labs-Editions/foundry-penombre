@@ -181,7 +181,7 @@ export default class HarmoniqueMessageData extends BaseMessageData {
           }
 
           // Dépense d'un jeton de conscience et relance
-          const depense = actor.system.depenserJetons(1)
+          await actor.system.depenserJetons(1)
           await PenombreRoll.reroll(messageId, rerolledDices)
 
           // Si c'est un message lié, mettre à jour le message principal

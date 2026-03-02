@@ -248,7 +248,7 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
     return jetonsConscience
   }
 
-  depenserJetons(nbJetons) {
+  async depenserJetons(nbJetons) {
     // Parcours de l'objet pour mettre à jour nbJetons
     let nbJetonsModifies = 0
     const jetons = { ...this.conscience.jetons }
@@ -260,7 +260,7 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
       }
     }
     if (nbJetonsModifies > 0) {
-      this.parent.update({ "system.conscience.jetons": jetons })
+      await this.parent.update({ "system.conscience.jetons": jetons })
     }
   }
 
@@ -271,7 +271,7 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
    * Si un jeton est perdu, la valeur de conscience diminue de 1 (minimum 0).
    * Met à jour l'objet parent avec la nouvelle valeur de conscience et le tableau de jetons.
    */
-  perdreUnJeton() {
+  async perdreUnJeton() {
     const jetons = foundry.utils.duplicate(this.conscience.jetons)
     let conscienceActuelle = this.conscience.valeur
 
@@ -301,7 +301,7 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
     // Si un jeton a été perdu, on baisse la conscience de 1
     if (jetonPerdu) {
       const newConscience = Math.max(conscienceActuelle - 1, 0)
-      this.parent.update({ "system.conscience.valeur": newConscience, "system.conscience.jetons": jetons })
+      await this.parent.update({ "system.conscience.valeur": newConscience, "system.conscience.jetons": jetons })
     }
   }
 }
