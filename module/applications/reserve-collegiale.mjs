@@ -45,12 +45,12 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
 
   /** @override */
   async _prepareContext(_options = {}) {
-    const styleJeu = await game.settings.get("penombre", "styleJeu")
+    const styleJeu = game.settings.get("penombre", "styleJeu")
 
     return {
       userId: game.user.id,
       isGM: game.user.isGM,
-      jetons: await game.settings.get(SYSTEM.ID, "reserveCollegiale").jetons,
+      jetons: game.settings.get(SYSTEM.ID, "reserveCollegiale").jetons,
 
       isStyleJeuStandard: styleJeu === "standard",
       isStyleJeuAvance: styleJeu === "avance",
@@ -72,7 +72,7 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
     if (game.user.isGM) {
       const reserveCollegiale = foundry.utils.duplicate(game.settings.get(SYSTEM.ID, "reserveCollegiale"))
       reserveCollegiale.jetons[index].valeur = !reserveCollegiale.jetons[index].valeur
-      await game.settings.set(SYSTEM.ID, "reserveCollegiale", reserveCollegiale)
+      game.settings.set(SYSTEM.ID, "reserveCollegiale", reserveCollegiale)
     }
     // C'est un joueur : utilisation de la requête
     else {
@@ -93,7 +93,7 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
   static _handleQueryUpdateReserveCollegiale = async ({ index }) => {
     const reserveCollegiale = foundry.utils.duplicate(game.settings.get(SYSTEM.ID, "reserveCollegiale"))
     reserveCollegiale.jetons[index].valeur = !reserveCollegiale.jetons[index].valeur
-    await game.settings.set(SYSTEM.ID, "reserveCollegiale", reserveCollegiale)
+    game.settings.set(SYSTEM.ID, "reserveCollegiale", reserveCollegiale)
   }
 
   /**
@@ -116,6 +116,6 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
       }
     }
 
-    await game.settings.set(SYSTEM.ID, "reserveCollegiale", reserveCollegiale)
+    game.settings.set(SYSTEM.ID, "reserveCollegiale", reserveCollegiale)
   }
 }

@@ -3,7 +3,6 @@ import * as POUVOIR from "./pouvoir.mjs"
 import * as ACTION from "./action.mjs"
 
 export const SYSTEM_ID = "penombre"
-export const DEV_MODE = true
 
 export const HARMONIQUE_VALEURS = Object.freeze({
   D4: "d4",
@@ -141,7 +140,6 @@ export const DICE_ROLL_MODES = Object.freeze({
  */
 export const SYSTEM = {
   ID: SYSTEM_ID,
-  DEV_MODE,
   HARMONIQUES: EMINENCE.HARMONIQUES,
   PEUPLES: EMINENCE.PEUPLES,
   GAMMES: EMINENCE.GAMMES,

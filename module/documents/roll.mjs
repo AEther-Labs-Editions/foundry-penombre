@@ -7,7 +7,7 @@ const SUCCESS_DIVISOR = 4
 const MERVEILLEUX_FACES = 20
 
 export default class PenombreRoll extends Roll {
-  static DIALOG_TEMPLATE = "modules/penombre/templates/dialogs/roll-dialog.hbs"
+  static DIALOG_TEMPLATE = "systems/penombre/templates/dialogs/roll-dialog.hbs"
 
   static CHAT_TEMPLATE = "systems/penombre/templates/chat/harmonique-roll.hbs"
 
@@ -32,7 +32,7 @@ export default class PenombreRoll extends Roll {
     const choiceDifficulte = SYSTEM.DIFFICULTE
 
     const maxJetonsConscience = actor.system.nbJetonsRestants
-    const maxJetonsReserve = await game.settings.get("penombre", "reserveCollegiale").nbJetonsRestants
+    const maxJetonsReserve = game.settings.get("penombre", "reserveCollegiale").nbJetonsRestants
 
     const fieldJetonsConscience = new foundry.data.fields.NumberField({ initial: 0, min: 0, max: maxJetonsConscience, step: 1 })
     const fieldJetonsReserve = new foundry.data.fields.NumberField({ initial: 0, min: 0, max: maxJetonsReserve, step: 1 })
@@ -212,8 +212,8 @@ export default class PenombreRoll extends Roll {
     const roll = new this(formule, options.data, rollOptions)
 
     // Apparence des dés si le module Dice So Nice est activé et que le système de dés Pénombre est chargé
-    const desSpeciaux = await game.settings.get(SYSTEM.ID, "desSpeciaux")
-    const desSpeciauxTexture = await game.settings.get(SYSTEM.ID, "desSpeciauxTexture")
+    const desSpeciaux = game.settings.get(SYSTEM.ID, "desSpeciaux")
+    const desSpeciauxTexture = game.settings.get(SYSTEM.ID, "desSpeciauxTexture")
 
     if (game.modules.get("dice-so-nice")?.active) {
       if (game.dice3d.getLoadedDiceSystems().has("penombre") && desSpeciaux) {
@@ -726,8 +726,8 @@ export default class PenombreRoll extends Roll {
 
           // Avec DsN, les dés relancés sont : soit spécial si harmonique, soit standards si bonus
           // Apparence des dés si le module Dice So Nice est activé et que le système de dés Pénombre est chargé
-          const desSpeciaux = await game.settings.get(SYSTEM.ID, "desSpeciaux")
-          const desSpeciauxTexture = await game.settings.get(SYSTEM.ID, "desSpeciauxTexture")
+          const desSpeciaux = game.settings.get(SYSTEM.ID, "desSpeciaux")
+          const desSpeciauxTexture = game.settings.get(SYSTEM.ID, "desSpeciauxTexture")
 
           if (game.modules.get("dice-so-nice")?.active) {
             if (game.dice3d.getLoadedDiceSystems().has("penombre") && desSpeciaux) {

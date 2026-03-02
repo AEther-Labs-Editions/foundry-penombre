@@ -2,7 +2,7 @@ export default class PenombreCombat extends foundry.documents.Combat {
   /** @override */
   async _onEnter(combatant) {
     await super._onEnter(combatant)
-    combatant.update({ initiative: this.#getInitiative(combatant) })
+    await combatant.update({ initiative: this.#getInitiative(combatant) })
   }
 
   // L'initiative est en 1xx pour les éminences et en 2xx pour les adversaires

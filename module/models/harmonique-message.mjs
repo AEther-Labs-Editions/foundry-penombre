@@ -86,7 +86,7 @@ export default class HarmoniqueMessageData extends BaseMessageData {
           const rollResults = PenombreRoll.analyseRollResult(roll)
           const nbSucces = rollResults.nbSucces
           const autresSucces = Object.entries(this.messagesLies).map(([id, value]) => ({
-            actor: game.actors.get(id).name,
+            actor: game.actors.get(id)?.name ?? "Acteur inconnu",
             nbSucces: value.nbSucces,
             participe: value.participe,
           }))

@@ -85,6 +85,10 @@ export default class PenombreMessage extends ChatMessage {
       if (CONFIG.debug.penombre?.chat) console.debug("Pénombre | Participation au jet", existingMessageId, actorId, answer, nbSucces, newMessageId)
       // Met à jour la réponse de l'acteur dans le message
       if (answer) {
+        if (!newMessage) {
+          console.error("Pénombre | _handleQueryMessageParticipation : newMessage introuvable", newMessageId)
+          return
+        }
         // Si la réponse est positive, on enregistre le nombre de succès
         const rollResults = PenombreRoll.analyseRollResult(newMessage.rolls[0])
         const nbSucces = rollResults.nbSucces

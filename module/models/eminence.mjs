@@ -1,5 +1,4 @@
 import { SYSTEM } from "../config/system.mjs"
-import PenombreRoll from "../documents/roll.mjs"
 
 const { SchemaField, NumberField, StringField, ArrayField, BooleanField } = foundry.data.fields
 
