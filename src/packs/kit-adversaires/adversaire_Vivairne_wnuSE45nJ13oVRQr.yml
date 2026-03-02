@@ -30,7 +30,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: systems/penombre/assets/portraits/vivairne.webp
+    src: systems/penombre/assets/tokens/vivairne_token.webp
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
