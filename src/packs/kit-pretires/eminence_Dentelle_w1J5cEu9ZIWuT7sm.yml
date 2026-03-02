@@ -1,0 +1,430 @@
+name: Dentelle
+type: eminence
+img: systems/penombre/assets/portraits/dentelle.webp
+system:
+  peuple: feeNoire
+  cle: nuit
+  potentiel:
+    pouvoirs: 0
+    atouts: 0
+    maitrises: 0
+  harmoniques:
+    ame:
+      valeur: d6
+    esprit:
+      valeur: d8
+    etincelle:
+      valeur: d10
+    nature:
+      valeur: d4
+    nuit:
+      valeur: d12
+  conscience:
+    valeur: 7
+    max: 7
+    jetons:
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: actif
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+      - statut: perdu
+    complications:
+      une:
+        description: ''
+        valeur: 0
+      deux:
+        description: ''
+        valeur: 0
+      trois:
+        description: ''
+        valeur: 0
+      quatre:
+        description: ''
+        valeur: 0
+  timbre:
+    statut: harmonieux
+    cle: false
+    note1: false
+    note2: false
+    note3: false
+    note4: false
+    peste: ''
+  atouts: []
+  maitrises: []
+  description: Fée noire dans l'obscurité
+prototypeToken:
+  name: Dentelle
+  displayName: 0
+  actorLink: true
+  width: 1
+  height: 1
+  texture:
+    src: systems/penombre/assets/tokens/dentelle_token.webp
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: 1
+  displayBars: 0
+  bar1:
+    attribute: null
+  bar2:
+    attribute: null
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: true
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 0
+    subject:
+      scale: 1
+      texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+  flags: {}
+  randomImg: false
+  appendNumber: false
+  prependAdjective: false
+items:
+  - type: pouvoir
+    name: Ombre jumelle
+    _id: a7Y4VfabwltksgDa
+    img: systems/penombre/assets/icons/pouvoir.webp
+    system:
+      utilise: false
+      description: >-
+        <p><em>Alors c’est moi… sans être moi.</em></p><p>Jusqu’à la fin du
+        tour, faites agir l’ombre de Dentelle comme si elle était un double de
+        cette dernière. Ses actions, autonomes, ne comptent pas comme celles de
+        la fée noire.</p><p>De plus, chaque fois qu’elle réalise une merveille
+        (p. 31 du kit), son joueur peut lui choisir un nouveau pouvoir dans la
+        liste suivante, ou augmenter de 1 sa valeur de
+        conscience.</p><ul><li><p>Évanescence mélusine</p></li><li><p>Sagesse
+        cassandre</p></li></ul>
+      type: naissance
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!w1J5cEu9ZIWuT7sm.a7Y4VfabwltksgDa'
+  - type: atout
+    name: Drapé d’aile
+    _id: R6EjyP4KQaaM7kib
+    img: systems/penombre/assets/icons/atout.webp
+    system:
+      description: ''
+      valeur: 3
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!w1J5cEu9ZIWuT7sm.R6EjyP4KQaaM7kib'
+  - type: atout
+    name: Une canne blanche de mon aile
+    _id: J3a6UCKYIEsMs0nG
+    img: systems/penombre/assets/icons/atout.webp
+    system:
+      description: ''
+      valeur: 3
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!w1J5cEu9ZIWuT7sm.J3a6UCKYIEsMs0nG'
+  - type: atout
+    name: Liée au Cercle des Oubliées
+    _id: 9YG1IEKAw7jtVAfB
+    img: systems/penombre/assets/icons/atout.webp
+    system:
+      description: ''
+      valeur: 2
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!w1J5cEu9ZIWuT7sm.9YG1IEKAw7jtVAfB'
+  - type: atout
+    name: Je lèverai l’ombre sur tous vos secrets
+    _id: cYgjoQ83r2Fii8lg
+    img: systems/penombre/assets/icons/atout.webp
+    system:
+      description: ''
+      valeur: 2
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!w1J5cEu9ZIWuT7sm.cYgjoQ83r2Fii8lg'
+  - type: maitrise
+    name: Prisme
+    img: systems/penombre/assets/icons/maitrise.png
+    system:
+      description: >-
+        <h1>Dentelle, l’artiste du prisme</h1><p><strong>Pour préparer son effet
+        magique, Dentelle
+        doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>travailler la
+        lumière</strong>, surligner une ligne de contraste à la craie, placer
+        des bougies rituelles aux bons emplacements pour créer des ombres
+        portées, ou diffracter des rayons à l’aide d’un ustensile prismatique
+        (loupe, lunettes, vitricle, cristal, etc.).</p></li></ul><p>Cette action
+        la fait entrer en résonance avec…</p><h6>Harmonique :
+        nuit</h6><p><strong>Ce faisant, elle…</strong></p><h6>Action
+        magique</h6><ul><li><p><strong>voit apparaître sous ses yeux des
+        indices</strong> et des détails, des odeurs colorées, des sons parfumés,
+        des goûts bruyants, des espaces insoupçonnés et des traverses
+        intimes.</p></li></ul><p><strong>Avec un effet magique de niveau ?
+        …</strong></p><p><strong>elle parvient par exemple
+        à…</strong></p><ol><li><p><strong>identifier</strong> un effet magique
+        d’art noir (conjuration, onyxium, prisme) ; éblouir ou aveugler un
+        personnage ; suivre la trace d’une personne dont elle connaît la couleur
+        prismatique ; savoir l ’allégeance d’un démon ; faire apparaître un
+        indice aux yeux de tous ; récolter une couleur unique ;
+        etc.</p></li><li><p><strong>brouiller</strong> l’image d’une personne ou
+        d’un objet ; comparer et différencier des couleurs très proches ;
+        décomposer les ingrédients d’un son, ou d’un goût ; fabriquer des
+        pigments durables pouvant servir à des artisans ; franchir un passage
+        trop petit ; concentrer la lumière en un rayon d’énergie ;
+        etc.</p></li><li><p><strong>créer</strong> un mirage dédoublant un
+        objet, ou un personnage capable d’agir ; changer la façon dont
+        fonctionnent les sens (voir la chaleur corporelle, entendre les odeurs,
+        etc.) ; écrire un message lisible uniquement par d’autres artistes du
+        prisme, ou totalement ineffaçable, comme s’il était projeté par le
+        soleil ; etc.</p></li><li><p><strong>altérer</strong> les sens de tous
+        pour que le moindre détail devienne immense, transformant une rue pavée
+        en labyrinthe ; perturber les sens au point de provoquer une crise de
+        folie ; passer d’un espace à un autre, en suivant un rayon de lumière,
+        quelle que soit la taille du passage ; ouvrir un espace inédit, sorte de
+        poche de réalité augmentée ; retrouver une personne par les traces
+        colorées qu’elle laisse, même sans la connaître ;
+        etc.</p></li><li><p><strong>voyager</strong> par la lumière sur de
+        longues distances, vers des espaces inconnus ; atteindre un méandre, une
+        étoile dans le ciel, l’intérieur d’un esprit mortel ; franchir une ombre
+        pour rejoindre les Abysses, les Cornes, ou le fonctionnaire du Clergé
+        obscur le plus proche (<em>advocatus diaboli</em> chargé des relations
+        entre démons et mortels) ; récolter l’âme d’une personne en même temps
+        que sa couleur, et ainsi la tuer ; etc.</p></li></ol><p><strong>Mais
+        attention, il risque également de…</strong></p><h6>Incident
+        magique</h6><ul><li><p><strong>trouver un diable dans les
+        détails.</strong> Parfois, le monde de l’artiste prismatique se distend
+        autour de lui, devient fractal et impressionniste, ou s’étire en
+        créatures obscènes. Un « gardien » sans visage apparaît ; l’artiste du
+        prisme est aveuglé par la débauche de détails qui l’entourent, ses sens
+        saturés devenant ininterprétables ; etc.</p></li></ul>
+      harmonique: nuit
+      niveau: 3
+      prerequis: utiliser sa canne blanche comme sonde
+      slug: ''
+    effects: []
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: xu8p7UMcYrInjBEg
+      modifiedTime: 1769161777231
+    ownership:
+      default: 0
+      Te7kFyBlWwcbrQd4: 3
+      xu8p7UMcYrInjBEg: 3
+    _id: uuoPIhHrTLpCXj0C
+    sort: 0
+    _key: '!actors.items!w1J5cEu9ZIWuT7sm.uuoPIhHrTLpCXj0C'
+  - type: pouvoir
+    name: Évanescence mélusine
+    _id: Xw09D1mtnd9ghtj6
+    img: systems/penombre/assets/icons/pouvoir.webp
+    system:
+      utilise: false
+      description: >-
+        <p><em>As-tu déjà essayé de porter une écharpe de brume
+        ?</em></p><p>Dentelle esquive automatiquement une menace physique portée
+        contre elle (attaque, piège, chute de pierres, etc.).</p>
+      type: naissance
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!w1J5cEu9ZIWuT7sm.Xw09D1mtnd9ghtj6'
+  - type: pouvoir
+    name: Sagesse cassandre
+    _id: rC4kZ1Lqpl7QfP39
+    img: systems/penombre/assets/icons/pouvoir.webp
+    system:
+      utilise: false
+      description: >-
+        <p><em>Du crime toujours le crime ouvre la route.</em></p><p>Une action
+        de Dentelle pour convaincre ou tromper devient automatique.</p>
+      type: naissance
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: null
+    _key: '!actors.items!w1J5cEu9ZIWuT7sm.rC4kZ1Lqpl7QfP39'
+effects: []
+folder: null
+ownership:
+  default: 0
+  xu8p7UMcYrInjBEg: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1769161009593
+  modifiedTime: 1769162312965
+  lastModifiedBy: xu8p7UMcYrInjBEg
+_id: w1J5cEu9ZIWuT7sm
+sort: 0
+_key: '!actors!w1J5cEu9ZIWuT7sm'

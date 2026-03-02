@@ -1,0 +1,289 @@
+name: Verizon
+type: adversaire
+_id: XshV7eytj1yhoukO
+img: icons/svg/mystery-man.svg
+system:
+  details: ''
+  adversite:
+    valeur: 3
+    max: 3
+  resilience:
+    valeur: 15
+    max: 15
+  dissonance:
+    harmonique: ame
+    valeur: 0
+    max: 0
+  description: démon (im)patient
+prototypeToken:
+  name: Verizon
+  displayName: 0
+  actorLink: false
+  width: 1
+  height: 1
+  texture:
+    src: icons/svg/mystery-man.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: null
+  bar2:
+    attribute: null
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+  flags: {}
+  randomImg: false
+  appendNumber: false
+  prependAdjective: false
+items:
+  - type: action
+    name: Mille attaques
+    system:
+      type: adverse
+      description: >-
+        <p><span class="fontstyle0">Verizon déploie une seconde paire de bras et
+        lance une déferlante d’attaques. Toutes les Éminences grises à portée
+        perdent 2 jetons conscience.</span></p>
+    _id: EJhPmqfIoAywOxjE
+    img: systems/penombre/assets/icons/action.webp
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770570240428
+      modifiedTime: 1770570278714
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!actors.items!XshV7eytj1yhoukO.EJhPmqfIoAywOxjE'
+  - type: action
+    name: Balayage
+    system:
+      type: adverse
+      description: >-
+        <p><span class="fontstyle0">Verizon bondit à proximité d’une cible qu’il
+        balaie violemment avec sa queue. 1 Éminence grise ciblée perd 2 jetons
+        conscience et doit dépenser une action pour se relever, ou subir un
+        élément désavantageux tant qu’elle est au sol.</span></p>
+    _id: hCXbsj7fRODafQsW
+    img: systems/penombre/assets/icons/action.webp
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770570290892
+      modifiedTime: 1770570324137
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!actors.items!XshV7eytj1yhoukO.hCXbsj7fRODafQsW'
+  - type: action
+    name: Inspiration infernale
+    system:
+      type: adverse
+      description: >-
+        <p><span class="fontstyle0">Verizon prend une profonde inspiration qui
+        absorbe l’ombre – et l’énergie – d’une cible. 1 Éminence grise perd 2
+        jetons conscience et Verizon regagne 2 points de résilience.</span></p>
+    _id: igRTSeqGK14ThPuW
+    img: systems/penombre/assets/icons/action.webp
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770570341557
+      modifiedTime: 1770570370562
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!actors.items!XshV7eytj1yhoukO.igRTSeqGK14ThPuW'
+  - type: intrigue
+    name: Une passion secrète
+    _id: 2OnHyMh91ruGWYHX
+    img: systems/penombre/assets/icons/intrigue.webp
+    system:
+      description: >-
+        <p><span class="fontstyle0">Verizon, enchaîné à sa mission depuis des
+        années, apprécie la compagnie des opalins de la Romance qu’il félicite
+        d’avoir su briser leur lien avec les Abysses. Il ne fait jamais rien qui
+        puisse leur nuire et porte à leur attention tout danger qui les
+        menacerait. Ce qu’il ignore, c’est qu’il a lui aussi fini par susciter
+        un amour secret, depuis le temps qu’il traîne dans Lorgol.</span></p>
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770570388622
+      modifiedTime: 1770570428632
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!actors.items!XshV7eytj1yhoukO.2OnHyMh91ruGWYHX'
+  - type: intrigue
+    name: Une connivence à mon idée
+    _id: tHcsXWsXWswUxI8D
+    img: systems/penombre/assets/icons/intrigue.webp
+    system:
+      description: >-
+        <p><span class="fontstyle0">Verizon a pris goût à Lorgol et espère
+        garder sa connivence active aussi longtemps que possible, exploitant les
+        imprécisions de celle-ci pour s’offrir un maximum de liberté. Il
+        travaillerait même à un élixir de longue-vie pour Mandigo, épaulé par
+        une apothicaire devenue sa confidente.</span></p>
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770570444435
+      modifiedTime: 1770570476386
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!actors.items!XshV7eytj1yhoukO.tHcsXWsXWswUxI8D'
+  - type: intrigue
+    name: Le solidaire
+    _id: TtcHUkCwk73MtGd8
+    img: systems/penombre/assets/icons/intrigue.webp
+    system:
+      description: >-
+        <p><span class="fontstyle0">Verizon admire les démons qui ont brisé leur
+        connivence malgré les risques. Il adorerait avoir leur courage. Il les
+        aide parfois à échapper aux foudres du Clergé obscur, sans toutefois se
+        compromettre.</span></p>
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770570490051
+      modifiedTime: 1770570542523
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!actors.items!XshV7eytj1yhoukO.TtcHUkCwk73MtGd8'
+effects: []
+folder: null
+sort: 0
+ownership:
+  default: 0
+  xu8p7UMcYrInjBEg: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1770570189192
+  modifiedTime: 1770570218449
+  lastModifiedBy: xu8p7UMcYrInjBEg
+_key: '!actors!XshV7eytj1yhoukO'

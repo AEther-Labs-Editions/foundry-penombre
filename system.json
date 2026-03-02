@@ -40,6 +40,29 @@
       "color": "#a4653d",
       "packs": ["maitrises-magiques", "journal", "scenes", "macros"],
       "folders": []
+    },
+    {
+      "name": "Scénarios",
+      "sorting": "m",
+      "color": "#266a8e",
+      "packs": [],
+      "folders":
+      [
+        {
+          "name": "Échos mélodiques",
+          "sorting": "m",
+          "color": "#266a8e",
+          "packs": ["sc-echos-adversaires", "sc-echos-journal", "sc-echos-scenes"],
+          "folders": []
+        },
+        {
+          "name": "Plénitude",
+          "sorting": "m",
+          "color": "#266a8e",
+          "packs": ["sc-plenitude-adversaires", "sc-plenitude-journal", "sc-plenitude-scenes"],
+          "folders": []
+        }
+      ]
     }
   ],
   "packs": [
@@ -126,6 +149,78 @@
       "type": "Macro",
       "ownership": {
         "PLAYER": "OBSERVER",
+        "TRUSTED": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "sc-echos-adversaires",
+      "label": "Échos - Adversaires",
+      "system": "penombre",
+      "path": "packs/echos-adversaires",
+      "type": "Actor",
+      "ownership": {
+        "PLAYER": "NONE",
+        "TRUSTED": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "sc-echos-journal",
+      "label": "Échos - Journaux",
+      "system": "penombre",
+      "path": "packs/echos-journal",
+      "type": "JournalEntry",
+      "ownership": {
+        "PLAYER": "NONE",
+        "TRUSTED": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "sc-echos-scenes",
+      "label": "Échos - Scènes",
+      "system": "penombre",
+      "path": "packs/echos-scenes",
+      "type": "Scene",
+      "ownership": {
+        "PLAYER": "NONE",
+        "TRUSTED": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "sc-plenitude-adversaires",
+      "label": "Plénitude - Adversaires",
+      "system": "penombre",
+      "path": "packs/plenitude-adversaires",
+      "type": "Actor",
+      "ownership": {
+        "PLAYER": "NONE",
+        "TRUSTED": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "sc-plenitude-journal",
+      "label": "Plénitude - Journaux",
+      "system": "penombre",
+      "path": "packs/plenitude-journal",
+      "type": "JournalEntry",
+      "ownership": {
+        "PLAYER": "NONE",
+        "TRUSTED": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "sc-plenitude-scenes",
+      "label": "Plénitude - Scènes",
+      "system": "penombre",
+      "path": "packs/plenitude-scenes",
+      "type": "Scene",
+      "ownership": {
+        "PLAYER": "NONE",
         "TRUSTED": "OBSERVER",
         "ASSISTANT": "OWNER"
       }

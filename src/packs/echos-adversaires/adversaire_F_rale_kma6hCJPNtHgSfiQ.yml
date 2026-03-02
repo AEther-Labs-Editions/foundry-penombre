@@ -1,0 +1,303 @@
+name: Férale
+type: adversaire
+_id: kma6hCJPNtHgSfiQ
+img: systems/penombre/assets/scenarios/echos-melodiques/portraits/P_ferale.webp
+system:
+  details: >-
+    <p><span class="fontstyle0">Férale est la dernière des damnes de l’échevin
+    des Mille Tours. Ces femmes sont ses agents d’élites, qu’il utilise et
+    manipule pour toutes sortes de missions hors des canaux officiels. Il l’a
+    séduite durant une soirée mondaine où elle s’ennuyait à périr dans l’escorte
+    d’un prince-marchand. Podéral d’Emnos lui a proposé une vie d’aventures et
+    de missions flamboyantes dont elle s’acquitte avec talent, espérant qu’il
+    lui offrira toujours de nouveaux défis. Dans les Échos mélodiques et la
+    maladrerie, elle est en concurrence avec Harpelle pour espionner le collège
+    du Souffre-jour.</span></p><p><span class="fontstyle0">Férale est une
+    escrimeuse provocatrice et extravertie, séduisante, solaire. Elle promène
+    avec orgueil sa crinière d’un roux flamboyant. Elle pose son regard vert,
+    interrogateur et joueur sur ses interlocutrices et interlocuteurs. La
+    finesse n’est pas sa spécialité : elle prend ce qu’elle veut, quand elle le
+    veut.</span></p>
+  adversite:
+    valeur: 3
+    max: 3
+  resilience:
+    valeur: 15
+    max: 15
+  dissonance:
+    harmonique: ame
+    valeur: 0
+    max: 0
+  description: damne faune
+prototypeToken:
+  name: Férale
+  displayName: 0
+  actorLink: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/penombre/assets/scenarios/echos-melodiques/portraits/P_ferale.webp
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: null
+  bar2:
+    attribute: null
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+  flags: {}
+  randomImg: false
+  appendNumber: false
+  prependAdjective: false
+items:
+  - type: action
+    name: Choc du chamois
+    system:
+      type: adverse
+      description: >-
+        <p><span class="fontstyle0">Férale charge et renverse son adversaire.
+        Une cible perd 2 jetons et passe le tour suivant.</span></p>
+    _id: t6LiKW86wo2XBlFc
+    img: systems/penombre/assets/icons/action.webp
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770566055417
+      modifiedTime: 1770566092191
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!actors.items!kma6hCJPNtHgSfiQ.t6LiKW86wo2XBlFc'
+  - type: action
+    name: Frappe destreza
+    system:
+      type: adverse
+      description: >-
+        <p><span class="fontstyle0">Férale utilise une arme – dague, bouteille
+        de vin, pied de tabouret – en passant telle une tornade autour de sa
+        cible pour la déstabiliser. Une cible perd 2 jetons et 2 succès sur sa
+        prochaine action.</span></p>
+    _id: SVyFL166rvCdm9QQ
+    img: systems/penombre/assets/icons/action.webp
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770566104916
+      modifiedTime: 1770566134289
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!actors.items!kma6hCJPNtHgSfiQ.SVyFL166rvCdm9QQ'
+  - type: action
+    name: Saut de cabri
+    system:
+      type: adverse
+      description: >-
+        <p><span class="fontstyle0">Férale bondit et s’appuie sur les murs, les
+        meubles et surtout ses adversaires, les bousculant et les renversant
+        tout en esquivant leurs attaques. Toutes les cibles perdent 2
+        jetons.</span></p>
+    _id: JNcLfIxEJaUfoZyN
+    img: systems/penombre/assets/icons/action.webp
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770566150520
+      modifiedTime: 1770566181178
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!actors.items!kma6hCJPNtHgSfiQ.JNcLfIxEJaUfoZyN'
+  - type: intrigue
+    name: La séduction
+    _id: saL2DzUof9t7bxqB
+    img: systems/penombre/assets/icons/intrigue.webp
+    system:
+      description: >-
+        <p><span class="fontstyle0">Férale séduit – des hommes, des femmes, un
+        tableau de chasse qui lui vaut de nombreuses inimitiés. Son réseau
+        d’influence est immense car elle garde d’excellentes relations avec ses
+        conquêtes, qu’elle sait tenir à distance adéquate</span>.</p>
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770566186884
+      modifiedTime: 1770566225508
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!actors.items!kma6hCJPNtHgSfiQ.saL2DzUof9t7bxqB'
+  - type: intrigue
+    name: La transaction
+    _id: BBmlY8lJbxI3mBKi
+    img: systems/penombre/assets/icons/intrigue.webp
+    system:
+      description: >-
+        <p><span class="fontstyle0">Podéral d’Emnos n’a pas volé Férale au
+        Patriarche, ce prince-marchand qui pourtant ne goûte guère l’échevin des
+        Mille Tours. Non : il la lui a achetée. À moins que le prince-marchand
+        ait ainsi placé un de ses pions auprès d’un membre du conseil de Lorgol
+        ?</span></p>
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770566228654
+      modifiedTime: 1770566281241
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!actors.items!kma6hCJPNtHgSfiQ.BBmlY8lJbxI3mBKi'
+  - type: intrigue
+    name: La sélection
+    _id: zwGHIh6SIzb767dD
+    img: systems/penombre/assets/icons/intrigue.webp
+    system:
+      description: >-
+        <p><span class="fontstyle0">Férale ne voit aucune objection à partager
+        l’attention de Podéral d’Emnos avec les autres damnes, mais elle a bien
+        conscience de la haine qu’elles lui vouent. L’attaque constituant la
+        meilleure défense, il va lui falloir se débarrasser d’elles – mais
+        comment ne pas provoquer la colère de l’échevin, qui s’amuse de la
+        situation ?</span></p>
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770566293616
+      modifiedTime: 1770566325140
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!actors.items!kma6hCJPNtHgSfiQ.zwGHIh6SIzb767dD'
+effects: []
+folder: null
+sort: 0
+ownership:
+  default: 0
+  xu8p7UMcYrInjBEg: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1770566006751
+  modifiedTime: 1770575185353
+  lastModifiedBy: xu8p7UMcYrInjBEg
+_key: '!actors!kma6hCJPNtHgSfiQ'

@@ -1,0 +1,372 @@
+name: Mandigo
+type: adversaire
+_id: Aq5GVU64HvTEIvIx
+img: systems/penombre/assets/scenarios/plenitude/portraits/P_mandigo.webp
+system:
+  details: >-
+    <p><span class="fontstyle0">Mandigo est l’un des trois obscurantistes
+    responsables de l’invasion janrénienne de l’Urguemand. Agone réussit
+    cependant à les identifier, tue Diphome et emprisonne les deux autres dans
+    le souffrejour naissant. Mais il libère Mandigo pour une dernière mission
+    qu’il n’est pas en position de refuser. À jamais transformé par l’arbre noir
+    et la volonté d’Agone, le mage est une nouvelle version de lui-même, ce dont
+    il n’a alors pas vraiment conscience. Mandigo est cependant tout sauf idiot
+    et, pour l’Allégeance au crépuscule, le sort que lui demande Agone, il
+    réclame du sang de Cyriaque pour le lier à celui de son danseur « en vue
+    d’en renforcer les effets ». Il utilise en réalité ce sang pour piéger le
+    sort : s’il venait à décéder, Cyriaque le suivrait dans la tombe. Agone est
+    donc obligé de le laisser en vie. Mandigo est enfermé plusieurs années, puis
+    déplacé en dehors de Lorgol et finalement ramené dans la capitale urguemande
+    pour être plus facile à protéger – et à surveiller.</span></p><p><span
+    class="fontstyle0">Mandigo profite depuis d’une vie discrète, sort surtout
+    la nuit, noue quelques relations avec des gens qui ne se doutent pas de son
+    identité. Il développe aussi une relation particulière avec son dernier
+    danseur, vestige de sa gloire passée, seul être qui le relie à son identité
+    brisée. Lorsqu’il est contraint de le sacrifier pour fuir la rue du Pot
+    d’Étain, la vengeance devient son unique horizon – à moins que quelqu’un ne
+    lui propose un autre avenir ?</span></p><p><span class="fontstyle0">Déjà
+    frêle il y a vingt ans, Mandigo ressemble désormais à un vieillard décharné.
+    Des rides ont creusé la peau ternie de son visage. Son regard adouci, qui
+    semble presque s’excuser, lui donne un air inoffensif. Pourtant, il y a ce
+    pli qui barre son front et trahit une acuité et une dureté qui ne demandent
+    qu’à reprendre le dessus.</span></p>
+  adversite:
+    valeur: 4
+    max: 4
+  resilience:
+    valeur: 20
+    max: 20
+  dissonance:
+    harmonique: ame
+    valeur: 0
+    max: 0
+  description: vieil obscurantiste enragé
+prototypeToken:
+  name: Mandigo
+  displayName: 0
+  actorLink: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/penombre/assets/scenarios/plenitude/portraits/P_mandigo.webp
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: null
+  bar2:
+    attribute: null
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+  flags: {}
+  randomImg: false
+  appendNumber: false
+  prependAdjective: false
+items:
+  - type: action
+    name: Orbe noir
+    system:
+      type: adverse
+      description: >-
+        <p><span class="fontstyle0">Mandigo génère une sphère noire qui s’étend
+        sur cinq mètres autour de lui et provoque désorientation et visions
+        d’horreur. Les Éminences grises prises dans la zone perdent 2 jetons
+        conscience par tour. La sphère dure trois tours.</span></p>
+    _id: 6BcUHGoCwBRsDvhM
+    img: systems/penombre/assets/icons/action.webp
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770570762310
+      modifiedTime: 1770570815946
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!actors.items!Aq5GVU64HvTEIvIx.6BcUHGoCwBRsDvhM'
+  - type: action
+    name: Effusion de rage
+    system:
+      type: adverse
+      description: >-
+        <p><span class="fontstyle0">Les gouttes de sang qui coulent des
+        scarifications des danseurs de Mandigo se transforment en traits
+        écarlates. 1 Éminence grise perd 4 jetons conscience.</span></p>
+    _id: qJaEWT0kAE5Us70Z
+    img: systems/penombre/assets/icons/action.webp
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770570819421
+      modifiedTime: 1770570868456
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!actors.items!Aq5GVU64HvTEIvIx.qJaEWT0kAE5Us70Z'
+  - type: action
+    name: Sacrifice de sang
+    system:
+      type: adverse
+      description: >-
+        <p><span class="fontstyle0">Mandigo fait couler son propre sang pour
+        augmenter la puissance d’une effusion de rage. Les Éminences grises
+        perdent chacune 4 jetons et Mandigo perd 4 points de
+        résilience.</span></p>
+    _id: I66PfLulWsOrwvj0
+    img: systems/penombre/assets/icons/action.webp
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770570871907
+      modifiedTime: 1770570908233
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!actors.items!Aq5GVU64HvTEIvIx.I66PfLulWsOrwvj0'
+  - type: action
+    name: Excès de souffrance
+    system:
+      type: adverse
+      description: >-
+        <p><span class="fontstyle0">En torturant un danseur, Mandigo transmet sa
+        douleur à tous les mages et danseurs présents. Les Éminences grises ne
+        peuvent pas utiliser la magie cryptogrammique pendant 2
+        tours.</span></p>
+    _id: dUMYyQEzYsd1Y1o2
+    img: systems/penombre/assets/icons/action.webp
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770570923510
+      modifiedTime: 1770570958725
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!actors.items!Aq5GVU64HvTEIvIx.dUMYyQEzYsd1Y1o2'
+  - type: intrigue
+    name: Anciennes relations
+    _id: 7rrzvnhawmRyoohE
+    img: systems/penombre/assets/icons/intrigue.webp
+    system:
+      description: >-
+        <p><span class="fontstyle0">Même si elles sont peu nombreuses, quelques
+        personnes encore en vie ont connu Mandigo. Certaines le conspuent,
+        d’autres l’adulent, toutes le craignent. Comment réagiraient-elles s’il
+        devait se rappeler à leur souvenir ?</span></p>
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770570965526
+      modifiedTime: 1770571002938
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!actors.items!Aq5GVU64HvTEIvIx.7rrzvnhawmRyoohE'
+  - type: intrigue
+    name: Nouvelles relations
+    _id: Xfil1v6iJ3LP4lss
+    img: systems/penombre/assets/icons/intrigue.webp
+    system:
+      description: >-
+        <p><span class="fontstyle0">Si Mandigo s’est abstenu de tout lien avec
+        le Cryptogrammemagicien, il a établi quelques nouveaux contacts à
+        Lorgol. Ceux-ci sont superficiels, mais pourraient lui offrir des
+        ressources inattendues.</span></p>
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770571018111
+      modifiedTime: 1770571060314
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!actors.items!Aq5GVU64HvTEIvIx.Xfil1v6iJ3LP4lss'
+  - type: intrigue
+    name: L’objet de ma vengeance
+    _id: 1fYJR7pUFM65rMTk
+    img: systems/penombre/assets/icons/intrigue.webp
+    system:
+      description: >-
+        <p><span class="fontstyle0">Mandigo, aveuglé par sa soif de vengeance,
+        surévalue le rôle des Éminences – sur qui il projette toute sa haine.
+        Pourrait-il être raisonné ? Devenir un professeur ? Après tout, Agone a
+        tenu parole et ses malheurs ne sont dus qu’à un triste concours de
+        circonstances.</span></p>
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770571073536
+      modifiedTime: 1770571108261
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!actors.items!Aq5GVU64HvTEIvIx.1fYJR7pUFM65rMTk'
+  - type: intrigue
+    name: Plus rien à perdre
+    _id: a0o3f79gNrNlof3K
+    img: systems/penombre/assets/icons/intrigue.webp
+    system:
+      description: >-
+        <p><span class="fontstyle0">En se lançant dans ses représailles, Mandigo
+        a repris goût à la magie et retrouvé une partie de son identité. Acculé,
+        il pourrait choisir la fuite, regagner en puissance et renouer avec ses
+        anciennes conspirations. Cela en ferait un adversaire du Souffre-jour
+        particulièrement dangereux !</span></p>
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      xu8p7UMcYrInjBEg: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1770571121831
+      modifiedTime: 1770571157105
+      lastModifiedBy: xu8p7UMcYrInjBEg
+    _key: '!actors.items!Aq5GVU64HvTEIvIx.a0o3f79gNrNlof3K'
+effects: []
+folder: null
+sort: 0
+ownership:
+  default: 0
+  xu8p7UMcYrInjBEg: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1770570596107
+  modifiedTime: 1770575291846
+  lastModifiedBy: xu8p7UMcYrInjBEg
+_key: '!actors!Aq5GVU64HvTEIvIx'
