@@ -1,3 +1,9 @@
+1.4.4
+- Ajout du prétiré Dentelle
+- Ajout des compendiums des scénarios Plénitude et Echos mélodiques
+- Ajout des images des tokens des nouveaux adversaires
+- Correction du bug limitant les relances de dés à une seule par message. Les relances sont désormais illimitées, chaque relance coûtant un jeton.
+
 1.4.3
 - Déplacement des maitrises magiques du compendium Pouvoirs potentiels dans le dossier Kit Demo vers un compendium Maitrises magiques dans le dossier Système
 - Ajout des icônes des maitrises magiques

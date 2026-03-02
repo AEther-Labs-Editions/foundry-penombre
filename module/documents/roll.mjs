@@ -826,7 +826,7 @@ export default class PenombreRoll extends Roll {
         await Promise.all(showPromises)
       }
 
-      await message.update({ rolls: [roll], "system.relanceFaite": true })
+      await message.update({ rolls: [roll] })
     }
   }
 }

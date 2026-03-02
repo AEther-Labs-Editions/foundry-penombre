@@ -142,7 +142,7 @@ export default class HarmoniqueMessageData extends BaseMessageData {
 
   async addListeners(html) {
     // Les boutons reroll n'est affiché que pour le MJ ou le joueur à l'origine du message
-    if ((game.user.isGM || this.parent.isAuthor) && !this.relanceFaite) {
+    if (game.user.isGM || this.parent.isAuthor) {
       html.querySelectorAll(".roll.die").forEach((btn) => {
         btn.classList.add("rerollable")
         btn.addEventListener("click", (ev) => {
