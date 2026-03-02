@@ -155,6 +155,7 @@
     },
     {
       "name": "sc-echos-adversaires",
+      "banner": "systems/penombre/assets/banners/actor-banner.webp",
       "label": "Échos - Adversaires",
       "system": "penombre",
       "path": "packs/echos-adversaires",
@@ -178,19 +179,8 @@
       }
     },
     {
-      "name": "sc-echos-scenes",
-      "label": "Échos - Scènes",
-      "system": "penombre",
-      "path": "packs/echos-scenes",
-      "type": "Scene",
-      "ownership": {
-        "PLAYER": "NONE",
-        "TRUSTED": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
       "name": "sc-plenitude-adversaires",
+      "banner": "systems/penombre/assets/banners/actor-banner.webp",
       "label": "Plénitude - Adversaires",
       "system": "penombre",
       "path": "packs/plenitude-adversaires",
@@ -207,18 +197,6 @@
       "system": "penombre",
       "path": "packs/plenitude-journal",
       "type": "JournalEntry",
-      "ownership": {
-        "PLAYER": "NONE",
-        "TRUSTED": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "sc-plenitude-scenes",
-      "label": "Plénitude - Scènes",
-      "system": "penombre",
-      "path": "packs/plenitude-scenes",
-      "type": "Scene",
       "ownership": {
         "PLAYER": "NONE",
         "TRUSTED": "OBSERVER",
