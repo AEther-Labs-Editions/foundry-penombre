@@ -6,32 +6,7 @@ Revue de code complète du système Foundry VTT Pénombre, organisée en trois v
 
 ## 1. Revue CSS (LESS) / HTML (Handlebars)
 
-### 1.1 Bugs CSS critiques
-
-#### `padding: none` — valeur invalide
-- **Fichier :** `styles/reserve-collegiale.less`, ligne 13
-- `none` n'est pas une valeur acceptée par la propriété `padding`. Les navigateurs ignorent silencieusement cette déclaration.
-- **Fix :** `padding: 0;`
-
-#### `align-items: left` — valeur invalide
-- **Fichier :** `styles/adversaire.less`, ligne 141
-- `left` n'est pas valide pour `align-items` (valide pour `justify-content` ou `text-align`). La déclaration est ignorée.
-- **Fix :** `align-items: flex-start;`
-
-#### `.complication-case-2` jamais stylée
-- **Template :** `templates/eminence/partials/conscience.hbs`, ligne 93
-- La classe `.complication-case-2` est utilisée dans le template mais aucune règle CSS ne la cible. La classe `.complication-case` est stylée (width/height via `@small-case-size`), mais la variante `-2` n'a aucun style. Les images de complication en mode lecture s'affichent à leur taille intrinsèque au lieu de `20px × 20px`.
-- **Fix :** Renommer en `.complication-case` dans le template, ou ajouter une règle :
-```less
-.complication-case-2 {
-  width: @small-case-size;
-  height: @small-case-size;
-}
-```
-
----
-
-### 1.2 Accessibilité (WCAG)
+### 1.1 Accessibilité (WCAG)
 
 #### Aucun style `:focus` / `:focus-visible`
 - **Fichiers :** Tous les fichiers LESS (absence totale)
@@ -79,26 +54,7 @@ Revue de code complète du système Foundry VTT Pénombre, organisée en trois v
 
 ---
 
-### 1.3 HTML invalide
-
-#### `<img></img>` — balise fermante sur void element
-- **Fichiers :** `conscience.hbs` (8 occurrences), `timbre.hbs` (7), `reserve-collegiale.hbs` (1), `sidebar-menu.hbs` (1), `atouts.hbs` (1), `pouvoirs.hbs` (1)
-- `<img>` est un void element HTML. La balise fermante `</img>` est invalide et peut perturber les parsers et outils d'accessibilité.
-- **Fix :** Remplacer tous les `></img>` par `/>`.
-
----
-
-### 1.4 Internationalisation (i18n)
-
-#### ~~Chaînes françaises codées en dur~~ — Corrigé
-- ~~`templates/adversaire/partials/actions.hbs` : `<h2>Actions adverses`, `<h2>Actions de dissonance`~~
-- ~~`templates/adversaire/partials/intrigues.hbs` : `<h2>Intrigues`~~
-- ~~`templates/dialogs/roll-dialog.hbs` : `Niveau : {{this.system.valeur}}`~~
-- **Corrigé :** Clés `actionsAdverses`, `actionsDissonance` ajoutées dans `lang/fr.json`. Les 4 chaînes utilisent désormais `{{localize}}`.
-
----
-
-### 1.5 Sécurité
+### 1.2 Sécurité
 
 #### Triple-stache `{{{...}}}` dans un attribut `data-tooltip`
 - **Fichiers :** `pouvoirs.hbs:42`, `atouts.hbs:36`, `maitrises.hbs:42`
@@ -110,10 +66,10 @@ Revue de code complète du système Foundry VTT Pénombre, organisée en trois v
 
 ---
 
-### 1.6 Cohérence et maintenabilité CSS
+### 1.3 Cohérence et maintenabilité CSS
 
 #### `#917f35` codé en dur au lieu de `@color-accent`
-- **Fichier :** `styles/eminence.less`, 8 occurrences (lignes 519, 564, 570, 808, 845, 948, 984, 1078, 1103)
+- **Fichier :** `styles/eminence.less`, 8 occurrences (lignes 519, 564, 808, 845, 948, 984, 1078, 1103)
 - La variable `@color-accent: #917f35` existe. Si la couleur change, ces 8 bordures ne suivront pas.
 - **Fix :** Remplacer par `border: 1px solid @color-accent;`
 
@@ -156,7 +112,7 @@ Revue de code complète du système Foundry VTT Pénombre, organisée en trois v
 
 ---
 
-### 1.7 Points mineurs CSS
+### 1.4 Points mineurs CSS
 
 #### `.section-style()` mixin : `flex-direction` sans `display: flex`
 - **Fichier :** `styles/penombre.less`, lignes 94-100
@@ -312,7 +268,7 @@ block.data.last = i === n
 ### 2.3 Code quality
 
 #### `await game.settings.get()` inutile (5 occurrences)
-- **Fichiers :** `roll.mjs` (lignes 35, 215, 216, 729, 730), `reserve-collegiale.mjs` (lignes 48, 53)
+- **Fichiers :** `roll.mjs` (lignes 35, 215, 216, 729, 730)
 - `game.settings.get()` est entièrement synchrone. `await` wraps la valeur dans une Promise résolue — inutile et trompeur.
 - La ligne 35 de `roll.mjs` est particulièrement confuse :
 ```js
@@ -395,7 +351,7 @@ const actionCollegialeLiee = dialogElement.querySelector("#actionCollegiale")?.c
 
 ## 3. Revue Architecture
 
-### 3.1 God Class `PenombreRoll` (833 lignes)
+### 3.1 God Class `PenombreRoll` (832 lignes)
 
 **Fichier :** `module/documents/roll.mjs`
 
@@ -568,9 +524,6 @@ Ces champs semblent être du legacy qui a été supplanté par le système d'Ite
 | Critique | `newMessage` sans null guard | `chat-message.mjs` L75 | Crash TypeError |
 | Critique | `game.actors.get(id).name` sans null guard | `harmonique-message.mjs` L89 | Messages chat cassés définitivement |
 | Critique | `die.total` pas recalculé après reroll | `roll.mjs` L813-829 | Détection envolée/fausse note fausse |
-| Bug | `padding: none` invalide | `reserve-collegiale.less` L13 | Style ignoré |
-| Bug | `align-items: left` invalide | `adversaire.less` L141 | Style ignoré |
-| Bug | `.complication-case-2` jamais stylée | `conscience.hbs` L93 | Taille images incorrecte |
 | Bug | Missing `await` dans `_onEnter` | `combat.mjs` L5 | Race condition initiative |
 | Bug | Branche morte `type === "action"` dupliquée | `adversaire-sheet.mjs` L65-74 | Code mort |
 | Bug | Casse `_adoptStyleSheet` vs `_adoptStylesheet` | `checkbox.mjs` / mixin | Mixin bypassé |
@@ -578,8 +531,7 @@ Ces champs semblent être du legacy qui a été supplanté par le système d'Ite
 | Bug | Helper `times` : `first`/`last` jamais vrais | `handlebars.mjs` L22-31 | Template logic cassée |
 | Bug | `<label>` sans `for` sur 3 checkboxes | `roll-dialog.hbs` L15,32,69 | Label non cliquable |
 | Bug | `{{{...}}}` dans `data-tooltip` | `pouvoirs.hbs` L42, etc. | Injection HTML |
-| Bug | `<img></img>` void element fermé | 18+ templates | HTML invalide |
-| Design | God class `PenombreRoll` (833 lignes) | `roll.mjs` | Maintenance, testabilité |
+| Design | God class `PenombreRoll` (832 lignes) | `roll.mjs` | Maintenance, testabilité |
 | Design | UI/DOM logic dans TypeDataModel | `harmonique-message.mjs` | Couplage, non testable |
 | Design | Dépendance models → documents | `eminence.mjs` L2, `harmonique-message.mjs` L3 | Risque dépendance circulaire |
 | Design | Deux settings pour un état | `penombre.mjs`, `settings.mjs` | Fragilité synchronisation |
@@ -589,7 +541,6 @@ Ces champs semblent être du legacy qui a été supplanté par le système d'Ite
 | Maintenance | `DEV_MODE = true` inutilisé | `system.mjs` L6 | Config morte |
 | Maintenance | Import mort `PenombreRoll` | `eminence.mjs` L2 | Code mort |
 | Maintenance | Schémas `atouts`/`maitrises` orphelins | `eminence.mjs` L102-123 | Legacy confus |
-| Maintenance | i18n : 4 chaînes françaises en dur | `actions.hbs`, `intrigues.hbs`, `roll-dialog.hbs` | Intraduisible |
 | Maintenance | Aucun style `:focus` | Tous les LESS | Accessibilité |
 | Maintenance | `DIALOG_TEMPLATE` chemin erroné + mort | `roll.mjs` L10 | Code mort trompeur |
 | Maintenance | `await` sur `game.settings.get()` synchrone | 5 occurrences | Trompeur |
