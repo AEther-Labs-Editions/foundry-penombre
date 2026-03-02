@@ -1,4 +1,4 @@
-name: Journal Échos mélodiques
+name: Échos mélodiques - Images
 _id: UTx7XfEVrvIowP3I
 pages:
   - sort: 100000
@@ -7,7 +7,7 @@ pages:
     _id: hIhB2YuAeBIotIFi
     system: {}
     title:
-      show: true
+      show: false
       level: 1
     image:
       caption: Anémone
@@ -40,7 +40,7 @@ pages:
     _id: 8WXDylR5U18cpANY
     system: {}
     title:
-      show: true
+      show: false
       level: 1
     image:
       caption: Férale
@@ -72,7 +72,7 @@ pages:
     _id: raFBzuDVgXuzsoEV
     system: {}
     title:
-      show: true
+      show: false
       level: 1
     image:
       caption: Harpelle
@@ -105,7 +105,7 @@ pages:
     _id: pyg3KnNXF4wveKF8
     system: {}
     title:
-      show: true
+      show: false
       level: 1
     image:
       caption: Les Deux Tours

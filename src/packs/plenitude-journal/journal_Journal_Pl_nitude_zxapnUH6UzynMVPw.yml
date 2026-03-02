@@ -1,4 +1,4 @@
-name: Journal Plénitude
+name: Plénitude - Images
 _id: zxapnUH6UzynMVPw
 pages:
   - sort: 100000
@@ -7,7 +7,7 @@ pages:
     _id: KeKHMOLhga5Auxe8
     system: {}
     title:
-      show: true
+      show: false
       level: 1
     image:
       caption: Adaméliandre
@@ -39,7 +39,7 @@ pages:
     _id: gYlqnBBQzbopw58a
     system: {}
     title:
-      show: true
+      show: false
       level: 1
     image:
       caption: Alimondo
@@ -71,7 +71,7 @@ pages:
     _id: 1HuyoW9xmiASV34W
     system: {}
     title:
-      show: true
+      show: false
       level: 1
     image:
       caption: Cyriaque Steyr d'Olgard, le Premier Baron
@@ -103,7 +103,7 @@ pages:
     _id: uBGh6XpAwu4wgnRW
     system: {}
     title:
-      show: true
+      show: false
       level: 1
     image:
       caption: Le Danseur mort
@@ -135,7 +135,7 @@ pages:
     _id: WPMweWeXA4KDK5Qd
     system: {}
     title:
-      show: true
+      show: false
       level: 1
     image:
       caption: Mandigo
@@ -167,7 +167,7 @@ pages:
     _id: QadEI2vzEMMpmecU
     system: {}
     title:
-      show: true
+      show: false
       level: 1
     image:
       caption: Le Trio obscurantiste
