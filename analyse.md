@@ -63,9 +63,9 @@ Revue de code complète du système Foundry VTT Pénombre, organisée en trois v
 </select>
 ```
 
-#### Images décoratives avec `alt="|"`
+#### Images décoratives avec `alt=""`
 - **Fichiers :** `eminence.hbs`, `personnage.hbs`, `conscience.hbs`, `harmoniques.hbs`
-- Les images décoratives (frises) utilisent `alt="|"`. Le lecteur d'écran lit "pipe" ou "barre verticale". Les images purement décoratives doivent utiliser `alt=""` pour être ignorées par les technologies d'assistance. Les images interactives (dés) devraient avoir un alt descriptif.
+- Les images décoratives (frises) utilisent `alt=""`. Le lecteur d'écran lit "pipe" ou "barre verticale". Les images purement décoratives doivent utiliser `alt=""` pour être ignorées par les technologies d'assistance. Les images interactives (dés) devraient avoir un alt descriptif.
 
 #### `<span>` pour les titres de section
 - **Fichiers :** `templates/eminence/partials/pouvoirs.hbs:3`, `atouts.hbs:3`, `maitrises.hbs:3`
@@ -90,13 +90,11 @@ Revue de code complète du système Foundry VTT Pénombre, organisée en trois v
 
 ### 1.4 Internationalisation (i18n)
 
-#### Chaînes françaises codées en dur
-- **Fichiers :**
-  - `templates/adversaire/partials/actions.hbs`, lignes 4 et 30 : `<h2>Actions adverses`, `<h2>Actions de dissonance`
-  - `templates/adversaire/partials/intrigues.hbs`, ligne 3 : `<h2>Intrigues`
-  - `templates/dialogs/roll-dialog.hbs`, ligne 62 : `Niveau : {{this.system.valeur}}`
-- Toutes les autres chaînes du système passent par `{{localize "PENOMBRE.ui.*"}}`. Ces quatre chaînes sont invisibles aux traducteurs.
-- **Fix :** Ajouter les clés dans `lang/fr.json` et utiliser `{{localize}}`.
+#### ~~Chaînes françaises codées en dur~~ — Corrigé
+- ~~`templates/adversaire/partials/actions.hbs` : `<h2>Actions adverses`, `<h2>Actions de dissonance`~~
+- ~~`templates/adversaire/partials/intrigues.hbs` : `<h2>Intrigues`~~
+- ~~`templates/dialogs/roll-dialog.hbs` : `Niveau : {{this.system.valeur}}`~~
+- **Corrigé :** Clés `actionsAdverses`, `actionsDissonance` ajoutées dans `lang/fr.json`. Les 4 chaînes utilisent désormais `{{localize}}`.
 
 ---
 

@@ -1261,7 +1261,6 @@ body.theme-light .penombre.adversaire .adversaire-content {
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .adversite .attribut {
   display: flex;
-  align-items: left;
   margin-left: 20px;
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-personnage .infos .adversite .attribut label {
@@ -1552,9 +1551,6 @@ body.theme-light .penombre.adversaire .adversaire-content {
 }
 body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   background-color: #faeed6;
-}
-#penombre-reserve-collegiale {
-  padding: none;
 }
 #penombre-reserve-collegiale .div-jetons {
   background-image: url("/systems/penombre/assets/ui/reserve-collegiale.webp");

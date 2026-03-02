@@ -3,13 +3,13 @@
   {{#if (or isStyleJeuStandard isStyleJeuAvance)}}
   <div class="col-1-1 text-vertical">{{localize "PENOMBRE.ui.reserveCollegiale"}}</div>
   <div class="col-2-1 frise-verticale">
-    <img class="" src="systems/penombre/assets/ui/doree.webp" alt="|" />
+    <img class="" src="systems/penombre/assets/ui/doree.webp" alt="" />
   </div>
   {{/if}}
   <div class="jetons jetons-{{ifThen isGM 'gm' 'player'}}">
     {{#each jetons}}
       <div class="jeton {{ifThen this.valeur 'active' 'inactive'}}">
-        <img class="jeton jeton-{{@key}} absolue jeton-contextmenu dropshadow-{{ifThen this.valeur 'actif' 'inactif'}}" data-action="jeton" data-index="{{@key}}" src="{{getJetonImage this.valeur}}"  data-tooltip="{{localize 'PENOMBRE.ui.jeton'}} {{@key}}"></img>
+        <img class="jeton jeton-{{@key}} absolue jeton-contextmenu dropshadow-{{ifThen this.valeur 'actif' 'inactif'}}" data-action="jeton" data-index="{{@key}}" src="{{getJetonImage this.valeur}}"  data-tooltip="{{localize 'PENOMBRE.ui.jeton'}} {{@key}}"/>
       </div>
     {{/each}}
   </div>

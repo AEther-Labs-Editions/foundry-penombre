@@ -1,7 +1,7 @@
 {{!log "AdversaireSheet - Partials - Actions" this }}
 <div class="adversaire-actions">
     <div class="actions-adverses">
-        <h2>Actions adverses
+        <h2>{{localize "PENOMBRE.ui.actionsAdverses"}}
             {{#if unlocked}}
                 <a class="item-control" data-tooltip="{{ localize 'PENOMBRE.ui.create' item='une action adverse' }}" data-action="create" data-type="action" data-subtype="adverse"><i class="fas fa-plus"></i></a>
             {{/if}}
@@ -27,7 +27,7 @@
     </div>
     {{#if hasActionsDissonance}}
         <div class="actions-dissonance">
-            <h2>Actions de dissonance
+            <h2>{{localize "PENOMBRE.ui.actionsDissonance"}}
             {{#if unlocked}}
                 <a class="item-control" data-tooltip="{{ localize 'PENOMBRE.ui.create' item='une action de dissonance' }}" data-action="create" data-type="action" data-subtype="dissonance"><i class="fas fa-plus"></i></a>
             {{/if}}
