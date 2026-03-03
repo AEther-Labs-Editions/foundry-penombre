@@ -180,17 +180,9 @@ export default class PenombreRoll extends Roll {
     // If the user cancels the dialog, exit early (intentional silent return)
     if (rollContext === null) return
 
-    // Dépense de jetons de la réserve collégiale
+    // Calcul des jetons à dépenser (la dépense effective se fait après l'évaluation du jet)
     const jetonsReserveDepenses = rollContext.jetonsReserve !== "" ? Number(rollContext.jetonsReserve) : 0
-    if (jetonsReserveDepenses !== 0) {
-      await game.users.activeGM.query("penombre.updateReserveCollegialeFromRoll", { nbJetons: jetonsReserveDepenses })
-    }
-
-    // Dépense de jetons de la conscience
     const jetonsConscienceDepenses = rollContext.jetonsConscience !== "" ? Number(rollContext.jetonsConscience) : 0
-    if (jetonsConscienceDepenses !== 0) {
-      const depense = await actor.system.depenserJetons(jetonsConscienceDepenses)
-    }
 
     formule = rollContext.formule || formule
 
@@ -298,6 +290,14 @@ export default class PenombreRoll extends Roll {
       }
     }
     await roll.evaluate()
+
+    // Dépense de jetons après évaluation réussie du jet (évite de perdre des jetons si le roll échoue)
+    if (jetonsReserveDepenses !== 0) {
+      await game.users.activeGM.query("penombre.updateReserveCollegialeFromRoll", { nbJetons: jetonsReserveDepenses })
+    }
+    if (jetonsConscienceDepenses !== 0) {
+      await actor.system.depenserJetons(jetonsConscienceDepenses)
+    }
 
     if (CONFIG.debug.penombre?.rolls) console.debug("Pénombre | PenombreRoll | roll", roll)
 
