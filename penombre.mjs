@@ -151,7 +151,7 @@ Hooks.on("updateSetting", async (setting, update, options, id) => {
     // En mode Kit de demo, on force le nombre de jetons à 10
     if (game.settings.get("penombre", "styleJeu") === "demo" && nouveauNbJetons !== 10) {
       nouveauNbJetons = 10
-      await game.settings.set(SYSTEM.ID, "nbJetons", 10)
+      game.settings.set(SYSTEM.ID, "nbJetons", 10)
     }
 
     // Ajouter les jetons manquants si le nombre augmente
@@ -170,7 +170,7 @@ Hooks.on("updateSetting", async (setting, update, options, id) => {
       }
     })
 
-    await game.settings.set(SYSTEM.ID, "reserveCollegiale", reserveCollegiale)
+    game.settings.set(SYSTEM.ID, "reserveCollegiale", reserveCollegiale)
   }
 })
 
