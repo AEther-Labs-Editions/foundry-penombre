@@ -17,7 +17,7 @@ pages:
       controls: true
       volume: 0.5
     src: >-
-      systems/penombre/assets/scenarios/echos-melodiques/portraits/P_anemone.webp
+      systems/penombre/assets/scenarios/echos-melodiques/portraits/anemone.webp
     category: null
     ownership:
       default: -1
@@ -49,7 +49,7 @@ pages:
     video:
       controls: true
       volume: 0.5
-    src: systems/penombre/assets/scenarios/echos-melodiques/portraits/P_ferale.webp
+    src: systems/penombre/assets/scenarios/echos-melodiques/portraits/ferale.webp
     category: null
     ownership:
       default: -1
@@ -82,7 +82,7 @@ pages:
       controls: true
       volume: 0.5
     src: >-
-      systems/penombre/assets/scenarios/echos-melodiques/portraits/P_harpelle.webp
+      systems/penombre/assets/scenarios/echos-melodiques/portraits/harpelle.webp
     category: null
     ownership:
       default: -1
@@ -114,7 +114,7 @@ pages:
     video:
       controls: true
       volume: 0.5
-    src: systems/penombre/assets/scenarios/echos-melodiques/portraits/P_2tours.webp
+    src: systems/penombre/assets/scenarios/echos-melodiques/portraits/2tours.webp
     category: null
     ownership:
       default: -1

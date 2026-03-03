@@ -1,7 +1,7 @@
 name: Férale
 type: adversaire
 _id: kma6hCJPNtHgSfiQ
-img: systems/penombre/assets/scenarios/echos-melodiques/portraits/P_ferale.webp
+img: systems/penombre/assets/scenarios/echos-melodiques/portraits/ferale.webp
 system:
   details: >-
     <p><span class="fontstyle0">Férale est la dernière des damnes de l’échevin
@@ -36,7 +36,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: systems/penombre/assets/scenarios/echos-melodiques/portraits/P_ferale.webp
+    src: systems/penombre/assets/scenarios/echos-melodiques/tokens/ferale_token.webp
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0

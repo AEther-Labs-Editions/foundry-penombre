@@ -1,7 +1,7 @@
 name: Harpelle
 type: adversaire
 _id: dagvTP51O5mgELGE
-img: systems/penombre/assets/scenarios/echos-melodiques/portraits/P_harpelle.webp
+img: systems/penombre/assets/scenarios/echos-melodiques/portraits/harpelle.webp
 system:
   details: >-
     <p><span class="fontstyle0">Podéral d’Emnos a réussi à s’attacher la
@@ -51,8 +51,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: >-
-      systems/penombre/assets/scenarios/echos-melodiques/portraits/P_harpelle.webp
+    src: systems/penombre/assets/scenarios/echos-melodiques/tokens/harpelle_token.webp
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0

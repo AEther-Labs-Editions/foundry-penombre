@@ -16,7 +16,7 @@ pages:
     video:
       controls: true
       volume: 0.5
-    src: systems/penombre/assets/scenarios/plenitude/portraits/P_adameliandre.webp
+    src: systems/penombre/assets/scenarios/plenitude/portraits/adameliandre.webp
     category: null
     ownership:
       default: -1
@@ -48,7 +48,7 @@ pages:
     video:
       controls: true
       volume: 0.5
-    src: systems/penombre/assets/scenarios/plenitude/portraits/P_alimondo.webp
+    src: systems/penombre/assets/scenarios/plenitude/portraits/alimondo.webp
     category: null
     ownership:
       default: -1
@@ -80,7 +80,7 @@ pages:
     video:
       controls: true
       volume: 0.5
-    src: systems/penombre/assets/scenarios/plenitude/portraits/P_baron.webp
+    src: systems/penombre/assets/scenarios/plenitude/portraits/baron.webp
     category: null
     ownership:
       default: -1
@@ -112,7 +112,7 @@ pages:
     video:
       controls: true
       volume: 0.5
-    src: systems/penombre/assets/scenarios/plenitude/portraits/P_danseur-mort.webp
+    src: systems/penombre/assets/scenarios/plenitude/portraits/danseur_mort.webp
     category: null
     ownership:
       default: -1
@@ -144,7 +144,7 @@ pages:
     video:
       controls: true
       volume: 0.5
-    src: systems/penombre/assets/scenarios/plenitude/portraits/P_mandigo.webp
+    src: systems/penombre/assets/scenarios/plenitude/portraits/mandigo.webp
     category: null
     ownership:
       default: -1
@@ -176,7 +176,7 @@ pages:
     video:
       controls: true
       volume: 0.5
-    src: systems/penombre/assets/scenarios/plenitude/portraits/P_trio-obscur.webp
+    src: systems/penombre/assets/scenarios/plenitude/portraits/trio-obscur.webp
     category: null
     ownership:
       default: -1

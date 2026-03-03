@@ -1,7 +1,7 @@
 name: Mandigo
 type: adversaire
 _id: Aq5GVU64HvTEIvIx
-img: systems/penombre/assets/scenarios/plenitude/portraits/P_mandigo.webp
+img: systems/penombre/assets/scenarios/plenitude/portraits/mandigo.webp
 system:
   details: >-
     <p><span class="fontstyle0">Mandigo est l’un des trois obscurantistes
@@ -48,7 +48,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: systems/penombre/assets/scenarios/plenitude/portraits/P_mandigo.webp
+    src: systems/penombre/assets/scenarios/plenitude/tokens/mandigo_token.webp
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
