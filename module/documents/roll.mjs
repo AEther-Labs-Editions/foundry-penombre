@@ -578,13 +578,19 @@ export default class PenombreRoll extends Roll {
   async _prepareChatRenderContext({ flavor, isPrivate = false, ...options } = {}) {
     const rollResults = PenombreRoll.analyseRollResult(this)
     const nbSucces = rollResults.nbSucces
-    const isFausseNote = rollResults.isDeHarmoniqueMin
-    const isEnvolee = rollResults.isDeHarmoniqueMax
+    // Fusion des événements spéciaux courants avec ceux accumulés lors des relances précédentes
+    const accumulated = this.options.accumulated || {}
+    const nbFaussesNotes = (accumulated.fausseNote || 0) + (rollResults.isDeHarmoniqueMin ? 1 : 0)
+    const nbEnvolees = (accumulated.envolee || 0) + (rollResults.isDeHarmoniqueMax ? 1 : 0)
+    const isFausseNote = nbFaussesNotes > 0
+    const isEnvolee = nbEnvolees > 0
     let typeEnvolee = 1
     if (rollResults.typeDeHarmonique === 8 || rollResults.typeDeHarmonique === 10) typeEnvolee = 2
     else if (rollResults.typeDeHarmonique === 12) typeEnvolee = 3
-    const isIncidentMagique = rollResults.isDeMerveilleuxMin
-    const isMerveille = rollResults.isDeMerveilleuxMax
+    const nbIncidentsMagiques = (accumulated.incidentMagique || 0) + (rollResults.isDeMerveilleuxMin ? 1 : 0)
+    const nbMerveilles = (accumulated.merveille || 0) + (rollResults.isDeMerveilleuxMax ? 1 : 0)
+    const isIncidentMagique = nbIncidentsMagiques > 0
+    const isMerveille = nbMerveilles > 0
     const hasDifficulte = this.options.difficulte !== ""
     let succesManquants = 0
     if (hasDifficulte) {
@@ -605,10 +611,18 @@ export default class PenombreRoll extends Roll {
       succesManquants,
       isSuccess,
       isFausseNote,
+      nbFaussesNotes,
+      multipleFaussesNotes: nbFaussesNotes > 1,
       isEnvolee,
+      nbEnvolees,
+      multipleEnvolees: nbEnvolees > 1,
       typeEnvolee,
       isIncidentMagique,
+      nbIncidentsMagiques,
+      multipleIncidentsMagiques: nbIncidentsMagiques > 1,
       isMerveille,
+      nbMerveilles,
+      multipleMerveilles: nbMerveilles > 1,
       isPrivate,
       formula: isPrivate ? "???" : this._formula,
       flavor: isPrivate ? null : (flavor ?? this.options.flavor),
@@ -717,6 +731,17 @@ export default class PenombreRoll extends Roll {
 
       const newRolls = []
 
+      // Sauvegarde des événements spéciaux (fausse note, envolée, etc.) avant modification des dés
+      // Ces événements sont cumulatifs : un 1 suivi d'une relance à 8 produit une fausse note ET une envolée
+      const preAnalysis = PenombreRoll.analyseRollResult(roll)
+      if (!roll.options.accumulated) {
+        roll.options.accumulated = { fausseNote: 0, envolee: 0, incidentMagique: 0, merveille: 0 }
+      }
+      if (preAnalysis.isDeHarmoniqueMin) roll.options.accumulated.fausseNote++
+      if (preAnalysis.isDeHarmoniqueMax) roll.options.accumulated.envolee++
+      if (preAnalysis.isDeMerveilleuxMin) roll.options.accumulated.incidentMagique++
+      if (preAnalysis.isDeMerveilleuxMax) roll.options.accumulated.merveille++
+
       // TODO : Lorsque le système de dés Pénombre sera géré : gérer la relance d'un dé merveilleux
       for (const indice of rerolledDices) {
         const [dieIndex, resultIndex] = indice.split("-").map(Number)
@@ -811,6 +836,36 @@ export default class PenombreRoll extends Roll {
 
           newRolls.push(newDice)
           roll.dice[dieIndex].results[resultIndex].result = parseInt(newDice.result)
+          // Recalcul du _total du dé après mutation du résultat
+          roll.dice[dieIndex]._total = roll.dice[dieIndex].results.filter((r) => !r.discarded).reduce((sum, r) => sum + r.result, 0)
+        }
+      }
+
+      // Recalcul du total global du roll
+      roll._total = roll.dice.reduce((sum, die) => sum + die.total, 0)
+
+      // Gestion des effets de jetons si le dé harmonique (index 0) a été relancé
+      const harmoniqueRerolled = rerolledDices.some((indice) => indice.startsWith("0-"))
+      if (harmoniqueRerolled) {
+        const postAnalysis = PenombreRoll.analyseRollResult(roll)
+        const actorId = roll.options.actorId || message.speaker.actor
+        const rerollActor = actorId ? game.actors.get(actorId) : null
+        if (rerollActor?.type === "eminence") {
+          // Fausse note (1 sur le dé harmonique) : perte d'un jeton
+          if (postAnalysis.isDeHarmoniqueMin) {
+            await rerollActor.system.perdreUnJeton()
+          }
+          // Envolée (max sur le dé harmonique) : réactivation d'un jeton inactif
+          if (postAnalysis.isDeHarmoniqueMax) {
+            const jetons = foundry.utils.duplicate(rerollActor.system.conscience.jetons)
+            for (let i = 0; i < jetons.length; i++) {
+              if (jetons[i].statut === SYSTEM.JETON_STATUTS.inactif.id) {
+                jetons[i].statut = SYSTEM.JETON_STATUTS.actif.id
+                break
+              }
+            }
+            await rerollActor.update({ "system.conscience.jetons": jetons })
+          }
         }
       }
 

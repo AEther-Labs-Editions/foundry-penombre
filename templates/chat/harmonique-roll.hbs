@@ -40,16 +40,16 @@
           {{/if}}
           <!-- Cas particuliers -->
           {{#if isFausseNote}}
-            <div class="roll-result-special"><img src="systems/penombre/assets/ui/fausse_note.webp" />{{localize "PENOMBRE.Roll.fausseNote"}}</div>
+            <div class="roll-result-special"><img src="systems/penombre/assets/ui/fausse_note.webp" />{{localize "PENOMBRE.Roll.fausseNote"}}{{#if multipleFaussesNotes}} x{{nbFaussesNotes}}{{/if}}</div>
           {{/if}}
           {{#if isEnvolee}}
-            <div class="roll-result-special"><img src="{{concat 'systems/penombre/assets/ui/envolee_' typeEnvolee '.webp'}}" />{{localize "PENOMBRE.Roll.envolee"}}</div>
+            <div class="roll-result-special"><img src="{{concat 'systems/penombre/assets/ui/envolee_' typeEnvolee '.webp'}}" />{{localize "PENOMBRE.Roll.envolee"}}{{#if multipleEnvolees}} x{{nbEnvolees}}{{/if}}</div>
           {{/if}}
           {{#if isIncidentMagique}}
-            <div class="roll-result-special"><img src="systems/penombre/assets/ui/incident_magique.webp" />{{localize "PENOMBRE.Roll.incidentMagique"}}</div>
+            <div class="roll-result-special"><img src="systems/penombre/assets/ui/incident_magique.webp" />{{localize "PENOMBRE.Roll.incidentMagique"}}{{#if multipleIncidentsMagiques}} x{{nbIncidentsMagiques}}{{/if}}</div>
           {{/if}}
           {{#if isMerveille}}
-            <div class="roll-result-special"><img src="systems/penombre/assets/ui/merveille.webp" />{{localize "PENOMBRE.Roll.merveille"}}</div>
+            <div class="roll-result-special"><img src="systems/penombre/assets/ui/merveille.webp" />{{localize "PENOMBRE.Roll.merveille"}}{{#if multipleMerveilles}} x{{nbMerveilles}}{{/if}}</div>
           {{/if}}
         </div>
       {{/if}}
