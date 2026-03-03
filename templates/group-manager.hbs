@@ -1,0 +1,48 @@
+<div class="group-manager-list">
+  {{#if members.length}}
+  <div class="member-header">
+    <div class="member-identity"></div>
+    <div class="member-character"></div>
+    <div class="member-harmoniques">
+      <span>{{localize "PENOMBRE.ui.ame"}}</span>
+      <span>{{localize "PENOMBRE.ui.esprit"}}</span>
+      <span>{{localize "PENOMBRE.ui.etincelle"}}</span>
+      <span>{{localize "PENOMBRE.ui.nature"}}</span>
+      <span>{{localize "PENOMBRE.ui.nuit"}}</span>
+    </div>
+    <div class="member-conscience">
+      <span>{{localize "PENOMBRE.ui.section.conscience"}}</span>
+    </div>
+  </div>
+  {{#each members}}
+  <div class="member">
+    <div class="member-identity">
+      <span class="player-color" style="background-color: {{userColor}}"></span>
+      <span class="player-name">{{userName}}</span>
+    </div>
+    <div class="member-character">
+      <a data-action="openSheet" data-actor-id="{{actorId}}">
+        <img src="{{img}}" />
+        <span>{{name}}</span>
+      </a>
+    </div>
+    <div class="member-harmoniques">
+      {{#each harmoniques}}
+        <img src="{{getDiceImage this.valeur}}" />
+      {{/each}}
+    </div>
+    <div class="member-conscience">
+      {{#each conscience.jetons}}
+        {{#if (or (eq this.statut "actif") (eq this.statut "inactif"))}}
+          <img class="jeton dropshadow-{{this.statut}}" src="{{getJetonImage this.statut}}" />
+        {{else}}
+          <img class="jeton" src="systems/penombre/assets/ui/cercle.webp" />
+        {{/if}}
+      {{/each}}
+    </div>
+  </div>
+  {{/each}}
+  {{else}}
+    <p class="no-members">{{localize "PENOMBRE.GroupManager.noMembers"}}</p>
+  {{/if}}
+</div>

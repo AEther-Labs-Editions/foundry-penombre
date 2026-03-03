@@ -489,6 +489,10 @@
     "ReserveCollegiale": {
       "title": "Réserve Collégiale"
     },
+    "GroupManager": {
+      "title": "Gestionnaire de groupe",
+      "noMembers": "Aucun joueur connecté avec une Éminence grise assignée"
+    },
     "Sidebar": {
       "title": "Pénombre",
       "support": "Support",
@@ -501,6 +505,8 @@
       "menu": "Système",
       "reserve": "Réserve collégiale",
       "reserveTooltip": "Ouvre la Réserve collégiale",
+      "group": "Gestionnaire de groupe",
+      "groupTooltip": "Ouvre le gestionnaire de groupe",
       "bugReport": "Signaler un bug",
       "bugReportTooltip": "Signaler un bug ou faire une suggestion d’amélioration sur GitHub",
       "video": "Présentation vidéo du système",

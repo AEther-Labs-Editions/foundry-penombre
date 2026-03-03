@@ -1,0 +1,142 @@
+.penombre-group-manager-content {
+  background-color: @background-light;
+  font-family: @font-chocolate;
+  color: @color-primary;
+  padding: 10px;
+
+  .member-header,
+  .member {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    padding: 0 6px;
+  }
+
+  .member-header {
+    border-bottom: 2px solid fade(@color-primary, 40%);
+
+    .member-harmoniques,
+    .member-conscience {
+      font-family: @font-cattedrale;
+      font-size: @font-size-base;
+      color: @color-secondary;
+
+      span {
+        text-align: center;
+      }
+    }
+
+    .member-harmoniques span {
+      width: 80px;
+    }
+
+    .member-conscience {
+      align-items: center;
+    }
+  }
+
+  .member {
+    border-bottom: 1px solid fade(@color-primary, 30%);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .member-identity {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 110px;
+
+    .player-color {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .player-name {
+      font-family: @font-cattedrale;
+      font-size: @font-size-base;
+      color: @color-secondary;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .member-character {
+    min-width: 130px;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: @color-primary;
+
+      &:hover {
+        text-shadow: 0 0 6px fade(@color-accent, 60%);
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid @color-primary;
+      }
+
+      span {
+        font-family: @font-cattedrale;
+        font-size: @font-size-middle;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  .member-harmoniques {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    flex-shrink: 0;
+
+    img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  .member-conscience {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    flex: 1;
+    min-width: 0;
+    align-items: center;
+
+    .jeton {
+      width: 40px;
+      height: 40px;
+    }
+
+    .dropshadow-actif,
+    .dropshadow-inactif {
+      -webkit-filter: drop-shadow(-3px 3px 3px #666666);
+      filter: drop-shadow(-3px 3px 3px #666666);
+    }
+  }
+
+  .no-members {
+    text-align: center;
+    font-family: @font-cattedrale;
+    font-size: @font-size-base;
+    color: @color-secondary;
+    padding: 20px;
+  }
+}

@@ -114,6 +114,7 @@ function registerWorldCount(registerKey) {
 Hooks.once("ready", function () {
   game.system.applicationReserveCollegiale = new applications.PenombreReserveCollegiale()
   game.system.applicationReserveCollegiale.render({ force: true })
+  game.system.applicationGroupManager = new applications.PenombreGroupManager()
   if (!CONFIG.debug.penombre) {
     CONFIG.debug.penombre = {
       reserve: false,
@@ -124,15 +125,6 @@ Hooks.once("ready", function () {
   }
   // Statistics
   registerWorldCount("penombre")
-
-  // Vérification des users sans acteur
-  if (!game.user.isGM && !game.user.character) {
-    ui.notifications.info(game.i18n.format("PENOMBRE.Warnings.userSansActeur", { user: game.user.name }))
-    ChatMessage.create({
-      content: game.i18n.format("PENOMBRE.Warnings.userSansActeur", { user: game.user.name }),
-      user: game.user._id,
-    })
-  }
 })
 
 Hooks.on("updateSetting", async (setting, update, options, id) => {

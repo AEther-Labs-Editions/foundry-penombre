@@ -56,4 +56,10 @@
     <i class="fa-solid fa-users" inert></i>
     {{localize "PENOMBRE.Sidebar.reserve"}}
   </button>
+  {{#if isGM}}
+  <button type="button" data-action="openApp" data-app="group" data-tooltip="{{localize 'PENOMBRE.Sidebar.groupTooltip'}}">
+    <i class="fa-solid fa-users-gear" inert></i>
+    {{localize "PENOMBRE.Sidebar.group"}}
+  </button>
+  {{/if}}
 </section>

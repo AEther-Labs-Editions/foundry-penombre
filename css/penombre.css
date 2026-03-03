@@ -2043,3 +2043,124 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   gap: 1.5rem;
   overflow-y: auto;
 }
+.penombre-group-manager-content {
+  background-color: #faeed6;
+  font-family: "ChocoCovRainBold";
+  color: #a56135;
+  padding: 10px;
+}
+.penombre-group-manager-content .member-header,
+.penombre-group-manager-content .member {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  padding: 0 6px;
+}
+.penombre-group-manager-content .member-header {
+  border-bottom: 2px solid rgba(165, 97, 53, 0.4);
+}
+.penombre-group-manager-content .member-header .member-harmoniques,
+.penombre-group-manager-content .member-header .member-conscience {
+  font-family: "Cattedrale";
+  font-size: 17px;
+  color: #56605b;
+}
+.penombre-group-manager-content .member-header .member-harmoniques span,
+.penombre-group-manager-content .member-header .member-conscience span {
+  text-align: center;
+}
+.penombre-group-manager-content .member-header .member-harmoniques span {
+  width: 80px;
+}
+.penombre-group-manager-content .member-header .member-conscience {
+  align-items: center;
+}
+.penombre-group-manager-content .member {
+  border-bottom: 1px solid rgba(165, 97, 53, 0.3);
+}
+.penombre-group-manager-content .member:last-child {
+  border-bottom: none;
+}
+.penombre-group-manager-content .member-identity {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 110px;
+}
+.penombre-group-manager-content .member-identity .player-color {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.penombre-group-manager-content .member-identity .player-name {
+  font-family: "Cattedrale";
+  font-size: 17px;
+  color: #56605b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.penombre-group-manager-content .member-character {
+  min-width: 130px;
+}
+.penombre-group-manager-content .member-character a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #a56135;
+}
+.penombre-group-manager-content .member-character a:hover {
+  text-shadow: 0 0 6px rgba(145, 127, 53, 0.6);
+}
+.penombre-group-manager-content .member-character a img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #a56135;
+}
+.penombre-group-manager-content .member-character a span {
+  font-family: "Cattedrale";
+  font-size: 19px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.penombre-group-manager-content .member-harmoniques {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.penombre-group-manager-content .member-harmoniques img {
+  width: 80px;
+  height: 80px;
+}
+.penombre-group-manager-content .member-conscience {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
+  align-items: center;
+}
+.penombre-group-manager-content .member-conscience .jeton {
+  width: 40px;
+  height: 40px;
+}
+.penombre-group-manager-content .member-conscience .dropshadow-actif,
+.penombre-group-manager-content .member-conscience .dropshadow-inactif {
+  -webkit-filter: drop-shadow(-3px 3px 3px #666666);
+  filter: drop-shadow(-3px 3px 3px #666666);
+}
+.penombre-group-manager-content .no-members {
+  text-align: center;
+  font-family: "Cattedrale";
+  font-size: 17px;
+  color: #56605b;
+  padding: 20px;
+}

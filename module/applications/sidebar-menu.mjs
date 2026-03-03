@@ -28,6 +28,9 @@ export default class PenombreSidebarMenu extends HandlebarsApplicationMixin(Abst
       case "reserve":
         if (!foundry.applications.instances.has("penombre-reserve-collegiale")) game.system.applicationReserveCollegiale.render({ force: true })
         break
+      case "group":
+        if (!foundry.applications.instances.has("penombre-group-manager")) game.system.applicationGroupManager.render({ force: true })
+        break
       default:
         break
     }
@@ -38,6 +41,7 @@ export default class PenombreSidebarMenu extends HandlebarsApplicationMixin(Abst
     const context = await super._prepareContext(options)
     return Object.assign(context, {
       version: `Version ${game.system.version}`,
+      isGM: game.user.isGM,
     })
   }
 }
