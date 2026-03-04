@@ -1,0 +1,24 @@
+name: Gestionnaire de groupe
+type: script
+_id: 5NLxz3gphERmd01E
+author: x1OxOUwTeSDz7l5O
+img: icons/svg/dice-target.svg
+scope: global
+command: 'game.system.applicationGroupManager.render({ force: true })'
+folder: null
+sort: 0
+ownership:
+  default: 0
+  x1OxOUwTeSDz7l5O: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1772655019008
+  modifiedTime: 1772655030278
+  lastModifiedBy: x1OxOUwTeSDz7l5O
+_key: '!macros!5NLxz3gphERmd01E'
