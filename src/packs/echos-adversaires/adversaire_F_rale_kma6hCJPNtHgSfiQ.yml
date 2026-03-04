@@ -36,7 +36,8 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: systems/penombre/assets/scenarios/echos-melodiques/tokens/ferale_token.webp
+    src: >-
+      systems/penombre/assets/scenarios/echos-melodiques/tokens/ferale_token.webp
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0

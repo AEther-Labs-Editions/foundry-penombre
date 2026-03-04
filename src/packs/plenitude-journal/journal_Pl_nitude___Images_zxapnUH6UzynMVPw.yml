@@ -176,7 +176,7 @@ pages:
     video:
       controls: true
       volume: 0.5
-    src: systems/penombre/assets/scenarios/plenitude/portraits/trio-obscur.webp
+    src: systems/penombre/assets/scenarios/plenitude/portraits/trio_obscur.webp
     category: null
     ownership:
       default: -1
