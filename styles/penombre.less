@@ -17,6 +17,10 @@
 @background-light: #faeed6; // Fond clair
 @background-dark: #2d1000; // fond frise sombre
 @color-blue: #124b63; // Bleu
+@color-shadow: #666666; // Ombre portée
+@color-hover-dice: #af010a; // Survol des dés
+@color-border-light: #cccccc; // Bordure légère
+@color-selected-dice: darkgray; // Dé sélectionné
 
 // Polices
 @font-cattedrale: "Cattedrale";
@@ -66,6 +70,12 @@
         Mixins
 --------------------------------------------- */
 
+// Mixin pour l'ombre portée des jetons
+.jeton-dropshadow() {
+  -webkit-filter: drop-shadow(-5px 5px 5px @color-shadow);
+  filter: drop-shadow(-5px 5px 5px @color-shadow);
+}
+
 // Mixin pour le texte vertical
 .vertical-text(@color: @color-primary) {
   writing-mode: vertical-rl;
@@ -107,6 +117,47 @@
   border: 1px solid @color-primary;
   padding: 2px;
   border-radius: @border-radius;
+}
+
+// Mixin pour le bloc potentiel (pouvoirs, atouts, maîtrises)
+.potentiel-block() {
+  position: relative;
+  float: left;
+  text-align: center;
+  width: 100px;
+  height: 200px;
+
+  .img-potentiel {
+    width: 100px;
+    height: 100px;
+  }
+
+  .absolue {
+    position: absolute;
+    z-index: 5;
+  }
+
+  .val-potentiel-saisie {
+    margin-left: -22.5px;
+    margin-top: 42px;
+    width: 55px;
+    z-index: 10;
+    font-size: @font-size-xlarge;
+  }
+
+  .val-potentiel {
+    margin-left: 41.5px;
+    margin-top: 42px;
+    text-align: center;
+    font-size: @font-size-large;
+  }
+
+  span {
+    margin-left: -42px;
+    margin-top: 90px;
+    color: @color-primary;
+    font-size: @font-size-large;
+  }
 }
 
 // Mixin pour les éléments de note

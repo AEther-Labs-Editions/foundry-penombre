@@ -439,7 +439,6 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 .penombre.eminence .eminence-content .eminence-personnage-2 .logo-frame {
   display: table;
   float: left;
-  justify-content: center;
   height: 152px;
   width: 150px;
   padding: 1px;
@@ -615,12 +614,6 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 }
 .penombre.eminence .eminence-content .eminence-harmoniques {
   color: #56605b;
-  /*
-    .editer-harmoniques {
-        // width: 405px;
-        font-size: @font-size-xlarge;
-    }
-    */
 }
 .penombre.eminence .eminence-content .eminence-harmoniques .click:hover {
   cursor: pointer;
@@ -638,14 +631,14 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   float: none;
   width: 405px;
 }
+.penombre.eminence .eminence-content .eminence-harmoniques .editer-harmoniques {
+  font-size: 30px;
+}
 .penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-1 {
   float: none;
   margin-left: 40px;
   width: 85px;
   height: 85px;
-}
-.penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-1 .editer-harmoniques {
-  font-size: 30px;
 }
 .penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-2 {
   float: none;
@@ -653,17 +646,11 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   width: 85px;
   height: 85px;
 }
-.penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-2 .editer-harmoniques {
-  font-size: 30px;
-}
 .penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-3 {
   float: none;
   margin-left: 10px;
   width: 85px;
   height: 85px;
-}
-.penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-3 .editer-harmoniques {
-  font-size: 30px;
 }
 .penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-4 {
   float: none;
@@ -671,17 +658,11 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   width: 85px;
   height: 85px;
 }
-.penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-4 .editer-harmoniques {
-  font-size: 30px;
-}
 .penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-5 {
   float: none;
   margin-left: 85px;
   width: 85px;
   height: 85px;
-}
-.penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-5 .editer-harmoniques {
-  font-size: 30px;
 }
 .penombre.eminence .eminence-content .eminence-harmoniques .flexible {
   position: relative;
@@ -1140,18 +1121,6 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 /* ---------------------------------------------
           Thème Sombre
 --------------------------------------------- */
-body {
-  /*
-  &.theme-dark {
-    .penombre {
-      &.adversaire {
-        .adversaire-content {
-        }
-      }
-    }
-  }
-  */
-}
 body.theme-light .penombre.adversaire .adversaire-content {
   background-color: #faeed6;
   /* Si et seulement si on est en mode clair (et pas sombre) de la fiche */
@@ -1315,7 +1284,7 @@ body.theme-light .penombre.adversaire .adversaire-content {
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-actions .actions .action {
   position: relative;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-radius: 5px;
   padding: 10px;
 }
@@ -1359,7 +1328,7 @@ body.theme-light .penombre.adversaire .adversaire-content {
 }
 .penombre.adversaire .adversaire-content .adversaire-main .adversaire-intrigues .intrigues .intrigue {
   position: relative;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-radius: 5px;
   padding: 10px;
 }
@@ -1380,11 +1349,11 @@ body.theme-light .penombre.adversaire .adversaire-content {
   top: 0.5rem;
   right: 0.5rem;
 }
-.theme-light .penombre.atout .atout-content,
-.theme-light .penombre.maitrise .maitrise-content,
-.theme-light .penombre.pouvoir .pouvoir-content,
-.theme-light .penombre.intrigue .intrigue-content,
-.theme-light .penombre.action .action-content {
+body.theme-light .penombre.atout .atout-content,
+body.theme-light .penombre.maitrise .maitrise-content,
+body.theme-light .penombre.pouvoir .pouvoir-content,
+body.theme-light .penombre.intrigue .intrigue-content,
+body.theme-light .penombre.action .action-content {
   background-color: #faeed6;
   background-image: url("/systems/penombre/assets/background/fond-coupe.webp");
   background-repeat: repeat;
@@ -1569,12 +1538,6 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   /* 3 colonnes égales */
   gap: 5px;
   padding: 10px;
-  /*
-      .absolue {
-        position: absolute;
-        z-index: 5;
-      }
-      */
 }
 #penombre-reserve-collegiale .div-jetons .jetons img.dropshadow-actif,
 #penombre-reserve-collegiale .div-jetons .jetons img.dropshadow-inactif {
@@ -1727,9 +1690,6 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 .penombre-roll-dialog .line-2 fieldset .atouts .atout:hover {
   cursor: pointer;
 }
-.penombre-roll-dialog .line-2 fieldset .atouts .atout:nth-child(even) {
-  /* background-color: silver; */
-}
 .penombre-roll-dialog .line-2 fieldset .atouts .atout.checked {
   background-color: #917f35;
   color: white;
@@ -1866,7 +1826,7 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   font-family: "Cattedrale";
   font-size: 20px;
   display: inline;
-  text-wrap: auto;
+  overflow-wrap: break-word;
 }
 #interface #sidebar .chat-message .message-header .message-sender,
 #interface #ui-right-column-1 .chat-message .message-header .message-sender {
@@ -1883,24 +1843,26 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 }
 #interface #sidebar .chat-message .message-content .dice-roll.penombre .roll-infos,
 #interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .roll-infos {
-  /* font-family: "Cattedrale"; */
+  /* font-family: @font-cattedrale; */
   font-size: 1rem;
   text-align: center;
   margin: 5px 0 5px 0;
 }
 #interface #sidebar .chat-message .message-content .dice-roll.penombre .participate-container,
 #interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .participate-container {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 5px;
 }
 #interface #sidebar .chat-message .message-content .dice-roll.penombre .participate-container button,
 #interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .participate-container button {
   font-family: "Cattedrale";
   font-size: 1rem;
+  flex: 1;
+  margin: 0 4px;
 }
 #interface #sidebar .chat-message .message-content .dice-roll.penombre .roll-results,
 #interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .roll-results {
-  /* font-family: "Cattedrale"; */
-  /* font-size: 1.1rem; */
   font-size: 1rem;
   font-weight: bold;
   text-align: center;
@@ -1920,16 +1882,6 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   max-width: 32px;
   max-height: 32px;
   margin-right: 10px;
-}
-#interface #sidebar .chat-message .message-content .dice-roll.penombre .participate-container,
-#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .participate-container {
-  display: flex;
-  justify-content: space-between;
-}
-#interface #sidebar .chat-message .message-content .dice-roll.penombre .participate-container button,
-#interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .participate-container button {
-  flex: 1;
-  margin: 0 4px;
 }
 #interface #sidebar .chat-message .message-content .dice-roll.penombre .dice-result.expanded .dice-tooltip,
 #interface #ui-right-column-1 .chat-message .message-content .dice-roll.penombre .dice-result.expanded .dice-tooltip {
@@ -1999,6 +1951,8 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   padding: 1rem;
 }
 .penombre-sidebar section {
+  display: flex;
+  flex-direction: column;
   gap: 0.5rem;
 }
 .penombre-sidebar section h4 {
@@ -2154,8 +2108,8 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 }
 .penombre-group-manager-content .member-conscience .dropshadow-actif,
 .penombre-group-manager-content .member-conscience .dropshadow-inactif {
-  -webkit-filter: drop-shadow(-3px 3px 3px #666666);
-  filter: drop-shadow(-3px 3px 3px #666666);
+  -webkit-filter: drop-shadow(-5px 5px 5px #666666);
+  filter: drop-shadow(-5px 5px 5px #666666);
 }
 .penombre-group-manager-content .no-members {
   text-align: center;

@@ -20,13 +20,6 @@
     .message-header {
       border-bottom: 1.5px solid @color-primary;
       display: grid;
-      .theme-dark & {
-        // color: var(--color-textLight);
-      }
-      .theme-light & {
-        // color: #222;
-      }
-
       .message-metadata {
         margin-top: -53px;
       }
@@ -42,10 +35,10 @@
       }
       .title {
         color: @color-primary;
-        font-family: "Cattedrale";
+        font-family: @font-cattedrale;
         font-size: 20px;
         display: inline;
-        text-wrap: auto;
+        overflow-wrap: break-word;
       }
       .message-sender {
         display: flex;
@@ -56,27 +49,29 @@
     .message-content {
       .dice-roll.penombre {
         .roll-title {
-          font-family: "Cattedrale";
+          font-family: @font-cattedrale;
           font-size: 1.1rem;
           text-align: center;
           padding-top: 5px;
         }
         .roll-infos {
-          /* font-family: "Cattedrale"; */
+          /* font-family: @font-cattedrale; */
           font-size: 1rem;
           text-align: center;
           margin: 5px 0 5px 0;
         }
         .participate-container {
+          display: flex;
+          justify-content: space-between;
           margin-bottom: 5px;
           button {
-            font-family: "Cattedrale";
+            font-family: @font-cattedrale;
             font-size: 1rem;
+            flex: 1;
+            margin: 0 4px;
           }
         }
         .roll-results {
-          /* font-family: "Cattedrale"; */
-          /* font-size: 1.1rem; */
           font-size: 1rem;
           font-weight: bold;
           text-align: center;
@@ -92,14 +87,6 @@
                 margin-right: 10px;
               }
             }
-          }
-        }
-        .participate-container {
-          display: flex;
-          justify-content: space-between;
-          button {
-            flex: 1;
-            margin: 0 4px;
           }
         }
         .dice-result {
@@ -133,14 +120,8 @@
             &.rerollable {
               cursor: var(--cursor-pointer);
             }
-            &.max {
-              // filter: sepia(0.9) hue-rotate(10deg) saturate(0.8) brightness(0.85);
-            }
-            &.min {
-              // filter: sepia(0.7) hue-rotate(-20deg) saturate(2) brightness(1);
-            }
             &.dice-selected {
-              border: solid 2px darkgray;
+              border: solid 2px @color-selected-dice;
             }
           }
         }
@@ -156,7 +137,7 @@
               filter: none;
             }
             &.dice-selected {
-              border: solid 2px darkgray;
+              border: solid 2px @color-selected-dice;
             }
           }
         }

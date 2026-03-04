@@ -340,11 +340,8 @@ body {
     }
 
     .col-3 {
-      // width: 625px;
       margin-left: 473px;
-      // width: 100%;
       min-width: 635px;
-      // float: left;
     }
 
     .col-1-1 {
@@ -408,7 +405,6 @@ body {
       .logo-frame {
         display: table;
         float: left;
-        justify-content: center;
         height: 152px;
         width: 150px;
         padding: 1px;
@@ -500,8 +496,7 @@ body {
 
         img.dropshadow-actif,
         img.dropshadow-inactif {
-          -webkit-filter: drop-shadow(-5px 5px 5px #666666);
-          filter: drop-shadow(-5px 5px 5px #666666);
+          .jeton-dropshadow();
 
           &:hover {
             cursor: pointer;
@@ -516,7 +511,7 @@ body {
       .cadre-complications-2 {
         display: table;
         width: 402px;
-        border: 1px solid #917f35;
+        border: 1px solid @color-accent;
         border-radius: @border-radius-small;
         padding: 2px;
         padding-left: 10px;
@@ -561,7 +556,7 @@ body {
       .cadre-complications {
         display: table;
         width: 402px;
-        border: 1px solid #917f35;
+        border: 1px solid @color-accent;
         border-radius: @border-radius-small;
         padding: 2px;
         padding-left: 10px;
@@ -620,8 +615,8 @@ body {
       color: @color-secondary;
       .click:hover {
         cursor: pointer;
-        -webkit-filter: drop-shadow(0px 0px 6px #af010a);
-        filter: drop-shadow(0px 0px 6px #af010a);
+        -webkit-filter: drop-shadow(0px 0px 6px @color-hover-dice);
+        filter: drop-shadow(0px 0px 6px @color-hover-dice);
       }
       table {
         tr {
@@ -643,58 +638,16 @@ body {
         }
       }
 
-      /*
-    .editer-harmoniques {
-        // width: 405px;
+      .editer-harmoniques {
         font-size: @font-size-xlarge;
-    }
-    */
+      }
 
       // Cases de mouvement avec mixin
-      .case-de-mouve-1 {
-        .case-de-mouve(40px);
-
-        .editer-harmoniques {
-          // width: 405px;
-          font-size: @font-size-xlarge;
-        }
-      }
-
-      .case-de-mouve-2 {
-        .case-de-mouve(-40px);
-
-        .editer-harmoniques {
-          // width: 405px;
-          font-size: @font-size-xlarge;
-        }
-      }
-
-      .case-de-mouve-3 {
-        .case-de-mouve(10px);
-
-        .editer-harmoniques {
-          // width: 405px;
-          font-size: @font-size-xlarge;
-        }
-      }
-
-      .case-de-mouve-4 {
-        .case-de-mouve(-5px);
-
-        .editer-harmoniques {
-          // width: 405px;
-          font-size: @font-size-xlarge;
-        }
-      }
-
-      .case-de-mouve-5 {
-        .case-de-mouve(85px);
-
-        .editer-harmoniques {
-          // width: 405px;
-          font-size: @font-size-xlarge;
-        }
-      }
+      .case-de-mouve-1 { .case-de-mouve(40px); }
+      .case-de-mouve-2 { .case-de-mouve(-40px); }
+      .case-de-mouve-3 { .case-de-mouve(10px); }
+      .case-de-mouve-4 { .case-de-mouve(-5px); }
+      .case-de-mouve-5 { .case-de-mouve(85px); }
 
       .flexible {
         position: relative;
@@ -760,43 +713,7 @@ body {
           text-align: center;
 
           .div-potentiel {
-            position: relative;
-            float: left;
-            text-align: center;
-            width: 100px;
-            height: 200px;
-
-            .img-potentiel {
-              width: 100px;
-              height: 100px;
-            }
-
-            .absolue {
-              position: absolute;
-              z-index: 5;
-            }
-
-            .val-potentiel-saisie {
-              margin-left: -22.5px;
-              margin-top: 42px;
-              width: 55px;
-              z-index: 10;
-              font-size: @font-size-xlarge;
-            }
-
-            .val-potentiel {
-              margin-left: 41.5px;
-              margin-top: 42px;
-              text-align: center;
-              font-size: @font-size-large;
-            }
-
-            span {
-              margin-left: -42px;
-              margin-top: 90px;
-              color: @color-primary;
-              font-size: @font-size-large;
-            }
+            .potentiel-block();
           }
         }
 
@@ -805,7 +722,7 @@ body {
           margin-left: 100px;
           width: calc(100% - 103px);
           min-height: 145px;
-          border: 1px solid #917f35;
+          border: 1px solid @color-accent;
           border-radius: @border-radius-small;
           padding: 2px;
 
@@ -842,7 +759,7 @@ body {
           margin-left: 100px;
           width: calc(100% - 103px);
           min-height: 290px;
-          border: 1px solid #917f35;
+          border: 1px solid @color-accent;
           border-radius: @border-radius-small;
           padding: 2px;
 
@@ -901,43 +818,7 @@ body {
           text-align: center;
 
           .div-potentiel {
-            position: relative;
-            float: left;
-            text-align: center;
-            width: 100px;
-            height: 200px;
-
-            .img-potentiel {
-              width: 100px;
-              height: 100px;
-            }
-
-            .absolue {
-              position: absolute;
-              z-index: 5;
-            }
-
-            .val-potentiel-saisie {
-              margin-left: -22.5px;
-              margin-top: 42px;
-              width: 55px;
-              z-index: 10;
-              font-size: @font-size-xlarge;
-            }
-
-            .val-potentiel {
-              margin-left: 41.5px;
-              margin-top: 42px;
-              text-align: center;
-              font-size: @font-size-large;
-            }
-
-            span {
-              margin-left: -42px;
-              margin-top: 90px;
-              color: @color-primary;
-              font-size: @font-size-large;
-            }
+            .potentiel-block();
           }
         }
 
@@ -945,7 +826,7 @@ body {
           margin-left: 100px;
           width: calc(100% - 103px);
           min-height: 145px;
-          border: 1px solid #917f35;
+          border: 1px solid @color-accent;
           border-radius: @border-radius-small;
           padding: 2px;
 
@@ -981,7 +862,7 @@ body {
           margin-left: 100px;
           width: calc(100% - 103px);
           min-height: 290px;
-          border: 1px solid #917f35;
+          border: 1px solid @color-accent;
           border-radius: @border-radius-small;
           padding: 2px;
 
@@ -1030,43 +911,7 @@ body {
           text-align: center;
 
           .div-potentiel {
-            position: relative;
-            float: left;
-            text-align: center;
-            width: 100px;
-            height: 200px;
-
-            .img-potentiel {
-              width: 100px;
-              height: 100px;
-            }
-
-            .absolue {
-              position: absolute;
-              z-index: 5;
-            }
-
-            .val-potentiel-saisie {
-              margin-left: -22.5px;
-              margin-top: 42px;
-              width: 55px;
-              z-index: 10;
-              font-size: @font-size-xlarge;
-            }
-
-            .val-potentiel {
-              margin-left: 41.5px;
-              margin-top: 42px;
-              text-align: center;
-              font-size: @font-size-large;
-            }
-
-            span {
-              margin-left: -42px;
-              margin-top: 90px;
-              color: @color-primary;
-              font-size: @font-size-large;
-            }
+            .potentiel-block();
           }
         }
 
@@ -1075,7 +920,7 @@ body {
           margin-left: 100px;
           width: calc(100% - 103px);
           min-height: 145px;
-          border: 1px solid #917f35;
+          border: 1px solid @color-accent;
           border-radius: @border-radius-small;
           padding: 2px;
 
@@ -1100,7 +945,7 @@ body {
           margin-left: 100px;
           width: calc(100% - 103px);
           min-height: 290px;
-          border: 1px solid #917f35;
+          border: 1px solid @color-accent;
           border-radius: @border-radius-small;
           padding: 2px;
 

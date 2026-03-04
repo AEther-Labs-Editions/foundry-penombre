@@ -1,22 +1,9 @@
 .penombre.roll-dialog {
   .window-content {
-    .theme-dark & {
-      // background: #0b0a13e6;
-      // color: var(--color-textLight);
-      span,
-      label {
-        // color: var(--color-textLight);
-      }
-    }
     .theme-light & {
-      background-color: @background-light; // Si et seulement si on est en mode clair (et pas sombre) de la fiche
+      background-color: @background-light;
       background-image: url("/systems/penombre/assets/background/fond-coupe.webp");
       background-repeat: repeat;
-      // color: #222;
-      span,
-      label {
-        // color: #222;
-      }
     }
   }
 }
@@ -42,7 +29,7 @@
           align-items: center;
 
           label {
-            font-family: "Cattedrale";
+            font-family: @font-cattedrale;
             font-size: 1.8rem;
             width: 140px;
             padding-right: 10px;
@@ -111,10 +98,6 @@
 
           &:hover {
             cursor: pointer;
-          }
-
-          &:nth-child(even) {
-            /* background-color: silver; */
           }
 
           &.checked {
