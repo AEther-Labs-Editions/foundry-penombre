@@ -15,6 +15,16 @@ export default class Macros {
           flags: { "penombre.macros.harmonique": true },
         })
         break
+      case "Actor": {
+        const actor = await fromUuid(dropData.uuid)
+        if (!actor) return
+        foundry.utils.mergeObject(macroData, {
+          name: actor.name,
+          img: actor.img,
+          command: `game.actors.get("${actor.id}")?.sheet.render(true)`,
+        })
+        break
+      }
       default:
         return
     }

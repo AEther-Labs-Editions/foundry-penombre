@@ -1,8 +1,10 @@
-1.4.4
+1.5.0
 - Ajout du prétiré Dentelle
-- Ajout des compendiums des scénarios Plénitude et Echos mélodiques
+- Ajout des compendiums des scénarios Plénitude et Echos mélodiques : adversaires et images
 - Ajout des images des tokens des nouveaux adversaires
 - Correction du bug limitant les relances de dés à une seule par message. Les relances sont désormais illimitées, chaque relance coûtant un jeton.
+- Ajout du Gestionnaire de groupe : fenêtre MJ affichant les éminences grises des joueuses connectées avec leurs harmoniques et leurs jetons de conscience
+- Ajout du glisser-déposer d'une éminence vers la barre de raccourcis pour créer un raccourci vers sa fiche
 
 1.4.3
 - Déplacement des maitrises magiques du compendium Pouvoirs potentiels dans le dossier Kit Demo vers un compendium Maitrises magiques dans le dossier Système
