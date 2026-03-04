@@ -21,7 +21,7 @@ export default class Macros {
         foundry.utils.mergeObject(macroData, {
           name: actor.name,
           img: actor.img,
-          command: `game.actors.get("${actor.id}")?.sheet.render(true)`,
+          command: `(await fromUuid("${dropData.uuid}"))?.sheet.render(true)`,
         })
         break
       }
