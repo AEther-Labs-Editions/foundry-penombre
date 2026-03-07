@@ -1,3 +1,6 @@
+1.5.2
+- Gestionnaire de groupe au mode Sombre : ajout de la transparence
+
 1.5.1
 - Adaptation des couleurs du Gestionnaire de groupe au mode Sombre de Foundry
 

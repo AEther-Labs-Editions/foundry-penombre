@@ -1997,8 +1997,46 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   gap: 1.5rem;
   overflow-y: auto;
 }
-.penombre-group-manager-content {
+/* ---------------------------------------------
+        Thème Clair
+--------------------------------------------- */
+body {
+  /* ---------------------------------------------
+        Thème Sombre
+  --------------------------------------------- */
+}
+body.theme-light .penombre-group-manager-content {
   background-color: #faeed6;
+}
+body.theme-dark .penombre-group-manager-content {
+  color: #a47c64;
+}
+body.theme-dark .penombre-group-manager-content .member-header {
+  border-bottom-color: rgba(164, 124, 100, 0.4);
+}
+body.theme-dark .penombre-group-manager-content .member-header .member-harmoniques,
+body.theme-dark .penombre-group-manager-content .member-header .member-conscience {
+  color: #a47c64;
+}
+body.theme-dark .penombre-group-manager-content .member {
+  border-bottom-color: rgba(164, 124, 100, 0.3);
+}
+body.theme-dark .penombre-group-manager-content .member-identity .player-name {
+  color: #a47c64;
+}
+body.theme-dark .penombre-group-manager-content .member-character a {
+  color: #a47c64;
+}
+body.theme-dark .penombre-group-manager-content .member-character a img {
+  border-color: #a47c64;
+}
+body.theme-dark .penombre-group-manager-content .no-members {
+  color: #a47c64;
+}
+/* ---------------------------------------------
+        Styles communs
+--------------------------------------------- */
+.penombre-group-manager-content {
   font-family: "ChocoCovRainBold";
   color: #a56135;
   padding: 10px;
