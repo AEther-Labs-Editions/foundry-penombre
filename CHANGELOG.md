@@ -1,3 +1,6 @@
+1.5.1
+- Adaptation des couleurs du Gestionnaire de groupe au mode Sombre de Foundry
+
 1.5.0
 - Ajout du prétiré Dentelle
 - Ajout des compendiums des scénarios Plénitude et Echos mélodiques : adversaires et images

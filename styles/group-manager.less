@@ -1,5 +1,60 @@
+/* ---------------------------------------------
+        Thème Clair
+--------------------------------------------- */
+
+body {
+  &.theme-light {
+    .penombre-group-manager-content {
+      background-color: @background-light;
+    }
+  }
+
+  /* ---------------------------------------------
+        Thème Sombre
+  --------------------------------------------- */
+
+  &.theme-dark {
+    .penombre-group-manager-content {
+      background-color: @background-dark;
+      color: @color-primary-clear;
+
+      .member-header {
+        border-bottom-color: fade(@color-primary-clear, 40%);
+
+        .member-harmoniques,
+        .member-conscience {
+          color: @color-primary-clear;
+        }
+      }
+
+      .member {
+        border-bottom-color: fade(@color-primary-clear, 30%);
+      }
+
+      .member-identity .player-name {
+        color: @color-primary-clear;
+      }
+
+      .member-character a {
+        color: @color-primary-clear;
+
+        img {
+          border-color: @color-primary-clear;
+        }
+      }
+
+      .no-members {
+        color: @color-primary-clear;
+      }
+    }
+  }
+}
+
+/* ---------------------------------------------
+        Styles communs
+--------------------------------------------- */
+
 .penombre-group-manager-content {
-  background-color: @background-light;
   font-family: @font-chocolate;
   color: @color-primary;
   padding: 10px;
