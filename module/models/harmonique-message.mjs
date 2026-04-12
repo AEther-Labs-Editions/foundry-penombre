@@ -81,6 +81,7 @@ export default class HarmoniqueMessageData extends BaseMessageData {
         else {
           if (CONFIG.debug.penombre?.chat) console.debug("Pénombre | alterMessageHTML | Toutes les réponses ont été faites.", this)
           const rollResultOtherDiv = html.querySelector(".roll-result-collegiale")
+          if (!rollResultOtherDiv) return
 
           const roll = this.parent.rolls[0]
           const rollResults = PenombreRoll.analyseRollResult(roll)
@@ -126,6 +127,7 @@ export default class HarmoniqueMessageData extends BaseMessageData {
         isMessagePrincipal = false
         if (this.toutesReponsesFaites) {
           const rollResultOtherDiv = html.querySelector(".roll-result-collegiale")
+          if (!rollResultOtherDiv) return
 
           const roll = this.parent.rolls[0]
           const rollResults = PenombreRoll.analyseRollResult(roll)

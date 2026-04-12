@@ -48,7 +48,7 @@ export default class PenombreActor extends Actor {
         },
         speaker,
       },
-      { rollMode: roll.options.rollMode },
+      { messageMode: roll.options.rollMode },
     )
 
     // Gestion des cas particuliers : perte ou gain de jetons de conscience

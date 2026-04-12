@@ -21,8 +21,8 @@ export default class PenombreRoll extends Roll {
     const harmonique = options.harmonique || null
     const harmoniqueDice = options.rollValue
 
-    const rollModes = Object.fromEntries(Object.entries(CONFIG.Dice.rollModes).map(([key, value]) => [key, game.i18n.localize(value.label)]))
-    const defaultRollMode = game.settings.get("core", "rollMode")
+    const rollModes = CONFIG.ChatMessage.modes
+    const defaultRollMode = game.settings.get("core", "messageMode") ?? CONST.DICE_ROLL_MODES.PUBLIC
     const fieldRollMode = new foundry.data.fields.StringField({ choices: rollModes, blank: false, default: defaultRollMode })
 
     let formule = options.formule || (harmoniqueDice ? `1${harmoniqueDice}` : "1d20")
@@ -192,7 +192,7 @@ export default class PenombreRoll extends Roll {
       harmonique: rollContext.harmonique,
       actionCollegiale: messageType === "principal" ? rollContext.actionCollegiale : true,
       difficulte: rollContext.difficulte,
-      rollMode: rollContext.rollMode,
+      rollMode: rollContext.messageMode,
       formule: rollContext.formule,
     }
 

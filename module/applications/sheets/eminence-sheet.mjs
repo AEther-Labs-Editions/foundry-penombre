@@ -91,9 +91,10 @@ export default class EminenceSheet extends PenombreBaseActorSheet {
   _getJetonConscienceContextOptions() {
     return [
       {
-        name: `Ajouter / Perdre un jeton de conscience`,
+        label: `Ajouter / Perdre un jeton de conscience`,
         icon: `<i class="fa-regular fa-bolt"></i>`,
-        callback: async (li) => {
+        onClick: async (event, li) => {
+          event.preventDefault()
           const index = li.dataset.index
           let jetons = foundry.utils.duplicate(this.document.system.conscience.jetons)
           const currentStatut = jetons[index].statut

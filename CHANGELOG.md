@@ -1,3 +1,6 @@
+1.6.0
+- Compatibilité Foundry V14
+
 1.5.2
 - Gestionnaire de groupe au mode Sombre : ajout de la transparence
 
