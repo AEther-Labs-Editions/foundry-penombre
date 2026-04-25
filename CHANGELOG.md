@@ -1,3 +1,6 @@
+1.6.1
+- Mise à jour de l'url de l'api de release de package
+
 1.6.0
 - Compatibilité Foundry V14
 - Style de jeu "Standard" ou "Règles avancées" : En mode édition, les attributs Gamme et Ton sont éditable. Un changement de Peuple réinitialise les valeurs par défaut pour ce peuple.
