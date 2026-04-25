@@ -20,6 +20,20 @@ export default class PenombreBaseItemSheet extends HandlebarsApplicationMixin(sh
     },
   }
 
+  /** @inheritDoc */
+  async _onRender(context, options) {
+    await super._onRender(context, options)
+
+    const editableImage = this.element.querySelector("[data-action='editImage']")
+    if (editableImage) {
+      editableImage.addEventListener("contextmenu", (event) => {
+        event.preventDefault()
+        const { img } = this.document.constructor.getDefaultArtwork?.(this.document.toObject()) ?? {}
+        this.document.update({ img: img || "icons/svg/item-bag.svg" })
+      })
+    }
+  }
+
   /** @override */
   async _prepareContext() {
     const context = await super._prepareContext()

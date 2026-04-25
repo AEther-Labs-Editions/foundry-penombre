@@ -1,6 +1,7 @@
 1.6.0
 - Compatibilité Foundry V14
 - Style de jeu "Standard" ou "Règles avancées" : En mode édition, les attributs Gamme et Ton sont éditable. Un changement de Peuple réinitialise les valeurs par défaut pour ce peuple.
+- Eminence en mode Edition et tous les types d'objets : un clic droit sur l'image réinitialise l'image par défaut (selon le type d'objet pour les objets)
 
 1.5.2
 - Gestionnaire de groupe au mode Sombre : ajout de la transparence
