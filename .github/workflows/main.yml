@@ -156,4 +156,4 @@ jobs:
           method: 'POST'
           contentType: 'application/json'
           customHeaders: '{"Authorization": "${{ secrets.FVTT_PACKAGE_RELEASE_TOKEN }}"}'
-          data: '{"id": "penombre","dry-run":false,"release":{"version":"${{github.event.release.tag_name}}","manifest":"https://github.com/AEther-Labs-Editions/foundry-penombre/releases/download/${{github.event.release.tag_name}}/system.json","notes":"https://github.com/AEther-Labs-Editions/foundry-penombre/blob/main/CHANGELOG.md","compatibility":{"minimum":"13","verified":"13","maximum":"13"}}}'          
+          data: '{"id": "penombre","dry-run":false,"release":{"version":"${{github.event.release.tag_name}}","manifest":"https://github.com/AEther-Labs-Editions/foundry-penombre/releases/download/${{github.event.release.tag_name}}/system.json","notes":"https://github.com/AEther-Labs-Editions/foundry-penombre/blob/main/CHANGELOG.md","compatibility":{"minimum":"14","verified":"14","maximum":"14"}}}'          
