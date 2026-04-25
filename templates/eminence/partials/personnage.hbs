@@ -30,14 +30,19 @@
         {{/if}}
       {{/if}}
       {{#if (or isStyleJeuStandard isStyleJeuAvance)}}
-      <div class="form-group">
-        <label>{{localize "PENOMBRE.ui.gamme"}}</label>
-        <div class="form-fields">{{localize (concat "PENOMBRE.Gamme." system.gamme ".label")}}</div>
-      </div>
-      <div class="form-group">
-        <label>{{localize "PENOMBRE.ui.ton"}}</label>
-        <div class="form-fields">{{localize (concat "PENOMBRE.Ton." system.ton ".label")}}</div>
-      </div>
+        {{#if unlocked}}
+        {{formGroup systemFields.gamme value=systemSource.gamme localize=true}}
+        {{formGroup systemFields.ton value=systemSource.ton localize=true}}
+        {{else}}
+        <div class="form-group">
+          <label>{{localize "PENOMBRE.ui.gamme"}}</label>
+          <div class="form-fields">{{localize (concat "PENOMBRE.Gamme." system.gamme ".label")}}</div>
+        </div>
+        <div class="form-group">
+          <label>{{localize "PENOMBRE.ui.ton"}}</label>
+          <div class="form-fields">{{localize (concat "PENOMBRE.Ton." system.ton ".label")}}</div>
+        </div>
+        {{/if}}
       {{/if}}
     </div>
   </div>
