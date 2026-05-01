@@ -1,3 +1,6 @@
+1.6.2
+- Réserve collégiale : l'image avec les 10 jetons est utilisée pour les styles de jeu Standard et Règles avancées si le nombre de jetons est configuré à 10
+
 1.6.1
 - Mise à jour de l'url de l'api de release de package
 
@@ -7,6 +10,7 @@
 - Eminence en mode Edition et tous les types d'objets : un clic droit sur l'image réinitialise l'image par défaut (selon le type d'objet pour les objets)
 
 1.5.2
+- Dernière version compatible V13
 - Gestionnaire de groupe au mode Sombre : ajout de la transparence
 
 1.5.1

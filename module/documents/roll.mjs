@@ -32,7 +32,7 @@ export default class PenombreRoll extends Roll {
     const choiceDifficulte = SYSTEM.DIFFICULTE
 
     const maxJetonsConscience = actor.system.nbJetonsRestants
-    const maxJetonsReserve = game.settings.get("penombre", "reserveCollegiale").nbJetonsRestants
+    const maxJetonsReserve = game.settings.get(SYSTEM.ID, "reserveCollegiale").nbJetonsRestants
 
     const fieldJetonsConscience = new foundry.data.fields.NumberField({ initial: 0, min: 0, max: maxJetonsConscience, step: 1 })
     const fieldJetonsReserve = new foundry.data.fields.NumberField({ initial: 0, min: 0, max: maxJetonsReserve, step: 1 })
@@ -437,7 +437,7 @@ export default class PenombreRoll extends Roll {
     }
 
     // Jetons de la réserve collégiale
-    const reserveCollegiale = game.settings.get("penombre", "reserveCollegiale")
+    const reserveCollegiale = game.settings.get(SYSTEM.ID, "reserveCollegiale")
     const nbJetonsRestantsReserveCollegiale = reserveCollegiale.nbJetonsRestants
     if (jetonsReserve > nbJetonsRestantsReserveCollegiale) {
       ui.notifications.warn(game.i18n.format("PENOMBRE.Warnings.jetonsReserveInsuffisants", { actuel: nbJetonsRestantsReserveCollegiale, demande: jetonsReserve }), {

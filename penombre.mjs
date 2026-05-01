@@ -133,6 +133,13 @@ Hooks.on("updateSetting", async (setting, update, options, id) => {
     game.system.applicationReserveCollegiale.render(true)
   }
 
+  // Passage en mode Kit de demo : forcer le nombre de jetons à 10
+  if (setting.key === "penombre.styleJeu" && setting.value === "demo" && game.user.isGM) {
+    if (game.settings.get(SYSTEM.ID, "nbJetons") !== 10) {
+      game.settings.set(SYSTEM.ID, "nbJetons", 10)
+    }
+  }
+
   // Mise à jour du nombre de jetons dans la réserve collégiale
   if (setting.key === "penombre.nbJetons" && game.user.isGM) {
     if (CONFIG.debug.penombre?.reserve) console.debug("Pénombre | Mise à jour du nombre de jetons dans la réserve collégiale", setting, update, options, id)
@@ -141,7 +148,7 @@ Hooks.on("updateSetting", async (setting, update, options, id) => {
     let nouveauNbJetons = update.value
 
     // En mode Kit de demo, on force le nombre de jetons à 10
-    if (game.settings.get("penombre", "styleJeu") === "demo" && nouveauNbJetons !== 10) {
+    if (game.settings.get(SYSTEM.ID, "styleJeu") === "demo" && nouveauNbJetons !== 10) {
       nouveauNbJetons = 10
       game.settings.set(SYSTEM.ID, "nbJetons", 10)
     }

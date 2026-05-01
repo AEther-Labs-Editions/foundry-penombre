@@ -32,7 +32,9 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
   /** @inheritDoc */
   _initializeApplicationOptions(options) {
     const applicationOptions = super._initializeApplicationOptions(options)
-    applicationOptions.window.resizable = game.settings.get("penombre", "styleJeu") !== "demo"
+    const styleJeu = game.settings.get(SYSTEM.ID, "styleJeu")
+    const nbJetons = game.settings.get(SYSTEM.ID, "nbJetons")
+    applicationOptions.window.resizable = styleJeu !== "demo" && nbJetons !== 10
     return applicationOptions
   }
 
@@ -45,15 +47,14 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
 
   /** @override */
   async _prepareContext(_options = {}) {
-    const styleJeu = game.settings.get("penombre", "styleJeu")
+    const styleJeu = game.settings.get(SYSTEM.ID, "styleJeu")
+    const nbJetons = game.settings.get(SYSTEM.ID, "nbJetons")
 
     return {
       userId: game.user.id,
       isGM: game.user.isGM,
       jetons: game.settings.get(SYSTEM.ID, "reserveCollegiale").jetons,
-
-      isStyleJeuStandard: styleJeu === "standard",
-      isStyleJeuAvance: styleJeu === "avance",
+      useImageDisplay: styleJeu === "demo" || nbJetons === 10,
     }
   }
 
