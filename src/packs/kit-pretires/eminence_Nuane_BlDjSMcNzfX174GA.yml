@@ -82,12 +82,9 @@ prototypeToken:
     src: icons/svg/mystery-man.svg
     anchorX: 0.5
     anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
     fit: contain
     scaleX: 1
     scaleY: 1
-    rotation: 0
     tint: '#ffffff'
     alphaThreshold: 0.75
   lockRotation: false
@@ -131,7 +128,7 @@ prototypeToken:
     brightness: 0
     saturation: 0
     contrast: 0
-  detectionModes: []
+  detectionModes: {}
   occludable:
     radius: 0
   ring:
@@ -153,6 +150,7 @@ prototypeToken:
   randomImg: false
   appendNumber: false
   prependAdjective: false
+  depth: 1
 items:
   - type: pouvoir
     name: Gigantisme
@@ -184,10 +182,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!BlDjSMcNzfX174GA.JH8QonoEyn5xS6wZ'
   - type: pouvoir
     name: Iris de focalisation
@@ -211,10 +211,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!BlDjSMcNzfX174GA.aGXCDKWCRRbzoPZI'
   - type: pouvoir
     name: Colosse tonitruant
@@ -239,10 +241,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!BlDjSMcNzfX174GA.du0nG2KFiSjrepUu'
   - type: atout
     name: L'Harmonde est ma toile
@@ -262,10 +266,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!BlDjSMcNzfX174GA.YjXfZghlT9xOVQpJ'
   - type: atout
     name: J'ai visité tant de royaumes
@@ -285,10 +291,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!BlDjSMcNzfX174GA.0ElmUNJ8Vyw9OfEZ'
   - type: atout
     name: Votre bouche dit un chose mais votre esprit en dit une autre
@@ -308,10 +316,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!BlDjSMcNzfX174GA.yGzmDBt1pLp7ssoq'
   - type: atout
     name: Questrice de la trame et des pigments
@@ -331,10 +341,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!BlDjSMcNzfX174GA.rKw4WvPgTdT9HV0K'
   - type: maitrise
     name: Décorum
@@ -393,10 +405,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!BlDjSMcNzfX174GA.eQcYrCCI1smRHFtv'
 effects: []
 folder: null
@@ -409,7 +423,7 @@ _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.351'
+  coreVersion: '14.361'
   systemId: penombre
   systemVersion: '#{VERSION}#'
   createdTime: 1766220355144

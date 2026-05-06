@@ -33,12 +33,9 @@ prototypeToken:
     src: systems/penombre/assets/tokens/vivairne_token.webp
     anchorX: 0.5
     anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
     fit: contain
     scaleX: 1
     scaleY: 1
-    rotation: 0
     tint: '#ffffff'
     alphaThreshold: 0.75
   lockRotation: false
@@ -82,7 +79,7 @@ prototypeToken:
     brightness: 0
     saturation: 0
     contrast: 0
-  detectionModes: []
+  detectionModes: {}
   occludable:
     radius: 0
   ring:
@@ -104,6 +101,7 @@ prototypeToken:
   randomImg: false
   appendNumber: false
   prependAdjective: false
+  depth: 1
 items:
   - type: action
     name: Stridence
@@ -124,10 +122,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!wnuSE45nJ13oVRQr.7y5x8Gqq5v47VP3j'
@@ -150,10 +150,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!wnuSE45nJ13oVRQr.jLCUh0bthmEMV29Y'
@@ -176,10 +178,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!wnuSE45nJ13oVRQr.iu1GOzjiBtvG7HEf'
@@ -207,10 +211,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!wnuSE45nJ13oVRQr.1sQ63KMnUdXfFCJD'
@@ -221,7 +227,7 @@ _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.348'
+  coreVersion: '14.361'
   systemId: penombre
   systemVersion: '0'
   createdTime: 1757150984250

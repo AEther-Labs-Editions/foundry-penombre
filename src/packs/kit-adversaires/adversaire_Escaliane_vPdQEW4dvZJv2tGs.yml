@@ -24,12 +24,9 @@ prototypeToken:
     src: systems/penombre/assets/tokens/escaliane_token.webp
     anchorX: 0.5
     anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
     fit: contain
     scaleX: 1
     scaleY: 1
-    rotation: 0
     tint: '#ffffff'
     alphaThreshold: 0.75
   lockRotation: false
@@ -73,7 +70,7 @@ prototypeToken:
     brightness: 0
     saturation: 0
     contrast: 0
-  detectionModes: []
+  detectionModes: {}
   occludable:
     radius: 0
   ring:
@@ -95,6 +92,7 @@ prototypeToken:
   randomImg: false
   appendNumber: false
   prependAdjective: false
+  depth: 1
 items:
   - type: action
     name: Recomposition mosaïque
@@ -114,10 +112,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!vPdQEW4dvZJv2tGs.Dxjkqe9nf41CkuPE'
@@ -138,10 +138,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!vPdQEW4dvZJv2tGs.NKOgeYV1bHxnRfNu'
@@ -162,10 +164,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!vPdQEW4dvZJv2tGs.3YiejyVkvCx1Ej3w'
@@ -187,10 +191,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!vPdQEW4dvZJv2tGs.6AUJVq5Mrob6vSQB'
@@ -212,10 +218,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!vPdQEW4dvZJv2tGs.ld7IguzeOsQv4J9k'
@@ -237,10 +245,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!vPdQEW4dvZJv2tGs.x4hMWGPYrZPjR3fg'
@@ -261,10 +271,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!vPdQEW4dvZJv2tGs.TqHBte6iyCamWFQQ'
@@ -287,10 +299,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!vPdQEW4dvZJv2tGs.eIwEKa8pXFfWv4xj'
@@ -314,10 +328,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!vPdQEW4dvZJv2tGs.mvRZ6tN0ICbYy5vz'
@@ -340,10 +356,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!vPdQEW4dvZJv2tGs.4CIYJQ5AZT7mAlaw'
@@ -354,7 +372,7 @@ _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.348'
+  coreVersion: '14.361'
   systemId: penombre
   systemVersion: '0'
   createdTime: 1757150982594

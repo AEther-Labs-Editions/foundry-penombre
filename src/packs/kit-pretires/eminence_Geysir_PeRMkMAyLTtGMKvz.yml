@@ -82,12 +82,9 @@ prototypeToken:
     src: systems/penombre/assets/tokens/geysir_token.webp
     anchorX: 0.5
     anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
     fit: contain
     scaleX: 1
     scaleY: 1
-    rotation: 0
     tint: '#ffffff'
     alphaThreshold: 0.75
   lockRotation: false
@@ -131,7 +128,7 @@ prototypeToken:
     brightness: 0
     saturation: 0
     contrast: 0
-  detectionModes: []
+  detectionModes: {}
   occludable:
     radius: 0
   ring:
@@ -153,6 +150,7 @@ prototypeToken:
   randomImg: false
   appendNumber: false
   prependAdjective: false
+  depth: 1
 items:
   - type: pouvoir
     name: Sillon
@@ -182,10 +180,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!PeRMkMAyLTtGMKvz.GqDFbFgAqRijZnVC'
   - type: atout
     name: Armure de cuir repoussé
@@ -205,10 +205,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!PeRMkMAyLTtGMKvz.4QucvYHwwuL7ey0w'
   - type: atout
     name: Totem loup
@@ -228,10 +230,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!PeRMkMAyLTtGMKvz.TAarGRH2i5YiI6V0'
   - type: atout
     name: Je ne laisse personne en arrière
@@ -251,10 +255,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!PeRMkMAyLTtGMKvz.S5NjhlAGQh5MUZpE'
   - type: atout
     name: 'Je ne suis pas têtue : ma solution est juste la meilleure !'
@@ -274,10 +280,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!PeRMkMAyLTtGMKvz.p6VVz6BzuQSLoArq'
   - type: maitrise
     name: Brigue
@@ -338,10 +346,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
       xu8p7UMcYrInjBEg: 3
@@ -368,10 +378,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!PeRMkMAyLTtGMKvz.Kq8qvH9hfKzH4PPw'
   - type: pouvoir
     name: Empathie animale
@@ -397,10 +409,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!PeRMkMAyLTtGMKvz.bbgRALa7rxxR6Ltm'
 effects: []
 folder: null
@@ -412,7 +426,7 @@ _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.351'
+  coreVersion: '14.361'
   systemId: penombre
   systemVersion: '#{VERSION}#'
   createdTime: 1765953224633

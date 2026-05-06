@@ -83,12 +83,9 @@ prototypeToken:
     src: systems/penombre/assets/tokens/phobos_token.webp
     anchorX: 0.5
     anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
     fit: contain
     scaleX: 1
     scaleY: 1
-    rotation: 0
     tint: '#ffffff'
     alphaThreshold: 0.75
   lockRotation: false
@@ -132,7 +129,7 @@ prototypeToken:
     brightness: 0
     saturation: 0
     contrast: 0
-  detectionModes: []
+  detectionModes: {}
   occludable:
     radius: 0
   ring:
@@ -154,6 +151,7 @@ prototypeToken:
   randomImg: false
   appendNumber: false
   prependAdjective: false
+  depth: 1
 items:
   - type: maitrise
     name: Élémentalisme
@@ -222,10 +220,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
       xu8p7UMcYrInjBEg: 3
@@ -248,10 +248,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!cDk12lMuemfvOb5Q.9OlDPuG5Nlc3FO2V'
   - type: atout
     name: Alchimiste de guerre kheshite
@@ -271,10 +273,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!cDk12lMuemfvOb5Q.Hrwuq8m3vqVT8rYD'
   - type: atout
     name: Obéissez-moi !
@@ -294,10 +298,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!cDk12lMuemfvOb5Q.msDi9uBvcYYN8Xon'
   - type: atout
     name: Prenons le temps de nous calmer
@@ -317,10 +323,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!cDk12lMuemfvOb5Q.zix2xhuDXxszYntt'
   - type: pouvoir
     name: Embrasie
@@ -349,10 +357,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!cDk12lMuemfvOb5Q.8BlTlYVvsl11gS92'
   - type: pouvoir
     name: Embrasie ardente
@@ -377,10 +387,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!cDk12lMuemfvOb5Q.dM5Pewhoyhq6r34W'
   - type: pouvoir
     name: Leçon de l'ascèse
@@ -405,10 +417,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!cDk12lMuemfvOb5Q.hGSlEepnfXs8kglO'
 effects: []
 ownership:
@@ -419,7 +433,7 @@ _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.351'
+  coreVersion: '14.361'
   systemId: penombre
   systemVersion: '#{VERSION}#'
   createdTime: 1766220032820

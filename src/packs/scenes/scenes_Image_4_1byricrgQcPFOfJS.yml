@@ -1,20 +1,5 @@
 name: Image 4
 navigation: false
-navOrder: 0
-background:
-  src: systems/penombre/assets/background/fond_4.webp
-  anchorX: 0
-  anchorY: 0
-  offsetX: 0
-  offsetY: 0
-  fit: fill
-  scaleX: 1
-  scaleY: 1
-  rotation: 0
-  tint: '#ffffff'
-  alphaThreshold: 0
-foreground: null
-foregroundElevation: null
 thumb: systems/penombre/assets/background/fond_4.webp
 width: 3408
 height: 2212
@@ -23,7 +8,6 @@ initial:
   x: null
   'y': null
   scale: null
-backgroundColor: '#999999'
 grid:
   type: 1
   size: 100
@@ -35,11 +19,10 @@ grid:
   units: ''
 tokenVision: true
 fog:
-  exploration: true
-  overlay: null
   colors:
     explored: null
     unexplored: null
+  mode: 1
 environment:
   darknessLevel: 0
   darknessLock: false
@@ -75,7 +58,6 @@ lights: []
 notes: []
 sounds: []
 regions: []
-templates: []
 tiles: []
 walls: []
 playlist: null
@@ -86,20 +68,61 @@ weather: ''
 folder: null
 flags: {}
 _stats:
-  compendiumSource: null
-  duplicateSource: null
-  exportSource: null
-  coreVersion: '13.348'
+  coreVersion: '14.361'
   systemId: penombre
   systemVersion: '#{VERSION}#'
-  createdTime: 1759061996152
-  modifiedTime: 1759061996164
-  lastModifiedBy: ZPVZnAUjZn9mQP2q
+  createdTime: 1778257736102
+  modifiedTime: 1778257736119
+  lastModifiedBy: i5qDOXZSi4f47gO1
+  exportSource: null
+  compendiumSource: null
+  duplicateSource: null
 navName: ''
 ownership:
   default: 0
-  ZPVZnAUjZn9mQP2q: 3
+  i5qDOXZSi4f47gO1: 3
 _id: 1byricrgQcPFOfJS
+levels:
+  - _id: defaultLevel0000
+    name: Niveau
+    background:
+      src: systems/penombre/assets/background/fond_4.webp
+      color: '#999999'
+      tint: '#ffffff'
+      alphaThreshold: 0.75
+    elevation:
+      bottom: 0
+      top: 20
+    foreground:
+      src: null
+      tint: '#ffffff'
+      alphaThreshold: 0.75
+    fog:
+      src: null
+      tint: '#ffffff'
+    textures:
+      anchorX: 0.5
+      anchorY: 0.5
+      offsetX: 0
+      offsetY: 0
+      fit: fill
+      scaleX: 1
+      scaleY: 1
+      rotation: 0
+    visibility:
+      levels: []
+    sort: 0
+    flags: {}
+    _key: '!scenes.levels!1byricrgQcPFOfJS.defaultLevel0000'
+shiftX: 0
+shiftY: 0
+initialLevel: defaultLevel0000
+transition:
+  type: null
+  duration: 1500
+  activeOnly: false
+navOrder: 0
 active: false
 sort: 200000
 _key: '!scenes!1byricrgQcPFOfJS'
+templates: []

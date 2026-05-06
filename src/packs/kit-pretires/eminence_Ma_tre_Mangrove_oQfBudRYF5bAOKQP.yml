@@ -83,12 +83,9 @@ prototypeToken:
     src: systems/penombre/assets/tokens/maitre_mangrove_token.webp
     anchorX: 0.5
     anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
     fit: contain
     scaleX: 1
     scaleY: 1
-    rotation: 0
     tint: '#ffffff'
     alphaThreshold: 0.75
   lockRotation: false
@@ -132,7 +129,7 @@ prototypeToken:
     brightness: 0
     saturation: 0
     contrast: 0
-  detectionModes: []
+  detectionModes: {}
   occludable:
     radius: 0
   ring:
@@ -154,6 +151,7 @@ prototypeToken:
   randomImg: false
   appendNumber: false
   prependAdjective: false
+  depth: 1
 items:
   - type: pouvoir
     name: Succès collectif
@@ -179,10 +177,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!oQfBudRYF5bAOKQP.c6VIuiN9n547UUqI'
@@ -207,10 +207,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!oQfBudRYF5bAOKQP.eckKviOZrdnPjoVU'
@@ -235,10 +237,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!oQfBudRYF5bAOKQP.mNsH1HBzYdJeXEqD'
@@ -257,10 +261,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!oQfBudRYF5bAOKQP.GovLkRJSC9xrV4is'
@@ -279,10 +285,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!oQfBudRYF5bAOKQP.DD5Oipr2gkyb0HaD'
@@ -301,10 +309,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!oQfBudRYF5bAOKQP.OewBqk29fv8bFClj'
@@ -323,10 +333,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!oQfBudRYF5bAOKQP.fzDSOKwbcVNKdwOQ'
@@ -345,10 +357,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!oQfBudRYF5bAOKQP.45bZdS6PUegQbMB4'
@@ -407,11 +421,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: xu8p7UMcYrInjBEg
       modifiedTime: 1765951340788
+      createdTime: null
     ownership:
       default: 0
     _key: '!actors.items!oQfBudRYF5bAOKQP.z7xckgLN4L33u6XF'
@@ -422,7 +437,7 @@ _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.351'
+  coreVersion: '14.361'
   systemId: penombre
   systemVersion: '0'
   createdTime: 1757150754023

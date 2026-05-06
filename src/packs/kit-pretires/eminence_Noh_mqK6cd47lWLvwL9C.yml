@@ -83,12 +83,9 @@ prototypeToken:
     src: systems/penombre/assets/tokens/noh_token.webp
     anchorX: 0.5
     anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
     fit: contain
     scaleX: 1
     scaleY: 1
-    rotation: 0
     tint: '#ffffff'
     alphaThreshold: 0.75
   lockRotation: false
@@ -132,7 +129,7 @@ prototypeToken:
     brightness: 0
     saturation: 0
     contrast: 0
-  detectionModes: []
+  detectionModes: {}
   occludable:
     radius: 0
   ring:
@@ -154,6 +151,7 @@ prototypeToken:
   randomImg: false
   appendNumber: false
   prependAdjective: false
+  depth: 1
 items:
   - type: pouvoir
     name: Fantasme d’onyx
@@ -179,10 +177,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!mqK6cd47lWLvwL9C.EQwMEPIumzov7VdK'
@@ -205,10 +205,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!mqK6cd47lWLvwL9C.EFcdJj2l7ROyXF2v'
@@ -233,10 +235,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!mqK6cd47lWLvwL9C.gle9HJrE6j5L5eMA'
@@ -255,10 +259,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!mqK6cd47lWLvwL9C.4CF9hluN54twGo0y'
@@ -277,10 +283,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!mqK6cd47lWLvwL9C.SUvnWK8tYRXOIHph'
@@ -299,10 +307,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!mqK6cd47lWLvwL9C.D9GWgunoQJkyu3QG'
@@ -321,10 +331,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!mqK6cd47lWLvwL9C.4Z2vnuNCWQ2Y4olf'
@@ -343,10 +355,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!mqK6cd47lWLvwL9C.9drAsBtv5RAf6wZA'
@@ -405,11 +419,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.350'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: 6qbNUhuoJ67e6dmf
       modifiedTime: 1760025100407
+      createdTime: null
     ownership:
       default: 0
     _key: '!actors.items!mqK6cd47lWLvwL9C.7Z4CKIzjIB850SyJ'
@@ -420,7 +435,7 @@ _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.351'
+  coreVersion: '14.361'
   systemId: penombre
   systemVersion: '0'
   createdTime: 1757150754023

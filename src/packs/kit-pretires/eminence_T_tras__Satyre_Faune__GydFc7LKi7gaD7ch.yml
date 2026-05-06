@@ -83,12 +83,9 @@ prototypeToken:
     src: systems/penombre/assets/tokens/tetras_token.webp
     anchorX: 0.5
     anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
     fit: contain
     scaleX: 1
     scaleY: 1
-    rotation: 0
     tint: '#ffffff'
     alphaThreshold: 0.75
   lockRotation: false
@@ -132,7 +129,7 @@ prototypeToken:
     brightness: 0
     saturation: 0
     contrast: 0
-  detectionModes: []
+  detectionModes: {}
   occludable:
     radius: 0
   ring:
@@ -154,6 +151,7 @@ prototypeToken:
   randomImg: false
   appendNumber: false
   prependAdjective: false
+  depth: 1
 items:
   - type: atout
     name: C’est nouveau pour moi, ça !
@@ -173,10 +171,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!GydFc7LKi7gaD7ch.DWKTJlEwebkkveyT'
   - type: atout
     name: Des cornes ? Une couronne, et autant de dagues !
@@ -196,10 +196,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!GydFc7LKi7gaD7ch.6X2W22oziPWiUSJf'
   - type: atout
     name: Des histoires abyssales, en veux-tu ? En voilà !
@@ -219,10 +221,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!GydFc7LKi7gaD7ch.iMGlw53nklZ3Gogu'
   - type: atout
     name: Un sang d’encre
@@ -242,10 +246,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!GydFc7LKi7gaD7ch.REzbCjigjGAMwLcE'
   - type: atout
     name: Om me dit trouble
@@ -265,10 +271,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!GydFc7LKi7gaD7ch.MMMte3eIV87dhPbx'
   - type: maitrise
     name: Geste
@@ -330,11 +338,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: xu8p7UMcYrInjBEg
       modifiedTime: 1767012904348
+      createdTime: null
     _key: '!actors.items!GydFc7LKi7gaD7ch.tkbqDZHRR6IAlkGy'
   - type: maitrise
     name: Conjuration
@@ -398,11 +407,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: xu8p7UMcYrInjBEg
       modifiedTime: 1767013038736
+      createdTime: null
     _key: '!actors.items!GydFc7LKi7gaD7ch.5N4i9Yfb27Cl6Qry'
   - name: Spectacle vivant
     type: pouvoir
@@ -431,11 +441,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: xu8p7UMcYrInjBEg
       modifiedTime: 1767012729744
+      createdTime: null
     _id: W6JqZUg9BRq4NW48
     _key: '!actors.items!GydFc7LKi7gaD7ch.W6JqZUg9BRq4NW48'
   - type: pouvoir
@@ -463,10 +474,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!GydFc7LKi7gaD7ch.QNEctBMrinQ7QD3o'
   - type: pouvoir
     name: Chevreau des abysses
@@ -491,10 +504,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!GydFc7LKi7gaD7ch.fNYa63J0BKAPD1YI'
 effects: []
 ownership:
@@ -505,7 +520,7 @@ _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.351'
+  coreVersion: '14.361'
   systemId: penombre
   systemVersion: '#{VERSION}#'
   createdTime: 1767010538186

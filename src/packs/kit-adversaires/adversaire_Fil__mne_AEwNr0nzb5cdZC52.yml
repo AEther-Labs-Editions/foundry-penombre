@@ -35,12 +35,9 @@ prototypeToken:
     src: systems/penombre/assets/tokens/fileimne_token.webp
     anchorX: 0.5
     anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
     fit: contain
     scaleX: 1
     scaleY: 1
-    rotation: 0
     tint: '#ffffff'
     alphaThreshold: 0.75
   lockRotation: false
@@ -84,7 +81,7 @@ prototypeToken:
     brightness: 0
     saturation: 0
     contrast: 0
-  detectionModes: []
+  detectionModes: {}
   occludable:
     radius: 0
   ring:
@@ -106,6 +103,7 @@ prototypeToken:
   randomImg: false
   appendNumber: false
   prependAdjective: false
+  depth: 1
 items:
   - type: action
     name: Danse des ombres
@@ -126,10 +124,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!AEwNr0nzb5cdZC52.1SrsHdH2QeIF0LSg'
@@ -151,10 +151,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!AEwNr0nzb5cdZC52.3p5hHhO4VpSTNGEu'
@@ -177,10 +179,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!AEwNr0nzb5cdZC52.k5djuDtgklb7YtSQ'
@@ -202,10 +206,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!AEwNr0nzb5cdZC52.puauzFJEqmRAmUj5'
@@ -234,10 +240,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!AEwNr0nzb5cdZC52.9xdiUnhaa1IdOChL'
@@ -259,10 +267,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!AEwNr0nzb5cdZC52.BtxLbEEL5mnT9IZ8'
@@ -289,10 +299,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!AEwNr0nzb5cdZC52.btngKezFtLrCKZeY'
@@ -315,10 +327,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.347'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '0'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
     _key: '!actors.items!AEwNr0nzb5cdZC52.fu5q992Ucm4eAITG'
@@ -329,7 +343,7 @@ _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.348'
+  coreVersion: '14.361'
   systemId: penombre
   systemVersion: '#{VERSION}#'
   createdTime: 1757150984250

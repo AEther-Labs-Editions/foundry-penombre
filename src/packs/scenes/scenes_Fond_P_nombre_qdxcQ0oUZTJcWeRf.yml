@@ -1,20 +1,6 @@
 name: Fond Pénombre
 navigation: false
 navName: ''
-background:
-  src: systems/penombre/assets/background/splash_fond_penombre.avif
-  anchorX: 0
-  anchorY: 0
-  offsetX: 0
-  offsetY: 0
-  fit: fill
-  scaleX: 1
-  scaleY: 1
-  rotation: 0
-  tint: '#ffffff'
-  alphaThreshold: 0
-foreground: null
-foregroundElevation: 20
 thumb: systems/penombre/assets/background/splash_fond_penombre.avif
 width: 1351
 height: 768
@@ -22,8 +8,7 @@ padding: 0.25
 initial:
   x: 1079
   'y': 575
-  scale: 1.4626303599608632
-backgroundColor: '#999999'
+  scale: 1.463
 grid:
   type: 0
   size: 100
@@ -35,11 +20,10 @@ grid:
   units: m
 tokenVision: true
 fog:
-  exploration: true
-  overlay: null
   colors:
     explored: null
     unexplored: null
+  mode: 1
 environment:
   darknessLevel: 0
   darknessLock: false
@@ -75,7 +59,6 @@ lights: []
 notes: []
 sounds: []
 regions: []
-templates: []
 tiles: []
 walls: []
 playlist: null
@@ -86,20 +69,60 @@ weather: ''
 folder: null
 flags: {}
 _stats:
-  compendiumSource: null
-  duplicateSource: null
-  exportSource: null
-  coreVersion: '13.348'
+  coreVersion: '14.361'
   systemId: penombre
   systemVersion: '#{VERSION}#'
-  createdTime: 1759062767742
-  modifiedTime: 1759062800198
-  lastModifiedBy: 8Q6LpKLlMUKLXZkK
+  createdTime: 1778257729174
+  modifiedTime: 1778257736119
+  lastModifiedBy: i5qDOXZSi4f47gO1
+  exportSource: null
+  compendiumSource: null
+  duplicateSource: null
 ownership:
   default: 0
-  8Q6LpKLlMUKLXZkK: 3
-navOrder: 0
+  i5qDOXZSi4f47gO1: 3
 _id: qdxcQ0oUZTJcWeRf
+levels:
+  - _id: defaultLevel0000
+    name: Niveau
+    background:
+      src: systems/penombre/assets/background/splash_fond_penombre.avif
+      color: '#999999'
+      tint: '#ffffff'
+      alphaThreshold: 0.75
+    elevation:
+      bottom: 0
+      top: 20
+    foreground:
+      src: null
+      tint: '#ffffff'
+      alphaThreshold: 0.75
+    fog:
+      src: null
+      tint: '#ffffff'
+    textures:
+      anchorX: 0.5
+      anchorY: 0.5
+      offsetX: 0
+      offsetY: 0
+      fit: fill
+      scaleX: 1
+      scaleY: 1
+      rotation: 0
+    visibility:
+      levels: []
+    sort: 0
+    flags: {}
+    _key: '!scenes.levels!qdxcQ0oUZTJcWeRf.defaultLevel0000'
+shiftX: 0
+shiftY: 0
+initialLevel: defaultLevel0000
+transition:
+  type: null
+  duration: 1500
+  activeOnly: false
+navOrder: 0
 active: false
-sort: 0
+sort: 400000
 _key: '!scenes!qdxcQ0oUZTJcWeRf'
+templates: []

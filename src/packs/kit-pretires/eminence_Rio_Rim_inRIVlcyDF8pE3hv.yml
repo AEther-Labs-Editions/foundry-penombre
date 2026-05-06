@@ -83,12 +83,9 @@ prototypeToken:
     src: systems/penombre/assets/tokens/rio_rim_token.webp
     anchorX: 0.5
     anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
     fit: contain
     scaleX: 1
     scaleY: 1
-    rotation: 0
     tint: '#ffffff'
     alphaThreshold: 0.75
   lockRotation: false
@@ -132,7 +129,7 @@ prototypeToken:
     brightness: 0
     saturation: 0
     contrast: 0
-  detectionModes: []
+  detectionModes: {}
   occludable:
     radius: 0
   ring:
@@ -154,6 +151,7 @@ prototypeToken:
   randomImg: false
   appendNumber: false
   prependAdjective: false
+  depth: 1
 items:
   - type: atout
     name: Danse désarticulée
@@ -173,10 +171,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!inRIVlcyDF8pE3hv.LqKXGLCOAhttbEUj'
   - type: atout
     name: Miroir, miroir…
@@ -196,10 +196,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!inRIVlcyDF8pE3hv.Ds95cysgPK3juJWa'
   - type: atout
     name: Trésor des gouvernantes
@@ -219,10 +221,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!inRIVlcyDF8pE3hv.ISOo7guF7Dvas6w6'
   - type: atout
     name: Petit pantin de bois
@@ -242,10 +246,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!inRIVlcyDF8pE3hv.8PB4U0cQ8w5FIqC2'
   - type: atout
     name: Reflet de ma mère
@@ -265,10 +271,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!inRIVlcyDF8pE3hv.hixRIHnQay6Ze5YU'
   - type: maitrise
     name: Éclipsisme
@@ -333,10 +341,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     ownership:
       default: 0
       xu8p7UMcYrInjBEg: 3
@@ -374,10 +384,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!inRIVlcyDF8pE3hv.XgtNz61Ho7h4R34P'
   - type: pouvoir
     name: Des souvenirs en commun
@@ -403,10 +415,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!inRIVlcyDF8pE3hv.bHtXbUKnUeigmc0T'
   - type: pouvoir
     name: Projection astrale
@@ -434,10 +448,12 @@ items:
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-      coreVersion: '13.351'
+      coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
       lastModifiedBy: null
+      createdTime: null
+      modifiedTime: null
     _key: '!actors.items!inRIVlcyDF8pE3hv.cZNk0ausVBCL5lW6'
 effects: []
 ownership:
@@ -448,7 +464,7 @@ _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.351'
+  coreVersion: '14.361'
   systemId: penombre
   systemVersion: '#{VERSION}#'
   createdTime: 1767010533586
