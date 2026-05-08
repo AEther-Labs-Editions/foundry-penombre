@@ -1,0 +1,32 @@
+name: Afficher la carte de l'Harmonde
+type: script
+_id: GtXbcNO4tqbT4thp
+author: uyFHp3q0aPbQ7KNc
+img: systems/penombre/assets/background/carte_penombre.webp
+scope: global
+command: |-
+  // Affiche la carte de l'Harmonde depuis le compendium des scènes
+  const scene = await fromUuid("Compendium.penombre.scenes.dQKV8mBaV4OPfnKB");
+  const ip = new ImagePopout({
+    src: scene.background.src,
+    uuid: scene.uuid,
+    window: { title: scene.name }
+  });
+  ip.render(true);
+folder: null
+sort: 0
+ownership:
+  default: 0
+  uyFHp3q0aPbQ7KNc: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778259176868
+  modifiedTime: 1778259187571
+  lastModifiedBy: uyFHp3q0aPbQ7KNc
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!macros!GtXbcNO4tqbT4thp'

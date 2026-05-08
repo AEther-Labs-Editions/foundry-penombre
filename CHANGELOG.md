@@ -1,3 +1,8 @@
+1.7.0
+- Ajout du journal Ecran qui contient l'image de l'écran et l'image de chacun des 4 volets de l'écran
+- Ajout d'une macro qui permet d'afficher l'image de l'Harmonde
+- Régénération des packs de scène pour être compatible avec Foundry V14
+
 1.6.2
 - Réserve collégiale : l'image avec les 10 jetons est utilisée pour les styles de jeu Standard et Règles avancées si le nombre de jetons est configuré à 10
 

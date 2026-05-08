@@ -1,0 +1,181 @@
+name: Ecran
+_id: spSrOyp1ioUZdwW7
+pages:
+  - sort: 100000
+    name: Ecran
+    type: image
+    _id: Zb7Y7ldcT2f337Gl
+    system: {}
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/penombre/assets/ecran/ecran.webp
+    category: null
+    ownership:
+      default: -1
+      uyFHp3q0aPbQ7KNc: 3
+    flags: {}
+    _stats:
+      coreVersion: '14.361'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1778258030809
+      modifiedTime: 1778258042325
+      lastModifiedBy: uyFHp3q0aPbQ7KNc
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    _key: '!journal.pages!spSrOyp1ioUZdwW7.Zb7Y7ldcT2f337Gl'
+  - sort: 200000
+    name: Résolution des actions
+    type: image
+    _id: vYdn1omqzqQDLmlF
+    system: {}
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/penombre/assets/ecran/ecran-resolution-actions.webp
+    category: null
+    ownership:
+      default: -1
+      uyFHp3q0aPbQ7KNc: 3
+    flags: {}
+    _stats:
+      coreVersion: '14.361'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1778258133799
+      modifiedTime: 1778258138761
+      lastModifiedBy: uyFHp3q0aPbQ7KNc
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    _key: '!journal.pages!spSrOyp1ioUZdwW7.vYdn1omqzqQDLmlF'
+  - sort: 300000
+    name: Jetons et conséquences spéciales
+    type: image
+    _id: D1kUGJpH8MfXEAjO
+    system: {}
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/penombre/assets/ecran/ecran-jetons-consequences.webp
+    category: null
+    ownership:
+      default: -1
+      uyFHp3q0aPbQ7KNc: 3
+    flags: {}
+    _stats:
+      coreVersion: '14.361'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1778258157878
+      modifiedTime: 1778258163505
+      lastModifiedBy: uyFHp3q0aPbQ7KNc
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    _key: '!journal.pages!spSrOyp1ioUZdwW7.D1kUGJpH8MfXEAjO'
+  - sort: 400000
+    name: Conséquences harmoniques d'une merveille
+    type: image
+    _id: czOBHRlRP4HWX2jW
+    system: {}
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/penombre/assets/ecran/ecran-consequences-harmoniques.webp
+    category: null
+    ownership:
+      default: -1
+      uyFHp3q0aPbQ7KNc: 3
+    flags: {}
+    _stats:
+      coreVersion: '14.361'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1778258178392
+      modifiedTime: 1778258182500
+      lastModifiedBy: uyFHp3q0aPbQ7KNc
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    _key: '!journal.pages!spSrOyp1ioUZdwW7.czOBHRlRP4HWX2jW'
+  - sort: 500000
+    name: Affrontements
+    type: image
+    _id: Xkl1ksRq6ojQbyfU
+    system: {}
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/penombre/assets/ecran/ecran-affrontements.webp
+    category: null
+    ownership:
+      default: -1
+      uyFHp3q0aPbQ7KNc: 3
+    flags: {}
+    _stats:
+      coreVersion: '14.361'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      createdTime: 1778258191708
+      modifiedTime: 1778258197470
+      lastModifiedBy: uyFHp3q0aPbQ7KNc
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    _key: '!journal.pages!spSrOyp1ioUZdwW7.Xkl1ksRq6ojQbyfU'
+folder: null
+categories: []
+sort: 0
+ownership:
+  default: 0
+  uyFHp3q0aPbQ7KNc: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778258002806
+  modifiedTime: 1778258002807
+  lastModifiedBy: uyFHp3q0aPbQ7KNc
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!journal!spSrOyp1ioUZdwW7'
