@@ -111,6 +111,17 @@ penombre-toggle-switch[checked] thumb {
   color: #a56135;
 }
 /* ---------------------------------------------
+        Tooltips custom
+--------------------------------------------- */
+#tooltip.pouvoir-tooltip {
+  max-width: 640px;
+  text-align: left;
+}
+#tooltip.pouvoir-tooltip .pouvoir-tooltip-citation {
+  font-style: italic;
+  margin-bottom: 0.5em;
+}
+/* ---------------------------------------------
         Thème Clair
 --------------------------------------------- */
 body {
