@@ -137,6 +137,9 @@
         "utilise": {
           "label": "Utilisé"
         },
+        "citation": {
+          "label": "Citation"
+        },
         "description": {
           "label": "Description"
         },

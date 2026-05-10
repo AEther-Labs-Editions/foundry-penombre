@@ -10,6 +10,7 @@ export default class Pouvoir extends foundry.abstract.TypeDataModel {
     const schema = {}
 
     schema.utilise = new BooleanField()
+    schema.citation = new StringField({})
     schema.description = new HTMLField({})
     schema.type = new StringField({ required: true, nullable: false, initial: SYSTEM.POUVOIR_TYPES.naissance.id, choices: SYSTEM.POUVOIR_TYPES })
 
