@@ -1,0 +1,31 @@
+name: Souvenir de la salle métallique
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: 1Su98EWNIBodXOJa
+system:
+  utilise: false
+  citation: Bienvenue dans le labyrinthe de ma mémoire !
+  description: >-
+    <p>Choisissez un lieu restreint (une salle, un jardin clos). Jusqu'au
+    prochain repos, le nombre de succès de toutes les actions réalisées par
+    votre minotaure en ce lieu augmente de 1. L'endroit devient étrange et
+    fantasmagorique.</p>
+  type: naissance
+_id: qcVXOA43zlKufLYD
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756753
+  modifiedTime: 1778432756753
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!qcVXOA43zlKufLYD'

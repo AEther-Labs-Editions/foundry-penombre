@@ -1,0 +1,31 @@
+name: Bête des Abysses
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: 1Su98EWNIBodXOJa
+system:
+  utilise: false
+  citation: >-
+    Six coudées de hauteur, bardé de métal, les cornes luisantes et aiguisées,
+    une hache dans chaque main.
+  description: >-
+    <p>Lors d'une action pour intimider, résister ou parer une attaque, votre dé
+    harmonique affiche sa valeur maximale.</p>
+  type: peuple
+_id: baRGTtXUZvBazD4h
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756751
+  modifiedTime: 1778432756751
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!baRGTtXUZvBazD4h'

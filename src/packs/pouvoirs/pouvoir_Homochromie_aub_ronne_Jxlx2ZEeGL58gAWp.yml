@@ -1,0 +1,27 @@
+name: Homochromie aubéronne
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: Sm34XkfEHhIseH5y
+system:
+  utilise: false
+  citation: Le mimétisme. L'art de disparaître et de se confondre avec le décor.
+  description: <p>Une action de camouflage de votre aubéron devient automatique.</p>
+  type: gamme
+_id: Jxlx2ZEeGL58gAWp
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432755034
+  modifiedTime: 1778432755034
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!Jxlx2ZEeGL58gAWp'

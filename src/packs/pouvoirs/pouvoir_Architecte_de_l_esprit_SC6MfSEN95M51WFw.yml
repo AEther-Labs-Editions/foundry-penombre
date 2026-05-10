@@ -1,0 +1,29 @@
+name: Architecte de l'esprit
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: OPUwY4Imf8gyfM4R
+system:
+  utilise: false
+  citation: Si elle m'ouvre son esprit, je vous séparerai à jamais.
+  description: >-
+    <p>Votre âme accouchée implante ou supprime un souvenir précis dans l'esprit
+    d'un autre personnage proche.</p>
+  type: peuple
+_id: SC6MfSEN95M51WFw
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756733
+  modifiedTime: 1778432756733
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!SC6MfSEN95M51WFw'

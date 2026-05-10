@@ -1,0 +1,32 @@
+name: Projection astrale
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: OPUwY4Imf8gyfM4R
+system:
+  utilise: false
+  citation: Ma conscience s'ébroue et se répand, à tâtons puis de plus en plus vite.
+  description: >-
+    <p>Le temps d'une scène, votre âme accouchée projette sa forme astrale hors
+    de son corps, inerte le temps de la projection. Ce spectre immatériel peut
+    franchir murs et barreaux. Son rayon d'action est d'environ un bâtiment.
+    Lorsqu'elle s'anime sa projection, le nombre de succès de toutes ses actions
+    d'esprit et d'âme diminue de 1 jusqu'au prochain repos.</p>
+  type: naissance
+_id: 1LcP9qnsaGUpKjRF
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756735
+  modifiedTime: 1778432756735
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!1LcP9qnsaGUpKjRF'

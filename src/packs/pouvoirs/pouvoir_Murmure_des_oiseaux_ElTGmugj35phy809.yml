@@ -1,0 +1,30 @@
+name: Murmure des oiseaux
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: IgrDm7hr3qq1ysKc
+system:
+  utilise: false
+  citation: Quand parut une bête pâle, celle qui l'accompagnait se nommait la mort.
+  description: >-
+    <p>Le temps d'une scène, votre banshee entre en communication télépathique
+    avec un vol d'oiseaux sous le contrôle du Psycholune et reçoit son aide
+    opportune.</p>
+  type: peuple
+_id: ElTGmugj35phy809
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756737
+  modifiedTime: 1778432756737
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!ElTGmugj35phy809'

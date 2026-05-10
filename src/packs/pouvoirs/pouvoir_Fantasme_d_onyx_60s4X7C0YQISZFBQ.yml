@@ -1,0 +1,30 @@
+name: Fantasme d'onyx
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: 4awRN3wQw32at2T6
+system:
+  utilise: false
+  citation: Comme des tentacules prudents…
+  description: >-
+    <p>Une action impossible devient possible grâce à l'apparition d'un
+    appendice d'onyx éphémère (ailes, troisième œil, bras supplémentaire,
+    etc.).</p>
+  type: cle
+_id: 60s4X7C0YQISZFBQ
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432753267
+  modifiedTime: 1778432753267
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!60s4X7C0YQISZFBQ'

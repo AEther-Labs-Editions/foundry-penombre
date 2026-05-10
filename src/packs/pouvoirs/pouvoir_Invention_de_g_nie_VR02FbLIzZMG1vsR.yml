@@ -1,0 +1,32 @@
+name: Invention de génie
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: URvmvTYXhEFs6aAi
+system:
+  utilise: false
+  citation: L'obstacle le plus difficile est la peur.
+  description: >-
+    <p>Lors d'un repos ou d'une retraite, au lieu de récupérer de la conscience,
+    votre humain crée un prototype (folle machine ou instrument surprenant) avec
+    une utilité remarquable à votre convenance (engin volant, foreuse, maison
+    mobile, copiste mécanique…). Ce prototype fragile ne peut être utilisé
+    qu'une seule fois, après quoi il se brise.</p>
+  type: peuple
+_id: VR02FbLIzZMG1vsR
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756748
+  modifiedTime: 1778432756748
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!VR02FbLIzZMG1vsR'

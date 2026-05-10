@@ -1,0 +1,30 @@
+name: Colosse tonitruant
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: ry3BBpDsteGGYwoG
+system:
+  utilise: false
+  citation: Mes rires dérident les murs des palais !
+  description: >-
+    <p>Le temps d'une scène, toute action de votre géant pour attirer
+    l'attention par la voix devient automatique. De plus, le nombre de succès de
+    toutes ses actions d'étincelle augmente de 1.</p>
+  type: peuple
+_id: RjfgB83QaRGWUIlb
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756744
+  modifiedTime: 1778432756744
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!RjfgB83QaRGWUIlb'

@@ -1,0 +1,31 @@
+name: Passions ardentes
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: EqdS97sNIzZvXoi8
+system:
+  utilise: false
+  citation: >-
+    Moi, égoïste ? Quel mal y a-t-il à cela ? Je me réjouis à la seule idée de
+    mettre ma vie en lumière !
+  description: >-
+    <p>Lors d'une action de votre personnage impliquant un atout, votre dé
+    harmonique affiche sa valeur maximale.</p>
+  type: cle
+_id: 9zOx0xOPkJgrA7W6
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432753265
+  modifiedTime: 1778432753265
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!9zOx0xOPkJgrA7W6'

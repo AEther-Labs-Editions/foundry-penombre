@@ -1,0 +1,30 @@
+name: Futur parfait
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: op5ommpX45SZrVQ9
+system:
+  utilise: false
+  citation: Pourquoi s'arrêter sur le passé quand l'avenir promet tant ?
+  description: >-
+    <p>Votre personnage reçoit une prémonition en lien avec une scène à venir,
+    au choix du Psycholune. Durant cette scène, le nombre de succès de toutes
+    ses actions augmente de 1.</p>
+  type: cle
+_id: nsq6X4NXXloZai9I
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432753262
+  modifiedTime: 1778432753262
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!nsq6X4NXXloZai9I'

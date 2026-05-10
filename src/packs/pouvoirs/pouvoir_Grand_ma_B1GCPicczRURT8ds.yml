@@ -1,0 +1,29 @@
+name: Grand-ma
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: ggaF9Zso1nJ1zrMZ
+system:
+  utilise: false
+  citation: Mes yeux luisent d'un malicieux appel à la charité.
+  description: >-
+    <p>Une action de votre fée noire pour obtenir une confidence inattendue, ou
+    être invitée dans un lieu interdit aux autres, devient automatique.</p>
+  type: peuple
+_id: B1GCPicczRURT8ds
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756743
+  modifiedTime: 1778432756743
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!B1GCPicczRURT8ds'

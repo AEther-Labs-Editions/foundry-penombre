@@ -1,0 +1,29 @@
+name: Silence glacial
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: 1NrD4CLcx0K6Idff
+system:
+  utilise: false
+  citation: Un silence irréel… Des couleurs blafardes… On se croirait sur la lune.
+  description: >-
+    <p>Votre personnage et ses alliés résistent automatiquement à un effet
+    magique d'art ancien (geste, décorum, accord).</p>
+  type: cle
+_id: zPnVacyHjg3BeDjV
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432753260
+  modifiedTime: 1778432753260
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!zPnVacyHjg3BeDjV'

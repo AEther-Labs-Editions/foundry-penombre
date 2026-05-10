@@ -1,0 +1,32 @@
+name: Marées intimes
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: 3cRTXVxr6RCjuZon
+system:
+  utilise: false
+  citation: >-
+    Votre courage et votre ténacité sont exemplaires, messire. Même lorsqu'il
+    faut trahir, ou détourner le regard.
+  description: >-
+    <p>Le temps d'une scène, tant que votre sirène chante, choisissez une
+    harmonique. Le nombre de succès de toutes les actions liées à cette
+    harmonique et réalisées par les Éminences grises augmente de 1.</p>
+  type: peuple
+_id: QA1nXJP7xGkllheF
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756763
+  modifiedTime: 1778432756763
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!QA1nXJP7xGkllheF'

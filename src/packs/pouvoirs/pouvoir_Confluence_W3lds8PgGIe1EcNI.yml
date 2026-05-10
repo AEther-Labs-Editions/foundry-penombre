@@ -1,0 +1,27 @@
+name: Confluence
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: 3cRTXVxr6RCjuZon
+system:
+  utilise: false
+  citation: Tout cela est indispensable à ma survie. Ou, du moins, à mon bonheur.
+  description: <p>Votre sirène gagne son second pouvoir de naissance.</p>
+  type: peuple
+_id: W3lds8PgGIe1EcNI
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756762
+  modifiedTime: 1778432756762
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!W3lds8PgGIe1EcNI'

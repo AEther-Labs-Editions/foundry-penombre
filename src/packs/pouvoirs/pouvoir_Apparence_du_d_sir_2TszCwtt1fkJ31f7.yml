@@ -1,0 +1,32 @@
+name: Apparence du désir
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: 3cRTXVxr6RCjuZon
+system:
+  utilise: false
+  citation: Notre rencontre va bouleverser ta vie. Un amour impossible ? Allons, allons…
+  description: >-
+    <p>Lors d'un repos ou une retraite, au lieu de récupérer de la conscience,
+    votre sirène prend l'apparence parfaite, aussi longtemps qu'elle le
+    souhaite, d'un autre personnage (connu ou inventé) à sa convenance. Sa peau
+    salée et son sang d'écume peuvent trahir sa nature véritable. Reprendre sa
+    forme originelle est une action automatique.</p>
+  type: naissance
+_id: 2TszCwtt1fkJ31f7
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756761
+  modifiedTime: 1778432756761
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!2TszCwtt1fkJ31f7'

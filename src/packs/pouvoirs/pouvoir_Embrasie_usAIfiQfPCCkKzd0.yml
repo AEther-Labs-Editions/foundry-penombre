@@ -1,0 +1,31 @@
+name: Embrasie
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: PETZekmAZbQ6u37E
+system:
+  utilise: false
+  citation: >-
+    L'impulsion de l'embrasie est capable de décupler vos forces quand le soleil
+    est au zénith.
+  description: >-
+    <p>Le temps d'une scène baignée par un soleil puissant, le nombre de succès
+    de toutes les actions brutales réalisées par votre ogre augmente de 2.</p>
+  type: naissance
+_id: usAIfiQfPCCkKzd0
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756756
+  modifiedTime: 1778432756756
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!usAIfiQfPCCkKzd0'

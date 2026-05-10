@@ -1,0 +1,31 @@
+name: Régurgitation d'information
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: PETZekmAZbQ6u37E
+system:
+  utilise: false
+  citation: >-
+    Souviens-toi de ce que tu as appris. Garde la tête haute. Tu n'es inférieur
+    à personne.
+  description: >-
+    <p>Une action pour se souvenir ou découvrir une information que votre ogre
+    pourrait connaître, sans erreur ni approximation, devient automatique.</p>
+  type: peuple
+_id: pmOaenOq3qcMu6ce
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756757
+  modifiedTime: 1778432756757
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!pmOaenOq3qcMu6ce'

@@ -1,0 +1,31 @@
+name: J'ai un plan
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: URvmvTYXhEFs6aAi
+system:
+  utilise: false
+  citation: L'issue de cette guerre reste à écrire. Sois-en la plume.
+  description: >-
+    <p>Une action devient automatique car un élément est remplacé par un autre
+    (une fenêtre fermée s'ouvre, un garde s'avère être un ami, votre humain
+    trouve un objet opportun, etc.). Ce pouvoir n'a aucun effet sur les
+    adversaires déjà déclarés ou en combat.</p>
+  type: peuple
+_id: hu7sbATX1fjAfM8H
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756748
+  modifiedTime: 1778432756748
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!hu7sbATX1fjAfM8H'

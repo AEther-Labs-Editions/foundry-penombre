@@ -1,0 +1,20 @@
+name: Esprit
+type: Item
+folder: ZA7HBYjkvC2GHGIj
+sorting: a
+_id: op5ommpX45SZrVQ9
+description: ''
+sort: 0
+color: null
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432753240
+  modifiedTime: 1778432753240
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!folders!op5ommpX45SZrVQ9'

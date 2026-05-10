@@ -1,0 +1,31 @@
+name: Prototype renforcé
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: URvmvTYXhEFs6aAi
+system:
+  utilise: false
+  citation: Un rêve que j'ai poursuivi toute ma vie vient de s'accomplir.
+  description: >-
+    <p>Lors d'un repos ou d'une retraite, au lieu de récupérer de la conscience,
+    votre humain améliore un prototype de son invention encore inutilisé, le
+    rendant utilisable à volonté jusqu'au repos suivant, après quoi il se
+    brise.</p>
+  type: peuple
+_id: YNy4CdIX2nTjjjvq
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756749
+  modifiedTime: 1778432756749
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!YNy4CdIX2nTjjjvq'

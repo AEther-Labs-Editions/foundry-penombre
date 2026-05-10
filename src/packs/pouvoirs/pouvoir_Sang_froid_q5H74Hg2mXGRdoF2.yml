@@ -1,0 +1,29 @@
+name: Sang froid
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: XtuCR6aNQ28k4Q9s
+system:
+  utilise: false
+  citation: Le ronflement doucereux qui berce mes nuits n'est qu'un chant de pierre.
+  description: >-
+    <p>Votre méduse résiste automatiquement à une action cherchant à manipuler
+    ses émotions.</p>
+  type: peuple
+_id: q5H74Hg2mXGRdoF2
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756750
+  modifiedTime: 1778432756750
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!q5H74Hg2mXGRdoF2'

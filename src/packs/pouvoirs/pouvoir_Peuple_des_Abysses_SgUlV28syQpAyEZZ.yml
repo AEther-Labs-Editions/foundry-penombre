@@ -1,0 +1,30 @@
+name: Peuple des Abysses
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: IKvHc0sPX3a9dGl0
+system:
+  utilise: false
+  citation: J'appartiens à vos ombres, mais vos ombres m'appartiennent.
+  description: >-
+    <p>Faites réaliser une action à une ombre proche ou lointaine comme si
+    c'était une créature. Cette action ne compte pas dans celles de votre
+    opalin.</p>
+  type: peuple
+_id: SgUlV28syQpAyEZZ
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756759
+  modifiedTime: 1778432756759
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!SgUlV28syQpAyEZZ'

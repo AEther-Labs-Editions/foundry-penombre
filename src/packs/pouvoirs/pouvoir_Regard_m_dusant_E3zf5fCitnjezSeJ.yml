@@ -1,0 +1,32 @@
+name: Regard médusant
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: XtuCR6aNQ28k4Q9s
+system:
+  utilise: false
+  citation: >-
+    Les méduses ont perdu leur pouvoir de pétrification ? Il a peut-être juste
+    évolué.
+  description: >-
+    <p>Une action de votre méduse incluant un contact visuel avec un personnage
+    imprime dans son esprit un ordre simple auquel il obéit. Cet ordre ne peut
+    pas le mettre en danger, et ne dure que le temps d'une scène.</p>
+  type: peuple
+_id: E3zf5fCitnjezSeJ
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756750
+  modifiedTime: 1778432756750
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!E3zf5fCitnjezSeJ'

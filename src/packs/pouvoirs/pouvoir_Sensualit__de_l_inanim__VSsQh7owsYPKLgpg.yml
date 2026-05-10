@@ -1,0 +1,31 @@
+name: Sensualité de l'inanimé
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: ggaF9Zso1nJ1zrMZ
+system:
+  utilise: false
+  citation: >-
+    Au-delà du silence préservé par mes ailes, les âmes s'expriment toujours,
+    qu'elles soient dans le métal, la pierre ou la laine.
+  description: >-
+    <p>Tant qu'elle effleure de ses ailes, votre fée noire converse avec un
+    objet comme s'il s'agissait d'un personnage.</p>
+  type: peuple
+_id: VSsQh7owsYPKLgpg
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756743
+  modifiedTime: 1778432756743
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!VSsQh7owsYPKLgpg'

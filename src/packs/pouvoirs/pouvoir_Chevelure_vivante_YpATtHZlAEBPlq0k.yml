@@ -1,0 +1,32 @@
+name: Chevelure vivante
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: XtuCR6aNQ28k4Q9s
+system:
+  utilise: false
+  citation: Abandonne tes épaules tendues aux langues bifides de mes serpents.
+  description: >-
+    <p>Faites réaliser une action physique aux serpents de votre méduse (cette
+    action ne compte pas dans la limite d'actions par tour). Les serpents
+    peuvent observer, mordre une cible ou votre méduse, l'aider dans sa tâche
+    ou, si elle possède ces autres pouvoirs, injecter du venin alchimique ou
+    fixer d'un regard médusant.</p>
+  type: naissance
+_id: YpATtHZlAEBPlq0k
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756749
+  modifiedTime: 1778432756749
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!YpATtHZlAEBPlq0k'

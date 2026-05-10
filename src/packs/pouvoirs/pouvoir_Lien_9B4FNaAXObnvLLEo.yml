@@ -1,0 +1,32 @@
+name: Lien
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: e6ondeXuwxaY9uQZ
+system:
+  utilise: false
+  citation: >-
+    Je fais corps avec mon arbre ou ma cité, et mon arbre ou ma cité est avec
+    moi.
+  description: >-
+    <p>Une perte de jetons subie par votre gnome est automatiquement annulée.
+    Jusqu'au repos suivant, le nombre de succès de toutes ses actions de nature
+    diminue de 1.</p>
+  type: naissance
+_id: 9B4FNaAXObnvLLEo
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756746
+  modifiedTime: 1778432756746
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!9B4FNaAXObnvLLEo'

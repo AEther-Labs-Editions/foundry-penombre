@@ -1,0 +1,31 @@
+name: Grand sujet
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: zUTfa6HiBzghrkme
+system:
+  utilise: false
+  citation: >-
+    Je ne suis qu'une présence incertaine, un souffle tout juste perceptible que
+    certains prennent pour un courant d'air.
+  description: >-
+    <p>Le temps d'une scène, tant qu'il danse, votre danseur ignore tous ses
+    prérequis de maîtrises magiques.</p>
+  type: naissance
+_id: 4aTvozjkONKpc5KB
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756740
+  modifiedTime: 1778432756740
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!4aTvozjkONKpc5KB'

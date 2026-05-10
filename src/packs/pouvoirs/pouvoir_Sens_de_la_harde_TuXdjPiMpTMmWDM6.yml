@@ -1,0 +1,29 @@
+name: Sens de la harde
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: wLOSucQ9duYTUXye
+system:
+  utilise: false
+  citation: Ma présence vous rassure sur votre capacité à réussir ? J'aime à l'entendre.
+  description: >-
+    <p>Lors d'une action collégiale incluant votre centaure, le nombre de succès
+    augmente du nombre de participants.</p>
+  type: peuple
+_id: TuXdjPiMpTMmWDM6
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756739
+  modifiedTime: 1778432756739
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!TuXdjPiMpTMmWDM6'

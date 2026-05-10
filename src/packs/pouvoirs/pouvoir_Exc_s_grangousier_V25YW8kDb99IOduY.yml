@@ -1,0 +1,32 @@
+name: Excès grangousier
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: Sm34XkfEHhIseH5y
+system:
+  utilise: false
+  citation: >-
+    Je n'échoue pas : soit je réussis, soit je réussis mieux. Peu importent les
+    sacrifices.
+  description: >-
+    <p>Le temps d'une scène, le nombre de succès de toutes les actions
+    d'étincelle réalisées par votre grangousier augmente de 2. Puis, jusqu'au
+    prochain repos, il diminue de 1.</p>
+  type: gamme
+_id: V25YW8kDb99IOduY
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432755034
+  modifiedTime: 1778432755034
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!V25YW8kDb99IOduY'

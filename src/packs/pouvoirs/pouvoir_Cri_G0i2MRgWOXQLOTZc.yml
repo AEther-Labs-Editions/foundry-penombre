@@ -1,0 +1,32 @@
+name: Cri
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: IgrDm7hr3qq1ysKc
+system:
+  utilise: false
+  citation: Mon visage sans fard s'ouvre sur un hurlement au diapason de ma puissance.
+  description: >-
+    <p>Votre banshee met en scène son cri sous la forme d'une attaque
+    supplémentaire utilisant l'harmonique âme (cette action ne compte pas dans
+    la limite d'actions par tour). Le nombre de succès de cette action augmente
+    de 3 puis, jusqu'au prochain repos, celui de toutes ses autres actions
+    diminue de 1.</p>
+  type: naissance
+_id: G0i2MRgWOXQLOTZc
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756736
+  modifiedTime: 1778432756736
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!G0i2MRgWOXQLOTZc'

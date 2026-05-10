@@ -1,0 +1,31 @@
+name: Morte-mitaine
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: IgrDm7hr3qq1ysKc
+system:
+  utilise: false
+  citation: >-
+    Le cri ranime son geste. Un geste sec, machinal et implacable. Il était
+    mort, mais plus maintenant.
+  description: >-
+    <p>Votre banshee libère son cri entre les lèvres d'un défunt, ce qui le
+    relève sous la forme d'un mort-vivant jusqu'à la fin de la scène.</p>
+  type: peuple
+_id: 9WcterqxsqzSV5J6
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756737
+  modifiedTime: 1778432756737
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!9WcterqxsqzSV5J6'

@@ -1,0 +1,30 @@
+name: Lumière nourricière
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: ry3BBpDsteGGYwoG
+system:
+  utilise: false
+  citation: De quoi a-t-on besoin quand on a le soleil ?
+  description: >-
+    <p>Après avoir passé un repos en plein soleil, votre géant n'a plus besoin
+    de manger ni de boire jusqu'au repos suivant, et peut nourrir et abreuver
+    son groupe.</p>
+  type: peuple
+_id: RYwGebE3Kc5EFI9O
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756745
+  modifiedTime: 1778432756745
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!RYwGebE3Kc5EFI9O'

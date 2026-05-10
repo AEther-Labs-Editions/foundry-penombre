@@ -1,0 +1,31 @@
+name: Corallien
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: 3cRTXVxr6RCjuZon
+system:
+  utilise: false
+  citation: Chaque nuit, par un passage dérobé, tu pourras te rendre auprès de moi.
+  description: >-
+    <p>Alors que votre sirène a besoin d'une aide extérieure, elle reçoit
+    opportunément la visite d'un ancien amant. Il a entendu l'appel de sa belle
+    et s'est aussitôt mis en route (parfois plusieurs semaines auparavant).
+    Cette visite apporte une solution à son problème.</p>
+  type: peuple
+_id: REmPP7qCWHXhdtvL
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756762
+  modifiedTime: 1778432756762
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!REmPP7qCWHXhdtvL'

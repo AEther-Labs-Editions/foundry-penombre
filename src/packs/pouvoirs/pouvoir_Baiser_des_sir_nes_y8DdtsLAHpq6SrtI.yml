@@ -1,0 +1,31 @@
+name: Baiser des sirènes
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: 3cRTXVxr6RCjuZon
+system:
+  utilise: false
+  citation: Viens t'ébattre en ma compagnie !
+  description: >-
+    <p>Le temps d'une scène, tous les personnages embrassés par votre sirène
+    deviennent capables de respirer sous l'eau et nager sans risque. Si elle
+    embrasse un personnage qui s'est noyé le jour même, il est automatiquement
+    réanimé.</p>
+  type: peuple
+_id: y8DdtsLAHpq6SrtI
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756761
+  modifiedTime: 1778432756761
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!y8DdtsLAHpq6SrtI'

@@ -1,0 +1,29 @@
+name: Embrasie ardente
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: PETZekmAZbQ6u37E
+system:
+  utilise: false
+  citation: Pour votre ogre, l'embrasie est plus qu'une impulsion, c'est un vertige.
+  description: >-
+    <p>Lors de l'utilisation d'embrasie, le nombre de succès d'une action
+    réalisée par votre ogre augmente de 2.</p>
+  type: peuple
+_id: YY5fhypfKwdKYbwW
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756756
+  modifiedTime: 1778432756756
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!YY5fhypfKwdKYbwW'

@@ -1,0 +1,34 @@
+name: Gigantisme
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: ry3BBpDsteGGYwoG
+system:
+  utilise: false
+  citation: On n'est jamais si grand que quand on se sent libre. Ou l'inverse.
+  description: >-
+    <p>Aussi longtemps qu'il le souhaite, votre géant abandonne sa taille
+    réfrénée et reprend sa taille naturelle. Les objets de taille standard sont
+    inutilisables sous cette forme. Jusqu'au prochain coucher de soleil, le
+    nombre de succès de toutes ses actions d'étincelle et de nature augmente de
+    2, mais celui de toutes ses actions d'esprit et de nuit diminue de 1. Tout
+    cela cesse immédiatement si votre géant décide de réfréner sa taille à
+    nouveau (action automatique).</p>
+  type: naissance
+_id: MqdEVBDb1nabfEQU
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756745
+  modifiedTime: 1778432756745
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!MqdEVBDb1nabfEQU'

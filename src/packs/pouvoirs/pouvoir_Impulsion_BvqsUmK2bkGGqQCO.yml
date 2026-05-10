@@ -1,0 +1,32 @@
+name: Impulsion
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: zUTfa6HiBzghrkme
+system:
+  utilise: false
+  citation: >-
+    Tel un funambule, s'élancer sur la corde tendue et, les pieds en pointe,
+    progresser par petits bonds.
+  description: >-
+    <p>Une action pour marcher sur un fil, passer par une ouverture trop exiguë,
+    sauter d'appui en appui, ou franchir une hauteur prodigieuse — en bondissant
+    vers le haut ou en plongeant dans le vide — devient automatique.</p>
+  type: peuple
+_id: BvqsUmK2bkGGqQCO
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756740
+  modifiedTime: 1778432756740
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!BvqsUmK2bkGGqQCO'

@@ -1,0 +1,33 @@
+name: Voleur d'instants
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: o4re02c0eWTf4mSp
+system:
+  utilise: false
+  citation: >-
+    Le voyeurisme a depuis longtemps tissé des liens secrets entre les satyres
+    et les autres mortels.
+  description: >-
+    <p>Une action de votre satyre fait revivre à un ou plusieurs personnages de
+    son choix une sensation qu'il a précédemment éprouvée (son, goût, toucher…),
+    voire une scène complète (sous la forme d'une projection holographique
+    multisensorielle).</p>
+  type: peuple
+_id: 99PNMYGLUSYhax7R
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756760
+  modifiedTime: 1778432756760
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!99PNMYGLUSYhax7R'

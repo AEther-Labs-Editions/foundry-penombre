@@ -1,0 +1,32 @@
+name: De la glaise entre les mains des muses
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: QXjzUVV4Xa5IENzw
+system:
+  utilise: false
+  citation: Tel une dalle polie par le pas d'une muse.
+  description: >-
+    <p>Lors d'un repos ou une retraite, au lieu de récupérer de la conscience,
+    votre personnage prend l'apparence parfaite, aussi longtemps qu'il le
+    souhaite, d'un autre personnage (connu ou inventé) à sa convenance. Sa chair
+    argileuse au sang de bourbe peut trahir sa nature véritable. Reprendre sa
+    forme originelle est une action automatique.</p>
+  type: cle
+_id: ucAkOxVM23vKDYOR
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432753266
+  modifiedTime: 1778432753266
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!ucAkOxVM23vKDYOR'

@@ -1,0 +1,32 @@
+name: Cendre de Lune
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: IKvHc0sPX3a9dGl0
+system:
+  utilise: false
+  citation: >-
+    Que peut-on ressentir lorsque son âme se fragmente en mille morceaux ? J'ai
+    hérité d'un fragment de cette âme…
+  description: >-
+    <p>Le temps d'une action, votre opalin produit un effet d'art ancien (geste,
+    décorum, accord) de son choix, sans prérequis et comme s'il avait une
+    maîtrise magique de niveau 3.</p>
+  type: peuple
+_id: 4UXNuNJRAgn8VjRn
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756757
+  modifiedTime: 1778432756757
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!4UXNuNJRAgn8VjRn'

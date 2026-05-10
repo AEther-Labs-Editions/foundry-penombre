@@ -1,0 +1,20 @@
+name: Nuit
+type: Item
+folder: ZA7HBYjkvC2GHGIj
+sorting: a
+_id: 4awRN3wQw32at2T6
+description: ''
+sort: 0
+color: null
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432753240
+  modifiedTime: 1778432753240
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!folders!4awRN3wQw32at2T6'

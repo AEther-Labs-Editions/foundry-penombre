@@ -1,0 +1,31 @@
+name: Adieux
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: IgrDm7hr3qq1ysKc
+system:
+  utilise: false
+  citation: Les banshees sont la voix des disparus.
+  description: >-
+    <p>En embrassant la dépouille d'un défunt, votre banshee apprend les
+    circonstances de sa mort, ses remords, ses regrets. Elle peut le laisser
+    s'exprimer en quelques mots à travers elle, sous le contrôle du
+    Psycholune.</p>
+  type: peuple
+_id: 73g92G87TOJFQraH
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756736
+  modifiedTime: 1778432756736
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!73g92G87TOJFQraH'

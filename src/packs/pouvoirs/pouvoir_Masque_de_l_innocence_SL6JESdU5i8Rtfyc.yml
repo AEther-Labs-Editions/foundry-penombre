@@ -1,0 +1,29 @@
+name: Masque de l'innocence
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: op5ommpX45SZrVQ9
+system:
+  utilise: false
+  citation: Mon visage n'est qu'un masque et, sous mon masque, je demeure impénétrable.
+  description: >-
+    <p>Votre personnage résiste automatiquement à une action qui cible
+    l'esprit.</p>
+  type: cle
+_id: SL6JESdU5i8Rtfyc
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432753262
+  modifiedTime: 1778432753262
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!SL6JESdU5i8Rtfyc'

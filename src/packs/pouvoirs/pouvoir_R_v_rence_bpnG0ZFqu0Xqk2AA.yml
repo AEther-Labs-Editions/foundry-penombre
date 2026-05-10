@@ -1,0 +1,33 @@
+name: Révérence
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: zUTfa6HiBzghrkme
+system:
+  utilise: false
+  citation: >-
+    Je ne suis qu'une présence incertaine, un souffle tout juste perceptible que
+    certains prennent pour un courant d'air.
+  description: >-
+    <p>Votre danseur devient quasi invisible et imperceptible. Aussi longtemps
+    qu'il le souhaite, passer inaperçu et éviter d'être attrapé devient
+    automatique. En revanche, il ne peut rien manipuler de matériel. Reprendre
+    son état originel est une action automatique.</p>
+  type: naissance
+_id: bpnG0ZFqu0Xqk2AA
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756741
+  modifiedTime: 1778432756741
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!bpnG0ZFqu0Xqk2AA'

@@ -1,0 +1,34 @@
+name: Héritier des dragons
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: QXjzUVV4Xa5IENzw
+system:
+  utilise: false
+  citation: >-
+    Je suis né de la terre, du sang des saisons et du souffle du soleil. Un
+    embrasement, à l'image d'un ciel saturé d'orange et de rouge par le
+    couchant.
+  description: >-
+    <p>Le temps d'une scène, le corps de votre personnage se hérisse d'écailles
+    qui forment comme une armure, ce qui le rend méconnaissable. Le nombre de
+    succès de toutes ses actions de nature augmente de 2, mais celui de toutes
+    ses actions d'âme diminue de 1.</p>
+  type: cle
+_id: hhB17twgl1Gahz0X
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432753266
+  modifiedTime: 1778432753266
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!hhB17twgl1Gahz0X'

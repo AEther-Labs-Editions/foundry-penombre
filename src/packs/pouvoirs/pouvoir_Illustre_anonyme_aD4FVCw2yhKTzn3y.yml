@@ -1,0 +1,29 @@
+name: Illustre anonyme
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: URvmvTYXhEFs6aAi
+system:
+  utilise: false
+  citation: Une excellente voie de repli pour se fondre dans la foule.
+  description: >-
+    <p>Une action de votre humain pour échapper à des poursuivants, ou passer
+    inaperçu, devient automatique.</p>
+  type: peuple
+_id: aD4FVCw2yhKTzn3y
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756748
+  modifiedTime: 1778432756748
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!aD4FVCw2yhKTzn3y'

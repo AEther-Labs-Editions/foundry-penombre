@@ -1,0 +1,27 @@
+name: Renaissance
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: OPUwY4Imf8gyfM4R
+system:
+  utilise: false
+  citation: Je serai toi.
+  description: <p>Votre âme accouchée gagne son second pouvoir de naissance.</p>
+  type: peuple
+_id: EhmfgeewVvny1sUO
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756735
+  modifiedTime: 1778432756735
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!EhmfgeewVvny1sUO'

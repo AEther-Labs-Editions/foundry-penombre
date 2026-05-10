@@ -1,0 +1,29 @@
+name: Évanescence mélusine
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: Sm34XkfEHhIseH5y
+system:
+  utilise: false
+  citation: As-tu déjà essayé de porter une écharpe de brume ?
+  description: >-
+    <p>Votre mélusine esquive automatiquement une menace physique portée contre
+    elle (attaque, piège, chute de pierres, etc.).</p>
+  type: gamme
+_id: F9HPbYGgDNh1F00B
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432755035
+  modifiedTime: 1778432755035
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!F9HPbYGgDNh1F00B'

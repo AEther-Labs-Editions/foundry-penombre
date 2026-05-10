@@ -1,0 +1,29 @@
+name: Par le geste
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: IgrDm7hr3qq1ysKc
+system:
+  utilise: false
+  citation: Les gestes de cette banshee sont tout un poème…
+  description: >-
+    <p>Le temps d'une scène, tant qu'elle communique par signes, votre banshee
+    ignore l'action de prérequis des effets magiques de geste.</p>
+  type: peuple
+_id: eTChSQ4rlQRg1x0m
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756738
+  modifiedTime: 1778432756738
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!eTChSQ4rlQRg1x0m'

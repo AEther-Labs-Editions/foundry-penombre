@@ -1,0 +1,31 @@
+name: Funambule
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: e6ondeXuwxaY9uQZ
+system:
+  utilise: false
+  citation: >-
+    Qui, mieux qu'un gnome, peut escalader les façades, se glisser sur les
+    balcons et dans les jardins des notables ?
+  description: >-
+    <p>Une action pour marcher sur un fil ou escalader un tronc, une falaise ou
+    un bâtiment devient automatique.</p>
+  type: peuple
+_id: LVYhvjxZrRDrcwlh
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756746
+  modifiedTime: 1778432756746
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!LVYhvjxZrRDrcwlh'

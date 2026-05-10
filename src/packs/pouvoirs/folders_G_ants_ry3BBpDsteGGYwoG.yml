@@ -1,0 +1,20 @@
+name: Géants
+type: Item
+folder: OttkbRY408gkDg8E
+sorting: a
+_id: ry3BBpDsteGGYwoG
+description: ''
+sort: 0
+color: null
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756702
+  modifiedTime: 1778432756702
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!folders!ry3BBpDsteGGYwoG'

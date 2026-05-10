@@ -1,0 +1,32 @@
+name: Présence clanique
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: kNQl3mkkqJ9SrKSs
+system:
+  utilise: false
+  citation: >-
+    Je n'échangerais pas un seul de ces nains contre une armée des royaumes
+    humains.
+  description: >-
+    <p>Alors que votre nain a besoin d'une aide extérieure, il reçoit
+    opportunément un message, du matériel, des finances, voire la visite d'un
+    cousin. Cela apporte une solution à son problème.</p>
+  type: peuple
+_id: o5OjeZFjLFXAvyg1
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756755
+  modifiedTime: 1778432756755
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!o5OjeZFjLFXAvyg1'

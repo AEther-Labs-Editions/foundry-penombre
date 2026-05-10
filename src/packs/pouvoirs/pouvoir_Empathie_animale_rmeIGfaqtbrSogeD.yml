@@ -1,0 +1,33 @@
+name: Empathie animale
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: wLOSucQ9duYTUXye
+system:
+  utilise: false
+  citation: >-
+    Les animaux alentour ne sont ni une menace, ni insignifiants : ils sont la
+    harde.
+  description: >-
+    <p>Le temps d'une scène, un animal sous le contrôle du Psycholune fait
+    confiance à votre centaure. Il n'est pas agressif, une conversation sommaire
+    peut avoir lieu, et il peut recevoir un ordre simple qu'il exécute sans
+    délai. Cela ne peut pas le mettre en danger.</p>
+  type: peuple
+_id: rmeIGfaqtbrSogeD
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756738
+  modifiedTime: 1778432756738
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!rmeIGfaqtbrSogeD'

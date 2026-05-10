@@ -1,0 +1,32 @@
+name: Conscience professionnelle
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: kNQl3mkkqJ9SrKSs
+system:
+  utilise: false
+  citation: >-
+    Un nain travaille sans relâche et oublie son corps diminué pour servir son
+    combat.
+  description: >-
+    <p>Le temps d'une scène, le nombre de succès de toutes les actions de nature
+    réalisées par votre nain augmente de 2. Puis, jusqu'au prochain repos, il
+    diminue de 1.</p>
+  type: peuple
+_id: c4o05c3THFhCUTTQ
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756754
+  modifiedTime: 1778432756754
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!c4o05c3THFhCUTTQ'

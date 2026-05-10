@@ -1,0 +1,31 @@
+name: L'amour est plus fort que tout
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: IKvHc0sPX3a9dGl0
+system:
+  utilise: false
+  citation: >-
+    Le sentiment amoureux peut l'emporter sur le lien abyssal, et bien plus
+    encore.
+  description: >-
+    <p>Le temps d'une scène, le nombre de succès de toutes les actions réalisées
+    par votre opalin augmente de 1 si son âme sœur est présente.</p>
+  type: naissance
+_id: CF7kLIDhemAmodgz
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756758
+  modifiedTime: 1778432756758
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!CF7kLIDhemAmodgz'

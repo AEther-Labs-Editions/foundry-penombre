@@ -1,0 +1,20 @@
+name: Peuples
+type: Item
+sorting: a
+_id: OttkbRY408gkDg8E
+description: ''
+folder: null
+sort: 300000
+color: null
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756701
+  modifiedTime: 1778432756784
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!folders!OttkbRY408gkDg8E'

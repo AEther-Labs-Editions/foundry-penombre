@@ -1,0 +1,30 @@
+name: Enfant prodige
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: QXjzUVV4Xa5IENzw
+system:
+  utilise: false
+  citation: J'offre à la nature pour devenir maître de la magie.
+  description: >-
+    <p>Le temps d'une scène se déroulant en pleine nature, votre personnage
+    ignore tous les prérequis de magie naturelle (élémentalisme, magie des
+    saisons, brigue).</p>
+  type: cle
+_id: nPAw9abxZggHO8D9
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432753266
+  modifiedTime: 1778432753266
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!nPAw9abxZggHO8D9'
