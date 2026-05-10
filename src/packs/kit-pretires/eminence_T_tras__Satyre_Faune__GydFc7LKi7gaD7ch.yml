@@ -325,7 +325,7 @@ items:
         présence ou des souvenirs étrangers ; il ou elle est pris(e) de doute,
         voire plonge dans une profonde dépression ; etc.</p></li></ul>
       harmonique: ame
-      niveau: 1
+      niveau: 2
       prerequis: se lancer dans une tirade
     effects: []
     folder: null
