@@ -1,0 +1,29 @@
+name: Âme créative
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: 1NrD4CLcx0K6Idff
+system:
+  utilise: false
+  citation: Elle était là, à contempler la lune. Elle ne faisait rien, et pourtant…
+  description: >-
+    <p>Le temps d'une scène se déroulant sous la lune, votre personnage ignore
+    tous les prérequis d'art ancien (geste, décorum, accord).</p>
+  type: cle
+_id: F3V9TEPUcHV9f3Z1
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432753260
+  modifiedTime: 1778432753260
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!F3V9TEPUcHV9f3Z1'

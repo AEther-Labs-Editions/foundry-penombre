@@ -1,0 +1,29 @@
+name: Clair de lune
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: 1NrD4CLcx0K6Idff
+system:
+  utilise: false
+  citation: Tout devient merveilleux au clair de lune.
+  description: >-
+    <p>Lors d'une action de votre personnage se déroulant à la lumière de la
+    lune, votre dé harmonique affiche sa valeur maximale.</p>
+  type: cle
+_id: GwjJCt7aoPKVo7YX
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432753258
+  modifiedTime: 1778432753258
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!GwjJCt7aoPKVo7YX'

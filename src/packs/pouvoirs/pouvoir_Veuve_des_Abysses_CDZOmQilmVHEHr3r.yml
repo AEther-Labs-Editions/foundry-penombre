@@ -1,0 +1,31 @@
+name: Veuve des Abysses
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: XtuCR6aNQ28k4Q9s
+system:
+  utilise: false
+  citation: >-
+    Les doigts de Pan savent me tourmenter jusqu'à ce que j'implore mon plaisir.
+    Toi, tu n'es rien.
+  description: >-
+    <p>Lors d'une action de votre méduse contre un démon, ou en lien avec la
+    séduction, votre dé harmonique affiche sa valeur maximale.</p>
+  type: peuple
+_id: CDZOmQilmVHEHr3r
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756751
+  modifiedTime: 1778432756751
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!CDZOmQilmVHEHr3r'

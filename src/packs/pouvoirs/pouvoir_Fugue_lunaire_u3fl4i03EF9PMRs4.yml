@@ -1,0 +1,29 @@
+name: Fugue lunaire
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: 1NrD4CLcx0K6Idff
+system:
+  utilise: false
+  citation: Comme la lune, je brille d'un éclat emprunté.
+  description: >-
+    <p>Déclenchez de nouveau l'effet d'un pouvoir de votre personnage qui a déjà
+    été utilisé.</p>
+  type: cle
+_id: u3fl4i03EF9PMRs4
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432753260
+  modifiedTime: 1778432753260
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!u3fl4i03EF9PMRs4'

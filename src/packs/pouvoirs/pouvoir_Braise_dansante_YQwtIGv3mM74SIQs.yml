@@ -1,0 +1,30 @@
+name: Braise dansante
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: EqdS97sNIzZvXoi8
+system:
+  utilise: false
+  citation: Moi. Tout seul.
+  description: >-
+    <p>Le temps d'une scène, tant que votre personnage danse lui-même, il ignore
+    tous les prérequis de magie cryptogrammique (jornisme, éclipsisme,
+    obscurantisme).</p>
+  type: cle
+_id: YQwtIGv3mM74SIQs
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432753263
+  modifiedTime: 1778432753263
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!YQwtIGv3mM74SIQs'

@@ -1,0 +1,32 @@
+name: Ancêtre
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: ggaF9Zso1nJ1zrMZ
+system:
+  utilise: false
+  citation: >-
+    Je suis la plus vieille. Mon talent est immense. Le simple fait d'être avec
+    vous facilite votre tâche.
+  description: >-
+    <p>Le temps d'une scène, les accouchements de toutes les fées noires proches
+    ne diminuent la valeur de conscience maximale que pour votre fée noire, et
+    seulement une fois. De plus, les fées noires vous obéissent aveuglément.</p>
+  type: peuple
+_id: svgd7JvjfRb1auSI
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756742
+  modifiedTime: 1778432756742
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!svgd7JvjfRb1auSI'

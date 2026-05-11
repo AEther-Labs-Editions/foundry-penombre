@@ -1,0 +1,32 @@
+name: Sens de la structure
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: kNQl3mkkqJ9SrKSs
+system:
+  utilise: false
+  citation: >-
+    Dissimuler une forteresse sous les allures d'un palais de province ? Des
+    murs blancs, quelques hautes fenêtres à panneaux de corne, et le tour est
+    joué !
+  description: >-
+    <p>Une action de votre nain pour restaurer, renforcer, alléger, maquiller ou
+    fragiliser un objet ou un bâtiment devient automatique.</p>
+  type: peuple
+_id: u0W6ntLwqKStYBQ0
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756755
+  modifiedTime: 1778432756755
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!u0W6ntLwqKStYBQ0'

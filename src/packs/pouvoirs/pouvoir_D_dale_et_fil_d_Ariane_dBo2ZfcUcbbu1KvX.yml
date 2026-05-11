@@ -1,0 +1,29 @@
+name: Dédale et fil d'Ariane
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: 1Su98EWNIBodXOJa
+system:
+  utilise: false
+  citation: Entrez dans mon labyrinthe. Allez-vous vous y retrouver, ou vous y perdre ?
+  description: >-
+    <p>Une action de votre minotaure pour retrouver un fuyard, le rattraper, ou
+    échapper à des poursuivants devient automatique.</p>
+  type: peuple
+_id: dBo2ZfcUcbbu1KvX
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756752
+  modifiedTime: 1778432756752
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!dBo2ZfcUcbbu1KvX'

@@ -1,0 +1,29 @@
+name: Paternalisme élémentaire
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: kNQl3mkkqJ9SrKSs
+system:
+  utilise: false
+  citation: Je préfère m'en charger afin de garantir la pureté de chaque élémental.
+  description: >-
+    <p>Le temps d'une action, votre nain produit un effet d'élémentalisme sans
+    prérequis et comme s'il avait une maîtrise magique de niveau 3.</p>
+  type: naissance
+_id: iFetcZzLHDNBva3w
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756755
+  modifiedTime: 1778432756755
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!iFetcZzLHDNBva3w'

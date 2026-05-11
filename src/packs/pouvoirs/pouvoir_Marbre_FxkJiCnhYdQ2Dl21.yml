@@ -1,0 +1,29 @@
+name: Marbre
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: XtuCR6aNQ28k4Q9s
+system:
+  utilise: false
+  citation: C'est du solide, cette fille-là.
+  description: >-
+    <p>Le temps d'une scène, votre méduse résiste automatiquement aux poisons,
+    aux maladies et aux pestes.</p>
+  type: peuple
+_id: FxkJiCnhYdQ2Dl21
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756750
+  modifiedTime: 1778432756750
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!FxkJiCnhYdQ2Dl21'

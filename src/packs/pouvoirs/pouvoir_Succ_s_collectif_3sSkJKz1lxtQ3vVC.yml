@@ -1,0 +1,29 @@
+name: Succès collectif
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: URvmvTYXhEFs6aAi
+system:
+  utilise: false
+  citation: Marcher ensemble est un début ; travailler ensemble est une victoire.
+  description: >-
+    <p>Lors d'une action collégiale incluant votre humain, le nombre de succès
+    total augmente du nombre de participants.</p>
+  type: naissance
+_id: 3sSkJKz1lxtQ3vVC
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756749
+  modifiedTime: 1778432756749
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!3sSkJKz1lxtQ3vVC'

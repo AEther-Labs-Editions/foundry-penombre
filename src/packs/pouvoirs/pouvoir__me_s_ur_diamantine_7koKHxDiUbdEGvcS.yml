@@ -1,0 +1,32 @@
+name: Âme-sœur diamantine
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: Sm34XkfEHhIseH5y
+system:
+  utilise: false
+  citation: Ce sont nos âmes qui s'aiment, et non nos corps.
+  description: >-
+    <p>Définissez l'âme-sœur de votre diamantin : l'amant de votre opalin de la
+    Romance ; la mère ou le porteur de votre âme accouchée ; une harmonique pour
+    votre danseur affranchi. Le temps d'une scène, le nombre de succès de toutes
+    les actions réalisées par votre diamantin en lien avec son âme-sœur augmente
+    de 1.</p>
+  type: gamme
+_id: 7koKHxDiUbdEGvcS
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432755035
+  modifiedTime: 1778432755035
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!7koKHxDiUbdEGvcS'

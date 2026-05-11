@@ -1,0 +1,30 @@
+name: Sillon
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: wLOSucQ9duYTUXye
+system:
+  utilise: false
+  citation: Rien n'entrave ma route ni ne perturbe mon pas. RIEN !
+  description: >-
+    <p>Une action impliquant un déplacement impossible (sur l'eau, par exemple)
+    devient possible. Une action pour trouver de l'eau, de la nourriture et un
+    abri en milieu naturel devient automatique.</p>
+  type: naissance
+_id: zGoBk41CYKdC654Y
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756739
+  modifiedTime: 1778432756739
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!zGoBk41CYKdC654Y'

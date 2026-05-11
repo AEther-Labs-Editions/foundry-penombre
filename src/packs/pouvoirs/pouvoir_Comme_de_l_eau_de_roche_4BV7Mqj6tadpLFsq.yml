@@ -1,0 +1,32 @@
+name: Comme de l'eau de roche
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: kNQl3mkkqJ9SrKSs
+system:
+  utilise: false
+  citation: >-
+    L'Équerre s'ingénie à transcrire l'ensemble des documents qui régissent ses
+    activités sur de singuliers supports, comme la flammèche d'une chandelle.
+  description: >-
+    <p>En une action, votre nain transmet un court message « télépathique » à un
+    autre personnage, où qu'il se trouve, en l'inscrivant sur un support
+    élémentaire (flamme, courant d'air, verre de vin, etc.).</p>
+  type: peuple
+_id: 4BV7Mqj6tadpLFsq
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756754
+  modifiedTime: 1778432756754
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!4BV7Mqj6tadpLFsq'

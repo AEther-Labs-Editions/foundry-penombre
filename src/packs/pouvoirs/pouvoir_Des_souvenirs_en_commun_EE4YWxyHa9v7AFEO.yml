@@ -1,0 +1,30 @@
+name: Des souvenirs en commun
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: OPUwY4Imf8gyfM4R
+system:
+  utilise: false
+  citation: Nos esprits sont connectés, il nous suffit de lire en eux.
+  description: >-
+    <p>Le temps d'une action, votre âme accouchée laisse un autre personnage
+    proche utiliser un de ses atouts, ou se sert de l'un des siens. Chacun lit
+    un souvenir dans la mémoire de l'autre.</p>
+  type: peuple
+_id: EE4YWxyHa9v7AFEO
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756734
+  modifiedTime: 1778432756734
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!EE4YWxyHa9v7AFEO'

@@ -1,0 +1,29 @@
+name: Cœur de phénix
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: EqdS97sNIzZvXoi8
+system:
+  utilise: false
+  citation: À la morsure du feu, chacun révèle son vrai visage.
+  description: >-
+    <p>Le temps d'une scène, votre personnage résiste automatiquement aux
+    flammes.</p>
+  type: cle
+_id: LVNmWZwV2Ofp3DlO
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432753264
+  modifiedTime: 1778432753264
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!LVNmWZwV2Ofp3DlO'

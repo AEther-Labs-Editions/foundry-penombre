@@ -1,0 +1,31 @@
+name: Mère des araignées
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: IgrDm7hr3qq1ysKc
+system:
+  utilise: false
+  citation: Quand parut une bête pâle, celle qui l'accompagnait se nommait la mort.
+  description: >-
+    <p>Lors d'un repos ou d'une retraite, au lieu de récupérer de la conscience,
+    votre banshee guide des araignées afin qu'elles tissent une toile à
+    l'utilité remarquable (alarme, armure, suture, voile de vol…). L'élément
+    produit ne peut être utilisé qu'une seule fois.</p>
+  type: peuple
+_id: kCLmwsukwBN5ghgw
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756737
+  modifiedTime: 1778432756737
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!kCLmwsukwBN5ghgw'

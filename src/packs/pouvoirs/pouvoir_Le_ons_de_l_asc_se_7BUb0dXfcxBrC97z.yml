@@ -1,0 +1,31 @@
+name: Leçons de l'ascèse
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: PETZekmAZbQ6u37E
+system:
+  utilise: false
+  citation: >-
+    Le respect… Faut aller le chercher, faut creuser profond pour en trouver et
+    se donner la force de tenir droit.
+  description: >-
+    <p>Une action de votre ogre pour résister à un contrôle – physique ou mental
+    – devient automatique.</p>
+  type: peuple
+_id: 7BUb0dXfcxBrC97z
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756757
+  modifiedTime: 1778432756757
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!7BUb0dXfcxBrC97z'

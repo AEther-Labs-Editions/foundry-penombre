@@ -1,0 +1,30 @@
+name: Champion des saisons
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: e6ondeXuwxaY9uQZ
+system:
+  utilise: false
+  citation: Pourquoi étouffer les racines primordiales de notre peuple lié aux dames ?
+  description: >-
+    <p>Le temps d'une scène, le nombre de succès de toutes les actions de magie
+    des saisons réalisées par votre gnome augmente de 2, mais celui de toutes
+    les autres actions magiques diminue de 1.</p>
+  type: peuple
+_id: piTXlTK6AggdEByY
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756745
+  modifiedTime: 1778432756745
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!piTXlTK6AggdEByY'

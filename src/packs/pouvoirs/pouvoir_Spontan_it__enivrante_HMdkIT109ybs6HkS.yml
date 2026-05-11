@@ -1,0 +1,30 @@
+name: Spontanéité enivrante
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: zUTfa6HiBzghrkme
+system:
+  utilise: false
+  citation: Quelle fougue dévoyée !
+  description: >-
+    <p>Le temps d'une scène, le nombre de succès de tous les effets de magie
+    cryptogrammique (jornisme, éclipsisme, obscurantisme) réalisés par votre
+    danseur augmente de 2. Puis, jusqu'au prochain repos, il diminue de 1.</p>
+  type: peuple
+_id: HMdkIT109ybs6HkS
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756741
+  modifiedTime: 1778432756741
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!HMdkIT109ybs6HkS'

@@ -1,0 +1,32 @@
+name: Frappe horla
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: Sm34XkfEHhIseH5y
+system:
+  utilise: false
+  citation: >-
+    Sous l'effet de notre colère, nos cornes s'acèrent, nos sabots s'affutent,
+    nos serpents s'allongent… Ne sois pas surpris : tu devrais plutôt avoir
+    peur…
+  description: >-
+    <p>Le temps d'une action d'attaque de votre horla, utilisez gratuitement le
+    dé merveilleux en plus du dé harmonique.</p>
+  type: gamme
+_id: kluu6E870VW2PTWH
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432755034
+  modifiedTime: 1778432755034
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!kluu6E870VW2PTWH'

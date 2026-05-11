@@ -1,0 +1,30 @@
+name: Complainte de la lande perdue
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: wLOSucQ9duYTUXye
+system:
+  utilise: false
+  citation: Un piétinement peut en dire beaucoup, et loin.
+  description: >-
+    <p>En une action, votre centaure transmet un court message « télépathique »
+    à un autre personnage, où qu'il se trouve, en martelant le sol de ses
+    sabots.</p>
+  type: peuple
+_id: J47CSaoHAAugHgmr
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756738
+  modifiedTime: 1778432756738
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!J47CSaoHAAugHgmr'

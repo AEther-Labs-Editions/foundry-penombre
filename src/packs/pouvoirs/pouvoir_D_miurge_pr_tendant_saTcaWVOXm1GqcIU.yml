@@ -1,0 +1,29 @@
+name: Démiurge prétendant
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: op5ommpX45SZrVQ9
+system:
+  utilise: false
+  citation: Chef d'orchestre de la Flamboyance, je m'accorde les pleins pouvoirs !
+  description: >-
+    <p>Le temps d'une scène, tant qu'il ne se déplace pas, votre personnage
+    ignore tous ses prérequis de maîtrises magiques.</p>
+  type: cle
+_id: saTcaWVOXm1GqcIU
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432753261
+  modifiedTime: 1778432753261
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!saTcaWVOXm1GqcIU'

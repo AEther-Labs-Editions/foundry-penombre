@@ -1,0 +1,31 @@
+name: Émissaire d'onyx
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: 1Su98EWNIBodXOJa
+system:
+  utilise: false
+  citation: >-
+    Ces arcs noirs qui fusent entre mes cornes ? Juste un moyen pour moi de
+    répéter ce que tu dis.
+  description: >-
+    <p>Le temps d'une scène, tout ce que votre minotaure entend est amplifié et
+    résonne en simultané dans les espaces proche et lointain.</p>
+  type: peuple
+_id: DDmnOxDzxuIvIBnt
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756753
+  modifiedTime: 1778432756753
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!DDmnOxDzxuIvIBnt'

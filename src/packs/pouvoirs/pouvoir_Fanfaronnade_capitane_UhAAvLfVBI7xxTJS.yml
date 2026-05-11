@@ -1,0 +1,32 @@
+name: Fanfaronnade capitane
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: U8csroqFYZMpkYQZ
+system:
+  utilise: false
+  citation: >-
+    S'il advient d'un peu triompher, par hasard, vis-à-vis de soi-même en garder
+    le mérite.
+  description: >-
+    <p>Le temps d'une scène, le nombre de succès de toutes les actions
+    d'étincelle et de nature réalisées par votre personnage augmente de 2, mais
+    celui de toutes ses actions d'âme et de nuit diminue de 1.</p>
+  type: ton
+_id: UhAAvLfVBI7xxTJS
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432758732
+  modifiedTime: 1778432758732
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!UhAAvLfVBI7xxTJS'

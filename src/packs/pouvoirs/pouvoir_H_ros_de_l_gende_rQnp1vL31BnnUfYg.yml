@@ -1,0 +1,29 @@
+name: Héros de légende
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: URvmvTYXhEFs6aAi
+system:
+  utilise: false
+  citation: Tout règne doit se bâtir sur une victoire glorieuse.
+  description: >-
+    <p>Le temps d'une action héroïque réalisée publiquement, utilisez
+    gratuitement le dé merveilleux en plus du dé harmonique.</p>
+  type: peuple
+_id: rQnp1vL31BnnUfYg
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756747
+  modifiedTime: 1778432756747
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!rQnp1vL31BnnUfYg'

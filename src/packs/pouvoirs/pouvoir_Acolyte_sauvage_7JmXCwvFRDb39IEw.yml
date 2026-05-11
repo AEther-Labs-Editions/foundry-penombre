@@ -1,0 +1,32 @@
+name: Acolyte sauvage
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: QXjzUVV4Xa5IENzw
+system:
+  utilise: false
+  citation: >-
+    C'est un faucon corné, une bête admirable qui vit le plus souvent auprès des
+    licornes.
+  description: >-
+    <p>Le temps d'une scène, alors que votre personnage a besoin d'une
+    assistance extérieure, il reçoit l'aide opportune d'un animal intelligent
+    sous le contrôle du Psycholune.</p>
+  type: cle
+_id: 7JmXCwvFRDb39IEw
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432753265
+  modifiedTime: 1778432753265
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!7JmXCwvFRDb39IEw'

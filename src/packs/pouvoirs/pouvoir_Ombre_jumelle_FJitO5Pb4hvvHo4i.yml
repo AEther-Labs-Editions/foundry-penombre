@@ -1,0 +1,30 @@
+name: Ombre jumelle
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: 4awRN3wQw32at2T6
+system:
+  utilise: false
+  citation: Alors c'est moi… sans être moi.
+  description: >-
+    <p>Jusqu'à la fin du tour, faites agir l'ombre de votre personnage comme si
+    elle était un double de ce dernier. Ses actions, autonomes, ne comptent pas
+    comme celles de votre personnage.</p>
+  type: cle
+_id: FJitO5Pb4hvvHo4i
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432753267
+  modifiedTime: 1778432753267
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!FJitO5Pb4hvvHo4i'

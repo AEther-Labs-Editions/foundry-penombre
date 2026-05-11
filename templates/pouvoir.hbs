@@ -8,6 +8,12 @@
         <div class="details">
             {{formGroup systemFields.utilise value=systemSource.utilise localize=true}}
             {{formGroup systemFields.type value=systemSource.type localize=true}}
+            <div class="form-group">
+                <label data-tooltip="{{systemSource.citation}}">{{localize "PENOMBRE.Pouvoir.FIELDS.citation.label"}}</label>
+                <div class="form-fields">
+                    {{formInput systemFields.citation value=systemSource.citation}}
+                </div>
+            </div>
         </div>
         {{formInput systemFields.description enriched=enrichedDescription value=system.description name="system.description" toggled=true}}
     </div>

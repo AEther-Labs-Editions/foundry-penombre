@@ -1,0 +1,30 @@
+name: Parfait antérieur
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: op5ommpX45SZrVQ9
+system:
+  utilise: false
+  citation: Pourquoi s'arrêter sur le passé quand le présent est plus sûr ?
+  description: >-
+    <p>Votre personnage crée une information importante en lien avec le passé
+    d'un lieu, d'un objet, ou d'une personne. Après validation ou ajustement par
+    le Psycholune, elle devient réelle.</p>
+  type: cle
+_id: YNka6jEEMbj5TTcP
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432753263
+  modifiedTime: 1778432753263
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!YNka6jEEMbj5TTcP'

@@ -1,0 +1,30 @@
+name: Danse affamée
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: PETZekmAZbQ6u37E
+system:
+  utilise: false
+  citation: La faim justifie les moyens.
+  description: >-
+    <p>Le temps d'une action, votre ogre dévore un danseur pour produire un
+    effet de magie cryptogrammique (jornisme, éclipsisme, obscurantisme) de son
+    choix, comme s'il avait une maîtrise magique de niveau 3.</p>
+  type: peuple
+_id: q0sp4C8moTWfYaCf
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756756
+  modifiedTime: 1778432756756
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!q0sp4C8moTWfYaCf'

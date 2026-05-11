@@ -1,0 +1,31 @@
+name: Une bête de concours
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: wLOSucQ9duYTUXye
+system:
+  utilise: false
+  citation: >-
+    La grâce de l'athlète, l'intelligence du voyageur, la distinction de
+    l'aventurier.
+  description: >-
+    <p>Une action pour gagner une course de vitesse, réussir un saut, ou
+    soutenir un effort devient automatique.</p>
+  type: peuple
+_id: 0e3t1zNHF3mVVVHo
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756739
+  modifiedTime: 1778432756739
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!0e3t1zNHF3mVVVHo'

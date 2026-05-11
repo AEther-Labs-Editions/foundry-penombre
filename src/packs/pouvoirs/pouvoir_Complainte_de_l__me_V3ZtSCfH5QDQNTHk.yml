@@ -1,0 +1,30 @@
+name: Complainte de l'âme
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: 1NrD4CLcx0K6Idff
+system:
+  utilise: false
+  citation: Je ne fais de l'art ni pour mon plaisir, ni par intérêt.
+  description: >-
+    <p>Le temps d'une scène, le nombre de succès des actions d'art ancien
+    (geste, décorum, accord) réalisées par votre personnage augmente de 2. Puis,
+    jusqu'au prochain repos, il diminue de 1.</p>
+  type: cle
+_id: V3ZtSCfH5QDQNTHk
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432753259
+  modifiedTime: 1778432753259
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!V3ZtSCfH5QDQNTHk'

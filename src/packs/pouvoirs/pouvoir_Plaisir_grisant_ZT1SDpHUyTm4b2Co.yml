@@ -1,0 +1,31 @@
+name: Plaisir grisant
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: o4re02c0eWTf4mSp
+system:
+  utilise: false
+  citation: Tu ignores jusqu'où tout cela va fatalement nous mener. Moi, je sais.
+  description: >-
+    <p>À l'acquisition de ce pouvoir, choisissez une activité de loisir
+    (musique, poésie, nourriture, sexe…). Après que votre satyre a pratiqué ce
+    loisir, le dé harmonique d'une de ses actions affiche sa valeur
+    maximale.</p>
+  type: peuple
+_id: ZT1SDpHUyTm4b2Co
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756759
+  modifiedTime: 1778432756759
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!ZT1SDpHUyTm4b2Co'

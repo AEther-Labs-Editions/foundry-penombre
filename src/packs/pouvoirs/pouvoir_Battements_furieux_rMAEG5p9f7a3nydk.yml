@@ -1,0 +1,33 @@
+name: Battements furieux
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: ggaF9Zso1nJ1zrMZ
+system:
+  utilise: false
+  citation: >-
+    Le vent souffle soudain en violentes bourrasques, le fer se déforme et se
+    boursoufle.
+  description: >-
+    <p>Le temps d'une scène, tant qu'elle bat des ailes, votre fée noire ignore
+    tous les prérequis de maîtrises magiques. Elle peut produire un effet de
+    décorum de son choix, comme si elle avait une maîtrise magique de niveau
+    3.</p>
+  type: peuple
+_id: rMAEG5p9f7a3nydk
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756743
+  modifiedTime: 1778432756743
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!rMAEG5p9f7a3nydk'

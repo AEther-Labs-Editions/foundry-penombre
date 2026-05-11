@@ -1,0 +1,32 @@
+name: Suppôt des Abysses
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: 4awRN3wQw32at2T6
+system:
+  utilise: false
+  citation: >-
+    L'énergie ténébreuse sédimentée de ma vieille carcasse peut transformer
+    n'importe quel liquide sans âme en encre contrefaite.
+  description: >-
+    <p>Le temps d'une scène, votre personnage accepte une complication «
+    offrande de sang » niveau 3 et ignore tous les prérequis d'art noir
+    (onyxium, conjuration, prisme).</p>
+  type: cle
+_id: RrEB0VKAyzhCQWwM
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432753268
+  modifiedTime: 1778432753268
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!RrEB0VKAyzhCQWwM'

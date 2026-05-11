@@ -1,0 +1,30 @@
+name: Torrent émotionnel
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: o4re02c0eWTf4mSp
+system:
+  utilise: false
+  citation: Comment exprimer ce que je ressens ? Au mieux, forcément !
+  description: >-
+    <p>Le temps d'une scène, le nombre de succès de toutes les actions d'âme et
+    d'étincelle réalisées par votre satyre augmente de 2. Puis, jusqu'au
+    prochain repos, il diminue de 1.</p>
+  type: peuple
+_id: OhenhZNsWo2yVxwq
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756760
+  modifiedTime: 1778432756760
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!OhenhZNsWo2yVxwq'

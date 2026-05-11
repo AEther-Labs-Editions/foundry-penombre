@@ -1,0 +1,33 @@
+name: Gloutonnerie à toute épreuve
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: PETZekmAZbQ6u37E
+system:
+  utilise: false
+  citation: >-
+    J'avale avec frénésie en faisant jouer mes muscles longitudinaux, à la
+    recherche de nourriture. Ma faim domine.
+  description: >-
+    <p>Votre ogre avale une chose (comestible ou non). Il n'en subit aucune
+    conséquence, et en définit en une action la composition exacte (avarie,
+    poison, nature du minerai…). La chose avalée est détruite et votre ogre
+    récupère 1 jeton conscience perdu.</p>
+  type: peuple
+_id: YpBU82YmSZOMRxwe
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756757
+  modifiedTime: 1778432756757
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!YpBU82YmSZOMRxwe'

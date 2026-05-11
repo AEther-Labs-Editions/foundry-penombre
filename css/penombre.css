@@ -111,6 +111,17 @@ penombre-toggle-switch[checked] thumb {
   color: #a56135;
 }
 /* ---------------------------------------------
+        Tooltips custom
+--------------------------------------------- */
+#tooltip.pouvoir-tooltip {
+  max-width: 640px;
+  text-align: left;
+}
+#tooltip.pouvoir-tooltip .pouvoir-tooltip-citation {
+  font-style: italic;
+  margin-bottom: 0.5em;
+}
+/* ---------------------------------------------
         Thème Clair
 --------------------------------------------- */
 body {
@@ -1368,6 +1379,9 @@ body.theme-light .penombre.action .action-content {
   display: flex;
   flex-direction: column;
 }
+.penombre.atout .atout-content .standard-form .auto .details .form-group > label {
+  flex: 0 0 5rem;
+}
 .penombre.atout .atout-content .standard-form .auto .editor {
   flex: 1;
   min-height: 0;
@@ -1399,6 +1413,9 @@ body.theme-light .penombre.action .action-content {
   flex: 1;
   display: flex;
   flex-direction: column;
+}
+.penombre.maitrise .maitrise-content .standard-form .auto .details .form-group > label {
+  flex: 0 0 5rem;
 }
 .penombre.maitrise .maitrise-content .standard-form .auto .editor {
   flex: 1;
@@ -1432,6 +1449,9 @@ body.theme-light .penombre.action .action-content {
   display: flex;
   flex-direction: column;
 }
+.penombre.pouvoir .pouvoir-content .standard-form .auto .details .form-group > label {
+  flex: 0 0 5rem;
+}
 .penombre.pouvoir .pouvoir-content .standard-form .auto .editor {
   flex: 1;
   min-height: 0;
@@ -1464,6 +1484,9 @@ body.theme-light .penombre.action .action-content {
   display: flex;
   flex-direction: column;
 }
+.penombre.intrigue .intrigue-content .standard-form .auto .details .form-group > label {
+  flex: 0 0 5rem;
+}
 .penombre.intrigue .intrigue-content .standard-form .auto .editor {
   flex: 1;
   min-height: 0;
@@ -1495,6 +1518,9 @@ body.theme-light .penombre.action .action-content {
   flex: 1;
   display: flex;
   flex-direction: column;
+}
+.penombre.action .action-content .standard-form .auto .details .form-group > label {
+  flex: 0 0 5rem;
 }
 .penombre.action .action-content .standard-form .auto .editor {
   flex: 1;

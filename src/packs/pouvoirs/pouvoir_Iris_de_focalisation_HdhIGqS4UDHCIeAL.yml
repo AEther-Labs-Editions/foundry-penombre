@@ -1,0 +1,29 @@
+name: Iris de focalisation
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: ry3BBpDsteGGYwoG
+system:
+  utilise: false
+  citation: Mon sens de l'observation est d'utilité publique !
+  description: >-
+    <p>Lors d'une action d'étincelle de votre géant, votre dé harmonique affiche
+    sa valeur maximale.</p>
+  type: peuple
+_id: HdhIGqS4UDHCIeAL
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756745
+  modifiedTime: 1778432756745
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!HdhIGqS4UDHCIeAL'

@@ -1,0 +1,32 @@
+name: Giron de mère nature
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: kNQl3mkkqJ9SrKSs
+system:
+  utilise: false
+  citation: >-
+    Une onctuosité dont les racines puisent aux sources primitives de
+    l'Harmonde.
+  description: >-
+    <p>Votre nain s'enfonce dans un volume de pierre comme s'il s'agissait d'un
+    nuage. Cela prend une action, mais il peut ensuite et rester caché le temps
+    d'une scène, ou la traverser de part en part.</p>
+  type: peuple
+_id: Jr680I5dsiRm7VOS
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756754
+  modifiedTime: 1778432756754
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!Jr680I5dsiRm7VOS'

@@ -1,0 +1,33 @@
+name: Mains marquées
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: e6ondeXuwxaY9uQZ
+system:
+  utilise: false
+  citation: >-
+    Nous autres gnomes avons des mains marquées. Leurs callosités plaisent aux
+    danseurs.
+  description: >-
+    <p>Le temps d'une action, votre gnome utilise un danseur sauvage ou asservi
+    qui ne lui appartient pas pour produire un effet de magie cryptogrammique
+    (jornisme, éclipsisme, obscurantisme) de son choix, comme s'il avait une
+    maîtrise magique de niveau 3.</p>
+  type: peuple
+_id: TtyGLkzEyZSkXjbe
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756746
+  modifiedTime: 1778432756746
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!TtyGLkzEyZSkXjbe'

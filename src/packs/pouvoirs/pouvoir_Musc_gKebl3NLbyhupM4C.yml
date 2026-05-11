@@ -1,0 +1,30 @@
+name: Musc
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: wLOSucQ9duYTUXye
+system:
+  utilise: false
+  citation: Tu doutes de moi ? Attends… Laisse-moi m'ébrouer…
+  description: >-
+    <p>Le temps d'une scène, votre centaure émet des phéromones augmentant de 1
+    le nombre de succès de toutes ses actions pour convaincre, séduire ou
+    dominer.</p>
+  type: peuple
+_id: gKebl3NLbyhupM4C
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756738
+  modifiedTime: 1778432756738
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!gKebl3NLbyhupM4C'

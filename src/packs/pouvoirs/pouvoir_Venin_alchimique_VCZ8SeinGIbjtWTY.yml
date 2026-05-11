@@ -1,0 +1,36 @@
+name: Venin alchimique
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: XtuCR6aNQ28k4Q9s
+system:
+  utilise: false
+  citation: >-
+    D'une caresse mentale, j'ordonne à un de mes serpents de distiller son
+    venin.
+  description: >-
+    <p>À l'acquisition de ce pouvoir, choisissez une harmonique. En une action,
+    votre méduse récolte un venin à consommer plus tard, ou tente de l'inoculer
+    par morsure (action de nature). Jusqu'à la fin de la scène, au choix : • Le
+    nombre de succès des actions en lien avec l'harmonique choisie et réalisées
+    par l'envenimé augmente ou diminue de 1. • Les difficultés opposées par
+    l'envenimé augmentent ou diminuent de 1. Par ailleurs, tous les venins
+    alchimiques peuvent servir d'encres de conjuration.</p>
+  type: peuple
+_id: VCZ8SeinGIbjtWTY
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756751
+  modifiedTime: 1778432756751
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!VCZ8SeinGIbjtWTY'

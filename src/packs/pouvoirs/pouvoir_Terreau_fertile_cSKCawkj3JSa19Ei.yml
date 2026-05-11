@@ -1,0 +1,34 @@
+name: Terreau fertile
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: e6ondeXuwxaY9uQZ
+system:
+  utilise: false
+  citation: >-
+    Mon corps est à l'image de mon lien : il est accueillant, s'adapte, et sert
+    tous mes besoins.
+  description: >-
+    <p>Lors d'un repos ou une retraite, au lieu de récupérer de la conscience,
+    votre gnome fait pousser sur sa peau un champignon, un plant, un cal corné
+    ou pierreux, avec une utilité remarquable à votre convenance (outil,
+    instrument, ou ingrédient). L'élément produit ne peut être utilisé qu'une
+    seule fois.</p>
+  type: peuple
+_id: cSKCawkj3JSa19Ei
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756747
+  modifiedTime: 1778432756747
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!cSKCawkj3JSa19Ei'

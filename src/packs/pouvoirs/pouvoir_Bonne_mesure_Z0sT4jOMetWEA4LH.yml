@@ -1,0 +1,31 @@
+name: Bonne mesure
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: ry3BBpDsteGGYwoG
+system:
+  utilise: false
+  citation: En mer, ils m'appelaient Sextant !
+  description: >-
+    <p>Le temps d'une scène, votre géant connaît l'heure exacte du jour ou de la
+    nuit, sait où il se trouve sur l'Harmonde, et peut suivre une direction
+    précise. Le nombre de succès de toutes ses actions d'étincelle augmente de
+    1.</p>
+  type: peuple
+_id: Z0sT4jOMetWEA4LH
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756744
+  modifiedTime: 1778432756744
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!Z0sT4jOMetWEA4LH'

@@ -1,0 +1,29 @@
+name: Lien supérieur
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: e6ondeXuwxaY9uQZ
+system:
+  utilise: false
+  citation: >-
+    Connais-tu le lien, le vrai lien, symbiose intime et sensible entre deux
+    âmes sœurs ?
+  description: <p>Lors du prochain repos, effacez entièrement une complication.</p>
+  type: peuple
+_id: vKvNZ3BZ6wZHXmh2
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756746
+  modifiedTime: 1778432756746
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!vKvNZ3BZ6wZHXmh2'

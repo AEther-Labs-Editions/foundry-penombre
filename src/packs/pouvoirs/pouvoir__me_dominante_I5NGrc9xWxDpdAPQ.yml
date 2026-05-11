@@ -1,0 +1,35 @@
+name: Âme dominante
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: OPUwY4Imf8gyfM4R
+system:
+  utilise: false
+  citation: Ma conscience s'ébroue et se répand, à tâtons puis de plus en plus vite.
+  description: >-
+    <p>Votre âme accouchée prend le contrôle, aussi longtemps qu'elle le
+    souhaite, d'un autre personnage consentant ou épuisé qui lui est proche. Par
+    la suite, elle le contrôle tant qu'il se trouve proche, et la coercition
+    peut être relâchée sans rompre le lien. Chaque lien avec un nouveau
+    personnage diminue de 1 la valeur de conscience maximale de votre âme
+    accouchée, ce qui peut la troubler, l'épuiser, voire la tuer. Rompre un lien
+    est une action automatique qui ne restaure pas la valeur de conscience
+    maximale.</p>
+  type: naissance
+_id: I5NGrc9xWxDpdAPQ
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756735
+  modifiedTime: 1778432756735
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!I5NGrc9xWxDpdAPQ'

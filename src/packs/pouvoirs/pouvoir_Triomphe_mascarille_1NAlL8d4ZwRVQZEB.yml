@@ -1,0 +1,30 @@
+name: Triomphe mascarille
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: U8csroqFYZMpkYQZ
+system:
+  utilise: false
+  citation: Profite de ta défaite pour assister à ma victoire !
+  description: >-
+    <p>L'action d'un autre personnage a pour conséquence un échec : faites
+    immédiatement agir votre mascarille. Cette action supplémentaire est
+    gratuite.</p>
+  type: ton
+_id: 1NAlL8d4ZwRVQZEB
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432758733
+  modifiedTime: 1778432758733
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!1NAlL8d4ZwRVQZEB'

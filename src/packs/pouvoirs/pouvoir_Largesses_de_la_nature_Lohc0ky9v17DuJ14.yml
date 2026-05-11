@@ -1,0 +1,29 @@
+name: Largesses de la nature
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: QXjzUVV4Xa5IENzw
+system:
+  utilise: false
+  citation: Fais goûter les fruits à tous ceux que tu mets au rang de tes amis.
+  description: >-
+    <p>Le temps d'une scène, l'environnement abonde de ressources naturelles :
+    eau, nourriture, récoltes, bois, pierre, minerais…</p>
+  type: cle
+_id: Lohc0ky9v17DuJ14
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432753267
+  modifiedTime: 1778432753267
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!Lohc0ky9v17DuJ14'

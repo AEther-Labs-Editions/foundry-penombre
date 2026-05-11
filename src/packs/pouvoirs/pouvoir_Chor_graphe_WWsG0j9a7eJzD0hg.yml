@@ -1,0 +1,35 @@
+name: Chorégraphe
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: EqdS97sNIzZvXoi8
+system:
+  utilise: false
+  citation: >-
+    Lorsque vous serez capable de comprendre les mécanismes des grands rituels,
+    vous vous apercevrez qu'un seul danseur est incapable d'exécuter les pas
+    nécessaires. La chorégraphie est un art réservé.
+  description: >-
+    <p>Le temps d'une scène, le nombre de succès de toutes les actions de magie
+    cryptogrammique (jornisme, éclipsisme, obscurantisme) réalisées par votre
+    personnage et utilisant plusieurs danseurs augmente de 3. Puis, jusqu'au
+    prochain repos, le nombre de succès de toutes les actions de magie
+    cryptogrammique diminue de 2.</p>
+  type: cle
+_id: WWsG0j9a7eJzD0hg
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432753264
+  modifiedTime: 1778432753264
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!WWsG0j9a7eJzD0hg'

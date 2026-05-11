@@ -1,0 +1,20 @@
+name: Clé
+type: Item
+sorting: a
+_id: ZA7HBYjkvC2GHGIj
+description: ''
+folder: null
+sort: 100000
+color: null
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432753239
+  modifiedTime: 1778432753280
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!folders!ZA7HBYjkvC2GHGIj'

@@ -1,0 +1,32 @@
+name: Essence du gardien
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: 1Su98EWNIBodXOJa
+system:
+  utilise: false
+  citation: >-
+    Je ne suis qu'une présence discrète, mais un affrontement en règle
+    tournerait au massacre.
+  description: >-
+    <p>Le temps d'une scène, le nombre de succès de toutes les actions réalisées
+    par votre minotaure pour protéger ou aider une cible que vous avez désignée
+    augmente de 1.</p>
+  type: peuple
+_id: Cgu1arwQwpDNIaXF
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756753
+  modifiedTime: 1778432756753
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!Cgu1arwQwpDNIaXF'

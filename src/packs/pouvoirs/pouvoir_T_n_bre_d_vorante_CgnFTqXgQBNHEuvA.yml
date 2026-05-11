@@ -1,0 +1,30 @@
+name: Ténèbre dévorante
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: IKvHc0sPX3a9dGl0
+system:
+  utilise: false
+  citation: J'abandonne mon organisme à la ténèbre, et sens mon âme noircir.
+  description: >-
+    <p>Le temps d'une scène, le nombre de succès de toutes les actions de nuit
+    réalisées par votre opalin augmente de 2. Puis, jusqu'au prochain repos, il
+    diminue de 1.</p>
+  type: peuple
+_id: CgnFTqXgQBNHEuvA
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756759
+  modifiedTime: 1778432756759
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!CgnFTqXgQBNHEuvA'

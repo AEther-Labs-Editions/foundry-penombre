@@ -1,0 +1,29 @@
+name: Répétition
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: zUTfa6HiBzghrkme
+system:
+  utilise: false
+  citation: >-
+    Aucune danse ne ressemble à une autre, tu nuanceras en permanence tes
+    effets.
+  description: <p>Réutilisez l'effet d'un autre pouvoir de votre danseur.</p>
+  type: peuple
+_id: XFWZgIEqsGHsLzTl
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756740
+  modifiedTime: 1778432756740
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!XFWZgIEqsGHsLzTl'

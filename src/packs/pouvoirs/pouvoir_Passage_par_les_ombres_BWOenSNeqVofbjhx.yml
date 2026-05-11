@@ -1,0 +1,30 @@
+name: Passage par les ombres
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: 4awRN3wQw32at2T6
+system:
+  utilise: false
+  citation: Un démon ne se retourne pas, il disparaît dans la nuit.
+  description: >-
+    <p>En une action, votre personnage passe à travers une ombre proche et
+    ressort par une autre ombre lointaine, ou projette son bras au travers de ce
+    passage pour agir sur une cible proche de l'ombre lointaine.</p>
+  type: cle
+_id: BWOenSNeqVofbjhx
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432753268
+  modifiedTime: 1778432753268
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!BWOenSNeqVofbjhx'

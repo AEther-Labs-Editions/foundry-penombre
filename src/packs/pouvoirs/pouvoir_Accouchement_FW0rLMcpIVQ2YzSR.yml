@@ -1,0 +1,35 @@
+name: Accouchement
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: ggaF9Zso1nJ1zrMZ
+system:
+  utilise: false
+  citation: >-
+    Sentez cet esprit qui balbutie, cette vie qui naît, cette petite étincelle
+    parmi nous.
+  description: >-
+    <p>L'objet ciblé devient une âme accouchée sous le contrôle du Psycholune.
+    Ce fait permanent diminue de 1 la valeur de conscience maximale de votre fée
+    noire, ce qui peut la troubler ou l'épuiser. Si cette valeur atteint ainsi
+    0, au lieu de mourir, votre fée noire sombre dans un insondable sommeil dont
+    elle se réveillera un cycle lunaire plus tard, totalement nouvelle
+    (recréez-la).</p>
+  type: naissance
+_id: FW0rLMcpIVQ2YzSR
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756742
+  modifiedTime: 1778432756742
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!FW0rLMcpIVQ2YzSR'

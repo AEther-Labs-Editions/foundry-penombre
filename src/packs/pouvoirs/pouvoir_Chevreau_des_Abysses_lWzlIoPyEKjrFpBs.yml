@@ -1,0 +1,31 @@
+name: Chevreau des Abysses
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: o4re02c0eWTf4mSp
+system:
+  utilise: false
+  citation: >-
+    Mes deux cuisses animales au poil long s'achèvent sur des sabots noircis et
+    taillés en pointe.
+  description: >-
+    <p>Une action de votre satyre pour cabrioler, escalader, ou parcourir une
+    longue distance devient automatique.</p>
+  type: peuple
+_id: lWzlIoPyEKjrFpBs
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756759
+  modifiedTime: 1778432756759
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!lWzlIoPyEKjrFpBs'

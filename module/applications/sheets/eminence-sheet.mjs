@@ -49,6 +49,12 @@ export default class EminenceSheet extends PenombreBaseActorSheet {
     context.isStyleJeuAvance = styleJeu === "avance"
 
     context.pouvoirs = this.document.itemTypes.pouvoir
+    const enrichHTML = foundry.applications.ux.TextEditor.implementation.enrichHTML
+    for (const pouvoir of context.pouvoirs) {
+      const citation = pouvoir.system.citation ? `<p class="pouvoir-tooltip-citation">${pouvoir.system.citation}</p>` : ""
+      const description = pouvoir.system.description ?? ""
+      pouvoir.enrichedTooltip = await enrichHTML(`${citation}${description}`)
+    }
     context.atouts = this.document.itemTypes.atout
     context.maitrises = this.document.itemTypes.maitrise
 

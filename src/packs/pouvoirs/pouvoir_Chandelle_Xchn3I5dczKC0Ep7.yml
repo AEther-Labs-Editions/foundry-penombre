@@ -1,0 +1,32 @@
+name: Chandelle
+type: pouvoir
+img: systems/penombre/assets/icons/pouvoir.webp
+folder: ry3BBpDsteGGYwoG
+system:
+  utilise: false
+  citation: >-
+    La tiédeur de ma peau peut t'éviter de mourir de froid. Elle peut bien
+    d'autres choses, aussi.
+  description: >-
+    <p>Le temps d'une scène, votre géant résiste automatiquement au froid et,
+    dans une situation de froid mordant, peut créer les conditions d'un repos
+    pour lui et tous ceux qui se blottissent contre lui.</p>
+  type: peuple
+_id: Xchn3I5dczKC0Ep7
+effects: []
+sort: 0
+ownership:
+  default: 0
+  XXUC1o9FmUc1Tlv1: 3
+flags: {}
+_stats:
+  coreVersion: '14.361'
+  systemId: penombre
+  systemVersion: '#{VERSION}#'
+  createdTime: 1778432756744
+  modifiedTime: 1778432756744
+  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!items!Xchn3I5dczKC0Ep7'
