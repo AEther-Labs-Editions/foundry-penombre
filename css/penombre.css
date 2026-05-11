@@ -762,6 +762,9 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs td.item-controls {
   width: 70px;
   font-size: 17px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs th.item-controls .plusitem,
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs td.item-controls .plusitem {
@@ -851,6 +854,9 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
 .penombre.eminence .eminence-content .eminence-atouts .content .atouts td.item-controls {
   width: 70px;
   font-size: 17px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
 }
 .penombre.eminence .eminence-content .eminence-atouts .content .atouts th.item-controls .plusitem,
 .penombre.eminence .eminence-content .eminence-atouts .content .atouts td.item-controls .plusitem {
@@ -934,6 +940,9 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
 .penombre.eminence .eminence-content .eminence-maitrises .content .maitrises td.item-controls {
   width: 70px;
   font-size: 17px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
 }
 .penombre.eminence .eminence-content .eminence-maitrises .content .maitrises th.item-controls .plusitem,
 .penombre.eminence .eminence-content .eminence-maitrises .content .maitrises td.item-controls .plusitem {
