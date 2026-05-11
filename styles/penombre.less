@@ -106,9 +106,9 @@
 
 // Mixin pour les sections d'items (pouvoirs, atouts, maîtrises)
 .item-section-base(@section-name) {
-  min-height: 205px;
   color: @color-secondary;
   text-align: center;
+  padding-bottom: 2px;
 
   .titre-section-@{section-name} {
     font-size: @font-size-2xlarge;
@@ -133,12 +133,9 @@
 .item-table-base() {
   margin-left: 100px;
   width: calc(100% - 103px);
-  min-height: 145px;
   border: 1px solid @color-accent;
   border-radius: @border-radius-small;
   padding: 2px;
-
-  &.avance { min-height: 290px; }
 
   td {
     font-family: @font-chocolate;
@@ -161,7 +158,7 @@
   float: left;
   text-align: center;
   width: 100px;
-  height: 200px;
+  height: 110px;
 
   .img-potentiel {
     width: 100px;

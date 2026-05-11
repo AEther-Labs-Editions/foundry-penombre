@@ -13,7 +13,7 @@ export default class PenombreBaseActorSheet extends HandlebarsApplicationMixin(s
     classes: ["penombre"],
     position: {
       width: 1152,
-      height: 780,
+      height: "auto",
     },
     form: {
       submitOnChange: true,

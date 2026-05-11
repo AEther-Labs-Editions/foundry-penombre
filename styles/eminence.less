@@ -132,7 +132,7 @@ body {
     clear: both;
 
     table {
-        margin-top: 0;
+        margin: 0;
     }
 
     .eminence-timbre {
@@ -311,36 +311,48 @@ body {
     // Structure principale
     .eminence-main {
       width: 100%;
-      display: table;
-      clear: both;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 0;
     }
 
     // Colonnes
     .col-1 {
+      flex: 0 0 450px;
       width: 450px;
-      float: left;
-      display: table;
-      clear: both;
     }
 
     .col-2 {
+      flex: 0 0 23px;
       width: 23px;
-      float: left;
-      height: 500px;
       padding: 0 3px;
+      display: flex;
+      flex-direction: column;
 
       .grande-frise-verticale-1,
       .grande-frise-verticale-2,
       .grande-frise-verticale-3,
       .grande-frise-verticale-4,
       .grande-frise-verticale-5 {
-        flex-direction: column;
+        flex: 1;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: fill;
+        }
       }
     }
 
     .col-3 {
-      margin-left: 473px;
+      flex: 1 1 auto;
       min-width: 635px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+
     }
 
     .col-1-1 {
@@ -371,9 +383,13 @@ body {
     .eminence-pouvoirs,
     .eminence-atouts,
     .eminence-maitrises,
-    .eminence-timbre,
     .eminence-recapitulatif {
       .section-style(635px);
+    }
+
+    .eminence-timbre {
+      .section-style(635px);
+      border: none;
     }
 
     // Police des textes verticaux
@@ -440,7 +456,6 @@ body {
     }
 
     .eminence-conscience-locked {
-      min-height: 725px;
 
       .col-3-1 {
         .col-1-3 {
@@ -468,11 +483,11 @@ body {
     }
 
     .eminence-conscience-unlocked {
-      min-height: 685px;
     }
 
     // Section conscience
     .eminence-conscience {
+      display: flow-root;
       color: @color-accent;
 
       // Jetons
@@ -745,7 +760,7 @@ body {
     }
 
     .eminence-recapitulatif {
-      min-height: 180px;
+      margin-top: 10px;
       width: 633px;
       color: @color-secondary;
       text-align: center;
