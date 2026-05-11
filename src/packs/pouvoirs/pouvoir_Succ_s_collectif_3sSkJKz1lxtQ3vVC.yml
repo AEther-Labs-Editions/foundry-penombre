@@ -11,7 +11,7 @@ system:
   type: naissance
 _id: 3sSkJKz1lxtQ3vVC
 effects: []
-sort: 0
+sort: 100000
 ownership:
   default: 0
   XXUC1o9FmUc1Tlv1: 3
@@ -21,8 +21,8 @@ _stats:
   systemId: penombre
   systemVersion: '#{VERSION}#'
   createdTime: 1778432756749
-  modifiedTime: 1778432756749
-  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  modifiedTime: 1778519032330
+  lastModifiedBy: EnR7ijfNdK9Nevm3
   compendiumSource: null
   duplicateSource: null
   exportSource: null

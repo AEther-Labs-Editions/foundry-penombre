@@ -14,7 +14,7 @@ system:
   type: peuple
 _id: Xchn3I5dczKC0Ep7
 effects: []
-sort: 0
+sort: 75000
 ownership:
   default: 0
   XXUC1o9FmUc1Tlv1: 3
@@ -24,8 +24,8 @@ _stats:
   systemId: penombre
   systemVersion: '#{VERSION}#'
   createdTime: 1778432756744
-  modifiedTime: 1778432756744
-  lastModifiedBy: XXUC1o9FmUc1Tlv1
+  modifiedTime: 1778519002002
+  lastModifiedBy: EnR7ijfNdK9Nevm3
   compendiumSource: null
   duplicateSource: null
   exportSource: null
