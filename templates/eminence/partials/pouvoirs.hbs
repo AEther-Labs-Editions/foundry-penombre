@@ -1,21 +1,9 @@
 {{!log "EminenceSheet - Partials - Pouvoirs" this }}
-<div class="eminence-pouvoirs{{#if isStyleJeuAvance}}-2{{/if}}">
+<div class="eminence-pouvoirs{{#if isStyleJeuAvance}} avance{{/if}}">
     <span class="titre-section-pouvoirs">{{localize "PENOMBRE.ui.pouvoirs"}}</span>
     <div class="content">
-        <div class="potentiel">
-            <div class="div-potentiel">
-                <span class="absolue">{{localize "PENOMBRE.ui.potentiel"}}</span>
-                {{#if unlocked}}
-                <select name="system.potentiel.pouvoirs" class="val-potentiel-saisie absolue">
-                    {{selectOptions potentielChoices selected=systemSource.potentiel.pouvoirs localize=true}}
-                </select>
-                {{else}}
-                <div class="val-potentiel absolue">{{system.potentiel.pouvoirs}}</div>
-                {{/if}}
-                <img class="img-potentiel absolue" src="systems/penombre/assets/ui/potentiel_creux.webp" alt="" />
-            </div>
-        </div>
-        <div class="pouvoirs{{#if isStyleJeuAvance}}-2{{/if}} absolue">
+        {{> "systems/penombre/templates/eminence/partials/_potentiel.hbs" potentielType="pouvoirs"}}
+        <div class="pouvoirs{{#if isStyleJeuAvance}} avance{{/if}} absolue">
             <table class="item-list centpourcent">
                 <tr class="centpourcent">
                     <th class="item-coche">

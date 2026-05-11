@@ -59,64 +59,50 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
   }
 
   /**
-   * Handle clicking on Document's elements.
-   * @param {Event} event The click event triggered by the user.
-   * @param {HTMLElement} target The HTML element that was clicked, containing dataset information.
-   * @returns {Promise<void>}
+   * @param {function(object): void} modifier
+   */
+  static async _updateReserve(modifier) {
+    const reserveCollegiale = foundry.utils.duplicate(game.settings.get(SYSTEM.ID, "reserveCollegiale"))
+    modifier(reserveCollegiale)
+    await game.settings.set(SYSTEM.ID, "reserveCollegiale", reserveCollegiale)
+  }
+
+  /**
+   * @param {Event} event
+   * @param {HTMLElement} target
    **/
   static async #onClicJeton(event, target) {
     event.preventDefault()
-    const dataset = target.dataset
-    const index = dataset.index // Commence à 1
+    const index = target.dataset.index
 
-    // Le MJ peut modifier les settings
     if (game.user.isGM) {
-      const reserveCollegiale = foundry.utils.duplicate(game.settings.get(SYSTEM.ID, "reserveCollegiale"))
-      reserveCollegiale.jetons[index].valeur = !reserveCollegiale.jetons[index].valeur
-      game.settings.set(SYSTEM.ID, "reserveCollegiale", reserveCollegiale)
-    }
-    // C'est un joueur : utilisation de la requête
-    else {
+      await PenombreReserveCollegiale._updateReserve((r) => {
+        r.jetons[index].valeur = !r.jetons[index].valeur
+      })
+    } else {
       await game.users.activeGM.query("penombre.updateReserveCollegiale", { index })
     }
 
     this.render({ force: true })
   }
 
-  /**
-   * Updates the "reserveCollegiale" setting by setting a specified number of jetons' "valeur" property from true to false.
-   *
-   * @async
-   * @param {Object} params  The parameters object.
-   * @param {number} params.index The index of the jeton to update.
-   * @returns {Promise<void>} Resolves when the reserveCollegiale setting has been updated.
-   */
+  /** @param {Object} params */
   static _handleQueryUpdateReserveCollegiale = async ({ index }) => {
-    const reserveCollegiale = foundry.utils.duplicate(game.settings.get(SYSTEM.ID, "reserveCollegiale"))
-    reserveCollegiale.jetons[index].valeur = !reserveCollegiale.jetons[index].valeur
-    game.settings.set(SYSTEM.ID, "reserveCollegiale", reserveCollegiale)
+    await PenombreReserveCollegiale._updateReserve((r) => {
+      r.jetons[index].valeur = !r.jetons[index].valeur
+    })
   }
 
-  /**
-   * Updates the "reserveCollegiale" setting by setting a specified number of jetons' "valeur" property from true to false.
-   *
-   * @async
-   * @param {Object} params  The parameters object.
-   * @param {number} params.nbJetons The number of jetons to update from true to false.
-   * @returns {Promise<void>} Resolves when the reserveCollegiale setting has been updated.
-   */
+  /** @param {Object} params */
   static _handleQueryUpdateReserveCollegialeFromRoll = async ({ nbJetons }) => {
-    const reserveCollegiale = foundry.utils.duplicate(game.settings.get(SYSTEM.ID, "reserveCollegiale"))
-
-    // Parcours de l'objet pour mettre à jour nbJetons
-    let nbJetonsModifies = 0
-    for (const [index, jeton] of Object.entries(reserveCollegiale.jetons)) {
-      if (jeton.valeur === true && nbJetonsModifies < nbJetons) {
-        reserveCollegiale.jetons[index].valeur = false
-        nbJetonsModifies++
+    await PenombreReserveCollegiale._updateReserve((r) => {
+      let nbJetonsModifies = 0
+      for (const [index, jeton] of Object.entries(r.jetons)) {
+        if (jeton.valeur === true && nbJetonsModifies < nbJetons) {
+          r.jetons[index].valeur = false
+          nbJetonsModifies++
+        }
       }
-    }
-
-    game.settings.set(SYSTEM.ID, "reserveCollegiale", reserveCollegiale)
+    })
   }
 }

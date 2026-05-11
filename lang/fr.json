@@ -412,6 +412,7 @@
       "peste": "Peste",
       "edit": "Modifier",
       "delete": "Supprimer",
+      "deleteConfirm": "Supprimer {name} ?",
       "create": "Ajouter {item}",
       "type": "Type",
       "atoutNew": "Nouvel atout",
