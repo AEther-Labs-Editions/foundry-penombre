@@ -162,14 +162,13 @@ items:
       utilise: false
       type: naissance
       description: >-
-        <h1>Spectacle vivant</h1><p><em>Être satyre c'est offrir à l'Harmonde un
-        spectacle quotidien.</em></p><p>Le temps d'une action spectaculaire,
-        utilisez gratuitement le D20 merveilleux en plus du dé
-        harmonique.</p><p>De plus, chaque fois qu’il réalise une merveille (p.
-        31 du kit), son joueur peut lui choisir un nouveau pouvoir dans la liste
-        suivante, ou augmenter de 1 sa valeur de
+        <p>Le temps d'une action spectaculaire, utilisez gratuitement le D20
+        merveilleux en plus du dé harmonique.</p><p>De plus, chaque fois qu’il
+        réalise une merveille (p. 31 du kit), son joueur peut lui choisir un
+        nouveau pouvoir dans la liste suivante, ou augmenter de 1 sa valeur de
         conscience.</p><ul><li><p>Plaisir
         grisant</p></li><li><p>Triomphe</p></li></ul>
+      citation: Être satyre c'est offrir à l'Harmonde un spectacle quotidien.
     effects: []
     folder: null
     sort: 0
@@ -181,9 +180,9 @@ items:
       coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
-      createdTime: null
-      modifiedTime: null
+      lastModifiedBy: EnR7ijfNdK9Nevm3
+      createdTime: 1778519698362
+      modifiedTime: 1778519737428
     ownership:
       default: 0
     _key: '!actors.items!4GMzCvvA8UBx3rLn.iiPkEFrzVLyHDK3e'
@@ -448,12 +447,12 @@ items:
     system:
       utilise: false
       description: >-
-        <h1>Plaisir grisant</h1><p><em>Tu ignores jusqu’où tout cela va
-        fatalement nous mener. Moi, je sais.</em></p><p>À l’acquisition de ce
-        pouvoir, choisissez une activité de loisir (musique, poésie, nourriture,
-        sexe…)</p><p>Après qu’Ackbar a pratiqué ce loisir, le dé harmonique
-        d’une de ses actions affiche sa valeur maximale.</p>
+        <p>À l’acquisition de ce pouvoir, choisissez une activité de loisir
+        (musique, poésie, nourriture, sexe…)</p><p>Après qu’Ackbar a pratiqué ce
+        loisir, le dé harmonique d’une de ses actions affiche sa valeur
+        maximale.</p>
       type: naissance
+      citation: Tu ignores jusqu’où tout cela va fatalement nous mener. Moi, je sais.
     effects: []
     folder: lLVYkr2eG13xLU7R
     sort: 200000
@@ -465,9 +464,9 @@ items:
       coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
-      createdTime: null
-      modifiedTime: null
+      lastModifiedBy: EnR7ijfNdK9Nevm3
+      createdTime: 1778519753972
+      modifiedTime: 1778519753972
     ownership:
       default: 0
     _key: '!actors.items!4GMzCvvA8UBx3rLn.Mg0Rj0WAV8o2MDFt'
@@ -478,11 +477,10 @@ items:
     system:
       utilise: false
       description: >-
-        <h1>Triomphe</h1><p><em>Profite de ta défaite pour assister à ma
-        victoire !</em></p><p>L’action d’un autre personnage a pour conséquence
-        un échec : faites immédiatement agir Ackbar. Cette action supplémentaire
-        est gratuite.</p>
+        <p>L’action d’un autre personnage a pour conséquence un échec : faites
+        immédiatement agir Ackbar. Cette action supplémentaire est gratuite.</p>
       type: naissance
+      citation: Profite de ta défaite pour assister à ma victoire !
     effects: []
     folder: lLVYkr2eG13xLU7R
     sort: 150000
@@ -494,9 +492,9 @@ items:
       coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
-      createdTime: null
-      modifiedTime: null
+      lastModifiedBy: EnR7ijfNdK9Nevm3
+      createdTime: 1778519775461
+      modifiedTime: 1778519775461
     ownership:
       default: 0
     _key: '!actors.items!4GMzCvvA8UBx3rLn.RJFWJAbPmjoDJcaO'

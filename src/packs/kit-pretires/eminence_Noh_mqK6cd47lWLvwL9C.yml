@@ -160,15 +160,15 @@ items:
     system:
       utilise: false
       description: >-
-        <h1>Fantasme d’onyx</h1><p><em>Comme des tentacules
-        prudents…</em></p><p>Une action impossible devient possible grâce à
-        l’apparition d’un appendice d’onyx éphémère (ailes, troisième œil, bras
-        supplémentaire, etc.).</p><p>De plus, chaque fois qu’il réalise une
-        merveille (p. 31 du kit), son joueur peut lui choisir un nouveau pouvoir
-        dans la liste suivante, ou augmenter de 1 sa valeur de
+        <p>Une action impossible devient possible grâce à l’apparition d’un
+        appendice d’onyx éphémère (ailes, troisième œil, bras supplémentaire,
+        etc.).</p><p>De plus, chaque fois qu’il réalise une merveille (p. 31 du
+        kit), son joueur peut lui choisir un nouveau pouvoir dans la liste
+        suivante, ou augmenter de 1 sa valeur de
         conscience.</p><ul><li><p>Homochromie</p></li><li><p>Suppôt des
         abysses</p></li></ul>
       type: naissance
+      citation: Comme des tentacules prudents…
     effects: []
     folder: null
     sort: 0
@@ -179,10 +179,10 @@ items:
       exportSource: null
       coreVersion: '14.361'
       systemId: penombre
-      systemVersion: '0'
-      lastModifiedBy: null
-      createdTime: null
-      modifiedTime: null
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: EnR7ijfNdK9Nevm3
+      createdTime: 1778520227159
+      modifiedTime: 1778520227159
     ownership:
       default: 0
     _key: '!actors.items!mqK6cd47lWLvwL9C.EQwMEPIumzov7VdK'
@@ -192,11 +192,9 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
-      description: >-
-        <h1>Homochromie</h1><p><em>Le mimétisme. L’art de disparaître et de se
-        confondre avec le décor.</em></p><p>Une action de camouflage de Noh
-        devient automatique.</p>
+      description: <p>Une action de camouflage de Noh devient automatique.</p>
       type: naissance
+      citation: Le mimétisme. L’art de disparaître et de se confondre avec le décor.
     effects: []
     folder: null
     sort: 0
@@ -207,10 +205,10 @@ items:
       exportSource: null
       coreVersion: '14.361'
       systemId: penombre
-      systemVersion: '0'
-      lastModifiedBy: null
-      createdTime: null
-      modifiedTime: null
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: EnR7ijfNdK9Nevm3
+      createdTime: 1778520215365
+      modifiedTime: 1778520215365
     ownership:
       default: 0
     _key: '!actors.items!mqK6cd47lWLvwL9C.EFcdJj2l7ROyXF2v'
@@ -221,12 +219,10 @@ items:
     system:
       utilise: false
       description: >-
-        <h1>Suppôt des abysses</h1><p><em>L’énergie ténébreuse sédimentée de ma
-        vieille carcasse peut transformer n’importe quel liquide sans âme en
-        encre contrefaite.</em></p><p>Le temps d’une scène, Noh accepte une
-        complication « offrande de sang (3) » et ignore tous les prérequis
-        d’onyxium.</p>
+        <p>Le temps d’une scène, Noh accepte une complication « offrande de sang
+        (3) » et ignore tous les prérequis d’onyxium.</p>
       type: naissance
+      citation: Suppôt des abysses
     effects: []
     folder: null
     sort: 0
@@ -237,10 +233,10 @@ items:
       exportSource: null
       coreVersion: '14.361'
       systemId: penombre
-      systemVersion: '0'
-      lastModifiedBy: null
-      createdTime: null
-      modifiedTime: null
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: EnR7ijfNdK9Nevm3
+      createdTime: 1778520206772
+      modifiedTime: 1778520206772
     ownership:
       default: 0
     _key: '!actors.items!mqK6cd47lWLvwL9C.gle9HJrE6j5L5eMA'

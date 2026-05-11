@@ -159,16 +159,16 @@ items:
     system:
       utilise: false
       description: >-
-        <p><em>Rien n’entrave ma route ni ne perturbe mon pas. RIEN
-        !</em></p><p>Une action impliquant un déplacement impossible (sur l’eau,
-        par exemple) devient possible.</p><p>Une action pour trouver de l’eau,
-        de la nourriture et un abri en milieu naturel devient
-        automatique.</p><p>De plus, chaque fois qu’elle réalise une merveille
-        (p. 31 du kit), son joueur peut lui choisir un nouveau pouvoir dans la
-        liste suivante, ou augmenter de 1 sa valeur de
+        <p>Une action impliquant un déplacement impossible (sur l’eau, par
+        exemple) devient possible.</p><p>Une action pour trouver de l’eau, de la
+        nourriture et un abri en milieu naturel devient automatique.</p><p>De
+        plus, chaque fois qu’elle réalise une merveille (p. 31 du kit), son
+        joueur peut lui choisir un nouveau pouvoir dans la liste suivante, ou
+        augmenter de 1 sa valeur de
         conscience.</p><ul><li><p>Musc</p></li><li><p>Empathie
         animale</p></li></ul>
       type: naissance
+      citation: Rien n’entrave ma route ni ne perturbe mon pas. RIEN !
     effects: []
     folder: null
     sort: 0
@@ -183,9 +183,9 @@ items:
       coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
-      createdTime: null
-      modifiedTime: null
+      lastModifiedBy: EnR7ijfNdK9Nevm3
+      createdTime: 1778520308850
+      modifiedTime: 1778520312453
     _key: '!actors.items!PeRMkMAyLTtGMKvz.GqDFbFgAqRijZnVC'
   - type: atout
     name: Armure de cuir repoussé
@@ -363,10 +363,11 @@ items:
     system:
       utilise: false
       description: >-
-        <p><em>Tu doutes de moi ? Attends… Laisse-moi m’ébrouer…</em></p><p>Le
-        temps d’une scène, Geysir émet des phéromones augmentant de 1 le nombre
-        de succès de toutes ses actions pour convaincre, séduire ou dominer.</p>
+        <p>Le temps d’une scène, Geysir émet des phéromones augmentant de 1 le
+        nombre de succès de toutes ses actions pour convaincre, séduire ou
+        dominer.</p>
       type: naissance
+      citation: Tu doutes de moi ? Attends… Laisse-moi m’ébrouer…
     effects: []
     folder: null
     sort: 0
@@ -381,9 +382,9 @@ items:
       coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
-      createdTime: null
-      modifiedTime: null
+      lastModifiedBy: EnR7ijfNdK9Nevm3
+      createdTime: 1778520298554
+      modifiedTime: 1778520298554
     _key: '!actors.items!PeRMkMAyLTtGMKvz.Kq8qvH9hfKzH4PPw'
   - type: pouvoir
     name: Empathie animale
@@ -392,12 +393,14 @@ items:
     system:
       utilise: false
       description: >-
-        <p><em>Les animaux alentour ne sont ni une menace, ni insignifiants :
-        ils sont la harde.</em></p><p>Le temps d’une scène, un animal sous le
-        contrôle du psycholune fait confiance à Geysir. Il n’est pas agressif,
-        une conversation sommaire peut avoir lieu, et il peut recevoir un ordre
-        simple à exécuter sans délai. Cela ne peut pas le mettre en danger.</p>
+        <p>Le temps d’une scène, un animal sous le contrôle du psycholune fait
+        confiance à Geysir. Il n’est pas agressif, une conversation sommaire
+        peut avoir lieu, et il peut recevoir un ordre simple à exécuter sans
+        délai. Cela ne peut pas le mettre en danger.</p>
       type: naissance
+      citation: >-
+        Les animaux alentour ne sont ni une menace, ni insignifiants : ils sont
+        la harde.
     effects: []
     folder: null
     sort: 0
@@ -412,9 +415,9 @@ items:
       coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
-      createdTime: null
-      modifiedTime: null
+      lastModifiedBy: EnR7ijfNdK9Nevm3
+      createdTime: 1778520286809
+      modifiedTime: 1778520286809
     _key: '!actors.items!PeRMkMAyLTtGMKvz.bbgRALa7rxxR6Ltm'
 effects: []
 folder: null

@@ -159,18 +159,19 @@ items:
     system:
       utilise: false
       description: >-
-        <h1>Gigantisme</h1><p><em>On n’est jamais si grand que quand on se sent
-        à nouveau libre. Ou l’inverse.</em></p><p>Aussi longtemps que Nuane le
-        souhaite, sa taille redevient celle d’un géant (6 à 8 mètres). Les
-        objets sont inutilisables sous cette forme.</p><p>Jusqu’au premier
-        coucher de soleil, le nombre de succès de toutes ses actions d’étincelle
-        et de nature augmente de 2, mais celui de toutes ses actions d’esprit,
-        d’âme et de nuit diminue de 1.</p><p>De plus, chaque fois qu’elle
-        réalise une merveille (p. 31 du kit), son joueur peut lui choisir un
-        nouveau pouvoir dans la liste suivante, ou augmenter de 1 sa valeur de
-        conscience.</p><ul><li><p>Iris de focalisation</p></li><li><p>Colosse
-        tonitruant</p></li></ul>
+        <p>Aussi longtemps que Nuane le souhaite, sa taille redevient celle d’un
+        géant (6 à 8 mètres). Les objets sont inutilisables sous cette
+        forme.</p><p>Jusqu’au premier coucher de soleil, le nombre de succès de
+        toutes ses actions d’étincelle et de nature augmente de 2, mais celui de
+        toutes ses actions d’esprit, d’âme et de nuit diminue de 1.</p><p>De
+        plus, chaque fois qu’elle réalise une merveille (p. 31 du kit), son
+        joueur peut lui choisir un nouveau pouvoir dans la liste suivante, ou
+        augmenter de 1 sa valeur de conscience.</p><ul><li><p>Iris de
+        focalisation</p></li><li><p>Colosse tonitruant</p></li></ul>
       type: naissance
+      citation: >-
+        On n’est jamais si grand que quand on se sent à nouveau libre. Ou
+        l’inverse.
     effects: []
     folder: null
     sort: 0
@@ -185,9 +186,9 @@ items:
       coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
-      createdTime: null
-      modifiedTime: null
+      lastModifiedBy: EnR7ijfNdK9Nevm3
+      createdTime: 1778520178980
+      modifiedTime: 1778520178980
     _key: '!actors.items!BlDjSMcNzfX174GA.JH8QonoEyn5xS6wZ'
   - type: pouvoir
     name: Iris de focalisation
@@ -196,10 +197,10 @@ items:
     system:
       utilise: false
       description: >-
-        <h1>Iris de focalisation</h1><p><em>Mon sens de l’observation est
-        d’utilité publique !</em></p><p>Lors d’une action d’étincelle de Nuane,
-        votre dé harmonique affiche sa valeur maximale.</p>
+        <p>Lors d’une action d’étincelle de Nuane, votre dé harmonique affiche
+        sa valeur maximale.</p>
       type: naissance
+      citation: Mon sens de l’observation est d’utilité publique !
     effects: []
     folder: null
     sort: 0
@@ -214,9 +215,9 @@ items:
       coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
-      createdTime: null
-      modifiedTime: null
+      lastModifiedBy: EnR7ijfNdK9Nevm3
+      createdTime: 1778520163539
+      modifiedTime: 1778520163539
     _key: '!actors.items!BlDjSMcNzfX174GA.aGXCDKWCRRbzoPZI'
   - type: pouvoir
     name: Colosse tonitruant
@@ -225,11 +226,11 @@ items:
     system:
       utilise: false
       description: >-
-        <h1>Colosse tonitruant</h1><p><em>Mes rires dérident les murs des palais
-        !</em></p><p>Le temps d’une scène, toute action de Nuane pour attirer
-        l’attention par la voix devient automatique. De plus, le nombre de
-        succès de toutes ses actions d’étincelle augmente de 1.</p>
+        <p>Le temps d’une scène, toute action de Nuane pour attirer l’attention
+        par la voix devient automatique. De plus, le nombre de succès de toutes
+        ses actions d’étincelle augmente de 1.</p>
       type: naissance
+      citation: Mes rires dérident les murs des palais !
     effects: []
     folder: null
     sort: 0
@@ -244,9 +245,9 @@ items:
       coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
-      createdTime: null
-      modifiedTime: null
+      lastModifiedBy: EnR7ijfNdK9Nevm3
+      createdTime: 1778520155384
+      modifiedTime: 1778520155384
     _key: '!actors.items!BlDjSMcNzfX174GA.du0nG2KFiSjrepUu'
   - type: atout
     name: L'Harmonde est ma toile

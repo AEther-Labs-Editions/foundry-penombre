@@ -160,16 +160,15 @@ items:
     system:
       utilise: false
       description: >-
-        <h1>Passage par les ombres</h1><p><em>Un démon ne se retourne pas, il
-        disparaît dans la nuit.</em></p><p>En une action, Esmeralda passe à
-        travers une ombre proche et ressort par une ombre ciblée, ou projette
-        son bras au travers de ce passage pour agir sur une cible proche de
-        l’ombre ciblée.</p><p>De plus, chaque fois qu’elle réalise une merveille
-        (p. 31 du kit), son joueur peut lui choisir un nouveau pouvoir dans la
-        liste suivante, ou augmenter de 1 sa valeur de
-        conscience.</p><ul><li><p>Évanescence</p></li><li><p>Ombre
+        <p>En une action, Esmeralda passe à travers une ombre proche et ressort
+        par une ombre ciblée, ou projette son bras au travers de ce passage pour
+        agir sur une cible proche de l’ombre ciblée.</p><p>De plus, chaque fois
+        qu’elle réalise une merveille (p. 31 du kit), son joueur peut lui
+        choisir un nouveau pouvoir dans la liste suivante, ou augmenter de 1 sa
+        valeur de conscience.</p><ul><li><p>Évanescence</p></li><li><p>Ombre
         jumelle</p></li></ul>
       type: naissance
+      citation: Passage par les ombres
     effects: []
     folder: null
     sort: 0
@@ -180,10 +179,10 @@ items:
       exportSource: null
       coreVersion: '14.361'
       systemId: penombre
-      systemVersion: '0'
-      lastModifiedBy: null
-      createdTime: null
-      modifiedTime: null
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: EnR7ijfNdK9Nevm3
+      createdTime: 1778520351361
+      modifiedTime: 1778520351361
     ownership:
       default: 0
     _key: '!actors.items!TFv6M7pZu7hWYOuq.Qujs4YryzHMhoSSu'
@@ -194,10 +193,10 @@ items:
     system:
       utilise: false
       description: >-
-        <h1>Évanescence</h1><p><em>As-tu déjà essayé de porter une écharpe de
-        brume ?</em></p><p>Esmeralda esquive automatiquement une menace physique
-        portée contre elle (attaque, piège, chute de pierres…)</p>
+        <p>Esmeralda esquive automatiquement une menace physique portée contre
+        elle (attaque, piège, chute de pierres…)</p>
       type: naissance
+      citation: As-tu déjà essayé de porter une écharpe de brume ?
     effects: []
     folder: null
     sort: 0
@@ -208,10 +207,10 @@ items:
       exportSource: null
       coreVersion: '14.361'
       systemId: penombre
-      systemVersion: '0'
-      lastModifiedBy: null
-      createdTime: null
-      modifiedTime: null
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: EnR7ijfNdK9Nevm3
+      createdTime: 1778520340842
+      modifiedTime: 1778520340842
     ownership:
       default: 0
     _key: '!actors.items!TFv6M7pZu7hWYOuq.Ba2L0gHMxiMmopFl'
@@ -222,11 +221,11 @@ items:
     system:
       utilise: false
       description: >-
-        <h1>Ombre jumelle</h1><p><em>Alors c’est moi… sans être
-        moi.</em></p><p>Jusqu’à la fin du tour, faites agir l’ombre d’Esmeralda
-        comme si elle était un double de cette dernière. Ses actions, autonomes,
-        ne comptent pas comme celles d’Esmeralda.</p>
+        <p>Jusqu’à la fin du tour, faites agir l’ombre d’Esmeralda comme si elle
+        était un double de cette dernière. Ses actions, autonomes, ne comptent
+        pas comme celles d’Esmeralda.</p>
       type: naissance
+      citation: Alors c’est moi… sans être moi.
     effects: []
     folder: null
     sort: 0
@@ -237,10 +236,10 @@ items:
       exportSource: null
       coreVersion: '14.361'
       systemId: penombre
-      systemVersion: '0'
-      lastModifiedBy: null
-      createdTime: null
-      modifiedTime: null
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: EnR7ijfNdK9Nevm3
+      createdTime: 1778520331818
+      modifiedTime: 1778520331818
     ownership:
       default: 0
     _key: '!actors.items!TFv6M7pZu7hWYOuq.4WJ2j4OvYXDNywWI'

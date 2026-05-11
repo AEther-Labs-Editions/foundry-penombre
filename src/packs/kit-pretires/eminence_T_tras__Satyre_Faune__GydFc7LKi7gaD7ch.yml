@@ -421,14 +421,13 @@ items:
       utilise: false
       type: naissance
       description: >-
-        <h1>Spectacle vivant</h1><p><em>Être satyre c'est offrir à l'Harmonde un
-        spectacle quotidien.</em></p><p>Le temps d'une action spectaculaire,
-        utilisez gratuitement le D20 merveilleux en plus du dé
-        harmonique.</p><p>De plus, chaque fois qu’il ou elle réalise une
-        merveille (p. 31 du kit), son joueur peut lui choisir un nouveau pouvoir
-        dans la liste suivante, ou augmenter de 1 sa valeur de
-        conscience.</p><ul><li><p>Bouc émissaire</p></li><li><p>Chevreau des
-        abysses</p></li></ul>
+        <p>Le temps d'une action spectaculaire, utilisez gratuitement le D20
+        merveilleux en plus du dé harmonique.</p><p>De plus, chaque fois qu’il
+        ou elle réalise une merveille (p. 31 du kit), son joueur peut lui
+        choisir un nouveau pouvoir dans la liste suivante, ou augmenter de 1 sa
+        valeur de conscience.</p><ul><li><p>Bouc
+        émissaire</p></li><li><p>Chevreau des abysses</p></li></ul>
+      citation: Être satyre c'est offrir à l'Harmonde un spectacle quotidien.
     effects: []
     folder: IxCLMJlUPYUhtQ3N
     sort: 300000
@@ -444,9 +443,9 @@ items:
       coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
-      lastModifiedBy: xu8p7UMcYrInjBEg
-      modifiedTime: 1767012729744
-      createdTime: null
+      lastModifiedBy: EnR7ijfNdK9Nevm3
+      modifiedTime: 1778519943228
+      createdTime: 1778519943228
     _id: W6JqZUg9BRq4NW48
     _key: '!actors.items!GydFc7LKi7gaD7ch.W6JqZUg9BRq4NW48'
   - type: pouvoir
@@ -456,13 +455,14 @@ items:
     system:
       utilise: false
       description: >-
-        <p><em>Des intrigues de palais initiées par des satyres ont, jadis,
-        incité les autorités à prendre des mesures radicales pour décourager
-        ceux qui tenteraient, à l’avenir, de se présenter aux portes de la
-        cité.</em></p><p>Une action pour attirer l’attention, ou convaincre de
-        sa culpabilité devient automatique. La prochaine action des opposants et
-        adversaires ne peut cibler que Tétras.</p>
+        <p>Une action pour attirer l’attention, ou convaincre de sa culpabilité
+        devient automatique. La prochaine action des opposants et adversaires ne
+        peut cibler que Tétras.</p>
       type: naissance
+      citation: >-
+        Des intrigues de palais initiées par des satyres ont, jadis, incité les
+        autorités à prendre des mesures radicales pour décourager ceux qui
+        tenteraient, à l’avenir, de se présenter aux portes de la cité.
     effects: []
     folder: IxCLMJlUPYUhtQ3N
     sort: 100000
@@ -477,9 +477,9 @@ items:
       coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
-      createdTime: null
-      modifiedTime: null
+      lastModifiedBy: EnR7ijfNdK9Nevm3
+      createdTime: 1778519956479
+      modifiedTime: 1778519956479
     _key: '!actors.items!GydFc7LKi7gaD7ch.QNEctBMrinQ7QD3o'
   - type: pouvoir
     name: Chevreau des abysses
@@ -488,11 +488,12 @@ items:
     system:
       utilise: false
       description: >-
-        <p><em>Mes deux cuisses animales au poil long s’achèvent sur des sabots
-        noircis et taillés en pointe.</em></p><p>Une action de Tétras pour
-        cabrioler, escalader, ou parcourir une longue distance devient
-        automatique.</p>
+        <p>Une action de Tétras pour cabrioler, escalader, ou parcourir une
+        longue distance devient automatique.</p>
       type: naissance
+      citation: >-
+        Mes deux cuisses animales au poil long s’achèvent sur des sabots noircis
+        et taillés en pointe.
     effects: []
     folder: IxCLMJlUPYUhtQ3N
     sort: 200000
@@ -507,9 +508,9 @@ items:
       coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
-      createdTime: null
-      modifiedTime: null
+      lastModifiedBy: EnR7ijfNdK9Nevm3
+      createdTime: 1778519969169
+      modifiedTime: 1778519969169
     _key: '!actors.items!GydFc7LKi7gaD7ch.fNYa63J0BKAPD1YI'
 effects: []
 ownership:

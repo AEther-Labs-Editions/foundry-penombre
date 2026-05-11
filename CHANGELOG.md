@@ -1,3 +1,11 @@
+1.8.0
+- Objet pouvoir : ajout de l'attribut Citation
+- Ajout du compendium des pouvoirs : 127 pouvoirs au total (94 peuples classés dans l'ordre du livre + 5 gamme + 3 ton + 25 clés)
+- Prétirés : mise à jour des pouvoirs par rapport aux citations
+- Quelques correctifs css
+- Optimisations techniques diverses
+- Fiche Eminence en mode Edition : les icônes Editer/Supprimer s'affichent horizontalement et non plus verticalement
+
 1.7.2
 - Correction des maitrises magiques de Rio Rim et Tetras
 

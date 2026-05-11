@@ -159,15 +159,15 @@ items:
     system:
       utilise: false
       description: >-
-        <p><em>Alors c’est moi… sans être moi.</em></p><p>Jusqu’à la fin du
-        tour, faites agir l’ombre de Dentelle comme si elle était un double de
-        cette dernière. Ses actions, autonomes, ne comptent pas comme celles de
-        la fée noire.</p><p>De plus, chaque fois qu’elle réalise une merveille
-        (p. 31 du kit), son joueur peut lui choisir un nouveau pouvoir dans la
-        liste suivante, ou augmenter de 1 sa valeur de
+        <p>Jusqu’à la fin du tour, faites agir l’ombre de Dentelle comme si elle
+        était un double de cette dernière. Ses actions, autonomes, ne comptent
+        pas comme celles de la fée noire.</p><p>De plus, chaque fois qu’elle
+        réalise une merveille (p. 31 du kit), son joueur peut lui choisir un
+        nouveau pouvoir dans la liste suivante, ou augmenter de 1 sa valeur de
         conscience.</p><ul><li><p>Évanescence mélusine</p></li><li><p>Sagesse
         cassandre</p></li></ul>
       type: naissance
+      citation: Alors c’est moi… sans être moi.
     effects: []
     folder: null
     sort: 0
@@ -182,9 +182,9 @@ items:
       coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
-      createdTime: null
-      modifiedTime: null
+      lastModifiedBy: EnR7ijfNdK9Nevm3
+      createdTime: 1778519897718
+      modifiedTime: 1778519897718
     _key: '!actors.items!w1J5cEu9ZIWuT7sm.a7Y4VfabwltksgDa'
   - type: atout
     name: Drapé d’aile
@@ -372,10 +372,10 @@ items:
     system:
       utilise: false
       description: >-
-        <p><em>As-tu déjà essayé de porter une écharpe de brume
-        ?</em></p><p>Dentelle esquive automatiquement une menace physique portée
-        contre elle (attaque, piège, chute de pierres, etc.).</p>
+        <p>Dentelle esquive automatiquement une menace physique portée contre
+        elle (attaque, piège, chute de pierres, etc.).</p>
       type: naissance
+      citation: As-tu déjà essayé de porter une écharpe de brume ?
     effects: []
     folder: null
     sort: 0
@@ -390,9 +390,9 @@ items:
       coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
-      createdTime: null
-      modifiedTime: null
+      lastModifiedBy: EnR7ijfNdK9Nevm3
+      createdTime: 1778519889884
+      modifiedTime: 1778519889884
     _key: '!actors.items!w1J5cEu9ZIWuT7sm.Xw09D1mtnd9ghtj6'
   - type: pouvoir
     name: Sagesse cassandre
@@ -401,9 +401,10 @@ items:
     system:
       utilise: false
       description: >-
-        <p><em>Du crime toujours le crime ouvre la route.</em></p><p>Une action
-        de Dentelle pour convaincre ou tromper devient automatique.</p>
+        <p>Une action de Dentelle pour convaincre ou tromper devient
+        automatique.</p>
       type: naissance
+      citation: Du crime toujours le crime ouvre la route.
     effects: []
     folder: null
     sort: 0
@@ -418,9 +419,9 @@ items:
       coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
-      createdTime: null
-      modifiedTime: null
+      lastModifiedBy: EnR7ijfNdK9Nevm3
+      createdTime: 1778519871423
+      modifiedTime: 1778519871423
     _key: '!actors.items!w1J5cEu9ZIWuT7sm.rC4kZ1Lqpl7QfP39'
 effects: []
 folder: null

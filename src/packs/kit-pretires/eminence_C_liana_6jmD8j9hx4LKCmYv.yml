@@ -162,17 +162,16 @@ items:
       utilise: false
       type: naissance
       description: >-
-        <h1>Chevelure vivante</h1><p><em>Abandonne tes épaules tendues aux
-        langues bifides de mes amis…</em></p><p>Faites réaliser une action
-        physique aux serpents de Céliana (cette action ne compte pas dans la
-        limite d'actions par tour). Les serpents peuvent observer, mordre une
-        cible ou Céliana elle-même, l'aider dans sa tâche ou , si elle possède
-        ces autres pouvoirs, injecter du venin alchimique ou fixer d'un regard
-        médusant.</p><p>De plus, chaque fois qu’elle réalise une merveille (p.
-        31 du kit), son joueur peut lui choisir un nouveau pouvoir dans la liste
-        suivante, ou augmenter de 1 sa valeur de
-        conscience.</p><ul><li><p>Regard médusant</p></li><li><p>Venin
+        <p>Faites réaliser une action physique aux serpents de Céliana (cette
+        action ne compte pas dans la limite d'actions par tour). Les serpents
+        peuvent observer, mordre une cible ou Céliana elle-même, l'aider dans sa
+        tâche ou , si elle possède ces autres pouvoirs, injecter du venin
+        alchimique ou fixer d'un regard médusant.</p><p>De plus, chaque fois
+        qu’elle réalise une merveille (p. 31 du kit), son joueur peut lui
+        choisir un nouveau pouvoir dans la liste suivante, ou augmenter de 1 sa
+        valeur de conscience.</p><ul><li><p>Regard médusant</p></li><li><p>Venin
         alchimique</p></li></ul>
+      citation: Abandonne tes épaules tendues aux langues bifides de mes amis…
     effects: []
     folder: null
     sort: 0
@@ -184,9 +183,9 @@ items:
       coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
-      createdTime: null
-      modifiedTime: null
+      lastModifiedBy: EnR7ijfNdK9Nevm3
+      createdTime: 1778519833155
+      modifiedTime: 1778519833155
     ownership:
       default: 0
     _key: '!actors.items!6jmD8j9hx4LKCmYv.m7oh2WXepebJSUjC'
@@ -414,17 +413,18 @@ items:
     system:
       utilise: false
       description: >-
-        <p><em>D’une caresse mentale, j’ordonne à l’un de mes serpents de
-        distiller son venin.</em></p><p>À l’acquisition de ce pouvoir,
-        choisissez une harmonique.</p><p>En une action, Céliana récolte un venin
-        à consommer plus tard, ou tente de l’inoculer par morsure (action de
-        nature). Jusqu’à la fin de la scène, au choix :</p><ul><li><p>Le nombre
-        de succès des actions en lien avec l’harmonique choisie et réalisées par
-        l’envenimé augmente ou diminue de 1.</p></li><li><p>Les difficultés
-        opposées par l’envenimé augmentent ou diminuent de
-        1.</p></li></ul><p>Par ailleurs, tous les venins alchimiques peuvent
-        servir d’encres</p><p>de conjuration.</p>
+        <p>À l’acquisition de ce pouvoir, choisissez une harmonique.</p><p>En
+        une action, Céliana récolte un venin à consommer plus tard, ou tente de
+        l’inoculer par morsure (action de nature). Jusqu’à la fin de la scène,
+        au choix :</p><ul><li><p>Le nombre de succès des actions en lien avec
+        l’harmonique choisie et réalisées par l’envenimé augmente ou diminue de
+        1.</p></li><li><p>Les difficultés opposées par l’envenimé augmentent ou
+        diminuent de 1.</p></li></ul><p>Par ailleurs, tous les venins
+        alchimiques peuvent servir d’encres de conjuration.</p>
       type: naissance
+      citation: >-
+        D’une caresse mentale, j’ordonne à l’un de mes serpents de distiller son
+        venin.
     effects: []
     folder: null
     sort: 0
@@ -436,9 +436,9 @@ items:
       coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
-      createdTime: null
-      modifiedTime: null
+      lastModifiedBy: EnR7ijfNdK9Nevm3
+      createdTime: 1778519807272
+      modifiedTime: 1778519814152
     ownership:
       default: 0
     _key: '!actors.items!6jmD8j9hx4LKCmYv.HIMHYEZgtkO2bez6'

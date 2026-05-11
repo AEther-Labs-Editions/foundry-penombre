@@ -337,15 +337,17 @@ items:
     system:
       utilise: false
       description: >-
-        <h1>Embrasie</h1><p><em>L’impulsion de l’embrasie est capable de
-        décupler vos forces quand le soleil est au zénith.</em></p><p>Le temps
-        d’une scène baignée par un soleil puissant, le nombre de succès de
-        toutes les actions brutales réalisées par Phobos augmente de 2.</p><p>De
-        plus, chaque fois qu’il réalise une merveille (p. 31 du kit), son joueur
-        peut lui choisir un nouveau pouvoir dans la liste suivante, ou augmenter
-        de 1 sa valeur de conscience.</p><ul><li><p>Embrasie
-        ardente</p></li><li><p>Leçon de l'ascèse</p></li></ul>
+        <p>Le temps d’une scène baignée par un soleil puissant, le nombre de
+        succès de toutes les actions brutales réalisées par Phobos augmente de
+        2.</p><p>De plus, chaque fois qu’il réalise une merveille (p. 31 du
+        kit), son joueur peut lui choisir un nouveau pouvoir dans la liste
+        suivante, ou augmenter de 1 sa valeur de
+        conscience.</p><ul><li><p>Embrasie ardente</p></li><li><p>Leçon de
+        l'ascèse</p></li></ul>
       type: naissance
+      citation: >-
+        L’impulsion de l’embrasie est capable de décupler vos forces quand le
+        soleil est au zénith.
     effects: []
     folder: null
     sort: 0
@@ -360,9 +362,9 @@ items:
       coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
-      createdTime: null
-      modifiedTime: null
+      lastModifiedBy: EnR7ijfNdK9Nevm3
+      createdTime: 1778520130780
+      modifiedTime: 1778520130780
     _key: '!actors.items!cDk12lMuemfvOb5Q.8BlTlYVvsl11gS92'
   - type: pouvoir
     name: Embrasie ardente
@@ -371,11 +373,10 @@ items:
     system:
       utilise: false
       description: >-
-        <h1>Embrasie ardente</h1><p><em>Pour lui, l’embrasie est plus qu’une
-        impulsion, c’est un vertige.</em></p><p>Lors de l’utilisation
-        d’embrasie, le nombre de succès d’une action réalisée par Phobos
-        augmente de 2.</p>
+        <p>Lors de l’utilisation d’embrasie, le nombre de succès d’une action
+        réalisée par Phobos augmente de 2.</p>
       type: naissance
+      citation: Embrasie ardente
     effects: []
     folder: null
     sort: 0
@@ -390,9 +391,9 @@ items:
       coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
-      createdTime: null
-      modifiedTime: null
+      lastModifiedBy: EnR7ijfNdK9Nevm3
+      createdTime: 1778520120035
+      modifiedTime: 1778520120035
     _key: '!actors.items!cDk12lMuemfvOb5Q.dM5Pewhoyhq6r34W'
   - type: pouvoir
     name: Leçon de l'ascèse
@@ -401,11 +402,12 @@ items:
     system:
       utilise: false
       description: >-
-        <h1>Leçon de l'ascèse</h1><p><em>Le respect… Faut aller le chercher,
-        faut creuser profond pour en trouver et se donner la force de tenir
-        droit.</em></p><p>Une action de Phobos pour résister à un contrôle –
-        physique ou mental – devient automatique.</p>
+        <p>Une action de Phobos pour résister à un contrôle – physique ou mental
+        – devient automatique.</p>
       type: naissance
+      citation: >-
+        Le respect… Faut aller le chercher, faut creuser profond pour en trouver
+        et se donner la force de tenir droit.
     effects: []
     folder: null
     sort: 0
@@ -420,9 +422,9 @@ items:
       coreVersion: '14.361'
       systemId: penombre
       systemVersion: '#{VERSION}#'
-      lastModifiedBy: null
-      createdTime: null
-      modifiedTime: null
+      lastModifiedBy: EnR7ijfNdK9Nevm3
+      createdTime: 1778520108803
+      modifiedTime: 1778520108803
     _key: '!actors.items!cDk12lMuemfvOb5Q.hGSlEepnfXs8kglO'
 effects: []
 ownership:

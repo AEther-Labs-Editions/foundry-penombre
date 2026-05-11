@@ -160,15 +160,14 @@ items:
     system:
       utilise: false
       description: >-
-        <h1>Succès collectif</h1><p><em>Marcher ensemble est un début ;
-        travailler ensemble est une victoire.</em></p><p>Lors d’une action
-        collégiale incluant Mangrove, le nombre de succès total augmente du
-        nombre de participants.</p><p>De plus, chaque fois qu’il réalise une
-        merveille (p. 31 du kit), son joueur peut lui choisir un nouveau pouvoir
-        dans la liste suivante, ou augmenter de 1 sa valeur de
-        conscience.</p><ul><li><p>Excès</p></li><li><p>J’ai un
+        <p>Lors d’une action collégiale incluant Mangrove, le nombre de succès
+        total augmente du nombre de participants.</p><p>De plus, chaque fois
+        qu’il réalise une merveille (p. 31 du kit), son joueur peut lui choisir
+        un nouveau pouvoir dans la liste suivante, ou augmenter de 1 sa valeur
+        de conscience.</p><ul><li><p>Excès</p></li><li><p>J’ai un
         plan</p></li></ul>
       type: naissance
+      citation: Marcher ensemble est un début ; travailler ensemble est une victoire.
     effects: []
     folder: null
     sort: 0
@@ -179,10 +178,10 @@ items:
       exportSource: null
       coreVersion: '14.361'
       systemId: penombre
-      systemVersion: '0'
-      lastModifiedBy: null
-      createdTime: null
-      modifiedTime: null
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: EnR7ijfNdK9Nevm3
+      createdTime: 1778520265826
+      modifiedTime: 1778520265826
     ownership:
       default: 0
     _key: '!actors.items!oQfBudRYF5bAOKQP.c6VIuiN9n547UUqI'
@@ -193,12 +192,13 @@ items:
     system:
       utilise: false
       description: >-
-        <h1>Excès</h1><p><em>Je n’échoue pas : soit je réussis, soit je réussis
-        mieux. Peu importent les sacrifices</em>.</p><p>Le temps d’une scène, le
-        nombre de succès de toutes les actions d’étincelle réalisées par
-        Mangrove augmente de 2. Puis, jusqu’au prochain repos, il diminue de
-        1.</p>
+        <p>Le temps d’une scène, le nombre de succès de toutes les actions
+        d’étincelle réalisées par Mangrove augmente de 2. Puis, jusqu’au
+        prochain repos, il diminue de 1.</p>
       type: naissance
+      citation: >-
+        Je n’échoue pas : soit je réussis, soit je réussis mieux. Peu importent
+        les sacrifices.
     effects: []
     folder: null
     sort: 0
@@ -209,10 +209,10 @@ items:
       exportSource: null
       coreVersion: '14.361'
       systemId: penombre
-      systemVersion: '0'
-      lastModifiedBy: null
-      createdTime: null
-      modifiedTime: null
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: EnR7ijfNdK9Nevm3
+      createdTime: 1778520256068
+      modifiedTime: 1778520256068
     ownership:
       default: 0
     _key: '!actors.items!oQfBudRYF5bAOKQP.eckKviOZrdnPjoVU'
@@ -223,12 +223,12 @@ items:
     system:
       utilise: false
       description: >-
-        <h1>J’ai un plan</h1><p><em>L’issue de cette guerre reste à écrire.
-        Sois-en la plume.</em></p><p>Une action devient automatique car un
-        élément est remplacé par un autre (une fenêtre fermée s’ouvre, un garde
-        s’avère être un ami, Mangrove trouve un objet opportun…). Ce pouvoir n’a
-        aucun effet sur les adversaires déjà déclarés ou en combat.</p>
+        <p>Une action devient automatique car un élément est remplacé par un
+        autre (une fenêtre fermée s’ouvre, un garde s’avère être un ami,
+        Mangrove trouve un objet opportun…). Ce pouvoir n’a aucun effet sur les
+        adversaires déjà déclarés ou en combat.</p>
       type: naissance
+      citation: L’issue de cette guerre reste à écrire. Sois-en la plume.
     effects: []
     folder: null
     sort: 0
@@ -239,10 +239,10 @@ items:
       exportSource: null
       coreVersion: '14.361'
       systemId: penombre
-      systemVersion: '0'
-      lastModifiedBy: null
-      createdTime: null
-      modifiedTime: null
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: EnR7ijfNdK9Nevm3
+      createdTime: 1778520247363
+      modifiedTime: 1778520247363
     ownership:
       default: 0
     _key: '!actors.items!oQfBudRYF5bAOKQP.mNsH1HBzYdJeXEqD'
