@@ -1,0 +1,13 @@
+<div class="potentiel">
+    <div class="div-potentiel">
+        <span class="absolue">{{localize "PENOMBRE.ui.potentiel"}}</span>
+        {{#if unlocked}}
+        <select name="system.potentiel.{{potentielType}}" class="val-potentiel-saisie absolue">
+            {{selectOptions potentielChoices selected=(lookup systemSource.potentiel potentielType) localize=true}}
+        </select>
+        {{else}}
+        <div class="val-potentiel absolue">{{lookup system.potentiel potentielType}}</div>
+        {{/if}}
+        <img class="img-potentiel absolue" src="systems/penombre/assets/ui/potentiel_creux.webp" alt="" />
+    </div>
+</div>

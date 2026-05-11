@@ -13,7 +13,7 @@ export default class PenombreBaseActorSheet extends HandlebarsApplicationMixin(s
     classes: ["penombre"],
     position: {
       width: 1152,
-      height: 780,
+      height: "auto",
     },
     form: {
       submitOnChange: true,
@@ -159,6 +159,13 @@ export default class PenombreBaseActorSheet extends HandlebarsApplicationMixin(s
   static async #onDeleteItem(event, target) {
     event.preventDefault()
     const id = target.dataset.itemId
-    if (id) return await this.actor.deleteEmbeddedDocuments("Item", [id])
+    if (!id) return
+    const item = this.actor.items.get(id)
+    if (!item) return
+    const confirmed = await foundry.applications.api.DialogV2.confirm({
+      window: { title: game.i18n.localize("PENOMBRE.ui.delete") },
+      content: `<p>${game.i18n.format("PENOMBRE.ui.deleteConfirm", { name: item.name })}</p>`,
+    })
+    if (confirmed) await this.actor.deleteEmbeddedDocuments("Item", [id])
   }
 }

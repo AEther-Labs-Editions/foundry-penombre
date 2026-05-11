@@ -174,13 +174,13 @@ body.theme-light .penombre.eminence .eminence-content .eminence-timbre .logo-pen
 body.theme-light .penombre.eminence .eminence-content .eminence-timbre .frise-penombre {
   content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_clair.webp");
 }
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 {
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre.avance {
   min-height: 90px;
 }
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .logo-penombre {
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre.avance .logo-penombre {
   content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_clair.webp");
 }
-body.theme-light .penombre.eminence .eminence-content .eminence-timbre-2 .frise-penombre {
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre.avance .frise-penombre {
   content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_clair.webp");
 }
 body.theme-dark .penombre.eminence .eminence-content .logo-penombre {
@@ -191,17 +191,17 @@ body.theme-dark .penombre.eminence .eminence-content .logo-penombre {
 body.theme-dark .penombre.eminence .eminence-content .frise-penombre {
   content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.webp");
 }
-body.theme-dark .penombre.eminence .eminence-timbre-2 {
+body.theme-dark .penombre.eminence .eminence-timbre.avance {
   min-height: 110px;
 }
-body.theme-dark .penombre.eminence .eminence-timbre-2 .cadre-img {
+body.theme-dark .penombre.eminence .eminence-timbre.avance .cadre-img {
   border-radius: 6px;
   background-color: #faeed6;
 }
-body.theme-dark .penombre.eminence .eminence-timbre-2 .logo-penombre {
+body.theme-dark .penombre.eminence .eminence-timbre.avance .logo-penombre {
   content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.webp");
 }
-body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
+body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
   content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.webp");
 }
 .penombre.eminence .eminence-content {
@@ -212,141 +212,136 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   clear: both;
 }
 .penombre.eminence .eminence-content table {
-  margin-top: 0;
+  margin: 0;
 }
-.penombre.eminence .eminence-content .eminence-timbre,
-.penombre.eminence .eminence-content .eminence-timbre-2 {
+.penombre.eminence .eminence-content .eminence-timbre {
   display: table;
 }
-.penombre.eminence .eminence-content .eminence-timbre .cadre-img,
-.penombre.eminence .eminence-content .eminence-timbre-2 .cadre-img {
+.penombre.eminence .eminence-content .eminence-timbre .cadre-img {
   width: 100px;
   float: left;
 }
-.penombre.eminence .eminence-content .eminence-timbre .datas-timbre,
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre {
+.penombre.eminence .eminence-content .eminence-timbre .datas-timbre {
   float: left;
   width: 525px;
   padding-left: 4px;
 }
-.penombre.eminence .eminence-content .eminence-timbre .logo-penombre,
-.penombre.eminence .eminence-content .eminence-timbre-2 .logo-penombre {
+.penombre.eminence .eminence-content .eminence-timbre .logo-penombre {
   float: none;
   width: 223px;
 }
-.penombre.eminence .eminence-content .eminence-timbre .frise-penombre,
-.penombre.eminence .eminence-content .eminence-timbre-2 .frise-penombre {
+.penombre.eminence .eminence-content .eminence-timbre .frise-penombre {
   float: left;
   width: 402px;
 }
 .penombre.eminence .eminence-content .eminence-timbre {
   min-height: 90px;
 }
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .label-timbre {
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .label-timbre {
   color: #56605b;
 }
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .label-peste {
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .label-peste {
   color: #917f35;
 }
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre label {
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre label {
   display: flex;
   float: none;
 }
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre span {
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre span {
   display: flex;
   float: none;
   font-family: "ChocoCovRainBold";
   font-size: 17px;
   color: #56605b;
 }
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 {
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .col-1-2 {
   float: left;
   width: 212px;
 }
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div {
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .col-1-2 div {
   display: table;
 }
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div span {
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .col-1-2 div span {
   float: none;
   clear: both;
   height: 15px;
 }
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div span.description {
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .col-1-2 div span.description {
   height: auto;
 }
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div label.croche {
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .col-1-2 div label.croche {
   font-size: 55px;
   font-family: "NotoMusic";
 }
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div label.note1 {
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .col-1-2 div label.note1 {
   margin-left: 20px;
   margin-top: -62px;
 }
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div label.note2 {
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .col-1-2 div label.note2 {
   margin-left: 60px;
   margin-top: -84px;
 }
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div label.note3 {
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .col-1-2 div label.note3 {
   margin-left: 100px;
   margin-top: -83px;
 }
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div label.note4 {
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .col-1-2 div label.note4 {
   margin-left: 140px;
   margin-top: -84px;
 }
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div img.case-ronde-note {
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .col-1-2 div img.case-ronde-note {
   width: 20px;
   height: 20px;
 }
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div img.case-ronde-note:hover {
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .col-1-2 div img.case-ronde-note:hover {
   cursor: pointer;
 }
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div img.case-ronde-note1 {
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .col-1-2 div img.case-ronde-note1 {
   margin-left: 20px;
   margin-top: 20px;
 }
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div img.case-ronde-note2 {
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .col-1-2 div img.case-ronde-note2 {
   margin-left: 60px;
   margin-top: -35px;
 }
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div img.case-ronde-note3 {
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .col-1-2 div img.case-ronde-note3 {
   margin-left: 100px;
   margin-top: -35px;
 }
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div img.case-ronde-note4 {
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .col-1-2 div img.case-ronde-note4 {
   margin-left: 140px;
   margin-top: -35px;
 }
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div img.case-ronde-cle {
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .col-1-2 div img.case-ronde-cle {
   margin-left: -40px;
   margin-top: 10px;
   width: 25px;
   height: 25px;
 }
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-1-2 div img.case-ronde-cle:hover {
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .col-1-2 div img.case-ronde-cle:hover {
   cursor: pointer;
 }
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 {
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .col-2-2 {
   margin-top: 30px;
   float: left;
   width: 101px;
 }
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 img {
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .col-2-2 img {
   float: left;
   width: 20px;
 }
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 span {
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .col-2-2 span {
   margin-left: 25px;
   width: calc(100% - 25px);
 }
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-2-2 .statut-timbre-case:hover {
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .col-2-2 .statut-timbre-case:hover {
   cursor: pointer;
 }
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-3-2 {
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .col-3-2 {
   margin-left: 313px;
   width: calc(100% - 313px);
 }
-.penombre.eminence .eminence-content .eminence-timbre-2 .datas-timbre .col-3-2 .peste-texte {
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .col-3-2 .peste-texte {
   margin-top: 9px;
 }
 .penombre.eminence .eminence-content .centpourcent {
@@ -361,31 +356,45 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 }
 .penombre.eminence .eminence-content .eminence-main {
   width: 100%;
-  display: table;
-  clear: both;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
 }
 .penombre.eminence .eminence-content .col-1 {
+  flex: 0 0 450px;
   width: 450px;
-  float: left;
-  display: table;
-  clear: both;
 }
 .penombre.eminence .eminence-content .col-2 {
+  flex: 0 0 23px;
   width: 23px;
-  float: left;
-  height: 500px;
   padding: 0 3px;
+  display: flex;
+  flex-direction: column;
 }
 .penombre.eminence .eminence-content .col-2 .grande-frise-verticale-1,
 .penombre.eminence .eminence-content .col-2 .grande-frise-verticale-2,
 .penombre.eminence .eminence-content .col-2 .grande-frise-verticale-3,
 .penombre.eminence .eminence-content .col-2 .grande-frise-verticale-4,
 .penombre.eminence .eminence-content .col-2 .grande-frise-verticale-5 {
-  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+.penombre.eminence .eminence-content .col-2 .grande-frise-verticale-1 img,
+.penombre.eminence .eminence-content .col-2 .grande-frise-verticale-2 img,
+.penombre.eminence .eminence-content .col-2 .grande-frise-verticale-3 img,
+.penombre.eminence .eminence-content .col-2 .grande-frise-verticale-4 img,
+.penombre.eminence .eminence-content .col-2 .grande-frise-verticale-5 img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
 }
 .penombre.eminence .eminence-content .col-3 {
-  margin-left: 473px;
+  flex: 1 1 auto;
   min-width: 635px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 .penombre.eminence .eminence-content .col-1-1 {
   width: 25px;
@@ -403,7 +412,6 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   padding-left: 4px;
 }
 .penombre.eminence .eminence-content .eminence-personnage,
-.penombre.eminence .eminence-content .eminence-personnage-2,
 .penombre.eminence .eminence-content .eminence-harmoniques,
 .penombre.eminence .eminence-content .eminence-conscience {
   float: none;
@@ -411,22 +419,27 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   border: 1px solid #a56135;
   padding: 2px;
   border-radius: 6px;
+  min-width: auto;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs,
 .penombre.eminence .eminence-content .eminence-atouts,
 .penombre.eminence .eminence-content .eminence-maitrises,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2,
-.penombre.eminence .eminence-content .eminence-atouts-2,
-.penombre.eminence .eminence-content .eminence-maitrises-2,
-.penombre.eminence .eminence-content .eminence-timbre,
-.penombre.eminence .eminence-content .eminence-timbre-2,
 .penombre.eminence .eminence-content .eminence-recapitulatif {
-  min-width: 635px;
   float: none;
   flex-direction: column;
   border: 1px solid #a56135;
   padding: 2px;
   border-radius: 6px;
+  min-width: 635px;
+}
+.penombre.eminence .eminence-content .eminence-timbre {
+  float: none;
+  flex-direction: column;
+  border: 1px solid #a56135;
+  padding: 2px;
+  border-radius: 6px;
+  min-width: 635px;
+  border: none;
 }
 .penombre.eminence .eminence-content .text-vertical-personnage,
 .penombre.eminence .eminence-content .text-vertical-harmoniques,
@@ -438,65 +451,52 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
 }
 .penombre.eminence .eminence-content .eminence-personnage {
   min-height: 190px;
-}
-.penombre.eminence .eminence-content .eminence-personnage-2 {
-  min-height: 250px;
-}
-.penombre.eminence .eminence-content .eminence-personnage,
-.penombre.eminence .eminence-content .eminence-personnage-2 {
   color: #a56135;
 }
-.penombre.eminence .eminence-content .eminence-personnage .logo-frame,
-.penombre.eminence .eminence-content .eminence-personnage-2 .logo-frame {
+.penombre.eminence .eminence-content .eminence-personnage.avance {
+  min-height: 250px;
+}
+.penombre.eminence .eminence-content .eminence-personnage .logo-frame {
   display: table;
   float: left;
   height: 152px;
   width: 150px;
   padding: 1px;
 }
-.penombre.eminence .eminence-content .eminence-personnage .logo-frame .logo-img,
-.penombre.eminence .eminence-content .eminence-personnage-2 .logo-frame .logo-img {
+.penombre.eminence .eminence-content .eminence-personnage .logo-frame .logo-img {
   border-radius: 6px;
   height: 150px;
   width: auto;
   max-width: 100%;
   display: block;
 }
-.penombre.eminence .eminence-content .eminence-personnage .logo-frame .logo-img-unlocked,
-.penombre.eminence .eminence-content .eminence-personnage-2 .logo-frame .logo-img-unlocked {
+.penombre.eminence .eminence-content .eminence-personnage .logo-frame .logo-img-unlocked {
   border-radius: 6px;
   height: 150px;
   width: auto;
   max-width: 100%;
   display: block;
 }
-.penombre.eminence .eminence-content .eminence-personnage .logo-frame .logo-img-unlocked:hover,
-.penombre.eminence .eminence-content .eminence-personnage-2 .logo-frame .logo-img-unlocked:hover {
+.penombre.eminence .eminence-content .eminence-personnage .logo-frame .logo-img-unlocked:hover {
   cursor: pointer;
   box-shadow: 0px 0px 0px 2.5px #a56135;
 }
-.penombre.eminence .eminence-content .eminence-personnage .data,
-.penombre.eminence .eminence-content .eminence-personnage-2 .data {
+.penombre.eminence .eminence-content .eminence-personnage .data {
   float: left;
   width: 250px;
   clear: right;
 }
-.penombre.eminence .eminence-content .eminence-personnage .data .name,
-.penombre.eminence .eminence-content .eminence-personnage-2 .data .name {
+.penombre.eminence .eminence-content .eminence-personnage .data .name {
   font-size: 35px;
   text-align: center;
 }
-.penombre.eminence .eminence-content .eminence-personnage .data .description,
-.penombre.eminence .eminence-content .eminence-personnage-2 .data .description {
+.penombre.eminence .eminence-content .eminence-personnage .data .description {
   font-size: 19px;
   color: #124b63;
   text-align: center;
 }
 .penombre.eminence .eminence-content .eminence-harmoniques {
   min-height: 350px;
-}
-.penombre.eminence .eminence-content .eminence-conscience-locked {
-  min-height: 725px;
 }
 .penombre.eminence .eminence-content .eminence-conscience-locked .col-3-1 .col-1-3 {
   display: flex;
@@ -519,10 +519,8 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   margin: 0 5px;
   width: 50px;
 }
-.penombre.eminence .eminence-content .eminence-conscience-unlocked {
-  min-height: 685px;
-}
 .penombre.eminence .eminence-content .eminence-conscience {
+  display: flow-root;
   color: #917f35;
 }
 .penombre.eminence .eminence-content .eminence-conscience .div-jetons {
@@ -712,396 +710,255 @@ body.theme-dark .penombre.eminence .eminence-timbre-2 .frise-penombre {
   color: #56605b;
   font-size: 30px;
 }
-.penombre.eminence .eminence-content .eminence-pouvoirs,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 {
-  min-height: 205px;
+.penombre.eminence .eminence-content .eminence-pouvoirs {
   color: #56605b;
   text-align: center;
+  padding-bottom: 2px;
 }
-.penombre.eminence .eminence-content .eminence-pouvoirs .titre-section-pouvoirs,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 .titre-section-pouvoirs {
+.penombre.eminence .eminence-content .eminence-pouvoirs .titre-section-pouvoirs {
   font-size: 35px;
   margin-left: 100px;
   float: none;
 }
-.penombre.eminence .eminence-content .eminence-pouvoirs .content,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content {
+.penombre.eminence .eminence-content .eminence-pouvoirs .content {
   text-align: left;
 }
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .potentiel {
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel {
   text-align: center;
 }
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .potentiel .div-potentiel {
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel {
   position: relative;
   float: left;
   text-align: center;
   width: 100px;
-  height: 200px;
+  height: 110px;
 }
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel .img-potentiel,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .potentiel .div-potentiel .img-potentiel {
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel .img-potentiel {
   width: 100px;
   height: 100px;
 }
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel .absolue,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .potentiel .div-potentiel .absolue {
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel .absolue {
   position: absolute;
   z-index: 5;
 }
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel .val-potentiel-saisie,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .potentiel .div-potentiel .val-potentiel-saisie {
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel .val-potentiel-saisie {
   margin-left: -22.5px;
   margin-top: 42px;
   width: 55px;
   z-index: 10;
   font-size: 30px;
 }
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel .val-potentiel,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .potentiel .div-potentiel .val-potentiel {
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel .val-potentiel {
   margin-left: 41.5px;
   margin-top: 42px;
   text-align: center;
   font-size: 29px;
 }
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel span,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .potentiel .div-potentiel span {
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel span {
   margin-left: -42px;
   margin-top: 90px;
   color: #a56135;
   font-size: 29px;
 }
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs {
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs {
   margin-left: 100px;
   width: calc(100% - 103px);
-  min-height: 145px;
   border: 1px solid #917f35;
   border-radius: 4px;
   padding: 2px;
 }
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs .item-coche,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs .item-coche {
-  width: 55px;
-}
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs .item-case,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs .item-case {
-  width: 20px;
-  height: 20px;
-}
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs .item-case:hover,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs .item-case:hover {
-  cursor: pointer;
-}
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs td,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs td {
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs td {
   font-family: "ChocoCovRainBold";
   font-size: 25px;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs th.item-controls,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs th.item-controls,
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs td.item-controls,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs td.item-controls {
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs td.item-controls {
   width: 70px;
   font-size: 17px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs th.item-controls .plusitem,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs th.item-controls .plusitem,
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs td.item-controls .plusitem,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs td.item-controls .plusitem {
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs td.item-controls .plusitem {
   float: right;
 }
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs-2,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs-2 {
-  margin-left: 100px;
-  width: calc(100% - 103px);
-  min-height: 290px;
-  border: 1px solid #917f35;
-  border-radius: 4px;
-  padding: 2px;
-}
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs-2 .item-coche,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs-2 .item-coche {
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs .item-coche {
   width: 55px;
 }
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs-2 .item-case,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs-2 .item-case {
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs .item-case {
   width: 20px;
   height: 20px;
 }
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs-2 .item-case:hover,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs-2 .item-case:hover {
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs .item-case:hover {
   cursor: pointer;
 }
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs-2 td,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs-2 td {
-  font-family: "ChocoCovRainBold";
-  font-size: 25px;
-}
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs-2 th.item-controls,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs-2 th.item-controls,
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs-2 td.item-controls,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs-2 td.item-controls {
-  width: 70px;
-  font-size: 17px;
-}
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs .ligne-pouvoir,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs .ligne-pouvoir,
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs-2 .ligne-pouvoir,
-.penombre.eminence .eminence-content .eminence-pouvoirs-2 .content .pouvoirs-2 .ligne-pouvoir {
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs .ligne-pouvoir {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.penombre.eminence .eminence-content .eminence-atouts,
-.penombre.eminence .eminence-content .eminence-atouts-2 {
-  min-height: 205px;
+.penombre.eminence .eminence-content .eminence-atouts {
   color: #56605b;
   text-align: center;
+  padding-bottom: 2px;
 }
-.penombre.eminence .eminence-content .eminence-atouts .titre-section-atouts,
-.penombre.eminence .eminence-content .eminence-atouts-2 .titre-section-atouts {
+.penombre.eminence .eminence-content .eminence-atouts .titre-section-atouts {
   font-size: 35px;
   margin-left: 100px;
   float: none;
 }
-.penombre.eminence .eminence-content .eminence-atouts .content,
-.penombre.eminence .eminence-content .eminence-atouts-2 .content {
+.penombre.eminence .eminence-content .eminence-atouts .content {
   text-align: left;
 }
-.penombre.eminence .eminence-content .eminence-atouts .content .potentiel,
-.penombre.eminence .eminence-content .eminence-atouts-2 .content .potentiel {
+.penombre.eminence .eminence-content .eminence-atouts .content .potentiel {
   text-align: center;
 }
-.penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel,
-.penombre.eminence .eminence-content .eminence-atouts-2 .content .potentiel .div-potentiel {
+.penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel {
   position: relative;
   float: left;
   text-align: center;
   width: 100px;
-  height: 200px;
+  height: 110px;
 }
-.penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel .img-potentiel,
-.penombre.eminence .eminence-content .eminence-atouts-2 .content .potentiel .div-potentiel .img-potentiel {
+.penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel .img-potentiel {
   width: 100px;
   height: 100px;
 }
-.penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel .absolue,
-.penombre.eminence .eminence-content .eminence-atouts-2 .content .potentiel .div-potentiel .absolue {
+.penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel .absolue {
   position: absolute;
   z-index: 5;
 }
-.penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel .val-potentiel-saisie,
-.penombre.eminence .eminence-content .eminence-atouts-2 .content .potentiel .div-potentiel .val-potentiel-saisie {
+.penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel .val-potentiel-saisie {
   margin-left: -22.5px;
   margin-top: 42px;
   width: 55px;
   z-index: 10;
   font-size: 30px;
 }
-.penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel .val-potentiel,
-.penombre.eminence .eminence-content .eminence-atouts-2 .content .potentiel .div-potentiel .val-potentiel {
+.penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel .val-potentiel {
   margin-left: 41.5px;
   margin-top: 42px;
   text-align: center;
   font-size: 29px;
 }
-.penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel span,
-.penombre.eminence .eminence-content .eminence-atouts-2 .content .potentiel .div-potentiel span {
+.penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel span {
   margin-left: -42px;
   margin-top: 90px;
   color: #a56135;
   font-size: 29px;
 }
-.penombre.eminence .eminence-content .eminence-atouts .content .atouts,
-.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts {
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts {
   margin-left: 100px;
   width: calc(100% - 103px);
-  min-height: 145px;
   border: 1px solid #917f35;
   border-radius: 4px;
   padding: 2px;
 }
-.penombre.eminence .eminence-content .eminence-atouts .content .atouts td,
-.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts td {
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts td {
   font-family: "ChocoCovRainBold";
   font-size: 25px;
-}
-.penombre.eminence .eminence-content .eminence-atouts .content .atouts th.item-case-width,
-.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts th.item-case-width,
-.penombre.eminence .eminence-content .eminence-atouts .content .atouts td.item-case-width,
-.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts td.item-case-width {
-  width: 100px;
 }
 .penombre.eminence .eminence-content .eminence-atouts .content .atouts th.item-controls,
-.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts th.item-controls,
-.penombre.eminence .eminence-content .eminence-atouts .content .atouts td.item-controls,
-.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts td.item-controls {
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts td.item-controls {
   width: 70px;
   font-size: 17px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
 }
 .penombre.eminence .eminence-content .eminence-atouts .content .atouts th.item-controls .plusitem,
-.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts th.item-controls .plusitem,
-.penombre.eminence .eminence-content .eminence-atouts .content .atouts td.item-controls .plusitem,
-.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts td.item-controls .plusitem {
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts td.item-controls .plusitem {
   float: right;
 }
-.penombre.eminence .eminence-content .eminence-atouts .content .atouts .item-case,
-.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts .item-case {
-  float: left;
-  width: 20px;
-  height: 20px;
-}
-.penombre.eminence .eminence-content .eminence-atouts .content .atouts-2,
-.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts-2 {
-  margin-left: 100px;
-  width: calc(100% - 103px);
-  min-height: 290px;
-  border: 1px solid #917f35;
-  border-radius: 4px;
-  padding: 2px;
-}
-.penombre.eminence .eminence-content .eminence-atouts .content .atouts-2 td,
-.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts-2 td {
-  font-family: "ChocoCovRainBold";
-  font-size: 25px;
-}
-.penombre.eminence .eminence-content .eminence-atouts .content .atouts-2 th.item-case-width,
-.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts-2 th.item-case-width,
-.penombre.eminence .eminence-content .eminence-atouts .content .atouts-2 td.item-case-width,
-.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts-2 td.item-case-width {
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts th.item-case-width,
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts td.item-case-width {
   width: 100px;
 }
-.penombre.eminence .eminence-content .eminence-atouts .content .atouts-2 th.item-controls,
-.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts-2 th.item-controls,
-.penombre.eminence .eminence-content .eminence-atouts .content .atouts-2 td.item-controls,
-.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts-2 td.item-controls {
-  width: 70px;
-  font-size: 17px;
-}
-.penombre.eminence .eminence-content .eminence-atouts .content .atouts-2 .item-case,
-.penombre.eminence .eminence-content .eminence-atouts-2 .content .atouts-2 .item-case {
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts .item-case {
   float: left;
   width: 20px;
   height: 20px;
 }
-.penombre.eminence .eminence-content .eminence-maitrises,
-.penombre.eminence .eminence-content .eminence-maitrises-2 {
-  min-height: 205px;
+.penombre.eminence .eminence-content .eminence-maitrises {
   color: #56605b;
   text-align: center;
+  padding-bottom: 2px;
 }
-.penombre.eminence .eminence-content .eminence-maitrises .titre-section-maitrises,
-.penombre.eminence .eminence-content .eminence-maitrises-2 .titre-section-maitrises {
+.penombre.eminence .eminence-content .eminence-maitrises .titre-section-maitrises {
   font-size: 35px;
   margin-left: 100px;
   float: none;
 }
-.penombre.eminence .eminence-content .eminence-maitrises .content,
-.penombre.eminence .eminence-content .eminence-maitrises-2 .content {
+.penombre.eminence .eminence-content .eminence-maitrises .content {
   text-align: left;
 }
-.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel,
-.penombre.eminence .eminence-content .eminence-maitrises-2 .content .potentiel {
+.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel {
   text-align: center;
 }
-.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel,
-.penombre.eminence .eminence-content .eminence-maitrises-2 .content .potentiel .div-potentiel {
+.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel {
   position: relative;
   float: left;
   text-align: center;
   width: 100px;
-  height: 200px;
+  height: 110px;
 }
-.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel .img-potentiel,
-.penombre.eminence .eminence-content .eminence-maitrises-2 .content .potentiel .div-potentiel .img-potentiel {
+.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel .img-potentiel {
   width: 100px;
   height: 100px;
 }
-.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel .absolue,
-.penombre.eminence .eminence-content .eminence-maitrises-2 .content .potentiel .div-potentiel .absolue {
+.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel .absolue {
   position: absolute;
   z-index: 5;
 }
-.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel .val-potentiel-saisie,
-.penombre.eminence .eminence-content .eminence-maitrises-2 .content .potentiel .div-potentiel .val-potentiel-saisie {
+.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel .val-potentiel-saisie {
   margin-left: -22.5px;
   margin-top: 42px;
   width: 55px;
   z-index: 10;
   font-size: 30px;
 }
-.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel .val-potentiel,
-.penombre.eminence .eminence-content .eminence-maitrises-2 .content .potentiel .div-potentiel .val-potentiel {
+.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel .val-potentiel {
   margin-left: 41.5px;
   margin-top: 42px;
   text-align: center;
   font-size: 29px;
 }
-.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel span,
-.penombre.eminence .eminence-content .eminence-maitrises-2 .content .potentiel .div-potentiel span {
+.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel span {
   margin-left: -42px;
   margin-top: 90px;
   color: #a56135;
   font-size: 29px;
 }
-.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises,
-.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises {
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises {
   margin-left: 100px;
   width: calc(100% - 103px);
-  min-height: 145px;
   border: 1px solid #917f35;
   border-radius: 4px;
   padding: 2px;
 }
-.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises td,
-.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises td {
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises td {
   font-family: "ChocoCovRainBold";
   font-size: 25px;
 }
 .penombre.eminence .eminence-content .eminence-maitrises .content .maitrises th.item-controls,
-.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises th.item-controls,
-.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises td.item-controls,
-.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises td.item-controls {
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises td.item-controls {
   width: 70px;
   font-size: 17px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
 }
 .penombre.eminence .eminence-content .eminence-maitrises .content .maitrises th.item-controls .plusitem,
-.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises th.item-controls .plusitem,
-.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises td.item-controls .plusitem,
-.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises td.item-controls .plusitem {
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises td.item-controls .plusitem {
   float: right;
 }
-.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises-2,
-.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises-2 {
-  margin-left: 100px;
-  width: calc(100% - 103px);
-  min-height: 290px;
-  border: 1px solid #917f35;
-  border-radius: 4px;
-  padding: 2px;
-}
-.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises-2 td,
-.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises-2 td {
-  font-family: "ChocoCovRainBold";
-  font-size: 25px;
-}
-.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises-2 th.harmonique-width,
-.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises-2 th.harmonique-width,
-.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises-2 td.harmonique-width,
-.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises-2 td.harmonique-width {
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises th.harmonique-width,
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises td.harmonique-width {
   width: 70px;
-}
-.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises-2 th.item-controls,
-.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises-2 th.item-controls,
-.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises-2 td.item-controls,
-.penombre.eminence .eminence-content .eminence-maitrises-2 .content .maitrises-2 td.item-controls {
-  width: 70px;
-  font-size: 17px;
 }
 .penombre.eminence .eminence-content .eminence-recapitulatif {
-  min-height: 180px;
+  margin-top: 10px;
   width: 633px;
   color: #56605b;
   text-align: center;

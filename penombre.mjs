@@ -82,32 +82,28 @@ Hooks.once("init", function () {
  * Register world usage statistics
  * @param {string} registerKey
  */
-function registerWorldCount(registerKey) {
-  if (game.user.isGM) {
-    let worldKey = game.settings.get(registerKey, "worldKey")
-    if (worldKey === undefined || worldKey === "") {
-      worldKey = foundry.utils.randomID(32)
-      game.settings.set(registerKey, "worldKey", worldKey)
-    }
-
-    // Simple API counter
-    const worldData = {
-      register_key: registerKey,
-      world_key: worldKey,
-      foundry_version: `${game.release.generation}.${game.release.build}`,
-      system_name: game.system.id,
-      system_version: game.system.version,
-    }
-
-    let apiURL = "https://worlds.qawstats.info/worlds-counter"
-    $.ajax({
-      url: apiURL,
-      type: "POST",
-      data: JSON.stringify(worldData),
-      contentType: "application/json; charset=utf-8",
-      dataType: "json",
-      async: false,
+async function registerWorldCount(registerKey) {
+  if (!game.user.isGM) return
+  let worldKey = game.settings.get(registerKey, "worldKey")
+  if (!worldKey) {
+    worldKey = foundry.utils.randomID(32)
+    game.settings.set(registerKey, "worldKey", worldKey)
+  }
+  const worldData = {
+    register_key: registerKey,
+    world_key: worldKey,
+    foundry_version: `${game.release.generation}.${game.release.build}`,
+    system_name: game.system.id,
+    system_version: game.system.version,
+  }
+  try {
+    await fetch("https://worlds.qawstats.info/worlds-counter", {
+      method: "POST",
+      headers: { "Content-Type": "application/json; charset=utf-8" },
+      body: JSON.stringify(worldData),
     })
+  } catch (error) {
+    console.warn("Pénombre | World count registration failed", error)
   }
 }
 

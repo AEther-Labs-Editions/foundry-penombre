@@ -65,8 +65,8 @@ body {
               content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_clair.webp");
             }
           }
-          // Section timbre
-          .eminence-timbre-2 {
+          // Section timbre avancé
+          .eminence-timbre.avance {
             min-height: 90px;
 
             .logo-penombre {
@@ -101,8 +101,8 @@ body {
           }
         }
 
-        // Section timbre
-        .eminence-timbre-2 {
+        // Section timbre avancé
+        .eminence-timbre.avance {
           min-height: 110px;
 
           .cadre-img {
@@ -132,11 +132,10 @@ body {
     clear: both;
 
     table {
-        margin-top: 0;
+        margin: 0;
     }
 
-    .eminence-timbre,
-    .eminence-timbre-2 {
+    .eminence-timbre {
       display: table;
 
       .cadre-img {
@@ -157,7 +156,7 @@ body {
 
       .frise-penombre {
         float: left;
-        width: 402px;
+        width: @frame-width;
       }
     }
 
@@ -166,8 +165,8 @@ body {
       min-height: 90px;
     }
 
-    // Section timbre
-    .eminence-timbre-2 {
+    // Section timbre avancé
+    .eminence-timbre.avance {
       .datas-timbre {
         .label-timbre {
           color: @color-secondary;
@@ -312,36 +311,48 @@ body {
     // Structure principale
     .eminence-main {
       width: 100%;
-      display: table;
-      clear: both;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 0;
     }
 
     // Colonnes
     .col-1 {
+      flex: 0 0 450px;
       width: 450px;
-      float: left;
-      display: table;
-      clear: both;
     }
 
     .col-2 {
+      flex: 0 0 23px;
       width: 23px;
-      float: left;
-      height: 500px;
       padding: 0 3px;
+      display: flex;
+      flex-direction: column;
 
       .grande-frise-verticale-1,
       .grande-frise-verticale-2,
       .grande-frise-verticale-3,
       .grande-frise-verticale-4,
       .grande-frise-verticale-5 {
-        flex-direction: column;
+        flex: 1;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: fill;
+        }
       }
     }
 
     .col-3 {
-      margin-left: 473px;
+      flex: 1 1 auto;
       min-width: 635px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+
     }
 
     .col-1-1 {
@@ -364,7 +375,6 @@ body {
 
     // Sections principales avec mixin
     .eminence-personnage,
-    .eminence-personnage-2,
     .eminence-harmoniques,
     .eminence-conscience {
       .section-style();
@@ -373,13 +383,13 @@ body {
     .eminence-pouvoirs,
     .eminence-atouts,
     .eminence-maitrises,
-    .eminence-pouvoirs-2,
-    .eminence-atouts-2,
-    .eminence-maitrises-2,
-    .eminence-timbre,
-    .eminence-timbre-2,
     .eminence-recapitulatif {
-      .section-style-2();
+      .section-style(635px);
+    }
+
+    .eminence-timbre {
+      .section-style(635px);
+      border: none;
     }
 
     // Police des textes verticaux
@@ -395,12 +405,7 @@ body {
     // Hauteurs spécifiques
     .eminence-personnage {
       min-height: 190px;
-    }
-    .eminence-personnage-2 {
-      min-height: 250px;
-    }
-    .eminence-personnage,
-    .eminence-personnage-2 {
+      &.avance { min-height: 250px; }
       color: @color-primary;
       .logo-frame {
         display: table;
@@ -451,7 +456,6 @@ body {
     }
 
     .eminence-conscience-locked {
-      min-height: 725px;
 
       .col-3-1 {
         .col-1-3 {
@@ -479,11 +483,11 @@ body {
     }
 
     .eminence-conscience-unlocked {
-      min-height: 685px;
     }
 
     // Section conscience
     .eminence-conscience {
+      display: flow-root;
       color: @color-accent;
 
       // Jetons
@@ -510,7 +514,7 @@ body {
 
       .cadre-complications-2 {
         display: table;
-        width: 402px;
+        width: @frame-width;
         border: 1px solid @color-accent;
         border-radius: @border-radius-small;
         padding: 2px;
@@ -555,14 +559,14 @@ body {
 
       .cadre-complications {
         display: table;
-        width: 402px;
+        width: @frame-width;
         border: 1px solid @color-accent;
         border-radius: @border-radius-small;
         padding: 2px;
         padding-left: 10px;
 
         label {
-          width: 402px;
+          width: @frame-width;
           float: none;
           clear: both;
         }
@@ -678,7 +682,8 @@ body {
       .de-nuit {
         margin-left: 3px;
         margin-top: -2px;
-        .dice-element();
+        width: @dice-size;
+        height: @dice-size;
       }
 
       // Textes gros
@@ -694,282 +699,68 @@ body {
     }
 
     // Section Pouvoirs
-    .eminence-pouvoirs,
-    .eminence-pouvoirs-2 {
-      min-height: 205px;
-      color: @color-secondary;
-      text-align: center;
+    .eminence-pouvoirs {
+      .item-section-base(pouvoirs);
 
-      .titre-section-pouvoirs {
-        font-size: @font-size-2xlarge;
-        margin-left: 100px;
-        float: none;
-      }
+      .content .pouvoirs {
+        .item-table-base();
 
-      .content {
-        text-align: left;
+        .item-coche {
+          width: 55px;
+        }
 
-        .potentiel {
-          text-align: center;
-
-          .div-potentiel {
-            .potentiel-block();
+        .item-case {
+          width: @small-case-size;
+          height: @small-case-size;
+          &:hover {
+            cursor: pointer;
           }
         }
 
-        .pouvoirs {
-          // float: left;
-          margin-left: 100px;
-          width: calc(100% - 103px);
-          min-height: 145px;
-          border: 1px solid @color-accent;
-          border-radius: @border-radius-small;
-          padding: 2px;
-
-          .item-coche {
-            width: 55px;
-          }
-
-          .item-case {
-            width: @small-case-size;
-            height: @small-case-size;
-            &:hover {
-              cursor: pointer;
-            }
-          }
-
-          td {
-            font-family: @font-chocolate;
-            font-size: @font-size-midlarge;
-          }
-
-          th.item-controls,
-          td.item-controls {
-            width: 70px;
-            font-size: @font-size-base;
-
-            .plusitem {
-              float: right;
-            }
-          }
-        }
-
-        .pouvoirs-2 {
-          // float: left;
-          margin-left: 100px;
-          width: calc(100% - 103px);
-          min-height: 290px;
-          border: 1px solid @color-accent;
-          border-radius: @border-radius-small;
-          padding: 2px;
-
-          .item-coche {
-            width: 55px;
-          }
-
-          .item-case {
-            width: @small-case-size;
-            height: @small-case-size;
-            &:hover {
-              cursor: pointer;
-            }
-          }
-
-          td {
-            font-family: @font-chocolate;
-            font-size: @font-size-midlarge;
-          }
-
-          th.item-controls,
-          td.item-controls {
-            width: 70px;
-            font-size: @font-size-base;
-          }
-        }
-
-        .pouvoirs,
-        .pouvoirs-2 {
-          .ligne-pouvoir {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-          }
+        .ligne-pouvoir {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
         }
       }
     }
 
     // Section Atouts
-    .eminence-atouts,
-    .eminence-atouts-2 {
-      min-height: 205px;
-      color: @color-secondary;
-      text-align: center;
+    .eminence-atouts {
+      .item-section-base(atouts);
 
-      .titre-section-atouts {
-        font-size: @font-size-2xlarge;
-        margin-left: 100px;
-        float: none;
-      }
+      .content .atouts {
+        .item-table-base();
 
-      .content {
-        text-align: left;
-
-        .potentiel {
-          text-align: center;
-
-          .div-potentiel {
-            .potentiel-block();
-          }
+        th.item-case-width,
+        td.item-case-width {
+          width: 100px;
         }
 
-        .atouts {
-          margin-left: 100px;
-          width: calc(100% - 103px);
-          min-height: 145px;
-          border: 1px solid @color-accent;
-          border-radius: @border-radius-small;
-          padding: 2px;
-
-          td {
-            font-family: @font-chocolate;
-            font-size: @font-size-midlarge;
-          }
-
-          th.item-case-width,
-          td.item-case-width {
-            width: 100px;
-          }
-
-          th.item-controls,
-          td.item-controls {
-            width: 70px;
-            font-size: @font-size-base;
-
-            .plusitem {
-              float: right;
-            }
-          }
-
-          .item-case {
-            float: left;
-            width: @small-case-size;
-            height: @small-case-size;
-          }
-        }
-
-        .atouts-2 {
-          // float: left;
-          margin-left: 100px;
-          width: calc(100% - 103px);
-          min-height: 290px;
-          border: 1px solid @color-accent;
-          border-radius: @border-radius-small;
-          padding: 2px;
-
-          td {
-            font-family: @font-chocolate;
-            font-size: @font-size-midlarge;
-          }
-
-          th.item-case-width,
-          td.item-case-width {
-            width: 100px;
-          }
-
-          th.item-controls,
-          td.item-controls {
-            width: 70px;
-            font-size: @font-size-base;
-          }
-
-          .item-case {
-            float: left;
-            width: @small-case-size;
-            height: @small-case-size;
-          }
+        .item-case {
+          float: left;
+          width: @small-case-size;
+          height: @small-case-size;
         }
       }
     }
 
     // Section Maîtrises
-    .eminence-maitrises,
-    .eminence-maitrises-2 {
-      min-height: 205px;
-      color: @color-secondary;
-      text-align: center;
+    .eminence-maitrises {
+      .item-section-base(maitrises);
 
-      .titre-section-maitrises {
-        font-size: @font-size-2xlarge;
-        margin-left: 100px;
-        float: none;
-      }
+      .content .maitrises {
+        .item-table-base();
 
-      .content {
-        text-align: left;
-
-        .potentiel {
-          text-align: center;
-
-          .div-potentiel {
-            .potentiel-block();
-          }
-        }
-
-        .maitrises {
-          // float: left;
-          margin-left: 100px;
-          width: calc(100% - 103px);
-          min-height: 145px;
-          border: 1px solid @color-accent;
-          border-radius: @border-radius-small;
-          padding: 2px;
-
-          td {
-            font-family: @font-chocolate;
-            font-size: @font-size-midlarge;
-          }
-
-          th.item-controls,
-          td.item-controls {
-            width: 70px;
-            font-size: @font-size-base;
-
-            .plusitem {
-              float: right;
-            }
-          }
-        }
-
-        .maitrises-2 {
-          // float: left;
-          margin-left: 100px;
-          width: calc(100% - 103px);
-          min-height: 290px;
-          border: 1px solid @color-accent;
-          border-radius: @border-radius-small;
-          padding: 2px;
-
-          td {
-            font-family: @font-chocolate;
-            font-size: @font-size-midlarge;
-          }
-
-          th.harmonique-width,
-          td.harmonique-width {
-            width: 70px;
-          }
-
-          th.item-controls,
-          td.item-controls {
-            width: 70px;
-            font-size: @font-size-base;
-          }
+        th.harmonique-width,
+        td.harmonique-width {
+          width: 70px;
         }
       }
     }
 
     .eminence-recapitulatif {
-      min-height: 180px;
+      margin-top: 10px;
       width: 633px;
       color: @color-secondary;
       text-align: center;

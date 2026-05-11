@@ -23,7 +23,7 @@ export default class EminenceSheet extends PenombreBaseActorSheet {
   static PARTS = {
     main: {
       template: "systems/penombre/templates/eminence/eminence.hbs",
-      templates: ["atouts.hbs", "conscience.hbs", "harmoniques.hbs", "maitrises.hbs", "personnage.hbs", "pouvoirs.hbs", "recapitulatif.hbs", "timbre.hbs"].map((t) =>
+      templates: ["_potentiel.hbs", "atouts.hbs", "conscience.hbs", "harmoniques.hbs", "maitrises.hbs", "personnage.hbs", "pouvoirs.hbs", "recapitulatif.hbs", "timbre.hbs"].map((t) =>
         systemPath(`templates/eminence/partials/${t}`),
       ),
       scrollable: [""],
@@ -171,30 +171,10 @@ export default class EminenceSheet extends PenombreBaseActorSheet {
 
   static async #onClicNote(event, target) {
     event.preventDefault()
-    const dataset = target.dataset
-    const index = dataset.index // Commence à 0
-    const cle = this.document.system.timbre.cle
-    const note1 = this.document.system.timbre.note1
-    const note2 = this.document.system.timbre.note2
-    const note3 = this.document.system.timbre.note3
-    const note4 = this.document.system.timbre.note4
-
-    switch (index) {
-      case "0":
-        await this.document.update({ "system.timbre.cle": !cle })
-        break
-      case "1":
-        await this.document.update({ "system.timbre.note1": !note1 })
-        break
-      case "2":
-        await this.document.update({ "system.timbre.note2": !note2 })
-        break
-      case "3":
-        await this.document.update({ "system.timbre.note3": !note3 })
-        break
-      case "4":
-        await this.document.update({ "system.timbre.note4": !note4 })
-        break
+    const noteKeys = ["cle", "note1", "note2", "note3", "note4"]
+    const key = noteKeys[target.dataset.index]
+    if (key) {
+      await this.document.update({ [`system.timbre.${key}`]: !this.document.system.timbre[key] })
     }
   }
 
