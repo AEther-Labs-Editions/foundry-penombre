@@ -1,3 +1,6 @@
+1.8.1
+- Correction du compteur d'envolées/fausses notes lors des relances : les événements spéciaux d'un dé non relancé ne sont plus accumulés à tort à chaque relance
+
 1.8.0
 - Objet pouvoir : ajout de l'attribut Citation
 - Ajout du compendium des pouvoirs : 127 pouvoirs au total (94 peuples classés dans l'ordre du livre + 5 gamme + 3 ton + 25 clés)

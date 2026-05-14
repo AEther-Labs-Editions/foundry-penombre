@@ -707,14 +707,20 @@ export default class PenombreRoll extends Roll {
 
       // Sauvegarde des événements spéciaux (fausse note, envolée, etc.) avant modification des dés
       // Ces événements sont cumulatifs : un 1 suivi d'une relance à 8 produit une fausse note ET une envolée
+      // On n'accumule que pour les dés effectivement relancés, sinon l'événement persiste dans l'analyse courante
+      const harmoniqueRelance = rerolledDices.some((indice) => indice.startsWith("0-"))
+      const merveilleuxRelance = rerolledDices.some((indice) => {
+        const [dieIndex] = indice.split("-").map(Number)
+        return roll.dice[dieIndex]?.faces === MERVEILLEUX_FACES
+      })
       const preAnalysis = PenombreRoll.analyseRollResult(roll)
       if (!roll.options.accumulated) {
         roll.options.accumulated = { fausseNote: 0, envolee: 0, incidentMagique: 0, merveille: 0 }
       }
-      if (preAnalysis.isDeHarmoniqueMin) roll.options.accumulated.fausseNote++
-      if (preAnalysis.isDeHarmoniqueMax) roll.options.accumulated.envolee++
-      if (preAnalysis.isDeMerveilleuxMin) roll.options.accumulated.incidentMagique++
-      if (preAnalysis.isDeMerveilleuxMax) roll.options.accumulated.merveille++
+      if (harmoniqueRelance && preAnalysis.isDeHarmoniqueMin) roll.options.accumulated.fausseNote++
+      if (harmoniqueRelance && preAnalysis.isDeHarmoniqueMax) roll.options.accumulated.envolee++
+      if (merveilleuxRelance && preAnalysis.isDeMerveilleuxMin) roll.options.accumulated.incidentMagique++
+      if (merveilleuxRelance && preAnalysis.isDeMerveilleuxMax) roll.options.accumulated.merveille++
 
       // TODO : Lorsque le système de dés Pénombre sera géré : gérer la relance d'un dé merveilleux
       for (const indice of rerolledDices) {
