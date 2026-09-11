@@ -11,5 +11,6 @@ styles/**/*.css
 
 # Tools
 CLAUDE.md
+.claudeignore
 source/
 
