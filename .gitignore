@@ -6,14 +6,10 @@ styles/**/*.css
 node_modules/
 
 # Foundry VTT
-/packs
+packs
+styles/**/*.css
 
-# GitHub
-.github/copilot-instructions.md
-
-# Claude
+# Tools
 CLAUDE.md
-analyse.md
+source/
 
-# Rapports d'analyse
-rapports/
