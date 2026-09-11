@@ -1663,6 +1663,35 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   text-align: center;
   width: 40px;
 }
+.penombre-roll-dialog .line-3 .part-right-3 .complication-fieldset {
+  margin-top: 5px;
+}
+.penombre-roll-dialog .line-3 .part-right-3 .complication-fieldset .complication-toggle {
+  display: flex;
+  align-items: center;
+}
+.penombre-roll-dialog .line-3 .part-right-3 .complication-fieldset .complication-toggle input {
+  margin-right: 5px;
+}
+.penombre-roll-dialog .line-3 .part-right-3 .complication-fieldset .complication-details {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+.penombre-roll-dialog .line-3 .part-right-3 .complication-fieldset .complication-details .form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
+}
+.penombre-roll-dialog .line-3 .part-right-3 .complication-fieldset .complication-details .form-group label {
+  flex: 2;
+}
+.penombre-roll-dialog .line-3 .part-right-3 .complication-fieldset .complication-details .form-group .form-fields {
+  flex: 1;
+}
+.penombre-roll-dialog .line-3 .part-right-3 .complication-fieldset .complication-details .form-group .form-fields input {
+  width: 100%;
+}
 .theme-dark #interface #sidebar .chat-message,
 .theme-dark #interface #ui-right-column-1 .chat-message {
   background: #0b0a13e6;

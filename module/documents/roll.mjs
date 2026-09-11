@@ -115,6 +115,9 @@ export default class PenombreRoll extends Roll {
     const maitrises = actor.itemTypes.maitrise || []
     const choiceEffetMagiqueMaitrise = Object.fromEntries(maitrises.map((m) => [m.system.slug, m.name]))
 
+    // Une complication ne peut être créée que s'il reste au moins une des 4 cases libres (description vide)
+    const hasComplicationLibre = Object.values(actor.system.conscience?.complications ?? {}).some((complication) => !complication.description)
+
     let dialogContext = {
       actor,
       messageType,
@@ -138,6 +141,7 @@ export default class PenombreRoll extends Roll {
       choiceHarmonique,
       choiceEffetMagiqueNiveau,
       choiceEffetMagiqueMaitrise,
+      hasComplicationLibre,
     }
 
     const content = await foundry.applications.handlebars.renderTemplate("systems/penombre/templates/dialogs/roll-dialog.hbs", dialogContext)
@@ -233,6 +237,22 @@ export default class PenombreRoll extends Roll {
         if (jetonsReserve) {
           jetonsReserve.addEventListener("change", (evt) => this._onChangeJetons(evt, dialog.element))
         }
+        // Complication : dispense d'une partie du coût en jetons du jet
+        const complicationUse = dialog.element.querySelector("#complicationUse")
+        if (complicationUse) {
+          complicationUse.addEventListener("change", (evt) => this._onToggleComplication(evt, dialog.element))
+        }
+        const complicationJetons = dialog.element.querySelector("#complicationJetons")
+        if (complicationJetons) {
+          complicationJetons.addEventListener("change", (evt) => this._onChangeComplicationJetons(evt, dialog.element))
+        }
+        const complicationDescription = dialog.element.querySelector("#complicationDescription")
+        if (complicationDescription) {
+          complicationDescription.addEventListener("input", () => {
+            const jetons = Number(dialog.element.querySelector("#jetons").value) || 0
+            this._checkCanRoll(jetons, dialog.element)
+          })
+        }
       },
     })
 
@@ -242,6 +262,11 @@ export default class PenombreRoll extends Roll {
     // Calcul des jetons à dépenser (la dépense effective se fait après l'évaluation du jet)
     const jetonsReserveDepenses = rollContext.jetonsReserve !== "" ? Number(rollContext.jetonsReserve) : 0
     const jetonsConscienceDepenses = rollContext.jetonsConscience !== "" ? Number(rollContext.jetonsConscience) : 0
+
+    // Complication créée à la place d'une partie du coût en jetons
+    const complicationUse = rollContext.complicationUse === true
+    const complicationJetons = complicationUse ? Number(rollContext.complicationJetons || 0) : 0
+    const complicationDescription = complicationUse ? (rollContext.complicationDescription || "").trim() : ""
 
     formule = rollContext.formule || formule
 
@@ -271,6 +296,16 @@ export default class PenombreRoll extends Roll {
     }
     if (jetonsConscienceDepenses !== 0) {
       await actor.system.depenserJetons(jetonsConscienceDepenses)
+    }
+    if (complicationUse && complicationJetons > 0) {
+      const complications = actor.system.conscience.complications
+      const slotKey = Object.keys(complications).find((key) => !complications[key].description)
+      if (slotKey) {
+        await actor.update({
+          [`system.conscience.complications.${slotKey}.description`]: complicationDescription,
+          [`system.conscience.complications.${slotKey}.valeur`]: complicationJetons,
+        })
+      }
     }
 
     if (CONFIG.debug.penombre?.rolls) console.debug("Pénombre | PenombreRoll | roll", roll)
@@ -351,6 +386,31 @@ export default class PenombreRoll extends Roll {
     PenombreRoll._updateNbJetons(dialogElement)
   }
 
+  /**
+   * Nombre de jetons dispensés pour ce jet grâce à une complication (0 si la case n'est pas cochée).
+   *
+   * @param {HTMLElement} dialogElement L'élément DOM de la fenêtre de dialogue
+   * @returns {number}
+   */
+  static _getComplicationJetons(dialogElement) {
+    const complicationUse = dialogElement.querySelector("#complicationUse")?.checked ?? false
+    if (!complicationUse) return 0
+    return Number(dialogElement.querySelector("#complicationJetons")?.value || 0)
+  }
+
+  /**
+   * Indique si une complication est cochée mais sans description renseignée (cas bloquant le lancer).
+   *
+   * @param {HTMLElement} dialogElement L'élément DOM de la fenêtre de dialogue
+   * @returns {boolean}
+   */
+  static _isComplicationDescriptionMissing(dialogElement) {
+    const complicationUse = dialogElement.querySelector("#complicationUse")?.checked ?? false
+    if (!complicationUse) return false
+    const description = dialogElement.querySelector("#complicationDescription")?.value?.trim()
+    return !description
+  }
+
   static _checkCanRoll(jetons, dialogElement) {
     // Vérification des conditions de lancement
     let canRoll = true
@@ -358,10 +418,57 @@ export default class PenombreRoll extends Roll {
     const jetonsReserve = Number(dialogElement.querySelector("#jetonsReserve").value) || 0
     const jetonsTotal = jetonsConscience + jetonsReserve
 
-    if (jetonsTotal !== jetons) canRoll = false
+    const jetonsComplication = PenombreRoll._getComplicationJetons(dialogElement)
+    const jetonsARepartir = Math.max(jetons - jetonsComplication, 0)
+
+    if (jetonsTotal !== jetonsARepartir) canRoll = false
+    if (PenombreRoll._isComplicationDescriptionMissing(dialogElement)) canRoll = false
 
     if (canRoll) dialogElement.querySelector('button[type="submit"]').disabled = false
     else dialogElement.querySelector('button[type="submit"]').disabled = true
+  }
+
+  /**
+   * Gère le basculement de la case "Créer une complication".
+   * Affiche ou masque les champs description/jetons économisés et réinitialise leur valeur si décochée.
+   *
+   * @param {Event} event L'événement déclenché par le changement de la case à cocher.
+   * @param {HTMLElement} dialogElement L'élément DOM de la fenêtre de dialogue
+   */
+  static _onToggleComplication(event, dialogElement) {
+    const details = dialogElement.querySelector(".complication-details")
+    if (event.target.checked) {
+      if (details) details.style.display = "flex"
+    } else {
+      if (details) details.style.display = "none"
+      const complicationDescription = dialogElement.querySelector("#complicationDescription")
+      if (complicationDescription) complicationDescription.value = ""
+      const complicationJetons = dialogElement.querySelector("#complicationJetons")
+      if (complicationJetons) complicationJetons.value = ""
+      // Les jetons dispensés par la complication redeviennent à répartir : on remet les champs à 0
+      const jetonsConscience = dialogElement.querySelector("#jetonsConscience")
+      if (jetonsConscience) jetonsConscience.value = 0
+      const jetonsReserve = dialogElement.querySelector("#jetonsReserve")
+      if (jetonsReserve) jetonsReserve.value = 0
+    }
+    PenombreRoll._updateNbJetons(dialogElement)
+  }
+
+  /**
+   * Gère le changement du nombre de jetons économisés par la complication.
+   * Contraint la valeur entre 1 et le minimum de 3 et du coût total en jetons du jet.
+   *
+   * @param {Event} event L'événement déclenché par le changement du champ numérique.
+   * @param {HTMLElement} dialogElement L'élément DOM de la fenêtre de dialogue
+   */
+  static _onChangeComplicationJetons(event, dialogElement) {
+    const jetons = Number(dialogElement.querySelector("#jetons").value) || 0
+    const max = Math.min(3, jetons)
+    let value = Number(event.target.value) || 0
+    if (value > max) value = max
+    if (value < 1) value = max > 0 ? 1 : 0
+    event.target.value = value
+    PenombreRoll._onChangeJetons(event, dialogElement)
   }
 
   static _onToggleAtout(event, dialogElement) {
@@ -392,8 +499,10 @@ export default class PenombreRoll extends Roll {
     const jetonsTotal = jetonsConscience + jetonsReserve
 
     const jetons = Number(dialogElement.querySelector("#jetons").value)
+    const jetonsComplication = PenombreRoll._getComplicationJetons(dialogElement)
+    const jetonsARepartir = Math.max(jetons - jetonsComplication, 0)
 
-    if (jetonsTotal > jetons) {
+    if (jetonsTotal > jetonsARepartir) {
       ui.notifications.warn(game.i18n.localize("PENOMBRE.Warnings.jetonsDepassement"))
     }
 
@@ -421,7 +530,8 @@ export default class PenombreRoll extends Roll {
     }
 
     // Permet le lancer ou non
-    if (jetonsTotal !== jetons) canRoll = false
+    if (jetonsTotal !== jetonsARepartir) canRoll = false
+    if (PenombreRoll._isComplicationDescriptionMissing(dialogElement)) canRoll = false
 
     if (canRoll) dialogElement.querySelector('button[type="submit"]').disabled = false
     else dialogElement.querySelector('button[type="submit"]').disabled = true
@@ -529,6 +639,29 @@ export default class PenombreRoll extends Roll {
     const jetons = jetonsAtouts + jetonActionCollegiale + jetonDeMerveilleux + jetonEffetMagique + jetonsEffetMagiqueMaitrise
     dialogElement.querySelector("#jetons").value = jetons
 
+    // Complication : n'est proposée que s'il reste des jetons à couvrir, et sa case dispensée ne peut
+    // pas dépasser le coût total du jet (ni la limite de 3 jetons par complication)
+    const complicationFieldset = dialogElement.querySelector(".complication-fieldset")
+    const complicationUseCheckbox = dialogElement.querySelector("#complicationUse")
+    if (complicationFieldset) {
+      complicationFieldset.style.display = jetons > 0 ? "" : "none"
+      if (jetons === 0 && complicationUseCheckbox?.checked) {
+        complicationUseCheckbox.checked = false
+        const details = dialogElement.querySelector(".complication-details")
+        if (details) details.style.display = "none"
+      }
+    }
+    const complicationJetonsInput = dialogElement.querySelector("#complicationJetons")
+    if (complicationJetonsInput) {
+      const maxComplication = Math.min(3, jetons)
+      complicationJetonsInput.max = maxComplication
+      if (Number(complicationJetonsInput.value) > maxComplication) {
+        complicationJetonsInput.value = maxComplication > 0 ? maxComplication : ""
+      }
+    }
+    const jetonsComplication = PenombreRoll._getComplicationJetons(dialogElement)
+    const jetonsARepartir = Math.max(jetons - jetonsComplication, 0)
+
     // Met à jour le tooltip pour expliquer chaque partie du total
     const tooltipLabel = dialogElement.querySelector("#jetonsDepenserTooltip")
     if (tooltipLabel) {
@@ -538,7 +671,9 @@ export default class PenombreRoll extends Roll {
         • Dé merveilleux : ${jetonDeMerveilleux} <br>
         • Produire effet magique : ${jetonEffetMagique} <br>
         • Compenser maîtrise magique : ${jetonsEffetMagiqueMaitrise} <br>
-        Total : ${jetons}`
+        Total : ${jetons} <br>
+        • Complication : -${jetonsComplication} <br>
+        Reste à répartir : ${jetonsARepartir}`
 
       tooltipLabel.setAttribute("data-tooltip", tooltipContent)
     }
