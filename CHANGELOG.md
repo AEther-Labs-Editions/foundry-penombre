@@ -1,3 +1,6 @@
+1.8.2
+- Fenêtre de dialogue : gestion de la complication
+
 1.8.1
 - Correction du compteur d'envolées/fausses notes lors des relances : les événements spéciaux d'un dé non relancé ne sont plus accumulés à tort à chaque relance
 

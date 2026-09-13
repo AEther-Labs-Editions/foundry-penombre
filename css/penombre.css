@@ -1491,6 +1491,13 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   background-image: url("/systems/penombre/assets/background/fond-coupe.webp");
   background-repeat: repeat;
 }
+.penombre.roll-dialog .window-content .form-footer {
+  justify-content: center;
+}
+.penombre.roll-dialog .window-content .form-footer > button {
+  flex: 0 0 auto;
+  width: 300px;
+}
 .penombre-roll-dialog {
   display: flex;
   flex-direction: column;
@@ -1499,7 +1506,7 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   display: flex;
   flex-direction: row;
   gap: 10px;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 .penombre-roll-dialog .line-1 .part-left-1 fieldset {
   padding-top: 5px;
@@ -1556,6 +1563,7 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   height: 20px;
 }
 .penombre-roll-dialog .line-2 fieldset {
+  width: 585px;
   padding: 0 0 0 15px;
 }
 .penombre-roll-dialog .line-2 fieldset .atouts {
@@ -1605,7 +1613,7 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 .penombre-roll-dialog .line-3 .part-left-3 {
   display: flex;
   flex-direction: column;
-  width: 280px;
+  width: 300px;
   margin-right: 10px;
 }
 .penombre-roll-dialog .line-3 .part-left-3 fieldset {
@@ -1643,11 +1651,24 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   height: 75px;
 }
 .penombre-roll-dialog .line-3 .part-left-3 .rollMode {
-  width: calc(100% - 10px);
+  width: calc(100%);
+  display: flex;
+  align-items: center;
+}
+.penombre-roll-dialog .line-3 .part-left-3 .rollMode label {
+  flex: 0 0 auto;
+  margin-right: 10px;
+}
+.penombre-roll-dialog .line-3 .part-left-3 .rollMode .form-fields {
+  flex: 1;
+}
+.penombre-roll-dialog .line-3 .part-left-3 .rollMode .form-fields select {
+  width: 100%;
 }
 .penombre-roll-dialog .line-3 .part-right-3 {
   display: flex;
   flex-direction: column;
+  width: 280px;
 }
 .penombre-roll-dialog .line-3 .part-right-3 .depensetotal {
   display: flex;
@@ -1663,34 +1684,38 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   text-align: center;
   width: 40px;
 }
-.penombre-roll-dialog .line-3 .part-right-3 .complication-fieldset {
-  margin-top: 5px;
+.penombre-roll-dialog .line-4 .complication-fieldset {
+  margin-top: 10px;
 }
-.penombre-roll-dialog .line-3 .part-right-3 .complication-fieldset .complication-toggle {
+.penombre-roll-dialog .line-4 .complication-fieldset .complication-toggle {
   display: flex;
   align-items: center;
 }
-.penombre-roll-dialog .line-3 .part-right-3 .complication-fieldset .complication-toggle input {
+.penombre-roll-dialog .line-4 .complication-fieldset .complication-toggle input {
   margin-right: 5px;
 }
-.penombre-roll-dialog .line-3 .part-right-3 .complication-fieldset .complication-details {
+.penombre-roll-dialog .line-4 .complication-fieldset .complication-details {
   display: flex;
   flex-direction: column;
   margin-top: 5px;
 }
-.penombre-roll-dialog .line-3 .part-right-3 .complication-fieldset .complication-details .form-group {
+.penombre-roll-dialog .line-4 .complication-fieldset .complication-details .form-group {
   display: flex;
   align-items: center;
   margin-bottom: 3px;
 }
-.penombre-roll-dialog .line-3 .part-right-3 .complication-fieldset .complication-details .form-group label {
-  flex: 2;
+.penombre-roll-dialog .line-4 .complication-fieldset .complication-details .form-group label {
+  flex: 0 0 auto;
+  margin-right: 10px;
 }
-.penombre-roll-dialog .line-3 .part-right-3 .complication-fieldset .complication-details .form-group .form-fields {
+.penombre-roll-dialog .line-4 .complication-fieldset .complication-details .form-group .form-fields {
   flex: 1;
 }
-.penombre-roll-dialog .line-3 .part-right-3 .complication-fieldset .complication-details .form-group .form-fields input {
-  width: 100%;
+.penombre-roll-dialog .line-4 .complication-fieldset .complication-details .form-group .form-fields input {
+  width: 360px;
+}
+.penombre-roll-dialog .line-4 .complication-fieldset .complication-details .form-group .form-fields select {
+  width: 50px;
 }
 .theme-dark #interface #sidebar .chat-message,
 .theme-dark #interface #ui-right-column-1 .chat-message {

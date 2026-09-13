@@ -5,6 +5,15 @@
       background-image: url("/systems/penombre/assets/background/fond-coupe.webp");
       background-repeat: repeat;
     }
+
+    .form-footer {
+      justify-content: center;
+
+      > button {
+        flex: 0 0 auto;
+        width: 300px;
+      }
+    }
   }
 }
 
@@ -16,7 +25,7 @@
     display: flex;
     flex-direction: row;
     gap: 10px;
-    justify-content: space-between;
+    justify-content: flex-start;
 
     .part-left-1 {
       fieldset {
@@ -82,6 +91,7 @@
 
   .line-2 {
     fieldset {
+        width: 585px;
         padding: 0 0 0 15px;
 
       .atouts {
@@ -140,7 +150,7 @@
     .part-left-3 {
       display: flex;
       flex-direction: column;
-      width: 280px;
+      width: 300px;
       margin-right: 10px;
 
       fieldset {
@@ -182,13 +192,29 @@
       }
 
       .rollMode {
-        width: calc(100% - 10px);
+        width: calc(100%);
+        display: flex;
+        align-items: center;
+
+        label {
+          flex: 0 0 auto;
+          margin-right: 10px;
+        }
+
+        .form-fields {
+          flex: 1;
+
+          select {
+            width: 100%;
+          }
+        }
       }
     }
 
     .part-right-3 {
       display: flex;
       flex-direction: column;
+      width: 280px;
 
       .depensetotal {
         display: flex;
@@ -207,39 +233,46 @@
           }
         }
       }
+    }
+  }
 
-      .complication-fieldset {
+  .line-4 {
+    .complication-fieldset {
+      margin-top: 10px;
+
+      .complication-toggle {
+        display: flex;
+        align-items: center;
+
+        input {
+          margin-right: 5px;
+        }
+      }
+
+      .complication-details {
+        display: flex;
+        flex-direction: column;
         margin-top: 5px;
 
-        .complication-toggle {
+        .form-group {
           display: flex;
           align-items: center;
+          margin-bottom: 3px;
 
-          input {
-            margin-right: 5px;
+          label {
+            flex: 0 0 auto;
+            margin-right: 10px;
           }
-        }
 
-        .complication-details {
-          display: flex;
-          flex-direction: column;
-          margin-top: 5px;
+          .form-fields {
+            flex: 1;
 
-          .form-group {
-            display: flex;
-            align-items: center;
-            margin-bottom: 3px;
-
-            label {
-              flex: 2;
+            input {
+              width: 360px;
             }
 
-            .form-fields {
-              flex: 1;
-
-              input {
-                width: 100%;
-              }
+            select {
+              width: 50px;
             }
           }
         }

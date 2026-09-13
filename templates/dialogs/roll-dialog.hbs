@@ -92,7 +92,7 @@
         <img src="systems/penombre/assets/ui/d20.webp" />
       </div>
       <div class="form-group rollMode">
-        <label for="messageMode">{{localize "CHAT.RollDefault"}}</label>
+        <label for="messageMode">{{localize "PENOMBRE.ui.modeJet"}}</label>
         <div class="form-fields">
           <select name="messageMode" id="messageMode">
             {{selectOptions rollModes selected=defaultRollMode localize=true}}
@@ -119,30 +119,37 @@
             {{formInput fieldJetonsReserve name="jetonsReserve" id="jetonsReserve"}}
           </div>
         </fieldset>
-        {{#if hasComplicationLibre}}
-        <fieldset class="complication-fieldset">
-          <legend>{{ localize 'PENOMBRE.ui.complicationRoll' }}</legend>
-          <div class="complication-toggle">
-            <input type="checkbox" id="complicationUse" name="complicationUse" /><label for="complicationUse">{{ localize 'PENOMBRE.ui.creerComplicationJet' }}</label>
-          </div>
-          <div class="complication-details" style="display: none;">
-            <div class="form-group">
-              <label for="complicationDescription">{{ localize 'PENOMBRE.ui.complicationDescription' }}</label>
-              <div class="form-fields">
-                <input type="text" id="complicationDescription" name="complicationDescription" />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="complicationJetons">{{ localize 'PENOMBRE.ui.complicationJetonsEconomises' }}</label>
-              <div class="form-fields">
-                <input type="number" id="complicationJetons" name="complicationJetons" min="1" max="3" value="1" />
-              </div>
-            </div>
-          </div>
-        </fieldset>
-        {{/if}}
       </fieldset>
     </div>
   </div>
+
+  {{#if hasComplicationLibre}}
+  <div class="line-4">
+    <fieldset class="complication-fieldset">
+      <legend>{{ localize 'PENOMBRE.ui.complicationRoll' }}</legend>
+      <div class="complication-toggle">
+        <input type="checkbox" id="complicationUse" name="complicationUse" /><label for="complicationUse">{{ localize 'PENOMBRE.ui.creerComplicationJet' }}</label>
+      </div>
+      <div class="complication-details" style="display: none;">
+        <div class="form-group">
+          <label for="complicationDescription">{{ localize 'PENOMBRE.ui.complicationDescription' }}</label>
+          <div class="form-fields">
+            <input type="text" id="complicationDescription" name="complicationDescription" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="complicationJetons">{{ localize 'PENOMBRE.ui.complicationJetonsEconomises' }}</label>
+          <div class="form-fields">
+            <select id="complicationJetons" name="complicationJetons">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  {{/if}}
 
 </div>
