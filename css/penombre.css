@@ -1433,11 +1433,49 @@ body.theme-light .penombre.action .action-content {
 body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   background-color: #faeed6;
 }
+body.theme-light #penombre-reserve-collegiale .div-factions {
+  background-color: #faeed6;
+  background-image: url("/systems/penombre/assets/background/fond.webp");
+  background-repeat: repeat;
+}
+#penombre-reserve-collegiale .reserve-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+#penombre-reserve-collegiale .div-potentiel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 0;
+  font-family: "Cattedrale";
+  color: #917f35;
+  letter-spacing: 2px;
+}
+#penombre-reserve-collegiale .div-potentiel .potentiel-valeur {
+  width: 45px;
+  text-align: center;
+  background: transparent;
+  border: none;
+  border-bottom: 1px dashed #917f35;
+  color: #917f35;
+  font-family: "Cattedrale";
+}
+#penombre-reserve-collegiale .div-potentiel .potentiel-valeur:focus {
+  outline: none;
+  border-bottom: 1px solid #917f35;
+}
+#penombre-reserve-collegiale .div-potentiel .potentiel-valeur-readonly {
+  min-width: 20px;
+  text-align: center;
+}
 #penombre-reserve-collegiale .div-jetons {
   background-image: url("/systems/penombre/assets/ui/reserve-collegiale.webp");
   background-repeat: no-repeat;
   background-size: 550px 550px;
-  width: 740px;
+  width: 555px;
+  flex-shrink: 0;
   height: 555px;
   padding-left: 157px;
   padding-top: 159px;
@@ -1476,6 +1514,7 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 }
 #penombre-reserve-collegiale .div-jetons-2 {
   display: table;
+  flex-shrink: 0;
 }
 #penombre-reserve-collegiale .div-jetons-2 .col-1-1 {
   width: 25px;
@@ -1514,6 +1553,184 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 }
 #penombre-reserve-collegiale .div-jetons-2 .jetons .jeton {
   text-align: center;
+}
+#penombre-reserve-collegiale .div-factions {
+  flex: 1;
+  padding: 15px;
+  border-left: 2px solid #917f35;
+  overflow-y: auto;
+}
+#penombre-reserve-collegiale .div-factions .factions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+#penombre-reserve-collegiale .div-factions .factions-header h2 {
+  font-family: "Cattedrale";
+  color: #917f35;
+  margin: 0;
+  font-size: 19px;
+}
+#penombre-reserve-collegiale .div-factions .factions-header .btn-create-faction {
+  background: #917f35;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+#penombre-reserve-collegiale .div-factions .factions-header .btn-create-faction:hover {
+  background: #6c5e27;
+}
+#penombre-reserve-collegiale .div-factions .factions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#penombre-reserve-collegiale .div-factions .faction {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #917f35;
+}
+#penombre-reserve-collegiale .div-factions .faction.collapsed .faction-section {
+  display: none;
+}
+#penombre-reserve-collegiale .div-factions .faction.collapsed .faction-toggle {
+  transform: rotate(-90deg);
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #917f35;
+  padding-bottom: 8px;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-header .faction-toggle {
+  cursor: pointer;
+  color: #917f35;
+  margin-right: 8px;
+  transition: transform 0.2s;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-header .faction-nom {
+  font-family: "Cattedrale";
+  font-size: 1.1rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1px dashed #917f35;
+  flex: 1;
+  margin-right: 10px;
+  color: #917f35;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-header .faction-nom:focus {
+  outline: none;
+  border-bottom: 1px solid #917f35;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-header .btn-delete-faction {
+  background: none;
+  border: none;
+  color: #c0392b;
+  cursor: pointer;
+  padding: 3px 6px;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-header .btn-delete-faction:hover {
+  color: #e74c3c;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-nom-readonly {
+  font-family: "Cattedrale";
+  font-size: 1.1rem;
+  color: #917f35;
+  flex: 1;
+  cursor: pointer;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section {
+  margin-bottom: 10px;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .section-header .section-title {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #917f35;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .section-header .btn-add {
+  background: none;
+  border: none;
+  color: #917f35;
+  cursor: pointer;
+  padding: 2px 5px;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .section-header .btn-add:hover {
+  color: #6c5e27;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .elements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element .element-nom {
+  flex: 1;
+  background: transparent;
+  border: none;
+  border-bottom: 1px dashed transparent;
+  font-size: 0.9rem;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element .element-nom:focus {
+  outline: none;
+  border-bottom: 1px dashed #917f35;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element .element-nom-readonly {
+  flex: 1;
+  font-size: 0.9rem;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element .element-valeur {
+  display: flex;
+  gap: 2px;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element .element-valeur .valeur-case {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element .element-valeur .valeur-case.readonly {
+  cursor: default;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element .btn-delete-element {
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  padding: 0 3px;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element .btn-delete-element:hover {
+  color: #c0392b;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element .btn-impose-complication {
+  background: none;
+  border: none;
+  color: #917f35;
+  cursor: pointer;
+  padding: 0 3px;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element .btn-impose-complication:hover {
+  color: #6c5e27;
+}
+#penombre-reserve-collegiale .div-factions .faction .faction-section.faction-complications .faction-element {
+  background: rgba(192, 57, 43, 0.15);
 }
 .theme-light .penombre.roll-dialog .window-content {
   background-color: #faeed6;
@@ -1626,6 +1843,16 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 .penombre-roll-dialog .line-2 fieldset .atouts .atout.checked {
   background-color: #917f35;
   color: white;
+}
+.penombre-roll-dialog .line-2 fieldset .atouts .faction-separator {
+  font-weight: bold;
+  color: #917f35;
+  padding: 5px 5px 2px 5px;
+  font-size: 0.85rem;
+}
+.penombre-roll-dialog .line-2 fieldset .atouts .faction-tag {
+  font-style: italic;
+  font-size: 0.85rem;
 }
 .penombre-roll-dialog .line-2 fieldset .options-total {
   display: flex;

@@ -61,7 +61,18 @@
             <div class="nom" data-tooltip="{{this.name}}">{{this.name}}</div>
             <div class="level">{{localize "PENOMBRE.ui.niveau:"}}{{this.system.valeur}}</div>
           </div>
-        {{/each}}      
+        {{/each}}
+
+        {{#if factionAtouts.length}}
+        <div class="faction-separator">{{localize 'PENOMBRE.Factions.atoutsFaction'}}</div>
+        {{#each factionAtouts}}
+          <div class="atout faction-atout" data-bonus="{{this.valeur}}" data-faction-id="{{this.factionId}}" data-element-id="{{this.id}}">
+            <div class="nom">{{this.name}} <span class="faction-tag">({{this.factionNom}})</span></div>
+            <div class="level">{{localize "PENOMBRE.ui.niveau:"}}{{this.valeur}}</div>
+          </div>
+        {{/each}}
+        {{/if}}
+        <input type="hidden" id="factionAtoutsUsed" name="factionAtoutsUsed" value="[]"/>
       </div>
       <div class="options-total">
         <label class="premierAtout" style="visibility: {{#if (eq messageType "principal")}}hidden{{else}}visible{{/if}};"><input type="checkbox" name="actionCollegialePremierAtout" id="actionCollegialePremierAtout"/>{{localize 'PENOMBRE.ui.actionCollegialePremierAtout' }}</label>
@@ -131,6 +142,19 @@
         <input type="checkbox" id="complicationUse" name="complicationUse" /><label for="complicationUse">{{ localize 'PENOMBRE.ui.creerComplicationJet' }}</label>
       </div>
       <div class="complication-details" style="display: none;">
+        {{#if factions.length}}
+        <div class="form-group">
+          <label for="complicationCible">{{ localize 'PENOMBRE.Factions.cibleComplication' }}</label>
+          <div class="form-fields">
+            <select id="complicationCible" name="complicationCible">
+              <option value="moi" {{#unless hasComplicationLibreIndividuelle}}disabled{{/unless}}>{{ localize 'PENOMBRE.Factions.cibleMoi' }}</option>
+              {{#each factions}}
+                <option value="{{this.id}}">{{ localize 'PENOMBRE.Factions.cibleFaction' }} : {{this.nom}}</option>
+              {{/each}}
+            </select>
+          </div>
+        </div>
+        {{/if}}
         <div class="form-group">
           <label for="complicationDescription">{{ localize 'PENOMBRE.ui.complicationDescription' }}</label>
           <div class="form-fields">

@@ -34,6 +34,16 @@ export default class PenombreSettingsHandler {
         onChange: ReserveCollegiale.changeNbJetons,
       },
 
+      utiliserFactions: {
+        name: "PENOMBRE.Settings.utiliserFactions.name",
+        hint: "PENOMBRE.Settings.utiliserFactions.hint",
+        scope: "world",
+        config: true,
+        default: false,
+        type: Boolean,
+        requiresReload: true,
+      },
+
       desSpeciaux: {
         name: "PENOMBRE.Settings.desSpeciaux.name",
         hint: "PENOMBRE.Settings.desSpeciaux.hint",
@@ -73,6 +83,8 @@ export default class PenombreSettingsHandler {
             9: { valeur: false },
             10: { valeur: false },
           },
+          potentiel: 0,
+          factions: {},
         },
       },
 

@@ -111,6 +111,17 @@ Jeton statuses: `actif` → `inactif` → `perdu`. Envolée reactivates 1 inacti
 
 Multi-player rolls: initiator pays 1 jeton from reserve. Other players see participation buttons. All successes are summed. First atout is free for participants.
 
+### Jeu des Factions (optional, `utiliserFactions` setting)
+
+Relations between the Éminences and world factions, stored on the `reserveCollegiale` world setting (`module/models/reserve-collegiale.mjs`), managed via `PenombreReserveCollegiale` (`module/applications/reserve-collegiale.mjs`) and its `reserve-collegiale.hbs` template:
+- Each faction has up to 3 **atouts collégiaux** (level 1-3) and up to 1 **complication collégiale** (level 1-3).
+- **Potentiel collégial** (`reserveCollegiale.potentiel`): points spent (1 each) to create a new faction atout in play; optionally paired with a complication to start the atout at level 2 for the same cost.
+- Faction atouts appear in the roll dialog alongside personal atouts (`PenombreRoll.prompt()`); the jeton spent on a faction atout must come from the réserve collégiale, never from personal conscience (enforced in `_updateNbJetons`/`_checkCanRoll`).
+- Fausse note/envolée on a roll that used a faction atout degrades that atout's level by 1 (erased at 0) — `PenombreRoll._degraderAtoutFaction()`, called from `PenombreActor.rollHarmonique()` and `PenombreRoll.reroll()`.
+- The individual "spend jetons to create a complication instead" flow in the roll dialog can also target a faction (`complicationCible`), crediting/creating a collegial complication instead of a personal one.
+- All faction/potentiel writes go through `PenombreReserveCollegiale._mutate*` static methods (single source of truth), called directly by the GM or via `CONFIG.queries["penombre.*"]` when a player triggers them.
+- See `source/Pénombre - Système Le Jeu des Factions v3-2.docx` for the full rules text, and `factions.md` for the implementation plan.
+
 ### Combat
 
 `PenombreCombat` extends `Combat`. Initiative: 100-200 range for adversaires, 200-300 for éminences.
@@ -123,7 +134,8 @@ Multi-player rolls: initiator pays 1 jeton from reserve. Other players see parti
 | `nbJetons` | Number | Number of reserve tokens (demo forces 10) |
 | `desSpeciaux` | Boolean | Custom Dice So Nice! appearance |
 | `desSpeciauxTexture` | Boolean | Custom Dice So Nice! textures |
-| `reserveCollegiale` | Object | Persisted reserve state (TypeDataModel) |
+| `reserveCollegiale` | Object | Persisted reserve state (TypeDataModel): jetons, potentiel collégial, factions |
+| `utiliserFactions` | Boolean | Enables the Jeu des Factions (collegial atouts/complications) |
 
 ## Debug Mode
 

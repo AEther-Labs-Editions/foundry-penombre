@@ -468,6 +468,7 @@
       "jetonsDepassement": "Trop de jetons sélectionnés",
       "jetonsConscienceInsuffisants": "Vous avez demandé {demande} jeton(s) de conscience alors qu’il ne vous en reste plus que {actuel} !",
       "jetonsReserveInsuffisants": "Vous avez demandé {demande} jeton(s) de la réserve collégiale alors qu’il n’en reste actuellement plus que {actuel} !",
+      "jetonsReserveFactionRequis": "Un atout collégial doit être payé par un jeton de la réserve collégiale (au moins {minimum} attendu(s)).",
       "limiteNbJetonsDemo": "Avec le style de jeu « Kit de démo », le nombre maximum de jetons dans la réserve collégiale sera forcé à 10.",
       "userSansActeur": "L’utilisateur {user} n’a pas d’acteur associé."
     },
@@ -494,10 +495,42 @@
       "desSpeciauxTexture": {
         "name": "Activer les textures des dés Pénombre",
         "hint": "Utiliser les textures des dés spéciaux Pénombre quand le module Dice So Nice est activé."
+      },
+      "utiliserFactions": {
+        "name": "Activer le Jeu des Factions",
+        "hint": "Ajoute la gestion des factions (atouts et complications collégiaux) à la Réserve Collégiale."
       }
     },
     "ReserveCollegiale": {
       "title": "Réserve Collégiale"
+    },
+    "Factions": {
+      "title": "Factions",
+      "creer": "Créer une faction",
+      "nouvelleFaction": "Nouvelle faction",
+      "supprimerFaction": "Supprimer la faction",
+      "confirmerSuppression": "Voulez-vous vraiment supprimer cette faction et tous ses atouts et complications collégiaux ?",
+      "ajouterAtout": "Ajouter un atout collégial",
+      "nouvelAtout": "Nouvel atout",
+      "limiteAtouts": "Une faction ne peut avoir plus de 3 atouts collégiaux.",
+      "complications": "Complications",
+      "ajouterComplication": "Ajouter une complication collégiale",
+      "nouvelleComplication": "Nouvelle complication",
+      "limiteComplications": "Une faction ne peut avoir plus d’une complication collégiale.",
+      "atoutsFaction": "Atouts de faction",
+      "potentiel": "Potentiel collégial",
+      "potentielTooltip": "Points utilisés pour créer de nouveaux atouts collégiaux en cours de partie.",
+      "potentielEpuise": "Le Potentiel collégial est épuisé : impossible de créer un nouvel atout collégial.",
+      "avecComplication": "Obtenir le niveau 2 en ajoutant une complication collégiale à cette faction",
+      "complicationDepuisJet": "Complication née d’un jet",
+      "imposerComplication": "Complication imposée : créditer la réserve collégiale d’autant de jetons que son niveau",
+      "complicationImposee": "La réserve collégiale a été créditée de {nb} jeton(s).",
+      "cibleComplication": "Cible de la complication",
+      "cibleMoi": "Moi",
+      "cibleFaction": "Faction",
+      "choisirAtoutDegrade": "Fausse note ou envolée : choisissez l’atout collégial dont le niveau baisse",
+      "choisir": "Choisir",
+      "atoutDegrade": "Le niveau de l’atout collégial « {nom} » ({faction}) baisse d’un niveau."
     },
     "GroupManager": {
       "title": "Gestionnaire de groupe",

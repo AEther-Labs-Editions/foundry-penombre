@@ -4,18 +4,63 @@ body {
       .div-jetons-2 {
         background-color: @background-light; // Si et seulement si on est en mode clair (et pas sombre) de la fiche
       }
+
+      .div-factions {
+        background-color: @background-light;
+        background-image: url("/systems/penombre/assets/background/fond.webp");
+        background-repeat: repeat;
+      }
     }
   }
 }
 
 
 #penombre-reserve-collegiale {
+  .reserve-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  // Potentiel collégial
+  .div-potentiel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 0;
+    font-family: @font-cattedrale;
+    color: @color-accent;
+    letter-spacing: 2px;
+
+    .potentiel-valeur {
+      width: 45px;
+      text-align: center;
+      background: transparent;
+      border: none;
+      border-bottom: 1px dashed @color-accent;
+      color: @color-accent;
+      font-family: @font-cattedrale;
+
+      &:focus {
+        outline: none;
+        border-bottom: 1px solid @color-accent;
+      }
+    }
+
+    .potentiel-valeur-readonly {
+      min-width: 20px;
+      text-align: center;
+    }
+  }
+
   // Jetons
   .div-jetons {
     background-image: url("/systems/penombre/assets/ui/reserve-collegiale.webp");
     background-repeat: no-repeat;
     background-size: 550px 550px;
-    width: 740px;
+    width: 555px;
+    flex-shrink: 0;
     height: 555px;
     padding-left: 157px;
     padding-top: 159px;
@@ -58,8 +103,8 @@ body {
   }
 
   .div-jetons-2 {
-
     display: table;
+    flex-shrink: 0;
 
     .col-1-1 {
       width: 25px;
@@ -100,6 +145,223 @@ body {
 
       .jeton {
         text-align: center;
+      }
+    }
+  }
+
+  // Section Factions
+  .div-factions {
+    flex: 1;
+    padding: 15px;
+    border-left: 2px solid @color-accent;
+    overflow-y: auto;
+
+    .factions-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+
+      h2 {
+        font-family: @font-cattedrale;
+        color: @color-accent;
+        margin: 0;
+        font-size: @font-size-middle;
+      }
+
+      .btn-create-faction {
+        background: @color-accent;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 3px;
+
+        &:hover {
+          background: darken(@color-accent, 10%);
+        }
+      }
+    }
+
+    .factions-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .faction {
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      padding: 10px;
+      border: 1px solid @color-accent;
+
+      &.collapsed {
+        .faction-section {
+          display: none;
+        }
+
+        .faction-toggle {
+          transform: rotate(-90deg);
+        }
+      }
+
+      .faction-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        border-bottom: 1px solid @color-accent;
+        padding-bottom: 8px;
+
+        .faction-toggle {
+          cursor: pointer;
+          color: @color-accent;
+          margin-right: 8px;
+          transition: transform 0.2s;
+        }
+
+        .faction-nom {
+          font-family: @font-cattedrale;
+          font-size: 1.1rem;
+          background: transparent;
+          border: none;
+          border-bottom: 1px dashed @color-accent;
+          flex: 1;
+          margin-right: 10px;
+          color: @color-accent;
+
+          &:focus {
+            outline: none;
+            border-bottom: 1px solid @color-accent;
+          }
+        }
+
+        .btn-delete-faction {
+          background: none;
+          border: none;
+          color: #c0392b;
+          cursor: pointer;
+          padding: 3px 6px;
+
+          &:hover {
+            color: #e74c3c;
+          }
+        }
+      }
+
+      .faction-nom-readonly {
+        font-family: @font-cattedrale;
+        font-size: 1.1rem;
+        color: @color-accent;
+        flex: 1;
+        cursor: pointer;
+      }
+
+      .faction-section {
+        margin-bottom: 10px;
+
+        .section-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 5px;
+
+          .section-title {
+            font-weight: bold;
+            font-size: 0.9rem;
+            color: @color-accent;
+          }
+
+          .btn-add {
+            background: none;
+            border: none;
+            color: @color-accent;
+            cursor: pointer;
+            padding: 2px 5px;
+
+            &:hover {
+              color: darken(@color-accent, 10%);
+            }
+          }
+        }
+
+        .elements-list {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+        }
+
+        .faction-element {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 5px 8px;
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 3px;
+
+          .element-nom {
+            flex: 1;
+            background: transparent;
+            border: none;
+            border-bottom: 1px dashed transparent;
+            font-size: 0.9rem;
+
+            &:focus {
+              outline: none;
+              border-bottom: 1px dashed @color-accent;
+            }
+          }
+
+          .element-nom-readonly {
+            flex: 1;
+            font-size: 0.9rem;
+          }
+
+          .element-valeur {
+            display: flex;
+            gap: 2px;
+
+            .valeur-case {
+              width: @small-case-size;
+              height: @small-case-size;
+              cursor: pointer;
+
+              &.readonly {
+                cursor: default;
+              }
+            }
+          }
+
+          .btn-delete-element {
+            background: none;
+            border: none;
+            color: #999;
+            cursor: pointer;
+            padding: 0 3px;
+
+            &:hover {
+              color: #c0392b;
+            }
+          }
+
+          .btn-impose-complication {
+            background: none;
+            border: none;
+            color: @color-accent;
+            cursor: pointer;
+            padding: 0 3px;
+
+            &:hover {
+              color: darken(@color-accent, 10%);
+            }
+          }
+        }
+
+        &.faction-complications {
+          .faction-element {
+            background: rgba(192, 57, 43, 0.15);
+          }
+        }
       }
     }
   }
