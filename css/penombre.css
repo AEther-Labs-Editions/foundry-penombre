@@ -457,7 +457,7 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
   color: #a56135;
 }
 .penombre.eminence .eminence-content .eminence-personnage.avance {
-  min-height: 250px;
+  min-height: 225px;
 }
 .penombre.eminence .eminence-content .eminence-personnage .logo-frame {
   display: table;
@@ -499,7 +499,7 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
   text-align: center;
 }
 .penombre.eminence .eminence-content .eminence-harmoniques {
-  min-height: 350px;
+  min-height: 325px;
 }
 .penombre.eminence .eminence-content .eminence-conscience-locked .col-3-1 .col-1-3 {
   display: flex;
