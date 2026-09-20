@@ -1,6 +1,7 @@
 1.8.3
 - Fenêtre de jet : un nom d'atout trop long est tronqué (nom complet en infobulle) au lieu de déborder sur la ligne suivante
 - Fiches Eminence et Adversaire : les barres de défilement (verticale et horizontale) sont plus larges et contrastées pour être repérées sur un petit écran
+- Fiche Eminence : suppression de l'espace vide d'environ 300 px sous le contenu (la frise décorative verticale imposait sa hauteur à la fiche)
 
 1.8.2
 - Fenêtre de dialogue : gestion de la complication

@@ -335,7 +335,9 @@ body {
       .grande-frise-verticale-3,
       .grande-frise-verticale-4,
       .grande-frise-verticale-5 {
-        flex: 1;
+        // Base en px : avec "flex: 1" (0%), la base se calcule sur la hauteur des images et la frise impose ~1250px à la fiche
+        flex: 1 1 0px;
+        min-height: 0;
         overflow: hidden;
 
         img {

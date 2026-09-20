@@ -379,7 +379,8 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
 .penombre.eminence .eminence-content .col-2 .grande-frise-verticale-3,
 .penombre.eminence .eminence-content .col-2 .grande-frise-verticale-4,
 .penombre.eminence .eminence-content .col-2 .grande-frise-verticale-5 {
-  flex: 1;
+  flex: 1 1 0px;
+  min-height: 0;
   overflow: hidden;
 }
 .penombre.eminence .eminence-content .col-2 .grande-frise-verticale-1 img,
