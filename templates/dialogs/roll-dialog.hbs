@@ -58,7 +58,7 @@
       <div class="atouts">
         {{#each atouts}}
           <div class="atout" data-bonus="{{this.system.valeur}}">
-            <div class="nom">{{this.name}}</div>
+            <div class="nom" data-tooltip="{{this.name}}">{{this.name}}</div>
             <div class="level">{{localize "PENOMBRE.ui.niveau:"}}{{this.system.valeur}}</div>
           </div>
         {{/each}}      

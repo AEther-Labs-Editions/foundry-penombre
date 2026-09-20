@@ -1564,6 +1564,7 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 }
 .penombre-roll-dialog .line-2 fieldset {
   width: 585px;
+  min-width: 0;
   padding: 0 0 0 15px;
 }
 .penombre-roll-dialog .line-2 fieldset .atouts {
@@ -1575,8 +1576,20 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 20px;
+  gap: 10px;
+  min-height: 20px;
   padding: 0 5px 0 5px;
+}
+.penombre-roll-dialog .line-2 fieldset .atouts .atout .nom {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.penombre-roll-dialog .line-2 fieldset .atouts .atout .level {
+  flex: 0 0 auto;
+  white-space: nowrap;
 }
 .penombre-roll-dialog .line-2 fieldset .atouts .atout:hover {
   cursor: pointer;

@@ -92,6 +92,8 @@
   .line-2 {
     fieldset {
         width: 585px;
+        // Un fieldset ne rétrécit pas sous son contenu (min-width: min-content) : sans cela, un nom d'atout long l'élargit
+        min-width: 0;
         padding: 0 0 0 15px;
 
       .atouts {
@@ -103,8 +105,23 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
-          height: 20px;
+          gap: 10px;
+          min-height: 20px;
           padding: 0 5px 0 5px;
+
+          // Un nom trop long est tronqué (nom complet en infobulle) pour ne pas déborder sur la ligne suivante
+          .nom {
+            flex: 1 1 auto;
+            min-width: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          .level {
+            flex: 0 0 auto;
+            white-space: nowrap;
+          }
 
           &:hover {
             cursor: pointer;

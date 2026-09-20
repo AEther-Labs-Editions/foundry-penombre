@@ -1,3 +1,6 @@
+1.8.3
+- Fenêtre de jet : un nom d'atout trop long est tronqué (nom complet en infobulle) au lieu de déborder sur la ligne suivante
+
 1.8.2
 - Fenêtre de dialogue : gestion de la complication
 
