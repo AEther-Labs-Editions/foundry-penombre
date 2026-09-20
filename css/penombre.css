@@ -206,6 +206,8 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
 }
 .penombre.eminence .eminence-content {
   overflow: auto;
+  scrollbar-width: auto;
+  scrollbar-color: #a56135 rgba(0, 0, 0, 0.35);
   font-family: "Cattedrale";
   color: #a56135;
   font-size: 17px;
@@ -996,7 +998,9 @@ body.theme-light .penombre.adversaire .adversaire-content {
   background-repeat: repeat;
 }
 .penombre.adversaire .adversaire-content {
-  overflow-y: auto;
+  overflow: auto;
+  scrollbar-width: auto;
+  scrollbar-color: #a56135 rgba(0, 0, 0, 0.35);
   font-size: 17px;
   clear: both;
 }

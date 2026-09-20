@@ -104,6 +104,14 @@
   gap: 6px;
 }
 
+// Mixin pour les barres de défilement des fiches : plus larges et contrastées que celles de Foundry
+// (trait fin rouge sombre sur fond sombre) afin d'être repérées sur un petit écran où la fiche déborde
+.visible-scrollbar() {
+  overflow: auto;
+  scrollbar-width: auto;
+  scrollbar-color: @color-primary rgba(0, 0, 0, 0.35);
+}
+
 // Mixin pour les sections d'items (pouvoirs, atouts, maîtrises)
 .item-section-base(@section-name) {
   color: @color-secondary;
