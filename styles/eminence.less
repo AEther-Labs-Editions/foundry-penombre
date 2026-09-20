@@ -616,87 +616,87 @@ body {
       }
     }
 
-    // Section harmoniques
+    // Section harmoniques : grille de 2 colonnes (+ une harmonique centrée). Chaque .harmonique (case, dé, nom)
+    // se place avec data-colonne, --rangee et --decalage, fournis par SYSTEM.HARMONIQUES_FICHE
     .eminence-harmoniques {
+      --taille-de: @case-size;
+      --taille-nom: @font-size-xlarge;
+      --ecart-colonnes: 32px;
       color: @color-secondary;
+
       .click:hover {
         cursor: pointer;
         -webkit-filter: drop-shadow(0px 0px 6px @color-hover-dice);
         filter: drop-shadow(0px 0px 6px @color-hover-dice);
       }
-      table {
-        tr {
-          &:nth-child(odd),
-          &:nth-child(even) {
-            background-color: transparent;
-          }
-        }
+
+      .harmoniques-grille {
+        display: grid;
+        grid-template-columns: max-content max-content;
+        column-gap: var(--ecart-colonnes);
+        justify-content: start;
+        width: 405px;
+        background: var(--table-background-color); // Panneau que Foundry peignait sous l'ancien <table>
       }
 
-      .case-de {
-        width: @case-size;
-      }
-
-      .col-3-1 {
-        .rang-2-2 {
-          float: none;
-          width: 405px;
-        }
-      }
-
-      .editer-harmoniques {
-        font-size: @font-size-xlarge;
-      }
-
-      // Cases de mouvement avec mixin
-      .case-de-mouve-1 { .case-de-mouve(40px); }
-      .case-de-mouve-2 { .case-de-mouve(-40px); }
-      .case-de-mouve-3 { .case-de-mouve(10px); }
-      .case-de-mouve-4 { .case-de-mouve(-5px); }
-      .case-de-mouve-5 { .case-de-mouve(85px); }
-
-      .flexible {
-        position: relative;
+      .harmonique {
+        grid-row: var(--rangee);
+        justify-self: start; // Largeur du contenu, pas de la colonne
         display: flex;
+        gap: 3px; // Espace entre la case et le nom
+        padding: 8px 16px;
+
+        &[data-colonne="gauche"] {
+          grid-column: 1;
+        }
+
+        &[data-colonne="droite"] {
+          grid-column: 2;
+        }
+
+        // Centrée sous les deux colonnes, retrait d'un écart de colonnes
+        &[data-colonne="centre"] {
+          grid-column: 1 / -1;
+          margin-left: var(--ecart-colonnes);
+        }
       }
 
-      .absolue {
-        position: absolute;
-        z-index: 5;
+      // Case, dé (ou sélecteur en édition) empilés dans la même cellule
+      .harmonique-de {
+        position: relative;
+        z-index: 5; // Même empilement qu'avant : dé et sélecteur au-dessus du nom
+        display: grid;
+        flex: none;
+        width: var(--taille-de);
+        height: var(--taille-de);
+        margin-left: var(--decalage);
+
+        > * {
+          grid-area: 1 / 1;
+          align-self: start;
+          justify-self: start;
+        }
+
+        .harmonique-case {
+          width: var(--taille-de);
+        }
+
+        .harmonique-image {
+          width: var(--taille-de);
+          height: var(--taille-de);
+          margin: -2px 0 0 3px;
+        }
+
+        .harmonique-saisie {
+          width: 70px;
+          margin: 25px 0 0 10px;
+          font-family: @font-chocolate;
+          font-size: @font-size-xlarge;
+        }
       }
 
-      .de-d-ame-saisie,
-      .de-d-esprit-saisie,
-      .de-d-etincelle-saisie,
-      .de-de-nature-saisie,
-      .de-de-nuit-saisie {
-        margin-top: 25px;
-        margin-left: 10px;
-        width: 70px;
-        font-family: @font-chocolate;
-      }
-
-      // Tailles des dés avec mixin
-      .de-ame,
-      .de-esprit,
-      .de-etincelle,
-      .de-nature,
-      .de-nuit {
-        margin-left: 3px;
-        margin-top: -2px;
-        width: @dice-size;
-        height: @dice-size;
-      }
-
-      // Textes gros
-      .text-gros-1,
-      .text-gros-2,
-      .text-gros-3,
-      .text-gros-4,
-      .text-gros-5 {
-        float: none;
-        color: @color-secondary;
-        font-size: @font-size-xlarge;
+      .harmonique-nom {
+        font-size: var(--taille-nom);
       }
     }
 

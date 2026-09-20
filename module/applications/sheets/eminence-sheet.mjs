@@ -34,11 +34,18 @@ export default class EminenceSheet extends PenombreBaseActorSheet {
   async _prepareContext() {
     const context = await super._prepareContext()
 
-    context.ame = this.document.system._source.harmoniques.ame.valeur
-    context.esprit = this.document.system._source.harmoniques.esprit.valeur
-    context.etincelle = this.document.system._source.harmoniques.etincelle.valeur
-    context.nature = this.document.system._source.harmoniques.nature.valeur
-    context.nuit = this.document.system._source.harmoniques.nuit.valeur
+    // Harmoniques dans l'ordre de lecture de la fiche, avec tout ce dont le gabarit a besoin
+    const harmoniques = this.document.system._source.harmoniques
+    context.harmoniques = SYSTEM.HARMONIQUES_FICHE.map(({ id, action, rangee, colonne, decalage }) => ({
+      id,
+      label: game.i18n.localize(`PENOMBRE.ui.${id}`),
+      tooltip: game.i18n.localize(action),
+      valeur: harmoniques[id].valeur,
+      name: `system.harmoniques.${id}.valeur`,
+      rangee,
+      colonne,
+      decalage,
+    }))
 
     context.jetons = this.document.system.conscience.jetons.slice(0, this.document.system.conscience.max)
     context.nbJetonsRestantsConscience = this.document.system.nbJetonsRestants

@@ -625,6 +625,9 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
   color: #56605b;
 }
 .penombre.eminence .eminence-content .eminence-harmoniques {
+  --taille-de: 85px;
+  --taille-nom: 30px;
+  --ecart-colonnes: 32px;
   color: #56605b;
 }
 .penombre.eminence .eminence-content .eminence-harmoniques .click:hover {
@@ -632,86 +635,61 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
   -webkit-filter: drop-shadow(0px 0px 6px #af010a);
   filter: drop-shadow(0px 0px 6px #af010a);
 }
-.penombre.eminence .eminence-content .eminence-harmoniques table tr:nth-child(odd),
-.penombre.eminence .eminence-content .eminence-harmoniques table tr:nth-child(even) {
-  background-color: transparent;
-}
-.penombre.eminence .eminence-content .eminence-harmoniques .case-de {
-  width: 85px;
-}
-.penombre.eminence .eminence-content .eminence-harmoniques .col-3-1 .rang-2-2 {
-  float: none;
+.penombre.eminence .eminence-content .eminence-harmoniques .harmoniques-grille {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  column-gap: var(--ecart-colonnes);
+  justify-content: start;
   width: 405px;
+  background: var(--table-background-color);
 }
-.penombre.eminence .eminence-content .eminence-harmoniques .editer-harmoniques {
-  font-size: 30px;
-}
-.penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-1 {
-  float: none;
-  margin-left: 40px;
-  width: 85px;
-  height: 85px;
-}
-.penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-2 {
-  float: none;
-  margin-left: -40px;
-  width: 85px;
-  height: 85px;
-}
-.penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-3 {
-  float: none;
-  margin-left: 10px;
-  width: 85px;
-  height: 85px;
-}
-.penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-4 {
-  float: none;
-  margin-left: -5px;
-  width: 85px;
-  height: 85px;
-}
-.penombre.eminence .eminence-content .eminence-harmoniques .case-de-mouve-5 {
-  float: none;
-  margin-left: 85px;
-  width: 85px;
-  height: 85px;
-}
-.penombre.eminence .eminence-content .eminence-harmoniques .flexible {
-  position: relative;
+.penombre.eminence .eminence-content .eminence-harmoniques .harmonique {
+  grid-row: var(--rangee);
+  justify-self: start;
   display: flex;
+  gap: 3px;
+  padding: 8px 16px;
 }
-.penombre.eminence .eminence-content .eminence-harmoniques .absolue {
-  position: absolute;
+.penombre.eminence .eminence-content .eminence-harmoniques .harmonique[data-colonne="gauche"] {
+  grid-column: 1;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .harmonique[data-colonne="droite"] {
+  grid-column: 2;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .harmonique[data-colonne="centre"] {
+  grid-column: 1 / -1;
+  margin-left: var(--ecart-colonnes);
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .harmonique-de {
+  position: relative;
   z-index: 5;
+  display: grid;
+  flex: none;
+  width: var(--taille-de);
+  height: var(--taille-de);
+  margin-left: var(--decalage);
 }
-.penombre.eminence .eminence-content .eminence-harmoniques .de-d-ame-saisie,
-.penombre.eminence .eminence-content .eminence-harmoniques .de-d-esprit-saisie,
-.penombre.eminence .eminence-content .eminence-harmoniques .de-d-etincelle-saisie,
-.penombre.eminence .eminence-content .eminence-harmoniques .de-de-nature-saisie,
-.penombre.eminence .eminence-content .eminence-harmoniques .de-de-nuit-saisie {
-  margin-top: 25px;
-  margin-left: 10px;
+.penombre.eminence .eminence-content .eminence-harmoniques .harmonique-de > * {
+  grid-area: 1 / 1;
+  align-self: start;
+  justify-self: start;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .harmonique-de .harmonique-case {
+  width: var(--taille-de);
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .harmonique-de .harmonique-image {
+  width: var(--taille-de);
+  height: var(--taille-de);
+  margin: -2px 0 0 3px;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .harmonique-de .harmonique-saisie {
   width: 70px;
+  margin: 25px 0 0 10px;
   font-family: "ChocoCovRainBold";
-}
-.penombre.eminence .eminence-content .eminence-harmoniques .de-ame,
-.penombre.eminence .eminence-content .eminence-harmoniques .de-esprit,
-.penombre.eminence .eminence-content .eminence-harmoniques .de-etincelle,
-.penombre.eminence .eminence-content .eminence-harmoniques .de-nature,
-.penombre.eminence .eminence-content .eminence-harmoniques .de-nuit {
-  margin-left: 3px;
-  margin-top: -2px;
-  width: 85px;
-  height: 85px;
-}
-.penombre.eminence .eminence-content .eminence-harmoniques .text-gros-1,
-.penombre.eminence .eminence-content .eminence-harmoniques .text-gros-2,
-.penombre.eminence .eminence-content .eminence-harmoniques .text-gros-3,
-.penombre.eminence .eminence-content .eminence-harmoniques .text-gros-4,
-.penombre.eminence .eminence-content .eminence-harmoniques .text-gros-5 {
-  float: none;
-  color: #56605b;
   font-size: 30px;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .harmonique-nom {
+  font-size: var(--taille-nom);
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs {
   color: #56605b;

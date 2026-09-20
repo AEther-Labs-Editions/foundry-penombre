@@ -5,125 +5,23 @@
     <img class="" src="systems/penombre/assets/ui/grise.webp" />
   </div>
   <div class="col-3-1 flexible">
-    <div class="rang-2-2 flexible">
-      <table class="table-de flexible">
-        <tr class="tr-de flexible">
-          <td class="flexible" data-tooltip="{{localize 'PENOMBRE.ui.actionScelerate'}}">
-            <div class="case-de-mouve-1 flexible">
-              <div class="absolue">
-                <img class="case-de" src="systems/penombre/assets/ui/case_de_penombre.webp" />
-              </div>
-              {{#if unlocked}}
-              <select name="system.harmoniques.nuit.valeur" class="de-de-nuit-saisie editer-harmoniques absolue">
-                {{selectOptions harmoniqueValueChoices selected=systemSource.harmoniques.nuit.valeur localize=true}}
-              </select>
-              {{else}}
-                <div class="de-de-nuit absolue">
-                  <img class="click de-nuit  draggable jetHarmonique" src="{{getDiceImage nuit}}" data-action="jetHarmonique" data-harmonique="nuit"/>
-                </div>
-              {{/if}}
-            </div>
-            <br />&nbsp;<br />
-            <div class="text-gros-1">
-              {{localize "PENOMBRE.ui.nuit"}}
-            </div>
-          </td>
-
-          <td></td>
-
-          <td class="flexible" data-tooltip="{{localize 'PENOMBRE.ui.actionSociale'}}">
-            <div class="case-de-mouve-2 flexible">
-              <div class="absolue">
-                <img class="case-de" src="systems/penombre/assets/ui/case_de_penombre.webp" />
-              </div>
-              {{#if unlocked}}
-              <select name="system.harmoniques.ame.valeur" class="de-d-ame-saisie editer-harmoniques absolue">
-                {{selectOptions harmoniqueValueChoices selected=systemSource.harmoniques.ame.valeur localize=true}}
-              </select>
-              {{else}}
-                <div class="de-d-ame absolue">
-                  <img class="click de-ame draggable jetHarmonique" src="{{getDiceImage ame}}" data-action="jetHarmonique" data-harmonique="ame"/>
-                </div>
-              {{/if}}
-            </div>
-            <br />&nbsp;<br />
-            <div class="text-gros-2">
-              {{localize "PENOMBRE.ui.ame"}}
-            </div>
-          </td>
-        </tr>
-        <tr class="tr-de flexible">
-          <td class="flexible" data-tooltip="{{localize 'PENOMBRE.ui.actionPhysique'}}">
-            <div class="case-de-mouve-3 flexible">
-              <div class="absolue">
-                <img class="case-de" src="systems/penombre/assets/ui/case_de_penombre.webp" />
-              </div>
-              {{#if unlocked}}
-              <select name="system.harmoniques.nature.valeur" class="de-de-nature-saisie editer-harmoniques absolue">
-                {{selectOptions harmoniqueValueChoices selected=systemSource.harmoniques.nature.valeur localize=true}}
-              </select>
-              {{else}}
-                <div class="de-de-nature absolue">
-                  <img class="click de-nature draggable jetHarmonique" src="{{getDiceImage nature}}" data-action="jetHarmonique" data-harmonique="nature"/>
-                </div>
-              {{/if}}
-            </div>
-            <br />&nbsp;<br />
-            <div class="text-gros-3">
-              {{localize "PENOMBRE.ui.nature"}}
-            </div>
-          </td>
-
-          <td></td>
-
-          <td class="flexible" data-tooltip="{{localize 'PENOMBRE.ui.actionMentale'}}">
-            <div class="case-de-mouve-4 flexible">
-              <div class="absolue">
-                <img class="case-de" src="systems/penombre/assets/ui/case_de_penombre.webp" />
-              </div>
-              {{#if unlocked}}
-              <select name="system.harmoniques.esprit.valeur" class="de-d-esprit-saisie editer-harmoniques absolue">
-                {{selectOptions harmoniqueValueChoices selected=systemSource.harmoniques.esprit.valeur localize=true}}
-              </select>
-              {{else}}
-                <div class="de-d-esprit absolue">
-                  <img class="click de-esprit draggable jetHarmonique" src="{{getDiceImage esprit}}" data-action="jetHarmonique" data-harmonique="esprit"/>
-                </div>
-              {{/if}}
-            </div>
-            <br />&nbsp;<br />
-            <div class="text-gros-4">
-              {{localize "PENOMBRE.ui.esprit"}}
-            </div>
-          </td>
-        </tr>
-        <tr class="tr-de flexible">
-          <td></td>
-
-          <td class="flexible" data-tooltip="{{localize 'PENOMBRE.ui.actionPerceptive'}}">
-            <div class="case-de-mouve-5 flexible">
-              <div class="absolue">
-                <img class="case-de" src="systems/penombre/assets/ui/case_de_penombre.webp" />
-              </div>
-              {{#if unlocked}}
-              <select name="system.harmoniques.etincelle.valeur" class="de-d-etincelle-saisie editer-harmoniques absolue">
-                {{selectOptions harmoniqueValueChoices selected=systemSource.harmoniques.etincelle.valeur localize=true}}
-              </select>
-              {{else}}
-                <div class="de-d-etincelle absolue">
-                  <img class="click de-etincelle draggable jetHarmonique" src="{{getDiceImage etincelle}}" data-action="jetHarmonique" data-harmonique="etincelle"/>
-                </div>
-              {{/if}}
-            </div>
-            <br />&nbsp;<br />
-            <div class="text-gros-5">
-              {{localize "PENOMBRE.ui.etincelle"}}
-            </div>
-          </td>
-          <td></td>
-        </tr>
-      </table>
+    {{!-- Une seule boucle : la disposition (rangée, colonne, décalage) vient de SYSTEM.HARMONIQUES_FICHE. Des div et non figure/figcaption : Foundry leur applique un style d'article (marges, cadre, italique) --}}
+    <div class="harmoniques-grille">
+      {{#each harmoniques as |h|}}
+      <div class="harmonique" data-harmonique="{{h.id}}" data-colonne="{{h.colonne}}" data-tooltip="{{h.tooltip}}" style="--rangee: {{h.rangee}}; --decalage: {{h.decalage}}px;">
+        <div class="harmonique-de">
+          <img class="harmonique-case" src="systems/penombre/assets/ui/case_de_penombre.webp" alt="" />
+          {{#if @root.unlocked}}
+          <select name="{{h.name}}" class="harmonique-saisie">
+            {{selectOptions @root.harmoniqueValueChoices selected=h.valeur localize=true}}
+          </select>
+          {{else}}
+          <img class="harmonique-image click draggable jetHarmonique" src="{{getDiceImage h.valeur}}" alt="{{h.label}}" data-action="jetHarmonique" data-harmonique="{{h.id}}" />
+          {{/if}}
+        </div>
+        <div class="harmonique-nom">{{h.label}}</div>
+      </div>
+      {{/each}}
     </div>
-    
   </div>
 </div>

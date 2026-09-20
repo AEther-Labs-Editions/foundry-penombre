@@ -21,6 +21,21 @@ export const HARMONIQUES = Object.freeze({
   },
 })
 
+/**
+ * Disposition des harmoniques sur la fiche d'éminence, dans l'ordre de lecture (rangée par rangée).
+ * - action : clé de localisation de l'infobulle (type d'action associé)
+ * - rangee : ligne de la grille (1 à 3)
+ * - colonne : "gauche", "droite" ou "centre" (centré sous les deux colonnes)
+ * - decalage : retrait horizontal de la case, en px (négatif = vers la gauche)
+ */
+export const HARMONIQUES_FICHE = Object.freeze([
+  { id: "nuit", action: "PENOMBRE.ui.actionScelerate", rangee: 1, colonne: "gauche", decalage: 40 },
+  { id: "ame", action: "PENOMBRE.ui.actionSociale", rangee: 1, colonne: "droite", decalage: -40 },
+  { id: "nature", action: "PENOMBRE.ui.actionPhysique", rangee: 2, colonne: "gauche", decalage: 10 },
+  { id: "esprit", action: "PENOMBRE.ui.actionMentale", rangee: 2, colonne: "droite", decalage: -5 },
+  { id: "etincelle", action: "PENOMBRE.ui.actionPerceptive", rangee: 3, colonne: "centre", decalage: 85 },
+])
+
 export const PEUPLES = Object.freeze({
   ameAccouchee: {
     id: "ameAccouchee",
