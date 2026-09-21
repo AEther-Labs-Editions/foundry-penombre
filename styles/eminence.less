@@ -24,12 +24,10 @@ body {
 
               label {
                 display: flex;
-                float: none;
               }
 
               span {
                 display: flex;
-                float: none;
                 font-family: @font-chocolate;
                 font-size: @font-size-base;
                 color: @color-secondary;
@@ -37,23 +35,22 @@ body {
 
               .col-2-2 {
                 margin-top: 30px;
-                float: left;
                 width: 101px;
+                display: grid;
+                grid-template-columns: 20px minmax(0, 1fr);
 
                 img {
-                  float: left;
                   width: 20px;
                 }
 
                 span {
-                  margin-left: 25px;
-                  width: calc(100% - 25px);
+                  margin-left: 0;
+                  width: auto;
                 }
               }
 
               .col-3-2 {
-                margin-left: 313px;
-                width: calc(100% - 313px);
+                width: auto;
               }
             }
 
@@ -91,7 +88,6 @@ body {
       &.eminence {
         .eminence-content {
           .logo-penombre {
-            float: none;
             width: 223px;
             content: url("/systems/penombre/assets/ui/logo_penombre_sur_fond_sombre.webp");
           }
@@ -129,33 +125,46 @@ body {
     font-family: @font-cattedrale;
     color: @color-primary;
     font-size: @font-size-base;
-    clear: both;
 
     table {
         margin: 0;
     }
 
     .eminence-timbre {
-      display: table;
+      display: grid;
+      grid-template-columns: 100px minmax(0, 525px);
+      align-items: start;
+
+      &:not(.avance) {
+        grid-template-columns: @frame-width 223px;
+
+        .frise-penombre {
+          grid-column: 1;
+        }
+
+        .logo-penombre {
+          grid-column: 2;
+        }
+      }
 
       .cadre-img {
         width: 100px;
-        float: left;
       }
 
       .datas-timbre {
-        float: left;
-        width: 525px;
+        display: grid;
+        grid-template-columns: 212px 101px minmax(0, 1fr);
+        align-items: start;
+        width: auto;
+        min-width: 0;
         padding-left: 4px;
       }
 
       .logo-penombre {
-        float: none;
         width: 223px;
       }
 
       .frise-penombre {
-        float: left;
         width: @frame-width;
       }
     }
@@ -178,27 +187,23 @@ body {
 
         label {
           display: flex;
-          float: none;
         }
 
         span {
           display: flex;
-          float: none;
           font-family: @font-chocolate;
           font-size: @font-size-base;
           color: @color-secondary;
         }
 
         .col-1-2 {
-          float: left;
+          grid-column: 1;
           width: 212px;
 
           div {
             display: table;
 
             span {
-              float: none;
-              clear: both;
               height: 15px;
 
               &.description {
@@ -264,18 +269,19 @@ body {
         }
 
         .col-2-2 {
+          grid-column: 2;
           margin-top: 30px;
-          float: left;
           width: 101px;
+          display: grid;
+          grid-template-columns: 20px minmax(0, 1fr);
 
           img {
-            float: left;
             width: 20px;
           }
 
           span {
-            margin-left: 25px;
-            width: calc(100% - 25px);
+            margin-left: 0;
+            width: auto;
           }
 
           .statut-timbre-case {
@@ -286,8 +292,9 @@ body {
         }
 
         .col-3-2 {
-          margin-left: 313px;
-          width: calc(100% - 313px);
+          grid-column: 3;
+          width: auto;
+          min-width: 0;
           .peste-texte {
             margin-top: 9px;
           }
@@ -358,20 +365,21 @@ body {
     }
 
     .col-1-1 {
+      flex: 0 0 25px;
       width: 25px;
-      float: left;
+      align-self: flex-start;
       transform: rotate(180deg);
     }
 
     .col-2-1 {
+      flex: 0 0 12px;
       width: 12px;
-      float: left;
     }
 
     .col-3-1 {
+      flex: 0 0 404px;
       width: 404px;
-      float: left;
-      flex-direction: column;
+      min-width: 0;
       padding-left: 4px;
     }
 
@@ -380,6 +388,9 @@ body {
     .eminence-harmoniques,
     .eminence-conscience {
       .section-style();
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
     }
 
     .eminence-pouvoirs,
@@ -409,9 +420,16 @@ body {
       min-height: 190px;
       &.avance { min-height: 225px; }
       color: @color-primary;
+
+      .col-3-1 {
+        display: grid;
+        grid-template-columns: 150px minmax(0, 250px);
+        align-items: start;
+      }
+
       .logo-frame {
-        display: table;
-        float: left;
+        grid-column: 1;
+        display: block;
         height: 152px;
         width: 150px;
         padding: 1px;
@@ -437,13 +455,20 @@ body {
       }
 
       .data {
-        float: left;
-        width: 250px;
-        clear: right;
+        grid-column: 2;
+        width: auto;
+        min-width: 0;
 
         .name {
           font-size: @font-size-2xlarge;
+          line-height: 1;
+          max-height: 2em;
+          overflow: hidden;
+          overflow-wrap: anywhere;
           text-align: center;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
         }
         .description {
           font-size: @font-size-middle;
@@ -454,7 +479,10 @@ body {
     }
 
     .eminence-harmoniques {
-      min-height: 325px;
+      box-sizing: border-box;
+      // La bordure est rasterisée sur le pixel extérieur par Chromium : 324px CSS conserve les 325px de la référence.
+      height: 324px;
+      min-height: 324px;
     }
 
     .eminence-conscience-locked {
@@ -489,7 +517,6 @@ body {
 
     // Section conscience
     .eminence-conscience {
-      display: flow-root;
       color: @color-accent;
 
       // Jetons
@@ -529,7 +556,6 @@ body {
           // justify-content: space-between;
 
           label {
-            float: left;
           }
 
           .div-descriptions {
@@ -542,12 +568,10 @@ body {
             display: flex;
             width: 250px;
             height: 20px;
-            float: left;
             flex-direction: row;
             justify-content: flex-end;
 
             .complication-case {
-              float: left;
               width: @small-case-size;
               height: @small-case-size;
 
@@ -569,13 +593,10 @@ body {
 
         label {
           width: @frame-width;
-          float: none;
-          clear: both;
         }
 
         .ligne-complication {
           display: flex;
-          clear: both;
 
           .div-descriptions-2 {
             input {
@@ -584,13 +605,11 @@ body {
           }
 
           .div-descriptions {
-            float: left;
             width: 320px;
           }
 
           // Cases à cocher
           .div-cases {
-            float: left;
             width: 70px;
 
             .images-cases {
@@ -601,7 +620,6 @@ body {
               justify-content: flex-end;
 
               .complication-case {
-                float: left;
                 width: @small-case-size;
                 height: @small-case-size;
               }
@@ -706,6 +724,10 @@ body {
 
       .content .pouvoirs {
         .item-table-base();
+        grid-column: 2;
+        width: 100%;
+        min-width: 0;
+        margin-left: 0;
 
         .item-coche {
           width: 55px;
@@ -733,6 +755,10 @@ body {
 
       .content .atouts {
         .item-table-base();
+        grid-column: 2;
+        width: 100%;
+        min-width: 0;
+        margin-left: 0;
 
         th.item-case-width,
         td.item-case-width {
@@ -740,9 +766,14 @@ body {
         }
 
         .item-case {
-          float: left;
           width: @small-case-size;
           height: @small-case-size;
+        }
+
+        td.item-case-width {
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
       }
     }
@@ -753,6 +784,10 @@ body {
 
       .content .maitrises {
         .item-table-base();
+        grid-column: 2;
+        width: 100%;
+        min-width: 0;
+        margin-left: 0;
 
         th.harmonique-width,
         td.harmonique-width {
@@ -769,10 +804,11 @@ body {
 
       .content {
         .tableau {
-          display: table;
+          display: grid;
+          grid-template-columns: 477px minmax(0, 1fr);
 
           .div-gauche {
-            float: left;
+            grid-column: 1;
             width: 477px;
 
             .img-gauche {
@@ -782,8 +818,9 @@ body {
           }
 
           .div-droite {
-            margin-left: 477px;
-            width: 152px;
+            grid-column: 2;
+            margin-left: 0;
+            width: auto;
             padding-left: 33px;
 
             .img-droite {

@@ -1,3 +1,7 @@
+1.8.4
+- Fiche Eminence : refactoring interne de la mise en page (les float sont remplacés par flex et grid dans les blocs Personnage, Harmoniques, Conscience, Timbre et les tableaux), sans changement visuel
+- Fiche Eminence : correction lorsque le nom du personnage est sur 2 lignes
+
 1.8.3
 - Fenêtre de jet : un nom d'atout trop long est tronqué (nom complet en infobulle) au lieu de déborder sur la ligne suivante
 - Fiches Eminence et Adversaire : les barres de défilement (verticale et horizontale) sont plus larges et contrastées pour être repérées sur un petit écran

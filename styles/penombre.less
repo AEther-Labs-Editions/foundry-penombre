@@ -81,8 +81,6 @@
 
 // Mixin pour les sections principales
 .section-style(@min-width: auto) {
-  float: none;
-  flex-direction: column;
   border: 1px solid @color-primary;
   padding: 2px;
   border-radius: @border-radius;
@@ -115,14 +113,18 @@
   .titre-section-@{section-name} {
     font-size: @font-size-2xlarge;
     margin-left: 100px;
-    float: none;
   }
 
   .content {
-    min-height: 125px; // Bloc Potentiel flottant (110px) + son étiquette qui déborde : évite qu'elle chevauche la bordure quand le tableau est court
+    display: grid;
+    grid-template-columns: 100px minmax(0, 1fr);
+    align-items: start;
+    min-height: 125px; // Bloc Potentiel (110px) + son étiquette qui déborde : évite qu'elle chevauche la bordure quand le tableau est court
     text-align: left;
 
     .potentiel {
+      grid-column: 1;
+      width: 100px;
       text-align: center;
 
       .div-potentiel {
@@ -156,7 +158,7 @@
     .item-controls-style();
 
     .plusitem {
-      float: right;
+      margin-left: auto;
     }
   }
 }
@@ -164,7 +166,6 @@
 // Mixin pour le bloc potentiel (pouvoirs, atouts, maîtrises)
 .potentiel-block() {
   position: relative;
-  float: left;
   text-align: center;
   width: 100px;
   height: 110px;
