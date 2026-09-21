@@ -40,6 +40,8 @@
 @dice-size: 85px;
 @case-size: 85px;
 @small-case-size: 20px;
+@item-row-padding: 3px; // Padding vertical des lignes de tableaux d'items (Foundry : 8px)
+@item-header-padding: 4px; // Idem pour la ligne d'en-tête
 @border-radius: 6px;
 @border-radius-small: 4px;
 @border-radius-tiny: 2.5px;
@@ -117,6 +119,7 @@
   }
 
   .content {
+    min-height: 125px; // Bloc Potentiel flottant (110px) + son étiquette qui déborde : évite qu'elle chevauche la bordure quand le tableau est court
     text-align: left;
 
     .potentiel {
@@ -137,7 +140,13 @@
   border-radius: @border-radius-small;
   padding: 2px;
 
+  // Lignes resserrées d'environ 20 % par rapport au padding par défaut de Foundry
+  th {
+    padding-block: @item-header-padding;
+  }
+
   td {
+    padding-block: @item-row-padding;
     font-family: @font-chocolate;
     font-size: @font-size-midlarge;
   }

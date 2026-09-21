@@ -702,6 +702,7 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
   float: none;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .content {
+  min-height: 125px;
   text-align: left;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel {
@@ -748,7 +749,11 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
   border-radius: 4px;
   padding: 2px;
 }
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs th {
+  padding-block: 4px;
+}
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs td {
+  padding-block: 3px;
   font-family: "ChocoCovRainBold";
   font-size: 25px;
 }
@@ -790,6 +795,7 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
   float: none;
 }
 .penombre.eminence .eminence-content .eminence-atouts .content {
+  min-height: 125px;
   text-align: left;
 }
 .penombre.eminence .eminence-content .eminence-atouts .content .potentiel {
@@ -836,7 +842,11 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
   border-radius: 4px;
   padding: 2px;
 }
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts th {
+  padding-block: 4px;
+}
 .penombre.eminence .eminence-content .eminence-atouts .content .atouts td {
+  padding-block: 3px;
   font-family: "ChocoCovRainBold";
   font-size: 25px;
 }
@@ -872,6 +882,7 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
   float: none;
 }
 .penombre.eminence .eminence-content .eminence-maitrises .content {
+  min-height: 125px;
   text-align: left;
 }
 .penombre.eminence .eminence-content .eminence-maitrises .content .potentiel {
@@ -918,7 +929,11 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
   border-radius: 4px;
   padding: 2px;
 }
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises th {
+  padding-block: 4px;
+}
 .penombre.eminence .eminence-content .eminence-maitrises .content .maitrises td {
+  padding-block: 3px;
   font-family: "ChocoCovRainBold";
   font-size: 25px;
 }
