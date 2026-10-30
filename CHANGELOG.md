@@ -5,6 +5,11 @@
 - Factions : un atout saisi sur une ligne vide est créé au niveau 1 sans rien dépenser ; le MJ reporte lui-même le coût éventuel (potentiel, case de complication), ce qui permet la création préalable, l'évolution de fin de scénario et les dépenses de potentiel en jeu
 - Factions : un atout perdu pour des raisons narratives peut rendre ses points au potentiel collégial
 - Factions : une complication dont plus aucune case n'est barrée reste sur la feuille jusqu'à ce que le MJ la retire (elle disparaît à la retraite suivante)
+- Réserve collégiale : en mode lecture, seuls les atouts et complications renseignés sont affichés ; la fenêtre s'agrandit en hauteur
+- Réserve collégiale : sans l'image du panier (nombre de jetons différent de 10), les jetons ont la même taille qu'avec le panier
+- Fiche Eminence : les sections sont séparées par les filets rouges de la fiche du livre, avec ses ornements aux jonctions, à la place des cadres arrondis
+- Fiche Eminence : le nom de chaque harmonique est sous son dé, dans la disposition de la fiche du livre
+- Fiche Eminence : Dispo, Actuelle et Max de la conscience sont affichés dans des ronds dorés, comme le cercle « Max » de la fiche du livre
 
 1.8.4
 - Fiche Eminence : refactoring interne de la mise en page (les float sont remplacés par flex et grid dans les blocs Personnage, Harmoniques, Conscience, Timbre et les tableaux), sans changement visuel

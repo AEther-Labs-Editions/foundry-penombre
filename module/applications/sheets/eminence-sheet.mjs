@@ -36,15 +36,14 @@ export default class EminenceSheet extends PenombreBaseActorSheet {
 
     // Harmoniques dans l'ordre de lecture de la fiche, avec tout ce dont le gabarit a besoin
     const harmoniques = this.document.system._source.harmoniques
-    context.harmoniques = SYSTEM.HARMONIQUES_FICHE.map(({ id, action, rangee, colonne, decalage }) => ({
+    context.harmoniques = SYSTEM.HARMONIQUES_FICHE.map(({ id, action, x, y }) => ({
       id,
       label: game.i18n.localize(`PENOMBRE.ui.${id}`),
       tooltip: game.i18n.localize(action),
       valeur: harmoniques[id].valeur,
       name: `system.harmoniques.${id}.valeur`,
-      rangee,
-      colonne,
-      decalage,
+      x,
+      y,
     }))
 
     context.jetons = this.document.system.conscience.jetons.slice(0, this.document.system.conscience.max)

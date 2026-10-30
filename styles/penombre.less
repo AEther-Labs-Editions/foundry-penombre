@@ -25,6 +25,7 @@
 @font-cattedrale: "Cattedrale";
 @font-chocolate: "ChocoCovRainBold";
 @font-notomusic: "NotoMusic";
+@font-goudy: "GoudyBookletter1911"; // Police libre (OFL) proche de l'Adobe Jenson Pro des libellés de la fiche du livre
 
 
 // Tailles
@@ -49,6 +50,8 @@
 @case-cle-size: 25px;
 @control-width: 70px;
 @frame-width: 402px;
+@fiche-filet-largeur: 16px; // Filets de la fiche d'éminence (fiche du livre réduite à 53 %)
+@fiche-filet-hauteur: 18px;
 
 /* ---------------------------------------------
         Fonts
@@ -68,6 +71,11 @@
   src: url(/systems/penombre/fonts/noto-music/NotoMusic-Regular.ttf);
 }
 
+@font-face {
+  font-family: @font-goudy;
+  src: url(/systems/penombre/fonts/goudy-bookletter-1911/GoudyBookletter1911.ttf);
+}
+
 
 /* ---------------------------------------------
         Mixins
@@ -79,21 +87,28 @@
   filter: drop-shadow(-5px 5px 5px @color-shadow);
 }
 
-// Mixin pour les sections principales
+// Mixin pour les sections principales : séparées par le filet triple de la fiche du livre (en bas de chaque section)
 .section-style(@min-width: auto) {
-  border: 1px solid @color-primary;
-  padding: 2px;
-  border-radius: @border-radius;
+  position: relative;
+  padding: 2px 2px @fiche-filet-hauteur;
   min-width: @min-width;
+  background: url("/systems/penombre/assets/ui/fiche-filet.webp") left bottom / 100% @fiche-filet-hauteur no-repeat;
 }
 
 // Mixin pour les contrôles d'items
+// Cellules de tableau (pas de flex : une cellule en flex perd son centrage vertical et peut passer sous la ligne).
+// Alignées à droite, pour que le « + » de l'en-tête tombe au-dessus de l'icône de droite des lignes
 .item-controls-style() {
   width: @control-width;
   font-size: @font-size-base;
-  display: flex;
-  justify-content: center;
-  gap: 6px;
+  vertical-align: middle;
+  text-align: right;
+  white-space: nowrap;
+  padding-right: 6px;
+
+  a + a {
+    margin-left: 6px;
+  }
 }
 
 // Mixin pour les barres de défilement des fiches : plus larges et contrastées que celles de Foundry
@@ -108,11 +123,40 @@
 .item-section-base(@section-name) {
   color: @color-secondary;
   text-align: center;
-  padding-bottom: 2px;
+
+  // Bouton « + » de création en mode édition, à droite du titre et de sa volute
+  .plusitem-titre {
+    position: relative;
+    top: -4px; // Remonté pour s'aligner sur le milieu des volutes du titre
+    margin-left: 10px;
+    font-size: @font-size-middle;
+    vertical-align: middle;
+  }
 
   .titre-section-@{section-name} {
-    font-size: @font-size-2xlarge;
+    font-size: @font-size-large;
     margin-left: 100px;
+
+    // Volutes de part et d'autre du titre, découpées dans la fiche du livre (comme « Relations » sur la feuille collégiale)
+    &::before,
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 36px;
+      height: 18px;
+      vertical-align: middle;
+      background: center / contain no-repeat;
+    }
+
+    &::before {
+      margin-right: 8px;
+      background-image: url("/systems/penombre/assets/ui/fiche-titre-volute-gauche.webp");
+    }
+
+    &::after {
+      margin-left: 8px;
+      background-image: url("/systems/penombre/assets/ui/fiche-titre-volute-droite.webp");
+    }
   }
 
   .content {
@@ -135,12 +179,19 @@
 }
 
 // Mixin pour les tables d'items
+// Liste sans en-tête, sans bordure extérieure ni lignes de couleurs alternées (comme les lignes de la fiche du livre)
 .item-table-base() {
   margin-left: 100px;
   width: calc(100% - 103px);
-  border: 1px solid @color-accent;
-  border-radius: @border-radius-small;
   padding: 2px;
+
+  table,
+  tr,
+  tr:nth-child(odd),
+  tr:nth-child(even) {
+    border: none;
+    background: none;
+  }
 
   // Lignes resserrées d'environ 20 % par rapport au padding par défaut de Foundry
   th {
@@ -156,11 +207,57 @@
   th.item-controls,
   td.item-controls {
     .item-controls-style();
-
-    .plusitem {
-      margin-left: auto;
-    }
   }
+}
+
+// Mixin pour le fond d'un bloc de la fiche d'éminence : parchemin du bloc découpé dans la fiche du livre, sous le filet
+// (la dernière section d'une colonne n'a pas de filet)
+.fond-bloc(@nom) {
+  background:
+    url("/systems/penombre/assets/ui/fiche-filet.webp") left bottom / 100% @fiche-filet-hauteur no-repeat,
+    url("/systems/penombre/assets/ui/fiche-fond-@{nom}.webp") left top / 100% 100% no-repeat;
+
+  &:last-child {
+    background: url("/systems/penombre/assets/ui/fiche-fond-@{nom}.webp") left top / 100% 100% no-repeat;
+  }
+}
+
+// Variante avec la forme pâle du coin haut gauche (Pouvoirs, Atouts, Maîtrises), reconstituée d'après la fiche du livre
+// et posée à la même échelle que les filets (53 %)
+.fond-bloc-orne(@nom; @largeur) {
+  background:
+    url("/systems/penombre/assets/ui/fiche-filet.webp") left bottom / 100% @fiche-filet-hauteur no-repeat,
+    url("/systems/penombre/assets/ui/fiche-ornement-@{nom}.webp") left top / @largeur auto no-repeat,
+    url("/systems/penombre/assets/ui/fiche-fond-@{nom}.webp") left top / 100% 100% no-repeat;
+
+  &:last-child {
+    background:
+      url("/systems/penombre/assets/ui/fiche-ornement-@{nom}.webp") left top / @largeur auto no-repeat,
+      url("/systems/penombre/assets/ui/fiche-fond-@{nom}.webp") left top / 100% 100% no-repeat;
+  }
+}
+
+// Mixin pour le libellé vertical et la frise d'une section de la colonne gauche de la fiche d'éminence.
+// Frise en trois morceaux pour ne pas déformer les losanges : extrémités à leur taille, ligne du milieu répétée
+// entre les deux (rognée sur la zone de contenu, que les marges réservent aux extrémités : 620 et 600 px à 12/168)
+.frise-section(@couleur) {
+  .col-1-1 {
+    align-self: center;
+  }
+
+  .col-2-1 {
+    .frise-verticale-fond(@couleur; 12px);
+  }
+}
+
+// Frise verticale (ligne et losanges près des extrémités) en trois morceaux, pour une largeur donnée :
+// les extrémités (620 et 600 px de haut pour 168 de large) gardent leurs proportions, la ligne du milieu se répète
+.frise-verticale-fond(@couleur; @largeur) {
+  padding: (620 / 168 * @largeur) 0 (600 / 168 * @largeur);
+  background:
+    url("/systems/penombre/assets/ui/frise-@{couleur}-haut.webp") center top / 100% auto no-repeat border-box,
+    url("/systems/penombre/assets/ui/frise-@{couleur}-bas.webp") center bottom / 100% auto no-repeat border-box,
+    url("/systems/penombre/assets/ui/frise-@{couleur}-milieu.webp") center top / 100% auto repeat-y content-box;
 }
 
 // Mixin pour le bloc potentiel (pouvoirs, atouts, maîtrises)
@@ -169,6 +266,9 @@
   text-align: center;
   width: 100px;
   height: 110px;
+  // Médaillon, valeur et libellé réduits ensemble, sans retoucher leurs positions internes
+  transform: scale(0.85);
+  transform-origin: top center;
 
   .img-potentiel {
     width: 100px;

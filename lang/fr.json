@@ -389,7 +389,7 @@
       "conscienceDispo": "Dispo",
       "modeEdition": "Bascule entre le Mode « Éditer » et le Mode « Jouer »",
       "clicImage": "Clic pour changer l'image. <br>Clic-droit pour réinitialiser l'image par défaut.",
-      "complicationsListe": "Complications :",
+      "complicationsListe": "Complications",
       "pouvoir": "Pouvoir",
       "pouvoirs": "Pouvoirs",
       "atout": "Atout",
@@ -430,6 +430,7 @@
       "harmonique": "Harmonique",
       "prerequis": "Prérequis",
       "niveau": "Niveau",
+      "niveauTooltip": "Niveau {niveau}",
       "niveau:": "Niveau : ",
       "bonusTotal": "Bonus total",
       "bonus": "Bonus",
@@ -456,7 +457,9 @@
       "relanceConscience": "Relance (conscience)",
       "relanceReserve": "Relance (réserve)",
       "utilise": "Utilisé",
-      "valeur": "Valeur"
+      "nonUtilise": "Non utilisé",
+      "valeur": "Valeur",
+      "valeurTooltip": "Valeur {valeur}"
     },
     "Roll": {
       "fausseNote": "Fausse note",

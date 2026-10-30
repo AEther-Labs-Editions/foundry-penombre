@@ -1,8 +1,6 @@
 <div class="eminence-personnage{{#if (or isStyleJeuStandard isStyleJeuAvance)}} avance{{/if}}">
   <div class="col-1-1 text-vertical-personnage">{{localize "PENOMBRE.ui.section.personnage"}}</div>
-  <div class="col-2-1 frise-verticale">
-    <img src="systems/penombre/assets/ui/marron.webp" alt="" />
-  </div>
+  <div class="col-2-1 frise-verticale"></div>
   <div class="col-3-1">
     <div class="logo-frame">
       <img class="logo-img{{#if unlocked}}-unlocked{{/if}}" src="{{document.img}}" {{#if unlocked}}data-action="editImage" data-edit="img" data-tooltip="PENOMBRE.ui.clicImage"{{else}}data-tooltip="{{document.name}}"{{/if}}/>

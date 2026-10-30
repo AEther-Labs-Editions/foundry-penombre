@@ -22,18 +22,20 @@ export const HARMONIQUES = Object.freeze({
 })
 
 /**
- * Disposition des harmoniques sur la fiche d'éminence, dans l'ordre de lecture (rangée par rangée).
+ * Disposition des harmoniques sur la fiche d'éminence, dans l'ordre de lecture, reprise de la fiche du livre (p. 373) :
+ * Nuit et Âme en haut, Nature et Esprit plus écartés, Étincelle centrée en bas, chaque nom sous son dé.
+ * Centres des cercles des dés mesurés sur la fiche du livre (bloc de 689 × 594 px), ramenés à la section de la fiche
+ * (× 0,653 en largeur, × 0,589 en hauteur), moins le libellé et la frise (43 px) et la moitié du dé (42,5 px),
+ * le tout décalé de 20 px vers la gauche à la demande (ornement compris).
  * - action : clé de localisation de l'infobulle (type d'action associé)
- * - rangee : ligne de la grille (1 à 3)
- * - colonne : "gauche", "droite" ou "centre" (centré sous les deux colonnes)
- * - decalage : retrait horizontal de la case, en px (négatif = vers la gauche)
+ * - x, y : position du coin haut gauche du dé dans la zone des dés, en px
  */
 export const HARMONIQUES_FICHE = Object.freeze([
-  { id: "nuit", action: "PENOMBRE.ui.actionScelerate", rangee: 1, colonne: "gauche", decalage: 40 },
-  { id: "ame", action: "PENOMBRE.ui.actionSociale", rangee: 1, colonne: "droite", decalage: -40 },
-  { id: "nature", action: "PENOMBRE.ui.actionPhysique", rangee: 2, colonne: "gauche", decalage: 10 },
-  { id: "esprit", action: "PENOMBRE.ui.actionMentale", rangee: 2, colonne: "droite", decalage: -5 },
-  { id: "etincelle", action: "PENOMBRE.ui.actionPerceptive", rangee: 3, colonne: "centre", decalage: 85 },
+  { id: "nuit", action: "PENOMBRE.ui.actionScelerate", x: 91, y: 19 },
+  { id: "ame", action: "PENOMBRE.ui.actionSociale", x: 230, y: 19 },
+  { id: "nature", action: "PENOMBRE.ui.actionPhysique", x: 43, y: 147 },
+  { id: "esprit", action: "PENOMBRE.ui.actionMentale", x: 269, y: 147 },
+  { id: "etincelle", action: "PENOMBRE.ui.actionPerceptive", x: 156, y: 215 },
 ])
 
 export const PEUPLES = Object.freeze({
