@@ -32,7 +32,8 @@ export default class ReserveCollegiale extends foundry.abstract.TypeDataModel {
         complications: new TypedObjectField(
           new SchemaField({
             nom: new StringField({ required: true, blank: false, initial: "Nouvelle complication" }),
-            valeur: new NumberField({ required: true, integer: true, initial: 1, min: 1, max: 3 }),
+            // 0 : plus aucune case barrée, la complication disparaît à la retraite suivante
+            valeur: new NumberField({ required: true, integer: true, initial: 1, min: 0, max: 3 }),
           }),
         ),
       }),

@@ -1433,44 +1433,31 @@ body.theme-light .penombre.action .action-content {
 body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   background-color: #faeed6;
 }
-body.theme-light #penombre-reserve-collegiale .div-factions {
-  background-color: #faeed6;
-  background-image: url("/systems/penombre/assets/background/fond.webp");
-  background-repeat: repeat;
+#penombre-reserve-collegiale.feuille-etendue {
+  min-height: 593px;
+  min-width: 987px;
+  max-width: 987px;
+}
+#penombre-reserve-collegiale.feuille-etendue .window-content {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+  background: #ece2c8;
+}
+#penombre-reserve-collegiale.feuille-etendue .reserve-wrapper {
+  flex: 1;
+  min-height: 0;
+}
+#penombre-reserve-collegiale.feuille-etendue .div-factions {
+  height: auto;
 }
 #penombre-reserve-collegiale .reserve-wrapper {
   display: flex;
   flex-direction: row;
-  gap: 15px;
-}
-#penombre-reserve-collegiale .div-potentiel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 8px 0;
-  font-family: "Cattedrale";
-  color: #917f35;
-  letter-spacing: 2px;
-}
-#penombre-reserve-collegiale .div-potentiel .potentiel-valeur {
-  width: 45px;
-  text-align: center;
-  background: transparent;
-  border: none;
-  border-bottom: 1px dashed #917f35;
-  color: #917f35;
-  font-family: "Cattedrale";
-}
-#penombre-reserve-collegiale .div-potentiel .potentiel-valeur:focus {
-  outline: none;
-  border-bottom: 1px solid #917f35;
-}
-#penombre-reserve-collegiale .div-potentiel .potentiel-valeur-readonly {
-  min-width: 20px;
-  text-align: center;
 }
 #penombre-reserve-collegiale .div-jetons {
+  position: relative;
   background-image: url("/systems/penombre/assets/ui/reserve-collegiale.webp");
   background-repeat: no-repeat;
   background-size: 550px 550px;
@@ -1512,6 +1499,11 @@ body.theme-light #penombre-reserve-collegiale .div-factions {
   width: 68px;
   height: 68px;
 }
+#penombre-reserve-collegiale .div-jetons .div-potentiel {
+  position: absolute;
+  top: 76px;
+  left: 462px;
+}
 #penombre-reserve-collegiale .div-jetons-2 {
   display: table;
   flex-shrink: 0;
@@ -1537,10 +1529,14 @@ body.theme-light #penombre-reserve-collegiale .div-factions {
   margin-left: 35px;
   width: 491px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  /* 5 colonnes égales */
+  grid-template-columns: repeat(5, 68px);
+  justify-content: space-evenly;
   gap: 10px;
   padding: 10px;
+}
+#penombre-reserve-collegiale .div-jetons-2 .jetons .jeton {
+  width: 68px;
+  height: 68px;
 }
 #penombre-reserve-collegiale .div-jetons-2 .jetons img.dropshadow-actif,
 #penombre-reserve-collegiale .div-jetons-2 .jetons img.dropshadow-inactif {
@@ -1554,183 +1550,165 @@ body.theme-light #penombre-reserve-collegiale .div-factions {
 #penombre-reserve-collegiale .div-jetons-2 .jetons .jeton {
   text-align: center;
 }
-#penombre-reserve-collegiale .div-factions {
-  flex: 1;
-  padding: 15px;
-  border-left: 2px solid #917f35;
-  overflow-y: auto;
+#penombre-reserve-collegiale .div-jetons-2 .div-potentiel {
+  margin: 10px auto;
 }
-#penombre-reserve-collegiale .div-factions .factions-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
+#penombre-reserve-collegiale .div-potentiel {
+  width: 74px;
+  display: grid;
+  grid-template-areas: "medaillon" "libelle";
+  justify-items: center;
 }
-#penombre-reserve-collegiale .div-factions .factions-header h2 {
-  font-family: "Cattedrale";
-  color: #917f35;
-  margin: 0;
-  font-size: 19px;
-}
-#penombre-reserve-collegiale .div-factions .factions-header .btn-create-faction {
-  background: #917f35;
-  color: white;
+#penombre-reserve-collegiale .div-potentiel .img-potentiel {
+  grid-area: medaillon;
+  width: 74px;
   border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 3px;
 }
-#penombre-reserve-collegiale .div-factions .factions-header .btn-create-faction:hover {
-  background: #6c5e27;
+#penombre-reserve-collegiale .div-potentiel .potentiel-valeur {
+  grid-area: medaillon;
+  margin-top: 10px;
+  width: 34px;
+  height: 28px;
+  text-align: center;
+  align-self: center;
+  font-family: "ChocoCovRainBold";
+  font-size: 25px;
+  line-height: 28px;
+  color: #7a3b20;
+  background: transparent;
+  border: none;
+  padding: 0;
 }
-#penombre-reserve-collegiale .div-factions .factions-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+#penombre-reserve-collegiale .div-potentiel .potentiel-valeur:focus {
+  outline: 1px dashed #7a3b20;
+  box-shadow: none;
+}
+#penombre-reserve-collegiale .div-potentiel .potentiel-libelle {
+  grid-area: libelle;
+  margin-top: -4px;
+  font-family: "ChocoCovRainBold";
+  font-size: 17px;
+  color: #7a3b20;
+}
+#penombre-reserve-collegiale .div-factions {
+  width: 430px;
+  flex-shrink: 0;
+  height: 555px;
+  overflow-y: auto;
+  padding: 6px 18px 12px 26px;
+  color: #2b2b2b;
+  background: url("/systems/penombre/assets/ui/relations-filet-vertical.webp") left 4px top / 14px auto repeat-y, linear-gradient(rgba(236, 226, 200, 0.8), rgba(236, 226, 200, 0.8)), url("/systems/penombre/assets/background/fond.webp") center / cover, #ece2c8;
+}
+#penombre-reserve-collegiale .div-factions .relations-titre {
+  margin: 0 0 4px;
+  border: none;
+  text-align: center;
+}
+#penombre-reserve-collegiale .div-factions .relations-titre img {
+  display: block;
+  height: 30px;
+  margin: 0 auto;
+  border: none;
 }
 #penombre-reserve-collegiale .div-factions .faction {
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  padding: 10px;
-  border: 1px solid #917f35;
+  --relations-couleur: #56605b;
+  padding: 6px 0 12px;
+  background: url("/systems/penombre/assets/ui/relations-filet.webp") left bottom / 100% 12px no-repeat;
 }
-#penombre-reserve-collegiale .div-factions .faction.collapsed .faction-section {
-  display: none;
+#penombre-reserve-collegiale .div-factions .faction.rouge {
+  --relations-couleur: #7a3b20;
 }
-#penombre-reserve-collegiale .div-factions .faction.collapsed .faction-toggle {
-  transform: rotate(-90deg);
+#penombre-reserve-collegiale .div-factions .faction:last-of-type {
+  background: none;
 }
-#penombre-reserve-collegiale .div-factions .faction .faction-header {
+#penombre-reserve-collegiale .div-factions .libelle {
+  font-family: "ChocoCovRainBold";
+  font-size: 19px;
+  line-height: 1.1;
+  color: var(--relations-couleur);
+  white-space: nowrap;
+}
+#penombre-reserve-collegiale .div-factions .ligne {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #917f35;
-  padding-bottom: 8px;
+  align-items: flex-end;
+  gap: 6px;
+  min-height: 24px;
 }
-#penombre-reserve-collegiale .div-factions .faction .faction-header .faction-toggle {
-  cursor: pointer;
-  color: #917f35;
-  margin-right: 8px;
-  transition: transform 0.2s;
-}
-#penombre-reserve-collegiale .div-factions .faction .faction-header .faction-nom {
-  font-family: "Cattedrale";
-  font-size: 1.1rem;
+#penombre-reserve-collegiale .div-factions .ligne input[type="text"],
+#penombre-reserve-collegiale .div-factions .ligne .faction-nom-readonly,
+#penombre-reserve-collegiale .div-factions .ligne .element-nom-readonly {
+  flex: 1;
+  min-width: 0;
+  height: 22px;
+  padding: 0 2px;
+  font-size: 13px;
+  color: #2b2b2b;
   background: transparent;
   border: none;
-  border-bottom: 1px dashed #917f35;
-  flex: 1;
-  margin-right: 10px;
-  color: #917f35;
+  border-bottom: 1px dotted #b9a98a;
+  border-radius: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-#penombre-reserve-collegiale .div-factions .faction .faction-header .faction-nom:focus {
+#penombre-reserve-collegiale .div-factions .ligne input[type="text"]:focus,
+#penombre-reserve-collegiale .div-factions .ligne .faction-nom-readonly:focus,
+#penombre-reserve-collegiale .div-factions .ligne .element-nom-readonly:focus {
   outline: none;
-  border-bottom: 1px solid #917f35;
+  box-shadow: none;
+  border-bottom: 1px solid var(--relations-couleur);
 }
-#penombre-reserve-collegiale .div-factions .faction .faction-header .btn-delete-faction {
-  background: none;
-  border: none;
-  color: #c0392b;
-  cursor: pointer;
-  padding: 3px 6px;
+#penombre-reserve-collegiale .div-factions .ligne input[type="text"]::placeholder,
+#penombre-reserve-collegiale .div-factions .ligne .faction-nom-readonly::placeholder,
+#penombre-reserve-collegiale .div-factions .ligne .element-nom-readonly::placeholder {
+  color: #b9a98a;
+  font-style: italic;
 }
-#penombre-reserve-collegiale .div-factions .faction .faction-header .btn-delete-faction:hover {
-  color: #e74c3c;
+#penombre-reserve-collegiale .div-factions .ligne .btn-supprimer {
+  flex-shrink: 0;
+  visibility: hidden;
+  color: var(--relations-couleur);
+  font-size: 13px;
 }
-#penombre-reserve-collegiale .div-factions .faction .faction-nom-readonly {
-  font-family: "Cattedrale";
-  font-size: 1.1rem;
-  color: #917f35;
-  flex: 1;
-  cursor: pointer;
+#penombre-reserve-collegiale .div-factions .ligne:hover .btn-supprimer {
+  visibility: visible;
 }
-#penombre-reserve-collegiale .div-factions .faction .faction-section {
-  margin-bottom: 10px;
-}
-#penombre-reserve-collegiale .div-factions .faction .faction-section .section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 5px;
-}
-#penombre-reserve-collegiale .div-factions .faction .faction-section .section-header .section-title {
+#penombre-reserve-collegiale .div-factions .ligne-nom .faction-nom,
+#penombre-reserve-collegiale .div-factions .ligne-nom .faction-nom-readonly {
   font-weight: bold;
-  font-size: 0.9rem;
-  color: #917f35;
 }
-#penombre-reserve-collegiale .div-factions .faction .faction-section .section-header .btn-add {
-  background: none;
-  border: none;
-  color: #917f35;
-  cursor: pointer;
-  padding: 2px 5px;
-}
-#penombre-reserve-collegiale .div-factions .faction .faction-section .section-header .btn-add:hover {
-  color: #6c5e27;
-}
-#penombre-reserve-collegiale .div-factions .faction .faction-section .elements-list {
+#penombre-reserve-collegiale .div-factions .cases {
   display: flex;
-  flex-direction: column;
-  gap: 5px;
+  flex-shrink: 0;
+  gap: 1px;
+  width: 66px;
+  justify-content: flex-end;
 }
-#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 5px 8px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 3px;
-}
-#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element .element-nom {
-  flex: 1;
-  background: transparent;
+#penombre-reserve-collegiale .div-factions .cases .case {
   border: none;
-  border-bottom: 1px dashed transparent;
-  font-size: 0.9rem;
 }
-#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element .element-nom:focus {
-  outline: none;
-  border-bottom: 1px dashed #917f35;
-}
-#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element .element-nom-readonly {
-  flex: 1;
-  font-size: 0.9rem;
-}
-#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element .element-valeur {
-  display: flex;
-  gap: 2px;
-}
-#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element .element-valeur .valeur-case {
-  width: 20px;
-  height: 20px;
+#penombre-reserve-collegiale .div-factions .cases .case.cliquable {
   cursor: pointer;
 }
-#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element .element-valeur .valeur-case.readonly {
-  cursor: default;
+#penombre-reserve-collegiale .div-factions .cases .case.cliquable:hover {
+  filter: drop-shadow(0 0 2px var(--relations-couleur));
 }
-#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element .btn-delete-element {
-  background: none;
-  border: none;
-  color: #999;
-  cursor: pointer;
-  padding: 0 3px;
+#penombre-reserve-collegiale .div-factions .cases.cases-atout .case {
+  width: 22px;
+  height: 22px;
 }
-#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element .btn-delete-element:hover {
-  color: #c0392b;
+#penombre-reserve-collegiale .div-factions .cases.cases-complication .case {
+  width: 18px;
+  height: 18px;
+  margin: 2px 1px;
 }
-#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element .btn-impose-complication {
-  background: none;
-  border: none;
-  color: #917f35;
-  cursor: pointer;
-  padding: 0 3px;
-}
-#penombre-reserve-collegiale .div-factions .faction .faction-section .faction-element .btn-impose-complication:hover {
-  color: #6c5e27;
-}
-#penombre-reserve-collegiale .div-factions .faction .faction-section.faction-complications .faction-element {
-  background: rgba(192, 57, 43, 0.15);
+#penombre-reserve-collegiale .div-factions .btn-creer-faction {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  font-family: "ChocoCovRainBold";
+  font-size: 17px;
+  color: #7a3b20;
 }
 .theme-light .penombre.roll-dialog .window-content {
   background-color: #faeed6;

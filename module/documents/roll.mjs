@@ -284,7 +284,7 @@ export default class PenombreRoll extends Roll {
     const complicationDescription = complicationUse ? (rollContext.complicationDescription || "").trim() : ""
     const complicationCible = complicationUse ? rollContext.complicationCible || "moi" : "moi"
 
-    // Atouts de faction utilisés pour ce jet (pour la dégradation de niveau en cas de fausse note/envolée)
+    // Atouts de faction utilisés pour ce jet (pour la dégradation de niveau en cas de fausse note)
     let factionAtoutsUsed = []
     try {
       factionAtoutsUsed = JSON.parse(rollContext.factionAtoutsUsed || "[]")
@@ -535,7 +535,7 @@ export default class PenombreRoll extends Roll {
 
   /**
    * Sérialise les atouts de faction actuellement cochés dans le champ caché #factionAtoutsUsed,
-   * afin de pouvoir les retrouver après le jet (dégradation d'un atout collégial sur fausse note/envolée).
+   * afin de pouvoir les retrouver après le jet (dégradation d'un atout collégial sur fausse note).
    * @param {HTMLElement} dialogElement L'élément DOM de la fenêtre de dialogue
    */
   static _updateFactionAtoutsUsed(dialogElement) {
@@ -897,7 +897,7 @@ export default class PenombreRoll extends Roll {
   }
 
   /**
-   * Fausse note ou envolée sur un jet ayant utilisé un ou plusieurs atouts collégiaux : le niveau de l'un d'eux
+   * Fausse note sur un jet ayant utilisé un ou plusieurs atouts collégiaux : le niveau de l'un d'eux
    * (au choix des joueurs) baisse d'un niveau, et il est effacé s'il atteint 0.
    *
    * @param {Array<{factionId: string, elementId: string}>} factionAtoutsUsed Atouts de faction utilisés pour ce jet
@@ -1041,8 +1041,8 @@ export default class PenombreRoll extends Roll {
             await rerollActor.update({ "system.conscience.jetons": jetons })
           }
         }
-        // Fausse note ou envolée sur un jet ayant utilisé un atout collégial : son niveau baisse de 1
-        if (postAnalysis.isDeHarmoniqueMin || postAnalysis.isDeHarmoniqueMax) {
+        // Fausse note sur un jet ayant utilisé un atout collégial : son niveau baisse de 1
+        if (postAnalysis.isDeHarmoniqueMin) {
           await PenombreRoll._degraderAtoutFaction(roll.options.factionAtoutsUsed)
         }
       }

@@ -1,3 +1,11 @@
+1.9.0
+- Règle optionnelle « Le jeu des factions » (chapitre « La lutte au quotidien », p. 90-94), activée par le paramètre « Utiliser la règle des Factions » : relations avec jusqu'à 3 atouts collégiaux et une complication collégiale chacune, potentiel collégial, atouts de faction dans la fenêtre de jet (jeton pris dans la réserve collégiale), complication collégiale à la place de jetons dépensés
+- Réserve collégiale : avec les factions, la fenêtre reproduit la feuille collégiale étendue du livre (médaillon Potentiel, colonne Relations avec 3 lignes d'atouts et une ligne de complication par relation) ; le MJ saisit directement sur les lignes en mode édition
+- Factions : sur une fausse note, l'un des atouts collégiaux utilisés perd un niveau et disparaît à 0 (l'envolée n'a pas d'effet)
+- Factions : un atout saisi sur une ligne vide est créé au niveau 1 sans rien dépenser ; le MJ reporte lui-même le coût éventuel (potentiel, case de complication), ce qui permet la création préalable, l'évolution de fin de scénario et les dépenses de potentiel en jeu
+- Factions : un atout perdu pour des raisons narratives peut rendre ses points au potentiel collégial
+- Factions : une complication dont plus aucune case n'est barrée reste sur la feuille jusqu'à ce que le MJ la retire (elle disparaît à la retraite suivante)
+
 1.8.4
 - Fiche Eminence : refactoring interne de la mise en page (les float sont remplacés par flex et grid dans les blocs Personnage, Harmoniques, Conscience, Timbre et les tableaux), sans changement visuel
 - Fiche Eminence : correction lorsque le nom du personnage est sur 2 lignes

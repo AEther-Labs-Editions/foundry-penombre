@@ -71,8 +71,8 @@ export default class PenombreActor extends Actor {
       await this.update({ "system.conscience.jetons": jetons })
     }
 
-    // Fausse note ou envolée sur un jet ayant utilisé un atout collégial : son niveau baisse de 1
-    if (rollResults.isDeHarmoniqueMin || rollResults.isDeHarmoniqueMax) {
+    // Fausse note sur un jet ayant utilisé un atout collégial : son niveau baisse de 1
+    if (rollResults.isDeHarmoniqueMin) {
       await PenombreRoll._degraderAtoutFaction(roll.options.factionAtoutsUsed)
     }
 

@@ -1,4 +1,28 @@
 {{!log "reserve collegiale" this}}
+{{!-- Ligne d'atout ou de complication de la feuille collégiale : nom sur une ligne pointillée, cases à droite --}}
+{{#*inline "ligneElement"}}
+<div class="ligne ligne-element{{#unless element.id}} vide{{/unless}}">
+  {{#if @root.unlocked}}
+  <input type="text" class="element-nom" value="{{element.nom}}" data-faction-id="{{factionId}}" {{#if element.id}}data-element-id="{{element.id}}"{{/if}} data-element-type="{{type}}" {{#unless element.id}}placeholder="{{localize placeholder}}"{{/unless}} />
+  {{#if element.id}}
+  <a class="btn-supprimer" data-action="deleteFactionElement" data-faction-id="{{factionId}}" data-element-id="{{element.id}}" data-element-type="{{type}}" data-tooltip="{{localize 'PENOMBRE.ui.delete'}}">
+    <i class="fa-solid fa-xmark"></i>
+  </a>
+  {{/if}}
+  {{else}}
+  <span class="element-nom-readonly">{{element.nom}}</span>
+  {{/if}}
+  <div class="cases cases-{{type}}">
+    {{#each element.cases as |case|}}
+    {{#if (and @root.unlocked ../element.id)}}
+    <img class="case cliquable" src="{{case.src}}" alt="" data-action="changeFactionElementValeur" data-faction-id="{{../factionId}}" data-element-id="{{../element.id}}" data-element-type="{{../type}}" data-valeur="{{case.niveau}}" />
+    {{else}}
+    <img class="case" src="{{case.src}}" alt="" />
+    {{/if}}
+    {{/each}}
+  </div>
+</div>
+{{/inline}}
 <div class="reserve-wrapper">
   <div class="div-jetons{{#unless useImageDisplay}}-2{{/unless}}">
     {{#unless useImageDisplay}}
@@ -16,136 +40,54 @@
     </div>
 
     {{#if showFactions}}
-    <div class="div-potentiel">
-      <span>{{localize "PENOMBRE.Factions.potentiel"}}</span>
+    {{!-- Médaillon « Potentiel » de la feuille collégiale étendue --}}
+    <div class="div-potentiel" data-tooltip="{{localize 'PENOMBRE.Factions.potentielTooltip'}}">
+      <img class="img-potentiel" src="systems/penombre/assets/ui/potentiel.webp" alt="" />
       {{#if unlocked}}
-      <input type="number" class="potentiel-valeur" min="0" step="1" value="{{potentiel}}" data-tooltip="{{localize 'PENOMBRE.Factions.potentielTooltip'}}"/>
+      <input type="number" class="potentiel-valeur" min="0" step="1" value="{{potentiel}}" aria-label="{{localize 'PENOMBRE.Factions.potentiel'}}" />
       {{else}}
-      <span class="potentiel-valeur-readonly" data-tooltip="{{localize 'PENOMBRE.Factions.potentielTooltip'}}">{{potentiel}}</span>
+      <span class="potentiel-valeur">{{potentiel}}</span>
       {{/if}}
+      <span class="potentiel-libelle">{{localize "PENOMBRE.Factions.potentielLibelle"}}</span>
     </div>
     {{/if}}
   </div>
 
   {{#if showFactions}}
   <div class="div-factions">
-    <div class="factions-header">
-      <h2>{{localize "PENOMBRE.Factions.title"}}</h2>
-      {{#if unlocked}}
-      <button type="button" class="btn-create-faction" data-action="createFaction" data-tooltip="{{localize 'PENOMBRE.Factions.creer'}}">
-        <i class="fa-solid fa-plus"></i> {{localize "PENOMBRE.Factions.creer"}}
-      </button>
-      {{/if}}
-    </div>
-    <div class="factions-list">
-      {{#each factions as |faction factionId|}}
-      <div class="faction" data-faction-id="{{factionId}}">
-        <div class="faction-header">
-          {{#if ../unlocked}}
-          <i class="fa-solid fa-chevron-down faction-toggle" data-action="toggleFaction" data-faction-id="{{factionId}}"></i>
-          <input type="text" class="faction-nom" value="{{faction.nom}}" data-faction-id="{{factionId}}" />
-          <button type="button" class="btn-delete-faction" data-action="deleteFaction" data-faction-id="{{factionId}}" data-tooltip="{{localize 'PENOMBRE.ui.delete'}}">
-            <i class="fa-solid fa-trash"></i>
-          </button>
-          {{else}}
-          <span class="faction-nom-readonly" data-action="toggleFaction" data-faction-id="{{factionId}}">
-            <i class="fa-solid fa-chevron-down faction-toggle"></i>
-            {{faction.nom}}
-          </span>
-          {{/if}}
-        </div>
-
-        {{!-- Section Atouts --}}
-        <div class="faction-section faction-atouts">
-          <div class="section-header">
-            <span class="section-title">{{localize "PENOMBRE.ui.atouts"}}</span>
-            {{#if ../unlocked}}
-            <button type="button" class="btn-add" data-action="createFactionAtout" data-faction-id="{{factionId}}" data-tooltip="{{localize 'PENOMBRE.Factions.ajouterAtout'}}">
-              <i class="fa-solid fa-plus"></i>
-            </button>
-            {{/if}}
-          </div>
-          <div class="elements-list">
-            {{#each faction.atouts as |atout atoutId|}}
-            <div class="faction-element atout" data-element-id="{{atoutId}}">
-              {{#if ../../unlocked}}
-              <input type="text" class="element-nom" value="{{atout.nom}}" data-faction-id="{{factionId}}" data-element-id="{{atoutId}}" data-element-type="atout" />
-              {{else}}
-              <span class="element-nom-readonly">{{atout.nom}}</span>
-              {{/if}}
-              <div class="element-valeur">
-                {{#each (range 1 4) as |level|}}
-                {{#if ../../../unlocked}}
-                <img class="valeur-case"
-                     data-action="changeFactionElementValeur"
-                     data-faction-id="{{factionId}}"
-                     data-element-id="{{atoutId}}"
-                     data-element-type="atout"
-                     data-valeur="{{level}}"
-                     src="systems/penombre/assets/ui/de_case_{{#if (lte level atout.valeur)}}checked{{else}}unchecked{{/if}}.webp"/>
-                {{else}}
-                <img class="valeur-case readonly" src="systems/penombre/assets/ui/de_case_{{#if (lte level atout.valeur)}}checked{{else}}unchecked{{/if}}.webp"/>
-                {{/if}}
-                {{/each}}
-              </div>
-              {{#if ../../unlocked}}
-              <button type="button" class="btn-delete-element" data-action="deleteFactionElement" data-faction-id="{{factionId}}" data-element-id="{{atoutId}}" data-element-type="atout" data-tooltip="{{localize 'PENOMBRE.ui.delete'}}">
-                <i class="fa-solid fa-times"></i>
-              </button>
-              {{/if}}
-            </div>
-            {{/each}}
-          </div>
-        </div>
-
-        {{!-- Section Complications --}}
-        <div class="faction-section faction-complications">
-          <div class="section-header">
-            <span class="section-title">{{localize "PENOMBRE.Factions.complications"}}</span>
-            {{#if ../unlocked}}
-            <button type="button" class="btn-add" data-action="createFactionComplication" data-faction-id="{{factionId}}" data-tooltip="{{localize 'PENOMBRE.Factions.ajouterComplication'}}">
-              <i class="fa-solid fa-plus"></i>
-            </button>
-            {{/if}}
-          </div>
-          <div class="elements-list">
-            {{#each faction.complications as |comp compId|}}
-            <div class="faction-element complication" data-element-id="{{compId}}">
-              {{#if ../../unlocked}}
-              <input type="text" class="element-nom" value="{{comp.nom}}" data-faction-id="{{factionId}}" data-element-id="{{compId}}" data-element-type="complication" />
-              {{else}}
-              <span class="element-nom-readonly">{{comp.nom}}</span>
-              {{/if}}
-              <div class="element-valeur">
-                {{#each (range 1 4) as |level|}}
-                {{#if ../../../unlocked}}
-                <img class="valeur-case"
-                     data-action="changeFactionElementValeur"
-                     data-faction-id="{{factionId}}"
-                     data-element-id="{{compId}}"
-                     data-element-type="complication"
-                     data-valeur="{{level}}"
-                     src="systems/penombre/assets/ui/transp_case_{{#if (lte level comp.valeur)}}checked{{else}}unchecked{{/if}}.webp"/>
-                {{else}}
-                <img class="valeur-case readonly" src="systems/penombre/assets/ui/transp_case_{{#if (lte level comp.valeur)}}checked{{else}}unchecked{{/if}}.webp"/>
-                {{/if}}
-                {{/each}}
-              </div>
-              {{#if ../../unlocked}}
-              <button type="button" class="btn-impose-complication" data-action="imposeComplication" data-faction-id="{{factionId}}" data-element-id="{{compId}}" data-tooltip="{{localize 'PENOMBRE.Factions.imposerComplication'}}">
-                <i class="fa-solid fa-coins"></i>
-              </button>
-              <button type="button" class="btn-delete-element" data-action="deleteFactionElement" data-faction-id="{{factionId}}" data-element-id="{{compId}}" data-element-type="complication" data-tooltip="{{localize 'PENOMBRE.ui.delete'}}">
-                <i class="fa-solid fa-times"></i>
-              </button>
-              {{/if}}
-            </div>
-            {{/each}}
-          </div>
-        </div>
+    <h2 class="relations-titre">
+      <img src="systems/penombre/assets/ui/relations-titre.webp" alt="{{localize 'PENOMBRE.Factions.title'}}" />
+    </h2>
+    {{#each factions as |faction|}}
+    <section class="faction{{#if faction.rouge}} rouge{{/if}}" data-faction-id="{{faction.id}}">
+      <div class="ligne ligne-nom">
+        <span class="libelle">{{localize "PENOMBRE.Factions.nomRelation"}}</span>
+        {{#if @root.unlocked}}
+        <input type="text" class="faction-nom" value="{{faction.nom}}" data-faction-id="{{faction.id}}" />
+        <a class="btn-supprimer" data-action="deleteFaction" data-faction-id="{{faction.id}}" data-tooltip="{{localize 'PENOMBRE.Factions.supprimerFaction'}}">
+          <i class="fa-solid fa-trash"></i>
+        </a>
+        {{else}}
+        <span class="faction-nom-readonly">{{faction.nom}}</span>
+        {{/if}}
       </div>
+      {{#if faction.atouts.length}}
+      <div class="libelle">{{localize "PENOMBRE.ui.atouts"}}</div>
+      {{#each faction.atouts as |atout|}}
+      {{> ligneElement element=atout factionId=faction.id type="atout" placeholder="PENOMBRE.Factions.nouvelAtoutPlaceholder"}}
       {{/each}}
-    </div>
+      {{/if}}
+      {{#if faction.complication}}
+      <div class="libelle">{{localize "PENOMBRE.Factions.complication"}}</div>
+      {{> ligneElement element=faction.complication factionId=faction.id type="complication" placeholder="PENOMBRE.Factions.nouvelleComplicationPlaceholder"}}
+      {{/if}}
+    </section>
+    {{/each}}
+    {{#if unlocked}}
+    <a class="btn-creer-faction" data-action="createFaction">
+      <i class="fa-solid fa-plus"></i> {{localize "PENOMBRE.Factions.creer"}}
+    </a>
+    {{/if}}
   </div>
   {{/if}}
 </div>

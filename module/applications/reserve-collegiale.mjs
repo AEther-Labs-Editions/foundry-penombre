@@ -9,9 +9,10 @@ import { SYSTEM } from "../config/system.mjs"
 export default class PenombreReserveCollegiale extends HandlebarsApplicationMixin(ApplicationV2) {
   static SHEET_MODES = { EDIT: 0, PLAY: 1 }
 
-  _sheetMode = PenombreReserveCollegiale.SHEET_MODES.PLAY
+  /** Hauteur de la fenêtre de la feuille collégiale étendue : panier (555 px) + barre de titre */
+  static HAUTEUR_FEUILLE = 593
 
-  _collapsedFactions = new Set()
+  _sheetMode = PenombreReserveCollegiale.SHEET_MODES.PLAY
 
   get isPlayMode() {
     return this._sheetMode === PenombreReserveCollegiale.SHEET_MODES.PLAY
@@ -40,14 +41,10 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
     },
     actions: {
       jeton: PenombreReserveCollegiale.#onClicJeton,
-      toggleFaction: PenombreReserveCollegiale.#onToggleFaction,
       createFaction: PenombreReserveCollegiale.#onCreateFaction,
       deleteFaction: PenombreReserveCollegiale.#onDeleteFaction,
-      createFactionAtout: PenombreReserveCollegiale.#onCreateFactionAtout,
-      createFactionComplication: PenombreReserveCollegiale.#onCreateFactionComplication,
       deleteFactionElement: PenombreReserveCollegiale.#onDeleteFactionElement,
       changeFactionElementValeur: PenombreReserveCollegiale.#onChangeFactionElementValeur,
-      imposeComplication: PenombreReserveCollegiale.#onImposeComplication,
     },
   }
 
@@ -56,11 +53,14 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
     const applicationOptions = super._initializeApplicationOptions(options)
     const styleJeu = game.settings.get(SYSTEM.ID, "styleJeu")
     const nbJetons = game.settings.get(SYSTEM.ID, "nbJetons")
-    const useImageDisplay = styleJeu === "demo" || nbJetons === 10
     const showFactions = styleJeu !== "demo" && game.settings.get(SYSTEM.ID, "utiliserFactions")
-    applicationOptions.window.resizable = styleJeu !== "demo" && nbJetons !== 10
+    applicationOptions.window.resizable = showFactions || (styleJeu !== "demo" && nbJetons !== 10)
     if (showFactions) {
-      applicationOptions.position.width = useImageDisplay ? 900 : 870
+      // Feuille collégiale étendue : panier (555 px) et colonne Relations (430 px) bord à bord ; la fenêtre
+      // s'ouvre à la hauteur du panier et s'agrandit pour faire défiler moins la colonne Relations
+      applicationOptions.classes.push("feuille-etendue")
+      applicationOptions.position.width = 987
+      applicationOptions.position.height = PenombreReserveCollegiale.HAUTEUR_FEUILLE
     }
     return applicationOptions
   }
@@ -86,10 +86,40 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
       locked: !unlocked,
       jetons: reserveCollegiale.jetons,
       potentiel: reserveCollegiale.potentiel,
-      factions: reserveCollegiale.factions || {},
+      factions: Object.entries(reserveCollegiale.factions || {}).map(([id, faction], index) => {
+        // Comme sur la feuille du livre, une relation sur deux a ses libellés et ses cubes en rouge
+        const rouge = index % 2 === 1
+        return {
+          id,
+          nom: faction.nom,
+          rouge,
+          // En mode édition, les lignes vides servent à saisir de nouveaux atouts ; en lecture, seuls les éléments définis s'affichent
+          atouts: PenombreReserveCollegiale.#emplacements(faction.atouts, unlocked ? 3 : 0, rouge ? "de-case-rouge-" : "de_case_"),
+          complication: PenombreReserveCollegiale.#emplacements(faction.complications, unlocked ? 1 : 0, "transp_case_")[0],
+        }
+      }),
       showFactions: styleJeu !== "demo" && game.settings.get(SYSTEM.ID, "utiliserFactions"),
       useImageDisplay: styleJeu === "demo" || nbJetons === 10,
     }
+  }
+
+  /**
+   * Complète les atouts (3) ou la complication (1) d'une faction par des emplacements vides, comme les lignes de la feuille collégiale.
+   * @param {object} elements Atouts ou complications de la faction, indexés par identifiant
+   * @param {number} nbEmplacements Nombre minimal de lignes (0 : aucune ligne vide)
+   * @param {string} prefixeImage Début du nom de l'image des cases (cubes blancs, cubes rouges ou cases de complication)
+   * @returns {Array<{id: string|null, nom: string, valeur: number, cases: Array<{niveau: number, src: string}>}>}
+   */
+  static #emplacements(elements, nbEmplacements, prefixeImage) {
+    const emplacements = Object.entries(elements || {}).map(([id, element]) => ({ id, nom: element.nom, valeur: element.valeur }))
+    while (emplacements.length < nbEmplacements) emplacements.push({ id: null, nom: "", valeur: 0 })
+    for (const emplacement of emplacements) {
+      emplacement.cases = [1, 2, 3].map((niveau) => ({
+        niveau,
+        src: `systems/penombre/assets/ui/${prefixeImage}${niveau <= emplacement.valeur ? "checked" : "unchecked"}.webp`,
+      }))
+    }
+    return emplacements
   }
 
   // #region Mutations (source de vérité unique, utilisée directement par le MJ ou via les query handlers)
@@ -123,19 +153,6 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
     })
   }
 
-  /** @param {number} nbJetons Nombre de jetons à activer (créditer) dans la réserve */
-  static async _mutateCrediterJetons(nbJetons) {
-    await PenombreReserveCollegiale._updateReserve((r) => {
-      let nbJetonsModifies = 0
-      for (const jeton of Object.values(r.jetons)) {
-        if (jeton.valeur === false && nbJetonsModifies < nbJetons) {
-          jeton.valeur = true
-          nbJetonsModifies++
-        }
-      }
-    })
-  }
-
   /** @param {string} factionId */
   static async _mutateCreateFaction(factionId) {
     await PenombreReserveCollegiale._updateReserve((r) => {
@@ -156,80 +173,72 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
   }
 
   /**
-   * Crée un atout collégial pour une faction. Coûte 1 point de potentiel collégial.
-   * Si `avecComplication` est vrai, l'atout est créé au niveau 2 et une complication de la même faction
-   * est créée (ou augmentée d'un niveau si elle existe déjà), pour le même coût.
+   * Crée un atout collégial de niveau 1 pour une faction, sans rien dépenser.
+   * Le coût éventuel (points de potentiel collégial, case de complication pour obtenir le niveau 2) est reporté
+   * à la main par le MJ sur le médaillon Potentiel, les cubes et les cases de la feuille.
    * @param {string} factionId
    * @param {string} elementId
-   * @param {boolean} avecComplication
+   * @param {string} [nom]
    */
-  static async _mutateCreateFactionAtout(factionId, elementId, avecComplication) {
+  static async _mutateCreateFactionAtout(factionId, elementId, nom) {
     await PenombreReserveCollegiale._updateReserve((r) => {
       const faction = r.factions[factionId]
       if (!faction) return
       if (Object.keys(faction.atouts || {}).length >= 3) return
-      if (r.potentiel <= 0) return
-
-      r.potentiel -= 1
       if (!faction.atouts) faction.atouts = {}
       faction.atouts[elementId] = {
-        nom: game.i18n.localize("PENOMBRE.Factions.nouvelAtout"),
-        valeur: avecComplication ? 2 : 1,
-      }
-
-      if (avecComplication) {
-        if (!faction.complications) faction.complications = {}
-        const complicationIds = Object.keys(faction.complications)
-        if (complicationIds.length > 0) {
-          const existing = faction.complications[complicationIds[0]]
-          existing.valeur = Math.min(existing.valeur + 1, 3)
-        } else {
-          faction.complications[foundry.utils.randomID()] = {
-            nom: game.i18n.localize("PENOMBRE.Factions.nouvelleComplication"),
-            valeur: 1,
-          }
-        }
-      }
-    })
-  }
-
-  /**
-   * Crée une complication collégiale pour une faction (création manuelle, hors jet).
-   * @param {string} factionId
-   * @param {string} elementId
-   */
-  static async _mutateCreateFactionComplication(factionId, elementId) {
-    await PenombreReserveCollegiale._updateReserve((r) => {
-      const faction = r.factions[factionId]
-      if (!faction) return
-      if (Object.keys(faction.complications || {}).length >= 1) return
-      if (!faction.complications) faction.complications = {}
-      faction.complications[elementId] = {
-        nom: game.i18n.localize("PENOMBRE.Factions.nouvelleComplication"),
+        nom: nom || game.i18n.localize("PENOMBRE.Factions.nouvelAtout"),
         valeur: 1,
       }
     })
   }
 
   /**
+   * Crée une complication collégiale pour une faction (création manuelle, hors jet), avec une case barrée.
+   * @param {string} factionId
+   * @param {string} elementId
+   * @param {string} [nom]
+   */
+  static async _mutateCreateFactionComplication(factionId, elementId, nom) {
+    await PenombreReserveCollegiale._updateReserve((r) => {
+      const faction = r.factions[factionId]
+      if (!faction) return
+      if (Object.keys(faction.complications || {}).length >= 1) return
+      if (!faction.complications) faction.complications = {}
+      faction.complications[elementId] = {
+        nom: nom || game.i18n.localize("PENOMBRE.Factions.nouvelleComplication"),
+        valeur: 1,
+      }
+    })
+  }
+
+  /**
+   * Supprime un atout ou une complication de faction.
+   * Un atout perdu pour des raisons narratives peut rendre ses points au potentiel collégial (`rembourser`).
    * @param {string} factionId
    * @param {string} elementId
    * @param {"atout"|"complication"} elementType
+   * @param {boolean} [rembourser]
    */
-  static async _mutateDeleteFactionElement(factionId, elementId, elementType) {
+  static async _mutateDeleteFactionElement(factionId, elementId, elementType, rembourser = false) {
     await PenombreReserveCollegiale._updateReserve((r) => {
       const collection = elementType === "atout" ? "atouts" : "complications"
-      delete r.factions[factionId]?.[collection]?.[elementId]
+      const element = r.factions[factionId]?.[collection]?.[elementId]
+      if (!element) return
+      if (elementType === "atout" && rembourser) r.potentiel += element.valeur
+      delete r.factions[factionId][collection][elementId]
     })
   }
 
   /**
    * Change le niveau d'un atout ou d'une complication de faction.
-   * Cliquer sur la case déjà remplie la plus basse d'une complication la retire (toutes les cases décochées).
+   * Cliquer sur la dernière case barrée la décoche. Un atout garde au moins 1 niveau (il se supprime explicitement) ;
+   * une complication peut n'avoir plus aucune case barrée : elle reste sur la feuille jusqu'à ce que le MJ la retire,
+   * le livre la faisant disparaître lors de la retraite suivante.
    * @param {string} factionId
    * @param {string} elementId
    * @param {"atout"|"complication"} elementType
-   * @param {number} valeur
+   * @param {number} valeur Niveau de la case cliquée
    */
   static async _mutateChangeFactionElementValeur(factionId, elementId, elementType, valeur) {
     await PenombreReserveCollegiale._updateReserve((r) => {
@@ -237,11 +246,8 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
       const element = r.factions[factionId]?.[collection]?.[elementId]
       if (!element) return
 
-      if (elementType === "complication" && valeur === 1 && element.valeur === 1) {
-        delete r.factions[factionId].complications[elementId]
-        return
-      }
-      element.valeur = valeur
+      const minimum = elementType === "atout" ? 1 : 0
+      element.valeur = Math.max(element.valeur === valeur ? valeur - 1 : valeur, minimum)
     })
   }
 
@@ -295,7 +301,7 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
   }
 
   /**
-   * Fausse note ou envolée sur un jet ayant utilisé un atout collégial : son niveau baisse de 1.
+   * Fausse note sur un jet ayant utilisé un atout collégial : son niveau baisse de 1.
    * L'atout est effacé s'il atteint 0.
    * @param {string} factionId
    * @param {string} elementId
@@ -322,21 +328,6 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
   // #endregion Mutations
 
   // #region Actions déclenchées côté client
-
-  static #onToggleFaction(event, target) {
-    event.preventDefault()
-    const factionId = target.dataset.factionId
-    const factionEl = this.element.querySelector(`.faction[data-faction-id="${factionId}"]`)
-    if (!factionEl) return
-
-    if (this._collapsedFactions.has(factionId)) {
-      this._collapsedFactions.delete(factionId)
-      factionEl.classList.remove("collapsed")
-    } else {
-      this._collapsedFactions.add(factionId)
-      factionEl.classList.add("collapsed")
-    }
-  }
 
   /**
    * @param {Event} event
@@ -390,77 +381,37 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
    * @param {Event} event
    * @param {HTMLElement} target
    */
-  static async #onCreateFactionAtout(event, target) {
-    event.preventDefault()
-    const factionId = target.dataset.factionId
-
-    const reserveCollegiale = game.settings.get(SYSTEM.ID, "reserveCollegiale")
-    const faction = reserveCollegiale.factions[factionId]
-    if (Object.keys(faction?.atouts || {}).length >= 3) {
-      ui.notifications.warn(game.i18n.localize("PENOMBRE.Factions.limiteAtouts"))
-      return
-    }
-    if (reserveCollegiale.potentiel <= 0) {
-      ui.notifications.warn(game.i18n.localize("PENOMBRE.Factions.potentielEpuise"))
-      return
-    }
-
-    const dialogResult = await foundry.applications.api.DialogV2.wait({
-      window: { title: game.i18n.localize("PENOMBRE.Factions.ajouterAtout") },
-      content: `<div class="form-group"><label>
-        <input type="checkbox" id="avecComplication" name="avecComplication"/>
-        ${game.i18n.localize("PENOMBRE.Factions.avecComplication")}
-      </label></div>`,
-      rejectClose: false,
-      buttons: [
-        {
-          action: "create",
-          label: game.i18n.localize("PENOMBRE.Factions.creer"),
-          default: true,
-          callback: (evt, button) => button.form.elements.avecComplication.checked,
-        },
-      ],
-    })
-    if (dialogResult === null) return
-
-    const elementId = foundry.utils.randomID()
-    if (game.user.isGM) await PenombreReserveCollegiale._mutateCreateFactionAtout(factionId, elementId, dialogResult)
-    else await game.users.activeGM.query("penombre.createFactionAtout", { factionId, elementId, avecComplication: dialogResult })
-
-    this.render({ force: true })
-  }
-
-  /**
-   * @param {Event} event
-   * @param {HTMLElement} target
-   */
-  static async #onCreateFactionComplication(event, target) {
-    event.preventDefault()
-    const factionId = target.dataset.factionId
-
-    const reserveCollegiale = game.settings.get(SYSTEM.ID, "reserveCollegiale")
-    if (Object.keys(reserveCollegiale.factions[factionId]?.complications || {}).length >= 1) {
-      ui.notifications.warn(game.i18n.localize("PENOMBRE.Factions.limiteComplications"))
-      return
-    }
-
-    const elementId = foundry.utils.randomID()
-    if (game.user.isGM) await PenombreReserveCollegiale._mutateCreateFactionComplication(factionId, elementId)
-    else await game.users.activeGM.query("penombre.createFactionComplication", { factionId, elementId })
-
-    this.render({ force: true })
-  }
-
-  /**
-   * @param {Event} event
-   * @param {HTMLElement} target
-   */
   static async #onDeleteFactionElement(event, target) {
     event.preventDefault()
     const { factionId, elementId, elementType } = target.dataset
 
-    if (game.user.isGM) await PenombreReserveCollegiale._mutateDeleteFactionElement(factionId, elementId, elementType)
-    else await game.users.activeGM.query("penombre.deleteFactionElement", { factionId, elementId, elementType })
+    // Un atout perdu pour des raisons narratives peut rendre ses points au potentiel collégial
+    let rembourser = false
+    if (elementType === "atout") {
+      const atout = game.settings.get(SYSTEM.ID, "reserveCollegiale").factions[factionId]?.atouts?.[elementId]
+      if (!atout) return
+      rembourser = await foundry.applications.api.DialogV2.wait({
+        window: { title: game.i18n.localize("PENOMBRE.Factions.supprimerAtout") },
+        content: `<p>${game.i18n.format("PENOMBRE.Factions.confirmerSuppressionAtout", { nom: atout.nom })}</p>
+          <div class="form-group"><label>
+            <input type="checkbox" name="rembourser"/>
+            ${game.i18n.format("PENOMBRE.Factions.rembourserPotentiel", { nb: atout.valeur })}
+          </label></div>`,
+        rejectClose: false,
+        buttons: [
+          {
+            action: "delete",
+            label: game.i18n.localize("PENOMBRE.ui.delete"),
+            default: true,
+            callback: (evt, button) => button.form.elements.rembourser.checked,
+          },
+        ],
+      })
+      if (rembourser === null) return
+    }
+
+    if (game.user.isGM) await PenombreReserveCollegiale._mutateDeleteFactionElement(factionId, elementId, elementType, rembourser)
+    else await game.users.activeGM.query("penombre.deleteFactionElement", { factionId, elementId, elementType, rembourser })
 
     this.render({ force: true })
   }
@@ -481,19 +432,28 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
   }
 
   /**
-   * Le MJ impose une complication : crédite la réserve collégiale d'autant de jetons que le niveau de la complication.
-   * @param {Event} event
-   * @param {HTMLElement} target
+   * Création d'un atout saisi sur une ligne vide de la feuille.
+   * @param {string} factionId
+   * @param {string} nom
    */
-  static async #onImposeComplication(event, target) {
-    event.preventDefault()
-    const { factionId, elementId } = target.dataset
-    const reserveCollegiale = game.settings.get(SYSTEM.ID, "reserveCollegiale")
-    const complication = reserveCollegiale.factions[factionId]?.complications?.[elementId]
-    if (!complication) return
+  async #creerAtout(factionId, nom) {
+    const elementId = foundry.utils.randomID()
+    if (game.user.isGM) await PenombreReserveCollegiale._mutateCreateFactionAtout(factionId, elementId, nom)
+    else await game.users.activeGM.query("penombre.createFactionAtout", { factionId, elementId, nom })
 
-    await PenombreReserveCollegiale._mutateCrediterJetons(complication.valeur)
-    ui.notifications.info(game.i18n.format("PENOMBRE.Factions.complicationImposee", { nb: complication.valeur }))
+    this.render({ force: true })
+  }
+
+  /**
+   * Création d'une complication saisie sur la ligne vide de la feuille.
+   * @param {string} factionId
+   * @param {string} nom
+   */
+  async #creerComplication(factionId, nom) {
+    const elementId = foundry.utils.randomID()
+    if (game.user.isGM) await PenombreReserveCollegiale._mutateCreateFactionComplication(factionId, elementId, nom)
+    else await game.users.activeGM.query("penombre.createFactionComplication", { factionId, elementId, nom })
+
     this.render({ force: true })
   }
 
@@ -506,14 +466,9 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
     super._onRender(context, options)
     this.#renderModeToggle()
 
-    for (const factionId of this._collapsedFactions) {
-      const factionEl = this.element.querySelector(`.faction[data-faction-id="${factionId}"]`)
-      if (factionEl) factionEl.classList.add("collapsed")
-    }
-
     if (context.unlocked) {
-      this.element.querySelectorAll(".faction-nom").forEach((input) => input.addEventListener("blur", (evt) => this.#onChangeFactionName(evt)))
-      this.element.querySelectorAll(".element-nom").forEach((input) => input.addEventListener("blur", (evt) => this.#onChangeElementName(evt)))
+      this.element.querySelectorAll(".faction-nom").forEach((input) => input.addEventListener("change", (evt) => this.#onChangeFactionName(evt)))
+      this.element.querySelectorAll(".element-nom").forEach((input) => input.addEventListener("change", (evt) => this.#onChangeElementName(evt)))
 
       const potentielInput = this.element.querySelector(".potentiel-valeur")
       if (potentielInput) potentielInput.addEventListener("change", (evt) => this.#onChangePotentiel(evt))
@@ -560,12 +515,20 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
     else await game.users.activeGM.query("penombre.updateFactionName", { factionId, nom })
   }
 
-  /** @param {Event} event */
+  /**
+   * Renomme un atout ou une complication, ou le crée si la ligne était vide.
+   * @param {Event} event
+   */
   async #onChangeElementName(event) {
     const input = event.target
     const { factionId, elementId, elementType } = input.dataset
     const nom = input.value.trim()
     if (!nom) return
+
+    if (!elementId) {
+      if (elementType === "atout") return this.#creerAtout(factionId, nom)
+      return this.#creerComplication(factionId, nom)
+    }
 
     if (game.user.isGM) await PenombreReserveCollegiale._mutateUpdateFactionElementNom(factionId, elementId, elementType, nom)
     else await game.users.activeGM.query("penombre.updateFactionElementNom", { factionId, elementId, elementType, nom })
@@ -592,16 +555,15 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
   /** @param {{factionId: string}} params */
   static _handleQueryDeleteFaction = async ({ factionId }) => PenombreReserveCollegiale._mutateDeleteFaction(factionId)
 
-  /** @param {{factionId: string, elementId: string, avecComplication: boolean}} params */
-  static _handleQueryCreateFactionAtout = async ({ factionId, elementId, avecComplication }) =>
-    PenombreReserveCollegiale._mutateCreateFactionAtout(factionId, elementId, avecComplication)
+  /** @param {{factionId: string, elementId: string, nom: string}} params */
+  static _handleQueryCreateFactionAtout = async ({ factionId, elementId, nom }) => PenombreReserveCollegiale._mutateCreateFactionAtout(factionId, elementId, nom)
 
-  /** @param {{factionId: string, elementId: string}} params */
-  static _handleQueryCreateFactionComplication = async ({ factionId, elementId }) => PenombreReserveCollegiale._mutateCreateFactionComplication(factionId, elementId)
+  /** @param {{factionId: string, elementId: string, nom: string}} params */
+  static _handleQueryCreateFactionComplication = async ({ factionId, elementId, nom }) => PenombreReserveCollegiale._mutateCreateFactionComplication(factionId, elementId, nom)
 
-  /** @param {{factionId: string, elementId: string, elementType: string}} params */
-  static _handleQueryDeleteFactionElement = async ({ factionId, elementId, elementType }) =>
-    PenombreReserveCollegiale._mutateDeleteFactionElement(factionId, elementId, elementType)
+  /** @param {{factionId: string, elementId: string, elementType: string, rembourser: boolean}} params */
+  static _handleQueryDeleteFactionElement = async ({ factionId, elementId, elementType, rembourser }) =>
+    PenombreReserveCollegiale._mutateDeleteFactionElement(factionId, elementId, elementType, rembourser)
 
   /** @param {{factionId: string, elementId: string, elementType: string, valeur: number}} params */
   static _handleQueryUpdateFactionElementValeur = async ({ factionId, elementId, elementType, valeur }) =>
