@@ -256,6 +256,8 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
   }
 
   async depenserJetons(nbJetons) {
+    // Tout ou rien : pas de paiement partiel
+    if (this.nbJetonsRestants < nbJetons) return false
     // Parcours de l'objet pour mettre à jour nbJetons
     let nbJetonsModifies = 0
     const jetons = { ...this.conscience.jetons }
@@ -269,6 +271,7 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
     if (nbJetonsModifies > 0) {
       await this.parent.update({ "system.conscience.jetons": jetons })
     }
+    return true
   }
 
   /**

@@ -1,6 +1,7 @@
 const { SchemaField, NumberField, StringField, BooleanField, ArrayField, TypedObjectField, DocumentIdField } = foundry.data.fields
 import BaseMessageData from "./base-message.mjs"
 import PenombreRoll from "../documents/roll.mjs"
+import { demanderAuMJ, mjConnecte } from "../helpers/mj.mjs"
 
 export default class HarmoniqueMessageData extends BaseMessageData {
   static defineSchema() {
@@ -182,13 +183,19 @@ export default class HarmoniqueMessageData extends BaseMessageData {
             return
           }
 
+          // La relance d'un jet lié met à jour le message principal, ce que seul le MJ peut faire
+          if (this.actionCollegialeMessageLie && this.idMessageOrigine && !mjConnecte()) {
+            ui.notifications.warn("PENOMBRE.Warnings.mjAbsent", { localize: true })
+            return
+          }
+
           // Dépense d'un jeton de conscience et relance
-          await actor.system.depenserJetons(1)
+          if (!(await actor.system.depenserJetons(1))) return
           await PenombreRoll.reroll(messageId, rerolledDices)
 
           // Si c'est un message lié, mettre à jour le message principal
           if (this.actionCollegialeMessageLie && this.idMessageOrigine) {
-            await game.users.activeGM.query("penombre.updateMessageParticipation", {
+            await demanderAuMJ("penombre.updateMessageParticipation", {
               existingMessageId: this.idMessageOrigine,
               actorId: actor.id,
               answer: true,
@@ -229,12 +236,17 @@ export default class HarmoniqueMessageData extends BaseMessageData {
           }
 
           // Dépense d'un jeton de la réserve et relance
-          await game.users.activeGM.query("penombre.updateReserveCollegialeFromRoll", { nbJetons: 1 })
+          const paiement = await demanderAuMJ("penombre.updateReserveCollegialeFromRoll", { nbJetons: 1 })
+          if (!paiement.ok) return
+          if (!paiement.resultat?.paye) {
+            ui.notifications.warn(game.i18n.format("PENOMBRE.Warnings.jetonsReserveInsuffisants", { actuel: 0, demande: 1 }), { permanent: true })
+            return
+          }
           await PenombreRoll.reroll(messageId, rerolledDices)
 
           // Si c'est un message lié, mettre à jour le message principal
           if (this.actionCollegialeMessageLie && this.idMessageOrigine) {
-            await game.users.activeGM.query("penombre.updateMessageParticipation", {
+            await demanderAuMJ("penombre.updateMessageParticipation", {
               existingMessageId: this.idMessageOrigine,
               actorId: actor.id,
               answer: true,
@@ -256,12 +268,17 @@ export default class HarmoniqueMessageData extends BaseMessageData {
       html.querySelector(".participate-yes").addEventListener("click", async (ev) => {
         ev.preventDefault()
         ev.stopPropagation()
+        // Sans MJ, la participation ne pourrait pas être enregistrée sur le message principal
+        if (!mjConnecte()) {
+          ui.notifications.warn("PENOMBRE.Warnings.mjAbsent", { localize: true })
+          return
+        }
         const messageId = ev.target.closest(".chat-message").dataset.messageId
         const harmonique = this.harmonique
         const actor = game.actors.get(currentActorId)
         const chatMessage = await actor.rollHarmonique({ harmonique, messageType: "lie", idMessageOrigine: messageId })
         if (chatMessage) {
-          await game.users.activeGM.query("penombre.updateMessageParticipation", {
+          await demanderAuMJ("penombre.updateMessageParticipation", {
             existingMessageId: messageId,
             actorId: currentActorId,
             answer: true,
@@ -274,7 +291,7 @@ export default class HarmoniqueMessageData extends BaseMessageData {
         ev.preventDefault()
         ev.stopPropagation()
         const messageId = ev.target.closest(".chat-message").dataset.messageId
-        await game.users.activeGM.query("penombre.updateMessageParticipation", { existingMessageId: messageId, actorId: currentActorId, answer: false })
+        await demanderAuMJ("penombre.updateMessageParticipation", { existingMessageId: messageId, actorId: currentActorId, answer: false })
       })
     }
   }

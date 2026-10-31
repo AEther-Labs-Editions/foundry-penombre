@@ -52,15 +52,7 @@ Hooks.once("init", function () {
   CONFIG.queries["penombre.updateReserveCollegialeFromRoll"] = applications.PenombreReserveCollegiale._handleQueryUpdateReserveCollegialeFromRoll
   CONFIG.queries["penombre.updateMessageParticipation"] = documents.PenombreMessage._handleQueryMessageParticipation
 
-  // Factions
-  CONFIG.queries["penombre.createFaction"] = applications.PenombreReserveCollegiale._handleQueryCreateFaction
-  CONFIG.queries["penombre.deleteFaction"] = applications.PenombreReserveCollegiale._handleQueryDeleteFaction
-  CONFIG.queries["penombre.createFactionAtout"] = applications.PenombreReserveCollegiale._handleQueryCreateFactionAtout
-  CONFIG.queries["penombre.createFactionComplication"] = applications.PenombreReserveCollegiale._handleQueryCreateFactionComplication
-  CONFIG.queries["penombre.deleteFactionElement"] = applications.PenombreReserveCollegiale._handleQueryDeleteFactionElement
-  CONFIG.queries["penombre.updateFactionElementValeur"] = applications.PenombreReserveCollegiale._handleQueryUpdateFactionElementValeur
-  CONFIG.queries["penombre.updateFactionElementNom"] = applications.PenombreReserveCollegiale._handleQueryUpdateFactionElementNom
-  CONFIG.queries["penombre.updateFactionName"] = applications.PenombreReserveCollegiale._handleQueryUpdateFactionName
+  // Factions : seules les modifications liées aux jets passent par le MJ, l'édition des factions lui est réservée
   CONFIG.queries["penombre.addFactionComplicationFromRoll"] = applications.PenombreReserveCollegiale._handleQueryAddFactionComplicationFromRoll
   CONFIG.queries["penombre.decrementFactionAtout"] = applications.PenombreReserveCollegiale._handleQueryDecrementFactionAtout
 
@@ -151,8 +143,6 @@ Hooks.on("updateSetting", async (setting, update, options, id) => {
   // Mise à jour du nombre de jetons dans la réserve collégiale
   if (setting.key === "penombre.nbJetons" && game.user.isGM) {
     if (CONFIG.debug.penombre?.reserve) console.debug("Pénombre | Mise à jour du nombre de jetons dans la réserve collégiale", setting, update, options, id)
-    const reserveCollegiale = foundry.utils.duplicate(game.settings.get(SYSTEM.ID, "reserveCollegiale"))
-
     let nouveauNbJetons = update.value
 
     // En mode Kit de demo, on force le nombre de jetons à 10
@@ -161,23 +151,24 @@ Hooks.on("updateSetting", async (setting, update, options, id) => {
       game.settings.set(SYSTEM.ID, "nbJetons", 10)
     }
 
-    // Ajouter les jetons manquants si le nombre augmente
-    for (let i = 1; i <= nouveauNbJetons; i++) {
-      const key = String(i)
-      if (!reserveCollegiale.jetons.hasOwnProperty(key)) {
-        reserveCollegiale.jetons[key] = { valeur: false }
+    // Passe par la file d'attente des modifications de la réserve
+    applications.PenombreReserveCollegiale._updateReserve((reserveCollegiale) => {
+      // Ajouter les jetons manquants si le nombre augmente
+      for (let i = 1; i <= nouveauNbJetons; i++) {
+        const key = String(i)
+        if (!reserveCollegiale.jetons.hasOwnProperty(key)) {
+          reserveCollegiale.jetons[key] = { valeur: false }
+        }
       }
-    }
 
-    // Supprimer les jetons en excès si le nombre diminue
-    Object.keys(reserveCollegiale.jetons).forEach((key) => {
-      const numericKey = parseInt(key, 10)
-      if (numericKey > nouveauNbJetons) {
-        delete reserveCollegiale.jetons[key]
-      }
+      // Supprimer les jetons en excès si le nombre diminue
+      Object.keys(reserveCollegiale.jetons).forEach((key) => {
+        const numericKey = parseInt(key, 10)
+        if (numericKey > nouveauNbJetons) {
+          delete reserveCollegiale.jetons[key]
+        }
+      })
     })
-
-    game.settings.set(SYSTEM.ID, "reserveCollegiale", reserveCollegiale)
   }
 })
 

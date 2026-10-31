@@ -1,4 +1,5 @@
 import { SYSTEM } from "../config/system.mjs"
+import { demanderAuMJ, mjConnecte } from "../helpers/mj.mjs"
 
 /**
  * Constantes pour le calcul des succès et types de dés
@@ -90,8 +91,12 @@ export default class PenombreRoll extends Roll {
     const atouts = options.atouts || []
     const choiceDifficulte = SYSTEM.DIFFICULTE
 
+    // Sans MJ connecté, la réserve collégiale et les factions ne sont pas utilisables (écritures faites par le MJ)
+    const avecMJ = mjConnecte()
+    if (!avecMJ) ui.notifications.warn("PENOMBRE.Warnings.mjAbsentJet", { localize: true })
+
     const maxJetonsConscience = actor.system.nbJetonsRestants
-    const maxJetonsReserve = game.settings.get(SYSTEM.ID, "reserveCollegiale").nbJetonsRestants
+    const maxJetonsReserve = avecMJ ? game.settings.get(SYSTEM.ID, "reserveCollegiale").nbJetonsRestants : 0
 
     const fieldJetonsConscience = new foundry.data.fields.NumberField({ initial: 0, min: 0, max: maxJetonsConscience, step: 1 })
     const fieldJetonsReserve = new foundry.data.fields.NumberField({ initial: 0, min: 0, max: maxJetonsReserve, step: 1 })
@@ -119,7 +124,7 @@ export default class PenombreRoll extends Roll {
     const utiliserFactions = game.settings.get(SYSTEM.ID, "styleJeu") !== "demo" && game.settings.get(SYSTEM.ID, "utiliserFactions")
     let factionAtouts = []
     let factions = []
-    if (utiliserFactions) {
+    if (utiliserFactions && avecMJ) {
       const reserveCollegiale = game.settings.get(SYSTEM.ID, "reserveCollegiale")
       factionAtouts = reserveCollegiale.allFactionAtouts || []
       factions = Object.entries(reserveCollegiale.factions || {}).map(([id, faction]) => ({ id, nom: faction.nom }))
@@ -246,11 +251,11 @@ export default class PenombreRoll extends Roll {
         // Jetons
         const jetonsConscience = dialog.element.querySelector("#jetonsConscience")
         if (jetonsConscience) {
-          jetonsConscience.addEventListener("change", (evt) => this._onChangeJetons(evt, dialog.element))
+          jetonsConscience.addEventListener("change", (evt) => this._validerJetons(dialog.element, { notifier: true }))
         }
         const jetonsReserve = dialog.element.querySelector("#jetonsReserve")
         if (jetonsReserve) {
-          jetonsReserve.addEventListener("change", (evt) => this._onChangeJetons(evt, dialog.element))
+          jetonsReserve.addEventListener("change", (evt) => this._validerJetons(dialog.element, { notifier: true }))
         }
         // Complication : dispense d'une partie du coût en jetons du jet
         const complicationUse = dialog.element.querySelector("#complicationUse")
@@ -264,8 +269,7 @@ export default class PenombreRoll extends Roll {
         const complicationDescription = dialog.element.querySelector("#complicationDescription")
         if (complicationDescription) {
           complicationDescription.addEventListener("input", () => {
-            const jetons = this._getJetonsTotal(dialog.element)
-            this._checkCanRoll(jetons, dialog.element)
+            this._validerJetons(dialog.element)
           })
         }
       },
@@ -292,6 +296,13 @@ export default class PenombreRoll extends Roll {
       factionAtoutsUsed = []
     }
 
+    // Le MJ a pu se déconnecter pendant que la fenêtre était ouverte
+    const besoinMJ = jetonsReserveDepenses > 0 || factionAtoutsUsed.length > 0 || (complicationUse && complicationJetons > 0 && complicationCible !== "moi")
+    if (besoinMJ && !mjConnecte()) {
+      ui.notifications.warn("PENOMBRE.Warnings.mjAbsentJet", { localize: true })
+      return null
+    }
+
     formule = rollContext.formule || formule
 
     const rollOptions = {
@@ -315,9 +326,23 @@ export default class PenombreRoll extends Roll {
     PenombreRoll._applyDiceAppearances(roll)
     await roll.evaluate()
 
-    // Dépense de jetons après évaluation réussie du jet (évite de perdre des jetons si le roll échoue)
+    // Dépense de jetons après évaluation réussie du jet (évite de perdre des jetons si le roll échoue).
+    // Le jet n'est publié que si tout est payé : la conscience est vérifiée avant de prendre dans la réserve,
+    // dont le paiement est fait en une fois par le MJ (une autre joueuse a pu dépenser entre-temps).
+    const nbJetonsRestantsConscience = actor.system.nbJetonsRestants
+    if (jetonsConscienceDepenses > nbJetonsRestantsConscience) {
+      ui.notifications.warn(game.i18n.format("PENOMBRE.Warnings.jetonsConscienceInsuffisants", { actuel: nbJetonsRestantsConscience, demande: jetonsConscienceDepenses }))
+      return null
+    }
     if (jetonsReserveDepenses !== 0) {
-      await game.users.activeGM.query("penombre.updateReserveCollegialeFromRoll", { nbJetons: jetonsReserveDepenses })
+      const paiement = await demanderAuMJ("penombre.updateReserveCollegialeFromRoll", { nbJetons: jetonsReserveDepenses })
+      if (!paiement.ok) return null
+      if (!paiement.resultat?.paye) {
+        ui.notifications.warn(game.i18n.format("PENOMBRE.Warnings.jetAnnuleReserve", { actuel: paiement.resultat?.restants ?? 0, demande: jetonsReserveDepenses }), {
+          permanent: true,
+        })
+        return null
+      }
     }
     if (jetonsConscienceDepenses !== 0) {
       await actor.system.depenserJetons(jetonsConscienceDepenses)
@@ -332,7 +357,7 @@ export default class PenombreRoll extends Roll {
         })
       }
     } else if (complicationUse && complicationJetons > 0) {
-      await game.users.activeGM.query("penombre.addFactionComplicationFromRoll", {
+      await demanderAuMJ("penombre.addFactionComplicationFromRoll", {
         factionId: complicationCible,
         niveau: complicationJetons,
         nom: complicationDescription,
@@ -453,24 +478,6 @@ export default class PenombreRoll extends Roll {
     return !description
   }
 
-  static _checkCanRoll(jetons, dialogElement) {
-    // Vérification des conditions de lancement
-    let canRoll = true
-    const jetonsConscience = Number(dialogElement.querySelector("#jetonsConscience").value) || 0
-    const jetonsReserve = Number(dialogElement.querySelector("#jetonsReserve").value) || 0
-    const jetonsTotal = jetonsConscience + jetonsReserve
-
-    const jetonsComplication = PenombreRoll._getComplicationJetons(dialogElement)
-    const jetonsARepartir = Math.max(jetons - jetonsComplication, 0)
-
-    if (jetonsTotal !== jetonsARepartir) canRoll = false
-    if (PenombreRoll._isComplicationDescriptionMissing(dialogElement)) canRoll = false
-    if (jetonsReserve < PenombreRoll._getJetonsReserveMinimum(dialogElement)) canRoll = false
-
-    if (canRoll) dialogElement.querySelector('button[type="submit"]').disabled = false
-    else dialogElement.querySelector('button[type="submit"]').disabled = true
-  }
-
   /**
    * Nombre minimum de jetons devant obligatoirement provenir de la réserve collégiale,
    * du fait des atouts de faction cochés (le jeton d'un atout collégial ne peut venir de la conscience).
@@ -517,7 +524,7 @@ export default class PenombreRoll extends Roll {
   static _onChangeComplicationJetons(event, dialogElement) {
     // Recalcule le solde de jetons à répartir affiché (déduit de la complication), puis revalide
     PenombreRoll._updateNbJetons(dialogElement)
-    PenombreRoll._onChangeJetons(event, dialogElement)
+    PenombreRoll._validerJetons(dialogElement, { notifier: true })
   }
 
   static _onToggleAtout(event, dialogElement) {
@@ -557,7 +564,20 @@ export default class PenombreRoll extends Roll {
     PenombreRoll._updateFormula(dialogElement)
   }
 
-  static _onChangeJetons(event, dialogElement) {
+  /**
+   * Seule fonction qui autorise ou non le lancer : active le bouton « Lancer les dés » si toutes les conditions
+   * sont remplies (jetons répartis, disponibles en conscience et dans la réserve, minimum de jetons de la réserve
+   * pour les atouts de faction, description de la complication).
+   *
+   * @param {HTMLElement} dialogElement L'élément DOM de la fenêtre de dialogue
+   * @param {object} [options]
+   * @param {boolean} [options.notifier] Affiche les avertissements, quand on vient de changer un nombre de jetons
+   * @returns {boolean} Vrai si le lancer est possible
+   */
+  static _validerJetons(dialogElement, { notifier = false } = {}) {
+    const avertir = (message, options) => {
+      if (notifier) ui.notifications.warn(message, options)
+    }
     let canRoll = true
     const jetonsConscience = Number(dialogElement.querySelector("#jetonsConscience").value) || 0
     const jetonsReserve = Number(dialogElement.querySelector("#jetonsReserve").value) || 0
@@ -567,46 +587,40 @@ export default class PenombreRoll extends Roll {
     const jetonsComplication = PenombreRoll._getComplicationJetons(dialogElement)
     const jetonsARepartir = Math.max(jetons - jetonsComplication, 0)
 
-    if (jetonsTotal > jetonsARepartir) {
-      ui.notifications.warn(game.i18n.localize("PENOMBRE.Warnings.jetonsDepassement"))
-    }
+    if (jetonsTotal > jetonsARepartir) avertir(game.i18n.localize("PENOMBRE.Warnings.jetonsDepassement"))
+    if (jetonsTotal !== jetonsARepartir) canRoll = false
 
-    // Vérification du nombre de jetons disponibles
+    // Jetons disponibles
     const id = dialogElement.querySelector(".penombre-roll-dialog").dataset.actorId
-    let actor
-    if (id) actor = game.actors.get(id)
-    if (!actor) return
-
-    // Jetons de conscience
-    const nbJetonsRestantsConscience = actor.system.nbJetonsRestants
-    if (jetonsConscience > nbJetonsRestantsConscience) {
-      ui.notifications.warn(game.i18n.format("PENOMBRE.Warnings.jetonsConscienceInsuffisants", { actuel: nbJetonsRestantsConscience, demande: jetonsConscience }))
-      canRoll = false
+    const actor = id ? game.actors.get(id) : null
+    if (!actor) canRoll = false
+    else {
+      // Jetons de conscience
+      const nbJetonsRestantsConscience = actor.system.nbJetonsRestants
+      if (jetonsConscience > nbJetonsRestantsConscience) {
+        avertir(game.i18n.format("PENOMBRE.Warnings.jetonsConscienceInsuffisants", { actuel: nbJetonsRestantsConscience, demande: jetonsConscience }))
+        canRoll = false
+      }
     }
 
-    // Jetons de la réserve collégiale
-    const reserveCollegiale = game.settings.get(SYSTEM.ID, "reserveCollegiale")
-    const nbJetonsRestantsReserveCollegiale = reserveCollegiale.nbJetonsRestants
+    // Jetons de la réserve collégiale (inutilisable sans MJ connecté)
+    const nbJetonsRestantsReserveCollegiale = mjConnecte() ? game.settings.get(SYSTEM.ID, "reserveCollegiale").nbJetonsRestants : 0
     if (jetonsReserve > nbJetonsRestantsReserveCollegiale) {
-      ui.notifications.warn(game.i18n.format("PENOMBRE.Warnings.jetonsReserveInsuffisants", { actuel: nbJetonsRestantsReserveCollegiale, demande: jetonsReserve }), {
-        permanent: true,
-      })
+      avertir(game.i18n.format("PENOMBRE.Warnings.jetonsReserveInsuffisants", { actuel: nbJetonsRestantsReserveCollegiale, demande: jetonsReserve }), { permanent: true })
       canRoll = false
     }
 
     // Un atout collégial doit obligatoirement être payé par un jeton de la réserve
     const jetonsReserveMinimum = PenombreRoll._getJetonsReserveMinimum(dialogElement)
     if (jetonsReserve < jetonsReserveMinimum) {
-      ui.notifications.warn(game.i18n.format("PENOMBRE.Warnings.jetonsReserveFactionRequis", { minimum: jetonsReserveMinimum }))
+      avertir(game.i18n.format("PENOMBRE.Warnings.jetonsReserveFactionRequis", { minimum: jetonsReserveMinimum }))
       canRoll = false
     }
 
-    // Permet le lancer ou non
-    if (jetonsTotal !== jetonsARepartir) canRoll = false
     if (PenombreRoll._isComplicationDescriptionMissing(dialogElement)) canRoll = false
 
-    if (canRoll) dialogElement.querySelector('button[type="submit"]').disabled = false
-    else dialogElement.querySelector('button[type="submit"]').disabled = true
+    dialogElement.querySelector('button[type="submit"]').disabled = !canRoll
+    return canRoll
   }
 
   static _updateFormula(dialogElement) {
@@ -765,7 +779,7 @@ export default class PenombreRoll extends Roll {
       tooltipLabel.setAttribute("data-tooltip", tooltipContent)
     }
 
-    PenombreRoll._checkCanRoll(jetons, dialogElement)
+    PenombreRoll._validerJetons(dialogElement)
     return jetons
   }
   // #endregion Événements du prompt
@@ -938,8 +952,10 @@ export default class PenombreRoll extends Roll {
       choix = candidats[result]
     }
 
-    await game.users.activeGM.query("penombre.decrementFactionAtout", { factionId: choix.factionId, elementId: choix.elementId })
-    ui.notifications.info(game.i18n.format("PENOMBRE.Factions.atoutDegrade", { nom: choix.atout.nom, faction: reserveCollegiale.factions[choix.factionId].nom }))
+    const libelle = { nom: choix.atout.nom, faction: reserveCollegiale.factions[choix.factionId].nom }
+    const { ok } = await demanderAuMJ("penombre.decrementFactionAtout", { factionId: choix.factionId, elementId: choix.elementId })
+    if (ok) ui.notifications.info(game.i18n.format("PENOMBRE.Factions.atoutDegrade", libelle))
+    else ui.notifications.warn(game.i18n.format("PENOMBRE.Factions.atoutADegrader", libelle), { permanent: true })
   }
 
   /**
