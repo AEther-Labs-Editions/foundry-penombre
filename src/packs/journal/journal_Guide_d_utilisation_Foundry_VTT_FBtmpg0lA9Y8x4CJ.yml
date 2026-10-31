@@ -1,6 +1,6 @@
 name: Guide d'utilisation Foundry VTT
 pages:
-  - sort: 62500
+  - sort: 40000
     name: Comment lancer les dés
     type: text
     _id: NbsQ1cortQsp55q0
@@ -12,69 +12,82 @@ pages:
     text:
       format: 1
       content: >-
-        <p>Vous ne pouvez lancer les dés qu'en Mode Jouer.</p><p>Pour lancer les
-        dés, cliquez sur l'icône du dé harmonique applicable, dans la zone
-        <strong>Harmoniques</strong>.</p><img
-        src="systems/penombre/assets/guide/fiche_mode_jouer.webp" alt="Fiche"
-        /><p>Un dialogue de lancer fera alors son apparition.</p><img
-        src="systems/penombre/assets/guide/fiche_jet.webp" alt="Dialogue de
-        lancer" /><p></p><p>La visibilité du jet reprend par défaut celle
-        choisie dans les options du tchat.</p><p>Le calcul du coût en jetons est
-        effectué automatiquement en fonction des choix.</p><p>La case
-        <strong>Bonus total</strong> permet de voir la somme des niveaux des
-        atouts sélectionnés.</p><p>Le champ <strong>Bonus</strong> dans la zone
-        <strong>Formule</strong> permet de saisir un bonus sous la forme 1d20 ou
-        bien xd6 (x étant un entier).<br /></p><h2>Si vous utilisez des
-        atouts</h2><p>Cliquez sur les atouts applicables.</p><p>Si vous avez
-        cliqué sur des atouts, pensez à répartir l'éventuelle dépense en jetons
-        entre votre conscience et la réserve collégiale (zone <strong>Dépense
-        automatique</strong>).</p><p>Si le total des jetons dépensés ici n'est
-        pas égal au nombre des <strong>Jetons à dépenser</strong>, vous ne
-        pourrez pas lancer les dés.</p><p>Le maximum de chaque source de jetons
-        correspond au nombre de jetons disponibles lorsque la fenêtre de
-        dialogue s'est ouverte.</p><p>Lorsque vous déplacez le sélecteur de la
-        <strong>Réserve collégiale</strong>, un message d'avertissement apparaît
-        si le nombre réel de jetons est inférieur à celui que vous avez
-        choisi.</p><p>Si c'est une action standard, le premier atout est
-        gratuit.</p><p>Si c'est une action collégiale, le premier atout n'est
-        pas gratuit, sauf si vous cochez la case <strong>J'ai choisi le premier
-        atout</strong>…</p><p>Les réserves sollicitées seront mises à jour de
-        façon automatique.</p><h2>Si vous lancez une action collégiale</h2><p>La
-        première étape est la même que pour une action standard.</p><p>Par
-        contre, le résultat initial ne sera pas affiché dans le message de tchat
-        avant que l'action soit finalisée.</p><p>Toutes les joueuses connectées,
-        à l'exception du MJ, vont voir dans le message de tchat deux boutons :
-        <strong>Participer</strong> et <strong>Ne pas
-        participer</strong>.</p><p>SI une joueuse participe, une fenêtre de
-        dialogue apparaîtra pour lui permettre de réaliser son jet de dés. Si
-        une joueuse ne participe pas, elle devra cliquer sur le bouton
-        <strong>Ne pas participer </strong>pour que le jet collégial aille
-        jusqu'au bout.</p><p>Lorsque toutes les joueuses auront fait leur choix,
-        le message initial sera mis à jour avec les succès de tout le monde, et
-        le résultat sera visible dans le tchat. À noter que dans <strong>Autres
-        succès</strong>, une info-bulle sur le nombre de succès permet de
-        connaître le personnage à l'origine du jet.</p><p>Tous les participants
-        peuvent choisir de relancer tout ou partie de leurs
-        dés.</p><p><strong>Remarque :</strong> comme le lancer est visible au
-        moment où la joueuse lance les dés, il est fortement conseillé de
-        discuter tous ensemble avant que chacun commence à cliquer sur le bouton
-        <strong>Lancer les dés</strong>.</p><p><strong>Remarque importante
-        :</strong> pour que le système fonctionne correctement, il est impératif
-        qu'une Éminence grise soit sélectionnée pour chacune des joueuses (voir
-        : <strong>Personnage du joueur</strong> ci-dessous).</p><img
+        <p>Vous ne pouvez lancer les dés qu'en Mode Jouer. Cliquez sur le dé de
+        l'harmonique applicable, dans la zone Harmoniques de la fiche : la
+        fenêtre de lancer apparaît.</p><img
+        src="systems/penombre/assets/guide/fiche_jet.webp" alt="Fenêtre de
+        lancer de dés" /><h2>Les options du
+        lancer</h2><ul><li><p><strong>Harmonique</strong> : le dé lancé ; cochez
+        <strong>Plutôt le Dé merveilleux</strong> pour le remplacer par le D20
+        merveilleux (1 jeton).</p></li><li><p><strong>Difficulté</strong> de
+        l'action.</p></li><li><p><strong>Action collégiale</strong> : voir plus
+        bas.</p></li><li><p><strong>Effet magique</strong> : choisissez la
+        <strong>maîtrise utilisée</strong> et le <strong>niveau de
+        l'effet</strong>. Produire un effet magique coûte 1 jeton, comme
+        compenser un niveau de maîtrise manquant ; plusieurs effets magiques
+        peuvent être produits par un même
+        jet.</p></li><li><p><strong>Atouts</strong> : cliquez sur les atouts
+        mobilisés. La case <strong>Bonus total</strong> donne la somme de leurs
+        niveaux.</p></li><li><p><strong>Formule</strong> : le champ
+        <strong>Bonus</strong> permet d'ajouter 1d20 ou xd6 (x étant un
+        entier).</p></li><li><p><strong>Visibilité</strong> : reprend par défaut
+        celle choisie dans les options du tchat.</p></li></ul><h2>Les
+        jetons</h2><p>Le nombre de <strong>jetons à dépenser</strong> est
+        calculé automatiquement d'après vos choix. Répartissez cette dépense
+        entre votre conscience et la réserve collégiale dans la zone
+        <strong>Dépense automatique</strong> : si le total réparti n'est pas
+        égal au nombre de jetons à dépenser, vous ne pourrez pas lancer les
+        dés.</p><ul><li><p>Le maximum de chaque source correspond aux jetons
+        disponibles à l'ouverture de la fenêtre ; un avertissement apparaît si
+        la réserve collégiale en compte moins que vous n'en
+        demandez.</p></li><li><p>Pour une action standard, le premier atout est
+        gratuit. Pour une action collégiale, il ne l'est que si vous cochez
+        <strong>J'ai choisi le premier atout…</strong></p></li><li><p>Les
+        réserves sollicitées sont mises à jour
+        automatiquement.</p></li></ul><h2>Créer une complication pour économiser
+        des jetons</h2><p>Si votre Éminence a un emplacement de complication
+        libre (ou si le Jeu des factions est actif), la zone
+        <strong>Complication</strong> propose de créer une complication à la
+        place d'une partie de la dépense : décrivez-la et choisissez le nombre
+        de jetons économisés (1 à 3), qui devient le nombre de cases barrées.
+        Avec le Jeu des factions, la complication peut viser votre Éminence ou
+        une faction.</p><h2>Atouts de faction</h2><p>Si le Jeu des factions est
+        actif, les atouts collégiaux des relations apparaissent sous vos atouts.
+        Le jeton dépensé pour un atout collégial doit venir de la réserve
+        collégiale (voir <em>Le jeu des factions</em>).</p><img
+        src="systems/penombre/assets/guide/fiche-jet-factions.webp" alt="Fenêtre
+        de lancer avec les atouts de faction" /><h2>Si vous lancez une action
+        collégiale</h2><p>La première étape est la même que pour une action
+        standard, mais le résultat initial n'est affiché dans le tchat qu'une
+        fois l'action finalisée.</p><p>Toutes les joueuses connectées, à
+        l'exception du MJ, voient dans le message de tchat deux boutons :
+        <strong>Participer</strong> et <strong>Ne pas participer</strong>. Une
+        joueuse qui participe fait son propre jet ; une joueuse qui ne participe
+        pas doit cliquer sur <strong>Ne pas participer</strong> pour que le jet
+        collégial aille jusqu'au bout.</p><p>Lorsque toutes les joueuses ont
+        fait leur choix, le message initial est mis à jour avec les succès de
+        tout le monde. Dans <strong>Autres succès</strong>, une infobulle sur le
+        nombre de succès indique le personnage à l'origine du jet. Tous les
+        participants peuvent relancer tout ou partie de leurs
+        dés.</p><p><strong>Remarque :</strong> le lancer étant visible au moment
+        où la joueuse lance les dés, il est conseillé de discuter tous ensemble
+        avant que chacune clique sur <strong>Lancer les
+        dés</strong>.</p><p><strong>Remarque importante :</strong> pour que le
+        système fonctionne correctement, une Éminence grise doit être
+        sélectionnée pour chacune des joueuses (<strong>Personnage du
+        joueur</strong> dans la configuration du joueur).</p><img
         src="systems/penombre/assets/guide/selection_personnage_joueur.webp"
-        /><p></p><h2>Relance</h2><p>Pour chaque jet de dés, il est possible de
-        faire plusieurs relances. Les boutons de relance sont visibles dans le
-        tchat en fonction de l'état des réserves (vides, non vides).</p><p>Il
-        suffit de sélectionner les dés à relancer et de cliquer sur un bouton
-        <strong>Relance (…)</strong> ; le message initial sera mis à jour avec
-        le nouveau résultat.</p><p>Là aussi, la réserve sollicitée sera mise à
-        jour de façon automatique.<br />Si aucun dé n'est sélectionné, cliquer
-        sur le bouton n'aura aucun effet.</p><h2>Créer un raccourci dans la
-        barre des raccourcis</h2><p>Vous pouvez glisser-déposer le dé
-        d'harmonique dans la barre des raccourcis pour créer un raccourci pour
-        ce jet d'harmonique. L'image du raccourci est la valeur du dé
-        d'harmonique.</p>
+        alt="Configuration du joueur : personnage du joueur"
+        /><h2>Relance</h2><p>Chaque jet peut être relancé plusieurs fois, chaque
+        relance coûtant un jeton. Les boutons de relance du message de tchat
+        dépendent de l'état des réserves (vides ou non). Sélectionnez les dés à
+        relancer et cliquez sur un bouton <strong>Relance (…)</strong> : le
+        message initial est mis à jour avec le nouveau résultat et la réserve
+        sollicitée est mise à jour automatiquement. Sans dé sélectionné, le
+        bouton n'a aucun effet.</p><h2>Créer un raccourci dans la barre des
+        raccourcis</h2><p>Glissez-déposez le dé d'harmonique dans la barre des
+        raccourcis pour créer un raccourci vers ce jet. L'image du raccourci est
+        la valeur du dé.</p>
     video:
       controls: true
       volume: 0.5
@@ -94,7 +107,7 @@ pages:
       lastModifiedBy: x1OxOUwTeSDz7l5O
       modifiedTime: 1772649346279
     _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.NbsQ1cortQsp55q0'
-  - sort: 50000
+  - sort: 30000
     name: Comment utiliser la fiche d'Éminence grise
     type: text
     _id: Lvwsq6UuIDwfw4qS
@@ -106,44 +119,82 @@ pages:
     text:
       format: 1
       content: >-
-        <p>Dans cette version kit de démo, vous n'aurez pas à remplir vous-même
-        la fiche de PJ (Éminence grise) ; en effet, le MJ (Psycholune) devrait
-        vous fournir l'un des prétirés de ce kit.</p><p></p><h2>Description de
-        la fiche avec le style Kit de démo</h2><p>La fiche d'Éminence grise est
-        très semblable à la fiche papier "standard", mise à disposition ici : <a
-        href="https://www.aether-labs.fr/ressources/ressources-penombre">https://www.aether-labs.fr/ressources/ressources-penombre</a></p><p></p><img
-        src="systems/penombre/assets/guide/fiche_mode_jouer.webp" alt="Fiche en
-        Mode Jouer" /><p></p><h2>Mode Éditer / Mode Jouer</h2><p>Il existe deux
-        modes pour la fiche, sélectionnables grâce au bouton en haut à
-        gauche.</p><ul><li><p>Le Mode Jouer (voir figure
-        ci-dessus).</p></li><li><p>Le Mode Éditer (voir figure
-        ci-dessous).</p></li></ul><img
-        src="systems/penombre/assets/guide/fiche_mode_editer.webp" alt="Fiche en
-        Mode Éditer" /><p></p><h2>Modifier les jetons de conscience</h2><p>Les
-        jetons de conscience peuvent être modifiés aussi bien en Mode Jouer
-        qu'en Mode Éditer.</p><div><ul><li><p>Clic pour dépenser ou réactiver un
-        jeton.</p></li><li><p>Clic-droit pour perdre ou ajouter un
-        jeton.</p></li></ul><p>Par contre, la modification du max de conscience
-        ne s'effectue qu'en Mode Éditer.</p><p><strong>Attention :</strong> les
-        jetons de conscience sont aussi susceptibles d'être modifiés
-        automatiquement lorsque vous paramétrez le dialogue de lancer de
-        dés.</p><p></p></div><div><h2>Ajouter/modifier des
-        complications</h2></div><p>Les ajouts/modifications de complications se
-        font en Mode Éditer.</p><p></p><h2>Ajouter/modifier/supprimer un
+        <p>Le MJ (Psycholune) peut vous fournir l'un des prétirés du kit
+        (compendium <em>Kit - Prétirés</em>) ou vous laisser créer votre
+        Éminence grise.</p><img
+        src="systems/penombre/assets/guide/fiche_mode_jouer.webp" alt="Fiche
+        d'Éminence grise en mode Jouer" /><h2>Présentation</h2><p>La fiche
+        reprend la fiche papier du livre
+        :</p><ul><li><p><strong>Personnage</strong> : portrait, nom,
+        description, peuple, clé, gamme et
+        ton.</p></li><li><p><strong>Harmoniques</strong> : les cinq dés (Nuit,
+        Âme, Nature, Esprit, Étincelle). Survolez un dé pour connaître le type
+        d'action qu'il couvre ; cliquez dessus pour lancer les
+        dés.</p></li><li><p><strong>Conscience</strong> : jetons disponibles,
+        valeur actuelle et maximum, jetons,
+        complications.</p></li><li><p><strong>Timbre</strong> : partition (case
+        de clé et quatre notes), statut Harmonieux, Faux ou Dissonant,
+        Peste.</p></li><li><p><strong>Pouvoirs</strong>, <strong>Atouts</strong>
+        et <strong>Maîtrises magiques</strong>, chacun avec son
+        potentiel.</p></li><li><p><strong>Rappel des règles</strong> en bas, si
+        vous l'avez activé dans les
+        paramètres.</p></li></ul><h2>Infobulles</h2><p>Survolez le nom d'un
+        pouvoir pour afficher son type, sa citation et son effet ; survolez le
+        nom d'une maîtrise magique pour afficher son harmonique et sa fiche
+        complète (prérequis, action magique, effets par niveau, incident
+        magique). Survolez la case d'un pouvoir pour savoir s'il est utilisé,
+        les cubes d'un atout pour sa valeur, le niveau d'une maîtrise pour son
+        niveau.</p><img
+        src="systems/penombre/assets/guide/infobulle-pouvoir.webp"
+        alt="Infobulle d'un pouvoir" /><img
+        src="systems/penombre/assets/guide/infobulle-maitrise.webp"
+        alt="Infobulle d'une maîtrise magique" /><h2>Mode Éditer / Mode
+        Jouer</h2><p>Il existe deux modes pour la fiche, sélectionnables grâce à
+        l'interrupteur en haut à gauche : le Mode Jouer (figure ci-dessus) et le
+        Mode Éditer (figure ci-dessous).</p><img
+        src="systems/penombre/assets/guide/fiche_mode_editer.webp" alt="Fiche
+        d'Éminence grise en mode Éditer" /><h2>Modifier le personnage</h2><p>En
+        Mode Éditer, le nom, la description, le peuple, la clé, la gamme et le
+        ton deviennent modifiables (clé, gamme et ton dans les styles Standard
+        et Règles avancées). Changer de peuple remet la gamme et le ton par
+        défaut de ce peuple. Clic sur le portrait pour le changer, clic droit
+        pour revenir à l'image par défaut.</p><h2>Modifier les jetons de
+        conscience</h2><p>Les jetons de conscience peuvent être modifiés aussi
+        bien en Mode Jouer qu'en Mode Éditer :</p><ul><li><p>clic pour dépenser
+        ou réactiver un jeton ;</p></li><li><p>clic droit pour perdre ou ajouter
+        un jeton.</p></li></ul><p>La modification du maximum de conscience ne
+        s'effectue qu'en Mode Éditer.</p><p><strong>Attention :</strong> les
+        jetons de conscience sont aussi modifiés automatiquement par la fenêtre
+        de lancer de dés.</p><h2>Ajouter/modifier des complications</h2><p>Les
+        ajouts et modifications de complications se font en Mode Éditer ;
+        cliquez sur les cases pour fixer leur niveau. Une complication peut
+        aussi être créée pendant un jet de dés pour économiser des jetons (voir
+        <em>Comment lancer les dés</em>).</p><h2>Ajouter/modifier/supprimer un
         pouvoir, un atout ou une maîtrise magique</h2><p>Les ajouts et
-        modifications d'objets se font en Mode Éditer.</p><ul><li><p>Clic sur
-        l'icône + pour ajouter un objet à la liste.</p></li><li><p>Clic sur
-        l'icône Modifier (crayon dans carré) pour le
-        modifier.</p></li><li><p>Clic sur l'icône Supprimer (corbeille) pour le
-        supprimer. Attention, cette suppression est immédiate et
-        définitive.</p></li></ul><p>Vous pouvez glisser-déposer des objets vers
-        et depuis votre fiche d'Éminence grise.</p><p></p><h3>Lorsque vous
-        modifiez un objet</h3><p>Une fenêtre d'édition apparaît.</p><img
-        src="systems/penombre/assets/guide/fiche_edit_item.webp" alt="Fenêtre
-        d'édition d'item" /><p><strong>Attention :</strong> n'effectuez pas de
-        modifications de polices dans la description, autre que celle appliquée
-        automatiquement par la gestion des titres. Cela cause un bug qui casse
-        l'interface de la fiche du système.</p>
+        modifications d'objets se font en Mode Éditer :</p><ul><li><p>clic sur
+        l'icône <strong>+</strong>, à droite du titre de la section, pour
+        ajouter un objet ;</p></li><li><p>clic sur l'icône
+        <strong>Modifier</strong> (crayon dans un carré) pour le modifier
+        ;</p></li><li><p>clic sur l'icône <strong>Supprimer</strong> (corbeille)
+        pour le supprimer. Attention, cette suppression est immédiate et
+        définitive.</p></li></ul><p>Vous pouvez aussi glisser-déposer des objets
+        vers et depuis votre fiche, par exemple depuis les compendiums
+        <em>Pouvoirs</em> et <em>Maîtrises magiques</em>.</p><h2>Lorsque vous
+        modifiez un objet</h2><p>Une fenêtre d'édition apparaît. Un pouvoir a un
+        type (peuple, clé, gamme, ton, naissance), une citation et une
+        description ; une maîtrise magique a une harmonique, un prérequis, un
+        niveau et une description présentée comme les cartes des tirés à
+        part.</p><img src="systems/penombre/assets/guide/fiche_edit_item.webp"
+        alt="Fenêtre d'édition d'un pouvoir" /><img
+        src="systems/penombre/assets/guide/fiche-maitrise.webp" alt="Fenêtre
+        d'édition d'une maîtrise magique" /><p><strong>Attention :</strong> dans
+        les descriptions, n'appliquez pas d'autres polices que celles des titres
+        proposés par l'éditeur, et ne supprimez pas la mise en forme des
+        descriptions de maîtrises : cela peut casser l'affichage de la
+        fiche.</p><h2>Raccourcis</h2><p>Vous pouvez glisser-déposer votre
+        Éminence grise dans la barre des raccourcis pour créer un raccourci qui
+        ouvre sa fiche, et un dé d'harmonique pour créer un raccourci vers ce
+        jet (voir <em>Comment lancer les dés</em>).</p>
     video:
       controls: true
       volume: 0.5
@@ -210,7 +261,7 @@ pages:
       lastModifiedBy: x1OxOUwTeSDz7l5O
       modifiedTime: 1772649925688
     _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.cZw3YYM2pYzW2CUS'
-  - sort: 56250
+  - sort: 50000
     name: Comment gérer la réserve collégiale
     type: text
     _id: xiY0OhRbvnWPbRWb
@@ -224,16 +275,23 @@ pages:
       content: >-
         <img src="systems/penombre/assets/guide/fiche_reserve_collegiale.webp"
         alt="Réserve collégiale" /><h2>Réserve gérée par l'ensemble des
-        joueuses</h2><p>Cette réserve est commune à l'ensemble des joueuses. Ce
-        que vous y faites est répercuté chez les autres joueuses et
-        vice-versa.</p><h2>Modifier les jetons de la réserve
-        collégiale</h2><div><p>Clic pour dépenser ou réactiver un
+        joueuses</h2><p>Cette réserve est commune à l'ensemble des joueuses : ce
+        que vous y faites est répercuté chez les autres joueuses, et
+        inversement.</p><h2>Ouvrir la réserve collégiale</h2><p>Depuis le menu
+        Pénombre de la barre latérale (bouton <strong>Réserve
+        collégiale</strong>), ou avec la macro <strong>Réserve
+        collégiale</strong> du compendium Macros, à partager avec vos
+        joueuses.</p><h2>Modifier les jetons de la réserve
+        collégiale</h2><p>Clic pour dépenser ou réactiver un
         jeton.</p><p><strong>Attention :</strong> les jetons de la réserve
-        collégiale sont aussi susceptibles d'être modifiés automatiquement
-        lorsque vous paramétrez votre dialogue de lancer de dés.</p><h2>Macro
-        Réserve collégiale</h2><p>Vous trouverez dans le compendium Macros la
-        macro Réserve collégiale à partager avec vos joueuses. Elle permet
-        d'ouvrir la fenêtre de gestion de la réserve collégiale.</p><div>
+        collégiale sont aussi modifiés automatiquement par la fenêtre de lancer
+        de dés.</p><p>Avec un nombre de jetons différent de 10 (styles Standard
+        et Règles avancées), les jetons sont affichés en grille plutôt que dans
+        le panier ; la fenêtre peut alors être redimensionnée.</p><h2>Feuille
+        collégiale étendue</h2><p>Si le Jeu des factions est actif, la fenêtre
+        devient la feuille collégiale étendue du livre, avec le potentiel
+        collégial et les relations : voir la page <em>Le jeu des
+        factions</em>.</p>
     video:
       controls: true
       volume: 0.5
@@ -253,7 +311,7 @@ pages:
       lastModifiedBy: 6qbNUhuoJ67e6dmf
       modifiedTime: 1758728798693
     _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.xiY0OhRbvnWPbRWb'
-  - sort: 25000
+  - sort: 10000
     name: Se procurer le kit de démo du jeu
     type: text
     _id: BZxxmPzLiWLN1I72
@@ -290,8 +348,8 @@ pages:
       lastModifiedBy: 6qbNUhuoJ67e6dmf
       modifiedTime: 1758741347757
     _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.BZxxmPzLiWLN1I72'
-  - sort: 162500
-    name: Comment modifier le style de jeu
+  - sort: 20000
+    name: Paramètres du système
     type: text
     _id: bkfTETg2uFTXRoc3
     system: {}
@@ -302,18 +360,32 @@ pages:
     text:
       format: 1
       content: >-
-        <p>D'autres styles de jeu ont été débloqués lors d'un palier de
-        financement du jeu <em>Pénombre</em> sur la plateforme Game On
-        Tabletop.</p><p>Pour y accéder :</p><ul><li><p>Cliquez sur l'icône
-        Paramètres (deux roues dentées) à droite.</p></li><li><p>Cliquez sur le
-        bouton Configurer les paramètres.</p></li><li><p>Cliquez sur l'intitulé
-        <em>Pénombre</em>.</p></li><li><p>Là, vous pouvez sélectionner le style
-        de jeu. Il en existe trois : Kit de Démo, Standard et Règles avancées.
-        </p></li><li><p>Vous pouvez également définir le nombre maximum de
-        jetons disponibles dans la Réserve Collégiale (10 par défaut).
-        Attention, dans le style Kit de Démo, il <strong>faut</strong> que le
-        nombre de jetons soit
-        <strong>10</strong>.</p></li></ul><p></p><p></p><p></p>
+        <img src="systems/penombre/assets/guide/parametres-systeme.webp"
+        alt="Paramètres du système Pénombre" /><h2>Accéder aux
+        paramètres</h2><p>Cliquez sur l'icône <strong>Paramètres</strong> (roues
+        dentées) de la barre latérale, puis sur <strong>Configurer les
+        paramètres</strong>, et choisissez la catégorie
+        <strong>Pénombre</strong>.</p><h2>Paramètres du monde
+        (MJ)</h2><ul><li><p><strong>Style de jeu</strong> : Kit de démo,
+        Standard ou Règles avancées. Les styles Standard et Règles avancées ont
+        été débloqués lors d'un palier de financement du jeu sur Game On
+        Tabletop ; ils rendent modifiables la Clé, la Gamme et le Ton de la
+        fiche d'Éminence grise. Le changement demande un
+        rechargement.</p></li><li><p><strong>Nombre de jetons de la Réserve
+        collégiale</strong> : 10 par défaut. Dans le style Kit de démo, il doit
+        rester à 10.</p></li><li><p><strong>Activer le Jeu des factions</strong>
+        : règle optionnelle des relations avec les factions (voir la page <em>Le
+        jeu des factions</em>). Indisponible dans le style Kit de
+        démo.</p></li></ul><h2>Paramètres de chaque
+        joueuse</h2><ul><li><p><strong>Afficher le rappel des règles sur la
+        fiche</strong> : affiche ou masque le rappel des dépenses de jetons et
+        du tableau des résultats en bas de la fiche d'Éminence grise. Ce réglage
+        est propre à chaque joueuse ; le rappel reste accessible depuis le menu
+        Pénombre de la barre latérale.</p></li><li><p><strong>Activer les dés
+        Pénombre</strong> et <strong>Activer les textures des dés
+        Pénombre</strong> : voir la page <em>Comment activer les dés
+        Pénombre</em>. Ces deux réglages sont propres à chaque
+        poste.</p></li></ul>
     video:
       controls: true
       volume: 0.5
@@ -334,7 +406,7 @@ pages:
       modifiedTime: 1764527783039
       lastModifiedBy: ljzL3FBlhW4qIK9g
     _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.bkfTETg2uFTXRoc3'
-  - sort: 112500
+  - sort: 100000
     name: Comment gérer les combats
     type: text
     _id: P27arfJEB6MZewCH
@@ -378,7 +450,7 @@ pages:
       modifiedTime: 1772649218362
       lastModifiedBy: x1OxOUwTeSDz7l5O
     _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.P27arfJEB6MZewCH'
-  - sort: 262500
+  - sort: 110000
     name: Comment activer les dés Pénombre
     type: text
     _id: 27RpfrSG5BnfW6P1
@@ -417,6 +489,264 @@ pages:
       modifiedTime: 1766130148408
       lastModifiedBy: xu8p7UMcYrInjBEg
     _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.27RpfrSG5BnfW6P1'
+  - sort: 60000
+    name: Le jeu des factions
+    type: text
+    _id: f11CyHI4qkPNGiFt
+    system: {}
+    title:
+      show: true
+      level: 1
+    image: {}
+    text:
+      format: 1
+      content: >-
+        <p>Le jeu des factions est une règle optionnelle du livre (chapitre
+        <em>La lutte au quotidien</em>, p. 90 à 94) : les Éminences grises
+        entretiennent, en tant que groupe, des relations avec des factions, sous
+        forme d'atouts et de complications collégiaux. Le MJ l'active dans les
+        paramètres du système (<strong>Activer le Jeu des factions</strong>),
+        sauf dans le style Kit de démo.</p><h2>La feuille collégiale
+        étendue</h2><p>La fenêtre de la réserve collégiale reproduit alors la
+        feuille collégiale étendue du livre :</p><ul><li><p>la <strong>réserve
+        collégiale</strong>, comme d'habitude ;</p></li><li><p>le médaillon
+        <strong>Potentiel</strong> : les points de potentiel collégial servant à
+        créer des atouts collégiaux en cours de partie ;</p></li><li><p>la
+        colonne <strong>Relations</strong> : pour chaque faction, jusqu'à trois
+        atouts collégiaux (niveau 1 à 3) et une complication collégiale (trois
+        cases).</p></li></ul><img
+        src="systems/penombre/assets/guide/feuille-collegiale-etendue.webp"
+        alt="Feuille collégiale étendue" /><p>La fenêtre peut être agrandie en
+        hauteur pour afficher plus de relations.</p><h2>Gérer les relations
+        (MJ)</h2><p>Le MJ passe la fenêtre en mode édition avec l'interrupteur
+        en haut à gauche ; les joueuses voient la feuille en lecture
+        seule.</p><img
+        src="systems/penombre/assets/guide/feuille-collegiale-edition.webp"
+        alt="Feuille collégiale étendue en mode édition"
+        /><ul><li><p><strong>Nouvelle relation</strong>, en bas de la colonne,
+        crée une faction ; son nom se saisit sur la ligne <em>Nom de la
+        relation</em>.</p></li><li><p>Écrire sur une ligne d'atout ou de
+        complication vide crée l'atout (niveau 1) ou la complication (une case
+        barrée).</p></li><li><p>Cliquez sur les cubes ou les cases pour changer
+        un niveau ; cliquer sur la dernière case barrée la décoche. Une
+        complication sans case barrée reste affichée jusqu'à ce que le MJ la
+        retire (elle disparaît à la retraite suivante).</p></li><li><p>La croix
+        au survol d'une ligne supprime l'élément ; pour un atout perdu pour des
+        raisons narratives, une case permet de remettre ses points dans le
+        potentiel collégial.</p></li><li><p>Créer un atout ne dépense rien : le
+        MJ reporte lui-même le coût éventuel (point de potentiel, case de
+        complication pour obtenir le niveau 2), ce qui couvre la création
+        préalable, l'évolution de fin de scénario et les dépenses de potentiel
+        en jeu.</p></li></ul><h2>En jeu</h2><ul><li><p>Les <strong>atouts de
+        faction</strong> apparaissent dans la fenêtre de lancer, sous les atouts
+        de l'Éminence. Comme tout atout, ils ajoutent autant de D6 que leur
+        niveau et coûtent un jeton s'ils ne sont pas le premier atout ; ce jeton
+        doit venir de la <strong>réserve collégiale</strong>.</p></li><li><p>Sur
+        une <strong>fausse note</strong>, l'un des atouts collégiaux utilisés
+        perd un niveau (au choix si plusieurs) ; à 0, il est
+        effacé.</p></li><li><p>Une <strong>complication collégiale</strong> peut
+        être créée pendant un jet à la place de jetons, en choisissant la
+        faction comme cible ; le MJ peut aussi en imposer une en mode
+        édition.</p></li><li><p>Mobiliser une faction pour agir à la place des
+        Éminences coûte un jeton collégial et, si c'est pertinent, un jet de
+        dés.</p></li></ul>
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    category: null
+    ownership:
+      default: -1
+      6qbNUhuoJ67e6dmf: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: x1OxOUwTeSDz7l5O
+      modifiedTime: 1793468219570
+    _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.f11CyHI4qkPNGiFt'
+  - sort: 70000
+    name: Le menu Pénombre
+    type: text
+    _id: 8RrVXkKYdOwHbQIi
+    system: {}
+    title:
+      show: true
+      level: 1
+    image: {}
+    text:
+      format: 1
+      content: >-
+        <img src="systems/penombre/assets/guide/menu-penombre.webp" alt="Menu
+        Pénombre de la barre latérale" /><p>L'onglet Pénombre de la barre
+        latérale regroupe :</p><h2>Support</h2><p>Les liens vers le Discord de
+        la Fonderie, le Discord d'Æther Labs, les ressources pour Pénombre, le
+        signalement de bugs et la présentation vidéo du
+        système.</p><h2>Système</h2><ul><li><p><strong>Réserve
+        collégiale</strong> : ouvre la réserve collégiale (ou la feuille
+        collégiale étendue avec le Jeu des
+        factions).</p></li><li><p><strong>Rappel des règles</strong> : ouvre
+        dans une fenêtre indépendante le rappel des dépenses de jetons et du
+        tableau des résultats, pour tout le monde, que le rappel soit affiché ou
+        non sur la fiche.</p></li><li><p><strong>Gestionnaire de groupe</strong>
+        (MJ seulement) : voir la page suivante.</p></li></ul><img
+        src="systems/penombre/assets/guide/rappel-regles.webp" alt="Fenêtre du
+        rappel des règles" />
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    category: null
+    ownership:
+      default: -1
+      6qbNUhuoJ67e6dmf: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: x1OxOUwTeSDz7l5O
+      modifiedTime: 1793468219572
+    _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.8RrVXkKYdOwHbQIi'
+  - sort: 80000
+    name: Le gestionnaire de groupe
+    type: text
+    _id: IQfG68viGvAKGoR7
+    system: {}
+    title:
+      show: true
+      level: 1
+    image: {}
+    text:
+      format: 1
+      content: >-
+        <p>Réservé au MJ, le gestionnaire de groupe affiche les Éminences grises
+        des joueuses connectées : nom de la joueuse et de son personnage, dés
+        des cinq harmoniques et jetons de conscience. Il s'ouvre depuis le menu
+        Pénombre de la barre latérale ou avec la macro <strong>Gestionnaire de
+        groupe</strong>.</p><img
+        src="systems/penombre/assets/guide/gestionnaire-groupe.webp"
+        alt="Gestionnaire de groupe" /><p>Seules les joueuses connectées ayant
+        une Éminence grise assignée (<strong>Personnage du joueur</strong>) y
+        apparaissent.</p>
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    category: null
+    ownership:
+      default: -1
+      6qbNUhuoJ67e6dmf: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: x1OxOUwTeSDz7l5O
+      modifiedTime: 1793468219574
+    _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.IQfG68viGvAKGoR7'
+  - sort: 90000
+    name: La fiche d'Adversaire
+    type: text
+    _id: g61gWmQtyZJ0gHSi
+    system: {}
+    title:
+      show: true
+      level: 1
+    image: {}
+    text:
+      format: 1
+      content: >-
+        <p>Les adversaires sont gérés par le MJ. Leur fiche présente le
+        portrait, le nom et la description, l'<strong>Adversité</strong> et la
+        <strong>Résilience</strong> (valeur actuelle et maximum), puis leurs
+        <strong>Actions adverses</strong> et leurs
+        <strong>Intrigues</strong>.</p><img
+        src="systems/penombre/assets/guide/fiche-adversaire.webp" alt="Fiche
+        d'Adversaire" /><p>Comme la fiche d'Éminence grise, elle a un Mode Jouer
+        et un Mode Éditer ; les actions et intrigues s'ajoutent, se modifient et
+        se suppriment en Mode Éditer. Les adversaires du kit et des scénarios se
+        trouvent dans les compendiums correspondants.</p>
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    category: null
+    ownership:
+      default: -1
+      6qbNUhuoJ67e6dmf: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: x1OxOUwTeSDz7l5O
+      modifiedTime: 1793468219575
+    _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.g61gWmQtyZJ0gHSi'
+  - sort: 120000
+    name: Les compendiums
+    type: text
+    _id: Nw4g5kju0q2PA2WR
+    system: {}
+    title:
+      show: true
+      level: 1
+    image: {}
+    text:
+      format: 1
+      content: >-
+        <p>Le système fournit plusieurs compendiums, à glisser-déposer vers les
+        fiches ou dans le monde :</p><ul><li><p><strong>Pouvoirs</strong> : les
+        127 pouvoirs du livre, classés par peuple, clé, gamme et ton, avec leur
+        citation.</p></li><li><p><strong>Maîtrises magiques</strong> : les douze
+        maîtrises, présentées comme les cartes des tirés à part (prérequis,
+        harmonique, action magique, effets par niveau, incident
+        magique).</p></li><li><p><strong>Kit - Prétirés</strong>, <strong>Kit -
+        Pouvoirs potentiels</strong> et <strong>Kit - Adversaires</strong> : les
+        Éminences grises prêtes à jouer du kit de démo, les pouvoirs qu'elles
+        peuvent acquérir et les adversaires du kit.</p></li><li><p>Les
+        compendiums des scénarios <strong>Plénitude</strong> et
+        <strong>Échos</strong> (adversaires et journaux), <strong>Images &amp;
+        Scènes</strong>.</p></li><li><p><strong>Journaux</strong> : ce guide,
+        l'<strong>Écran</strong> (image de l'écran et de ses quatre volets) et
+        le lexique.</p></li><li><p><strong>Macros</strong> : Réserve collégiale,
+        Gestionnaire de groupe, Afficher la carte de
+        l'Harmonde.</p></li></ul><p><strong>Remarque :</strong> les acteurs et
+        objets déjà importés dans un monde ne sont pas mis à jour quand les
+        compendiums évoluent ; réimportez-les depuis le compendium pour profiter
+        des textes à jour.</p>
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    category: null
+    ownership:
+      default: -1
+      6qbNUhuoJ67e6dmf: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: penombre
+      systemVersion: '#{VERSION}#'
+      lastModifiedBy: x1OxOUwTeSDz7l5O
+      modifiedTime: 1793468219577
+    _key: '!journal.pages!FBtmpg0lA9Y8x4CJ.Nw4g5kju0q2PA2WR'
 folder: null
 categories: []
 ownership:

@@ -13,6 +13,8 @@
 - Compendium Pouvoirs : Projection astrale, « lorsqu'elle annule sa projection » au lieu de « s'anime » (livre p. 60)
 - Maîtrises magiques : la description reprend la mise en forme des cartes « … en action » des tirés à part (intitulés Prérequis, Harmonique, Action magique, Incident magique ; niveaux 1 à 5 dans des pastilles, verbe clé en gras italique ; deux colonnes), aussi dans l'infobulle de la fiche Eminence ; texte du compendium mis à jour d'après la version corrigée (ajouts, coquilles comme « omnium », fragment de la Brigue retiré de la Conjuration) ; les maîtrises des prétirés gardent leur texte avec la nouvelle mise en forme
 - Fiche Eminence : l'infobulle des pouvoirs prend le style de celle des maîtrises (parchemin, nom en Cattedrale bleue avec son type, citation en italique, effet en Goudy) ; les deux infobulles sont 50 % plus larges ; noms des maîtrises en gras avec un léger contour, noms des pouvoirs avec un léger contour et des lettres légèrement espacées
+- Fiche Eminence : l'infobulle des maîtrises affiche le nom et l'harmonique en tête, comme le type dans celle des pouvoirs
+- Guide d'utilisation mis à jour : pages Paramètres du système, Le jeu des factions, Le menu Pénombre, Le gestionnaire de groupe, La fiche d'Adversaire et Les compendiums ajoutées ; fiche d'Éminence, lancer de dés (effet magique, dé merveilleux, complication, atouts de faction) et réserve collégiale réécrits ; captures refaites pour Foundry V14 et la nouvelle fiche
 
 1.8.4
 - Fiche Eminence : refactoring interne de la mise en page (les float sont remplacés par flex et grid dans les blocs Personnage, Harmoniques, Conscience, Timbre et les tableaux), sans changement visuel
