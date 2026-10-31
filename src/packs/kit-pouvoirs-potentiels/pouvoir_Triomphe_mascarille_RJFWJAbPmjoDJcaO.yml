@@ -1,15 +1,14 @@
 type: pouvoir
-name: Triomphe
+name: Triomphe mascarille
 _id: RJFWJAbPmjoDJcaO
 img: systems/penombre/assets/icons/pouvoir.webp
 system:
   utilise: false
+  citation: Profite de ta défaite pour assister à ma victoire !
   description: >-
-    <h1>Triomphe</h1><p><em>Profite de ta défaite pour assister à ma victoire
-    !</em></p><p>L’action d’un autre personnage a pour conséquence un échec :
-    faites immédiatement agir Ackbar. Cette action supplémentaire est
-    gratuite.</p>
-  type: naissance
+    <p>L'action d'un autre personnage a pour conséquence un échec : faites
+    immédiatement agir Ackbar. Cette action supplémentaire est gratuite.</p>
+  type: ton
 effects: []
 folder: lLVYkr2eG13xLU7R
 sort: 150000

@@ -4,12 +4,12 @@ _id: 0pBvSLypeAYfNTq2
 img: systems/penombre/assets/icons/pouvoir.webp
 system:
   utilise: false
+  citation: Mes rires dérident les murs des palais !
   description: >-
-    <h1>Colosse tonitruant</h1><p><em>Mes rires dérident les murs des palais
-    !</em></p><p>Le temps d’une scène, toute action de Nuane pour attirer
-    l’attention par la voix devient automatique. De plus, le nombre de succès de
-    toutes ses actions d’étincelle augmente de 1.</p>
-  type: naissance
+    <p>Le temps d'une scène, toute action de Nuane pour attirer l'attention par
+    la voix devient automatique. De plus, le nombre de succès de toutes ses
+    actions d'étincelle augmente de 1.</p>
+  type: peuple
 effects: []
 folder: AXh0qA385ZNM1DD8
 sort: 150000

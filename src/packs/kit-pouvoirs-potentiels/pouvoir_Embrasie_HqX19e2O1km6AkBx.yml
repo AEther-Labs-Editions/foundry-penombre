@@ -4,15 +4,16 @@ _id: HqX19e2O1km6AkBx
 img: systems/penombre/assets/icons/pouvoir.webp
 system:
   utilise: false
+  citation: >-
+    L'impulsion de l'embrasie est capable de décupler vos forces quand le soleil
+    est au zénith.
   description: >-
-    <h1>Embrasie</h1><p><em>L’impulsion de l’embrasie est capable de décupler
-    vos forces quand le soleil est au zénith.</em></p><p>Le temps d’une scène
-    baignée par un soleil puissant, le nombre de succès de toutes les actions
-    brutales réalisées par Phobos augmente de 2.</p><p>De plus, chaque fois
-    qu’il réalise une merveille (p. 31 du kit), son joueur peut lui choisir un
-    nouveau pouvoir dans la liste suivante, ou augmenter de 1 sa valeur de
-    conscience.</p><ul><li><p>Embrasie ardente</p></li><li><p>Leçon de
-    l'ascèse</p></li></ul>
+    <p>Le temps d'une scène baignée par un soleil puissant, le nombre de succès
+    de toutes les actions brutales réalisées par Phobos augmente de 2.</p><p>De
+    plus, chaque fois qu’il réalise une merveille (p. 31 du kit), son joueur
+    peut lui choisir un nouveau pouvoir dans la liste suivante, ou augmenter de
+    1 sa valeur de conscience.</p><ul><li><p>Embrasie
+    ardente</p></li><li><p>Leçons de l'ascèse</p></li></ul>
   type: naissance
 effects: []
 folder: m9M0QYBctzJtZPI0

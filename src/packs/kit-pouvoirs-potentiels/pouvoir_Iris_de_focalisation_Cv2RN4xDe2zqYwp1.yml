@@ -4,11 +4,11 @@ _id: Cv2RN4xDe2zqYwp1
 img: systems/penombre/assets/icons/pouvoir.webp
 system:
   utilise: false
+  citation: Mon sens de l'observation est d'utilité publique !
   description: >-
-    <h1>Iris de focalisation</h1><p><em>Mon sens de l’observation est d’utilité
-    publique !</em></p><p>Lors d’une action d’étincelle de Nuane, votre dé
-    harmonique affiche sa valeur maximale.</p>
-  type: naissance
+    <p>Lors d'une action d'étincelle de Nuane, votre dé harmonique affiche sa
+    valeur maximale.</p>
+  type: peuple
 effects: []
 folder: AXh0qA385ZNM1DD8
 sort: 200000

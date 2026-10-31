@@ -158,9 +158,10 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
+      citation: Rien n'entrave ma route ni ne perturbe mon pas. RIEN !
       description: >-
-        <p>Une action impliquant un déplacement impossible (sur l’eau, par
-        exemple) devient possible.</p><p>Une action pour trouver de l’eau, de la
+        <p>Une action impliquant un déplacement impossible (sur l'eau, par
+        exemple) devient possible. Une action pour trouver de l'eau, de la
         nourriture et un abri en milieu naturel devient automatique.</p><p>De
         plus, chaque fois qu’elle réalise une merveille (p. 31 du kit), son
         joueur peut lui choisir un nouveau pouvoir dans la liste suivante, ou
@@ -168,7 +169,6 @@ items:
         conscience.</p><ul><li><p>Musc</p></li><li><p>Empathie
         animale</p></li></ul>
       type: naissance
-      citation: Rien n’entrave ma route ni ne perturbe mon pas. RIEN !
     effects: []
     folder: null
     sort: 0
@@ -362,12 +362,12 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
+      citation: Tu doutes de moi ? Attends… Laisse-moi m'ébrouer…
       description: >-
-        <p>Le temps d’une scène, Geysir émet des phéromones augmentant de 1 le
+        <p>Le temps d'une scène, Geysir émet des phéromones augmentant de 1 le
         nombre de succès de toutes ses actions pour convaincre, séduire ou
         dominer.</p>
-      type: naissance
-      citation: Tu doutes de moi ? Attends… Laisse-moi m’ébrouer…
+      type: peuple
     effects: []
     folder: null
     sort: 0
@@ -392,15 +392,15 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
-      description: >-
-        <p>Le temps d’une scène, un animal sous le contrôle du psycholune fait
-        confiance à Geysir. Il n’est pas agressif, une conversation sommaire
-        peut avoir lieu, et il peut recevoir un ordre simple à exécuter sans
-        délai. Cela ne peut pas le mettre en danger.</p>
-      type: naissance
       citation: >-
         Les animaux alentour ne sont ni une menace, ni insignifiants : ils sont
         la harde.
+      description: >-
+        <p>Le temps d'une scène, un animal sous le contrôle du Psycholune fait
+        confiance à Geysir. Il n'est pas agressif, une conversation sommaire
+        peut avoir lieu, et il peut recevoir un ordre simple qu'il exécute sans
+        délai. Cela ne peut pas le mettre en danger.</p>
+      type: peuple
     effects: []
     folder: null
     sort: 0

@@ -358,13 +358,14 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
+      citation: Ma conscience s'ébroue et se répand, à tâtons puis de plus en plus vite.
       description: >-
-        <p>Rio Rim prend le contrôle, aussi longtemps qu’il ou elle le souhaite,
-        d’un autre personnage consentant ou épuisé qui lui est proche. Par la
-        suite, il ou elle le contrôle tant qu’il se trouve proche, et la
+        <p>Rio Rim prend le contrôle, aussi longtemps qu'il ou elle le souhaite,
+        d'un autre personnage consentant ou épuisé qui lui est proche. Par la
+        suite, il ou elle le contrôle tant qu'il se trouve proche, et la
         coercition peut être relâchée sans rompre le lien. Chaque lien avec un
         nouveau personnage diminue de 1 la valeur de conscience maximale de Rio
-        Rim, ce qui peut le ou la troubler, l’épuiser, voire le ou la tuer.
+        Rim, ce qui peut le ou la troubler, l'épuiser, voire le ou la tuer.
         Rompre un lien est une action automatique qui ne restaure pas la valeur
         de conscience maximale.</p><p>De plus, chaque fois qu’il ou elle réalise
         une merveille (p. 31 du kit), son joueur peut lui choisir un nouveau
@@ -372,7 +373,6 @@ items:
         conscience.</p><ul><li><p>Des souvenirs en
         commun</p></li><li><p>Projection astrale</p></li></ul>
       type: naissance
-      citation: Je serai toi.
     effects: []
     folder: null
     sort: 0
@@ -397,12 +397,12 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
+      citation: Nos esprits sont connectés, il nous suffit de lire en eux.
       description: >-
-        <p>Le temps d’une action, Rio Rim laisse un autre personnage proche
-        utiliser un de ses atouts, ou se sert de l’un des siens. Chacun lit un
-        souvenir dans la mémoire de l’autre.</p>
-      type: naissance
-      citation: Des souvenirs en commun
+        <p>Le temps d'une action, Rio Rim laisse un autre personnage proche
+        utiliser un de ses atouts, ou se sert de l'un des siens. Chacun lit un
+        souvenir dans la mémoire de l'autre.</p>
+      type: peuple
     effects: []
     folder: null
     sort: 0
@@ -427,14 +427,14 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
+      citation: Ma conscience s'ébroue et se répand, à tâtons puis de plus en plus vite.
       description: >-
-        <p>Le temps d’une scène, Rio Rim projette sa forme astrale hors de son
+        <p>Le temps d'une scène, Rio Rim projette sa forme astrale hors de son
         corps, inerte le temps de la projection. Ce spectre immatériel peut
-        franchir murs et barreaux. Son rayon d’action est d’environ un bâtiment.
-        Lorsqu’il ou elle annule sa projection, le nombre de succès de toutes
-        ses actions d’esprit et d’âme diminue de 1 jusqu’au prochain repos.</p>
+        franchir murs et barreaux. Son rayon d'action est d'environ un bâtiment.
+        Lorsqu'il ou elle annule sa projection, le nombre de succès de toutes
+        ses actions d'esprit et d'âme diminue de 1 jusqu'au prochain repos.</p>
       type: naissance
-      citation: Ma conscience s’ébroue et se répand, à tâtons puis de plus en plus vite.
     effects: []
     folder: null
     sort: 0

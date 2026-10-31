@@ -154,21 +154,21 @@ prototypeToken:
   depth: 1
 items:
   - type: pouvoir
-    name: Fantasme d’onyx
+    name: Fantasme d'onyx
     _id: EQwMEPIumzov7VdK
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
+      citation: Comme des tentacules prudents…
       description: >-
-        <p>Une action impossible devient possible grâce à l’apparition d’un
-        appendice d’onyx éphémère (ailes, troisième œil, bras supplémentaire,
+        <p>Une action impossible devient possible grâce à l'apparition d'un
+        appendice d'onyx éphémère (ailes, troisième œil, bras supplémentaire,
         etc.).</p><p>De plus, chaque fois qu’il réalise une merveille (p. 31 du
         kit), son joueur peut lui choisir un nouveau pouvoir dans la liste
         suivante, ou augmenter de 1 sa valeur de
-        conscience.</p><ul><li><p>Homochromie</p></li><li><p>Suppôt des
-        abysses</p></li></ul>
-      type: naissance
-      citation: Comme des tentacules prudents…
+        conscience.</p><ul><li><p>Homochromie aubéronne</p></li><li><p>Suppôt
+        des Abysses</p></li></ul>
+      type: cle
     effects: []
     folder: null
     sort: 0
@@ -187,14 +187,14 @@ items:
       default: 0
     _key: '!actors.items!mqK6cd47lWLvwL9C.EQwMEPIumzov7VdK'
   - type: pouvoir
-    name: Homochromie
+    name: Homochromie aubéronne
     _id: EFcdJj2l7ROyXF2v
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
+      citation: Le mimétisme. L'art de disparaître et de se confondre avec le décor.
       description: <p>Une action de camouflage de Noh devient automatique.</p>
-      type: naissance
-      citation: Le mimétisme. L’art de disparaître et de se confondre avec le décor.
+      type: gamme
     effects: []
     folder: null
     sort: 0
@@ -213,16 +213,19 @@ items:
       default: 0
     _key: '!actors.items!mqK6cd47lWLvwL9C.EFcdJj2l7ROyXF2v'
   - type: pouvoir
-    name: Suppôt des abysses
+    name: Suppôt des Abysses
     _id: gle9HJrE6j5L5eMA
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
+      citation: >-
+        L'énergie ténébreuse sédimentée de ma vieille carcasse peut transformer
+        n'importe quel liquide sans âme en encre contrefaite.
       description: >-
-        <p>Le temps d’une scène, Noh accepte une complication « offrande de sang
-        (3) » et ignore tous les prérequis d’onyxium.</p>
-      type: naissance
-      citation: Suppôt des abysses
+        <p>Le temps d'une scène, Noh accepte une complication « offrande de sang
+        » niveau 3 et ignore tous les prérequis d'art noir (onyxium,
+        conjuration, prisme).</p>
+      type: cle
     effects: []
     folder: null
     sort: 0

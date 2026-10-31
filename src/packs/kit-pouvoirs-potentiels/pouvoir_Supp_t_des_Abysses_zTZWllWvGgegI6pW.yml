@@ -1,14 +1,16 @@
 type: pouvoir
-name: Suppôt des abysses
+name: Suppôt des Abysses
 img: systems/penombre/assets/icons/pouvoir.webp
 system:
   utilise: false
+  citation: >-
+    L'énergie ténébreuse sédimentée de ma vieille carcasse peut transformer
+    n'importe quel liquide sans âme en encre contrefaite.
   description: >-
-    <h1>Suppôt des abysses</h1><p><em>L’énergie ténébreuse sédimentée de ma
-    vieille carcasse peut transformer n’importe quel liquide sans âme en encre
-    contrefaite.</em></p><p>Le temps d’une scène, Noh accepte une complication «
-    offrande de sang (3) » et ignore tous les prérequis d’onyxium.</p>
-  type: naissance
+    <p>Le temps d'une scène, Noh accepte une complication « offrande de sang »
+    niveau 3 et ignore tous les prérequis d'art noir (onyxium, conjuration,
+    prisme).</p>
+  type: cle
 effects: []
 folder: aPmTjs8cZsnuZFqA
 flags: {}

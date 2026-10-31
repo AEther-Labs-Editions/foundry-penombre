@@ -4,11 +4,11 @@ _id: MClN8RYzz3NxkjxO
 img: systems/penombre/assets/icons/pouvoir.webp
 system:
   utilise: false
+  citation: Pour Phobos, l'embrasie est plus qu'une impulsion, c'est un vertige.
   description: >-
-    <h1>Embrasie ardente</h1><p><em>Pour lui, l’embrasie est plus qu’une
-    impulsion, c’est un vertige.</em></p><p>Lors de l’utilisation d’embrasie, le
-    nombre de succès d’une action réalisée par Phobos augmente de 2.</p>
-  type: naissance
+    <p>Lors de l'utilisation d'embrasie, le nombre de succès d'une action
+    réalisée par Phobos augmente de 2.</p>
+  type: peuple
 effects: []
 folder: m9M0QYBctzJtZPI0
 sort: 200000

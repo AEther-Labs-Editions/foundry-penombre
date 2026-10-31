@@ -4,13 +4,15 @@ _id: u3LYRd2UHhvBWFKY
 img: systems/penombre/assets/icons/pouvoir.webp
 system:
   utilise: false
+  citation: >-
+    Les animaux alentour ne sont ni une menace, ni insignifiants : ils sont la
+    harde.
   description: >-
-    <p><em>Les animaux alentour ne sont ni une menace, ni insignifiants : ils
-    sont la harde.</em></p><p>Le temps d’une scène, un animal sous le contrôle
-    du psycholune fait confiance à Geysir. Il n’est pas agressif, une
-    conversation sommaire peut avoir lieu, et il peut recevoir un ordre simple à
-    exécuter sans délai. Cela ne peut pas le mettre en danger.</p>
-  type: naissance
+    <p>Le temps d'une scène, un animal sous le contrôle du Psycholune fait
+    confiance à Geysir. Il n'est pas agressif, une conversation sommaire peut
+    avoir lieu, et il peut recevoir un ordre simple qu'il exécute sans délai.
+    Cela ne peut pas le mettre en danger.</p>
+  type: peuple
 effects: []
 folder: zEYIYQqCE0AVnpOY
 sort: 150000

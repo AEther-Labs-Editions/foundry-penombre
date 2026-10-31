@@ -154,24 +154,24 @@ prototypeToken:
   prependAdjective: false
   depth: 1
 items:
-  - name: Chevelure vivante (action gratuite par les serpents)
+  - name: Chevelure vivante
     type: pouvoir
     _id: m7oh2WXepebJSUjC
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
-      type: naissance
+      citation: Abandonne tes épaules tendues aux langues bifides de mes serpents.
       description: >-
         <p>Faites réaliser une action physique aux serpents de Céliana (cette
         action ne compte pas dans la limite d'actions par tour). Les serpents
-        peuvent observer, mordre une cible ou Céliana elle-même, l'aider dans sa
-        tâche ou , si elle possède ces autres pouvoirs, injecter du venin
-        alchimique ou fixer d'un regard médusant.</p><p>De plus, chaque fois
-        qu’elle réalise une merveille (p. 31 du kit), son joueur peut lui
-        choisir un nouveau pouvoir dans la liste suivante, ou augmenter de 1 sa
-        valeur de conscience.</p><ul><li><p>Regard médusant</p></li><li><p>Venin
+        peuvent observer, mordre une cible ou Céliana, l'aider dans sa tâche ou,
+        si elle possède ces autres pouvoirs, injecter du venin alchimique ou
+        fixer d'un regard médusant.</p><p>De plus, chaque fois qu’elle réalise
+        une merveille (p. 31 du kit), son joueur peut lui choisir un nouveau
+        pouvoir dans la liste suivante, ou augmenter de 1 sa valeur de
+        conscience.</p><ul><li><p>Regard médusant</p></li><li><p>Venin
         alchimique</p></li></ul>
-      citation: Abandonne tes épaules tendues aux langues bifides de mes amis…
+      type: naissance
     effects: []
     folder: null
     sort: 0
@@ -382,13 +382,14 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
+      citation: >-
+        Les méduses ont perdu leur pouvoir de pétrification ? Il a peut-être
+        juste évolué.
       description: >-
-        <p><em>Les méduses ont-elles vraiment perdu leur pouvoir de
-        pétrification ? Il a peut-être juste évolué.</em></p><p>Une action de
-        Céliana incluant un contact visuel avec un personnage imprime dans son
-        esprit un ordre simple auquel il obéit. Cet ordre ne peut pas le mettre
-        en danger, et ne dure que le temps d’une scène.</p>
-      type: naissance
+        <p>Une action de Céliana incluant un contact visuel avec un personnage
+        imprime dans son esprit un ordre simple auquel il obéit. Cet ordre ne
+        peut pas le mettre en danger, et ne dure que le temps d'une scène.</p>
+      type: peuple
     effects: []
     folder: null
     sort: 0
@@ -412,19 +413,19 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
-      description: >-
-        <p>À l’acquisition de ce pouvoir, choisissez une harmonique.</p><p>En
-        une action, Céliana récolte un venin à consommer plus tard, ou tente de
-        l’inoculer par morsure (action de nature). Jusqu’à la fin de la scène,
-        au choix :</p><ul><li><p>Le nombre de succès des actions en lien avec
-        l’harmonique choisie et réalisées par l’envenimé augmente ou diminue de
-        1.</p></li><li><p>Les difficultés opposées par l’envenimé augmentent ou
-        diminuent de 1.</p></li></ul><p>Par ailleurs, tous les venins
-        alchimiques peuvent servir d’encres de conjuration.</p>
-      type: naissance
       citation: >-
-        D’une caresse mentale, j’ordonne à l’un de mes serpents de distiller son
+        D'une caresse mentale, j'ordonne à un de mes serpents de distiller son
         venin.
+      description: >-
+        <p>À l'acquisition de ce pouvoir, choisissez une harmonique. En une
+        action, Céliana récolte un venin à consommer plus tard, ou tente de
+        l'inoculer par morsure (action de nature). Jusqu'à la fin de la scène,
+        au choix : • Le nombre de succès des actions en lien avec l'harmonique
+        choisie et réalisées par l'envenimé augmente ou diminue de 1. • Les
+        difficultés opposées par l'envenimé augmentent ou diminuent de 1. Par
+        ailleurs, tous les venins alchimiques peuvent servir d'encres de
+        conjuration.</p>
+      type: peuple
     effects: []
     folder: null
     sort: 0

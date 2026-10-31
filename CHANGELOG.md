@@ -9,6 +9,8 @@
 - Réserve collégiale : sans l'image du panier (nombre de jetons différent de 10), les jetons ont la même taille qu'avec le panier
 - Fiche Eminence : refonte globale pour se rapprocher du design de la fiche pdf
 - Rappel des règles : chaque joueur choisit de l'afficher ou non en bas de la fiche Eminence (paramètre « Afficher le rappel des règles sur la fiche », quel que soit le style de jeu) ; un bouton « Rappel des règles » du menu Pénombre l'ouvre dans une fenêtre indépendante, pour tout le monde
+- Compendiums Kit - Pouvoirs potentiels et Kit - Prétirés : pouvoirs réalignés sur le compendium Pouvoirs (noms, type peuple / clé / gamme / ton / naissance, citation dans son champ, texte du livre au nom du prétiré) ; la liste des pouvoirs gagnés sur une merveille (p. 31 du kit) est conservée
+- Compendium Pouvoirs : Projection astrale, « lorsqu'elle annule sa projection » au lieu de « s'anime » (livre p. 60)
 
 1.8.4
 - Fiche Eminence : refactoring interne de la mise en page (les float sont remplacés par flex et grid dans les blocs Personnage, Harmoniques, Conscience, Timbre et les tableaux), sans changement visuel

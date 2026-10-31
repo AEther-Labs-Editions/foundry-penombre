@@ -159,15 +159,15 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
-      description: >-
-        <p>Lors d’une action collégiale incluant Mangrove, le nombre de succès
-        total augmente du nombre de participants.</p><p>De plus, chaque fois
-        qu’il réalise une merveille (p. 31 du kit), son joueur peut lui choisir
-        un nouveau pouvoir dans la liste suivante, ou augmenter de 1 sa valeur
-        de conscience.</p><ul><li><p>Excès</p></li><li><p>J’ai un
-        plan</p></li></ul>
-      type: naissance
       citation: Marcher ensemble est un début ; travailler ensemble est une victoire.
+      description: >-
+        <p>Lors d'une action collégiale incluant Maître Mangrove, le nombre de
+        succès total augmente du nombre de participants.</p><p>De plus, chaque
+        fois qu’il réalise une merveille (p. 31 du kit), son joueur peut lui
+        choisir un nouveau pouvoir dans la liste suivante, ou augmenter de 1 sa
+        valeur de conscience.</p><ul><li><p>Excès
+        grangousier</p></li><li><p>J'ai un plan</p></li></ul>
+      type: naissance
     effects: []
     folder: null
     sort: 0
@@ -186,19 +186,19 @@ items:
       default: 0
     _key: '!actors.items!oQfBudRYF5bAOKQP.c6VIuiN9n547UUqI'
   - type: pouvoir
-    name: Excès
+    name: Excès grangousier
     _id: eckKviOZrdnPjoVU
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
-      description: >-
-        <p>Le temps d’une scène, le nombre de succès de toutes les actions
-        d’étincelle réalisées par Mangrove augmente de 2. Puis, jusqu’au
-        prochain repos, il diminue de 1.</p>
-      type: naissance
       citation: >-
-        Je n’échoue pas : soit je réussis, soit je réussis mieux. Peu importent
+        Je n'échoue pas : soit je réussis, soit je réussis mieux. Peu importent
         les sacrifices.
+      description: >-
+        <p>Le temps d'une scène, le nombre de succès de toutes les actions
+        d'étincelle réalisées par Maître Mangrove augmente de 2. Puis, jusqu'au
+        prochain repos, il diminue de 1.</p>
+      type: gamme
     effects: []
     folder: null
     sort: 0
@@ -217,18 +217,18 @@ items:
       default: 0
     _key: '!actors.items!oQfBudRYF5bAOKQP.eckKviOZrdnPjoVU'
   - type: pouvoir
-    name: J’ai un plan
+    name: J'ai un plan
     _id: mNsH1HBzYdJeXEqD
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
+      citation: L'issue de cette guerre reste à écrire. Sois-en la plume.
       description: >-
         <p>Une action devient automatique car un élément est remplacé par un
-        autre (une fenêtre fermée s’ouvre, un garde s’avère être un ami,
-        Mangrove trouve un objet opportun…). Ce pouvoir n’a aucun effet sur les
-        adversaires déjà déclarés ou en combat.</p>
-      type: naissance
-      citation: L’issue de cette guerre reste à écrire. Sois-en la plume.
+        autre (une fenêtre fermée s'ouvre, un garde s'avère être un ami, Maître
+        Mangrove trouve un objet opportun, etc.). Ce pouvoir n'a aucun effet sur
+        les adversaires déjà déclarés ou en combat.</p>
+      type: peuple
     effects: []
     folder: null
     sort: 0

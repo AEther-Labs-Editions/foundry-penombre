@@ -419,15 +419,15 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
-      type: naissance
+      citation: Être satyre, c'est offrir à l'Harmonde un spectacle quotidien.
       description: >-
-        <p>Le temps d'une action spectaculaire, utilisez gratuitement le D20
+        <p>Le temps d'une action spectaculaire, utilisez gratuitement le dé
         merveilleux en plus du dé harmonique.</p><p>De plus, chaque fois qu’il
         ou elle réalise une merveille (p. 31 du kit), son joueur peut lui
         choisir un nouveau pouvoir dans la liste suivante, ou augmenter de 1 sa
         valeur de conscience.</p><ul><li><p>Bouc
-        émissaire</p></li><li><p>Chevreau des abysses</p></li></ul>
-      citation: Être satyre c'est offrir à l'Harmonde un spectacle quotidien.
+        émissaire</p></li><li><p>Chevreau des Abysses</p></li></ul>
+      type: naissance
     effects: []
     folder: IxCLMJlUPYUhtQ3N
     sort: 300000
@@ -454,15 +454,15 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
-      description: >-
-        <p>Une action pour attirer l’attention, ou convaincre de sa culpabilité
-        devient automatique. La prochaine action des opposants et adversaires ne
-        peut cibler que Tétras.</p>
-      type: naissance
       citation: >-
         Des intrigues de palais initiées par des satyres ont, jadis, incité les
         autorités à prendre des mesures radicales pour décourager ceux qui
-        tenteraient, à l’avenir, de se présenter aux portes de la cité.
+        tenteraient, à l'avenir, de se présenter aux portes de la cité.
+      description: >-
+        <p>Une action pour attirer l'attention, ou convaincre de sa culpabilité
+        devient automatique. La prochaine action des opposants et adversaires ne
+        peut cibler que Tétras (Satyre/Faune).</p>
+      type: peuple
     effects: []
     folder: IxCLMJlUPYUhtQ3N
     sort: 100000
@@ -482,18 +482,18 @@ items:
       modifiedTime: 1778519956479
     _key: '!actors.items!GydFc7LKi7gaD7ch.QNEctBMrinQ7QD3o'
   - type: pouvoir
-    name: Chevreau des abysses
+    name: Chevreau des Abysses
     _id: fNYa63J0BKAPD1YI
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
-      description: >-
-        <p>Une action de Tétras pour cabrioler, escalader, ou parcourir une
-        longue distance devient automatique.</p>
-      type: naissance
       citation: >-
-        Mes deux cuisses animales au poil long s’achèvent sur des sabots noircis
+        Mes deux cuisses animales au poil long s'achèvent sur des sabots noircis
         et taillés en pointe.
+      description: >-
+        <p>Une action de Tétras (Satyre/Faune) pour cabrioler, escalader, ou
+        parcourir une longue distance devient automatique.</p>
+      type: peuple
     effects: []
     folder: IxCLMJlUPYUhtQ3N
     sort: 200000

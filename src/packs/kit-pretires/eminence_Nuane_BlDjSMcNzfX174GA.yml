@@ -158,20 +158,20 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
+      citation: On n'est jamais si grand que quand on se sent libre. Ou l'inverse.
       description: >-
-        <p>Aussi longtemps que Nuane le souhaite, sa taille redevient celle d’un
-        géant (6 à 8 mètres). Les objets sont inutilisables sous cette
-        forme.</p><p>Jusqu’au premier coucher de soleil, le nombre de succès de
-        toutes ses actions d’étincelle et de nature augmente de 2, mais celui de
-        toutes ses actions d’esprit, d’âme et de nuit diminue de 1.</p><p>De
-        plus, chaque fois qu’elle réalise une merveille (p. 31 du kit), son
-        joueur peut lui choisir un nouveau pouvoir dans la liste suivante, ou
-        augmenter de 1 sa valeur de conscience.</p><ul><li><p>Iris de
+        <p>Aussi longtemps qu'elle le souhaite, Nuane abandonne sa taille
+        réfrénée et reprend sa taille naturelle. Les objets de taille standard
+        sont inutilisables sous cette forme. Jusqu'au prochain coucher de
+        soleil, le nombre de succès de toutes ses actions d'étincelle et de
+        nature augmente de 2, mais celui de toutes ses actions d'esprit et de
+        nuit diminue de 1. Tout cela cesse immédiatement si Nuane décide de
+        réfréner sa taille à nouveau (action automatique).</p><p>De plus, chaque
+        fois qu’elle réalise une merveille (p. 31 du kit), son joueur peut lui
+        choisir un nouveau pouvoir dans la liste suivante, ou augmenter de 1 sa
+        valeur de conscience.</p><ul><li><p>Iris de
         focalisation</p></li><li><p>Colosse tonitruant</p></li></ul>
       type: naissance
-      citation: >-
-        On n’est jamais si grand que quand on se sent à nouveau libre. Ou
-        l’inverse.
     effects: []
     folder: null
     sort: 0
@@ -196,11 +196,11 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
+      citation: Mon sens de l'observation est d'utilité publique !
       description: >-
-        <p>Lors d’une action d’étincelle de Nuane, votre dé harmonique affiche
+        <p>Lors d'une action d'étincelle de Nuane, votre dé harmonique affiche
         sa valeur maximale.</p>
-      type: naissance
-      citation: Mon sens de l’observation est d’utilité publique !
+      type: peuple
     effects: []
     folder: null
     sort: 0
@@ -225,12 +225,12 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
-      description: >-
-        <p>Le temps d’une scène, toute action de Nuane pour attirer l’attention
-        par la voix devient automatique. De plus, le nombre de succès de toutes
-        ses actions d’étincelle augmente de 1.</p>
-      type: naissance
       citation: Mes rires dérident les murs des palais !
+      description: >-
+        <p>Le temps d'une scène, toute action de Nuane pour attirer l'attention
+        par la voix devient automatique. De plus, le nombre de succès de toutes
+        ses actions d'étincelle augmente de 1.</p>
+      type: peuple
     effects: []
     folder: null
     sort: 0

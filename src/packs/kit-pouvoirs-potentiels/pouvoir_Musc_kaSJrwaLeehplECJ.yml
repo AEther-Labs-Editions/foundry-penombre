@@ -4,11 +4,12 @@ _id: kaSJrwaLeehplECJ
 img: systems/penombre/assets/icons/pouvoir.webp
 system:
   utilise: false
+  citation: Tu doutes de moi ? Attends… Laisse-moi m'ébrouer…
   description: >-
-    <p><em>Tu doutes de moi ? Attends… Laisse-moi m’ébrouer…</em></p><p>Le temps
-    d’une scène, Geysir émet des phéromones augmentant de 1 le nombre de succès
-    de toutes ses actions pour convaincre, séduire ou dominer.</p>
-  type: naissance
+    <p>Le temps d'une scène, Geysir émet des phéromones augmentant de 1 le
+    nombre de succès de toutes ses actions pour convaincre, séduire ou
+    dominer.</p>
+  type: peuple
 effects: []
 folder: zEYIYQqCE0AVnpOY
 sort: 200000

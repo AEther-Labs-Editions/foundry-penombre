@@ -3,17 +3,16 @@ name: Passage par les ombres
 img: systems/penombre/assets/icons/pouvoir.webp
 system:
   utilise: false
+  citation: Un démon ne se retourne pas, il disparaît dans la nuit.
   description: >-
-    <h1>Passage par les ombres</h1><p><em>Un démon ne se retourne pas, il
-    disparaît dans la nuit.</em></p><p>En une action, Esmeralda passe à travers
-    une ombre proche et ressort par une ombre ciblée, ou projette son bras au
-    travers de ce passage pour agir sur une cible proche de l’ombre
-    ciblée.</p><p>De plus, chaque fois qu’elle réalise une merveille (p. 31 du
-    kit), son joueur peut lui choisir un nouveau pouvoir dans la liste suivante,
-    ou augmenter de 1 sa valeur de
-    conscience.</p><ul><li><p>Évanescence</p></li><li><p>Ombre
-    jumelle</p></li></ul>
-  type: naissance
+    <p>En une action, Esmeralda passe à travers une ombre proche et ressort par
+    une autre ombre lointaine, ou projette son bras au travers de ce passage
+    pour agir sur une cible proche de l'ombre lointaine.</p><p>De plus, chaque
+    fois qu’elle réalise une merveille (p. 31 du kit), son joueur peut lui
+    choisir un nouveau pouvoir dans la liste suivante, ou augmenter de 1 sa
+    valeur de conscience.</p><ul><li><p>Évanescence
+    mélusine</p></li><li><p>Ombre jumelle</p></li></ul>
+  type: cle
 effects: []
 folder: WiYkAwp3Zlbrgg5T
 ownership:

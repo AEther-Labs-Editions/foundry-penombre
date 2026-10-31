@@ -4,14 +4,15 @@ _id: QNEctBMrinQ7QD3o
 img: systems/penombre/assets/icons/pouvoir.webp
 system:
   utilise: false
+  citation: >-
+    Des intrigues de palais initiées par des satyres ont, jadis, incité les
+    autorités à prendre des mesures radicales pour décourager ceux qui
+    tenteraient, à l'avenir, de se présenter aux portes de la cité.
   description: >-
-    <p><em>Des intrigues de palais initiées par des satyres ont, jadis, incité
-    les autorités à prendre des mesures radicales pour décourager ceux qui
-    tenteraient, à l’avenir, de se présenter aux portes de la
-    cité.</em></p><p>Une action pour attirer l’attention, ou convaincre de sa
-    culpabilité devient automatique. La prochaine action des opposants et
-    adversaires ne peut cibler que Tétras.</p>
-  type: naissance
+    <p>Une action pour attirer l'attention, ou convaincre de sa culpabilité
+    devient automatique. La prochaine action des opposants et adversaires ne
+    peut cibler que Tétras.</p>
+  type: peuple
 effects: []
 folder: IxCLMJlUPYUhtQ3N
 sort: 100000

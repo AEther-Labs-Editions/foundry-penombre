@@ -1,14 +1,16 @@
 type: pouvoir
-name: Excès
+name: Excès grangousier
 img: systems/penombre/assets/icons/pouvoir.webp
 system:
   utilise: false
+  citation: >-
+    Je n'échoue pas : soit je réussis, soit je réussis mieux. Peu importent les
+    sacrifices.
   description: >-
-    <h1>Excès</h1><p><em>Je n’échoue pas : soit je réussis, soit je réussis
-    mieux. Peu importent les sacrifices</em>.</p><p>Le temps d’une scène, le
-    nombre de succès de toutes les actions d’étincelle réalisées par Mangrove
-    augmente de 2. Puis, jusqu’au prochain repos, il diminue de 1.</p>
-  type: naissance
+    <p>Le temps d'une scène, le nombre de succès de toutes les actions
+    d'étincelle réalisées par Maître Mangrove augmente de 2. Puis, jusqu'au
+    prochain repos, il diminue de 1.</p>
+  type: gamme
 effects: []
 folder: vhalCys8j2xMMuD5
 flags: {}

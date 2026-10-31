@@ -4,10 +4,10 @@ _id: CmljLjHLz5fG3qwU
 img: systems/penombre/assets/icons/pouvoir.webp
 system:
   utilise: false
+  citation: Rien n'entrave ma route ni ne perturbe mon pas. RIEN !
   description: >-
-    <p><em>Rien n’entrave ma route ni ne perturbe mon pas. RIEN !</em></p><p>Une
-    action impliquant un déplacement impossible (sur l’eau, par exemple) devient
-    possible.</p><p>Une action pour trouver de l’eau, de la nourriture et un
+    <p>Une action impliquant un déplacement impossible (sur l'eau, par exemple)
+    devient possible. Une action pour trouver de l'eau, de la nourriture et un
     abri en milieu naturel devient automatique.</p><p>De plus, chaque fois
     qu’elle réalise une merveille (p. 31 du kit), son joueur peut lui choisir un
     nouveau pouvoir dans la liste suivante, ou augmenter de 1 sa valeur de

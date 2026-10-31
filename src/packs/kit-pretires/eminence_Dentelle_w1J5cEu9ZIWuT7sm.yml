@@ -158,16 +158,16 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
+      citation: Alors c'est moi… sans être moi.
       description: >-
-        <p>Jusqu’à la fin du tour, faites agir l’ombre de Dentelle comme si elle
+        <p>Jusqu'à la fin du tour, faites agir l'ombre de Dentelle comme si elle
         était un double de cette dernière. Ses actions, autonomes, ne comptent
-        pas comme celles de la fée noire.</p><p>De plus, chaque fois qu’elle
-        réalise une merveille (p. 31 du kit), son joueur peut lui choisir un
-        nouveau pouvoir dans la liste suivante, ou augmenter de 1 sa valeur de
+        pas comme celles de Dentelle.</p><p>De plus, chaque fois qu’elle réalise
+        une merveille (p. 31 du kit), son joueur peut lui choisir un nouveau
+        pouvoir dans la liste suivante, ou augmenter de 1 sa valeur de
         conscience.</p><ul><li><p>Évanescence mélusine</p></li><li><p>Sagesse
         cassandre</p></li></ul>
-      type: naissance
-      citation: Alors c’est moi… sans être moi.
+      type: cle
     effects: []
     folder: null
     sort: 0
@@ -371,11 +371,11 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
+      citation: As-tu déjà essayé de porter une écharpe de brume ?
       description: >-
         <p>Dentelle esquive automatiquement une menace physique portée contre
         elle (attaque, piège, chute de pierres, etc.).</p>
-      type: naissance
-      citation: As-tu déjà essayé de porter une écharpe de brume ?
+      type: gamme
     effects: []
     folder: null
     sort: 0
@@ -400,11 +400,11 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
+      citation: Du crime toujours le crime ouvre la route.
       description: >-
         <p>Une action de Dentelle pour convaincre ou tromper devient
         automatique.</p>
-      type: naissance
-      citation: Du crime toujours le crime ouvre la route.
+      type: ton
     effects: []
     folder: null
     sort: 0

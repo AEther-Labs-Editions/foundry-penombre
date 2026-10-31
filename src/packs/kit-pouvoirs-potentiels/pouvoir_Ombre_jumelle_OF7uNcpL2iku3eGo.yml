@@ -3,15 +3,16 @@ name: Ombre jumelle
 img: systems/penombre/assets/icons/pouvoir.webp
 system:
   utilise: false
+  citation: Alors c'est moi… sans être moi.
   description: >-
-    <p><em>Alors c’est moi… sans être moi.</em></p><p>Jusqu’à la fin du tour,
-    faites agir l’ombre de Dentelle comme si elle était un double de cette
-    dernière. Ses actions, autonomes, ne comptent pas comme celles de la fée
-    noire.</p><p>De plus, chaque fois qu’elle réalise une merveille (p. 31 du
-    kit), son joueur peut lui choisir un nouveau pouvoir dans la liste suivante,
-    ou augmenter de 1 sa valeur de conscience.</p><ul><li><p>Évanescence
-    mélusine</p></li><li><p>Sagesse cassandre</p></li></ul>
-  type: naissance
+    <p>Jusqu'à la fin du tour, faites agir l'ombre de Dentelle comme si elle
+    était un double de cette dernière. Ses actions, autonomes, ne comptent pas
+    comme celles de Dentelle.</p><p>De plus, chaque fois qu’elle réalise une
+    merveille (p. 31 du kit), son joueur peut lui choisir un nouveau pouvoir
+    dans la liste suivante, ou augmenter de 1 sa valeur de
+    conscience.</p><ul><li><p>Évanescence mélusine</p></li><li><p>Sagesse
+    cassandre</p></li></ul>
+  type: cle
 effects: []
 folder: hwYF7T9jVOS4w4qy
 ownership:
