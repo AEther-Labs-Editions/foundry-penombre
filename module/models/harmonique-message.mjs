@@ -190,7 +190,7 @@ export default class HarmoniqueMessageData extends BaseMessageData {
           }
 
           // Dépense d'un jeton de conscience et relance
-          await actor.system.depenserJetons(1)
+          if (!(await actor.system.depenserJetons(1))) return
           await PenombreRoll.reroll(messageId, rerolledDices)
 
           // Si c'est un message lié, mettre à jour le message principal
@@ -238,6 +238,10 @@ export default class HarmoniqueMessageData extends BaseMessageData {
           // Dépense d'un jeton de la réserve et relance
           const paiement = await demanderAuMJ("penombre.updateReserveCollegialeFromRoll", { nbJetons: 1 })
           if (!paiement.ok) return
+          if (!paiement.resultat?.paye) {
+            ui.notifications.warn(game.i18n.format("PENOMBRE.Warnings.jetonsReserveInsuffisants", { actuel: 0, demande: 1 }), { permanent: true })
+            return
+          }
           await PenombreRoll.reroll(messageId, rerolledDices)
 
           // Si c'est un message lié, mettre à jour le message principal

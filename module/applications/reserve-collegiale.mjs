@@ -153,16 +153,17 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
     })
   }
 
-  /** @param {number} nbJetons */
+  /**
+   * Paiement de jetons de la réserve, tout ou rien : s'il n'en reste pas assez, la réserve n'est pas modifiée.
+   * @param {number} nbJetons
+   * @returns {Promise<{paye: boolean, restants: number}>} Paiement effectué, et nombre de jetons restants avant paiement
+   */
   static async _mutateReserveFromRoll(nbJetons) {
-    await PenombreReserveCollegiale._updateReserve((r) => {
-      let nbJetonsModifies = 0
-      for (const jeton of Object.values(r.jetons)) {
-        if (jeton.valeur === true && nbJetonsModifies < nbJetons) {
-          jeton.valeur = false
-          nbJetonsModifies++
-        }
-      }
+    return PenombreReserveCollegiale._updateReserve((r) => {
+      const disponibles = Object.values(r.jetons).filter((jeton) => jeton.valeur === true)
+      if (disponibles.length < nbJetons) return { paye: false, restants: disponibles.length }
+      for (const jeton of disponibles.slice(0, nbJetons)) jeton.valeur = false
+      return { paye: true, restants: disponibles.length }
     })
   }
 

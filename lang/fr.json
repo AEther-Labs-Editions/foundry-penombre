@@ -476,7 +476,8 @@
       "userSansActeur": "L’utilisateur {user} n’a pas d’acteur associé.",
       "mjAbsent": "Aucun MJ connecté : cette action a besoin du MJ.",
       "mjAbsentJet": "Aucun MJ connecté : la réserve collégiale et les factions ne sont pas utilisables pour ce jet.",
-      "mjErreur": "Le MJ n’a pas pu traiter la demande : {erreur}"
+      "mjErreur": "Le MJ n’a pas pu traiter la demande : {erreur}",
+      "jetAnnuleReserve": "Jet annulé : vous avez demandé {demande} jeton(s) de la réserve collégiale, mais il n’en reste plus que {actuel}."
     },
     "Settings": {
       "styleJeu": {

@@ -327,9 +327,23 @@ export default class PenombreRoll extends Roll {
     PenombreRoll._applyDiceAppearances(roll)
     await roll.evaluate()
 
-    // Dépense de jetons après évaluation réussie du jet (évite de perdre des jetons si le roll échoue)
+    // Dépense de jetons après évaluation réussie du jet (évite de perdre des jetons si le roll échoue).
+    // Le jet n'est publié que si tout est payé : la conscience est vérifiée avant de prendre dans la réserve,
+    // dont le paiement est fait en une fois par le MJ (une autre joueuse a pu dépenser entre-temps).
+    const nbJetonsRestantsConscience = actor.system.nbJetonsRestants
+    if (jetonsConscienceDepenses > nbJetonsRestantsConscience) {
+      ui.notifications.warn(game.i18n.format("PENOMBRE.Warnings.jetonsConscienceInsuffisants", { actuel: nbJetonsRestantsConscience, demande: jetonsConscienceDepenses }))
+      return null
+    }
     if (jetonsReserveDepenses !== 0) {
-      await demanderAuMJ("penombre.updateReserveCollegialeFromRoll", { nbJetons: jetonsReserveDepenses })
+      const paiement = await demanderAuMJ("penombre.updateReserveCollegialeFromRoll", { nbJetons: jetonsReserveDepenses })
+      if (!paiement.ok) return null
+      if (!paiement.resultat?.paye) {
+        ui.notifications.warn(game.i18n.format("PENOMBRE.Warnings.jetAnnuleReserve", { actuel: paiement.resultat?.restants ?? 0, demande: jetonsReserveDepenses }), {
+          permanent: true,
+        })
+        return null
+      }
     }
     if (jetonsConscienceDepenses !== 0) {
       await actor.system.depenserJetons(jetonsConscienceDepenses)
