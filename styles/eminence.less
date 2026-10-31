@@ -925,9 +925,12 @@ body {
           line-height: 1.15;
         }
 
-        // Coupure entre les mots ; au milieu d'un mot seulement s'il ne tient pas seul
+        // Coupure entre les mots ; au milieu d'un mot seulement s'il ne tient pas seul.
+        // Léger contour comme pour les noms des maîtrises, et lettres très légèrement espacées
         .item-name {
           overflow-wrap: break-word;
+          -webkit-text-stroke: 0.6px currentColor;
+          letter-spacing: 0.5px;
         }
 
         .item-case {
@@ -1015,6 +1018,12 @@ body {
         th.harmonique-width,
         td.harmonique-width {
           width: 70px;
+        }
+
+        // Nom de la maîtrise en gras, renforcé d'un léger contour (la police est déjà une graisse forte)
+        .item-name {
+          font-weight: bold;
+          -webkit-text-stroke: 0.6px currentColor;
         }
 
         // Niveau dans le cercle doré de la fiche du livre (celui des valeurs de conscience), à la taille d'une ligne.

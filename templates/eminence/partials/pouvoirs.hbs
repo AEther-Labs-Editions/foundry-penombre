@@ -13,7 +13,7 @@
                     <span class="item-coche">
                         <img class="item-case" data-action="utilisePouvoir" data-item-id="{{item._id}}" data-tooltip="{{#if item.system.utilise}}{{localize 'PENOMBRE.ui.utilise'}}{{else}}{{localize 'PENOMBRE.ui.nonUtilise'}}{{/if}}" src="systems/penombre/assets/ui/transp_case_{{#if item.system.utilise}}checked{{else}}unchecked{{/if}}.webp"/>
                     </span>
-                    <span class="item-name" data-tooltip="{{item.enrichedTooltip}}" data-tooltip-class="pouvoir-tooltip" data-tooltip-direction="LEFT">{{item.name}}</span>
+                    <span class="item-name" data-tooltip-html="{{item.enrichedTooltip}}" data-tooltip-class="pouvoir-tooltip" data-tooltip-direction="LEFT">{{item.name}}</span>
                     <span class="item-type">{{ localize (concat 'PENOMBRE.Pouvoir.type.' item.system.type '.label') }}</span>
                     {{#if ../unlocked}}
                     <span class="item-controls">

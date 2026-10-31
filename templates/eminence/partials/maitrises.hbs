@@ -10,7 +10,7 @@
                 {{#each maitrises as |item id|}}
                 <tr class="item draggable" data-item-id="{{item._id}}">
                     <td>
-                        <span class="item-name" data-tooltip-html="{{item.system.description}}" data-tooltip-class="maitrise-tooltip" data-tooltip-direction="LEFT">{{item.name}}</span>
+                        <span class="item-name" data-tooltip-html="{{item.infobulle}}" data-tooltip-class="maitrise-tooltip" data-tooltip-direction="LEFT">{{item.name}}</span>
                     </td>
                     <td class="harmonique-width" data-tooltip="{{localize 'PENOMBRE.ui.harmonique'}}">
                         <span class="item-harmonique">{{ localize (concat 'PENOMBRE.Harmonique.' item.system.harmonique '.label') }}</span>

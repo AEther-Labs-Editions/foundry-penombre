@@ -214,18 +214,52 @@ body {
   .maitrise-carte-style();
 }
 
-#tooltip.maitrise-tooltip,
-.locked-tooltip.maitrise-tooltip {
-  max-width: 460px;
+// Cadre commun des infobulles « carte » (maîtrises, pouvoirs) : parchemin et filet bleu, comme les tirés à part.
+// Le gestionnaire d'infobulles de Foundry ajoute toujours theme-dark : les couleurs sont donc explicites
+.infobulle-carte() {
+  max-width: 690px; // 460 px + 50 %
   padding: 10px 12px;
   background: @background-light;
   border: 1px solid @maitrise-bleu;
   text-align: left;
 
+  // En-tête : nom en Cattedrale bleue, source en haut à droite (type du pouvoir, harmonique de la maîtrise)
+  .infobulle-entete {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 0 0 4px;
+  }
+
+  .infobulle-nom {
+    font-family: @font-cattedrale;
+    font-size: 22px;
+    line-height: 1;
+    color: @maitrise-bleu;
+  }
+
+  .infobulle-source {
+    font-family: @font-cattedrale;
+    font-size: 16px;
+    line-height: 1;
+    color: @maitrise-harmonique;
+  }
+}
+
+#tooltip.maitrise-tooltip,
+.locked-tooltip.maitrise-tooltip {
+  .infobulle-carte();
+
   .maitrise-carte {
     .maitrise-carte-style();
     columns: auto; // Une seule colonne dans l'infobulle
     font-size: 14px;
+
+    // Le titre personnalisé des maîtrises de prétirés ferait doublon avec l'en-tête de l'infobulle
+    .maitrise-titre {
+      display: none;
+    }
   }
 }
 
@@ -241,5 +275,27 @@ body.theme-dark .penombre.maitrise .maitrise-carte {
 
   .maitrise-harmonique {
     color: #b9c4bd;
+  }
+}
+
+// Infobulle des pouvoirs (fiche d'éminence) : nom en Cattedrale bleue et type en gris-vert, citation en italique, effet
+#tooltip.pouvoir-tooltip,
+.locked-tooltip.pouvoir-tooltip {
+  .infobulle-carte();
+
+  .pouvoir-carte {
+    font-family: @font-goudy, var(--font-serif);
+    font-size: 14px;
+    line-height: 1.35;
+    color: @maitrise-encre;
+
+    p {
+      margin: 0 0 6px;
+    }
+
+    .pouvoir-citation {
+      font-style: italic;
+      color: @maitrise-harmonique;
+    }
   }
 }

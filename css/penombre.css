@@ -117,14 +117,6 @@ penombre-toggle-switch[checked] thumb {
 /* ---------------------------------------------
         Tooltips custom
 --------------------------------------------- */
-#tooltip.pouvoir-tooltip {
-  max-width: 640px;
-  text-align: left;
-}
-#tooltip.pouvoir-tooltip .pouvoir-tooltip-citation {
-  font-style: italic;
-  margin-bottom: 0.5em;
-}
 /* ---------------------------------------------
         Thème Clair
 --------------------------------------------- */
@@ -976,6 +968,8 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs .item-name {
   overflow-wrap: break-word;
+  -webkit-text-stroke: 0.6px currentColor;
+  letter-spacing: 0.5px;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs .item-case {
   display: block;
@@ -1261,6 +1255,10 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
 .penombre.eminence .eminence-content .eminence-maitrises .content .maitrises th.harmonique-width,
 .penombre.eminence .eminence-content .eminence-maitrises .content .maitrises td.harmonique-width {
   width: 70px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises .item-name {
+  font-weight: bold;
+  -webkit-text-stroke: 0.6px currentColor;
 }
 .penombre.eminence .eminence-content .eminence-maitrises .content .maitrises .item-niveau {
   display: inline-flex;
@@ -1823,11 +1821,33 @@ body.theme-light .penombre.action .action-content {
 }
 #tooltip.maitrise-tooltip,
 .locked-tooltip.maitrise-tooltip {
-  max-width: 460px;
+  max-width: 690px;
   padding: 10px 12px;
   background: #faeed6;
   border: 1px solid #074966;
   text-align: left;
+}
+#tooltip.maitrise-tooltip .infobulle-entete,
+.locked-tooltip.maitrise-tooltip .infobulle-entete {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 4px;
+}
+#tooltip.maitrise-tooltip .infobulle-nom,
+.locked-tooltip.maitrise-tooltip .infobulle-nom {
+  font-family: "Cattedrale";
+  font-size: 22px;
+  line-height: 1;
+  color: #074966;
+}
+#tooltip.maitrise-tooltip .infobulle-source,
+.locked-tooltip.maitrise-tooltip .infobulle-source {
+  font-family: "Cattedrale";
+  font-size: 16px;
+  line-height: 1;
+  color: #4a5650;
 }
 #tooltip.maitrise-tooltip .maitrise-carte,
 .locked-tooltip.maitrise-tooltip .maitrise-carte {
@@ -1940,6 +1960,10 @@ body.theme-light .penombre.action .action-content {
   font-size: 0.92em;
   font-style: italic;
 }
+#tooltip.maitrise-tooltip .maitrise-carte .maitrise-titre,
+.locked-tooltip.maitrise-tooltip .maitrise-carte .maitrise-titre {
+  display: none;
+}
 body.theme-dark .penombre.maitrise .maitrise-carte {
   color: var(--color-text-primary);
 }
@@ -1950,6 +1974,52 @@ body.theme-dark .penombre.maitrise .maitrise-carte .maitrise-entree::before {
 }
 body.theme-dark .penombre.maitrise .maitrise-carte .maitrise-harmonique {
   color: #b9c4bd;
+}
+#tooltip.pouvoir-tooltip,
+.locked-tooltip.pouvoir-tooltip {
+  max-width: 690px;
+  padding: 10px 12px;
+  background: #faeed6;
+  border: 1px solid #074966;
+  text-align: left;
+}
+#tooltip.pouvoir-tooltip .infobulle-entete,
+.locked-tooltip.pouvoir-tooltip .infobulle-entete {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 4px;
+}
+#tooltip.pouvoir-tooltip .infobulle-nom,
+.locked-tooltip.pouvoir-tooltip .infobulle-nom {
+  font-family: "Cattedrale";
+  font-size: 22px;
+  line-height: 1;
+  color: #074966;
+}
+#tooltip.pouvoir-tooltip .infobulle-source,
+.locked-tooltip.pouvoir-tooltip .infobulle-source {
+  font-family: "Cattedrale";
+  font-size: 16px;
+  line-height: 1;
+  color: #4a5650;
+}
+#tooltip.pouvoir-tooltip .pouvoir-carte,
+.locked-tooltip.pouvoir-tooltip .pouvoir-carte {
+  font-family: "GoudyBookletter1911", var(--font-serif);
+  font-size: 14px;
+  line-height: 1.35;
+  color: #231f20;
+}
+#tooltip.pouvoir-tooltip .pouvoir-carte p,
+.locked-tooltip.pouvoir-tooltip .pouvoir-carte p {
+  margin: 0 0 6px;
+}
+#tooltip.pouvoir-tooltip .pouvoir-carte .pouvoir-citation,
+.locked-tooltip.pouvoir-tooltip .pouvoir-carte .pouvoir-citation {
+  font-style: italic;
+  color: #4a5650;
 }
 body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   background-color: #faeed6;

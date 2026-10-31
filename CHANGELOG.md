@@ -1,4 +1,4 @@
-1.9.0
+2.0.0
 - Règle optionnelle « Le jeu des factions » (chapitre « La lutte au quotidien », p. 90-94), activée par le paramètre « Utiliser la règle des Factions » : relations avec jusqu'à 3 atouts collégiaux et une complication collégiale chacune, potentiel collégial, atouts de faction dans la fenêtre de jet (jeton pris dans la réserve collégiale), complication collégiale à la place de jetons dépensés
 - Réserve collégiale : avec les factions, la fenêtre reproduit la feuille collégiale étendue du livre (médaillon Potentiel, colonne Relations avec 3 lignes d'atouts et une ligne de complication par relation) ; le MJ saisit directement sur les lignes en mode édition
 - Factions : sur une fausse note, l'un des atouts collégiaux utilisés perd un niveau et disparaît à 0 (l'envolée n'a pas d'effet)
@@ -12,6 +12,7 @@
 - Compendiums Kit - Pouvoirs potentiels et Kit - Prétirés : pouvoirs réalignés sur le compendium Pouvoirs (noms, type peuple / clé / gamme / ton / naissance, citation dans son champ, texte du livre au nom du prétiré) ; la liste des pouvoirs gagnés sur une merveille (p. 31 du kit) est conservée
 - Compendium Pouvoirs : Projection astrale, « lorsqu'elle annule sa projection » au lieu de « s'anime » (livre p. 60)
 - Maîtrises magiques : la description reprend la mise en forme des cartes « … en action » des tirés à part (intitulés Prérequis, Harmonique, Action magique, Incident magique ; niveaux 1 à 5 dans des pastilles, verbe clé en gras italique ; deux colonnes), aussi dans l'infobulle de la fiche Eminence ; texte du compendium mis à jour d'après la version corrigée (ajouts, coquilles comme « omnium », fragment de la Brigue retiré de la Conjuration) ; les maîtrises des prétirés gardent leur texte avec la nouvelle mise en forme
+- Fiche Eminence : l'infobulle des pouvoirs prend le style de celle des maîtrises (parchemin, nom en Cattedrale bleue avec son type, citation en italique, effet en Goudy) ; les deux infobulles sont 50 % plus larges ; noms des maîtrises en gras avec un léger contour, noms des pouvoirs avec un léger contour et des lettres légèrement espacées
 
 1.8.4
 - Fiche Eminence : refactoring interne de la mise en page (les float sont remplacés par flex et grid dans les blocs Personnage, Harmoniques, Conscience, Timbre et les tableaux), sans changement visuel
