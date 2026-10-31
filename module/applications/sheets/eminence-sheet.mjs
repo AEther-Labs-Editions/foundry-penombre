@@ -53,6 +53,7 @@ export default class EminenceSheet extends PenombreBaseActorSheet {
     context.isStyleJeuDemo = styleJeu === "demo"
     context.isStyleJeuStandard = styleJeu === "standard"
     context.isStyleJeuAvance = styleJeu === "avance"
+    context.afficherRecapitulatif = game.settings.get(SYSTEM.ID, "afficherRecapitulatif")
 
     context.pouvoirs = this.document.itemTypes.pouvoir
     const enrichHTML = foundry.applications.ux.TextEditor.implementation.enrichHTML

@@ -1,0 +1,28 @@
+// Fenêtre « Rappel des règles » : les deux tableaux du bas de la fiche d'éminence, côte à côte sur fond de parchemin
+#penombre-rappel-regles {
+  .window-content {
+    padding: 12px;
+    background: url("/systems/penombre/assets/ui/fiche-fond-recapitulatif.webp") center / cover, @background-light;
+  }
+
+  .rappel-regles-contenu {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 33px;
+
+    img {
+      border: none;
+    }
+
+    .rappel-gauche {
+      width: 477px;
+      border-radius: @border-radius-small 0 0 @border-radius-small;
+    }
+
+    .rappel-droite {
+      width: 123px;
+      border-radius: 0 @border-radius-small @border-radius-small 0;
+    }
+  }
+}

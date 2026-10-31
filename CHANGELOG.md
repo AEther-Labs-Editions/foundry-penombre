@@ -7,9 +7,8 @@
 - Factions : une complication dont plus aucune case n'est barrée reste sur la feuille jusqu'à ce que le MJ la retire (elle disparaît à la retraite suivante)
 - Réserve collégiale : en mode lecture, seuls les atouts et complications renseignés sont affichés ; la fenêtre s'agrandit en hauteur
 - Réserve collégiale : sans l'image du panier (nombre de jetons différent de 10), les jetons ont la même taille qu'avec le panier
-- Fiche Eminence : les sections sont séparées par les filets rouges de la fiche du livre, avec ses ornements aux jonctions, à la place des cadres arrondis
-- Fiche Eminence : le nom de chaque harmonique est sous son dé, dans la disposition de la fiche du livre
-- Fiche Eminence : Dispo, Actuelle et Max de la conscience sont affichés dans des ronds dorés, comme le cercle « Max » de la fiche du livre
+- Fiche Eminence : refonte globale pour se rapprocher du design de la fiche pdf
+- Rappel des règles : chaque joueur choisit de l'afficher ou non en bas de la fiche Eminence (paramètre « Afficher le rappel des règles sur la fiche », quel que soit le style de jeu) ; un bouton « Rappel des règles » du menu Pénombre l'ouvre dans une fenêtre indépendante, pour tout le monde
 
 1.8.4
 - Fiche Eminence : refactoring interne de la mise en page (les float sont remplacés par flex et grid dans les blocs Personnage, Harmoniques, Conscience, Timbre et les tableaux), sans changement visuel

@@ -2633,3 +2633,24 @@ body.theme-dark .penombre-group-manager-content .no-members {
   color: #56605b;
   padding: 20px;
 }
+#penombre-rappel-regles .window-content {
+  padding: 12px;
+  background: url("/systems/penombre/assets/ui/fiche-fond-recapitulatif.webp") center / cover, #faeed6;
+}
+#penombre-rappel-regles .rappel-regles-contenu {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  column-gap: 33px;
+}
+#penombre-rappel-regles .rappel-regles-contenu img {
+  border: none;
+}
+#penombre-rappel-regles .rappel-regles-contenu .rappel-gauche {
+  width: 477px;
+  border-radius: 4px 0 0 4px;
+}
+#penombre-rappel-regles .rappel-regles-contenu .rappel-droite {
+  width: 123px;
+  border-radius: 0 4px 4px 0;
+}

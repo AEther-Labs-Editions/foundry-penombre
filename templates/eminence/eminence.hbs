@@ -28,10 +28,10 @@
     <!-- Maitrises magiques -->
     {{> "systems/penombre/templates/eminence/partials/maitrises.hbs" }}
 
-    {{#unless isStyleJeuAvance}}
-        <!-- Récapitulatif -->
+    {{#if afficherRecapitulatif}}
+      <!-- Récapitulatif : affiché selon l'option de chaque joueur -->
       {{> "systems/penombre/templates/eminence/partials/recapitulatif.hbs" }}
-    {{/unless}}
+    {{/if}}
   </div>
   
 </section>

@@ -44,6 +44,21 @@ export default class PenombreSettingsHandler {
         requiresReload: true,
       },
 
+      // Choix de chaque joueur, quel que soit le style de jeu ; la fiche se met à jour sans rechargement
+      afficherRecapitulatif: {
+        name: "PENOMBRE.Settings.afficherRecapitulatif.name",
+        hint: "PENOMBRE.Settings.afficherRecapitulatif.hint",
+        scope: "user",
+        config: true,
+        default: true,
+        type: Boolean,
+        onChange: () => {
+          for (const actor of game.actors.filter((a) => a.type === "eminence")) {
+            if (actor.sheet?.rendered) actor.sheet.render()
+          }
+        },
+      },
+
       desSpeciaux: {
         name: "PENOMBRE.Settings.desSpeciaux.name",
         hint: "PENOMBRE.Settings.desSpeciaux.hint",
