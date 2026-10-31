@@ -285,45 +285,49 @@ items:
     system:
       slug: ''
       description: >-
-        <h1>Tétras, l’harmoniste de la geste</h1><p><strong>Pour préparer son
-        effet magique, Tétras
-        doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>utiliser sa
+        <div class="maitrise-carte"><h1 class="maitrise-titre">Tétras,
+        l’harmoniste de la geste</h1><p class="maitrise-intro">Pour préparer son
+        effet magique, Tétras doit…</p><p class="maitrise-entree"><span
+        class="maitrise-etiquette">Prérequis</span> <strong>utiliser sa
         voix</strong> pour crier, déclamer, réciter, murmurer, ou marmonner un
-        texte poétique.</p></li></ul><p><strong>Ce faisant, il ou
-        elle…</strong></p><h6>Action magique</h6><ul><li><p><strong>altère le
-        cours du temps.</strong> Il ou elle peut, comme avec les flots
-        bouillonnants d’une rivière, lire les marques du passé sur ses berges,
-        deviner les remous à venir, accélérer ou ralentir son écoulement, faire
-        ricocher un objet à sa surface, etc.</p></li></ul><p><strong>Avec un
-        effet magique de niveau ? …</strong></p><p><strong>il ou elle parvient
-        par exemple à…</strong></p><ol><li><p><strong>identifier</strong> un
+        texte poétique.</p><p class="maitrise-intro">Ce faisant, il ou
+        elle…</p><p class="maitrise-entree"><span
+        class="maitrise-etiquette">Action magique</span> <strong>altère le cours
+        du temps.</strong> Il ou elle peut, comme avec les flots bouillonnants
+        d’une rivière, lire les marques du passé sur ses berges, deviner les
+        remous à venir, accélérer ou ralentir son écoulement, faire ricocher un
+        objet à sa surface, etc.</p><p class="maitrise-intro">Avec un effet
+        magique de niveau <span class="maitrise-pastille">?</span> …<br>il ou
+        elle parvient par exemple à…</p><ol
+        class="maitrise-niveaux"><li><p><strong><em>identifier</em></strong> un
         effet magique d’art ancien (accord, décorum, geste) ; restaurer ou
         vieillir un objet ; provoquer une érosion accélérée ; exacerber la peur
-        de la mort en la montrant ; etc.</p></li><li><p><strong>voir le passé ou
-        l’avenir proche ;</strong> ralentir ou accélérer un mouvement ; faire
-        fluctuer le temps autour d’un personnage ; comprendre et parler un
-        dialecte inconnu ; soulager la fatigue en faisant oublier au corps le
-        temps qui passe ; etc.</p></li><li><p><strong>faire apparaître</strong>
-        une vision du passé proche, ou de l’avenir proche ; voir le passé
-        lointain d’un lieu ou d’un objet ; obtenir une information historique
-        précise ; parler avec un mort ; formuler une prophétie ;
-        etc.</p></li><li><p><strong>figer dans le temps ;</strong> rajeunir ou
-        faire vieillir le corps d’un personnage ; entrevoir une destinée ;
-        nécroser et scléroser la chair ; éviter la mort ; invoquer le souvenir
-        d’un personnage du passé et contrôler ses actions ;
-        etc.</p></li><li><p><strong>dissimuler</strong> dans le temps et
-        ressurgir au même endroit, plus tard ; se déplacer instantanément vers
-        un espace lointain par un repli du temps ; réincarner le passé comme si
-        c’était le présent ; avancer ou revenir de quelques instants dans le
-        temps ; modifier le temps pour accélérer une guérison ;
-        etc.</p></li></ol><p><strong>Mais attention, il ou elle risque également
-        de…</strong></p><h6>Incident magique</h6><ul><li><p><strong>sombrer dans
+        de la mort en la montrant ; etc.</p></li><li><p><strong><em>voir le
+        passé ou l’avenir proche ;</em></strong> ralentir ou accélérer un
+        mouvement ; faire fluctuer le temps autour d’un personnage ; comprendre
+        et parler un dialecte inconnu ; soulager la fatigue en faisant oublier
+        au corps le temps qui passe ; etc.</p></li><li><p><strong><em>faire
+        apparaître</em></strong> une vision du passé proche, ou de l’avenir
+        proche ; voir le passé lointain d’un lieu ou d’un objet ; obtenir une
+        information historique précise ; parler avec un mort ; formuler une
+        prophétie ; etc.</p></li><li><p><strong><em>figer dans le temps
+        ;</em></strong> rajeunir ou faire vieillir le corps d’un personnage ;
+        entrevoir une destinée ; nécroser et scléroser la chair ; éviter la mort
+        ; invoquer le souvenir d’un personnage du passé et contrôler ses actions
+        ; etc.</p></li><li><p><strong><em>dissimuler</em></strong> dans le temps
+        et ressurgir au même endroit, plus tard ; se déplacer instantanément
+        vers un espace lointain par un repli du temps ; réincarner le passé
+        comme si c’était le présent ; avancer ou revenir de quelques instants
+        dans le temps ; modifier le temps pour accélérer une guérison ;
+        etc.</p></li></ol><p class="maitrise-intro">Mais attention, il ou elle
+        risque également de…</p><p class="maitrise-entree"><span
+        class="maitrise-etiquette">Incident magique</span> <strong>sombrer dans
         la mélancolie.</strong> À la moindre hésitation, Tétras se retrouve
         emporté(e) par les flots du temps, ballotté(e) par les voix muettes de
         l’Harmonde et écorché(e) par les écueils de son destin incertain. il ou
         elle fait des rêves persistants ; il ou elle est hanté(e) par une
         présence ou des souvenirs étrangers ; il ou elle est pris(e) de doute,
-        voire plonge dans une profonde dépression ; etc.</p></li></ul>
+        voire plonge dans une profonde dépression ; etc.</p></div>
       harmonique: ame
       niveau: 2
       prerequis: se lancer dans une tirade
@@ -352,47 +356,54 @@ items:
     system:
       slug: ''
       description: >-
-        <h1>Tétras le conjurateur</h1><p><strong>Pour préparer son effet
-        magique, Tétras
-        doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>tracer les
-        contours d’une ombre</strong> à l’encre de son
-        sang.</p></li></ul><p><strong>Cette action le ou la fait entrer en
-        résonance avec…</strong></p><h6>Harmonique : nuit</h6><p><strong>Ce
-        faisant, il ou elle…</strong></p><h6>Action
-        magique</h6><ul><li><p><strong>pactise avec le démon né de cette
-        ombre.</strong> Le démon exécute la mission qui lui est confiée, et le
-        conjurateur le rémunère. La connivence qui les unit doit être
-        enregistrée auprès d’un advocatus diaboli et coûte d’autant plus cher
-        que l’effet souhaité est élevé.</p></li></ul><p><strong>Avec un effet
-        magique de niveau ? …</strong></p><p><strong>il ou elle conjure un démon
-        capable par exemple
-        de…</strong></p><ol><li><p><strong>identifier</strong> un effet magique
-        d’art noir (conjuration, omnium, prisme) ; chercher un objet ;
-        transporter une charge ou un message, y compris en volant ; faire une
-        bêtise, ou divertir ; faire peur ; mordre, griffer, piétiner ; servir de
-        réveil chaque matin ; donner une propriété nouvelle à un objet ;
-        etc.</p></li><li><p><strong>mener</strong> une enquête sommaire ; servir
-        d’escorte ou de garde ; se faire discret, se camoufler et épier ;
-        utiliser une arme ou un objet sophistiqué ;
-        etc.</p></li><li><p><strong>filer</strong> un suspect ; comprendre des
-        indices ; servir de partenaire lors d’une réception mondaine ; pratiquer
-        un art ; partager des connaissances sur un sujet précis ; se battre
-        comme un soldat ; etc.le et gagner en assurance ; prendre le contrôle
-        mental d’une bête sauvage ; etc.</p></li><li><p><strong>mener</strong>
-        une troupe ; échafauder un complot ; séduire ; pratiquer une maîtrise
-        magique, sauf la conjuration ; disposer d’un savoir unique ; usurper une
-        identité ; se battre comme un duelliste renommé ;
-        etc.</p></li><li><p><strong>exceller</strong> dans tous les domaines ;
-        conjurer de nouveaux démons ; etc.</p></li></ol><p><strong>Mais
-        attention, il ou elle risque également de…</strong></p><h6>Incident
-        magique</h6><ul><li><p><strong>laisser la porte ouverte.</strong>
-        L’ombre laisse s’échapper bien plus que le démon appelé. Cela peut
-        valoir au conjurateur une sanction de la part du Clergé obscur. Qui a
-        fui ?</p><p><strong>NOTE :</strong> Dans le tableau de difficultés des
-        effets magiques (voir p. 26), les paramètres « cible » et « distance »
-        font référence à la cible désignée au démon pour sa mission. Par
-        exemple, le démon doit agir sur un individu, un groupe, ou une foule, ou
-        infiltrer un bâtiment qui peut être proche, ou lointain.</p></li></ul>
+        <div class="maitrise-carte"><h1 class="maitrise-titre">Tétras le
+        conjurateur</h1><p class="maitrise-intro">Pour préparer son effet
+        magique, Tétras doit…</p><p class="maitrise-entree"><span
+        class="maitrise-etiquette">Prérequis</span> <strong>tracer les contours
+        d’une ombre</strong> à l’encre de son sang.</p><p
+        class="maitrise-intro">Cette action le ou la fait entrer en résonance
+        avec…</p><p class="maitrise-entree"><span
+        class="maitrise-etiquette">Harmonique :</span> <span
+        class="maitrise-harmonique">nuit</span></p><p class="maitrise-intro">Ce
+        faisant, il ou elle…</p><p class="maitrise-entree"><span
+        class="maitrise-etiquette">Action magique</span> <strong>pactise avec le
+        démon né de cette ombre.</strong> Le démon exécute la mission qui lui
+        est confiée, et le conjurateur le rémunère. La connivence qui les unit
+        doit être enregistrée auprès d’un advocatus diaboli et coûte d’autant
+        plus cher que l’effet souhaité est élevé.</p><p
+        class="maitrise-intro">Avec un effet magique de niveau <span
+        class="maitrise-pastille">?</span> …<br>il ou elle conjure un démon
+        capable par exemple de…</p><ol
+        class="maitrise-niveaux"><li><p><strong><em>identifier</em></strong> un
+        effet magique d’art noir (conjuration, omnium, prisme) ; chercher un
+        objet ; transporter une charge ou un message, y compris en volant ;
+        faire une bêtise, ou divertir ; faire peur ; mordre, griffer, piétiner ;
+        servir de réveil chaque matin ; donner une propriété nouvelle à un objet
+        ; etc.</p></li><li><p><strong><em>mener</em></strong> une enquête
+        sommaire ; servir d’escorte ou de garde ; se faire discret, se camoufler
+        et épier ; utiliser une arme ou un objet sophistiqué ;
+        etc.</p></li><li><p><strong><em>filer</em></strong> un suspect ;
+        comprendre des indices ; servir de partenaire lors d’une réception
+        mondaine ; pratiquer un art ; partager des connaissances sur un sujet
+        précis ; se battre comme un soldat ; etc.le et gagner en assurance ;
+        prendre le contrôle mental d’une bête sauvage ;
+        etc.</p></li><li><p><strong><em>mener</em></strong> une troupe ;
+        échafauder un complot ; séduire ; pratiquer une maîtrise magique, sauf
+        la conjuration ; disposer d’un savoir unique ; usurper une identité ; se
+        battre comme un duelliste renommé ;
+        etc.</p></li><li><p><strong><em>exceller</em></strong> dans tous les
+        domaines ; conjurer de nouveaux démons ; etc.</p></li></ol><p
+        class="maitrise-intro">Mais attention, il ou elle risque également
+        de…</p><p class="maitrise-entree"><span
+        class="maitrise-etiquette">Incident magique</span> <strong>laisser la
+        porte ouverte.</strong> L’ombre laisse s’échapper bien plus que le démon
+        appelé. Cela peut valoir au conjurateur une sanction de la part du
+        Clergé obscur. Qui a fui ?</p><p><strong>NOTE :</strong> Dans le tableau
+        de difficultés des effets magiques (voir p. 26), les paramètres « cible
+        » et « distance » font référence à la cible désignée au démon pour sa
+        mission. Par exemple, le démon doit agir sur un individu, un groupe, ou
+        une foule, ou infiltrer un bâtiment qui peut être proche, ou
+        lointain.</p></div>
       harmonique: nuit
       niveau: 1
       prerequis: tracer le contour d’une ombre à l’encre de son sang

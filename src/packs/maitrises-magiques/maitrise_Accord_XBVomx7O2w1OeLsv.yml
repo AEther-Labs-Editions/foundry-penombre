@@ -3,45 +3,52 @@ name: Accord
 img: systems/penombre/assets/magies/magie_accord.webp
 system:
   description: >-
-    <p><strong>Pour préparer son effet magique, un accordé
-    doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>interpréter un
-    morceau de musique</strong> à l’aide d’un instrument, ou de sa
-    voix.</p><p></p></li></ul><p><strong>Cette action le fait entrer en
-    résonance avec…</strong></p><h6><strong>Harmonique :
-    âme</strong></h6><p></p><p><strong>Ce faisant, il…</strong></p><h6>Action
-    magique</h6><ul><li><p><strong>entre en résonance avec l’esprit de sa
-    cible</strong> et pénètre cet espace mental tant que dure la musique. Chaque
-    esprit ressemble à une contrée nouvelle et
-    fantasmagorique.</p><p></p></li></ul><p><strong>Avec un effet magique de
-    niveau ? …</strong></p><p><strong>il parvient par exemple
-    à…</strong></p><ol><li><p><strong>identifier</strong> un effet magique d’art
-    ancien (accord, décorum, geste) ; lire les pensées superficielles et les
-    émotions ; etc.</p></li><li><p><strong>modifier</strong> les pensées
+    <div class="maitrise-carte"><p class="maitrise-intro">Pour préparer son
+    effet magique, un accordé doit…</p><p class="maitrise-entree"><span
+    class="maitrise-etiquette">Prérequis</span> <strong>interpréter un morceau
+    de musique</strong> à l’aide d’un instrument, ou de sa voix.</p><p
+    class="maitrise-intro">Cette action le fait entrer en résonance avec…</p><p
+    class="maitrise-entree"><span class="maitrise-etiquette">Harmonique :</span>
+    <span class="maitrise-harmonique">âme</span></p><p class="maitrise-intro">Ce
+    faisant, il…</p><p class="maitrise-entree"><span
+    class="maitrise-etiquette">Action magique</span> <strong>entre en résonance
+    avec l’esprit de sa cible</strong> et pénètre cet espace mental tant que
+    dure la musique. Chaque esprit ressemble à une contrée nouvelle et
+    fantasmagorique.</p><p class="maitrise-intro">Avec un effet magique de
+    niveau <span class="maitrise-pastille">?</span> …<br>il parvient par exemple
+    à…</p><ol
+    class="maitrise-niveaux"><li><p><strong><em>identifier</em></strong> un
+    effet magique d’art ancien (accord, décorum, geste) ; lire les pensées
+    superficielles et les émotions ;
+    etc.</p></li><li><p><strong><em>modifier</em></strong> les pensées
     superficielles et les émotions ; apaiser, mettre en confiance, exalter,
     encourager, soutenir ; provoquer culpabilité, découragement, déconcentration
     et désorientation ; faire bégayer ; mettre en colère, enrager ; glisser un
-    message mental ; etc.</p></li><li><p><strong>lire</strong> des souvenirs
-    précis dans la mémoire ; perturber un sens (vue, ouïe, odorat…) ; provoquer
-    un mouvement involontaire, ou réflexe ; faire ressentir une douleur fantôme
-    ; diriger l’attention ; faire accepter un mensonge ; libérer d’une emprise
-    mentale ; créer une barrière mentale ; attaquer l’esprit ;
-    etc.</p></li><li><p><strong>effacer</strong>, modifier ou créer un souvenir
-    précis, ou un lien familial ou affectif ; créer une phobie ; ouvrir un canal
-    télépathique ; rendre invalide pour une scène (endormir, hypnotiser, rendre
-    sourd, aveugle, muet…) ; suggérer une mission ou une action complexe à un
-    personnage ; apporter l’oubli d’un traumatisme psychologique ; provoquer une
-    crise de folie ; etc.</p></li><li><p><strong>inspirer</strong> une confiance
-    ou une terreur absolue ; revivre un souvenir comme s’il était de nouveau
-    réel ; rendre amnésique ; prendre le contrôle mental d’un personnage,
-    l’obliger à une action complexe, lui imposer une mission ; tuer ;
-    etc.</p></li></ol><p><strong>Mais attention, il risque également
-    de…</strong></p><h6>Incident magique</h6><ul><li><p><strong>attirer les
+    message mental ; etc.</p></li><li><p><strong><em>lire</em></strong> des
+    souvenirs précis dans la mémoire ; localiser l’esprit d’un accordé, ou d’une
+    victime sous l’emprise de l’accord ; perturber un sens (vue, ouïe, odorat…)
+    ; provoquer un mouvement involontaire, ou réflexe ; faire ressentir une
+    douleur fantôme ; diriger l’attention ; faire accepter un mensonge ; libérer
+    d’une emprise mentale ; créer une barrière mentale ; attaquer l’esprit ;
+    etc.</p></li><li><p><strong><em>effacer, modifier ou créer</em></strong> un
+    souvenir précis, ou un lien familial ou affectif ; créer une phobie ; ouvrir
+    un canal télépathique ; invalider pour une scène (endormir, hypnotiser,
+    rendre sourd, aveugle, muet…) ; suggérer une mission ou une action complexe
+    à un personnage ; provoquer l’oubli ou l’acceptation d’un traumatisme
+    psychologique ; provoquer une crise de folie ;
+    etc.</p></li><li><p><strong><em>inspirer</em></strong> une confiance ou une
+    terreur absolue ; revivre un souvenir comme s’il était de nouveau réel ;
+    rendre amnésique ; prendre le contrôle mental d’un personnage, l’obliger à
+    une action complexe, lui imposer une mission ; détruire la psyché d’un
+    personnage ; etc.</p></li></ol><p class="maitrise-intro">Mais attention, il
+    risque également de…</p><p class="maitrise-entree"><span
+    class="maitrise-etiquette">Incident magique</span> <strong>attirer les
     faux-accords</strong>, des pratiquants de l’accord bannis par leurs
     semblables. Ils guettent, assis dans le public ou désincarnés dans l’esprit
-    de leurs victimes, prêts à prendre leur revanche sur les autres
-    accordés.</p></li><li><p>L’accordé subit un effet d’accord en retour ; il
-    est provoqué en duel musical ; il accède à un souvenir qu’il aurait préféré
-    éviter ; etc.</p></li></ul>
+    de leurs victimes, prêts à prendre leur revanche sur les autres accordés.
+    L’accordé subit un effet d’accord en retour ; il est provoqué en duel
+    musical ; il accède à un souvenir qu’il aurait préféré éviter ;
+    etc.</p></div>
   harmonique: ame
   niveau: 1
   prerequis: interpréter un morceau de musique

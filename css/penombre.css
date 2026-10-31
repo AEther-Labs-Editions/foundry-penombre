@@ -1723,6 +1723,234 @@ body.theme-light .penombre.action .action-content {
 .penombre.action .action-content .standard-form .logo-frame .name {
   width: calc(100% - 90px);
 }
+/* ---------------------------------------------
+        Maîtrises magiques : description mise en forme
+        comme les cartes « … en action » des tirés à part
+--------------------------------------------- */
+.penombre.maitrise .maitrise-carte {
+  font-family: "GoudyBookletter1911", var(--font-serif);
+  font-size: 15px;
+  line-height: 1.35;
+  color: #231f20;
+  columns: 2 300px;
+  column-gap: 28px;
+}
+.penombre.maitrise .maitrise-carte p {
+  margin: 0 0 6px;
+}
+.penombre.maitrise .maitrise-carte .maitrise-titre {
+  column-span: all;
+  margin: 0 0 8px;
+  border: none;
+  text-align: center;
+  font-family: "Cattedrale";
+  font-size: 26px;
+  color: #074966;
+}
+.penombre.maitrise .maitrise-carte .maitrise-intro {
+  margin-top: 8px;
+  font-weight: bold;
+}
+.penombre.maitrise .maitrise-carte .maitrise-entree {
+  position: relative;
+  padding-left: 14px;
+  break-inside: avoid;
+}
+.penombre.maitrise .maitrise-carte .maitrise-entree::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: #074966;
+  font-weight: bold;
+}
+.penombre.maitrise .maitrise-carte .maitrise-etiquette {
+  font-family: "Cattedrale";
+  font-size: 1.3em;
+  line-height: 1;
+  color: #074966;
+}
+.penombre.maitrise .maitrise-carte .maitrise-harmonique {
+  font-family: "Cattedrale";
+  font-size: 1.3em;
+  line-height: 1;
+  color: #4a5650;
+}
+.penombre.maitrise .maitrise-carte .maitrise-pastille,
+.penombre.maitrise .maitrise-carte .maitrise-niveaux > li::before {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #41483f;
+  outline: 1px solid #eedfc3;
+  outline-offset: -3px;
+  background: #41483f;
+  color: #eedfc3;
+  font-family: "Cattedrale";
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1;
+  vertical-align: middle;
+}
+.penombre.maitrise .maitrise-carte .maitrise-niveaux {
+  counter-reset: niveau;
+  list-style: none;
+  margin: 4px 0 6px;
+  padding: 0;
+}
+.penombre.maitrise .maitrise-carte .maitrise-niveaux > li {
+  counter-increment: niveau;
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 4px;
+  break-inside: avoid;
+}
+.penombre.maitrise .maitrise-carte .maitrise-niveaux > li::before {
+  content: counter(niveau);
+  position: absolute;
+  left: 0;
+  top: 1px;
+}
+.penombre.maitrise .maitrise-carte .maitrise-niveaux > li > p {
+  margin: 0;
+}
+.penombre.maitrise .maitrise-carte .maitrise-note {
+  font-size: 0.92em;
+  font-style: italic;
+}
+#tooltip.maitrise-tooltip,
+.locked-tooltip.maitrise-tooltip {
+  max-width: 460px;
+  padding: 10px 12px;
+  background: #faeed6;
+  border: 1px solid #074966;
+  text-align: left;
+}
+#tooltip.maitrise-tooltip .maitrise-carte,
+.locked-tooltip.maitrise-tooltip .maitrise-carte {
+  font-family: "GoudyBookletter1911", var(--font-serif);
+  font-size: 15px;
+  line-height: 1.35;
+  color: #231f20;
+  columns: 2 300px;
+  column-gap: 28px;
+  columns: auto;
+  font-size: 14px;
+}
+#tooltip.maitrise-tooltip .maitrise-carte p,
+.locked-tooltip.maitrise-tooltip .maitrise-carte p {
+  margin: 0 0 6px;
+}
+#tooltip.maitrise-tooltip .maitrise-carte .maitrise-titre,
+.locked-tooltip.maitrise-tooltip .maitrise-carte .maitrise-titre {
+  column-span: all;
+  margin: 0 0 8px;
+  border: none;
+  text-align: center;
+  font-family: "Cattedrale";
+  font-size: 26px;
+  color: #074966;
+}
+#tooltip.maitrise-tooltip .maitrise-carte .maitrise-intro,
+.locked-tooltip.maitrise-tooltip .maitrise-carte .maitrise-intro {
+  margin-top: 8px;
+  font-weight: bold;
+}
+#tooltip.maitrise-tooltip .maitrise-carte .maitrise-entree,
+.locked-tooltip.maitrise-tooltip .maitrise-carte .maitrise-entree {
+  position: relative;
+  padding-left: 14px;
+  break-inside: avoid;
+}
+#tooltip.maitrise-tooltip .maitrise-carte .maitrise-entree::before,
+.locked-tooltip.maitrise-tooltip .maitrise-carte .maitrise-entree::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: #074966;
+  font-weight: bold;
+}
+#tooltip.maitrise-tooltip .maitrise-carte .maitrise-etiquette,
+.locked-tooltip.maitrise-tooltip .maitrise-carte .maitrise-etiquette {
+  font-family: "Cattedrale";
+  font-size: 1.3em;
+  line-height: 1;
+  color: #074966;
+}
+#tooltip.maitrise-tooltip .maitrise-carte .maitrise-harmonique,
+.locked-tooltip.maitrise-tooltip .maitrise-carte .maitrise-harmonique {
+  font-family: "Cattedrale";
+  font-size: 1.3em;
+  line-height: 1;
+  color: #4a5650;
+}
+#tooltip.maitrise-tooltip .maitrise-carte .maitrise-pastille,
+.locked-tooltip.maitrise-tooltip .maitrise-carte .maitrise-pastille,
+#tooltip.maitrise-tooltip .maitrise-carte .maitrise-niveaux > li::before,
+.locked-tooltip.maitrise-tooltip .maitrise-carte .maitrise-niveaux > li::before {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #41483f;
+  outline: 1px solid #eedfc3;
+  outline-offset: -3px;
+  background: #41483f;
+  color: #eedfc3;
+  font-family: "Cattedrale";
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1;
+  vertical-align: middle;
+}
+#tooltip.maitrise-tooltip .maitrise-carte .maitrise-niveaux,
+.locked-tooltip.maitrise-tooltip .maitrise-carte .maitrise-niveaux {
+  counter-reset: niveau;
+  list-style: none;
+  margin: 4px 0 6px;
+  padding: 0;
+}
+#tooltip.maitrise-tooltip .maitrise-carte .maitrise-niveaux > li,
+.locked-tooltip.maitrise-tooltip .maitrise-carte .maitrise-niveaux > li {
+  counter-increment: niveau;
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 4px;
+  break-inside: avoid;
+}
+#tooltip.maitrise-tooltip .maitrise-carte .maitrise-niveaux > li::before,
+.locked-tooltip.maitrise-tooltip .maitrise-carte .maitrise-niveaux > li::before {
+  content: counter(niveau);
+  position: absolute;
+  left: 0;
+  top: 1px;
+}
+#tooltip.maitrise-tooltip .maitrise-carte .maitrise-niveaux > li > p,
+.locked-tooltip.maitrise-tooltip .maitrise-carte .maitrise-niveaux > li > p {
+  margin: 0;
+}
+#tooltip.maitrise-tooltip .maitrise-carte .maitrise-note,
+.locked-tooltip.maitrise-tooltip .maitrise-carte .maitrise-note {
+  font-size: 0.92em;
+  font-style: italic;
+}
+body.theme-dark .penombre.maitrise .maitrise-carte {
+  color: var(--color-text-primary);
+}
+body.theme-dark .penombre.maitrise .maitrise-carte .maitrise-titre,
+body.theme-dark .penombre.maitrise .maitrise-carte .maitrise-etiquette,
+body.theme-dark .penombre.maitrise .maitrise-carte .maitrise-entree::before {
+  color: #7fb3cf;
+}
+body.theme-dark .penombre.maitrise .maitrise-carte .maitrise-harmonique {
+  color: #b9c4bd;
+}
 body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   background-color: #faeed6;
 }

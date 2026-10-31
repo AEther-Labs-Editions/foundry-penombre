@@ -3,48 +3,54 @@ name: Éclipsisme
 img: systems/penombre/assets/magies/magie_eclipsisme.webp
 system:
   description: >-
-    <p><strong>Pour préparer son effet magique, un éclipsiste
-    doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>guider et commander
-    la danse de son danseur asservi</strong>, tel un marionnettiste, un
-    entraîneur sportif, ou un maître de ballet.</p></li></ul><p><strong>Cette
-    action le fait entrer en résonance avec…</strong></p><h6>Harmonique :
-    étincelle</h6><p><strong>Ce faisant, il…</strong></p><h6>Action
-    magique</h6><ul><li><p><strong>fait produire à son danseur asservi</strong>
-    des étincelles azurées et argent qui génèrent illusions et duperie. Si cela
-    fonctionne, tout le monde y croit !</p></li></ul><p><strong>Avec un effet
-    magique de niveau ? …</strong></p><p><strong>il parvient par exemple
-    à…</strong></p><ol><li><p><strong>identifier</strong> un effet magique
-    cryptogrammique (éclipsisme, jornisme, obscurantisme) ; créer un bruit
-    illusoire, ou des jeux de lumière irisés ; faire en sorte qu’un objet de
-    valeur ait l’air faux, ou inversement ; verrouiller ou déverrouiller une
-    serrure ; réussir un saut, ou une escalade ; placer un piège qui déclenche
-    une alarme, ou une décharge d’énergie illusoire ;
-    etc.</p></li><li><p><strong>déplacer</strong> un objet ou un personnage par
-    télékinésie ; voir à travers une matière opaque (mur, panneau de bois…) ;
-    rendre un personnage méconnaissable ; simuler la mort, ou la vie ; provoquer
-    un silence, ou un vacarme illusoire ; créer la présence illusoire d’une
-    créature ou d’un objet ; etc.</p></li><li><p><strong>réussir</strong> toutes
-    sortes d’acrobaties ; bercer un personnage d’illusions (sentiments,
-    importance, richesse…) ; projeter un trait d’énergie illusoire (pieu de
-    glace, foudre, etc.) ; oblitérer un sens le temps d’une scène ; créer une
-    saynète illusoire répétitive ; enregistrer une conversation ou le savoir
-    d’un mortel pour recréer plus tard une conversation avec sa mémoire ;
-    etc.</p></li><li><p><strong>changer de taille</strong> et gagner en
+    <div class="maitrise-carte"><p class="maitrise-intro">Pour préparer son
+    effet magique, un éclipsiste doit…</p><p class="maitrise-entree"><span
+    class="maitrise-etiquette">Prérequis</span> <strong>guider et commander la
+    danse de son danseur asservi,</strong> tel un marionnettiste, un entraîneur
+    sportif, ou un maître de ballet.</p><p class="maitrise-intro">Cette action
+    le fait entrer en résonance avec…</p><p class="maitrise-entree"><span
+    class="maitrise-etiquette">Harmonique :</span> <span
+    class="maitrise-harmonique">étincelle</span></p><p class="maitrise-intro">Ce
+    faisant, il…</p><p class="maitrise-entree"><span
+    class="maitrise-etiquette">Action magique</span> <strong>fait produire à son
+    danseur asservi</strong> des étincelles azurées et argent qui génèrent
+    illusions et duperie. Si cela fonctionne, tout le monde y croit !</p><p
+    class="maitrise-intro">Avec un effet magique de niveau <span
+    class="maitrise-pastille">?</span> …<br>il parvient par exemple à…</p><ol
+    class="maitrise-niveaux"><li><p><strong><em>identifier</em></strong> un
+    effet magique cryptogrammique (éclipsisme, jornisme, obscurantisme) ; créer
+    un bruit illusoire, ou des jeux de lumière irisés ; faire en sorte qu’un
+    objet de valeur ait l’air faux, ou inversement ; verrouiller ou
+    déverrouiller une serrure ; réussir un saut, ou une escalade ; placer un
+    piège qui déclenche une alarme, ou une décharge d’énergie illusoire ;
+    etc.</p></li><li><p><strong><em>déplacer</em></strong> un objet ou un
+    personnage par télékinésie ; voir à travers une matière opaque (mur, panneau
+    de bois…) ; rendre un personnage méconnaissable ; simuler la mort, ou la vie
+    ; provoquer un silence, ou un vacarme illusoire ; créer la présence
+    illusoire d’une créature ou d’un objet ;
+    etc.</p></li><li><p><strong><em>réussir</em></strong> toutes sortes
+    d’acrobaties ; bercer un personnage d’illusions (sentiments, importance,
+    richesse…) ; projeter un trait d’énergie illusoire (pieu de glace, foudre,
+    etc.) ; oblitérer un sens le temps d’une scène ; créer une saynète illusoire
+    répétitive ; enregistrer une conversation ou le savoir d’un mortel pour
+    recréer plus tard une conversation avec sa mémoire ;
+    etc.</p></li><li><p><strong><em>changer de taille</em></strong> et gagner en
     assurance ; reproduire à la perfection l’apparence, le comportement et la
     voix d’un personnage ; paralyser, ou plonger dans un profond sommeil ;
     marcher sur l’eau ; créer une scène illusoire de grande ampleur et vivante,
     réactive, consciente ; se dédoubler sous la forme de reflets de soi ;
-    etc.</p></li><li><p><strong>créer</strong> l’illusion vraie de la guérison,
-    ou de la mort ; disparaître et réapparaître ailleurs ; neutraliser un
-    danseur ; manipuler un personnage à l’aide d’illusions pour l’obliger à une
-    action, lui imposer une mission, ou le maintenir « captif volontaire » ;
-    etc.</p></li></ol><p><strong>Mais attention, il risque également
-    de…</strong></p><h6>Incident magique</h6><ul><li><p><strong>se faire des
+    etc.</p></li><li><p><strong><em>créer</em></strong> l’illusion vraie de la
+    guérison, ou de la mort ; disparaître et réapparaître ailleurs ; neutraliser
+    un danseur ; manipuler un personnage à l’aide d’illusions pour l’obliger à
+    une action, lui imposer une mission, ou le maintenir « captif volontaire » ;
+    etc.</p></li></ol><p class="maitrise-intro">Mais attention, il risque
+    également de…</p><p class="maitrise-entree"><span
+    class="maitrise-etiquette">Incident magique</span> <strong>se faire des
     illusions.</strong> À force de tromper son monde, l’éclipsiste peut
     confondre ses perceptions, sa volonté et la réalité. Il est pris d’une crise
     d’hallucinations, de paranoïa, de mégalomanie, ou de schizophrénie ; il
     provoque l’apparition de manifestations illusoires involontaires ;
-    etc.</p></li></ul>
+    etc.</p></div>
   harmonique: etincelle
   niveau: 1
   prerequis: guider et commander la danse de son danseur asservi

@@ -315,46 +315,50 @@ items:
     img: systems/penombre/assets/icons/maitrise.webp
     system:
       description: >-
-        <h1>Céliana l'accordée</h1><p><strong>Pour préparer son effet magique,
-        Céliana
-        doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>interpréter un
+        <div class="maitrise-carte"><h1 class="maitrise-titre">Céliana
+        l'accordée</h1><p class="maitrise-intro">Pour préparer son effet
+        magique, Céliana doit…</p><p class="maitrise-entree"><span
+        class="maitrise-etiquette">Prérequis</span> <strong>interpréter un
         morceau de musique</strong> en le chantant, les serpents agissant comme
-        un chœur sifflant.</p></li></ul><p><strong>Ce faisant,
-        elle…</strong></p><h6>Action magique</h6><ul><li><p><strong>entre en
-        résonance avec l’esprit de sa cible</strong> et pénètre cet espace
-        mental tant que dure cette cantate. Chaque esprit ressemble à une
-        contrée nouvelle et fantasmagorique.</p></li></ul><p><strong>Avec un
-        effet magique de niveau ? …</strong></p><p><strong>elle parvient par
-        exemple à…</strong></p><ol><li><p><strong>identifier</strong> un effet
-        magique d’art ancien (accord, décorum, geste) ; lire les pensées
+        un chœur sifflant.</p><p class="maitrise-intro">Ce faisant, elle…</p><p
+        class="maitrise-entree"><span class="maitrise-etiquette">Action
+        magique</span> <strong>entre en résonance avec l’esprit de sa
+        cible</strong> et pénètre cet espace mental tant que dure cette cantate.
+        Chaque esprit ressemble à une contrée nouvelle et fantasmagorique.</p><p
+        class="maitrise-intro">Avec un effet magique de niveau <span
+        class="maitrise-pastille">?</span> …</p><p class="maitrise-intro">elle
+        parvient par exemple à…</p><ol
+        class="maitrise-niveaux"><li><p><strong><em>identifier</em></strong> un
+        effet magique d’art ancien (accord, décorum, geste) ; lire les pensées
         superficielles et les émotions ;
-        etc.</p></li><li><p><strong>modifier</strong> les pensées superficielles
-        et les émotions ; apaiser, mettre en confiance, exalter, encourager,
-        soutenir ; provoquer culpabilité, découragement, déconcentration et
-        désorientation ; faire bégayer ; mettre en colère, enrager ; glisser un
-        message mental ; etc.</p></li><li><p><strong>lire</strong> des souvenirs
-        précis dans la mémoire ; perturber un sens (vue, ouïe, odorat…) ;
-        provoquer un mouvement involontaire, ou réflexe ; faire ressentir une
-        douleur fantôme ; diriger l’attention ; faire accepter un mensonge ;
-        libérer d’une emprise mentale ; créer une barrière mentale ; attaquer
-        l’esprit ; etc.</p></li><li><p><strong>effacer</strong>, modifier ou
-        créer un souvenir précis, ou un lien familial ou affectif ; créer une
-        phobie ; ouvrir un canal télépathique ; rendre invalide pour une scène
-        (endormir, hypnotiser, rendre sourd, aveugle, muet…) ; suggérer une
-        mission ou une action complexe à un personnage ; apporter l’oubli ou
-        l’acceptation d’un traumatisme psychologique ; provoquer une crise de
-        folie ; etc.</p></li><li><p><strong>inspirer</strong> une confiance ou
+        etc.</p></li><li><p><strong><em>modifier</em></strong> les pensées
+        superficielles et les émotions ; apaiser, mettre en confiance, exalter,
+        encourager, soutenir ; provoquer culpabilité, découragement,
+        déconcentration et désorientation ; faire bégayer ; mettre en colère,
+        enrager ; glisser un message mental ;
+        etc.</p></li><li><p><strong><em>lire</em></strong> des souvenirs précis
+        dans la mémoire ; perturber un sens (vue, ouïe, odorat…) ; provoquer un
+        mouvement involontaire, ou réflexe ; faire ressentir une douleur fantôme
+        ; diriger l’attention ; faire accepter un mensonge ; libérer d’une
+        emprise mentale ; créer une barrière mentale ; attaquer l’esprit ;
+        etc.</p></li><li><p><strong><em>effacer</em></strong>, modifier ou créer
+        un souvenir précis, ou un lien familial ou affectif ; créer une phobie ;
+        ouvrir un canal télépathique ; rendre invalide pour une scène (endormir,
+        hypnotiser, rendre sourd, aveugle, muet…) ; suggérer une mission ou une
+        action complexe à un personnage ; apporter l’oubli ou l’acceptation d’un
+        traumatisme psychologique ; provoquer une crise de folie ;
+        etc.</p></li><li><p><strong><em>inspirer</em></strong> une confiance ou
         une terreur absolue ; revivre un souvenir comme s’il était de nouveau
         réel ; rendre amnésique ; prendre le contrôle mental d’un personnage,
         l’obliger à une action complexe, lui imposer une mission ; tuer ;
-        etc.</p></li></ol><p>Mais attention, elle risque également
-        de…</p><h6>Incident magique</h6><ul><li><p><strong>attirer les
-        faux-accords</strong>, des pratiquants de l’accord bannis par leurs
-        semblables. Ils guettent, assis dans le public ou désincarnés dans
-        l’esprit de leurs victimes, prêts à prendre leur revanche sur les autres
-        accordés.</p></li><li><p>Céliana subit un effet d’accord en retour ;
-        elle est provoquée en duel musical ; elle accède à un souvenir qu’elle
-        aurait préféré éviter ; etc.</p></li></ul>
+        etc.</p></li></ol><p>Mais attention, elle risque également de…</p><p
+        class="maitrise-entree"><span class="maitrise-etiquette">Incident
+        magique</span> <strong>attirer les faux-accords</strong>, des
+        pratiquants de l’accord bannis par leurs semblables. Ils guettent, assis
+        dans le public ou désincarnés dans l’esprit de leurs victimes, prêts à
+        prendre leur revanche sur les autres accordés.</p><p>Céliana subit un
+        effet d’accord en retour ; elle est provoquée en duel musical ; elle
+        accède à un souvenir qu’elle aurait préféré éviter ; etc.</p></div>
       harmonique: ame
       niveau: 3
       prerequis: Chanter

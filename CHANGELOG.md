@@ -11,6 +11,7 @@
 - Rappel des règles : chaque joueur choisit de l'afficher ou non en bas de la fiche Eminence (paramètre « Afficher le rappel des règles sur la fiche », quel que soit le style de jeu) ; un bouton « Rappel des règles » du menu Pénombre l'ouvre dans une fenêtre indépendante, pour tout le monde
 - Compendiums Kit - Pouvoirs potentiels et Kit - Prétirés : pouvoirs réalignés sur le compendium Pouvoirs (noms, type peuple / clé / gamme / ton / naissance, citation dans son champ, texte du livre au nom du prétiré) ; la liste des pouvoirs gagnés sur une merveille (p. 31 du kit) est conservée
 - Compendium Pouvoirs : Projection astrale, « lorsqu'elle annule sa projection » au lieu de « s'anime » (livre p. 60)
+- Maîtrises magiques : la description reprend la mise en forme des cartes « … en action » des tirés à part (intitulés Prérequis, Harmonique, Action magique, Incident magique ; niveaux 1 à 5 dans des pastilles, verbe clé en gras italique ; deux colonnes), aussi dans l'infobulle de la fiche Eminence ; texte du compendium mis à jour d'après la version corrigée (ajouts, coquilles comme « omnium », fragment de la Brigue retiré de la Conjuration) ; les maîtrises des prétirés gardent leur texte avec la nouvelle mise en forme
 
 1.8.4
 - Fiche Eminence : refactoring interne de la mise en page (les float sont remplacés par flex et grid dans les blocs Personnage, Harmoniques, Conscience, Timbre et les tableaux), sans changement visuel

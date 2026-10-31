@@ -291,56 +291,61 @@ items:
     img: systems/penombre/assets/icons/maitrise.png
     system:
       description: >-
-        <h1>Dentelle, l’artiste du prisme</h1><p><strong>Pour préparer son effet
-        magique, Dentelle
-        doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>travailler la
+        <div class="maitrise-carte"><h1 class="maitrise-titre">Dentelle,
+        l’artiste du prisme</h1><p class="maitrise-intro">Pour préparer son
+        effet magique, Dentelle doit…</p><p class="maitrise-entree"><span
+        class="maitrise-etiquette">Prérequis</span> <strong>travailler la
         lumière</strong>, surligner une ligne de contraste à la craie, placer
         des bougies rituelles aux bons emplacements pour créer des ombres
         portées, ou diffracter des rayons à l’aide d’un ustensile prismatique
-        (loupe, lunettes, vitricle, cristal, etc.).</p></li></ul><p>Cette action
-        la fait entrer en résonance avec…</p><h6>Harmonique :
-        nuit</h6><p><strong>Ce faisant, elle…</strong></p><h6>Action
-        magique</h6><ul><li><p><strong>voit apparaître sous ses yeux des
-        indices</strong> et des détails, des odeurs colorées, des sons parfumés,
-        des goûts bruyants, des espaces insoupçonnés et des traverses
-        intimes.</p></li></ul><p><strong>Avec un effet magique de niveau ?
-        …</strong></p><p><strong>elle parvient par exemple
-        à…</strong></p><ol><li><p><strong>identifier</strong> un effet magique
-        d’art noir (conjuration, onyxium, prisme) ; éblouir ou aveugler un
-        personnage ; suivre la trace d’une personne dont elle connaît la couleur
-        prismatique ; savoir l ’allégeance d’un démon ; faire apparaître un
-        indice aux yeux de tous ; récolter une couleur unique ;
-        etc.</p></li><li><p><strong>brouiller</strong> l’image d’une personne ou
-        d’un objet ; comparer et différencier des couleurs très proches ;
-        décomposer les ingrédients d’un son, ou d’un goût ; fabriquer des
-        pigments durables pouvant servir à des artisans ; franchir un passage
-        trop petit ; concentrer la lumière en un rayon d’énergie ;
-        etc.</p></li><li><p><strong>créer</strong> un mirage dédoublant un
-        objet, ou un personnage capable d’agir ; changer la façon dont
+        (loupe, lunettes, vitricle, cristal, etc.).</p><p>Cette action la fait
+        entrer en résonance avec…</p><p class="maitrise-entree"><span
+        class="maitrise-etiquette">Harmonique :</span> <span
+        class="maitrise-harmonique">nuit</span></p><p class="maitrise-intro">Ce
+        faisant, elle…</p><p class="maitrise-entree"><span
+        class="maitrise-etiquette">Action magique</span> <strong>voit apparaître
+        sous ses yeux des indices</strong> et des détails, des odeurs colorées,
+        des sons parfumés, des goûts bruyants, des espaces insoupçonnés et des
+        traverses intimes.</p><p class="maitrise-intro">Avec un effet magique de
+        niveau <span class="maitrise-pastille">?</span> …</p><p
+        class="maitrise-intro">elle parvient par exemple à…</p><ol
+        class="maitrise-niveaux"><li><p><strong><em>identifier</em></strong> un
+        effet magique d’art noir (conjuration, onyxium, prisme) ; éblouir ou
+        aveugler un personnage ; suivre la trace d’une personne dont elle
+        connaît la couleur prismatique ; savoir l ’allégeance d’un démon ; faire
+        apparaître un indice aux yeux de tous ; récolter une couleur unique ;
+        etc.</p></li><li><p><strong><em>brouiller</em></strong> l’image d’une
+        personne ou d’un objet ; comparer et différencier des couleurs très
+        proches ; décomposer les ingrédients d’un son, ou d’un goût ; fabriquer
+        des pigments durables pouvant servir à des artisans ; franchir un
+        passage trop petit ; concentrer la lumière en un rayon d’énergie ;
+        etc.</p></li><li><p><strong><em>créer</em></strong> un mirage dédoublant
+        un objet, ou un personnage capable d’agir ; changer la façon dont
         fonctionnent les sens (voir la chaleur corporelle, entendre les odeurs,
         etc.) ; écrire un message lisible uniquement par d’autres artistes du
         prisme, ou totalement ineffaçable, comme s’il était projeté par le
-        soleil ; etc.</p></li><li><p><strong>altérer</strong> les sens de tous
-        pour que le moindre détail devienne immense, transformant une rue pavée
-        en labyrinthe ; perturber les sens au point de provoquer une crise de
-        folie ; passer d’un espace à un autre, en suivant un rayon de lumière,
-        quelle que soit la taille du passage ; ouvrir un espace inédit, sorte de
-        poche de réalité augmentée ; retrouver une personne par les traces
-        colorées qu’elle laisse, même sans la connaître ;
-        etc.</p></li><li><p><strong>voyager</strong> par la lumière sur de
-        longues distances, vers des espaces inconnus ; atteindre un méandre, une
-        étoile dans le ciel, l’intérieur d’un esprit mortel ; franchir une ombre
-        pour rejoindre les Abysses, les Cornes, ou le fonctionnaire du Clergé
-        obscur le plus proche (<em>advocatus diaboli</em> chargé des relations
-        entre démons et mortels) ; récolter l’âme d’une personne en même temps
-        que sa couleur, et ainsi la tuer ; etc.</p></li></ol><p><strong>Mais
-        attention, il risque également de…</strong></p><h6>Incident
-        magique</h6><ul><li><p><strong>trouver un diable dans les
-        détails.</strong> Parfois, le monde de l’artiste prismatique se distend
-        autour de lui, devient fractal et impressionniste, ou s’étire en
-        créatures obscènes. Un « gardien » sans visage apparaît ; l’artiste du
-        prisme est aveuglé par la débauche de détails qui l’entourent, ses sens
-        saturés devenant ininterprétables ; etc.</p></li></ul>
+        soleil ; etc.</p></li><li><p><strong><em>altérer</em></strong> les sens
+        de tous pour que le moindre détail devienne immense, transformant une
+        rue pavée en labyrinthe ; perturber les sens au point de provoquer une
+        crise de folie ; passer d’un espace à un autre, en suivant un rayon de
+        lumière, quelle que soit la taille du passage ; ouvrir un espace inédit,
+        sorte de poche de réalité augmentée ; retrouver une personne par les
+        traces colorées qu’elle laisse, même sans la connaître ;
+        etc.</p></li><li><p><strong><em>voyager</em></strong> par la lumière sur
+        de longues distances, vers des espaces inconnus ; atteindre un méandre,
+        une étoile dans le ciel, l’intérieur d’un esprit mortel ; franchir une
+        ombre pour rejoindre les Abysses, les Cornes, ou le fonctionnaire du
+        Clergé obscur le plus proche (<em>advocatus diaboli</em> chargé des
+        relations entre démons et mortels) ; récolter l’âme d’une personne en
+        même temps que sa couleur, et ainsi la tuer ; etc.</p></li></ol><p
+        class="maitrise-intro">Mais attention, il risque également de…</p><p
+        class="maitrise-entree"><span class="maitrise-etiquette">Incident
+        magique</span> <strong>trouver un diable dans les détails.</strong>
+        Parfois, le monde de l’artiste prismatique se distend autour de lui,
+        devient fractal et impressionniste, ou s’étire en créatures obscènes. Un
+        « gardien » sans visage apparaît ; l’artiste du prisme est aveuglé par
+        la débauche de détails qui l’entourent, ses sens saturés devenant
+        ininterprétables ; etc.</p></div>
       harmonique: nuit
       niveau: 3
       prerequis: utiliser sa canne blanche comme sonde

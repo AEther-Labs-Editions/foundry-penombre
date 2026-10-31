@@ -5,7 +5,7 @@ export default class MaitriseSheet extends PenombreBaseItemSheet {
   static DEFAULT_OPTIONS = {
     classes: ["maitrise"],
     position: {
-      width: 570,
+      width: 760, // Deux colonnes pour la description, comme les cartes des tirés à part
       height: 450,
     },
 

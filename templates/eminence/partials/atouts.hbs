@@ -10,7 +10,7 @@
                 {{#each atouts as |item id|}}
                 <tr class="item draggable" data-item-id="{{item._id}}">
                     <td>
-                        <span class="item-name" data-tooltip="{{{item.system.description}}}">{{item.name}}</span>
+                        <span class="item-name" data-tooltip-html="{{item.system.description}}">{{item.name}}</span>
                     </td>
                     <td class="item-case-width" data-tooltip="{{localize 'PENOMBRE.ui.valeurTooltip' valeur=item.system.valeur}}">
                         <span class="cases-atout">

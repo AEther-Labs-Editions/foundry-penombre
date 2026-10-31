@@ -87,3 +87,159 @@ body {
     }
   }
 }
+
+/* ---------------------------------------------
+        Maîtrises magiques : description mise en forme
+        comme les cartes « … en action » des tirés à part
+--------------------------------------------- */
+@maitrise-encre: #231f20; // Texte des cartes
+@maitrise-bleu: #074966; // Intitulés et puces (Cattedrale)
+@maitrise-harmonique: #4a5650; // Valeur de l'harmonique
+@maitrise-pastille-fond: #41483f; // Pastilles des niveaux
+@maitrise-pastille-texte: #eedfc3;
+
+.maitrise-carte-style() {
+  font-family: @font-goudy, var(--font-serif);
+  font-size: 15px;
+  line-height: 1.35;
+  color: @maitrise-encre;
+  // Deux colonnes dès que la largeur le permet, comme sur la carte
+  columns: 2 300px;
+  column-gap: 28px;
+
+  p {
+    margin: 0 0 6px;
+  }
+
+  .maitrise-titre {
+    column-span: all;
+    margin: 0 0 8px;
+    border: none;
+    text-align: center;
+    font-family: @font-cattedrale;
+    font-size: 26px;
+    color: @maitrise-bleu;
+  }
+
+  .maitrise-intro {
+    margin-top: 8px;
+    font-weight: bold;
+  }
+
+  // Puce bleue, intitulé en Cattedrale sur la même ligne que le texte
+  .maitrise-entree {
+    position: relative;
+    padding-left: 14px;
+    break-inside: avoid;
+
+    &::before {
+      content: "•";
+      position: absolute;
+      left: 2px;
+      color: @maitrise-bleu;
+      font-weight: bold;
+    }
+  }
+
+  .maitrise-etiquette {
+    font-family: @font-cattedrale;
+    font-size: 1.3em;
+    line-height: 1;
+    color: @maitrise-bleu;
+  }
+
+  .maitrise-harmonique {
+    font-family: @font-cattedrale;
+    font-size: 1.3em;
+    line-height: 1;
+    color: @maitrise-harmonique;
+  }
+
+  .maitrise-pastille,
+  .maitrise-niveaux > li::before {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid @maitrise-pastille-fond;
+    outline: 1px solid @maitrise-pastille-texte;
+    outline-offset: -3px;
+    background: @maitrise-pastille-fond;
+    color: @maitrise-pastille-texte;
+    font-family: @font-cattedrale;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1;
+    vertical-align: middle;
+  }
+
+  // Niveaux 1 à 5 : numéro dans une pastille, verbe clé en gras italique (balisé dans le texte)
+  .maitrise-niveaux {
+    counter-reset: niveau;
+    list-style: none;
+    margin: 4px 0 6px;
+    padding: 0;
+
+    > li {
+      counter-increment: niveau;
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 4px;
+      break-inside: avoid;
+
+      &::before {
+        content: counter(niveau);
+        position: absolute;
+        left: 0;
+        top: 1px;
+      }
+
+      > p {
+        margin: 0;
+      }
+    }
+  }
+
+  .maitrise-note {
+    font-size: 0.92em;
+    font-style: italic;
+  }
+}
+
+// Fiche de la maîtrise (lecture de la description) et infobulle du nom sur la fiche d'éminence
+.penombre.maitrise .maitrise-carte {
+  .maitrise-carte-style();
+}
+
+#tooltip.maitrise-tooltip,
+.locked-tooltip.maitrise-tooltip {
+  max-width: 460px;
+  padding: 10px 12px;
+  background: @background-light;
+  border: 1px solid @maitrise-bleu;
+  text-align: left;
+
+  .maitrise-carte {
+    .maitrise-carte-style();
+    columns: auto; // Une seule colonne dans l'infobulle
+    font-size: 14px;
+  }
+}
+
+// Thème sombre de la fiche : texte et intitulés éclaircis
+body.theme-dark .penombre.maitrise .maitrise-carte {
+  color: var(--color-text-primary);
+
+  .maitrise-titre,
+  .maitrise-etiquette,
+  .maitrise-entree::before {
+    color: #7fb3cf;
+  }
+
+  .maitrise-harmonique {
+    color: #b9c4bd;
+  }
+}
