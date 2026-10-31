@@ -1,4 +1,5 @@
 import { SYSTEM } from "../config/system.mjs"
+import { demanderAuMJ, mjConnecte } from "../helpers/mj.mjs"
 
 /**
  * Constantes pour le calcul des succès et types de dés
@@ -90,8 +91,12 @@ export default class PenombreRoll extends Roll {
     const atouts = options.atouts || []
     const choiceDifficulte = SYSTEM.DIFFICULTE
 
+    // Sans MJ connecté, la réserve collégiale et les factions ne sont pas utilisables (écritures faites par le MJ)
+    const avecMJ = mjConnecte()
+    if (!avecMJ) ui.notifications.warn("PENOMBRE.Warnings.mjAbsentJet", { localize: true })
+
     const maxJetonsConscience = actor.system.nbJetonsRestants
-    const maxJetonsReserve = game.settings.get(SYSTEM.ID, "reserveCollegiale").nbJetonsRestants
+    const maxJetonsReserve = avecMJ ? game.settings.get(SYSTEM.ID, "reserveCollegiale").nbJetonsRestants : 0
 
     const fieldJetonsConscience = new foundry.data.fields.NumberField({ initial: 0, min: 0, max: maxJetonsConscience, step: 1 })
     const fieldJetonsReserve = new foundry.data.fields.NumberField({ initial: 0, min: 0, max: maxJetonsReserve, step: 1 })
@@ -119,7 +124,7 @@ export default class PenombreRoll extends Roll {
     const utiliserFactions = game.settings.get(SYSTEM.ID, "styleJeu") !== "demo" && game.settings.get(SYSTEM.ID, "utiliserFactions")
     let factionAtouts = []
     let factions = []
-    if (utiliserFactions) {
+    if (utiliserFactions && avecMJ) {
       const reserveCollegiale = game.settings.get(SYSTEM.ID, "reserveCollegiale")
       factionAtouts = reserveCollegiale.allFactionAtouts || []
       factions = Object.entries(reserveCollegiale.factions || {}).map(([id, faction]) => ({ id, nom: faction.nom }))
@@ -292,6 +297,13 @@ export default class PenombreRoll extends Roll {
       factionAtoutsUsed = []
     }
 
+    // Le MJ a pu se déconnecter pendant que la fenêtre était ouverte
+    const besoinMJ = jetonsReserveDepenses > 0 || factionAtoutsUsed.length > 0 || (complicationUse && complicationJetons > 0 && complicationCible !== "moi")
+    if (besoinMJ && !mjConnecte()) {
+      ui.notifications.warn("PENOMBRE.Warnings.mjAbsentJet", { localize: true })
+      return null
+    }
+
     formule = rollContext.formule || formule
 
     const rollOptions = {
@@ -317,7 +329,7 @@ export default class PenombreRoll extends Roll {
 
     // Dépense de jetons après évaluation réussie du jet (évite de perdre des jetons si le roll échoue)
     if (jetonsReserveDepenses !== 0) {
-      await game.users.activeGM.query("penombre.updateReserveCollegialeFromRoll", { nbJetons: jetonsReserveDepenses })
+      await demanderAuMJ("penombre.updateReserveCollegialeFromRoll", { nbJetons: jetonsReserveDepenses })
     }
     if (jetonsConscienceDepenses !== 0) {
       await actor.system.depenserJetons(jetonsConscienceDepenses)
@@ -332,7 +344,7 @@ export default class PenombreRoll extends Roll {
         })
       }
     } else if (complicationUse && complicationJetons > 0) {
-      await game.users.activeGM.query("penombre.addFactionComplicationFromRoll", {
+      await demanderAuMJ("penombre.addFactionComplicationFromRoll", {
         factionId: complicationCible,
         niveau: complicationJetons,
         nom: complicationDescription,
@@ -586,7 +598,7 @@ export default class PenombreRoll extends Roll {
 
     // Jetons de la réserve collégiale
     const reserveCollegiale = game.settings.get(SYSTEM.ID, "reserveCollegiale")
-    const nbJetonsRestantsReserveCollegiale = reserveCollegiale.nbJetonsRestants
+    const nbJetonsRestantsReserveCollegiale = mjConnecte() ? reserveCollegiale.nbJetonsRestants : 0
     if (jetonsReserve > nbJetonsRestantsReserveCollegiale) {
       ui.notifications.warn(game.i18n.format("PENOMBRE.Warnings.jetonsReserveInsuffisants", { actuel: nbJetonsRestantsReserveCollegiale, demande: jetonsReserve }), {
         permanent: true,
@@ -938,8 +950,10 @@ export default class PenombreRoll extends Roll {
       choix = candidats[result]
     }
 
-    await game.users.activeGM.query("penombre.decrementFactionAtout", { factionId: choix.factionId, elementId: choix.elementId })
-    ui.notifications.info(game.i18n.format("PENOMBRE.Factions.atoutDegrade", { nom: choix.atout.nom, faction: reserveCollegiale.factions[choix.factionId].nom }))
+    const libelle = { nom: choix.atout.nom, faction: reserveCollegiale.factions[choix.factionId].nom }
+    const { ok } = await demanderAuMJ("penombre.decrementFactionAtout", { factionId: choix.factionId, elementId: choix.elementId })
+    if (ok) ui.notifications.info(game.i18n.format("PENOMBRE.Factions.atoutDegrade", libelle))
+    else ui.notifications.warn(game.i18n.format("PENOMBRE.Factions.atoutADegrader", libelle), { permanent: true })
   }
 
   /**

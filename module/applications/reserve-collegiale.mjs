@@ -1,5 +1,6 @@
 const { HandlebarsApplicationMixin, ApplicationV2 } = foundry.applications.api
 import { SYSTEM } from "../config/system.mjs"
+import { demanderAuMJ } from "../helpers/mj.mjs"
 
 /**
  * Une application pour gérer la réserve collégiale, le potentiel collégial et les factions.
@@ -337,8 +338,7 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
     event.preventDefault()
     const index = target.dataset.index
 
-    if (game.user.isGM) await PenombreReserveCollegiale._mutateToggleJeton(index)
-    else await game.users.activeGM.query("penombre.updateReserveCollegiale", { index })
+    await demanderAuMJ("penombre.updateReserveCollegiale", { index })
 
     this.render({ force: true })
   }

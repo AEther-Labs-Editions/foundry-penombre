@@ -473,7 +473,10 @@
       "jetonsReserveInsuffisants": "Vous avez demandé {demande} jeton(s) de la réserve collégiale alors qu’il n’en reste actuellement plus que {actuel} !",
       "jetonsReserveFactionRequis": "Un atout collégial doit être payé par un jeton de la réserve collégiale (au moins {minimum} attendu(s)).",
       "limiteNbJetonsDemo": "Avec le style de jeu « Kit de démo », le nombre maximum de jetons dans la réserve collégiale sera forcé à 10.",
-      "userSansActeur": "L’utilisateur {user} n’a pas d’acteur associé."
+      "userSansActeur": "L’utilisateur {user} n’a pas d’acteur associé.",
+      "mjAbsent": "Aucun MJ connecté : cette action a besoin du MJ.",
+      "mjAbsentJet": "Aucun MJ connecté : la réserve collégiale et les factions ne sont pas utilisables pour ce jet.",
+      "mjErreur": "Le MJ n’a pas pu traiter la demande : {erreur}"
     },
     "Settings": {
       "styleJeu": {
@@ -536,7 +539,8 @@
       "cibleFaction": "Faction",
       "choisirAtoutDegrade": "Fausse note : choisissez l’atout collégial dont le niveau baisse",
       "choisir": "Choisir",
-      "atoutDegrade": "Le niveau de l’atout collégial « {nom} » ({faction}) baisse d’un niveau."
+      "atoutDegrade": "Le niveau de l’atout collégial « {nom} » ({faction}) baisse d’un niveau.",
+      "atoutADegrader": "Le MJ n’a pas pu dégrader l’atout collégial « {nom} » ({faction}) : retirez-lui un niveau à la main."
     },
     "GroupManager": {
       "title": "Gestionnaire de groupe",

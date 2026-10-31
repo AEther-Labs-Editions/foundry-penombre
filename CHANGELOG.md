@@ -15,6 +15,7 @@
 - Fiche Eminence : l'infobulle des pouvoirs prend le style de celle des maîtrises (parchemin, nom en Cattedrale bleue avec son type, citation en italique, effet en Goudy) ; les deux infobulles sont 50 % plus larges ; noms des maîtrises en gras avec un léger contour, noms des pouvoirs avec un léger contour et des lettres légèrement espacées
 - Fiche Eminence : l'infobulle des maîtrises affiche le nom et l'harmonique en tête, comme le type dans celle des pouvoirs
 - Guide d'utilisation mis à jour : pages Paramètres du système, Le jeu des factions, Le menu Pénombre, Le gestionnaire de groupe, La fiche d'Adversaire et Les compendiums ajoutées ; fiche d'Éminence, lancer de dés (effet magique, dé merveilleux, complication, atouts de faction) et réserve collégiale réécrits ; captures refaites pour Foundry V14 et la nouvelle fiche
+- Sans MJ connecté : la fenêtre de jet le signale et rend la réserve collégiale et les factions indisponibles pour ce jet (on peut toujours payer avec sa conscience) ; le clic sur un jeton de la réserve, la relance payée par la réserve et la participation à une action collégiale affichent un avertissement au lieu d'échouer en silence ; si l'atout collégial à dégrader après une fausse note ne peut pas l'être, un message demande de le faire à la main
 
 1.8.4
 - Fiche Eminence : refactoring interne de la mise en page (les float sont remplacés par flex et grid dans les blocs Personnage, Harmoniques, Conscience, Timbre et les tableaux), sans changement visuel
