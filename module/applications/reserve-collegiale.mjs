@@ -125,13 +125,25 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
 
   // #region Mutations (source de vérité unique, utilisée directement par le MJ ou via les query handlers)
 
+  /** File d'attente des modifications de la réserve, pour qu'elles s'exécutent l'une après l'autre */
+  static #fileModifications = Promise.resolve()
+
   /**
-   * @param {function(object): void} modifier
+   * Lit la réserve, la modifie puis l'enregistre. Les modifications sont mises en file d'attente : deux requêtes
+   * reçues en même temps ne lisent pas la même réserve, et la seconde écriture n'efface pas la première.
+   * @param {function(object): *} modifier Modifie la réserve reçue ; sa valeur de retour est renvoyée
+   * @returns {Promise<*>} La valeur renvoyée par modifier
    */
-  static async _updateReserve(modifier) {
-    const reserveCollegiale = foundry.utils.duplicate(game.settings.get(SYSTEM.ID, "reserveCollegiale"))
-    modifier(reserveCollegiale)
-    await game.settings.set(SYSTEM.ID, "reserveCollegiale", reserveCollegiale)
+  static _updateReserve(modifier) {
+    const traitement = PenombreReserveCollegiale.#fileModifications.then(async () => {
+      const reserveCollegiale = foundry.utils.duplicate(game.settings.get(SYSTEM.ID, "reserveCollegiale"))
+      const resultat = modifier(reserveCollegiale)
+      await game.settings.set(SYSTEM.ID, "reserveCollegiale", reserveCollegiale)
+      return resultat
+    })
+    // Une modification en échec ne bloque pas les suivantes
+    PenombreReserveCollegiale.#fileModifications = traitement.catch(() => {})
+    return traitement
   }
 
   /** @param {string} index */

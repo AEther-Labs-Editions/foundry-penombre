@@ -151,8 +151,6 @@ Hooks.on("updateSetting", async (setting, update, options, id) => {
   // Mise à jour du nombre de jetons dans la réserve collégiale
   if (setting.key === "penombre.nbJetons" && game.user.isGM) {
     if (CONFIG.debug.penombre?.reserve) console.debug("Pénombre | Mise à jour du nombre de jetons dans la réserve collégiale", setting, update, options, id)
-    const reserveCollegiale = foundry.utils.duplicate(game.settings.get(SYSTEM.ID, "reserveCollegiale"))
-
     let nouveauNbJetons = update.value
 
     // En mode Kit de demo, on force le nombre de jetons à 10
@@ -161,23 +159,24 @@ Hooks.on("updateSetting", async (setting, update, options, id) => {
       game.settings.set(SYSTEM.ID, "nbJetons", 10)
     }
 
-    // Ajouter les jetons manquants si le nombre augmente
-    for (let i = 1; i <= nouveauNbJetons; i++) {
-      const key = String(i)
-      if (!reserveCollegiale.jetons.hasOwnProperty(key)) {
-        reserveCollegiale.jetons[key] = { valeur: false }
+    // Passe par la file d'attente des modifications de la réserve
+    applications.PenombreReserveCollegiale._updateReserve((reserveCollegiale) => {
+      // Ajouter les jetons manquants si le nombre augmente
+      for (let i = 1; i <= nouveauNbJetons; i++) {
+        const key = String(i)
+        if (!reserveCollegiale.jetons.hasOwnProperty(key)) {
+          reserveCollegiale.jetons[key] = { valeur: false }
+        }
       }
-    }
 
-    // Supprimer les jetons en excès si le nombre diminue
-    Object.keys(reserveCollegiale.jetons).forEach((key) => {
-      const numericKey = parseInt(key, 10)
-      if (numericKey > nouveauNbJetons) {
-        delete reserveCollegiale.jetons[key]
-      }
+      // Supprimer les jetons en excès si le nombre diminue
+      Object.keys(reserveCollegiale.jetons).forEach((key) => {
+        const numericKey = parseInt(key, 10)
+        if (numericKey > nouveauNbJetons) {
+          delete reserveCollegiale.jetons[key]
+        }
+      })
     })
-
-    game.settings.set(SYSTEM.ID, "reserveCollegiale", reserveCollegiale)
   }
 })
 
