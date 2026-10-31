@@ -257,9 +257,10 @@ export default class HarmoniqueMessageData extends BaseMessageData {
       }
     }
 
-    // Les boutons pour participer à un jet collégial sont visibles par tous les autres joueurs
+    // Les boutons pour participer à un jet collégial ne sont visibles que par les joueuses dont la réponse est attendue
     const currentActorId = game.user.character?.id
-    if (this.actionCollegiale && !this.actionCollegialeMessageLie && !this.parent.isAuthor && currentActorId && !this.messagesLies[currentActorId]?.reponseFaite) {
+    const reponseAttendue = currentActorId && this.messagesLies[currentActorId] && !this.messagesLies[currentActorId].reponseFaite
+    if (this.actionCollegiale && !this.actionCollegialeMessageLie && !this.parent.isAuthor && reponseAttendue) {
       html.querySelector(".participate-yes").classList.remove("hidden")
       html.querySelector(".participate-no").classList.remove("hidden")
 
