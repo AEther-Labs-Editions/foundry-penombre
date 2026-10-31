@@ -18,6 +18,7 @@
 - Sans MJ connecté : la fenêtre de jet le signale et rend la réserve collégiale et les factions indisponibles pour ce jet (on peut toujours payer avec sa conscience) ; le clic sur un jeton de la réserve, la relance payée par la réserve et la participation à une action collégiale affichent un avertissement au lieu d'échouer en silence ; si l'atout collégial à dégrader après une fausse note ne peut pas l'être, un message demande de le faire à la main
 - Réserve collégiale : les modifications sont traitées l'une après l'autre par le MJ ; deux dépenses faites au même moment ne s'écrasent plus (un jeton pouvait ne pas être décompté)
 - Jets : le paiement des jetons est vérifié au moment du jet ; s'il ne reste plus assez de jetons dans la réserve collégiale (une autre joueuse en a dépensé entre-temps) ou dans la conscience, le jet est annulé avec un message au lieu d'être publié en ne payant qu'une partie ; même vérification pour les relances
+- Échanges avec le MJ : l'édition des factions (création, suppression, noms, niveaux) n'est plus accessible par requête, elle est réservée au MJ ; les requêtes restantes (jeton de la réserve, paiement d'un jet, complication de faction créée en jeu, dégradation d'un atout collégial) vérifient leurs paramètres et refusent une demande invalide sans rien modifier
 
 1.8.4
 - Fiche Eminence : refactoring interne de la mise en page (les float sont remplacés par flex et grid dans les blocs Personnage, Harmoniques, Conscience, Timbre et les tableaux), sans changement visuel

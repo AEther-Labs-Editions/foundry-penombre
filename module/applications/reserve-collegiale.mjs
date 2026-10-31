@@ -364,8 +364,7 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
     event.preventDefault()
     const factionId = foundry.utils.randomID()
 
-    if (game.user.isGM) await PenombreReserveCollegiale._mutateCreateFaction(factionId)
-    else await game.users.activeGM.query("penombre.createFaction", { factionId })
+    await PenombreReserveCollegiale._mutateCreateFaction(factionId)
 
     this.render({ force: true })
   }
@@ -384,8 +383,7 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
     })
     if (!confirmed) return
 
-    if (game.user.isGM) await PenombreReserveCollegiale._mutateDeleteFaction(factionId)
-    else await game.users.activeGM.query("penombre.deleteFaction", { factionId })
+    await PenombreReserveCollegiale._mutateDeleteFaction(factionId)
 
     this.render({ force: true })
   }
@@ -423,8 +421,7 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
       if (rembourser === null) return
     }
 
-    if (game.user.isGM) await PenombreReserveCollegiale._mutateDeleteFactionElement(factionId, elementId, elementType, rembourser)
-    else await game.users.activeGM.query("penombre.deleteFactionElement", { factionId, elementId, elementType, rembourser })
+    await PenombreReserveCollegiale._mutateDeleteFactionElement(factionId, elementId, elementType, rembourser)
 
     this.render({ force: true })
   }
@@ -438,8 +435,7 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
     const { factionId, elementId, elementType, valeur } = target.dataset
     const newValeur = Number(valeur)
 
-    if (game.user.isGM) await PenombreReserveCollegiale._mutateChangeFactionElementValeur(factionId, elementId, elementType, newValeur)
-    else await game.users.activeGM.query("penombre.updateFactionElementValeur", { factionId, elementId, elementType, valeur: newValeur })
+    await PenombreReserveCollegiale._mutateChangeFactionElementValeur(factionId, elementId, elementType, newValeur)
 
     this.render({ force: true })
   }
@@ -451,8 +447,7 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
    */
   async #creerAtout(factionId, nom) {
     const elementId = foundry.utils.randomID()
-    if (game.user.isGM) await PenombreReserveCollegiale._mutateCreateFactionAtout(factionId, elementId, nom)
-    else await game.users.activeGM.query("penombre.createFactionAtout", { factionId, elementId, nom })
+    await PenombreReserveCollegiale._mutateCreateFactionAtout(factionId, elementId, nom)
 
     this.render({ force: true })
   }
@@ -464,8 +459,7 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
    */
   async #creerComplication(factionId, nom) {
     const elementId = foundry.utils.randomID()
-    if (game.user.isGM) await PenombreReserveCollegiale._mutateCreateFactionComplication(factionId, elementId, nom)
-    else await game.users.activeGM.query("penombre.createFactionComplication", { factionId, elementId, nom })
+    await PenombreReserveCollegiale._mutateCreateFactionComplication(factionId, elementId, nom)
 
     this.render({ force: true })
   }
@@ -524,8 +518,7 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
     const nom = input.value.trim()
     if (!nom) return
 
-    if (game.user.isGM) await PenombreReserveCollegiale._mutateUpdateFactionNom(factionId, nom)
-    else await game.users.activeGM.query("penombre.updateFactionName", { factionId, nom })
+    await PenombreReserveCollegiale._mutateUpdateFactionNom(factionId, nom)
   }
 
   /**
@@ -543,8 +536,7 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
       return this.#creerComplication(factionId, nom)
     }
 
-    if (game.user.isGM) await PenombreReserveCollegiale._mutateUpdateFactionElementNom(factionId, elementId, elementType, nom)
-    else await game.users.activeGM.query("penombre.updateFactionElementNom", { factionId, elementId, elementType, nom })
+    await PenombreReserveCollegiale._mutateUpdateFactionElementNom(factionId, elementId, elementType, nom)
   }
 
   /** @param {Event} event Uniquement accessible au MJ : pas de query nécessaire */
@@ -555,45 +547,55 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
   // #endregion Gestion des événements de rendu
 
   // #region Query handlers (appelés par le MJ actif à la demande d'un joueur)
+  // Les données reçues sont vérifiées avant toute modification : une requête invalide est refusée et ne change rien.
+  // L'édition des factions est réservée au MJ et ne passe pas par une requête.
+
+  /**
+   * Refuse la requête si la condition est fausse.
+   * @param {boolean} condition
+   * @param {string} parametre Nom du paramètre invalide
+   */
+  static #verifier(condition, parametre) {
+    if (!condition) throw new Error(game.i18n.format("PENOMBRE.Warnings.requeteInvalide", { parametre }))
+  }
+
+  /**
+   * @param {*} valeur
+   * @returns {boolean} Vrai pour un entier supérieur ou égal à 1
+   */
+  static #estEntierPositif(valeur) {
+    return Number.isInteger(valeur) && valeur >= 1
+  }
 
   /** @param {{index: string}} params */
-  static _handleQueryUpdateReserveCollegiale = async ({ index }) => PenombreReserveCollegiale._mutateToggleJeton(index)
+  static _handleQueryUpdateReserveCollegiale = async ({ index }) => {
+    const jetons = game.settings.get(SYSTEM.ID, "reserveCollegiale").jetons
+    PenombreReserveCollegiale.#verifier(typeof index === "string" && Object.hasOwn(jetons, index), "index")
+    return PenombreReserveCollegiale._mutateToggleJeton(index)
+  }
 
   /** @param {{nbJetons: number}} params */
-  static _handleQueryUpdateReserveCollegialeFromRoll = async ({ nbJetons }) => PenombreReserveCollegiale._mutateReserveFromRoll(nbJetons)
-
-  /** @param {{factionId: string}} params */
-  static _handleQueryCreateFaction = async ({ factionId }) => PenombreReserveCollegiale._mutateCreateFaction(factionId)
-
-  /** @param {{factionId: string}} params */
-  static _handleQueryDeleteFaction = async ({ factionId }) => PenombreReserveCollegiale._mutateDeleteFaction(factionId)
-
-  /** @param {{factionId: string, elementId: string, nom: string}} params */
-  static _handleQueryCreateFactionAtout = async ({ factionId, elementId, nom }) => PenombreReserveCollegiale._mutateCreateFactionAtout(factionId, elementId, nom)
-
-  /** @param {{factionId: string, elementId: string, nom: string}} params */
-  static _handleQueryCreateFactionComplication = async ({ factionId, elementId, nom }) => PenombreReserveCollegiale._mutateCreateFactionComplication(factionId, elementId, nom)
-
-  /** @param {{factionId: string, elementId: string, elementType: string, rembourser: boolean}} params */
-  static _handleQueryDeleteFactionElement = async ({ factionId, elementId, elementType, rembourser }) =>
-    PenombreReserveCollegiale._mutateDeleteFactionElement(factionId, elementId, elementType, rembourser)
-
-  /** @param {{factionId: string, elementId: string, elementType: string, valeur: number}} params */
-  static _handleQueryUpdateFactionElementValeur = async ({ factionId, elementId, elementType, valeur }) =>
-    PenombreReserveCollegiale._mutateChangeFactionElementValeur(factionId, elementId, elementType, valeur)
-
-  /** @param {{factionId: string, elementId: string, elementType: string, nom: string}} params */
-  static _handleQueryUpdateFactionElementNom = async ({ factionId, elementId, elementType, nom }) =>
-    PenombreReserveCollegiale._mutateUpdateFactionElementNom(factionId, elementId, elementType, nom)
-
-  /** @param {{factionId: string, nom: string}} params */
-  static _handleQueryUpdateFactionName = async ({ factionId, nom }) => PenombreReserveCollegiale._mutateUpdateFactionNom(factionId, nom)
+  static _handleQueryUpdateReserveCollegialeFromRoll = async ({ nbJetons }) => {
+    PenombreReserveCollegiale.#verifier(PenombreReserveCollegiale.#estEntierPositif(nbJetons), "nbJetons")
+    return PenombreReserveCollegiale._mutateReserveFromRoll(nbJetons)
+  }
 
   /** @param {{factionId: string, niveau: number, nom: string}} params */
-  static _handleQueryAddFactionComplicationFromRoll = async ({ factionId, niveau, nom }) => PenombreReserveCollegiale._mutateAddFactionComplicationFromRoll(factionId, niveau, nom)
+  static _handleQueryAddFactionComplicationFromRoll = async ({ factionId, niveau, nom }) => {
+    const factions = game.settings.get(SYSTEM.ID, "reserveCollegiale").factions ?? {}
+    PenombreReserveCollegiale.#verifier(typeof factionId === "string" && Object.hasOwn(factions, factionId), "factionId")
+    PenombreReserveCollegiale.#verifier(PenombreReserveCollegiale.#estEntierPositif(niveau), "niveau")
+    PenombreReserveCollegiale.#verifier(nom === undefined || typeof nom === "string", "nom")
+    return PenombreReserveCollegiale._mutateAddFactionComplicationFromRoll(factionId, niveau, nom)
+  }
 
   /** @param {{factionId: string, elementId: string}} params */
-  static _handleQueryDecrementFactionAtout = async ({ factionId, elementId }) => PenombreReserveCollegiale._mutateDecrementFactionAtout(factionId, elementId)
+  static _handleQueryDecrementFactionAtout = async ({ factionId, elementId }) => {
+    const factions = game.settings.get(SYSTEM.ID, "reserveCollegiale").factions ?? {}
+    PenombreReserveCollegiale.#verifier(typeof factionId === "string" && Object.hasOwn(factions, factionId), "factionId")
+    PenombreReserveCollegiale.#verifier(typeof elementId === "string" && Object.hasOwn(factions[factionId].atouts ?? {}, elementId), "elementId")
+    return PenombreReserveCollegiale._mutateDecrementFactionAtout(factionId, elementId)
+  }
 
   // #endregion Query handlers
 }

@@ -52,15 +52,7 @@ Hooks.once("init", function () {
   CONFIG.queries["penombre.updateReserveCollegialeFromRoll"] = applications.PenombreReserveCollegiale._handleQueryUpdateReserveCollegialeFromRoll
   CONFIG.queries["penombre.updateMessageParticipation"] = documents.PenombreMessage._handleQueryMessageParticipation
 
-  // Factions
-  CONFIG.queries["penombre.createFaction"] = applications.PenombreReserveCollegiale._handleQueryCreateFaction
-  CONFIG.queries["penombre.deleteFaction"] = applications.PenombreReserveCollegiale._handleQueryDeleteFaction
-  CONFIG.queries["penombre.createFactionAtout"] = applications.PenombreReserveCollegiale._handleQueryCreateFactionAtout
-  CONFIG.queries["penombre.createFactionComplication"] = applications.PenombreReserveCollegiale._handleQueryCreateFactionComplication
-  CONFIG.queries["penombre.deleteFactionElement"] = applications.PenombreReserveCollegiale._handleQueryDeleteFactionElement
-  CONFIG.queries["penombre.updateFactionElementValeur"] = applications.PenombreReserveCollegiale._handleQueryUpdateFactionElementValeur
-  CONFIG.queries["penombre.updateFactionElementNom"] = applications.PenombreReserveCollegiale._handleQueryUpdateFactionElementNom
-  CONFIG.queries["penombre.updateFactionName"] = applications.PenombreReserveCollegiale._handleQueryUpdateFactionName
+  // Factions : seules les modifications liées aux jets passent par le MJ, l'édition des factions lui est réservée
   CONFIG.queries["penombre.addFactionComplicationFromRoll"] = applications.PenombreReserveCollegiale._handleQueryAddFactionComplicationFromRoll
   CONFIG.queries["penombre.decrementFactionAtout"] = applications.PenombreReserveCollegiale._handleQueryDecrementFactionAtout
 
