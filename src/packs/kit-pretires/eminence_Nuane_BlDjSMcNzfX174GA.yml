@@ -158,20 +158,20 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
+      citation: On n'est jamais si grand que quand on se sent libre. Ou l'inverse.
       description: >-
-        <p>Aussi longtemps que Nuane le souhaite, sa taille redevient celle d’un
-        géant (6 à 8 mètres). Les objets sont inutilisables sous cette
-        forme.</p><p>Jusqu’au premier coucher de soleil, le nombre de succès de
-        toutes ses actions d’étincelle et de nature augmente de 2, mais celui de
-        toutes ses actions d’esprit, d’âme et de nuit diminue de 1.</p><p>De
-        plus, chaque fois qu’elle réalise une merveille (p. 31 du kit), son
-        joueur peut lui choisir un nouveau pouvoir dans la liste suivante, ou
-        augmenter de 1 sa valeur de conscience.</p><ul><li><p>Iris de
+        <p>Aussi longtemps qu'elle le souhaite, Nuane abandonne sa taille
+        réfrénée et reprend sa taille naturelle. Les objets de taille standard
+        sont inutilisables sous cette forme. Jusqu'au prochain coucher de
+        soleil, le nombre de succès de toutes ses actions d'étincelle et de
+        nature augmente de 2, mais celui de toutes ses actions d'esprit et de
+        nuit diminue de 1. Tout cela cesse immédiatement si Nuane décide de
+        réfréner sa taille à nouveau (action automatique).</p><p>De plus, chaque
+        fois qu’elle réalise une merveille (p. 31 du kit), son joueur peut lui
+        choisir un nouveau pouvoir dans la liste suivante, ou augmenter de 1 sa
+        valeur de conscience.</p><ul><li><p>Iris de
         focalisation</p></li><li><p>Colosse tonitruant</p></li></ul>
       type: naissance
-      citation: >-
-        On n’est jamais si grand que quand on se sent à nouveau libre. Ou
-        l’inverse.
     effects: []
     folder: null
     sort: 0
@@ -196,11 +196,11 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
+      citation: Mon sens de l'observation est d'utilité publique !
       description: >-
-        <p>Lors d’une action d’étincelle de Nuane, votre dé harmonique affiche
+        <p>Lors d'une action d'étincelle de Nuane, votre dé harmonique affiche
         sa valeur maximale.</p>
-      type: naissance
-      citation: Mon sens de l’observation est d’utilité publique !
+      type: peuple
     effects: []
     folder: null
     sort: 0
@@ -225,12 +225,12 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
-      description: >-
-        <p>Le temps d’une scène, toute action de Nuane pour attirer l’attention
-        par la voix devient automatique. De plus, le nombre de succès de toutes
-        ses actions d’étincelle augmente de 1.</p>
-      type: naissance
       citation: Mes rires dérident les murs des palais !
+      description: >-
+        <p>Le temps d'une scène, toute action de Nuane pour attirer l'attention
+        par la voix devient automatique. De plus, le nombre de succès de toutes
+        ses actions d'étincelle augmente de 1.</p>
+      type: peuple
     effects: []
     folder: null
     sort: 0
@@ -356,42 +356,48 @@ items:
     system:
       slug: ''
       description: >-
-        <h1>Nuane l’artiste du décorum</h1><p><strong>Note :</strong> Nuane est
-        un personnage bonus pouvant être utilisé avec le coffret de découverte
-        de Pénombre. Si Nuane et Esmeralda se retrouvent dans un même groupe,
-        cette dernière peut perdre la maîtrise magique « Décorum » et la
-        remplacer par une augmentation de sa maîtrise magique « Prisme » à
-        3.</p><p></p><p><strong>Pour préparer son effet magique, Nuane
-        doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>réaliser une
+        <div class="maitrise-carte"><h1 class="maitrise-titre">Nuane l’artiste
+        du décorum</h1><p><strong>Note :</strong> Nuane est un personnage bonus
+        pouvant être utilisé avec le coffret de découverte de Pénombre. Si Nuane
+        et Esmeralda se retrouvent dans un même groupe, cette dernière peut
+        perdre la maîtrise magique « Décorum » et la remplacer par une
+        augmentation de sa maîtrise magique « Prisme » à 3.</p><p
+        class="maitrise-intro">Pour préparer son effet magique, Nuane
+        doit…</p><p class="maitrise-entree"><span
+        class="maitrise-etiquette">Prérequis</span> <strong>réaliser une
         esquisse</strong>, un croquis, un tableau, voire une fresque picturale
-        dans laquelle, toujours, on retrouve la présence
-        d’Agone.</p></li></ul><p><strong>Ce faisant, il…</strong></p><h6>Action
-        magique</h6><ul><li><p><strong>redessine la réalité</strong> comme si il
+        dans laquelle, toujours, on retrouve la présence d’Agone.</p><p
+        class="maitrise-intro">Ce faisant, il…</p><p
+        class="maitrise-entree"><span class="maitrise-etiquette">Action
+        magique</span> <strong>redessine la réalité</strong> comme si il
         corrigeait l’œuvre maladroite d’un artiste débutant. L’Harmonde inanimé
-        se recompose sous son trait.</p></li></ul><p><strong>Avec un effet
-        magique de niveau ? …</strong></p><p><strong>il parvient par exemple
-        à…</strong></p><ol><li><p><strong>identifier</strong> un effet magique
-        d’art ancien (accord, décorum, geste) ; ajouter ou gommer un détail sur
-        un objet ; embellir ou enlaidir sans dénaturer ;
-        etc.</p></li><li><p><strong>remplacer</strong> une couleur par une autre
-        ; rendre un objet méconnaissable ; créer un mirage ou une illusion
-        réaliste, mais immatérielle ; modifier une perspective pour agrandir,
-        réduire, approcher ou éloigner ; etc.</p></li><li><p><strong>créer ou
-        effacer</strong> temporairement un élément de décor ; déplacer
-        définitivement un élément existant ; rendre translucide ; détruire,
-        abîmer ou réparer un élément de décor ; créer un point faible ;
-        etc.</p></li><li><p><strong>créer ou effacer</strong> un élément de
-        décor de manière permanente ; rendre un objet invisible ;
-        etc.</p></li><li><p><strong>créer</strong> un tableau-monde connecté à
-        l’Harmonde ; ouvrir un portail entre deux lieux distants ;
-        etc.</p></li></ol><p><strong>Mais attention, il risque également
-        de…</strong></p><h6>Incident magique</h6><ul><li><p><strong>faire de sa
+        se recompose sous son trait.</p><p class="maitrise-intro">Avec un effet
+        magique de niveau <span class="maitrise-pastille">?</span> …<br>il
+        parvient par exemple à…</p><ol
+        class="maitrise-niveaux"><li><p><strong><em>identifier</em></strong> un
+        effet magique d’art ancien (accord, décorum, geste) ; ajouter ou gommer
+        un détail sur un objet ; embellir ou enlaidir sans dénaturer ;
+        etc.</p></li><li><p><strong><em>remplacer</em></strong> une couleur par
+        une autre ; rendre un objet méconnaissable ; créer un mirage ou une
+        illusion réaliste, mais immatérielle ; modifier une perspective pour
+        agrandir, réduire, approcher ou éloigner ;
+        etc.</p></li><li><p><strong><em>créer ou effacer</em></strong>
+        temporairement un élément de décor ; déplacer définitivement un élément
+        existant ; rendre translucide ; détruire, abîmer ou réparer un élément
+        de décor ; créer un point faible ; etc.</p></li><li><p><strong><em>créer
+        ou effacer</em></strong> un élément de décor de manière permanente ;
+        rendre un objet invisible ;
+        etc.</p></li><li><p><strong><em>créer</em></strong> un tableau-monde
+        connecté à l’Harmonde ; ouvrir un portail entre deux lieux distants ;
+        etc.</p></li></ol><p class="maitrise-intro">Mais attention, il risque
+        également de…</p><p class="maitrise-entree"><span
+        class="maitrise-etiquette">Incident magique</span> <strong>faire de sa
         vie une œuvre.</strong> En prenant l’Harmonde pour toile, Nuane doit
         s’attendre à une réaction de sa part ! Nuane se retrouve prisonnier d’un
         méandre ; plusieurs réalités se superposent autour de lui, ou pire, en
         lui ; son environnement se transforme d’une manière imprévisible ; sa
         maladresse suscite la colère des témoins alentour, ou de l’Harmonde
-        lui-même qui déchaîne les éléments contre lui ; etc.</p></li></ul>
+        lui-même qui déchaîne les éléments contre lui ; etc.</p></div>
       harmonique: ame
       niveau: 3
       prerequis: Peindre

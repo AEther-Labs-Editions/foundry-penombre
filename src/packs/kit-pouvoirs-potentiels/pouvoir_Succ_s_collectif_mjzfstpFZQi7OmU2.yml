@@ -3,14 +3,14 @@ name: Succès collectif
 img: systems/penombre/assets/icons/pouvoir.webp
 system:
   utilise: false
+  citation: Marcher ensemble est un début ; travailler ensemble est une victoire.
   description: >-
-    <h1>Succès collectif</h1><p><em>Marcher ensemble est un début ; travailler
-    ensemble est une victoire.</em></p><p>Lors d’une action collégiale incluant
-    Mangrove, le nombre de succès total augmente du nombre de
-    participants.</p><p>De plus, chaque fois qu’il réalise une merveille (p. 31
-    du kit), son joueur peut lui choisir un nouveau pouvoir dans la liste
-    suivante, ou augmenter de 1 sa valeur de
-    conscience.</p><ul><li><p>Excès</p></li><li><p>J’ai un plan</p></li></ul>
+    <p>Lors d'une action collégiale incluant Maître Mangrove, le nombre de
+    succès total augmente du nombre de participants.</p><p>De plus, chaque fois
+    qu’il réalise une merveille (p. 31 du kit), son joueur peut lui choisir un
+    nouveau pouvoir dans la liste suivante, ou augmenter de 1 sa valeur de
+    conscience.</p><ul><li><p>Excès grangousier</p></li><li><p>J'ai un
+    plan</p></li></ul>
   type: naissance
 effects: []
 folder: vhalCys8j2xMMuD5

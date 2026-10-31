@@ -115,8 +115,20 @@ export default class PenombreRoll extends Roll {
     const maitrises = actor.itemTypes.maitrise || []
     const choiceEffetMagiqueMaitrise = Object.fromEntries(maitrises.map((m) => [m.system.slug, m.name]))
 
-    // Une complication ne peut être créée que s'il reste au moins une des 4 cases libres (description vide)
-    const hasComplicationLibre = Object.values(actor.system.conscience?.complications ?? {}).some((complication) => !complication.description)
+    // Factions : atouts utilisables dans le jet et liste pour choisir la cible d'une complication créée en jeu
+    const utiliserFactions = game.settings.get(SYSTEM.ID, "styleJeu") !== "demo" && game.settings.get(SYSTEM.ID, "utiliserFactions")
+    let factionAtouts = []
+    let factions = []
+    if (utiliserFactions) {
+      const reserveCollegiale = game.settings.get(SYSTEM.ID, "reserveCollegiale")
+      factionAtouts = reserveCollegiale.allFactionAtouts || []
+      factions = Object.entries(reserveCollegiale.factions || {}).map(([id, faction]) => ({ id, nom: faction.nom }))
+    }
+
+    // Une complication individuelle ne peut être créée que s'il reste au moins une des 4 cases libres (description
+    // vide) ; une complication de faction reste toujours possible dès lors qu'au moins une faction existe.
+    const hasComplicationLibreIndividuelle = Object.values(actor.system.conscience?.complications ?? {}).some((complication) => !complication.description)
+    const hasComplicationLibre = hasComplicationLibreIndividuelle || factions.length > 0
 
     let dialogContext = {
       actor,
@@ -130,6 +142,8 @@ export default class PenombreRoll extends Roll {
       bonusAtouts,
       deMerveilleux,
       atouts,
+      factionAtouts,
+      factions,
       label: game.i18n.localize(`PENOMBRE.ui.${harmonique}`),
       choiceDifficulte,
       canRoll: true,
@@ -142,6 +156,7 @@ export default class PenombreRoll extends Roll {
       choiceEffetMagiqueNiveau,
       choiceEffetMagiqueMaitrise,
       hasComplicationLibre,
+      hasComplicationLibreIndividuelle,
     }
 
     const content = await foundry.applications.handlebars.renderTemplate("systems/penombre/templates/dialogs/roll-dialog.hbs", dialogContext)
@@ -263,10 +278,19 @@ export default class PenombreRoll extends Roll {
     const jetonsReserveDepenses = rollContext.jetonsReserve !== "" ? Number(rollContext.jetonsReserve) : 0
     const jetonsConscienceDepenses = rollContext.jetonsConscience !== "" ? Number(rollContext.jetonsConscience) : 0
 
-    // Complication créée à la place d'une partie du coût en jetons
+    // Complication créée à la place d'une partie du coût en jetons, pour l'acteur ou pour une faction
     const complicationUse = rollContext.complicationUse === true
     const complicationJetons = complicationUse ? Number(rollContext.complicationJetons || 0) : 0
     const complicationDescription = complicationUse ? (rollContext.complicationDescription || "").trim() : ""
+    const complicationCible = complicationUse ? rollContext.complicationCible || "moi" : "moi"
+
+    // Atouts de faction utilisés pour ce jet (pour la dégradation de niveau en cas de fausse note)
+    let factionAtoutsUsed = []
+    try {
+      factionAtoutsUsed = JSON.parse(rollContext.factionAtoutsUsed || "[]")
+    } catch {
+      factionAtoutsUsed = []
+    }
 
     formule = rollContext.formule || formule
 
@@ -278,6 +302,7 @@ export default class PenombreRoll extends Roll {
       difficulte: rollContext.difficulte,
       rollMode: rollContext.messageMode,
       formule: rollContext.formule,
+      factionAtoutsUsed,
     }
 
     /**
@@ -297,7 +322,7 @@ export default class PenombreRoll extends Roll {
     if (jetonsConscienceDepenses !== 0) {
       await actor.system.depenserJetons(jetonsConscienceDepenses)
     }
-    if (complicationUse && complicationJetons > 0) {
+    if (complicationUse && complicationJetons > 0 && complicationCible === "moi") {
       const complications = actor.system.conscience.complications
       const slotKey = Object.keys(complications).find((key) => !complications[key].description)
       if (slotKey) {
@@ -306,6 +331,12 @@ export default class PenombreRoll extends Roll {
           [`system.conscience.complications.${slotKey}.valeur`]: complicationJetons,
         })
       }
+    } else if (complicationUse && complicationJetons > 0) {
+      await game.users.activeGM.query("penombre.addFactionComplicationFromRoll", {
+        factionId: complicationCible,
+        niveau: complicationJetons,
+        nom: complicationDescription,
+      })
     }
 
     if (CONFIG.debug.penombre?.rolls) console.debug("Pénombre | PenombreRoll | roll", roll)
@@ -434,9 +465,20 @@ export default class PenombreRoll extends Roll {
 
     if (jetonsTotal !== jetonsARepartir) canRoll = false
     if (PenombreRoll._isComplicationDescriptionMissing(dialogElement)) canRoll = false
+    if (jetonsReserve < PenombreRoll._getJetonsReserveMinimum(dialogElement)) canRoll = false
 
     if (canRoll) dialogElement.querySelector('button[type="submit"]').disabled = false
     else dialogElement.querySelector('button[type="submit"]').disabled = true
+  }
+
+  /**
+   * Nombre minimum de jetons devant obligatoirement provenir de la réserve collégiale,
+   * du fait des atouts de faction cochés (le jeton d'un atout collégial ne peut venir de la conscience).
+   * @param {HTMLElement} dialogElement L'élément DOM de la fenêtre de dialogue
+   * @returns {number}
+   */
+  static _getJetonsReserveMinimum(dialogElement) {
+    return Number(dialogElement.querySelector("#jetonsReserve")?.dataset.minimum) || 0
   }
 
   /**
@@ -485,9 +527,25 @@ export default class PenombreRoll extends Roll {
     let bonusTotal = Array.from(dialogElement.querySelectorAll(".atout.checked")).reduce((total, atout) => total + Number(atout.dataset.bonus), 0)
     dialogElement.querySelector("#bonusAtouts").value = bonusTotal
 
+    PenombreRoll._updateFactionAtoutsUsed(dialogElement)
     // Calcul du nombre de jetons à dépenser
     PenombreRoll._updateNbJetons(dialogElement)
     PenombreRoll._updateFormula(dialogElement)
+  }
+
+  /**
+   * Sérialise les atouts de faction actuellement cochés dans le champ caché #factionAtoutsUsed,
+   * afin de pouvoir les retrouver après le jet (dégradation d'un atout collégial sur fausse note).
+   * @param {HTMLElement} dialogElement L'élément DOM de la fenêtre de dialogue
+   */
+  static _updateFactionAtoutsUsed(dialogElement) {
+    const input = dialogElement.querySelector("#factionAtoutsUsed")
+    if (!input) return
+    const used = Array.from(dialogElement.querySelectorAll(".faction-atout.checked")).map((el) => ({
+      factionId: el.dataset.factionId,
+      elementId: el.dataset.elementId,
+    }))
+    input.value = JSON.stringify(used)
   }
 
   static _onToggleDeMerveilleux(event, dialogElement) {
@@ -533,6 +591,13 @@ export default class PenombreRoll extends Roll {
       ui.notifications.warn(game.i18n.format("PENOMBRE.Warnings.jetonsReserveInsuffisants", { actuel: nbJetonsRestantsReserveCollegiale, demande: jetonsReserve }), {
         permanent: true,
       })
+      canRoll = false
+    }
+
+    // Un atout collégial doit obligatoirement être payé par un jeton de la réserve
+    const jetonsReserveMinimum = PenombreRoll._getJetonsReserveMinimum(dialogElement)
+    if (jetonsReserve < jetonsReserveMinimum) {
+      ui.notifications.warn(game.i18n.format("PENOMBRE.Warnings.jetonsReserveFactionRequis", { minimum: jetonsReserveMinimum }))
       canRoll = false
     }
 
@@ -620,6 +685,16 @@ export default class PenombreRoll extends Roll {
     }
     let jetonsAtouts = nbAtoutsSelectionnes
     if (premierAtoutGratuit) jetonsAtouts = Math.max(nbAtoutsSelectionnes - 1, 0)
+
+    // Atouts de faction : le jeton dépensé pour un atout collégial doit obligatoirement venir de la réserve.
+    // Le premier atout gratuit est prioritairement attribué à un atout personnel s'il y en a un de sélectionné.
+    const nbFactionAtoutsSelectionnes = dialogElement.querySelectorAll(".faction-atout.checked").length
+    const nbAtoutsPersonnelsSelectionnes = nbAtoutsSelectionnes - nbFactionAtoutsSelectionnes
+    let jetonsReserveMinimum = nbFactionAtoutsSelectionnes
+    if (premierAtoutGratuit && nbAtoutsPersonnelsSelectionnes === 0 && nbFactionAtoutsSelectionnes > 0) {
+      jetonsReserveMinimum = Math.max(nbFactionAtoutsSelectionnes - 1, 0)
+    }
+    dialogElement.querySelector("#jetonsReserve").dataset.minimum = jetonsReserveMinimum
 
     // Dé merveilleux
     const deMerveilleux = dialogElement.querySelector("#deMerveilleux").checked
@@ -822,6 +897,52 @@ export default class PenombreRoll extends Roll {
   }
 
   /**
+   * Fausse note sur un jet ayant utilisé un ou plusieurs atouts collégiaux : le niveau de l'un d'eux
+   * (au choix des joueurs) baisse d'un niveau, et il est effacé s'il atteint 0.
+   *
+   * @param {Array<{factionId: string, elementId: string}>} factionAtoutsUsed Atouts de faction utilisés pour ce jet
+   * @returns {Promise<void>}
+   */
+  static async _degraderAtoutFaction(factionAtoutsUsed) {
+    if (!factionAtoutsUsed?.length) return
+    if (!game.settings.get(SYSTEM.ID, "utiliserFactions")) return
+
+    const reserveCollegiale = game.settings.get(SYSTEM.ID, "reserveCollegiale")
+    const candidats = factionAtoutsUsed
+      .map(({ factionId, elementId }) => ({ factionId, elementId, atout: reserveCollegiale.factions?.[factionId]?.atouts?.[elementId] }))
+      .filter((candidat) => candidat.atout)
+    if (!candidats.length) return
+
+    let choix = candidats[0]
+    if (candidats.length > 1) {
+      const options = candidats
+        .map(
+          (candidat, index) =>
+            `<label><input type="radio" name="atoutDegrade" value="${index}" ${index === 0 ? "checked" : ""}/> ${candidat.atout.nom} (${reserveCollegiale.factions[candidat.factionId].nom})</label>`,
+        )
+        .join("<br/>")
+      const result = await foundry.applications.api.DialogV2.wait({
+        window: { title: game.i18n.localize("PENOMBRE.Factions.choisirAtoutDegrade") },
+        content: `<div class="form-group">${options}</div>`,
+        rejectClose: false,
+        buttons: [
+          {
+            action: "choisir",
+            label: game.i18n.localize("PENOMBRE.Factions.choisir"),
+            default: true,
+            callback: (evt, button) => Number(new FormData(button.form).get("atoutDegrade")),
+          },
+        ],
+      })
+      if (result === null) return
+      choix = candidats[result]
+    }
+
+    await game.users.activeGM.query("penombre.decrementFactionAtout", { factionId: choix.factionId, elementId: choix.elementId })
+    ui.notifications.info(game.i18n.format("PENOMBRE.Factions.atoutDegrade", { nom: choix.atout.nom, faction: reserveCollegiale.factions[choix.factionId].nom }))
+  }
+
+  /**
    * Relance les résultats de dés spécifiés dans un message de jet Pénombre et met à jour le message.
    *
    * @param {string} messageId L'identifiant du message de chat contenant le jet à relancer.
@@ -919,6 +1040,10 @@ export default class PenombreRoll extends Roll {
             }
             await rerollActor.update({ "system.conscience.jetons": jetons })
           }
+        }
+        // Fausse note sur un jet ayant utilisé un atout collégial : son niveau baisse de 1
+        if (postAnalysis.isDeHarmoniqueMin) {
+          await PenombreRoll._degraderAtoutFaction(roll.options.factionAtoutsUsed)
         }
       }
 

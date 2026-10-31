@@ -158,9 +158,10 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
+      citation: Rien n'entrave ma route ni ne perturbe mon pas. RIEN !
       description: >-
-        <p>Une action impliquant un déplacement impossible (sur l’eau, par
-        exemple) devient possible.</p><p>Une action pour trouver de l’eau, de la
+        <p>Une action impliquant un déplacement impossible (sur l'eau, par
+        exemple) devient possible. Une action pour trouver de l'eau, de la
         nourriture et un abri en milieu naturel devient automatique.</p><p>De
         plus, chaque fois qu’elle réalise une merveille (p. 31 du kit), son
         joueur peut lui choisir un nouveau pouvoir dans la liste suivante, ou
@@ -168,7 +169,6 @@ items:
         conscience.</p><ul><li><p>Musc</p></li><li><p>Empathie
         animale</p></li></ul>
       type: naissance
-      citation: Rien n’entrave ma route ni ne perturbe mon pas. RIEN !
     effects: []
     folder: null
     sort: 0
@@ -293,47 +293,51 @@ items:
     img: systems/penombre/assets/icons/maitrise.webp
     system:
       description: >-
-        <h1>Geysir la brigande</h1><p><strong>Pour préparer son effet magique,
-        Geysir doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>posséder,
-        ou fabriquer, une « penne » animale</strong> indispensable à
-        l’action.Elle peut s’agir des plumes d’une flèche, d’une simple corde en
-        crins, de lanières de cuir, d’une mouche de pêche, d’un grigri en corne,
-        ou en dents, etc.</p><p></p></li></ul><p><strong>Ce faisant,
-        elle…</strong></p><h6>Action magique</h6><ul><li><p><strong>fait corps
-        avec l’Harmonde, qui devient pour elle un terrain de jeu</strong>
-        couvert d’agrès improvisés : les tas de paille se changent en
-        trampolines ; les branches, en barres parallèles ; les lierres, en
-        échelles ; les enseignes, en trapèzes ;
-        etc.</p><p></p></li></ul><p><strong>Avec un effet magique de niveau ?
-        …</strong></p><p><strong>elle parvient par exemple
-        à…</strong></p><ol><li><p><strong>identifier</strong> un effet magique
-        de magie naturelle (brigue, élémentalisme, magie des saisons) ; ralentir
-        une glissade ; se rattraper à une aspérité ; appeler, amadouer, effrayer
-        ou ressentir les émotions d’une bête sauvage ; repérer des traces
-        animales, ou un passage naturel ; devenir plus fort, plus souple, plus
-        habile ; placer une botte secrète ; trouver un point d’eau ;
-        etc.</p></li><li><p><strong>amortir</strong> une chute libre ; escalader
-        comme une araignée ; marcher sur un fil ; parler aux animaux ; dévier
-        les coups ou les flèches à mains nues ; tirer une flèche rebondissante
-        ou à tête chercheuse ; percevoir à travers les sens d’un animal ;
-        etc.</p></li><li><p><strong>se déplacer</strong> d’un bond en un lieu
-        autrement hors de portée ; changer de taille et gagner en assurance ;
-        prendre le contrôle mental d’une bête sauvage ;
-        etc.</p></li><li><p><strong>courir</strong> sur les murs, ou l’eau ;
-        voyager de cime en cime ; laisser une empreinte (silhouette, ou fil de
-        la lame) à peine visible mais qui peut bloquer, ou blesser si on s’y
-        heurte ; effrayer un mortel ; prendre le contrôle mental d’une meute
-        entière ; etc.</p></li><li><p><strong>voler</strong>, ou marcher dans le
-        vide ; esquiver sans donner l’impression de bouger ; créer une empreinte
-        d’un personnage, double réalisant ses propres actions indépendantes ;
-        etc.</p></li></ol><p><strong>Mais attention, il risque également
-        de…</strong></p><h6>Incident magique</h6><ul><li><p><strong>se prendre
-        le mur.</strong> Les observateurs peuvent l’entrevoir comme un champ de
+        <div class="maitrise-carte"><h1 class="maitrise-titre">Geysir la
+        brigande</h1><p class="maitrise-intro">Pour préparer son effet magique,
+        Geysir doit…</p><p class="maitrise-entree"><span
+        class="maitrise-etiquette">Prérequis</span> <strong>posséder, ou
+        fabriquer, une « penne » animale</strong> indispensable à l’action.Elle
+        peut s’agir des plumes d’une flèche, d’une simple corde en crins, de
+        lanières de cuir, d’une mouche de pêche, d’un grigri en corne, ou en
+        dents, etc.</p><p class="maitrise-intro">Ce faisant, elle…</p><p
+        class="maitrise-entree"><span class="maitrise-etiquette">Action
+        magique</span> <strong>fait corps avec l’Harmonde, qui devient pour elle
+        un terrain de jeu</strong> couvert d’agrès improvisés : les tas de
+        paille se changent en trampolines ; les branches, en barres parallèles ;
+        les lierres, en échelles ; les enseignes, en trapèzes ; etc.</p><p
+        class="maitrise-intro">Avec un effet magique de niveau <span
+        class="maitrise-pastille">?</span> …</p><p class="maitrise-intro">elle
+        parvient par exemple à…</p><ol
+        class="maitrise-niveaux"><li><p><strong><em>identifier</em></strong> un
+        effet magique de magie naturelle (brigue, élémentalisme, magie des
+        saisons) ; ralentir une glissade ; se rattraper à une aspérité ;
+        appeler, amadouer, effrayer ou ressentir les émotions d’une bête sauvage
+        ; repérer des traces animales, ou un passage naturel ; devenir plus
+        fort, plus souple, plus habile ; placer une botte secrète ; trouver un
+        point d’eau ; etc.</p></li><li><p><strong><em>amortir</em></strong> une
+        chute libre ; escalader comme une araignée ; marcher sur un fil ; parler
+        aux animaux ; dévier les coups ou les flèches à mains nues ; tirer une
+        flèche rebondissante ou à tête chercheuse ; percevoir à travers les sens
+        d’un animal ; etc.</p></li><li><p><strong><em>se déplacer</em></strong>
+        d’un bond en un lieu autrement hors de portée ; changer de taille et
+        gagner en assurance ; prendre le contrôle mental d’une bête sauvage ;
+        etc.</p></li><li><p><strong><em>courir</em></strong> sur les murs, ou
+        l’eau ; voyager de cime en cime ; laisser une empreinte (silhouette, ou
+        fil de la lame) à peine visible mais qui peut bloquer, ou blesser si on
+        s’y heurte ; effrayer un mortel ; prendre le contrôle mental d’une meute
+        entière ; etc.</p></li><li><p><strong><em>voler</em></strong>, ou
+        marcher dans le vide ; esquiver sans donner l’impression de bouger ;
+        créer une empreinte d’un personnage, double réalisant ses propres
+        actions indépendantes ; etc.</p></li></ol><p class="maitrise-intro">Mais
+        attention, il risque également de…</p><p class="maitrise-entree"><span
+        class="maitrise-etiquette">Incident magique</span> <strong>se prendre le
+        mur.</strong> Les observateurs peuvent l’entrevoir comme un champ de
         force irisé aux motifs impensables qui apparaît soudain dans l’air.
-        Quelle est cette limite immuable ?</p></li><li><p>Geysir est prise d’un
-        vertige tenace ; elle souffre d’une déchirure musculaire, ou d’une
-        luxation ; elle prend soudain conscience de la fragilité de son
-        existence ; etc.</p></li></ul>
+        Quelle est cette limite immuable ?</p><p>Geysir est prise d’un vertige
+        tenace ; elle souffre d’une déchirure musculaire, ou d’une luxation ;
+        elle prend soudain conscience de la fragilité de son existence ;
+        etc.</p></div>
       harmonique: nature
       niveau: 3
       prerequis: tresser des lanières de cuir
@@ -362,12 +366,12 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
+      citation: Tu doutes de moi ? Attends… Laisse-moi m'ébrouer…
       description: >-
-        <p>Le temps d’une scène, Geysir émet des phéromones augmentant de 1 le
+        <p>Le temps d'une scène, Geysir émet des phéromones augmentant de 1 le
         nombre de succès de toutes ses actions pour convaincre, séduire ou
         dominer.</p>
-      type: naissance
-      citation: Tu doutes de moi ? Attends… Laisse-moi m’ébrouer…
+      type: peuple
     effects: []
     folder: null
     sort: 0
@@ -392,15 +396,15 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
-      description: >-
-        <p>Le temps d’une scène, un animal sous le contrôle du psycholune fait
-        confiance à Geysir. Il n’est pas agressif, une conversation sommaire
-        peut avoir lieu, et il peut recevoir un ordre simple à exécuter sans
-        délai. Cela ne peut pas le mettre en danger.</p>
-      type: naissance
       citation: >-
         Les animaux alentour ne sont ni une menace, ni insignifiants : ils sont
         la harde.
+      description: >-
+        <p>Le temps d'une scène, un animal sous le contrôle du Psycholune fait
+        confiance à Geysir. Il n'est pas agressif, une conversation sommaire
+        peut avoir lieu, et il peut recevoir un ordre simple qu'il exécute sans
+        délai. Cela ne peut pas le mettre en danger.</p>
+      type: peuple
     effects: []
     folder: null
     sort: 0

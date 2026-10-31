@@ -159,18 +159,18 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
+      citation: Ma conscience s'ébroue et se répand, à tâtons puis de plus en plus vite.
       description: >-
-        <p>Le temps d’une scène, Pictelle projette sa forme astrale hors de son
+        <p>Le temps d'une scène, Pictelle projette sa forme astrale hors de son
         corps, inerte le temps de la projection. Ce spectre immatériel peut
-        franchir murs et barreaux. Son rayon d’action est d’environ un bâtiment.
-        Lorsque Pictelle annule sa projection, le nombre de succès de toutes ses
-        actions d’esprit et d’âme diminue de 1 jusqu’au prochain repos.</p><p>De
+        franchir murs et barreaux. Son rayon d'action est d'environ un bâtiment.
+        Lorsqu'elle annule sa projection, le nombre de succès de toutes ses
+        actions d'esprit et d'âme diminue de 1 jusqu'au prochain repos.</p><p>De
         plus, chaque fois qu’elle réalise une merveille (p. 31 du kit), son
         joueur peut lui choisir un nouveau pouvoir dans la liste suivante, ou
         augmenter de 1 sa valeur de conscience.</p><ul><li><p>Corps
         astral</p></li><li><p>Des souvenirs en commun</p></li></ul>
       type: naissance
-      citation: Ma conscience s’ébroue et se répand, à tâtons puis de plus en plus vite.
     effects: []
     folder: null
     sort: 0
@@ -194,14 +194,14 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
-      description: >-
-        <p>Lors d’une projection astrale, le spectre immatériel de Pictelle agit
-        physiquement, comme s’il était matériel, et peut par exemple manipuler
-        des objets. Dans ce cas, le spectre ne peut plus agir de manière
-        immatérielle (retraverser les murs, etc.) jusqu’à la fin de la
-        projection.</p>
-      type: naissance
       citation: Je la découvre enfin, cette femme au corps souple et laiteux.
+      description: >-
+        <p>Lors d'une projection astrale, le spectre immatériel de Pictelle agit
+        physiquement, comme s'il était matériel, et peut par exemple manipuler
+        des objets. Dans ce cas, le spectre ne peut plus agir de manière
+        immatérielle (retraverser les murs, etc.) jusqu'à la fin de la
+        projection.</p>
+      type: peuple
     effects: []
     folder: null
     sort: 0
@@ -225,12 +225,12 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
-      description: >-
-        <p>Le temps d’une action, Pictelle laisse un autre personnage proche
-        utiliser un de ses atouts, ou se sert de l’un des siens. Chacun lit un
-        souvenir dans la mémoire de l’autre.</p>
-      type: naissance
       citation: Nos esprits sont connectés, il nous suffit de lire en eux.
+      description: >-
+        <p>Le temps d'une action, Pictelle laisse un autre personnage proche
+        utiliser un de ses atouts, ou se sert de l'un des siens. Chacun lit un
+        souvenir dans la mémoire de l'autre.</p>
+      type: peuple
     effects: []
     folder: null
     sort: 0
@@ -374,53 +374,58 @@ items:
     img: systems/penombre/assets/icons/maitrise.webp
     system:
       description: >-
-        <h1>Pictelle l’élémentaliste</h1><p><strong>Pour préparer son effet
-        magique, Pictelle
-        doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>faire naître des
+        <div class="maitrise-carte"><h1 class="maitrise-titre">Pictelle
+        l’élémentaliste</h1><p class="maitrise-intro">Pour préparer son effet
+        magique, Pictelle doit…</p><p class="maitrise-entree"><span
+        class="maitrise-etiquette">Prérequis</span> <strong>faire naître des
         éléments présents dans le décor, ou libérer de son contenant, une
         créature élémentaire</strong> primitive nommée élémentä – un homoncule
-        fortement teinté par son matériau d’origine.</p></li></ul><p><strong>Ce
-        faisant, elle…</strong></p><h6>Action
-        magique</h6><ul><li><p><strong>utilise l’élémentä</strong> en
-        l’effritant, le dispersant, le façonnant ou le consommant comme une
-        drogue afin d’en tirer des informations, archiver des connaissances
-        cryptées, s’approprier son énergie élémentaire ou la projeter
-        magiquement.</p></li></ul><p><strong>Avec un effet magique de niveau ?
-        …</strong></p><p><strong>elle parvient par exemple
-        à…</strong></p><ol><li><p><strong>identifier</strong> un effet magique
-        de magie naturelle (brigue, élémentalisme, magie des saisons) ;
-        ressentir l’émotion de la matière ; confier à la matière un mot à
-        répéter ; faire se déplacer une pierre ; améliorer n’importe quelle
-        capacité physique ou mentale ; etc.</p></li><li><p><strong>obtenir des
-        informations grossières</strong> mémorisées par la matière comme avec un
-        jeune enfant ; confier à la matière un long message à répéter ;
-        transmuter une matière en une autre, sans en changer l’état liquide,
-        solide, ou gazeux (affûter ou émousser une lame, souder deux métaux,
-        rendre l’air irrespirable, changer l’eau en alcool …) ; contrôler les
-        mouvements d’un feu, de l’eau, du vent, ou un soubresaut tellurique ;
-        devenir brûlant, ou glacé ; etc.</p></li><li><p><strong>obtenir des
-        informations précises</strong> mémorisées par la matière ; envoyer un
-        messager élémentaire parler à un personnage ; se rendre insensible à un
-        élément, ou utiliser un élément comme protection ; remodeler et façonner
-        la matière, modifier sa forme, son état et sa densité (liquéfier un
-        rocher, s’armer d’une lame de feu, animer une statue, etc.) ;
-        etc.</p></li><li><p><strong>se dissimuler</strong> dans un élément, et
-        voyager au travers ; ccomplir des prouesses physiques impossibles ;
-        augmenter ou diminuer la quantité d’un matériau ; transmuter
-        temporairement son corps en feu, en eau ;
-        etc.</p></li><li><p><strong>coder</strong> un livre entier dans une
-        flamme ou une goutte d’eau ; transmuter entièrement un élément en un
+        fortement teinté par son matériau d’origine.</p><p
+        class="maitrise-intro">Ce faisant, elle…</p><p
+        class="maitrise-entree"><span class="maitrise-etiquette">Action
+        magique</span> <strong>utilise l’élémentä</strong> en l’effritant, le
+        dispersant, le façonnant ou le consommant comme une drogue afin d’en
+        tirer des informations, archiver des connaissances cryptées,
+        s’approprier son énergie élémentaire ou la projeter magiquement.</p><p
+        class="maitrise-intro">Avec un effet magique de niveau <span
+        class="maitrise-pastille">?</span> …</p><p class="maitrise-intro">elle
+        parvient par exemple à…</p><ol
+        class="maitrise-niveaux"><li><p><strong><em>identifier</em></strong> un
+        effet magique de magie naturelle (brigue, élémentalisme, magie des
+        saisons) ; ressentir l’émotion de la matière ; confier à la matière un
+        mot à répéter ; faire se déplacer une pierre ; améliorer n’importe
+        quelle capacité physique ou mentale ;
+        etc.</p></li><li><p><strong><em>obtenir des informations
+        grossières</em></strong> mémorisées par la matière comme avec un jeune
+        enfant ; confier à la matière un long message à répéter ; transmuter une
+        matière en une autre, sans en changer l’état liquide, solide, ou gazeux
+        (affûter ou émousser une lame, souder deux métaux, rendre l’air
+        irrespirable, changer l’eau en alcool …) ; contrôler les mouvements d’un
+        feu, de l’eau, du vent, ou un soubresaut tellurique ; devenir brûlant,
+        ou glacé ; etc.</p></li><li><p><strong><em>obtenir des informations
+        précises</em></strong> mémorisées par la matière ; envoyer un messager
+        élémentaire parler à un personnage ; se rendre insensible à un élément,
+        ou utiliser un élément comme protection ; remodeler et façonner la
+        matière, modifier sa forme, son état et sa densité (liquéfier un rocher,
+        s’armer d’une lame de feu, animer une statue, etc.) ;
+        etc.</p></li><li><p><strong><em>se dissimuler</em></strong> dans un
+        élément, et voyager au travers ; ccomplir des prouesses physiques
+        impossibles ; augmenter ou diminuer la quantité d’un matériau ;
+        transmuter temporairement son corps en feu, en eau ;
+        etc.</p></li><li><p><strong><em>coder</em></strong> un livre entier dans
+        une flamme ou une goutte d’eau ; transmuter entièrement un élément en un
         autre (l’eau en feu…) ; changer définitivement un mortel en golem
-        élémentaire ; etc.</p></li></ol><p><strong>Mais attention, elle risque
-        également de…</strong></p><h6>Incident magique</h6><ul><li><p><strong>se
-        brûler les ailes.</strong> Elle note une complication de niveau 3
-        correspondant à un épuisement physique ou mental, une grave brûlure, un
-        étouffement, une déshydratation sévère,
-        etc.</p></li></ul><p>OU</p><h6>Incident
-        magique</h6><ul><li><p><strong>se laisser submerger.</strong> L’élémentä
-        se retourne contre elle, à moins que des scories s’incarnent dans un
-        esprit frappeur. La créature est un opposant de difficulté égale au
-        nombre de succès obtenus sur l’action de maîtrise magique.</p></li></ul>
+        élémentaire ; etc.</p></li></ol><p class="maitrise-intro">Mais
+        attention, elle risque également de…</p><p class="maitrise-entree"><span
+        class="maitrise-etiquette">Incident magique</span> <strong>se brûler les
+        ailes.</strong> Elle note une complication de niveau 3 correspondant à
+        un épuisement physique ou mental, une grave brûlure, un étouffement, une
+        déshydratation sévère, etc.</p><p>OU</p><p class="maitrise-entree"><span
+        class="maitrise-etiquette">Incident magique</span> <strong>se laisser
+        submerger.</strong> L’élémentä se retourne contre elle, à moins que des
+        scories s’incarnent dans un esprit frappeur. La créature est un opposant
+        de difficulté égale au nombre de succès obtenus sur l’action de maîtrise
+        magique.</p></div>
       harmonique: nature
       niveau: 3
       prerequis: consommer un élémentä

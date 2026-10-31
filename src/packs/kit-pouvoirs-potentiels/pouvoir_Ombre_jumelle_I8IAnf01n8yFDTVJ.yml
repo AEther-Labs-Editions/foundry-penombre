@@ -3,12 +3,12 @@ name: Ombre jumelle
 img: systems/penombre/assets/icons/pouvoir.webp
 system:
   utilise: false
+  citation: Alors c'est moi… sans être moi.
   description: >-
-    <h1>Ombre jumelle</h1><p><em>Alors c’est moi… sans être
-    moi.</em></p><p>Jusqu’à la fin du tour, faites agir l’ombre d’Esmeralda
-    comme si elle était un double de cette dernière. Ses actions, autonomes, ne
-    comptent pas comme celles d’Esmeralda.</p>
-  type: naissance
+    <p>Jusqu'à la fin du tour, faites agir l'ombre d'Esmeralda comme si elle
+    était un double de cette dernière. Ses actions, autonomes, ne comptent pas
+    comme celles d'Esmeralda.</p>
+  type: cle
 effects: []
 folder: WiYkAwp3Zlbrgg5T
 ownership:

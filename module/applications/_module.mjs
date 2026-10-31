@@ -5,6 +5,7 @@ export { default as MaitriseSheet } from "./sheets/maitrise-sheet.mjs"
 
 export { default as PenombreReserveCollegiale } from "./reserve-collegiale.mjs"
 export { default as PenombreGroupManager } from "./group-manager.mjs"
+export { default as PenombreRappelRegles } from "./rappel-regles.mjs"
 
 export { default as AdversaireSheet } from "./sheets/adversaire-sheet.mjs"
 export { default as ActionSheet } from "./sheets/action-sheet.mjs"

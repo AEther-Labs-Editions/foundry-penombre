@@ -4,17 +4,18 @@ _id: YpPKcuI0Zi1WcmME
 img: systems/penombre/assets/icons/pouvoir.webp
 system:
   utilise: false
+  citation: >-
+    D'une caresse mentale, j'ordonne à un de mes serpents de distiller son
+    venin.
   description: >-
-    <p><em>D’une caresse mentale, j’ordonne à l’un de mes serpents de distiller
-    son venin.</em></p><p>À l’acquisition de ce pouvoir, choisissez une
-    harmonique.</p><p>En une action, Céliana récolte un venin à consommer plus
-    tard, ou tente de l’inoculer par morsure (action de nature). Jusqu’à la fin
-    de la scène, au choix :</p><ul><li><p>Le nombre de succès des actions en
-    lien avec l’harmonique choisie et réalisées par l’envenimé augmente ou
-    diminue de 1.</p></li><li><p>Les difficultés opposées par l’envenimé
-    augmentent ou diminuent de 1.</p></li></ul><p>Par ailleurs, tous les venins
-    alchimiques peuvent servir d’encres</p><p>de conjuration.</p>
-  type: naissance
+    <p>À l'acquisition de ce pouvoir, choisissez une harmonique. En une action,
+    Céliana récolte un venin à consommer plus tard, ou tente de l'inoculer par
+    morsure (action de nature). Jusqu'à la fin de la scène, au choix : • Le
+    nombre de succès des actions en lien avec l'harmonique choisie et réalisées
+    par l'envenimé augmente ou diminue de 1. • Les difficultés opposées par
+    l'envenimé augmentent ou diminuent de 1. Par ailleurs, tous les venins
+    alchimiques peuvent servir d'encres de conjuration.</p>
+  type: peuple
 effects: []
 folder: NxgKbO9Dq94f1TSA
 sort: 150000

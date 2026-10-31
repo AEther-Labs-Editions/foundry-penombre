@@ -1,13 +1,11 @@
 type: pouvoir
-name: Homochromie
+name: Homochromie aubéronne
 img: systems/penombre/assets/icons/pouvoir.webp
 system:
   utilise: false
-  description: >-
-    <h1>Homochromie</h1><p><em>Le mimétisme. L’art de disparaître et de se
-    confondre avec le décor.</em></p><p>Une action de camouflage de Noh devient
-    automatique.</p>
-  type: naissance
+  citation: Le mimétisme. L'art de disparaître et de se confondre avec le décor.
+  description: <p>Une action de camouflage de Noh devient automatique.</p>
+  type: gamme
 effects: []
 folder: aPmTjs8cZsnuZFqA
 flags: {}

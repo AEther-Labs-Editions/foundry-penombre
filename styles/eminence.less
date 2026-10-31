@@ -8,8 +8,42 @@ body {
       &.eminence {
         .eminence-content {
           background-color: @background-light; // Si et seulement si on est en mode clair (et pas sombre) de la fiche
-          background-image: url("/systems/penombre/assets/background/fond.webp");
-          background-repeat: repeat;
+
+          // Chaque bloc reprend le parchemin du bloc correspondant de la fiche du livre (ton, taches, ornements discrets
+          // comme les volutes en haut à gauche de Pouvoirs, Atouts et Maîtrises). Harmoniques garde le fond uni de la fiche
+          // avec son ornement net, plus lisible que celui récupéré sur le livre
+          .eminence-personnage { .fond-bloc(personnage); }
+          .eminence-conscience { .fond-bloc(conscience); }
+          // Harmoniques : pas d'image de fond, mais le ton crème pâle du bloc dans le livre (sous l'ornement et le filet)
+          .eminence-harmoniques { background-color: #fbf3de; }
+          .eminence-timbre { .fond-bloc(timbre); }
+          .eminence-pouvoirs { .fond-bloc-orne(pouvoirs; 222px); }
+          .eminence-atouts { .fond-bloc-orne(atouts; 135px); }
+          .eminence-maitrises { .fond-bloc-orne(maitrises; 135px); }
+          .eminence-recapitulatif { .fond-bloc(recapitulatif); }
+
+          // Couleurs relevées sur la fiche du livre (médiane des tracés) : titres presque noirs, « Potentiel » brun-rouge foncé.
+          // En thème clair seulement : sur fond sombre, elles seraient illisibles
+          .titre-section-pouvoirs,
+          .titre-section-atouts,
+          .titre-section-maitrises {
+            color: #1b1a1a;
+          }
+
+          .eminence-pouvoirs,
+          .eminence-atouts,
+          .eminence-maitrises {
+            .content .potentiel .div-potentiel span {
+              color: #683323;
+            }
+          }
+
+          // Comme sur la fiche du livre, l'ornement du parchemin derrière les dés d'harmoniques
+          .harmoniques-grille {
+            // Corps de l'ornement calé sur celui du livre (247 × 382 px centré en 413 × 272 dans le bloc), ramené à la section
+            // comme les dés : 225 px de haut, centré en 227 × 160 px dans la zone des dés
+            background: url("/systems/penombre/assets/ui/fiche-ornement-harmoniques.webp") 127px 34px / auto 246px no-repeat; // 20 px à gauche, comme les dés
+          }
 
           // Section timbre
           .eminence-timbre {
@@ -35,7 +69,7 @@ body {
 
               .col-2-2 {
                 margin-top: 30px;
-                width: 101px;
+                width: 115px;
                 display: grid;
                 grid-template-columns: 20px minmax(0, 1fr);
 
@@ -43,9 +77,11 @@ body {
                   width: 20px;
                 }
 
+                // Harmonieux, Faux, Dissonant
                 span {
                   margin-left: 0;
                   width: auto;
+                  font-size: 20px;
                 }
               }
 
@@ -94,6 +130,12 @@ body {
 
           .frise-penombre {
             content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.webp");
+          }
+
+          // Valeurs de conscience et texte des complications lisibles sur fond sombre
+          .ligne-conscience .rond-valeur,
+          .eminence-conscience .cadre-complications .ligne-complication .div-descriptions .form-fields {
+            color: @background-light;
           }
         }
 
@@ -178,10 +220,32 @@ body {
     .eminence-timbre.avance {
       .datas-timbre {
         .label-timbre {
+          align-items: center;
+          gap: 6px;
+          margin-bottom: 6px; // Les portées et les notes descendent d'autant
+          font-size: @font-size-midlarge;
           color: @color-secondary;
+
+          // Volutes de part et d'autre, comme « ~ Timbre ~ » sur la fiche du livre
+          &::before,
+          &::after {
+            content: "";
+            width: 28px;
+            height: 14px;
+            background: center / contain no-repeat;
+          }
+
+          &::before {
+            background-image: url("/systems/penombre/assets/ui/fiche-titre-volute-gauche.webp");
+          }
+
+          &::after {
+            background-image: url("/systems/penombre/assets/ui/fiche-titre-volute-droite.webp");
+          }
         }
 
         .label-peste {
+          font-size: @font-size-midlarge;
           color: @color-accent;
         }
 
@@ -271,7 +335,7 @@ body {
         .col-2-2 {
           grid-column: 2;
           margin-top: 30px;
-          width: 101px;
+          width: 115px;
           display: grid;
           grid-template-columns: 20px minmax(0, 1fr);
 
@@ -279,9 +343,11 @@ body {
             width: 20px;
           }
 
+          // Harmonieux, Faux, Dissonant
           span {
             margin-left: 0;
             width: auto;
+            font-size: 20px;
           }
 
           .statut-timbre-case {
@@ -330,29 +396,66 @@ body {
       width: 450px;
     }
 
+    // Filet triple de la fiche du livre entre les deux colonnes ; les filets des sections viennent s'y raccorder
     .col-2 {
-      flex: 0 0 23px;
-      width: 23px;
-      padding: 0 3px;
-      display: flex;
-      flex-direction: column;
+      flex: 0 0 @fiche-filet-largeur;
+      width: @fiche-filet-largeur;
+      background: url("/systems/penombre/assets/ui/fiche-filet-vertical.webp") center top / @fiche-filet-largeur auto repeat-y;
+    }
 
-      .grande-frise-verticale-1,
-      .grande-frise-verticale-2,
-      .grande-frise-verticale-3,
-      .grande-frise-verticale-4,
-      .grande-frise-verticale-5 {
-        // Base en px : avec "flex: 1" (0%), la base se calcule sur la hauteur des images et la frise impose ~1250px à la fiche
-        flex: 1 1 0px;
-        min-height: 0;
-        overflow: hidden;
+    // La dernière section de chaque colonne n'a pas de filet en dessous
+    .col-1 > :last-child,
+    .col-3 > :last-child {
+      padding-bottom: 2px;
+      background: none;
+    }
 
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: fill;
-        }
-      }
+    // Ornements aux jonctions des filets, découpés dans la fiche du livre et réduits à la même échelle que les filets.
+    // Colonne gauche : nœud en losange sous Personnage, volutes en haut et en bas d'Harmoniques, rosace sous Harmoniques.
+    // Colonne droite : jonction ornée sous le Timbre. Les autres jonctions restent de simples raccords en T.
+    .eminence-personnage::after,
+    .eminence-harmoniques::after,
+    .eminence-harmoniques::before,
+    .eminence-timbre::after {
+      content: "";
+      position: absolute;
+      z-index: 6;
+      pointer-events: none;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    // Nœuds sans bras vers la colonne de droite : sur la fiche du livre ce sont des croix, ici des raccords en T
+    .eminence-personnage::after {
+      right: -17px;
+      bottom: -9px;
+      width: 28px;
+      height: 34px;
+      background-image: url("/systems/penombre/assets/ui/fiche-noeud-losange.webp");
+    }
+
+    .eminence-harmoniques::before {
+      inset: -1px 0 14px auto;
+      width: 70px;
+      background:
+        url("/systems/penombre/assets/ui/fiche-volutes-bas.webp") right top / 55px auto no-repeat,
+        url("/systems/penombre/assets/ui/fiche-volutes-haut.webp") right bottom / 70px auto no-repeat;
+    }
+
+    .eminence-harmoniques::after {
+      right: -18px;
+      bottom: -12px;
+      width: 30px;
+      height: 40px;
+      background-image: url("/systems/penombre/assets/ui/fiche-noeud-rosace.webp");
+    }
+
+    .eminence-timbre::after {
+      left: -25px;
+      bottom: -38px;
+      width: 55px;
+      height: 91px;
+      background-image: url("/systems/penombre/assets/ui/fiche-croisement-timbre.webp");
     }
 
     .col-3 {
@@ -402,7 +505,7 @@ body {
 
     .eminence-timbre {
       .section-style(635px);
-      border: none;
+      padding-bottom: @fiche-filet-hauteur + 8px; // Un peu d'espace entre la première note et le filet
     }
 
     // Police des textes verticaux
@@ -410,7 +513,8 @@ body {
     .text-vertical-harmoniques,
     .text-vertical-conscience {
       letter-spacing: 5px;
-      font-size: @font-size-middle;
+      font-size: 23px;
+      line-height: 1; // Tient dans la colonne de 25 px
       writing-mode: vertical-rl;
       text-orientation: sideways-left;
     }
@@ -458,6 +562,7 @@ body {
         grid-column: 2;
         width: auto;
         min-width: 0;
+        padding-right: 10px; // Les valeurs ne collent pas au filet vertical
 
         .name {
           font-size: @font-size-2xlarge;
@@ -475,14 +580,38 @@ body {
           color: @color-blue;
           text-align: center;
         }
+
+        // Libellés Peuple, Clé, Gamme, Ton comme sur la fiche du livre (Adobe Jenson Pro, remplacée par Goudy Bookletter 1911) ;
+        // 22 px redonnaient la hauteur de capitale du livre, réduits à 20 px à la demande
+        // Valeurs (Satyre, Nuit…) : lettres un peu espacées, plus lisibles dans cette police serrée
+        .form-group .form-fields {
+          letter-spacing: 1px;
+        }
+
+        .form-group label {
+          font-family: @font-goudy, var(--font-serif);
+          font-size: 20px;
+          font-weight: normal;
+          color: #612b21; // Libellés de la fiche du livre
+        }
       }
+    }
+
+    // Comme sur la fiche du livre : libellé vertical centré, frise sur toute la hauteur de la section
+    .eminence-personnage {
+      .frise-section(marron);
+    }
+
+    .eminence-conscience {
+      .frise-section(doree);
     }
 
     .eminence-harmoniques {
       box-sizing: border-box;
-      // La bordure est rasterisée sur le pixel extérieur par Chromium : 324px CSS conserve les 325px de la référence.
-      height: 324px;
-      min-height: 324px;
+      .frise-section(grise);
+      // Proportions de la fiche du livre (bloc de 594 px à l'échelle 0,68), resserrées en hauteur : ~350 px de contenu + marges et filet
+      height: 370px;
+      min-height: 370px;
     }
 
     .eminence-conscience-locked {
@@ -494,18 +623,36 @@ body {
           .ligne-conscience {
             display: flex;
             align-items: center;
-            align-content: center;
-            margin-left: 20px;
-            height: 32px;
-            label {
-              font-family: @font-cattedrale;
-              display: inline-block;
-              width: 120px;
-              font-weight: bold;
+            justify-content: space-around;
+            margin: 6px 0 0;
+
+            .rond-conscience {
+              display: flex;
+              align-items: center;
+              gap: 6px;
             }
-            span {
-              margin: 0 5px;
-              width: 50px;
+
+            .rond-valeur {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              box-sizing: border-box;
+              width: 42px;
+              height: 42px;
+              // Les chiffres de cette police sont décalés d'environ 5,5 px vers la droite dans leur chasse à 29 px (mesuré
+              // dans Chromium sur 0, 5, 7 et 12) : la marge droite les ramène au centre du cercle
+              padding-right: 11px;
+              background: url("/systems/penombre/assets/ui/fiche-cercle.webp") center / contain no-repeat;
+              font-family: @font-chocolate;
+              font-size: @font-size-large;
+              line-height: 1;
+              color: @color-secondary;
+            }
+
+            label {
+              font-family: @font-chocolate;
+              font-size: @font-size-midlarge;
+              color: @color-accent;
             }
           }
         }
@@ -536,7 +683,11 @@ body {
           }
         }
 
+        // Jetons réduits de 20 % et centrés dans leur colonne
         .jeton {
+          width: 80%;
+          justify-self: center;
+          align-self: center;
           text-align: center;
         }
       }
@@ -597,6 +748,7 @@ body {
 
         .ligne-complication {
           display: flex;
+          align-items: center;
 
           .div-descriptions-2 {
             input {
@@ -604,8 +756,17 @@ body {
             }
           }
 
+          // Texte lisible en lecture : police à empattements des libellés (au lieu de la gothique dorée), aligné à gauche
           .div-descriptions {
             width: 320px;
+
+            .form-fields {
+              justify-content: flex-start;
+              text-align: left;
+              font-family: @font-goudy, var(--font-serif);
+              font-size: 19px;
+              color: #3b2b20;
+            }
           }
 
           // Cases à cocher
@@ -628,18 +789,32 @@ body {
         }
       }
 
+      // Titre « Complications » de la fiche du livre : gothique, gris, aligné à droite au-dessus des cases
+      .titre-complications {
+        width: @frame-width;
+        margin: 6px 0 2px;
+        text-align: right;
+        font-family: @font-chocolate;
+        font-size: @font-size-large;
+        line-height: 1;
+        color: @color-secondary;
+      }
+
+      // Police à empattements comme sur la fiche du livre : la police gothique de la fiche était peu lisible à cette taille
       .note-jetons {
+        margin-top: 2px;
         text-align: center;
+        font-family: var(--font-serif);
+        font-size: @font-size-base;
         color: @color-secondary;
       }
     }
 
-    // Section harmoniques : grille de 2 colonnes (+ une harmonique centrée). Chaque .harmonique (case, dé, nom)
-    // se place avec data-colonne, --rangee et --decalage, fournis par SYSTEM.HARMONIQUES_FICHE
+    // Section harmoniques : disposition de la fiche du livre. Chaque .harmonique (case, dé, nom dessous) est placée
+    // en absolu avec --x et --y, fournis par SYSTEM.HARMONIQUES_FICHE ; Étincelle chevauche la deuxième rangée
     .eminence-harmoniques {
       --taille-de: @case-size;
       --taille-nom: @font-size-xlarge;
-      --ecart-colonnes: 32px;
       color: @color-secondary;
 
       .click:hover {
@@ -649,34 +824,20 @@ body {
       }
 
       .harmoniques-grille {
-        display: grid;
-        grid-template-columns: max-content max-content;
-        column-gap: var(--ecart-colonnes);
-        justify-content: start;
-        width: 405px;
+        position: relative;
+        width: 404px;
+        height: 100%;
         background: var(--table-background-color); // Panneau que Foundry peignait sous l'ancien <table>
       }
 
       .harmonique {
-        grid-row: var(--rangee);
-        justify-self: start; // Largeur du contenu, pas de la colonne
+        position: absolute;
+        left: var(--x);
+        top: var(--y);
+        width: var(--taille-de);
         display: flex;
-        gap: 3px; // Espace entre la case et le nom
-        padding: 8px 16px;
-
-        &[data-colonne="gauche"] {
-          grid-column: 1;
-        }
-
-        &[data-colonne="droite"] {
-          grid-column: 2;
-        }
-
-        // Centrée sous les deux colonnes, retrait d'un écart de colonnes
-        &[data-colonne="centre"] {
-          grid-column: 1 / -1;
-          margin-left: var(--ecart-colonnes);
-        }
+        flex-direction: column;
+        align-items: center; // Nom centré sous le dé, même s'il est plus large que lui
       }
 
       // Case, dé (ou sélecteur en édition) empilés dans la même cellule
@@ -687,7 +848,6 @@ body {
         flex: none;
         width: var(--taille-de);
         height: var(--taille-de);
-        margin-left: var(--decalage);
 
         > * {
           grid-area: 1 / 1;
@@ -714,7 +874,10 @@ body {
       }
 
       .harmonique-nom {
+        margin-top: 0;
         font-size: var(--taille-nom);
+        line-height: 1;
+        white-space: nowrap;
       }
     }
 
@@ -722,18 +885,56 @@ body {
     .eminence-pouvoirs {
       .item-section-base(pouvoirs);
 
+      // Liste sur deux colonnes remplies de haut en bas ; dans chaque ligne, le nom prend toute la place laissée par
+      // la case, le type et les boutons, et passe à la ligne s'il est trop long
       .content .pouvoirs {
-        .item-table-base();
         grid-column: 2;
         width: 100%;
         min-width: 0;
-        margin-left: 0;
+        padding: 2px;
 
-        .item-coche {
-          width: 55px;
+        .liste-pouvoirs {
+          position: relative;
+          columns: 2;
+          column-gap: 18px;
+          text-align: left;
+
+          // Séparateur vertical entre les deux colonnes, comme celui des atouts sur la fiche du livre
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: calc(50% - 4px);
+            width: 8px;
+            box-sizing: border-box;
+            pointer-events: none;
+            .frise-verticale-fond(grise; 8px);
+          }
+        }
+
+        .ligne-pouvoir {
+          break-inside: avoid;
+          display: grid;
+          grid-template-columns: @small-case-size minmax(0, 1fr) auto auto;
+          align-items: center;
+          column-gap: 8px;
+          padding-block: @item-row-padding;
+          font-family: @font-chocolate;
+          font-size: @font-size-midlarge;
+          line-height: 1.15;
+        }
+
+        // Coupure entre les mots ; au milieu d'un mot seulement s'il ne tient pas seul.
+        // Léger contour comme pour les noms des maîtrises, et lettres très légèrement espacées
+        .item-name {
+          overflow-wrap: break-word;
+          -webkit-text-stroke: 0.6px currentColor;
+          letter-spacing: 0.5px;
         }
 
         .item-case {
+          display: block;
           width: @small-case-size;
           height: @small-case-size;
           &:hover {
@@ -741,15 +942,23 @@ body {
           }
         }
 
-        .ligne-pouvoir {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
+        .item-controls {
+          .item-controls-style();
+          width: auto;
+          padding-right: 0;
         }
       }
     }
 
     // Section Atouts
+    // Atouts et Maîtrises : médaillon Potentiel (image et valeur) remonté vers le titre, comme sur la fiche du livre
+    .eminence-atouts,
+    .eminence-maitrises {
+      .content .potentiel {
+        margin-top: -20px;
+      }
+    }
+
     .eminence-atouts {
       .item-section-base(atouts);
 
@@ -760,9 +969,11 @@ body {
         min-width: 0;
         margin-left: 0;
 
+        // Colonne de valeur réduite à la largeur des 3 cubes : pas d'espace perdu à leur droite
         th.item-case-width,
         td.item-case-width {
-          width: 100px;
+          width: 1%;
+          padding-inline: 6px 4px;
         }
 
         .item-case {
@@ -770,10 +981,25 @@ body {
           height: @small-case-size;
         }
 
+        // Cellule de tableau centrée en hauteur (pas flex : sinon les boutons d'action passent sous les cubes en mode édition) ;
+        // les 3 cubes restent côte à côte dans leur groupe en ligne
         td.item-case-width {
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          vertical-align: middle;
+          text-align: center;
+
+          .cases-atout {
+            display: inline-flex;
+            align-items: center;
+            gap: 1px;
+            vertical-align: middle;
+
+            // Taille fixe : la colonne réduite au minimum ne doit pas écraser les cubes
+            .item-case {
+              flex: none;
+              width: @small-case-size;
+              height: @small-case-size;
+            }
+          }
         }
       }
     }
@@ -793,22 +1019,47 @@ body {
         td.harmonique-width {
           width: 70px;
         }
+
+        // Nom de la maîtrise en gras, renforcé d'un léger contour (la police est déjà une graisse forte)
+        .item-name {
+          font-weight: bold;
+          -webkit-text-stroke: 0.6px currentColor;
+        }
+
+        // Niveau dans le cercle doré de la fiche du livre (celui des valeurs de conscience), à la taille d'une ligne.
+        // Les chiffres de la police sont décalés de ~3,5 px vers la droite à 22 px (mesuré) : la marge droite les recentre
+        .item-niveau {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          box-sizing: border-box;
+          width: 32px;
+          height: 32px;
+          padding-right: 7px;
+          vertical-align: middle;
+          background: url("/systems/penombre/assets/ui/fiche-cercle.webp") center / contain no-repeat;
+          font-family: @font-chocolate;
+          font-size: 22px;
+          line-height: 1;
+        }
       }
     }
 
     .eminence-recapitulatif {
       margin-top: 10px;
-      width: 633px;
       color: @color-secondary;
       text-align: center;
 
+      // Les deux tableaux du rappel de règles, à leur taille d'origine (477 et 123 px), centrés dans la section
       .content {
         .tableau {
-          display: grid;
-          grid-template-columns: 477px minmax(0, 1fr);
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          column-gap: 33px;
 
           .div-gauche {
-            grid-column: 1;
+            flex: none;
             width: 477px;
 
             .img-gauche {
@@ -818,10 +1069,8 @@ body {
           }
 
           .div-droite {
-            grid-column: 2;
-            margin-left: 0;
-            width: auto;
-            padding-left: 33px;
+            flex: none;
+            width: 123px;
 
             .img-droite {
               border-top-right-radius: @border-radius-small;

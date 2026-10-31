@@ -4,12 +4,12 @@ _id: za6gYQ02DMhFCD6S
 img: systems/penombre/assets/icons/pouvoir.webp
 system:
   utilise: false
+  citation: Nos esprits sont connectés, il nous suffit de lire en eux.
   description: >-
-    <h1>Des souvenirs en commun</h1><p><em>Nos esprits sont connectés, il nous
-    suffit de lire en eux.</em></p><p>Le temps d’une action, Rio Rim laisse un
-    autre personnage proche utiliser un de ses atouts, ou se sert de l’un des
-    siens. Chacun lit un souvenir dans la mémoire de l’autre.</p>
-  type: naissance
+    <p>Le temps d'une action, Rio Rim laisse un autre personnage proche utiliser
+    un de ses atouts, ou se sert de l'un des siens. Chacun lit un souvenir dans
+    la mémoire de l'autre.</p>
+  type: peuple
 effects: []
 folder: qVct9xQnKUe30M0h
 sort: 200000

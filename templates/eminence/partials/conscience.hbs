@@ -1,9 +1,7 @@
 {{!log "conscience" this}}
 <div class="eminence-conscience eminence-conscience-{{#if locked}}locked{{else}}unlocked{{/if}} flexible">
   <div class="col-1-1 text-vertical-conscience">{{localize "PENOMBRE.ui.section.conscience"}}</div>
-  <div class="col-2-1 frise-verticale">
-    <img class="" src="systems/penombre/assets/ui/doree.webp" alt="" />
-  </div>
+  <div class="col-2-1 frise-verticale"></div>
   <div class="col-3-1 flexible">
     <div class="col-1-3">
 
@@ -11,8 +9,11 @@
       {{#if unlocked}}       
           {{formGroup systemFields.conscience.fields.max value=systemSource.conscience.max localize=true}}
       {{else}}
-          <div class="form-group ligne-conscience">
-            <label>{{localize "PENOMBRE.ui.conscienceDispo"}}</label><span>{{nbJetonsRestantsConscience}}</span><span>&#9670;</span><label>{{localize "PENOMBRE.ui.conscienceVal"}}</label><span>{{system.conscience.valeur}}</span><span>&#9670;</span><label>{{localize "PENOMBRE.ui.conscienceMax"}}</label><span>{{system.conscience.max}}</span>
+          {{!-- Chaque valeur dans un rond doré, libellé à droite, comme le cercle « Max » de la fiche du livre --}}
+          <div class="ligne-conscience">
+            <div class="rond-conscience"><span class="rond-valeur">{{nbJetonsRestantsConscience}}</span><label>{{localize "PENOMBRE.ui.conscienceDispo"}}</label></div>
+            <div class="rond-conscience"><span class="rond-valeur">{{system.conscience.valeur}}</span><label>{{localize "PENOMBRE.ui.conscienceVal"}}</label></div>
+            <div class="rond-conscience"><span class="rond-valeur">{{system.conscience.max}}</span><label>{{localize "PENOMBRE.ui.conscienceMax"}}</label></div>
           </div>
       {{/if}}
 
@@ -28,7 +29,7 @@
       </div>
 
       <!-- Complications -->
-      <p>{{localize "PENOMBRE.ui.complicationsListe"}}</p>
+      <div class="titre-complications">{{localize "PENOMBRE.ui.complicationsListe"}}</div>
       {{#if unlocked}}                            
           <div class="cadre-complications-2">
 

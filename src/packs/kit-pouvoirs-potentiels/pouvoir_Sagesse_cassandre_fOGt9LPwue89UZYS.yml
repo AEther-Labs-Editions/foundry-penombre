@@ -3,10 +3,11 @@ name: Sagesse cassandre
 img: systems/penombre/assets/icons/pouvoir.webp
 system:
   utilise: false
+  citation: Du crime toujours le crime ouvre la route.
   description: >-
-    <p><em>Du crime toujours le crime ouvre la route.</em></p><p>Une action de
-    Dentelle pour convaincre ou tromper devient automatique.</p>
-  type: naissance
+    <p>Une action de Dentelle pour convaincre ou tromper devient
+    automatique.</p>
+  type: ton
 effects: []
 folder: hwYF7T9jVOS4w4qy
 ownership:

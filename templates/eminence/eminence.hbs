@@ -12,24 +12,8 @@
     {{> "systems/penombre/templates/eminence/partials/conscience.hbs" }}
   </div>
 
-  <div class="col-2 frise-verticale">
-    <div class="grande-frise-verticale-1">
-      <img class="" src="systems/penombre/assets/ui/marron.webp" alt="" />
-    </div>
-    <div class="grande-frise-verticale-2">
-      <img class="" src="systems/penombre/assets/ui/marron.webp" alt="" />
-    </div>
-    <div class="grande-frise-verticale-3">
-      <img class="" src="systems/penombre/assets/ui/marron.webp" alt="" />
-    </div>
-    <div class="grande-frise-verticale-4">
-      <img class="" src="systems/penombre/assets/ui/marron.webp" alt="" />
-    </div>
-      <div class="grande-frise-verticale-5">
-      <img class="" src="systems/penombre/assets/ui/marron.webp" alt="" />
-    </div>
-
-  </div>
+  <!-- Filet vertical entre les deux colonnes, comme sur la fiche du livre -->
+  <div class="col-2"></div>
 
   <div class="col-3">
     <!-- Timbre -->
@@ -44,10 +28,10 @@
     <!-- Maitrises magiques -->
     {{> "systems/penombre/templates/eminence/partials/maitrises.hbs" }}
 
-    {{#unless isStyleJeuAvance}}
-        <!-- Récapitulatif -->
+    {{#if afficherRecapitulatif}}
+      <!-- Récapitulatif : affiché selon l'option de chaque joueur -->
       {{> "systems/penombre/templates/eminence/partials/recapitulatif.hbs" }}
-    {{/unless}}
+    {{/if}}
   </div>
   
 </section>

@@ -36,15 +36,14 @@ export default class EminenceSheet extends PenombreBaseActorSheet {
 
     // Harmoniques dans l'ordre de lecture de la fiche, avec tout ce dont le gabarit a besoin
     const harmoniques = this.document.system._source.harmoniques
-    context.harmoniques = SYSTEM.HARMONIQUES_FICHE.map(({ id, action, rangee, colonne, decalage }) => ({
+    context.harmoniques = SYSTEM.HARMONIQUES_FICHE.map(({ id, action, x, y }) => ({
       id,
       label: game.i18n.localize(`PENOMBRE.ui.${id}`),
       tooltip: game.i18n.localize(action),
       valeur: harmoniques[id].valeur,
       name: `system.harmoniques.${id}.valeur`,
-      rangee,
-      colonne,
-      decalage,
+      x,
+      y,
     }))
 
     context.jetons = this.document.system.conscience.jetons.slice(0, this.document.system.conscience.max)
@@ -54,16 +53,28 @@ export default class EminenceSheet extends PenombreBaseActorSheet {
     context.isStyleJeuDemo = styleJeu === "demo"
     context.isStyleJeuStandard = styleJeu === "standard"
     context.isStyleJeuAvance = styleJeu === "avance"
+    context.afficherRecapitulatif = game.settings.get(SYSTEM.ID, "afficherRecapitulatif")
 
     context.pouvoirs = this.document.itemTypes.pouvoir
     const enrichHTML = foundry.applications.ux.TextEditor.implementation.enrichHTML
+    // Infobulle des pouvoirs : carte dans le style de celle des maîtrises (nom et type, citation, effet)
     for (const pouvoir of context.pouvoirs) {
-      const citation = pouvoir.system.citation ? `<p class="pouvoir-tooltip-citation">${pouvoir.system.citation}</p>` : ""
+      const nom = foundry.utils.escapeHTML(pouvoir.name)
+      const type = game.i18n.localize(`PENOMBRE.Pouvoir.type.${pouvoir.system.type}.label`)
+      const entete = `<p class="infobulle-entete"><span class="infobulle-nom">${nom}</span> <span class="infobulle-source">${type}</span></p>`
+      const citation = pouvoir.system.citation ? `<p class="pouvoir-citation">${pouvoir.system.citation}</p>` : ""
       const description = pouvoir.system.description ?? ""
-      pouvoir.enrichedTooltip = await enrichHTML(`${citation}${description}`)
+      pouvoir.enrichedTooltip = await enrichHTML(`<div class="pouvoir-carte">${entete}${citation}${description}</div>`)
     }
     context.atouts = this.document.itemTypes.atout
     context.maitrises = this.document.itemTypes.maitrise
+    // Infobulle des maîtrises : même en-tête que celle des pouvoirs (nom, et l'harmonique en haut à droite), puis la carte
+    for (const maitrise of context.maitrises) {
+      const nom = foundry.utils.escapeHTML(maitrise.name)
+      const harmonique = game.i18n.localize(`PENOMBRE.Harmonique.${maitrise.system.harmonique}.label`)
+      const entete = `<p class="infobulle-entete"><span class="infobulle-nom">${nom}</span> <span class="infobulle-source">${harmonique}</span></p>`
+      maitrise.infobulle = `${entete}${maitrise.system.description ?? ""}`
+    }
 
     context.hasAtouts = this.document.system.hasAtouts
 

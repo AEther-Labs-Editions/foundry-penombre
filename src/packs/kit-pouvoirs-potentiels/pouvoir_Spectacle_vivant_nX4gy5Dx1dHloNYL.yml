@@ -4,15 +4,15 @@ _id: nX4gy5Dx1dHloNYL
 img: systems/penombre/assets/icons/pouvoir.webp
 system:
   utilise: false
-  type: naissance
+  citation: Être satyre, c'est offrir à l'Harmonde un spectacle quotidien.
   description: >-
-    <h1>Spectacle vivant</h1><p><em>Être satyre c'est offrir à l'Harmonde un
-    spectacle quotidien.</em></p><p>Le temps d'une action spectaculaire,
-    utilisez gratuitement le D20 merveilleux en plus du dé harmonique.</p><p>De
-    plus, chaque fois qu’il réalise une merveille (p. 31 du kit), son joueur
-    peut lui choisir un nouveau pouvoir dans la liste suivante, ou augmenter de
-    1 sa valeur de conscience.</p><ul><li><p>Plaisir
-    grisant</p></li><li><p>Triomphe</p></li></ul>
+    <p>Le temps d'une action spectaculaire, utilisez gratuitement le dé
+    merveilleux en plus du dé harmonique.</p><p>De plus, chaque fois qu’il
+    réalise une merveille (p. 31 du kit), son joueur peut lui choisir un nouveau
+    pouvoir dans la liste suivante, ou augmenter de 1 sa valeur de
+    conscience.</p><ul><li><p>Plaisir grisant</p></li><li><p>Triomphe
+    mascarille</p></li></ul>
+  type: naissance
 effects: []
 folder: lLVYkr2eG13xLU7R
 sort: 100000

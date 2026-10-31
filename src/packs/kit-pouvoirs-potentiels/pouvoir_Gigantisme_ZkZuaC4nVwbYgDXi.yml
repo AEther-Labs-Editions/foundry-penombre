@@ -4,17 +4,19 @@ _id: ZkZuaC4nVwbYgDXi
 img: systems/penombre/assets/icons/pouvoir.webp
 system:
   utilise: false
+  citation: On n'est jamais si grand que quand on se sent libre. Ou l'inverse.
   description: >-
-    <h1>Gigantisme</h1><p><em>On n’est jamais si grand que quand on se sent à
-    nouveau libre. Ou l’inverse.</em></p><p>Aussi longtemps que Nuane le
-    souhaite, sa taille redevient celle d’un géant (6 à 8 mètres). Les objets
-    sont inutilisables sous cette forme.</p><p>Jusqu’au premier coucher de
-    soleil, le nombre de succès de toutes ses actions d’étincelle et de nature
-    augmente de 2, mais celui de toutes ses actions d’esprit, d’âme et de nuit
-    diminue de 1.</p><p>De plus, chaque fois qu’elle réalise une merveille (p.
-    31 du kit), son joueur peut lui choisir un nouveau pouvoir dans la liste
-    suivante, ou augmenter de 1 sa valeur de conscience.</p><ul><li><p>Iris de
-    focalisation</p></li><li><p>Colosse tonitruant</p></li></ul>
+    <p>Aussi longtemps qu'elle le souhaite, Nuane abandonne sa taille réfrénée
+    et reprend sa taille naturelle. Les objets de taille standard sont
+    inutilisables sous cette forme. Jusqu'au prochain coucher de soleil, le
+    nombre de succès de toutes ses actions d'étincelle et de nature augmente de
+    2, mais celui de toutes ses actions d'esprit et de nuit diminue de 1. Tout
+    cela cesse immédiatement si Nuane décide de réfréner sa taille à nouveau
+    (action automatique).</p><p>De plus, chaque fois qu’elle réalise une
+    merveille (p. 31 du kit), son joueur peut lui choisir un nouveau pouvoir
+    dans la liste suivante, ou augmenter de 1 sa valeur de
+    conscience.</p><ul><li><p>Iris de focalisation</p></li><li><p>Colosse
+    tonitruant</p></li></ul>
   type: naissance
 effects: []
 folder: AXh0qA385ZNM1DD8

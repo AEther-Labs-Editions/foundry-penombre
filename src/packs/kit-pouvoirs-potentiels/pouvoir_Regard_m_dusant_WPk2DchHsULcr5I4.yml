@@ -4,13 +4,14 @@ _id: WPk2DchHsULcr5I4
 img: systems/penombre/assets/icons/pouvoir.webp
 system:
   utilise: false
+  citation: >-
+    Les méduses ont perdu leur pouvoir de pétrification ? Il a peut-être juste
+    évolué.
   description: >-
-    <p><em>Les méduses ont-elles vraiment perdu leur pouvoir de pétrification ?
-    Il a peut-être juste évolué.</em></p><p>Une action de Céliana incluant un
-    contact visuel avec un personnage imprime dans son esprit un ordre simple
-    auquel il obéit. Cet ordre ne peut pas le mettre en danger, et ne dure que
-    le temps d’une scène.</p>
-  type: naissance
+    <p>Une action de Céliana incluant un contact visuel avec un personnage
+    imprime dans son esprit un ordre simple auquel il obéit. Cet ordre ne peut
+    pas le mettre en danger, et ne dure que le temps d'une scène.</p>
+  type: peuple
 effects: []
 folder: NxgKbO9Dq94f1TSA
 sort: 200000

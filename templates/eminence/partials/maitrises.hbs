@@ -1,41 +1,24 @@
 {{!log "EminenceSheet - Partials - Maîtrises" this }}
 <div class="eminence-maitrises{{#if isStyleJeuAvance}} avance{{/if}}">
     <span class="titre-section-maitrises">{{localize "PENOMBRE.ui.maitrises"}}</span>
+    {{!-- Création d'un objet : à droite du titre et de sa volute --}}
+    {{#if unlocked}}<a class="plusitem plusitem-titre item-control" data-tooltip="{{ localize 'PENOMBRE.ui.create' item='une maîtrise' }}" data-action="create" data-type="maitrise"><i class="fas fa-plus"></i></a>{{/if}}
     <div class="content">
         {{> "systems/penombre/templates/eminence/partials/_potentiel.hbs" potentielType="maitrises"}}
         <div class="maitrises{{#if isStyleJeuAvance}} avance{{/if}} absolue">
             <table class="item-list centpourcent">
-                <tr class="centpourcent">
-                    <th>
-                        {{ localize 'PENOMBRE.ui.nom' }}
-                    </th>
-                    <th class="harmonique-width">
-                        {{ localize 'PENOMBRE.ui.harmonique' }}
-                    </th>
-                    <th>
-                        {{ localize 'PENOMBRE.ui.prerequis' }}
-                    </th>
-                    <th>
-                        {{ localize 'PENOMBRE.ui.niveau' }}
-                    </th>
-                    <th class="item-controls">
-                        {{#if unlocked}}
-                            <a class="plusitem item-control" data-tooltip="{{ localize 'PENOMBRE.ui.create' item='une maîtrise' }}" data-action="create" data-type="maitrise"><i class="fas fa-plus"></i></a>
-                        {{/if}}
-                    </th>
-                </tr>
                 {{#each maitrises as |item id|}}
                 <tr class="item draggable" data-item-id="{{item._id}}">
                     <td>
-                        <span class="item-name" data-tooltip="{{{item.system.description}}}">{{item.name}}</span>
+                        <span class="item-name" data-tooltip-html="{{item.infobulle}}" data-tooltip-class="maitrise-tooltip" data-tooltip-direction="LEFT">{{item.name}}</span>
                     </td>
-                    <td class="harmonique-width">
+                    <td class="harmonique-width" data-tooltip="{{localize 'PENOMBRE.ui.harmonique'}}">
                         <span class="item-harmonique">{{ localize (concat 'PENOMBRE.Harmonique.' item.system.harmonique '.label') }}</span>
                     </td>
-                    <td>
+                    <td data-tooltip="{{localize 'PENOMBRE.ui.prerequis'}}">
                         <span class="item-prerequis">{{item.system.prerequis}}</span>
                     </td>
-                    <td>
+                    <td data-tooltip="{{localize 'PENOMBRE.ui.niveauTooltip' niveau=item.system.niveau}}">
                         <span class="item-niveau">{{item.system.niveau}}</span>
                     </td>
                     <td class="item-controls">

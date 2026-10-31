@@ -3,16 +3,15 @@ name: Projection astrale
 img: systems/penombre/assets/icons/pouvoir.webp
 system:
   utilise: false
+  citation: Ma conscience s'ébroue et se répand, à tâtons puis de plus en plus vite.
   description: >-
-    <h1>Projection astrale</h1><p><em>Ma conscience s’ébroue et se répand, à
-    tâtons puis de plus en plus vite.</em></p><p>Le temps d’une scène, Pictelle
-    projette sa forme astrale hors de son corps, inerte le temps de la
-    projection. Ce spectre immatériel peut franchir murs et barreaux. Son rayon
-    d’action est d’environ un bâtiment. Lorsque Pictelle annule sa projection,
-    le nombre de succès de toutes ses actions d’esprit et d’âme diminue de 1
-    jusqu’au prochain repos.</p><p>De plus, chaque fois qu’elle réalise une
-    merveille (p. 31 du kit), son joueur peut lui choisir un nouveau pouvoir
-    dans la liste suivante, ou augmenter de 1 sa valeur de
+    <p>Le temps d'une scène, Pictelle projette sa forme astrale hors de son
+    corps, inerte le temps de la projection. Ce spectre immatériel peut franchir
+    murs et barreaux. Son rayon d'action est d'environ un bâtiment. Lorsqu'elle
+    annule sa projection, le nombre de succès de toutes ses actions d'esprit et
+    d'âme diminue de 1 jusqu'au prochain repos.</p><p>De plus, chaque fois
+    qu’elle réalise une merveille (p. 31 du kit), son joueur peut lui choisir un
+    nouveau pouvoir dans la liste suivante, ou augmenter de 1 sa valeur de
     conscience.</p><ul><li><p>Corps astral</p></li><li><p>Des souvenirs en
     commun</p></li></ul>
   type: naissance

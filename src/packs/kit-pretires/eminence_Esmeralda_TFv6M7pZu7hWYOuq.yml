@@ -159,16 +159,16 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
+      citation: Un démon ne se retourne pas, il disparaît dans la nuit.
       description: >-
         <p>En une action, Esmeralda passe à travers une ombre proche et ressort
-        par une ombre ciblée, ou projette son bras au travers de ce passage pour
-        agir sur une cible proche de l’ombre ciblée.</p><p>De plus, chaque fois
-        qu’elle réalise une merveille (p. 31 du kit), son joueur peut lui
-        choisir un nouveau pouvoir dans la liste suivante, ou augmenter de 1 sa
-        valeur de conscience.</p><ul><li><p>Évanescence</p></li><li><p>Ombre
-        jumelle</p></li></ul>
-      type: naissance
-      citation: Passage par les ombres
+        par une autre ombre lointaine, ou projette son bras au travers de ce
+        passage pour agir sur une cible proche de l'ombre lointaine.</p><p>De
+        plus, chaque fois qu’elle réalise une merveille (p. 31 du kit), son
+        joueur peut lui choisir un nouveau pouvoir dans la liste suivante, ou
+        augmenter de 1 sa valeur de conscience.</p><ul><li><p>Évanescence
+        mélusine</p></li><li><p>Ombre jumelle</p></li></ul>
+      type: cle
     effects: []
     folder: null
     sort: 0
@@ -187,16 +187,16 @@ items:
       default: 0
     _key: '!actors.items!TFv6M7pZu7hWYOuq.Qujs4YryzHMhoSSu'
   - type: pouvoir
-    name: Évanescence
+    name: Évanescence mélusine
     _id: Ba2L0gHMxiMmopFl
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
+      citation: As-tu déjà essayé de porter une écharpe de brume ?
       description: >-
         <p>Esmeralda esquive automatiquement une menace physique portée contre
-        elle (attaque, piège, chute de pierres…)</p>
-      type: naissance
-      citation: As-tu déjà essayé de porter une écharpe de brume ?
+        elle (attaque, piège, chute de pierres, etc.).</p>
+      type: gamme
     effects: []
     folder: null
     sort: 0
@@ -220,12 +220,12 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
+      citation: Alors c'est moi… sans être moi.
       description: >-
-        <p>Jusqu’à la fin du tour, faites agir l’ombre d’Esmeralda comme si elle
+        <p>Jusqu'à la fin du tour, faites agir l'ombre d'Esmeralda comme si elle
         était un double de cette dernière. Ses actions, autonomes, ne comptent
-        pas comme celles d’Esmeralda.</p>
-      type: naissance
-      citation: Alors c’est moi… sans être moi.
+        pas comme celles d'Esmeralda.</p>
+      type: cle
     effects: []
     folder: null
     sort: 0
@@ -369,39 +369,43 @@ items:
     img: systems/penombre/assets/icons/maitrise.webp
     system:
       description: >-
-        <h1>Esmeralda l’artiste du décorum</h1><p><strong>Pour préparer son
-        effet magique, Esmeralda
-        doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>réaliser une
+        <div class="maitrise-carte"><h1 class="maitrise-titre">Esmeralda
+        l’artiste du décorum</h1><p class="maitrise-intro">Pour préparer son
+        effet magique, Esmeralda doit…</p><p class="maitrise-entree"><span
+        class="maitrise-etiquette">Prérequis</span> <strong>réaliser une
         esquisse</strong>, un croquis, un tableau, voire une fresque picturale
-        dans laquelle, toujours, on retrouve la présence
-        d’Agone.</p></li></ul><p><strong>Ce faisant,
-        elle…</strong></p><h6>Action magique</h6><ul><li><p><strong>redessine la
-        réalité</strong> comme si elle corrigeait l’œuvre maladroite d’un
-        artiste débutant. L’Harmonde inanimé se recompose sous son
-        trait.</p></li></ul><p><strong>Avec un effet magique de niveau ?
-        …</strong></p><p><strong>elle parvient par exemple
-        à…</strong></p><ol><li><p><strong>identifier</strong> un effet magique
-        d’art ancien (accord, décorum, geste) ; ajouter ou gommer un détail sur
-        un objet ; embellir ou enlaidir sans dénaturer ;
-        etc.</p></li><li><p><strong>remplacer</strong> une couleur par une autre
-        ; rendre un objet méconnaissable ; créer un mirage ou une illusion
-        réaliste, mais immatérielle ; modifier une perspective pour agrandir,
-        réduire, approcher ou éloigner ; etc.</p></li><li><p><strong>créer ou
-        effacer</strong> temporairement un élément de décor ; déplacer
-        définitivement un élément existant ; rendre translucide ; détruire,
-        abîmer ou réparer un élément de décor ; créer un point faible ;
-        etc.</p></li><li><p><strong>créer ou effacer</strong> un élément de
-        décor de manière permanente ; rendre un objet invisible ;
-        etc.</p></li><li><p><strong>créer</strong> un tableau-monde connecté à
-        l’Harmonde ; ouvrir un portail entre deux lieux distants ;
-        etc.</p></li></ol><p><strong>Mais attention, elle risque également
-        de…</strong></p><h6>Incident magique</h6><ul><li><p><strong>faire de sa
+        dans laquelle, toujours, on retrouve la présence d’Agone.</p><p
+        class="maitrise-intro">Ce faisant, elle…</p><p
+        class="maitrise-entree"><span class="maitrise-etiquette">Action
+        magique</span> <strong>redessine la réalité</strong> comme si elle
+        corrigeait l’œuvre maladroite d’un artiste débutant. L’Harmonde inanimé
+        se recompose sous son trait.</p><p class="maitrise-intro">Avec un effet
+        magique de niveau <span class="maitrise-pastille">?</span> …</p><p
+        class="maitrise-intro">elle parvient par exemple à…</p><ol
+        class="maitrise-niveaux"><li><p><strong><em>identifier</em></strong> un
+        effet magique d’art ancien (accord, décorum, geste) ; ajouter ou gommer
+        un détail sur un objet ; embellir ou enlaidir sans dénaturer ;
+        etc.</p></li><li><p><strong><em>remplacer</em></strong> une couleur par
+        une autre ; rendre un objet méconnaissable ; créer un mirage ou une
+        illusion réaliste, mais immatérielle ; modifier une perspective pour
+        agrandir, réduire, approcher ou éloigner ;
+        etc.</p></li><li><p><strong><em>créer ou effacer</em></strong>
+        temporairement un élément de décor ; déplacer définitivement un élément
+        existant ; rendre translucide ; détruire, abîmer ou réparer un élément
+        de décor ; créer un point faible ; etc.</p></li><li><p><strong><em>créer
+        ou effacer</em></strong> un élément de décor de manière permanente ;
+        rendre un objet invisible ;
+        etc.</p></li><li><p><strong><em>créer</em></strong> un tableau-monde
+        connecté à l’Harmonde ; ouvrir un portail entre deux lieux distants ;
+        etc.</p></li></ol><p class="maitrise-intro">Mais attention, elle risque
+        également de…</p><p class="maitrise-entree"><span
+        class="maitrise-etiquette">Incident magique</span> <strong>faire de sa
         vie une œuvre.</strong> En prenant l’Harmonde pour toile, Esmeralda doit
         s’attendre à une réaction de sa part ! Esmeralda se retrouve prisonnière
         d’un méandre ; plusieurs réalités se superposent autour d’elle, ou pire,
         en elle ; son environnement se transforme d’une manière imprévisible ;
         sa maladresse suscite la colère des témoins alentour, ou de l’Harmonde
-        lui-même qui déchaîne les éléments contre elle ; etc.</p></li></ul>
+        lui-même qui déchaîne les éléments contre elle ; etc.</p></div>
       harmonique: ame
       niveau: 1
       prerequis: dessiner avec ses fusains, ou du charbon
@@ -428,55 +432,59 @@ items:
     img: systems/penombre/assets/icons/maitrise.webp
     system:
       description: >-
-        <h1>Esmeralda l’artiste du prisme</h1><p><strong>Pour préparer son effet
-        magique, Esmeralda
-        doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>utiliser son
+        <div class="maitrise-carte"><h1 class="maitrise-titre">Esmeralda
+        l’artiste du prisme</h1><p class="maitrise-intro">Pour préparer son
+        effet magique, Esmeralda doit…</p><p class="maitrise-entree"><span
+        class="maitrise-etiquette">Prérequis</span> <strong>utiliser son
         vitricle.</strong> Cet ingénieux ustensile appelle une loupe dont les
         verres pourraient être interchangés par le truchement d’un petit levier,
         sauf que ces verres sont des fragments de vitraux qui déforment la
-        lumière d’une façon incompréhensible pour la plupart des
-        mortels.</p></li></ul><p><strong>Ce faisant,
-        elle…</strong></p><h6>Action magique</h6><ul><li><p><strong>voit
-        apparaître sous ses yeux des indices</strong> et des détails, des odeurs
-        colorées, des sons parfumés, des goûts bruyants, des espaces
-        insoupçonnés et des traverses intimes.</p></li></ul><p><strong>Avec un
-        effet magique de niveau ? …</strong></p><p><strong>elle parvient par
-        exemple à…</strong></p><ol><li><p><strong>identifier</strong> un effet
-        magique d’art noir (conjuration, onyxium, prisme) ; éblouir ou aveugler
-        un personnage ; suivre la trace d’une personne dont elle connaît la
-        couleur prismatique ; savoir l ’allégeance d’un démon ; faire apparaître
-        un indice aux yeux de tous ; récolter une couleur unique ;
-        etc.</p></li><li><p><strong>brouiller</strong> l’image d’une personne ou
-        d’un objet ; comparer et différencier des couleurs très proches ;
-        décomposer les ingrédients d’un son, ou d’un goût ; fabriquer des
-        pigments durables pouvant servir à des artisans ; franchir un passage
-        trop petit ; concentrer la lumière en un rayon d’énergie ;
-        etc.</p></li><li><p><strong>créer</strong> un mirage dédoublant un
-        objet, ou un personnage capable d’agir ; changer la façon dont
+        lumière d’une façon incompréhensible pour la plupart des mortels.</p><p
+        class="maitrise-intro">Ce faisant, elle…</p><p
+        class="maitrise-entree"><span class="maitrise-etiquette">Action
+        magique</span> <strong>voit apparaître sous ses yeux des
+        indices</strong> et des détails, des odeurs colorées, des sons parfumés,
+        des goûts bruyants, des espaces insoupçonnés et des traverses
+        intimes.</p><p class="maitrise-intro">Avec un effet magique de niveau
+        <span class="maitrise-pastille">?</span> …</p><p
+        class="maitrise-intro">elle parvient par exemple à…</p><ol
+        class="maitrise-niveaux"><li><p><strong><em>identifier</em></strong> un
+        effet magique d’art noir (conjuration, onyxium, prisme) ; éblouir ou
+        aveugler un personnage ; suivre la trace d’une personne dont elle
+        connaît la couleur prismatique ; savoir l ’allégeance d’un démon ; faire
+        apparaître un indice aux yeux de tous ; récolter une couleur unique ;
+        etc.</p></li><li><p><strong><em>brouiller</em></strong> l’image d’une
+        personne ou d’un objet ; comparer et différencier des couleurs très
+        proches ; décomposer les ingrédients d’un son, ou d’un goût ; fabriquer
+        des pigments durables pouvant servir à des artisans ; franchir un
+        passage trop petit ; concentrer la lumière en un rayon d’énergie ;
+        etc.</p></li><li><p><strong><em>créer</em></strong> un mirage dédoublant
+        un objet, ou un personnage capable d’agir ; changer la façon dont
         fonctionnent les sens (voir la chaleur corporelle, entendre les odeurs,
         etc.) ; écrire un message lisible uniquement par d’autres artistes du
         prisme, ou totalement ineffaçable, comme s’il était projeté par le
-        soleil ; etc.</p></li><li><p><strong>altérer</strong> les sens de tous
-        pour que le moindre détail devienne immense, transformant une rue pavée
-        en labyrinthe ; perturber les sens au point de provoquer une crise de
-        folie ; passer d’un espace à un autre, en suivant un rayon de lumière,
-        quelle que soit la taille du passage ; ouvrir un espace inédit, sorte de
-        poche de réalité augmentée ; retrouver une personne par les traces
-        colorées qu’elle laisse, même sans la connaître ;
-        etc.</p></li><li><p><strong>voyager</strong> par la lumière sur de
-        longues distances, vers des espaces inconnus ; atteindre un méandre, une
-        étoile dans le ciel, l’intérieur d’un esprit mortel ; franchir une ombre
-        pour rejoindre les Abysses, les Cornes, ou le fonctionnaire du Clergé
-        obscur le plus proche (<em>advocatus diaboli</em> chargé des relations
-        entre démons et mortels) ; récolter l’âme d’une personne en même temps
-        que sa couleur, et ainsi la tuer ; etc.</p></li></ol><p><strong>Mais
-        attention, elle risque également de…</strong></p><h6>Incident
-        magique</h6><ul><li><p><strong>trouver un diable dans les
-        détails.</strong> Parfois, le monde d’Esmeralda se distend autour
-        d’elle, devient fractal et impressionniste, ou s’étire en créatures
-        obscènes. Un « gardien » sans visage apparaît ; Esmeralda est aveuglée
-        par la débauche de détails qui l’entourent, ses sens saturés devenant
-        ininterprétables ; etc.</p></li></ul>
+        soleil ; etc.</p></li><li><p><strong><em>altérer</em></strong> les sens
+        de tous pour que le moindre détail devienne immense, transformant une
+        rue pavée en labyrinthe ; perturber les sens au point de provoquer une
+        crise de folie ; passer d’un espace à un autre, en suivant un rayon de
+        lumière, quelle que soit la taille du passage ; ouvrir un espace inédit,
+        sorte de poche de réalité augmentée ; retrouver une personne par les
+        traces colorées qu’elle laisse, même sans la connaître ;
+        etc.</p></li><li><p><strong><em>voyager</em></strong> par la lumière sur
+        de longues distances, vers des espaces inconnus ; atteindre un méandre,
+        une étoile dans le ciel, l’intérieur d’un esprit mortel ; franchir une
+        ombre pour rejoindre les Abysses, les Cornes, ou le fonctionnaire du
+        Clergé obscur le plus proche (<em>advocatus diaboli</em> chargé des
+        relations entre démons et mortels) ; récolter l’âme d’une personne en
+        même temps que sa couleur, et ainsi la tuer ; etc.</p></li></ol><p
+        class="maitrise-intro">Mais attention, elle risque également de…</p><p
+        class="maitrise-entree"><span class="maitrise-etiquette">Incident
+        magique</span> <strong>trouver un diable dans les détails.</strong>
+        Parfois, le monde d’Esmeralda se distend autour d’elle, devient fractal
+        et impressionniste, ou s’étire en créatures obscènes. Un « gardien »
+        sans visage apparaît ; Esmeralda est aveuglée par la débauche de détails
+        qui l’entourent, ses sens saturés devenant ininterprétables ;
+        etc.</p></div>
       harmonique: nuit
       niveau: 2
       prerequis: utiliser son vitricle

@@ -3,11 +3,11 @@ name: Évanescence mélusine
 img: systems/penombre/assets/icons/pouvoir.webp
 system:
   utilise: false
+  citation: As-tu déjà essayé de porter une écharpe de brume ?
   description: >-
-    <p><em>As-tu déjà essayé de porter une écharpe de brume
-    ?</em></p><p>Dentelle esquive automatiquement une menace physique portée
-    contre elle (attaque, piège, chute de pierres, etc.).</p>
-  type: naissance
+    <p>Dentelle esquive automatiquement une menace physique portée contre elle
+    (attaque, piège, chute de pierres, etc.).</p>
+  type: gamme
 effects: []
 folder: hwYF7T9jVOS4w4qy
 ownership:

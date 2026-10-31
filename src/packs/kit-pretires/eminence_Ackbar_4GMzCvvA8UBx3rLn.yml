@@ -160,15 +160,15 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
-      type: naissance
+      citation: Être satyre, c'est offrir à l'Harmonde un spectacle quotidien.
       description: >-
-        <p>Le temps d'une action spectaculaire, utilisez gratuitement le D20
+        <p>Le temps d'une action spectaculaire, utilisez gratuitement le dé
         merveilleux en plus du dé harmonique.</p><p>De plus, chaque fois qu’il
         réalise une merveille (p. 31 du kit), son joueur peut lui choisir un
         nouveau pouvoir dans la liste suivante, ou augmenter de 1 sa valeur de
-        conscience.</p><ul><li><p>Plaisir
-        grisant</p></li><li><p>Triomphe</p></li></ul>
-      citation: Être satyre c'est offrir à l'Harmonde un spectacle quotidien.
+        conscience.</p><ul><li><p>Plaisir grisant</p></li><li><p>Triomphe
+        mascarille</p></li></ul>
+      type: naissance
     effects: []
     folder: null
     sort: 0
@@ -312,46 +312,51 @@ items:
     img: systems/penombre/assets/icons/maitrise.webp
     system:
       description: >-
-        <h1>Ackbar l'accordé</h1><p><strong>Pour préparer son effet magique,
-        Ackbar
-        doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>interpréter un
+        <div class="maitrise-carte"><h1 class="maitrise-titre">Ackbar
+        l'accordé</h1><p class="maitrise-intro">Pour préparer son effet magique,
+        Ackbar doit…</p><p class="maitrise-entree"><span
+        class="maitrise-etiquette">Prérequis</span> <strong>interpréter un
         morceau de musique</strong> à l’aide de sa lyre abyssale aux accords si
-        exotiques.</p><p></p></li></ul><p><strong>Ce faisant,
-        il…</strong></p><h6>Action magique</h6><ul><li><p><strong>entre en
-        résonance avec l’esprit de sa cible</strong> et pénètre cet espace
-        mental tant que dure la musique. Chaque esprit ressemble à une contrée
-        nouvelle et fantasmagorique.</p><p></p></li></ul><p><strong>Avec un
-        effet magique de niveau ? …</strong></p><p><strong>il parvient par
-        exemple à…</strong></p><ol><li><p><strong>identifier</strong> un effet
-        magique d’art ancien (accord, décorum, geste) ; lire les pensées
+        exotiques.</p><p class="maitrise-intro">Ce faisant, il…</p><p
+        class="maitrise-entree"><span class="maitrise-etiquette">Action
+        magique</span> <strong>entre en résonance avec l’esprit de sa
+        cible</strong> et pénètre cet espace mental tant que dure la musique.
+        Chaque esprit ressemble à une contrée nouvelle et fantasmagorique.</p><p
+        class="maitrise-intro">Avec un effet magique de niveau <span
+        class="maitrise-pastille">?</span> …<br>il parvient par exemple
+        à…</p><ol
+        class="maitrise-niveaux"><li><p><strong><em>identifier</em></strong> un
+        effet magique d’art ancien (accord, décorum, geste) ; lire les pensées
         superficielles et les émotions ;
-        etc.</p></li><li><p><strong>modifier</strong> les pensées superficielles
-        et les émotions ; apaiser, mettre en confiance, exalter, encourager,
-        soutenir ; provoquer culpabilité, découragement, déconcentration et
-        désorientation ; faire bégayer ; mettre en colère, enrager ; glisser un
-        message mental ; etc.</p></li><li><p><strong>lire</strong> des souvenirs
-        précis dans la mémoire ; perturber un sens (vue, ouïe, odorat…) ;
-        provoquer un mouvement involontaire, ou réflexe ; faire ressentir une
-        douleur fantôme ; diriger l’attention ; faire accepter un mensonge ;
-        libérer d’une emprise mentale ; créer une barrière mentale ; attaquer
-        l’esprit ; etc.</p></li><li><p><strong>effacer</strong>, modifier ou
-        créer un souvenir précis, ou un lien familial ou affectif ; créer une
-        phobie ; ouvrir un canal télépathique ; rendre invalide pour une scène
-        (endormir, hypnotiser, rendre sourd, aveugle, muet…) ; suggérer une
-        mission ou une action complexe à un personnage ; apporter l’oubli d’un
-        traumatisme psychologique ; provoquer une crise de folie ;
-        etc.</p></li><li><p><strong>inspirer</strong> une confiance ou une
-        terreur absolue ; revivre un souvenir comme s’il était de nouveau réel ;
-        rendre amnésique ; prendre le contrôle mental d’un personnage, l’obliger
-        à une action complexe, lui imposer une mission ; tuer ;
-        etc.</p></li></ol><p><strong>Mais attention, il risque également
-        de…</strong></p><h6>Incident magique</h6><ul><li><p><strong>attirer les
+        etc.</p></li><li><p><strong><em>modifier</em></strong> les pensées
+        superficielles et les émotions ; apaiser, mettre en confiance, exalter,
+        encourager, soutenir ; provoquer culpabilité, découragement,
+        déconcentration et désorientation ; faire bégayer ; mettre en colère,
+        enrager ; glisser un message mental ;
+        etc.</p></li><li><p><strong><em>lire</em></strong> des souvenirs précis
+        dans la mémoire ; perturber un sens (vue, ouïe, odorat…) ; provoquer un
+        mouvement involontaire, ou réflexe ; faire ressentir une douleur fantôme
+        ; diriger l’attention ; faire accepter un mensonge ; libérer d’une
+        emprise mentale ; créer une barrière mentale ; attaquer l’esprit ;
+        etc.</p></li><li><p><strong><em>effacer</em></strong>, modifier ou créer
+        un souvenir précis, ou un lien familial ou affectif ; créer une phobie ;
+        ouvrir un canal télépathique ; rendre invalide pour une scène (endormir,
+        hypnotiser, rendre sourd, aveugle, muet…) ; suggérer une mission ou une
+        action complexe à un personnage ; apporter l’oubli d’un traumatisme
+        psychologique ; provoquer une crise de folie ;
+        etc.</p></li><li><p><strong><em>inspirer</em></strong> une confiance ou
+        une terreur absolue ; revivre un souvenir comme s’il était de nouveau
+        réel ; rendre amnésique ; prendre le contrôle mental d’un personnage,
+        l’obliger à une action complexe, lui imposer une mission ; tuer ;
+        etc.</p></li></ol><p class="maitrise-intro">Mais attention, il risque
+        également de…</p><p class="maitrise-entree"><span
+        class="maitrise-etiquette">Incident magique</span> <strong>attirer les
         faux-accords</strong>, des pratiquants de l’accord bannis par leurs
         semblables. Ils guettent, assis dans le public ou désincarnés dans
         l’esprit de leurs victimes, prêts à prendre leur revanche sur les autres
-        accordés.</p></li><li><p>Ackbar subit un effet d’accord en retour ; il
-        est provoqué en duel musical ; il accède à un souvenir qu’il aurait
-        préféré éviter ; etc.</p></li></ul>
+        accordés.</p><p>Ackbar subit un effet d’accord en retour ; il est
+        provoqué en duel musical ; il accède à un souvenir qu’il aurait préféré
+        éviter ; etc.</p></div>
       harmonique: ame
       niveau: 1
       prerequis: jouer de la lyre
@@ -379,46 +384,51 @@ items:
     img: systems/penombre/assets/icons/maitrise.webp
     system:
       description: >-
-        <h1>Ackbar le brigand</h1><p><strong>Pour préparer son effet magique,
-        Ackbar doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>posséder,
-        ou fabriquer, une « penne » animale</strong> indispensable à l’action.
-        Il peut s’agir des plumes d’une flèche, d’une simple corde en crins, de
+        <div class="maitrise-carte"><h1 class="maitrise-titre">Ackbar le
+        brigand</h1><p class="maitrise-intro">Pour préparer son effet magique,
+        Ackbar doit…</p><p class="maitrise-entree"><span
+        class="maitrise-etiquette">Prérequis</span> <strong>posséder, ou
+        fabriquer, une « penne » animale</strong> indispensable à l’action. Il
+        peut s’agir des plumes d’une flèche, d’une simple corde en crins, de
         lanières de cuir, d’une mouche de pêche, d’un grigri en corne, ou en
-        dents, etc.</p><p></p></li></ul><p><strong>Ce faisant,
-        il…</strong></p><h6>Action magique</h6><ul><li><p><strong>fait corps
-        avec l’Harmonde, qui devient pour lui un terrain de jeu</strong> couvert
-        d’agrès improvisés : les tas de paille se changent en trampolines ; les
-        branches, en barres parallèles ; les lierres, en échelles ; les
-        enseignes, en trapèzes ; etc.</p><p></p></li></ul><p><strong>Avec un
-        effet magique de niveau ? …</strong></p><p><strong>il parvient par
-        exemple à…</strong></p><ol><li><p><strong>identifier</strong> un effet
-        magique de magie naturelle (brigue, élémentalisme, magie des saisons) ;
-        ralentir une glissade ; se rattraper à une aspérité ; appeler, amadouer,
-        effrayer ou ressentir les émotions d’une bête sauvage ; repérer des
-        traces animales, ou un passage naturel ; devenir plus fort, plus souple,
-        plus habile ; placer une botte secrète ; trouver un point d’eau ;
-        etc.</p></li><li><p><strong>amortir</strong> une chute libre ; escalader
-        comme une araignée ; marcher sur un fil ; parler aux animaux ; dévier
-        les coups ou les flèches à mains nues ; tirer une flèche rebondissante
-        ou à tête chercheuse ; percevoir à travers les sens d’un animal ;
-        etc.</p></li><li><p><strong>se déplacer</strong> d’un bond en un lieu
-        autrement hors de portée ; changer de taille et gagner en assurance ;
-        prendre le contrôle mental d’une bête sauvage ;
-        etc.</p></li><li><p><strong>courir</strong> sur les murs, ou l’eau ;
-        voyager de cime en cime ; laisser une empreinte (silhouette, ou fil de
-        la lame) à peine visible mais qui peut bloquer, ou blesser si on s’y
-        heurte ; effrayer un mortel ; prendre le contrôle mental d’une meute
-        entière ; etc.</p></li><li><p><strong>voler</strong>, ou marcher dans le
-        vide ; esquiver sans donner l’impression de bouger ; créer une empreinte
-        d’un personnage, double réalisant ses propres actions indépendantes ;
-        etc.</p></li></ol><p><strong>Mais attention, il risque également
-        de…</strong></p><h6>Incident magique</h6><ul><li><p><strong>se prendre
-        le mur.</strong> Les observateurs peuvent l’entrevoir comme un champ de
+        dents, etc.</p><p class="maitrise-intro">Ce faisant, il…</p><p
+        class="maitrise-entree"><span class="maitrise-etiquette">Action
+        magique</span> <strong>fait corps avec l’Harmonde, qui devient pour lui
+        un terrain de jeu</strong> couvert d’agrès improvisés : les tas de
+        paille se changent en trampolines ; les branches, en barres parallèles ;
+        les lierres, en échelles ; les enseignes, en trapèzes ; etc.</p><p
+        class="maitrise-intro">Avec un effet magique de niveau <span
+        class="maitrise-pastille">?</span> …<br>il parvient par exemple
+        à…</p><ol
+        class="maitrise-niveaux"><li><p><strong><em>identifier</em></strong> un
+        effet magique de magie naturelle (brigue, élémentalisme, magie des
+        saisons) ; ralentir une glissade ; se rattraper à une aspérité ;
+        appeler, amadouer, effrayer ou ressentir les émotions d’une bête sauvage
+        ; repérer des traces animales, ou un passage naturel ; devenir plus
+        fort, plus souple, plus habile ; placer une botte secrète ; trouver un
+        point d’eau ; etc.</p></li><li><p><strong><em>amortir</em></strong> une
+        chute libre ; escalader comme une araignée ; marcher sur un fil ; parler
+        aux animaux ; dévier les coups ou les flèches à mains nues ; tirer une
+        flèche rebondissante ou à tête chercheuse ; percevoir à travers les sens
+        d’un animal ; etc.</p></li><li><p><strong><em>se déplacer</em></strong>
+        d’un bond en un lieu autrement hors de portée ; changer de taille et
+        gagner en assurance ; prendre le contrôle mental d’une bête sauvage ;
+        etc.</p></li><li><p><strong><em>courir</em></strong> sur les murs, ou
+        l’eau ; voyager de cime en cime ; laisser une empreinte (silhouette, ou
+        fil de la lame) à peine visible mais qui peut bloquer, ou blesser si on
+        s’y heurte ; effrayer un mortel ; prendre le contrôle mental d’une meute
+        entière ; etc.</p></li><li><p><strong><em>voler</em></strong>, ou
+        marcher dans le vide ; esquiver sans donner l’impression de bouger ;
+        créer une empreinte d’un personnage, double réalisant ses propres
+        actions indépendantes ; etc.</p></li></ol><p class="maitrise-intro">Mais
+        attention, il risque également de…</p><p class="maitrise-entree"><span
+        class="maitrise-etiquette">Incident magique</span> <strong>se prendre le
+        mur.</strong> Les observateurs peuvent l’entrevoir comme un champ de
         force irisé aux motifs impensables qui apparaît soudain dans l’air.
-        Quelle est cette limite immuable ?</p></li><li><p>Ackbar est pris d’un
-        vertige tenace ; il souffre d’une déchirure musculaire, ou d’une
-        luxation ; il prend soudain conscience de la fragilité de son existence
-        ; etc.</p></li></ul>
+        Quelle est cette limite immuable ?</p><p>Ackbar est pris d’un vertige
+        tenace ; il souffre d’une déchirure musculaire, ou d’une luxation ; il
+        prend soudain conscience de la fragilité de son existence ;
+        etc.</p></div>
       harmonique: nature
       niveau: 2
       prerequis: s'arracher ou se tresser une mèche de poils
@@ -446,13 +456,13 @@ items:
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
+      citation: Tu ignores jusqu'où tout cela va fatalement nous mener. Moi, je sais.
       description: >-
-        <p>À l’acquisition de ce pouvoir, choisissez une activité de loisir
-        (musique, poésie, nourriture, sexe…)</p><p>Après qu’Ackbar a pratiqué ce
-        loisir, le dé harmonique d’une de ses actions affiche sa valeur
+        <p>À l'acquisition de ce pouvoir, choisissez une activité de loisir
+        (musique, poésie, nourriture, sexe…). Après qu'Ackbar a pratiqué ce
+        loisir, le dé harmonique d'une de ses actions affiche sa valeur
         maximale.</p>
-      type: naissance
-      citation: Tu ignores jusqu’où tout cela va fatalement nous mener. Moi, je sais.
+      type: peuple
     effects: []
     folder: lLVYkr2eG13xLU7R
     sort: 200000
@@ -471,16 +481,16 @@ items:
       default: 0
     _key: '!actors.items!4GMzCvvA8UBx3rLn.Mg0Rj0WAV8o2MDFt'
   - type: pouvoir
-    name: Triomphe
+    name: Triomphe mascarille
     _id: RJFWJAbPmjoDJcaO
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
-      description: >-
-        <p>L’action d’un autre personnage a pour conséquence un échec : faites
-        immédiatement agir Ackbar. Cette action supplémentaire est gratuite.</p>
-      type: naissance
       citation: Profite de ta défaite pour assister à ma victoire !
+      description: >-
+        <p>L'action d'un autre personnage a pour conséquence un échec : faites
+        immédiatement agir Ackbar. Cette action supplémentaire est gratuite.</p>
+      type: ton
     effects: []
     folder: lLVYkr2eG13xLU7R
     sort: 150000

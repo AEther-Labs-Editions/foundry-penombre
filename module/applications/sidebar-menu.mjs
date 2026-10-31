@@ -1,5 +1,6 @@
 const { HandlebarsApplicationMixin } = foundry.applications.api
 const { AbstractSidebarTab } = foundry.applications.sidebar
+import PenombreRappelRegles from "./rappel-regles.mjs"
 
 export default class PenombreSidebarMenu extends HandlebarsApplicationMixin(AbstractSidebarTab) {
   /** @inheritDoc */
@@ -30,6 +31,9 @@ export default class PenombreSidebarMenu extends HandlebarsApplicationMixin(Abst
         break
       case "group":
         if (!foundry.applications.instances.has("penombre-group-manager")) game.system.applicationGroupManager.render({ force: true })
+        break
+      case "regles":
+        PenombreRappelRegles.ouvrir()
         break
       default:
         break

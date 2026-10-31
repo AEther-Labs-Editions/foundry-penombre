@@ -6,11 +6,12 @@ styles/**/*.css
 node_modules/
 
 # Foundry VTT
-packs
+/packs/
 styles/**/*.css
 
 # Tools
 CLAUDE.md
+factions.md
 .claudeignore
 source/
 

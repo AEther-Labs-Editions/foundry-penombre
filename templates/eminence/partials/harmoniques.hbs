@@ -1,14 +1,12 @@
 {{!log "harmoniques" this}}
 <div class="eminence-harmoniques flexible">
   <div class="col-1-1 text-vertical-harmoniques">{{localize "PENOMBRE.ui.section.harmoniques"}}</div>
-  <div class="col-2-1 frise-verticale">
-    <img class="" src="systems/penombre/assets/ui/grise.webp" />
-  </div>
+  <div class="col-2-1 frise-verticale"></div>
   <div class="col-3-1 flexible">
-    {{!-- Une seule boucle : la disposition (rangée, colonne, décalage) vient de SYSTEM.HARMONIQUES_FICHE. Des div et non figure/figcaption : Foundry leur applique un style d'article (marges, cadre, italique) --}}
+    {{!-- Une seule boucle : la position de chaque dé (x, y) vient de SYSTEM.HARMONIQUES_FICHE. Des div et non figure/figcaption : Foundry leur applique un style d'article (marges, cadre, italique) --}}
     <div class="harmoniques-grille">
       {{#each harmoniques as |h|}}
-      <div class="harmonique" data-harmonique="{{h.id}}" data-colonne="{{h.colonne}}" data-tooltip="{{h.tooltip}}" style="--rangee: {{h.rangee}}; --decalage: {{h.decalage}}px;">
+      <div class="harmonique" data-harmonique="{{h.id}}" data-tooltip="{{h.tooltip}}" style="--x: {{h.x}}px; --y: {{h.y}}px;">
         <div class="harmonique-de">
           <img class="harmonique-case" src="systems/penombre/assets/ui/case_de_penombre.webp" alt="" />
           {{#if @root.unlocked}}

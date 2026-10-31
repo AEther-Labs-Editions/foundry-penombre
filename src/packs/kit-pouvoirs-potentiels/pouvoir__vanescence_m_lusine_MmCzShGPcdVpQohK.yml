@@ -1,13 +1,13 @@
 type: pouvoir
-name: Évanescence
+name: Évanescence mélusine
 img: systems/penombre/assets/icons/pouvoir.webp
 system:
   utilise: false
+  citation: As-tu déjà essayé de porter une écharpe de brume ?
   description: >-
-    <h1>Évanescence</h1><p><em>As-tu déjà essayé de porter une écharpe de brume
-    ?</em></p><p>Esmeralda esquive automatiquement une menace physique portée
-    contre elle (attaque, piège, chute de pierres…)</p>
-  type: naissance
+    <p>Esmeralda esquive automatiquement une menace physique portée contre elle
+    (attaque, piège, chute de pierres, etc.).</p>
+  type: gamme
 effects: []
 folder: WiYkAwp3Zlbrgg5T
 ownership:

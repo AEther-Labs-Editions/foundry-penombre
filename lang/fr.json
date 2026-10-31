@@ -389,7 +389,7 @@
       "conscienceDispo": "Dispo",
       "modeEdition": "Bascule entre le Mode « Éditer » et le Mode « Jouer »",
       "clicImage": "Clic pour changer l'image. <br>Clic-droit pour réinitialiser l'image par défaut.",
-      "complicationsListe": "Complications :",
+      "complicationsListe": "Complications",
       "pouvoir": "Pouvoir",
       "pouvoirs": "Pouvoirs",
       "atout": "Atout",
@@ -430,6 +430,7 @@
       "harmonique": "Harmonique",
       "prerequis": "Prérequis",
       "niveau": "Niveau",
+      "niveauTooltip": "Niveau {niveau}",
       "niveau:": "Niveau : ",
       "bonusTotal": "Bonus total",
       "bonus": "Bonus",
@@ -456,7 +457,9 @@
       "relanceConscience": "Relance (conscience)",
       "relanceReserve": "Relance (réserve)",
       "utilise": "Utilisé",
-      "valeur": "Valeur"
+      "nonUtilise": "Non utilisé",
+      "valeur": "Valeur",
+      "valeurTooltip": "Valeur {valeur}"
     },
     "Roll": {
       "fausseNote": "Fausse note",
@@ -468,6 +471,7 @@
       "jetonsDepassement": "Trop de jetons sélectionnés",
       "jetonsConscienceInsuffisants": "Vous avez demandé {demande} jeton(s) de conscience alors qu’il ne vous en reste plus que {actuel} !",
       "jetonsReserveInsuffisants": "Vous avez demandé {demande} jeton(s) de la réserve collégiale alors qu’il n’en reste actuellement plus que {actuel} !",
+      "jetonsReserveFactionRequis": "Un atout collégial doit être payé par un jeton de la réserve collégiale (au moins {minimum} attendu(s)).",
       "limiteNbJetonsDemo": "Avec le style de jeu « Kit de démo », le nombre maximum de jetons dans la réserve collégiale sera forcé à 10.",
       "userSansActeur": "L’utilisateur {user} n’a pas d’acteur associé."
     },
@@ -487,6 +491,10 @@
         "name": "Nombre de jetons de la Réserve Collégiale",
         "hint": "Nombre maximum de jetons disponibles dans la Réserve Collégiale."
       },
+      "afficherRecapitulatif": {
+        "name": "Afficher le rappel des règles sur la fiche",
+        "hint": "Affiche, en bas de la fiche d’Éminence grise, le rappel des dépenses de jetons et du tableau des résultats. Réglage propre à chaque joueur ; le rappel reste accessible depuis le menu Pénombre de la barre latérale."
+      },
       "desSpeciaux": {
         "name": "Activer les dés Pénombre",
         "hint": "Utiliser les dés spéciaux Pénombre quand le module Dice So Nice est activé."
@@ -494,14 +502,50 @@
       "desSpeciauxTexture": {
         "name": "Activer les textures des dés Pénombre",
         "hint": "Utiliser les textures des dés spéciaux Pénombre quand le module Dice So Nice est activé."
+      },
+      "utiliserFactions": {
+        "name": "Activer le Jeu des Factions",
+        "hint": "Ajoute la gestion des factions (atouts et complications collégiaux) à la Réserve Collégiale."
       }
     },
     "ReserveCollegiale": {
       "title": "Réserve Collégiale"
     },
+    "Factions": {
+      "title": "Relations",
+      "creer": "Nouvelle relation",
+      "nomRelation": "Nom de la relation",
+      "nouvelleFaction": "Nouvelle faction",
+      "supprimerFaction": "Supprimer la relation",
+      "confirmerSuppression": "Voulez-vous vraiment supprimer cette relation et tous ses atouts et complications collégiaux ?",
+      "nouvelAtout": "Nouvel atout",
+      "nouvelAtoutPlaceholder": "Nouvel atout…",
+      "supprimerAtout": "Supprimer l’atout collégial",
+      "confirmerSuppressionAtout": "Supprimer l’atout collégial « {nom} » ?",
+      "rembourserPotentiel": "Perdu pour des raisons narratives : remettre {nb} point(s) dans le potentiel collégial",
+      "complication": "Complication",
+      "nouvelleComplication": "Nouvelle complication",
+      "nouvelleComplicationPlaceholder": "Nouvelle complication…",
+      "atoutsFaction": "Atouts de faction",
+      "potentiel": "Potentiel collégial",
+      "potentielLibelle": "Potentiel",
+      "potentielTooltip": "Potentiel collégial : points utilisés pour créer de nouveaux atouts collégiaux en cours de partie.",
+      "complicationDepuisJet": "Complication née d’un jet",
+      "cibleComplication": "Cible de la complication",
+      "cibleMoi": "Moi",
+      "cibleFaction": "Faction",
+      "choisirAtoutDegrade": "Fausse note : choisissez l’atout collégial dont le niveau baisse",
+      "choisir": "Choisir",
+      "atoutDegrade": "Le niveau de l’atout collégial « {nom} » ({faction}) baisse d’un niveau."
+    },
     "GroupManager": {
       "title": "Gestionnaire de groupe",
       "noMembers": "Aucun joueur connecté avec une Éminence grise assignée"
+    },
+    "RappelRegles": {
+      "title": "Rappel des règles",
+      "depenses": "Il est possible de dépenser 1 jeton (réserve collégiale ou conscience) pour : avant le lancer, transformer 1 action en action collégiale, produire 1 effet magique, compenser 1 niveau de maîtrise magique manquant, remplacer 1 dé harmonique par 1D20 merveilleux, mobiliser 1 atout supplémentaire ; après le lancer, relancer tout ou partie de ses dés.",
+      "resultats": "Résultat et succès : 1-3 : 0, 4-7 : 1, 8-11 : 2, 12-15 : 3, 16-19 : 4, 20 : 5."
     },
     "Sidebar": {
       "title": "Pénombre",
@@ -517,6 +561,8 @@
       "reserveTooltip": "Ouvre la Réserve collégiale",
       "group": "Gestionnaire de groupe",
       "groupTooltip": "Ouvre le gestionnaire de groupe",
+      "regles": "Rappel des règles",
+      "reglesTooltip": "Ouvre le rappel des règles (dépenses de jetons, résultats et succès) dans une fenêtre",
       "bugReport": "Signaler un bug",
       "bugReportTooltip": "Signaler un bug ou faire une suggestion d’amélioration sur GitHub",
       "video": "Présentation vidéo du système",

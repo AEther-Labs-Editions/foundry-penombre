@@ -1,16 +1,93 @@
 {{!log "reserve collegiale" this}}
-<div class="div-jetons{{#unless useImageDisplay}}-2{{/unless}}">
-  {{#unless useImageDisplay}}
-  <div class="col-1-1 text-vertical">{{localize "PENOMBRE.ui.reserveCollegiale"}}</div>
-  <div class="col-2-1 frise-verticale">
-    <img class="" src="systems/penombre/assets/ui/doree.webp" alt="" />
-  </div>
-  {{/unless}}
-  <div class="jetons jetons-{{ifThen isGM 'gm' 'player'}}">
-    {{#each jetons}}
-      <div class="jeton {{ifThen this.valeur 'active' 'inactive'}}">
-        <img class="jeton jeton-{{@key}} absolue jeton-contextmenu dropshadow-{{ifThen this.valeur 'actif' 'inactif'}}" data-action="jeton" data-index="{{@key}}" src="{{getJetonImage this.valeur}}"  data-tooltip="{{localize 'PENOMBRE.ui.jeton'}} {{@key}}"/>
-      </div>
+{{!-- Ligne d'atout ou de complication de la feuille collégiale : nom sur une ligne pointillée, cases à droite --}}
+{{#*inline "ligneElement"}}
+<div class="ligne ligne-element{{#unless element.id}} vide{{/unless}}">
+  {{#if @root.unlocked}}
+  <input type="text" class="element-nom" value="{{element.nom}}" data-faction-id="{{factionId}}" {{#if element.id}}data-element-id="{{element.id}}"{{/if}} data-element-type="{{type}}" {{#unless element.id}}placeholder="{{localize placeholder}}"{{/unless}} />
+  {{#if element.id}}
+  <a class="btn-supprimer" data-action="deleteFactionElement" data-faction-id="{{factionId}}" data-element-id="{{element.id}}" data-element-type="{{type}}" data-tooltip="{{localize 'PENOMBRE.ui.delete'}}">
+    <i class="fa-solid fa-xmark"></i>
+  </a>
+  {{/if}}
+  {{else}}
+  <span class="element-nom-readonly">{{element.nom}}</span>
+  {{/if}}
+  <div class="cases cases-{{type}}">
+    {{#each element.cases as |case|}}
+    {{#if (and @root.unlocked ../element.id)}}
+    <img class="case cliquable" src="{{case.src}}" alt="" data-action="changeFactionElementValeur" data-faction-id="{{../factionId}}" data-element-id="{{../element.id}}" data-element-type="{{../type}}" data-valeur="{{case.niveau}}" />
+    {{else}}
+    <img class="case" src="{{case.src}}" alt="" />
+    {{/if}}
     {{/each}}
   </div>
+</div>
+{{/inline}}
+<div class="reserve-wrapper">
+  <div class="div-jetons{{#unless useImageDisplay}}-2{{/unless}}">
+    {{#unless useImageDisplay}}
+    <div class="col-1-1 text-vertical">{{localize "PENOMBRE.ui.reserveCollegiale"}}</div>
+    <div class="col-2-1 frise-verticale">
+      <img class="" src="systems/penombre/assets/ui/doree.webp" alt="" />
+    </div>
+    {{/unless}}
+    <div class="jetons jetons-{{ifThen isGM 'gm' 'player'}}">
+      {{#each jetons}}
+        <div class="jeton {{ifThen this.valeur 'active' 'inactive'}}">
+          <img class="jeton jeton-{{@key}} absolue jeton-contextmenu dropshadow-{{ifThen this.valeur 'actif' 'inactif'}}" data-action="jeton" data-index="{{@key}}" src="{{getJetonImage this.valeur}}"  data-tooltip="{{localize 'PENOMBRE.ui.jeton'}} {{@key}}"/>
+        </div>
+      {{/each}}
+    </div>
+
+    {{#if showFactions}}
+    {{!-- Médaillon « Potentiel » de la feuille collégiale étendue --}}
+    <div class="div-potentiel" data-tooltip="{{localize 'PENOMBRE.Factions.potentielTooltip'}}">
+      <img class="img-potentiel" src="systems/penombre/assets/ui/potentiel.webp" alt="" />
+      {{#if unlocked}}
+      <input type="number" class="potentiel-valeur" min="0" step="1" value="{{potentiel}}" aria-label="{{localize 'PENOMBRE.Factions.potentiel'}}" />
+      {{else}}
+      <span class="potentiel-valeur">{{potentiel}}</span>
+      {{/if}}
+      <span class="potentiel-libelle">{{localize "PENOMBRE.Factions.potentielLibelle"}}</span>
+    </div>
+    {{/if}}
+  </div>
+
+  {{#if showFactions}}
+  <div class="div-factions">
+    <h2 class="relations-titre">
+      <img src="systems/penombre/assets/ui/relations-titre.webp" alt="{{localize 'PENOMBRE.Factions.title'}}" />
+    </h2>
+    {{#each factions as |faction|}}
+    <section class="faction{{#if faction.rouge}} rouge{{/if}}" data-faction-id="{{faction.id}}">
+      <div class="ligne ligne-nom">
+        <span class="libelle">{{localize "PENOMBRE.Factions.nomRelation"}}</span>
+        {{#if @root.unlocked}}
+        <input type="text" class="faction-nom" value="{{faction.nom}}" data-faction-id="{{faction.id}}" />
+        <a class="btn-supprimer" data-action="deleteFaction" data-faction-id="{{faction.id}}" data-tooltip="{{localize 'PENOMBRE.Factions.supprimerFaction'}}">
+          <i class="fa-solid fa-trash"></i>
+        </a>
+        {{else}}
+        <span class="faction-nom-readonly">{{faction.nom}}</span>
+        {{/if}}
+      </div>
+      {{#if faction.atouts.length}}
+      <div class="libelle">{{localize "PENOMBRE.ui.atouts"}}</div>
+      {{#each faction.atouts as |atout|}}
+      {{> ligneElement element=atout factionId=faction.id type="atout" placeholder="PENOMBRE.Factions.nouvelAtoutPlaceholder"}}
+      {{/each}}
+      {{/if}}
+      {{#if faction.complication}}
+      <div class="libelle">{{localize "PENOMBRE.Factions.complication"}}</div>
+      {{> ligneElement element=faction.complication factionId=faction.id type="complication" placeholder="PENOMBRE.Factions.nouvelleComplicationPlaceholder"}}
+      {{/if}}
+    </section>
+    {{/each}}
+    {{#if unlocked}}
+    <a class="btn-creer-faction" data-action="createFaction">
+      <i class="fa-solid fa-plus"></i> {{localize "PENOMBRE.Factions.creer"}}
+    </a>
+    {{/if}}
+  </div>
+  {{/if}}
 </div>

@@ -61,6 +61,10 @@ penombre-toggle-switch[checked] thumb {
   font-family: "NotoMusic";
   src: url(/systems/penombre/fonts/noto-music/NotoMusic-Regular.ttf);
 }
+@font-face {
+  font-family: "GoudyBookletter1911";
+  src: url(/systems/penombre/fonts/goudy-bookletter-1911/GoudyBookletter1911.ttf);
+}
 /* ---------------------------------------------
         Mixins
 --------------------------------------------- */
@@ -113,14 +117,6 @@ penombre-toggle-switch[checked] thumb {
 /* ---------------------------------------------
         Tooltips custom
 --------------------------------------------- */
-#tooltip.pouvoir-tooltip {
-  max-width: 640px;
-  text-align: left;
-}
-#tooltip.pouvoir-tooltip .pouvoir-tooltip-citation {
-  font-style: italic;
-  margin-bottom: 0.5em;
-}
 /* ---------------------------------------------
         Thème Clair
 --------------------------------------------- */
@@ -131,8 +127,64 @@ body {
 }
 body.theme-light .penombre.eminence .eminence-content {
   background-color: #faeed6;
-  background-image: url("/systems/penombre/assets/background/fond.webp");
-  background-repeat: repeat;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-personnage {
+  background: url("/systems/penombre/assets/ui/fiche-filet.webp") left bottom / 100% 18px no-repeat, url("/systems/penombre/assets/ui/fiche-fond-personnage.webp") left top / 100% 100% no-repeat;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-personnage:last-child {
+  background: url("/systems/penombre/assets/ui/fiche-fond-personnage.webp") left top / 100% 100% no-repeat;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-conscience {
+  background: url("/systems/penombre/assets/ui/fiche-filet.webp") left bottom / 100% 18px no-repeat, url("/systems/penombre/assets/ui/fiche-fond-conscience.webp") left top / 100% 100% no-repeat;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-conscience:last-child {
+  background: url("/systems/penombre/assets/ui/fiche-fond-conscience.webp") left top / 100% 100% no-repeat;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-harmoniques {
+  background-color: #fbf3de;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre {
+  background: url("/systems/penombre/assets/ui/fiche-filet.webp") left bottom / 100% 18px no-repeat, url("/systems/penombre/assets/ui/fiche-fond-timbre.webp") left top / 100% 100% no-repeat;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-timbre:last-child {
+  background: url("/systems/penombre/assets/ui/fiche-fond-timbre.webp") left top / 100% 100% no-repeat;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-pouvoirs {
+  background: url("/systems/penombre/assets/ui/fiche-filet.webp") left bottom / 100% 18px no-repeat, url("/systems/penombre/assets/ui/fiche-ornement-pouvoirs.webp") left top / 222px auto no-repeat, url("/systems/penombre/assets/ui/fiche-fond-pouvoirs.webp") left top / 100% 100% no-repeat;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-pouvoirs:last-child {
+  background: url("/systems/penombre/assets/ui/fiche-ornement-pouvoirs.webp") left top / 222px auto no-repeat, url("/systems/penombre/assets/ui/fiche-fond-pouvoirs.webp") left top / 100% 100% no-repeat;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-atouts {
+  background: url("/systems/penombre/assets/ui/fiche-filet.webp") left bottom / 100% 18px no-repeat, url("/systems/penombre/assets/ui/fiche-ornement-atouts.webp") left top / 135px auto no-repeat, url("/systems/penombre/assets/ui/fiche-fond-atouts.webp") left top / 100% 100% no-repeat;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-atouts:last-child {
+  background: url("/systems/penombre/assets/ui/fiche-ornement-atouts.webp") left top / 135px auto no-repeat, url("/systems/penombre/assets/ui/fiche-fond-atouts.webp") left top / 100% 100% no-repeat;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-maitrises {
+  background: url("/systems/penombre/assets/ui/fiche-filet.webp") left bottom / 100% 18px no-repeat, url("/systems/penombre/assets/ui/fiche-ornement-maitrises.webp") left top / 135px auto no-repeat, url("/systems/penombre/assets/ui/fiche-fond-maitrises.webp") left top / 100% 100% no-repeat;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-maitrises:last-child {
+  background: url("/systems/penombre/assets/ui/fiche-ornement-maitrises.webp") left top / 135px auto no-repeat, url("/systems/penombre/assets/ui/fiche-fond-maitrises.webp") left top / 100% 100% no-repeat;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-recapitulatif {
+  background: url("/systems/penombre/assets/ui/fiche-filet.webp") left bottom / 100% 18px no-repeat, url("/systems/penombre/assets/ui/fiche-fond-recapitulatif.webp") left top / 100% 100% no-repeat;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-recapitulatif:last-child {
+  background: url("/systems/penombre/assets/ui/fiche-fond-recapitulatif.webp") left top / 100% 100% no-repeat;
+}
+body.theme-light .penombre.eminence .eminence-content .titre-section-pouvoirs,
+body.theme-light .penombre.eminence .eminence-content .titre-section-atouts,
+body.theme-light .penombre.eminence .eminence-content .titre-section-maitrises {
+  color: #1b1a1a;
+}
+body.theme-light .penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel span,
+body.theme-light .penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel span,
+body.theme-light .penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel span {
+  color: #683323;
+}
+body.theme-light .penombre.eminence .eminence-content .harmoniques-grille {
+  background: url("/systems/penombre/assets/ui/fiche-ornement-harmoniques.webp") 127px 34px / auto 246px no-repeat;
 }
 body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .label-timbre {
   color: #56605b;
@@ -151,7 +203,7 @@ body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-ti
 }
 body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .col-2-2 {
   margin-top: 30px;
-  width: 101px;
+  width: 115px;
   display: grid;
   grid-template-columns: 20px minmax(0, 1fr);
 }
@@ -161,6 +213,7 @@ body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-ti
 body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .col-2-2 span {
   margin-left: 0;
   width: auto;
+  font-size: 20px;
 }
 body.theme-light .penombre.eminence .eminence-content .eminence-timbre .datas-timbre .col-3-2 {
   width: auto;
@@ -186,6 +239,10 @@ body.theme-dark .penombre.eminence .eminence-content .logo-penombre {
 }
 body.theme-dark .penombre.eminence .eminence-content .frise-penombre {
   content: url("/systems/penombre/assets/ui/frise_plus_grande_sur_fond_sombre.webp");
+}
+body.theme-dark .penombre.eminence .eminence-content .ligne-conscience .rond-valeur,
+body.theme-dark .penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication .div-descriptions .form-fields {
+  color: #faeed6;
 }
 body.theme-dark .penombre.eminence .eminence-timbre.avance {
   min-height: 110px;
@@ -246,9 +303,27 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
   min-height: 90px;
 }
 .penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .label-timbre {
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+  font-size: 25px;
   color: #56605b;
 }
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .label-timbre::before,
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .label-timbre::after {
+  content: "";
+  width: 28px;
+  height: 14px;
+  background: center / contain no-repeat;
+}
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .label-timbre::before {
+  background-image: url("/systems/penombre/assets/ui/fiche-titre-volute-gauche.webp");
+}
+.penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .label-timbre::after {
+  background-image: url("/systems/penombre/assets/ui/fiche-titre-volute-droite.webp");
+}
 .penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .label-peste {
+  font-size: 25px;
   color: #917f35;
 }
 .penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre label {
@@ -328,7 +403,7 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
 .penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .col-2-2 {
   grid-column: 2;
   margin-top: 30px;
-  width: 101px;
+  width: 115px;
   display: grid;
   grid-template-columns: 20px minmax(0, 1fr);
 }
@@ -338,6 +413,7 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
 .penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .col-2-2 span {
   margin-left: 0;
   width: auto;
+  font-size: 20px;
 }
 .penombre.eminence .eminence-content .eminence-timbre.avance .datas-timbre .col-2-2 .statut-timbre-case:hover {
   cursor: pointer;
@@ -372,29 +448,51 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
   width: 450px;
 }
 .penombre.eminence .eminence-content .col-2 {
-  flex: 0 0 23px;
-  width: 23px;
-  padding: 0 3px;
-  display: flex;
-  flex-direction: column;
+  flex: 0 0 16px;
+  width: 16px;
+  background: url("/systems/penombre/assets/ui/fiche-filet-vertical.webp") center top / 16px auto repeat-y;
 }
-.penombre.eminence .eminence-content .col-2 .grande-frise-verticale-1,
-.penombre.eminence .eminence-content .col-2 .grande-frise-verticale-2,
-.penombre.eminence .eminence-content .col-2 .grande-frise-verticale-3,
-.penombre.eminence .eminence-content .col-2 .grande-frise-verticale-4,
-.penombre.eminence .eminence-content .col-2 .grande-frise-verticale-5 {
-  flex: 1 1 0px;
-  min-height: 0;
-  overflow: hidden;
+.penombre.eminence .eminence-content .col-1 > :last-child,
+.penombre.eminence .eminence-content .col-3 > :last-child {
+  padding-bottom: 2px;
+  background: none;
 }
-.penombre.eminence .eminence-content .col-2 .grande-frise-verticale-1 img,
-.penombre.eminence .eminence-content .col-2 .grande-frise-verticale-2 img,
-.penombre.eminence .eminence-content .col-2 .grande-frise-verticale-3 img,
-.penombre.eminence .eminence-content .col-2 .grande-frise-verticale-4 img,
-.penombre.eminence .eminence-content .col-2 .grande-frise-verticale-5 img {
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
+.penombre.eminence .eminence-content .eminence-personnage::after,
+.penombre.eminence .eminence-content .eminence-harmoniques::after,
+.penombre.eminence .eminence-content .eminence-harmoniques::before,
+.penombre.eminence .eminence-content .eminence-timbre::after {
+  content: "";
+  position: absolute;
+  z-index: 6;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.penombre.eminence .eminence-content .eminence-personnage::after {
+  right: -17px;
+  bottom: -9px;
+  width: 28px;
+  height: 34px;
+  background-image: url("/systems/penombre/assets/ui/fiche-noeud-losange.webp");
+}
+.penombre.eminence .eminence-content .eminence-harmoniques::before {
+  inset: -1px 0 14px auto;
+  width: 70px;
+  background: url("/systems/penombre/assets/ui/fiche-volutes-bas.webp") right top / 55px auto no-repeat, url("/systems/penombre/assets/ui/fiche-volutes-haut.webp") right bottom / 70px auto no-repeat;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques::after {
+  right: -18px;
+  bottom: -12px;
+  width: 30px;
+  height: 40px;
+  background-image: url("/systems/penombre/assets/ui/fiche-noeud-rosace.webp");
+}
+.penombre.eminence .eminence-content .eminence-timbre::after {
+  left: -25px;
+  bottom: -38px;
+  width: 55px;
+  height: 91px;
+  background-image: url("/systems/penombre/assets/ui/fiche-croisement-timbre.webp");
 }
 .penombre.eminence .eminence-content .col-3 {
   flex: 1 1 auto;
@@ -422,10 +520,10 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
 .penombre.eminence .eminence-content .eminence-personnage,
 .penombre.eminence .eminence-content .eminence-harmoniques,
 .penombre.eminence .eminence-content .eminence-conscience {
-  border: 1px solid #a56135;
-  padding: 2px;
-  border-radius: 6px;
+  position: relative;
+  padding: 2px 2px 18px;
   min-width: auto;
+  background: url("/systems/penombre/assets/ui/fiche-filet.webp") left bottom / 100% 18px no-repeat;
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -434,23 +532,24 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
 .penombre.eminence .eminence-content .eminence-atouts,
 .penombre.eminence .eminence-content .eminence-maitrises,
 .penombre.eminence .eminence-content .eminence-recapitulatif {
-  border: 1px solid #a56135;
-  padding: 2px;
-  border-radius: 6px;
+  position: relative;
+  padding: 2px 2px 18px;
   min-width: 635px;
+  background: url("/systems/penombre/assets/ui/fiche-filet.webp") left bottom / 100% 18px no-repeat;
 }
 .penombre.eminence .eminence-content .eminence-timbre {
-  border: 1px solid #a56135;
-  padding: 2px;
-  border-radius: 6px;
+  position: relative;
+  padding: 2px 2px 18px;
   min-width: 635px;
-  border: none;
+  background: url("/systems/penombre/assets/ui/fiche-filet.webp") left bottom / 100% 18px no-repeat;
+  padding-bottom: 26px;
 }
 .penombre.eminence .eminence-content .text-vertical-personnage,
 .penombre.eminence .eminence-content .text-vertical-harmoniques,
 .penombre.eminence .eminence-content .text-vertical-conscience {
   letter-spacing: 5px;
-  font-size: 19px;
+  font-size: 23px;
+  line-height: 1;
   writing-mode: vertical-rl;
   text-orientation: sideways-left;
 }
@@ -495,6 +594,7 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
   grid-column: 2;
   width: auto;
   min-width: 0;
+  padding-right: 10px;
 }
 .penombre.eminence .eminence-content .eminence-personnage .data .name {
   font-size: 35px;
@@ -512,10 +612,40 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
   color: #124b63;
   text-align: center;
 }
+.penombre.eminence .eminence-content .eminence-personnage .data .form-group .form-fields {
+  letter-spacing: 1px;
+}
+.penombre.eminence .eminence-content .eminence-personnage .data .form-group label {
+  font-family: "GoudyBookletter1911", var(--font-serif);
+  font-size: 20px;
+  font-weight: normal;
+  color: #612b21;
+}
+.penombre.eminence .eminence-content .eminence-personnage .col-1-1 {
+  align-self: center;
+}
+.penombre.eminence .eminence-content .eminence-personnage .col-2-1 {
+  padding: 44.28571429px 0 42.85714286px;
+  background: url("/systems/penombre/assets/ui/frise-marron-haut.webp") center top / 100% auto no-repeat border-box, url("/systems/penombre/assets/ui/frise-marron-bas.webp") center bottom / 100% auto no-repeat border-box, url("/systems/penombre/assets/ui/frise-marron-milieu.webp") center top / 100% auto repeat-y content-box;
+}
+.penombre.eminence .eminence-content .eminence-conscience .col-1-1 {
+  align-self: center;
+}
+.penombre.eminence .eminence-content .eminence-conscience .col-2-1 {
+  padding: 44.28571429px 0 42.85714286px;
+  background: url("/systems/penombre/assets/ui/frise-doree-haut.webp") center top / 100% auto no-repeat border-box, url("/systems/penombre/assets/ui/frise-doree-bas.webp") center bottom / 100% auto no-repeat border-box, url("/systems/penombre/assets/ui/frise-doree-milieu.webp") center top / 100% auto repeat-y content-box;
+}
 .penombre.eminence .eminence-content .eminence-harmoniques {
   box-sizing: border-box;
-  height: 324px;
-  min-height: 324px;
+  height: 370px;
+  min-height: 370px;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .col-1-1 {
+  align-self: center;
+}
+.penombre.eminence .eminence-content .eminence-harmoniques .col-2-1 {
+  padding: 44.28571429px 0 42.85714286px;
+  background: url("/systems/penombre/assets/ui/frise-grise-haut.webp") center top / 100% auto no-repeat border-box, url("/systems/penombre/assets/ui/frise-grise-bas.webp") center bottom / 100% auto no-repeat border-box, url("/systems/penombre/assets/ui/frise-grise-milieu.webp") center top / 100% auto repeat-y content-box;
 }
 .penombre.eminence .eminence-content .eminence-conscience-locked .col-3-1 .col-1-3 {
   display: flex;
@@ -524,19 +654,32 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
 .penombre.eminence .eminence-content .eminence-conscience-locked .col-3-1 .col-1-3 .ligne-conscience {
   display: flex;
   align-items: center;
-  align-content: center;
-  margin-left: 20px;
-  height: 32px;
+  justify-content: space-around;
+  margin: 6px 0 0;
+}
+.penombre.eminence .eminence-content .eminence-conscience-locked .col-3-1 .col-1-3 .ligne-conscience .rond-conscience {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.penombre.eminence .eminence-content .eminence-conscience-locked .col-3-1 .col-1-3 .ligne-conscience .rond-valeur {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 42px;
+  height: 42px;
+  padding-right: 11px;
+  background: url("/systems/penombre/assets/ui/fiche-cercle.webp") center / contain no-repeat;
+  font-family: "ChocoCovRainBold";
+  font-size: 29px;
+  line-height: 1;
+  color: #56605b;
 }
 .penombre.eminence .eminence-content .eminence-conscience-locked .col-3-1 .col-1-3 .ligne-conscience label {
-  font-family: "Cattedrale";
-  display: inline-block;
-  width: 120px;
-  font-weight: bold;
-}
-.penombre.eminence .eminence-content .eminence-conscience-locked .col-3-1 .col-1-3 .ligne-conscience span {
-  margin: 0 5px;
-  width: 50px;
+  font-family: "ChocoCovRainBold";
+  font-size: 25px;
+  color: #917f35;
 }
 .penombre.eminence .eminence-content .eminence-conscience {
   color: #917f35;
@@ -559,6 +702,9 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
   cursor: pointer;
 }
 .penombre.eminence .eminence-content .eminence-conscience .div-jetons .jeton {
+  width: 80%;
+  justify-self: center;
+  align-self: center;
   text-align: center;
 }
 .penombre.eminence .eminence-content .eminence-conscience .cadre-complications-2 {
@@ -603,12 +749,20 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
 }
 .penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication {
   display: flex;
+  align-items: center;
 }
 .penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication .div-descriptions-2 input {
   width: 600px;
 }
 .penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication .div-descriptions {
   width: 320px;
+}
+.penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication .div-descriptions .form-fields {
+  justify-content: flex-start;
+  text-align: left;
+  font-family: "GoudyBookletter1911", var(--font-serif);
+  font-size: 19px;
+  color: #3b2b20;
 }
 .penombre.eminence .eminence-content .eminence-conscience .cadre-complications .ligne-complication .div-cases {
   width: 70px;
@@ -624,14 +778,25 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
   width: 20px;
   height: 20px;
 }
+.penombre.eminence .eminence-content .eminence-conscience .titre-complications {
+  width: 402px;
+  margin: 6px 0 2px;
+  text-align: right;
+  font-family: "ChocoCovRainBold";
+  font-size: 29px;
+  line-height: 1;
+  color: #56605b;
+}
 .penombre.eminence .eminence-content .eminence-conscience .note-jetons {
+  margin-top: 2px;
   text-align: center;
+  font-family: var(--font-serif);
+  font-size: 17px;
   color: #56605b;
 }
 .penombre.eminence .eminence-content .eminence-harmoniques {
   --taille-de: 85px;
   --taille-nom: 30px;
-  --ecart-colonnes: 32px;
   color: #56605b;
 }
 .penombre.eminence .eminence-content .eminence-harmoniques .click:hover {
@@ -640,29 +805,19 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
   filter: drop-shadow(0px 0px 6px #af010a);
 }
 .penombre.eminence .eminence-content .eminence-harmoniques .harmoniques-grille {
-  display: grid;
-  grid-template-columns: max-content max-content;
-  column-gap: var(--ecart-colonnes);
-  justify-content: start;
-  width: 405px;
+  position: relative;
+  width: 404px;
+  height: 100%;
   background: var(--table-background-color);
 }
 .penombre.eminence .eminence-content .eminence-harmoniques .harmonique {
-  grid-row: var(--rangee);
-  justify-self: start;
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--taille-de);
   display: flex;
-  gap: 3px;
-  padding: 8px 16px;
-}
-.penombre.eminence .eminence-content .eminence-harmoniques .harmonique[data-colonne="gauche"] {
-  grid-column: 1;
-}
-.penombre.eminence .eminence-content .eminence-harmoniques .harmonique[data-colonne="droite"] {
-  grid-column: 2;
-}
-.penombre.eminence .eminence-content .eminence-harmoniques .harmonique[data-colonne="centre"] {
-  grid-column: 1 / -1;
-  margin-left: var(--ecart-colonnes);
+  flex-direction: column;
+  align-items: center;
 }
 .penombre.eminence .eminence-content .eminence-harmoniques .harmonique-de {
   position: relative;
@@ -671,7 +826,6 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
   flex: none;
   width: var(--taille-de);
   height: var(--taille-de);
-  margin-left: var(--decalage);
 }
 .penombre.eminence .eminence-content .eminence-harmoniques .harmonique-de > * {
   grid-area: 1 / 1;
@@ -693,16 +847,42 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
   font-size: 30px;
 }
 .penombre.eminence .eminence-content .eminence-harmoniques .harmonique-nom {
+  margin-top: 0;
   font-size: var(--taille-nom);
+  line-height: 1;
+  white-space: nowrap;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs {
   color: #56605b;
   text-align: center;
-  padding-bottom: 2px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .plusitem-titre {
+  position: relative;
+  top: -4px;
+  margin-left: 10px;
+  font-size: 19px;
+  vertical-align: middle;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .titre-section-pouvoirs {
-  font-size: 35px;
+  font-size: 29px;
   margin-left: 100px;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .titre-section-pouvoirs::before,
+.penombre.eminence .eminence-content .eminence-pouvoirs .titre-section-pouvoirs::after {
+  content: "";
+  display: inline-block;
+  width: 36px;
+  height: 18px;
+  vertical-align: middle;
+  background: center / contain no-repeat;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .titre-section-pouvoirs::before {
+  margin-right: 8px;
+  background-image: url("/systems/penombre/assets/ui/fiche-titre-volute-gauche.webp");
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .titre-section-pouvoirs::after {
+  margin-left: 8px;
+  background-image: url("/systems/penombre/assets/ui/fiche-titre-volute-droite.webp");
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .content {
   display: grid;
@@ -721,6 +901,8 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
   text-align: center;
   width: 100px;
   height: 110px;
+  transform: scale(0.85);
+  transform-origin: top center;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .potentiel .div-potentiel .img-potentiel {
   width: 100px;
@@ -750,59 +932,101 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
   font-size: 29px;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs {
-  margin-left: 100px;
-  width: calc(100% - 103px);
-  border: 1px solid #917f35;
-  border-radius: 4px;
-  padding: 2px;
   grid-column: 2;
   width: 100%;
   min-width: 0;
-  margin-left: 0;
+  padding: 2px;
 }
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs th {
-  padding-block: 4px;
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs .liste-pouvoirs {
+  position: relative;
+  columns: 2;
+  column-gap: 18px;
+  text-align: left;
 }
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs td {
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs .liste-pouvoirs::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(50% - 4px);
+  width: 8px;
+  box-sizing: border-box;
+  pointer-events: none;
+  padding: 29.52380952px 0 28.57142857px;
+  background: url("/systems/penombre/assets/ui/frise-grise-haut.webp") center top / 100% auto no-repeat border-box, url("/systems/penombre/assets/ui/frise-grise-bas.webp") center bottom / 100% auto no-repeat border-box, url("/systems/penombre/assets/ui/frise-grise-milieu.webp") center top / 100% auto repeat-y content-box;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs .ligne-pouvoir {
+  break-inside: avoid;
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr) auto auto;
+  align-items: center;
+  column-gap: 8px;
   padding-block: 3px;
   font-family: "ChocoCovRainBold";
   font-size: 25px;
+  line-height: 1.15;
 }
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs th.item-controls,
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs td.item-controls {
-  width: 70px;
-  font-size: 17px;
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-}
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs th.item-controls .plusitem,
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs td.item-controls .plusitem {
-  margin-left: auto;
-}
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs .item-coche {
-  width: 55px;
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs .item-name {
+  overflow-wrap: break-word;
+  -webkit-text-stroke: 0.6px currentColor;
+  letter-spacing: 0.5px;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs .item-case {
+  display: block;
   width: 20px;
   height: 20px;
 }
 .penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs .item-case:hover {
   cursor: pointer;
 }
-.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs .ligne-pouvoir {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs .item-controls {
+  width: 70px;
+  font-size: 17px;
+  vertical-align: middle;
+  text-align: right;
+  white-space: nowrap;
+  padding-right: 6px;
+  width: auto;
+  padding-right: 0;
+}
+.penombre.eminence .eminence-content .eminence-pouvoirs .content .pouvoirs .item-controls a + a {
+  margin-left: 6px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .potentiel,
+.penombre.eminence .eminence-content .eminence-maitrises .content .potentiel {
+  margin-top: -20px;
 }
 .penombre.eminence .eminence-content .eminence-atouts {
   color: #56605b;
   text-align: center;
-  padding-bottom: 2px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .plusitem-titre {
+  position: relative;
+  top: -4px;
+  margin-left: 10px;
+  font-size: 19px;
+  vertical-align: middle;
 }
 .penombre.eminence .eminence-content .eminence-atouts .titre-section-atouts {
-  font-size: 35px;
+  font-size: 29px;
   margin-left: 100px;
+}
+.penombre.eminence .eminence-content .eminence-atouts .titre-section-atouts::before,
+.penombre.eminence .eminence-content .eminence-atouts .titre-section-atouts::after {
+  content: "";
+  display: inline-block;
+  width: 36px;
+  height: 18px;
+  vertical-align: middle;
+  background: center / contain no-repeat;
+}
+.penombre.eminence .eminence-content .eminence-atouts .titre-section-atouts::before {
+  margin-right: 8px;
+  background-image: url("/systems/penombre/assets/ui/fiche-titre-volute-gauche.webp");
+}
+.penombre.eminence .eminence-content .eminence-atouts .titre-section-atouts::after {
+  margin-left: 8px;
+  background-image: url("/systems/penombre/assets/ui/fiche-titre-volute-droite.webp");
 }
 .penombre.eminence .eminence-content .eminence-atouts .content {
   display: grid;
@@ -821,6 +1045,8 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
   text-align: center;
   width: 100px;
   height: 110px;
+  transform: scale(0.85);
+  transform-origin: top center;
 }
 .penombre.eminence .eminence-content .eminence-atouts .content .potentiel .div-potentiel .img-potentiel {
   width: 100px;
@@ -852,13 +1078,18 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
 .penombre.eminence .eminence-content .eminence-atouts .content .atouts {
   margin-left: 100px;
   width: calc(100% - 103px);
-  border: 1px solid #917f35;
-  border-radius: 4px;
   padding: 2px;
   grid-column: 2;
   width: 100%;
   min-width: 0;
   margin-left: 0;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts table,
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts tr,
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts tr:nth-child(odd),
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts tr:nth-child(even) {
+  border: none;
+  background: none;
 }
 .penombre.eminence .eminence-content .eminence-atouts .content .atouts th {
   padding-block: 4px;
@@ -872,35 +1103,70 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
 .penombre.eminence .eminence-content .eminence-atouts .content .atouts td.item-controls {
   width: 70px;
   font-size: 17px;
-  display: flex;
-  justify-content: center;
-  gap: 6px;
+  vertical-align: middle;
+  text-align: right;
+  white-space: nowrap;
+  padding-right: 6px;
 }
-.penombre.eminence .eminence-content .eminence-atouts .content .atouts th.item-controls .plusitem,
-.penombre.eminence .eminence-content .eminence-atouts .content .atouts td.item-controls .plusitem {
-  margin-left: auto;
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts th.item-controls a + a,
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts td.item-controls a + a {
+  margin-left: 6px;
 }
 .penombre.eminence .eminence-content .eminence-atouts .content .atouts th.item-case-width,
 .penombre.eminence .eminence-content .eminence-atouts .content .atouts td.item-case-width {
-  width: 100px;
+  width: 1%;
+  padding-inline: 6px 4px;
 }
 .penombre.eminence .eminence-content .eminence-atouts .content .atouts .item-case {
   width: 20px;
   height: 20px;
 }
 .penombre.eminence .eminence-content .eminence-atouts .content .atouts td.item-case-width {
-  display: flex;
+  vertical-align: middle;
+  text-align: center;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts td.item-case-width .cases-atout {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 1px;
+  vertical-align: middle;
+}
+.penombre.eminence .eminence-content .eminence-atouts .content .atouts td.item-case-width .cases-atout .item-case {
+  flex: none;
+  width: 20px;
+  height: 20px;
 }
 .penombre.eminence .eminence-content .eminence-maitrises {
   color: #56605b;
   text-align: center;
-  padding-bottom: 2px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .plusitem-titre {
+  position: relative;
+  top: -4px;
+  margin-left: 10px;
+  font-size: 19px;
+  vertical-align: middle;
 }
 .penombre.eminence .eminence-content .eminence-maitrises .titre-section-maitrises {
-  font-size: 35px;
+  font-size: 29px;
   margin-left: 100px;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .titre-section-maitrises::before,
+.penombre.eminence .eminence-content .eminence-maitrises .titre-section-maitrises::after {
+  content: "";
+  display: inline-block;
+  width: 36px;
+  height: 18px;
+  vertical-align: middle;
+  background: center / contain no-repeat;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .titre-section-maitrises::before {
+  margin-right: 8px;
+  background-image: url("/systems/penombre/assets/ui/fiche-titre-volute-gauche.webp");
+}
+.penombre.eminence .eminence-content .eminence-maitrises .titre-section-maitrises::after {
+  margin-left: 8px;
+  background-image: url("/systems/penombre/assets/ui/fiche-titre-volute-droite.webp");
 }
 .penombre.eminence .eminence-content .eminence-maitrises .content {
   display: grid;
@@ -919,6 +1185,8 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
   text-align: center;
   width: 100px;
   height: 110px;
+  transform: scale(0.85);
+  transform-origin: top center;
 }
 .penombre.eminence .eminence-content .eminence-maitrises .content .potentiel .div-potentiel .img-potentiel {
   width: 100px;
@@ -950,13 +1218,18 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
 .penombre.eminence .eminence-content .eminence-maitrises .content .maitrises {
   margin-left: 100px;
   width: calc(100% - 103px);
-  border: 1px solid #917f35;
-  border-radius: 4px;
   padding: 2px;
   grid-column: 2;
   width: 100%;
   min-width: 0;
   margin-left: 0;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises table,
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises tr,
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises tr:nth-child(odd),
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises tr:nth-child(even) {
+  border: none;
+  background: none;
 }
 .penombre.eminence .eminence-content .eminence-maitrises .content .maitrises th {
   padding-block: 4px;
@@ -970,30 +1243,50 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
 .penombre.eminence .eminence-content .eminence-maitrises .content .maitrises td.item-controls {
   width: 70px;
   font-size: 17px;
-  display: flex;
-  justify-content: center;
-  gap: 6px;
+  vertical-align: middle;
+  text-align: right;
+  white-space: nowrap;
+  padding-right: 6px;
 }
-.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises th.item-controls .plusitem,
-.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises td.item-controls .plusitem {
-  margin-left: auto;
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises th.item-controls a + a,
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises td.item-controls a + a {
+  margin-left: 6px;
 }
 .penombre.eminence .eminence-content .eminence-maitrises .content .maitrises th.harmonique-width,
 .penombre.eminence .eminence-content .eminence-maitrises .content .maitrises td.harmonique-width {
   width: 70px;
 }
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises .item-name {
+  font-weight: bold;
+  -webkit-text-stroke: 0.6px currentColor;
+}
+.penombre.eminence .eminence-content .eminence-maitrises .content .maitrises .item-niveau {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  padding-right: 7px;
+  vertical-align: middle;
+  background: url("/systems/penombre/assets/ui/fiche-cercle.webp") center / contain no-repeat;
+  font-family: "ChocoCovRainBold";
+  font-size: 22px;
+  line-height: 1;
+}
 .penombre.eminence .eminence-content .eminence-recapitulatif {
   margin-top: 10px;
-  width: 633px;
   color: #56605b;
   text-align: center;
 }
 .penombre.eminence .eminence-content .eminence-recapitulatif .content .tableau {
-  display: grid;
-  grid-template-columns: 477px minmax(0, 1fr);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  column-gap: 33px;
 }
 .penombre.eminence .eminence-content .eminence-recapitulatif .content .tableau .div-gauche {
-  grid-column: 1;
+  flex: none;
   width: 477px;
 }
 .penombre.eminence .eminence-content .eminence-recapitulatif .content .tableau .div-gauche .img-gauche {
@@ -1001,10 +1294,8 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
   border-bottom-left-radius: 4px;
 }
 .penombre.eminence .eminence-content .eminence-recapitulatif .content .tableau .div-droite {
-  grid-column: 2;
-  margin-left: 0;
-  width: auto;
-  padding-left: 33px;
+  flex: none;
+  width: 123px;
 }
 .penombre.eminence .eminence-content .eminence-recapitulatif .content .tableau .div-droite .img-droite {
   border-top-right-radius: 4px;
@@ -1430,14 +1721,339 @@ body.theme-light .penombre.action .action-content {
 .penombre.action .action-content .standard-form .logo-frame .name {
   width: calc(100% - 90px);
 }
+/* ---------------------------------------------
+        Maîtrises magiques : description mise en forme
+        comme les cartes « … en action » des tirés à part
+--------------------------------------------- */
+.penombre.maitrise .maitrise-carte {
+  font-family: "GoudyBookletter1911", var(--font-serif);
+  font-size: 15px;
+  line-height: 1.35;
+  color: #231f20;
+  columns: 2 300px;
+  column-gap: 28px;
+}
+.penombre.maitrise .maitrise-carte p {
+  margin: 0 0 6px;
+}
+.penombre.maitrise .maitrise-carte .maitrise-titre {
+  column-span: all;
+  margin: 0 0 8px;
+  border: none;
+  text-align: center;
+  font-family: "Cattedrale";
+  font-size: 26px;
+  color: #074966;
+}
+.penombre.maitrise .maitrise-carte .maitrise-intro {
+  margin-top: 8px;
+  font-weight: bold;
+}
+.penombre.maitrise .maitrise-carte .maitrise-entree {
+  position: relative;
+  padding-left: 14px;
+  break-inside: avoid;
+}
+.penombre.maitrise .maitrise-carte .maitrise-entree::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: #074966;
+  font-weight: bold;
+}
+.penombre.maitrise .maitrise-carte .maitrise-etiquette {
+  font-family: "Cattedrale";
+  font-size: 1.3em;
+  line-height: 1;
+  color: #074966;
+}
+.penombre.maitrise .maitrise-carte .maitrise-harmonique {
+  font-family: "Cattedrale";
+  font-size: 1.3em;
+  line-height: 1;
+  color: #4a5650;
+}
+.penombre.maitrise .maitrise-carte .maitrise-pastille,
+.penombre.maitrise .maitrise-carte .maitrise-niveaux > li::before {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #41483f;
+  outline: 1px solid #eedfc3;
+  outline-offset: -3px;
+  background: #41483f;
+  color: #eedfc3;
+  font-family: "Cattedrale";
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1;
+  vertical-align: middle;
+}
+.penombre.maitrise .maitrise-carte .maitrise-niveaux {
+  counter-reset: niveau;
+  list-style: none;
+  margin: 4px 0 6px;
+  padding: 0;
+}
+.penombre.maitrise .maitrise-carte .maitrise-niveaux > li {
+  counter-increment: niveau;
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 4px;
+  break-inside: avoid;
+}
+.penombre.maitrise .maitrise-carte .maitrise-niveaux > li::before {
+  content: counter(niveau);
+  position: absolute;
+  left: 0;
+  top: 1px;
+}
+.penombre.maitrise .maitrise-carte .maitrise-niveaux > li > p {
+  margin: 0;
+}
+.penombre.maitrise .maitrise-carte .maitrise-note {
+  font-size: 0.92em;
+  font-style: italic;
+}
+#tooltip.maitrise-tooltip,
+.locked-tooltip.maitrise-tooltip {
+  max-width: 690px;
+  padding: 10px 12px;
+  background: #faeed6;
+  border: 1px solid #074966;
+  text-align: left;
+}
+#tooltip.maitrise-tooltip .infobulle-entete,
+.locked-tooltip.maitrise-tooltip .infobulle-entete {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 4px;
+}
+#tooltip.maitrise-tooltip .infobulle-nom,
+.locked-tooltip.maitrise-tooltip .infobulle-nom {
+  font-family: "Cattedrale";
+  font-size: 22px;
+  line-height: 1;
+  color: #074966;
+}
+#tooltip.maitrise-tooltip .infobulle-source,
+.locked-tooltip.maitrise-tooltip .infobulle-source {
+  font-family: "Cattedrale";
+  font-size: 16px;
+  line-height: 1;
+  color: #4a5650;
+}
+#tooltip.maitrise-tooltip .maitrise-carte,
+.locked-tooltip.maitrise-tooltip .maitrise-carte {
+  font-family: "GoudyBookletter1911", var(--font-serif);
+  font-size: 15px;
+  line-height: 1.35;
+  color: #231f20;
+  columns: 2 300px;
+  column-gap: 28px;
+  columns: auto;
+  font-size: 14px;
+}
+#tooltip.maitrise-tooltip .maitrise-carte p,
+.locked-tooltip.maitrise-tooltip .maitrise-carte p {
+  margin: 0 0 6px;
+}
+#tooltip.maitrise-tooltip .maitrise-carte .maitrise-titre,
+.locked-tooltip.maitrise-tooltip .maitrise-carte .maitrise-titre {
+  column-span: all;
+  margin: 0 0 8px;
+  border: none;
+  text-align: center;
+  font-family: "Cattedrale";
+  font-size: 26px;
+  color: #074966;
+}
+#tooltip.maitrise-tooltip .maitrise-carte .maitrise-intro,
+.locked-tooltip.maitrise-tooltip .maitrise-carte .maitrise-intro {
+  margin-top: 8px;
+  font-weight: bold;
+}
+#tooltip.maitrise-tooltip .maitrise-carte .maitrise-entree,
+.locked-tooltip.maitrise-tooltip .maitrise-carte .maitrise-entree {
+  position: relative;
+  padding-left: 14px;
+  break-inside: avoid;
+}
+#tooltip.maitrise-tooltip .maitrise-carte .maitrise-entree::before,
+.locked-tooltip.maitrise-tooltip .maitrise-carte .maitrise-entree::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: #074966;
+  font-weight: bold;
+}
+#tooltip.maitrise-tooltip .maitrise-carte .maitrise-etiquette,
+.locked-tooltip.maitrise-tooltip .maitrise-carte .maitrise-etiquette {
+  font-family: "Cattedrale";
+  font-size: 1.3em;
+  line-height: 1;
+  color: #074966;
+}
+#tooltip.maitrise-tooltip .maitrise-carte .maitrise-harmonique,
+.locked-tooltip.maitrise-tooltip .maitrise-carte .maitrise-harmonique {
+  font-family: "Cattedrale";
+  font-size: 1.3em;
+  line-height: 1;
+  color: #4a5650;
+}
+#tooltip.maitrise-tooltip .maitrise-carte .maitrise-pastille,
+.locked-tooltip.maitrise-tooltip .maitrise-carte .maitrise-pastille,
+#tooltip.maitrise-tooltip .maitrise-carte .maitrise-niveaux > li::before,
+.locked-tooltip.maitrise-tooltip .maitrise-carte .maitrise-niveaux > li::before {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #41483f;
+  outline: 1px solid #eedfc3;
+  outline-offset: -3px;
+  background: #41483f;
+  color: #eedfc3;
+  font-family: "Cattedrale";
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1;
+  vertical-align: middle;
+}
+#tooltip.maitrise-tooltip .maitrise-carte .maitrise-niveaux,
+.locked-tooltip.maitrise-tooltip .maitrise-carte .maitrise-niveaux {
+  counter-reset: niveau;
+  list-style: none;
+  margin: 4px 0 6px;
+  padding: 0;
+}
+#tooltip.maitrise-tooltip .maitrise-carte .maitrise-niveaux > li,
+.locked-tooltip.maitrise-tooltip .maitrise-carte .maitrise-niveaux > li {
+  counter-increment: niveau;
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 4px;
+  break-inside: avoid;
+}
+#tooltip.maitrise-tooltip .maitrise-carte .maitrise-niveaux > li::before,
+.locked-tooltip.maitrise-tooltip .maitrise-carte .maitrise-niveaux > li::before {
+  content: counter(niveau);
+  position: absolute;
+  left: 0;
+  top: 1px;
+}
+#tooltip.maitrise-tooltip .maitrise-carte .maitrise-niveaux > li > p,
+.locked-tooltip.maitrise-tooltip .maitrise-carte .maitrise-niveaux > li > p {
+  margin: 0;
+}
+#tooltip.maitrise-tooltip .maitrise-carte .maitrise-note,
+.locked-tooltip.maitrise-tooltip .maitrise-carte .maitrise-note {
+  font-size: 0.92em;
+  font-style: italic;
+}
+#tooltip.maitrise-tooltip .maitrise-carte .maitrise-titre,
+.locked-tooltip.maitrise-tooltip .maitrise-carte .maitrise-titre {
+  display: none;
+}
+body.theme-dark .penombre.maitrise .maitrise-carte {
+  color: var(--color-text-primary);
+}
+body.theme-dark .penombre.maitrise .maitrise-carte .maitrise-titre,
+body.theme-dark .penombre.maitrise .maitrise-carte .maitrise-etiquette,
+body.theme-dark .penombre.maitrise .maitrise-carte .maitrise-entree::before {
+  color: #7fb3cf;
+}
+body.theme-dark .penombre.maitrise .maitrise-carte .maitrise-harmonique {
+  color: #b9c4bd;
+}
+#tooltip.pouvoir-tooltip,
+.locked-tooltip.pouvoir-tooltip {
+  max-width: 690px;
+  padding: 10px 12px;
+  background: #faeed6;
+  border: 1px solid #074966;
+  text-align: left;
+}
+#tooltip.pouvoir-tooltip .infobulle-entete,
+.locked-tooltip.pouvoir-tooltip .infobulle-entete {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 4px;
+}
+#tooltip.pouvoir-tooltip .infobulle-nom,
+.locked-tooltip.pouvoir-tooltip .infobulle-nom {
+  font-family: "Cattedrale";
+  font-size: 22px;
+  line-height: 1;
+  color: #074966;
+}
+#tooltip.pouvoir-tooltip .infobulle-source,
+.locked-tooltip.pouvoir-tooltip .infobulle-source {
+  font-family: "Cattedrale";
+  font-size: 16px;
+  line-height: 1;
+  color: #4a5650;
+}
+#tooltip.pouvoir-tooltip .pouvoir-carte,
+.locked-tooltip.pouvoir-tooltip .pouvoir-carte {
+  font-family: "GoudyBookletter1911", var(--font-serif);
+  font-size: 14px;
+  line-height: 1.35;
+  color: #231f20;
+}
+#tooltip.pouvoir-tooltip .pouvoir-carte p,
+.locked-tooltip.pouvoir-tooltip .pouvoir-carte p {
+  margin: 0 0 6px;
+}
+#tooltip.pouvoir-tooltip .pouvoir-carte .pouvoir-citation,
+.locked-tooltip.pouvoir-tooltip .pouvoir-carte .pouvoir-citation {
+  font-style: italic;
+  color: #4a5650;
+}
 body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   background-color: #faeed6;
 }
+#penombre-reserve-collegiale.feuille-etendue {
+  min-height: 593px;
+  min-width: 987px;
+  max-width: 987px;
+}
+#penombre-reserve-collegiale.feuille-etendue .window-content {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+  background: #ece2c8;
+}
+#penombre-reserve-collegiale.feuille-etendue .reserve-wrapper {
+  flex: 1;
+  min-height: 0;
+}
+#penombre-reserve-collegiale.feuille-etendue .div-factions {
+  height: auto;
+}
+#penombre-reserve-collegiale .reserve-wrapper {
+  display: flex;
+  flex-direction: row;
+}
 #penombre-reserve-collegiale .div-jetons {
+  position: relative;
   background-image: url("/systems/penombre/assets/ui/reserve-collegiale.webp");
   background-repeat: no-repeat;
   background-size: 550px 550px;
-  width: 740px;
+  width: 555px;
+  flex-shrink: 0;
   height: 555px;
   padding-left: 157px;
   padding-top: 159px;
@@ -1474,8 +2090,14 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   width: 68px;
   height: 68px;
 }
+#penombre-reserve-collegiale .div-jetons .div-potentiel {
+  position: absolute;
+  top: 76px;
+  left: 462px;
+}
 #penombre-reserve-collegiale .div-jetons-2 {
   display: table;
+  flex-shrink: 0;
 }
 #penombre-reserve-collegiale .div-jetons-2 .col-1-1 {
   width: 25px;
@@ -1498,10 +2120,14 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   margin-left: 35px;
   width: 491px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  /* 5 colonnes égales */
+  grid-template-columns: repeat(5, 68px);
+  justify-content: space-evenly;
   gap: 10px;
   padding: 10px;
+}
+#penombre-reserve-collegiale .div-jetons-2 .jetons .jeton {
+  width: 68px;
+  height: 68px;
 }
 #penombre-reserve-collegiale .div-jetons-2 .jetons img.dropshadow-actif,
 #penombre-reserve-collegiale .div-jetons-2 .jetons img.dropshadow-inactif {
@@ -1514,6 +2140,166 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 }
 #penombre-reserve-collegiale .div-jetons-2 .jetons .jeton {
   text-align: center;
+}
+#penombre-reserve-collegiale .div-jetons-2 .div-potentiel {
+  margin: 10px auto;
+}
+#penombre-reserve-collegiale .div-potentiel {
+  width: 74px;
+  display: grid;
+  grid-template-areas: "medaillon" "libelle";
+  justify-items: center;
+}
+#penombre-reserve-collegiale .div-potentiel .img-potentiel {
+  grid-area: medaillon;
+  width: 74px;
+  border: none;
+}
+#penombre-reserve-collegiale .div-potentiel .potentiel-valeur {
+  grid-area: medaillon;
+  margin-top: 10px;
+  width: 34px;
+  height: 28px;
+  text-align: center;
+  align-self: center;
+  font-family: "ChocoCovRainBold";
+  font-size: 25px;
+  line-height: 28px;
+  color: #7a3b20;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+#penombre-reserve-collegiale .div-potentiel .potentiel-valeur:focus {
+  outline: 1px dashed #7a3b20;
+  box-shadow: none;
+}
+#penombre-reserve-collegiale .div-potentiel .potentiel-libelle {
+  grid-area: libelle;
+  margin-top: -4px;
+  font-family: "ChocoCovRainBold";
+  font-size: 17px;
+  color: #7a3b20;
+}
+#penombre-reserve-collegiale .div-factions {
+  width: 430px;
+  flex-shrink: 0;
+  height: 555px;
+  overflow-y: auto;
+  padding: 6px 18px 12px 26px;
+  color: #2b2b2b;
+  background: url("/systems/penombre/assets/ui/relations-filet-vertical.webp") left 4px top / 14px auto repeat-y, linear-gradient(rgba(236, 226, 200, 0.8), rgba(236, 226, 200, 0.8)), url("/systems/penombre/assets/background/fond.webp") center / cover, #ece2c8;
+}
+#penombre-reserve-collegiale .div-factions .relations-titre {
+  margin: 0 0 4px;
+  border: none;
+  text-align: center;
+}
+#penombre-reserve-collegiale .div-factions .relations-titre img {
+  display: block;
+  height: 30px;
+  margin: 0 auto;
+  border: none;
+}
+#penombre-reserve-collegiale .div-factions .faction {
+  --relations-couleur: #56605b;
+  padding: 6px 0 12px;
+  background: url("/systems/penombre/assets/ui/relations-filet.webp") left bottom / 100% 12px no-repeat;
+}
+#penombre-reserve-collegiale .div-factions .faction.rouge {
+  --relations-couleur: #7a3b20;
+}
+#penombre-reserve-collegiale .div-factions .faction:last-of-type {
+  background: none;
+}
+#penombre-reserve-collegiale .div-factions .libelle {
+  font-family: "ChocoCovRainBold";
+  font-size: 19px;
+  line-height: 1.1;
+  color: var(--relations-couleur);
+  white-space: nowrap;
+}
+#penombre-reserve-collegiale .div-factions .ligne {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  min-height: 24px;
+}
+#penombre-reserve-collegiale .div-factions .ligne input[type="text"],
+#penombre-reserve-collegiale .div-factions .ligne .faction-nom-readonly,
+#penombre-reserve-collegiale .div-factions .ligne .element-nom-readonly {
+  flex: 1;
+  min-width: 0;
+  height: 22px;
+  padding: 0 2px;
+  font-size: 13px;
+  color: #2b2b2b;
+  background: transparent;
+  border: none;
+  border-bottom: 1px dotted #b9a98a;
+  border-radius: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#penombre-reserve-collegiale .div-factions .ligne input[type="text"]:focus,
+#penombre-reserve-collegiale .div-factions .ligne .faction-nom-readonly:focus,
+#penombre-reserve-collegiale .div-factions .ligne .element-nom-readonly:focus {
+  outline: none;
+  box-shadow: none;
+  border-bottom: 1px solid var(--relations-couleur);
+}
+#penombre-reserve-collegiale .div-factions .ligne input[type="text"]::placeholder,
+#penombre-reserve-collegiale .div-factions .ligne .faction-nom-readonly::placeholder,
+#penombre-reserve-collegiale .div-factions .ligne .element-nom-readonly::placeholder {
+  color: #b9a98a;
+  font-style: italic;
+}
+#penombre-reserve-collegiale .div-factions .ligne .btn-supprimer {
+  flex-shrink: 0;
+  visibility: hidden;
+  color: var(--relations-couleur);
+  font-size: 13px;
+}
+#penombre-reserve-collegiale .div-factions .ligne:hover .btn-supprimer {
+  visibility: visible;
+}
+#penombre-reserve-collegiale .div-factions .ligne-nom .faction-nom,
+#penombre-reserve-collegiale .div-factions .ligne-nom .faction-nom-readonly {
+  font-weight: bold;
+}
+#penombre-reserve-collegiale .div-factions .cases {
+  display: flex;
+  flex-shrink: 0;
+  gap: 1px;
+  width: 66px;
+  justify-content: flex-end;
+}
+#penombre-reserve-collegiale .div-factions .cases .case {
+  border: none;
+}
+#penombre-reserve-collegiale .div-factions .cases .case.cliquable {
+  cursor: pointer;
+}
+#penombre-reserve-collegiale .div-factions .cases .case.cliquable:hover {
+  filter: drop-shadow(0 0 2px var(--relations-couleur));
+}
+#penombre-reserve-collegiale .div-factions .cases.cases-atout .case {
+  width: 22px;
+  height: 22px;
+}
+#penombre-reserve-collegiale .div-factions .cases.cases-complication .case {
+  width: 18px;
+  height: 18px;
+  margin: 2px 1px;
+}
+#penombre-reserve-collegiale .div-factions .btn-creer-faction {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  font-family: "ChocoCovRainBold";
+  font-size: 17px;
+  color: #7a3b20;
 }
 .theme-light .penombre.roll-dialog .window-content {
   background-color: #faeed6;
@@ -1626,6 +2412,16 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 .penombre-roll-dialog .line-2 fieldset .atouts .atout.checked {
   background-color: #917f35;
   color: white;
+}
+.penombre-roll-dialog .line-2 fieldset .atouts .faction-separator {
+  font-weight: bold;
+  color: #917f35;
+  padding: 5px 5px 2px 5px;
+  font-size: 0.85rem;
+}
+.penombre-roll-dialog .line-2 fieldset .atouts .faction-tag {
+  font-style: italic;
+  font-size: 0.85rem;
 }
 .penombre-roll-dialog .line-2 fieldset .options-total {
   display: flex;
@@ -2134,4 +2930,25 @@ body.theme-dark .penombre-group-manager-content .no-members {
   font-size: 17px;
   color: #56605b;
   padding: 20px;
+}
+#penombre-rappel-regles .window-content {
+  padding: 12px;
+  background: url("/systems/penombre/assets/ui/fiche-fond-recapitulatif.webp") center / cover, #faeed6;
+}
+#penombre-rappel-regles .rappel-regles-contenu {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  column-gap: 33px;
+}
+#penombre-rappel-regles .rappel-regles-contenu img {
+  border: none;
+}
+#penombre-rappel-regles .rappel-regles-contenu .rappel-gauche {
+  width: 477px;
+  border-radius: 4px 0 0 4px;
+}
+#penombre-rappel-regles .rappel-regles-contenu .rappel-droite {
+  width: 123px;
+  border-radius: 0 4px 4px 0;
 }

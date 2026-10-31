@@ -1,3 +1,11 @@
+// Feuille collégiale étendue (Le jeu des factions, livre p. 90) : couleurs relevées sur l'illustration du livre
+@relations-gris: #56605b; // Libellés des relations impaires
+@relations-rouge: #7a3b20; // Libellés des relations paires, médaillon Potentiel
+@relations-pointilles: #b9a98a; // Lignes d'écriture
+@relations-parchemin: #ece2c8;
+@relations-largeur: 430px;
+@feuille-hauteur: 555px;
+
 body {
   &.theme-light {
     #penombre-reserve-collegiale {
@@ -8,15 +16,46 @@ body {
   }
 }
 
-
 #penombre-reserve-collegiale {
+  // Avec les factions, la fenêtre est la feuille collégiale étendue : un seul parchemin, sans marge ni fond de thème
+  // Redimensionnable en hauteur seulement : jamais plus petite que le panier, largeur fixe
+  &.feuille-etendue {
+    min-height: 593px; // PenombreReserveCollegiale.HAUTEUR_FEUILLE
+    min-width: 987px;
+    max-width: 987px;
+
+    .window-content {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      overflow: hidden;
+      background: @relations-parchemin;
+    }
+
+    .reserve-wrapper {
+      flex: 1;
+      min-height: 0;
+    }
+
+    .div-factions {
+      height: auto;
+    }
+  }
+
+  .reserve-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
   // Jetons
   .div-jetons {
+    position: relative;
     background-image: url("/systems/penombre/assets/ui/reserve-collegiale.webp");
     background-repeat: no-repeat;
     background-size: 550px 550px;
-    width: 740px;
-    height: 555px;
+    width: 555px;
+    flex-shrink: 0;
+    height: @feuille-hauteur;
     padding-left: 157px;
     padding-top: 159px;
 
@@ -55,11 +94,18 @@ body {
         height: 68px;
       }
     }
+
+    // Médaillon à droite du panier, sous la fin du titre, comme sur la feuille du livre
+    .div-potentiel {
+      position: absolute;
+      top: 76px;
+      left: 462px;
+    }
   }
 
   .div-jetons-2 {
-
     display: table;
+    flex-shrink: 0;
 
     .col-1-1 {
       width: 25px;
@@ -79,15 +125,21 @@ body {
       float: left;
     }
 
-    // Jetons
+    // Jetons : même taille que sur le panier de l'affichage à 10 jetons
     .jetons {
       margin-left: 35px;
       width: 491px;
 
       display: grid;
-      grid-template-columns: repeat(5, 1fr); /* 5 colonnes égales */
+      grid-template-columns: repeat(5, 68px);
+      justify-content: space-evenly;
       gap: 10px;
       padding: 10px;
+
+      .jeton {
+        width: 68px;
+        height: 68px;
+      }
 
       img.dropshadow-actif,
       img.dropshadow-inactif {
@@ -101,6 +153,199 @@ body {
       .jeton {
         text-align: center;
       }
+    }
+
+    .div-potentiel {
+      margin: 10px auto;
+    }
+  }
+
+  // Potentiel collégial : valeur dans le cercle du médaillon, libellé dessous
+  .div-potentiel {
+    width: 74px;
+    display: grid;
+    grid-template-areas: "medaillon" "libelle";
+    justify-items: center;
+
+    .img-potentiel {
+      grid-area: medaillon;
+      width: 74px;
+      border: none;
+    }
+
+    .potentiel-valeur {
+      grid-area: medaillon;
+      // Centre du cercle blanc, légèrement décalé vers le bas par les flammes du médaillon
+      margin-top: 10px;
+      width: 34px;
+      height: 28px;
+      text-align: center;
+      align-self: center;
+      font-family: @font-chocolate;
+      font-size: @font-size-midlarge;
+      line-height: 28px;
+      color: @relations-rouge;
+      background: transparent;
+      border: none;
+      padding: 0;
+
+      &:focus {
+        outline: 1px dashed @relations-rouge;
+        box-shadow: none;
+      }
+    }
+
+    .potentiel-libelle {
+      grid-area: libelle;
+      margin-top: -4px;
+      font-family: @font-chocolate;
+      font-size: @font-size-base;
+      color: @relations-rouge;
+    }
+  }
+
+  // Colonne « Relations » de la feuille collégiale étendue
+  .div-factions {
+    width: @relations-largeur;
+    flex-shrink: 0;
+    height: @feuille-hauteur;
+    overflow-y: auto;
+    padding: 6px 18px 12px 26px;
+    color: #2b2b2b;
+    // Le voile atténue l'ornement du parchemin, discret sur la feuille du livre
+    background:
+      url("/systems/penombre/assets/ui/relations-filet-vertical.webp") left 4px top / 14px auto repeat-y,
+      linear-gradient(fade(@relations-parchemin, 80%), fade(@relations-parchemin, 80%)),
+      url("/systems/penombre/assets/background/fond.webp") center / cover,
+      @relations-parchemin;
+
+    .relations-titre {
+      margin: 0 0 4px;
+      border: none;
+      text-align: center;
+
+      img {
+        display: block;
+        height: 30px;
+        margin: 0 auto;
+        border: none;
+      }
+    }
+
+    .faction {
+      --relations-couleur: @relations-gris;
+      padding: 6px 0 12px;
+      // Trait de pinceau rouge entre deux relations
+      background: url("/systems/penombre/assets/ui/relations-filet.webp") left bottom / 100% 12px no-repeat;
+
+      &.rouge {
+        --relations-couleur: @relations-rouge;
+      }
+
+      &:last-of-type {
+        background: none;
+      }
+    }
+
+    .libelle {
+      font-family: @font-chocolate;
+      font-size: @font-size-middle;
+      line-height: 1.1;
+      color: var(--relations-couleur);
+      white-space: nowrap;
+    }
+
+    // Une ligne d'écriture : texte posé sur des pointillés, cases à droite
+    .ligne {
+      display: flex;
+      align-items: flex-end;
+      gap: 6px;
+      min-height: 24px;
+
+      input[type="text"],
+      .faction-nom-readonly,
+      .element-nom-readonly {
+        flex: 1;
+        min-width: 0;
+        height: 22px;
+        padding: 0 2px;
+        font-size: @font-size-small;
+        color: #2b2b2b;
+        background: transparent;
+        border: none;
+        border-bottom: 1px dotted @relations-pointilles;
+        border-radius: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        &:focus {
+          outline: none;
+          box-shadow: none;
+          border-bottom: 1px solid var(--relations-couleur);
+        }
+
+        &::placeholder {
+          color: @relations-pointilles;
+          font-style: italic;
+        }
+      }
+
+      .btn-supprimer {
+        flex-shrink: 0;
+        visibility: hidden;
+        color: var(--relations-couleur);
+        font-size: @font-size-small;
+      }
+
+      &:hover .btn-supprimer {
+        visibility: visible;
+      }
+    }
+
+    .ligne-nom .faction-nom,
+    .ligne-nom .faction-nom-readonly {
+      font-weight: bold;
+    }
+
+    .cases {
+      display: flex;
+      flex-shrink: 0;
+      gap: 1px;
+      width: 66px;
+      justify-content: flex-end;
+
+      .case {
+        border: none;
+
+        &.cliquable {
+          cursor: pointer;
+
+          &:hover {
+            filter: drop-shadow(0 0 2px var(--relations-couleur));
+          }
+        }
+      }
+
+      &.cases-atout .case {
+        width: 22px;
+        height: 22px;
+      }
+
+      &.cases-complication .case {
+        width: 18px;
+        height: 18px;
+        margin: 2px 1px;
+      }
+    }
+
+    .btn-creer-faction {
+      display: block;
+      margin-top: 10px;
+      text-align: center;
+      font-family: @font-chocolate;
+      font-size: @font-size-base;
+      color: @relations-rouge;
     }
   }
 }

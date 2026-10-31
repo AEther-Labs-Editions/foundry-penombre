@@ -154,21 +154,21 @@ prototypeToken:
   depth: 1
 items:
   - type: pouvoir
-    name: Fantasme d’onyx
+    name: Fantasme d'onyx
     _id: EQwMEPIumzov7VdK
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
+      citation: Comme des tentacules prudents…
       description: >-
-        <p>Une action impossible devient possible grâce à l’apparition d’un
-        appendice d’onyx éphémère (ailes, troisième œil, bras supplémentaire,
+        <p>Une action impossible devient possible grâce à l'apparition d'un
+        appendice d'onyx éphémère (ailes, troisième œil, bras supplémentaire,
         etc.).</p><p>De plus, chaque fois qu’il réalise une merveille (p. 31 du
         kit), son joueur peut lui choisir un nouveau pouvoir dans la liste
         suivante, ou augmenter de 1 sa valeur de
-        conscience.</p><ul><li><p>Homochromie</p></li><li><p>Suppôt des
-        abysses</p></li></ul>
-      type: naissance
-      citation: Comme des tentacules prudents…
+        conscience.</p><ul><li><p>Homochromie aubéronne</p></li><li><p>Suppôt
+        des Abysses</p></li></ul>
+      type: cle
     effects: []
     folder: null
     sort: 0
@@ -187,14 +187,14 @@ items:
       default: 0
     _key: '!actors.items!mqK6cd47lWLvwL9C.EQwMEPIumzov7VdK'
   - type: pouvoir
-    name: Homochromie
+    name: Homochromie aubéronne
     _id: EFcdJj2l7ROyXF2v
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
+      citation: Le mimétisme. L'art de disparaître et de se confondre avec le décor.
       description: <p>Une action de camouflage de Noh devient automatique.</p>
-      type: naissance
-      citation: Le mimétisme. L’art de disparaître et de se confondre avec le décor.
+      type: gamme
     effects: []
     folder: null
     sort: 0
@@ -213,16 +213,19 @@ items:
       default: 0
     _key: '!actors.items!mqK6cd47lWLvwL9C.EFcdJj2l7ROyXF2v'
   - type: pouvoir
-    name: Suppôt des abysses
+    name: Suppôt des Abysses
     _id: gle9HJrE6j5L5eMA
     img: systems/penombre/assets/icons/pouvoir.webp
     system:
       utilise: false
+      citation: >-
+        L'énergie ténébreuse sédimentée de ma vieille carcasse peut transformer
+        n'importe quel liquide sans âme en encre contrefaite.
       description: >-
-        <p>Le temps d’une scène, Noh accepte une complication « offrande de sang
-        (3) » et ignore tous les prérequis d’onyxium.</p>
-      type: naissance
-      citation: Suppôt des abysses
+        <p>Le temps d'une scène, Noh accepte une complication « offrande de sang
+        » niveau 3 et ignore tous les prérequis d'art noir (onyxium,
+        conjuration, prisme).</p>
+      type: cle
     effects: []
     folder: null
     sort: 0
@@ -366,44 +369,49 @@ items:
     img: systems/penombre/assets/icons/maitrise.webp
     system:
       description: >-
-        <h1>Noh l'onyxé</h1><p><strong>Pour préparer son effet magique, Noh
-        doit…</strong></p><h6>Prérequis</h6><ul><li><p><strong>onyxer</strong>.
-        Il inocule à une cible, ou s’inocule à lui-même de l’onyx contenu dans
-        un objet consommable, ou une boulette de drogue
-        noire.</p></li></ul><p><strong>Ce faisant, il…</strong></p><h6>Action
-        magique</h6><ul><li><p><strong>confère à l’onyxé des capacités
+        <div class="maitrise-carte"><h1 class="maitrise-titre">Noh
+        l'onyxé</h1><p class="maitrise-intro">Pour préparer son effet magique,
+        Noh doit…</p><p class="maitrise-entree"><span
+        class="maitrise-etiquette">Prérequis</span> <strong>onyxer</strong>. Il
+        inocule à une cible, ou s’inocule à lui-même de l’onyx contenu dans un
+        objet consommable, ou une boulette de drogue noire.</p><p
+        class="maitrise-intro">Ce faisant, il…</p><p
+        class="maitrise-entree"><span class="maitrise-etiquette">Action
+        magique</span> <strong>confère à l’onyxé des capacités
         démoniaque</strong>s, ou les moyens de générer une émanation d’onyx
-        soudaine qui pollue et modifie l’environnement et les
-        organismes.</p></li></ul><p><strong>Avec un effet magique de niveau ?
-        …</strong></p><p><strong>l’onyxé parvient par exemple
-        à…</strong></p><ol><li><p><strong>identifier</strong> un effet magique
-        d’art noir (conjuration, onyxium, prisme) ; répandre une nappe d’onyx
-        effrayante ; détecter l’onyx, la porte noire ou le conjurateur le plus
-        proche ; voir dans le noir, développer des sens, une force, une
-        souplesse et une prestance démoniaques ;
-        etc.</p></li><li><p><strong>espionner</strong> les Abysses , un démon
-        connu ou un haut diable ; créer une zone d’ombre ; épier depuis une
-        ombre comme s’il s’y trouvait ; imprégner une zone d’onyx qui englue et
-        entrave ceux qui la parcourent ; parler d’égal à égal avec un démon ;
-        etc.</p></li><li><p><strong>obliger</strong> un démon à une action, ou
-        une mission ; utiliser les ombres comme des portails pour se déplacer ;
-        acquérir un appendice démoniaque temporaire (griffes, ailes, queue
-        préhensile…) ; projeter de l’onyx sous forme de flèches ou de crachats ;
-        commander à une ombre de manipuler un objet, ou attaquer ;
-        etc.</p></li><li><p><strong>provoquer</strong> une crise de folie ou de
-        paranoïa ; animer son ombre comme un double, et la jouer ; transmuter
-        une matière en onyx, ou en ombre ; prendre le contrôle mental d’un démon
-        ; etc.</p></li><li><p><strong>devenir</strong> définitivement un démon
-        ou un horla ; provoquer une immense marée d’onyx corrosive ; ouvrir une
-        nouvelle porte noire ; etc.</p></li></ol><p><strong>Mais attention,
-        l’onyxé risque également de…</strong></p><h6>Incident
-        magique</h6><ul><li><p>souffrir du mal des Abysses. L’onyxium provoque
-        toujours chez l’onyxé l’apparition d’une complication de niveau 3 : une
-        crise de manque, un vertige, la sensation de devenir un démon ou un haut
-        diable. L’onyxé peut par ailleurs être envahi de pensées démoniaques
-        parasites, ou voir apparaître sur son corps un stigmate abyssal. Cette
-        addiction peut aussi le pousser à tout négliger pour trouver une
-        nouvelle dose.</p></li></ul>
+        soudaine qui pollue et modifie l’environnement et les organismes.</p><p
+        class="maitrise-intro">Avec un effet magique de niveau <span
+        class="maitrise-pastille">?</span> …</p><p
+        class="maitrise-intro">l’onyxé parvient par exemple à…</p><ol
+        class="maitrise-niveaux"><li><p><strong><em>identifier</em></strong> un
+        effet magique d’art noir (conjuration, onyxium, prisme) ; répandre une
+        nappe d’onyx effrayante ; détecter l’onyx, la porte noire ou le
+        conjurateur le plus proche ; voir dans le noir, développer des sens, une
+        force, une souplesse et une prestance démoniaques ;
+        etc.</p></li><li><p><strong><em>espionner</em></strong> les Abysses , un
+        démon connu ou un haut diable ; créer une zone d’ombre ; épier depuis
+        une ombre comme s’il s’y trouvait ; imprégner une zone d’onyx qui englue
+        et entrave ceux qui la parcourent ; parler d’égal à égal avec un démon ;
+        etc.</p></li><li><p><strong><em>obliger</em></strong> un démon à une
+        action, ou une mission ; utiliser les ombres comme des portails pour se
+        déplacer ; acquérir un appendice démoniaque temporaire (griffes, ailes,
+        queue préhensile…) ; projeter de l’onyx sous forme de flèches ou de
+        crachats ; commander à une ombre de manipuler un objet, ou attaquer ;
+        etc.</p></li><li><p><strong><em>provoquer</em></strong> une crise de
+        folie ou de paranoïa ; animer son ombre comme un double, et la jouer ;
+        transmuter une matière en onyx, ou en ombre ; prendre le contrôle mental
+        d’un démon ; etc.</p></li><li><p><strong><em>devenir</em></strong>
+        définitivement un démon ou un horla ; provoquer une immense marée d’onyx
+        corrosive ; ouvrir une nouvelle porte noire ; etc.</p></li></ol><p
+        class="maitrise-intro">Mais attention, l’onyxé risque également
+        de…</p><p class="maitrise-entree"><span
+        class="maitrise-etiquette">Incident magique</span> souffrir du mal des
+        Abysses. L’onyxium provoque toujours chez l’onyxé l’apparition d’une
+        complication de niveau 3 : une crise de manque, un vertige, la sensation
+        de devenir un démon ou un haut diable. L’onyxé peut par ailleurs être
+        envahi de pensées démoniaques parasites, ou voir apparaître sur son
+        corps un stigmate abyssal. Cette addiction peut aussi le pousser à tout
+        négliger pour trouver une nouvelle dose.</p></div>
       harmonique: nuit
       niveau: 3
       prerequis: consommer une boulette noire d'onyx

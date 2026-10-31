@@ -1,15 +1,16 @@
 type: pouvoir
-name: Chevreau des abysses
+name: Chevreau des Abysses
 _id: fNYa63J0BKAPD1YI
 img: systems/penombre/assets/icons/pouvoir.webp
 system:
   utilise: false
+  citation: >-
+    Mes deux cuisses animales au poil long s'achèvent sur des sabots noircis et
+    taillés en pointe.
   description: >-
-    <p><em>Mes deux cuisses animales au poil long s’achèvent sur des sabots
-    noircis et taillés en pointe.</em></p><p>Une action de Tétras pour
-    cabrioler, escalader, ou parcourir une longue distance devient
-    automatique.</p>
-  type: naissance
+    <p>Une action de Tétras pour cabrioler, escalader, ou parcourir une longue
+    distance devient automatique.</p>
+  type: peuple
 effects: []
 folder: IxCLMJlUPYUhtQ3N
 sort: 200000
