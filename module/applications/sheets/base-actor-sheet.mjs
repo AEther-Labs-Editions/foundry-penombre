@@ -1,3 +1,4 @@
+import { activerImageParDefaut } from "./image-par-defaut.mjs"
 const { sheets } = foundry.applications
 const { HandlebarsApplicationMixin } = foundry.applications.api
 
@@ -73,14 +74,7 @@ export default class PenombreBaseActorSheet extends HandlebarsApplicationMixin(s
     // Set toggle state and add status class to frame
     this._renderModeToggle(this.element)
 
-    const editableImage = this.element.querySelector("[data-action='editImage']")
-    if (editableImage) {
-      editableImage.addEventListener("contextmenu", (event) => {
-        event.preventDefault()
-        const { img } = this.document.constructor.getDefaultArtwork?.(this.document.toObject()) ?? {}
-        this.document.update({ img: img || "icons/svg/mystery-man.svg" })
-      })
-    }
+    activerImageParDefaut(this)
   }
 
   /**

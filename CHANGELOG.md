@@ -40,6 +40,7 @@
 - Traduction : le titre de la fenêtre de jet, le nom des macros de jet, les libellés de difficulté, « Acteur inconnu » et le nombre de succès en infobulle passent par le fichier de langue
 - Macros : glisser une harmonique ou une Éminence déjà présente dans la barre de raccourcis place la macro existante sur la case visée (il ne se passait rien)
 - Suivi de combat : glisser un combattant sur un autre le place exactement à cet endroit ; la cible n'était décalée que de 10 points d'initiative et pouvait passer par-dessus un troisième combattant proche
+- Fiches : le clic droit sur l'image demande confirmation avant de remettre l'image par défaut, et ne fait rien sur une fiche qu'on ne peut que consulter (la mise à jour échouait en erreur)
 
 1.8.4
 - Fiche Eminence : refactoring interne de la mise en page (les float sont remplacés par flex et grid dans les blocs Personnage, Harmoniques, Conscience, Timbre et les tableaux), sans changement visuel

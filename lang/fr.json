@@ -462,7 +462,9 @@
       "utilise": "Utilisé",
       "nonUtilise": "Non utilisé",
       "valeur": "Valeur",
-      "valeurTooltip": "Valeur {valeur}"
+      "valeurTooltip": "Valeur {valeur}",
+      "imageParDefaut": "Image par défaut",
+      "imageParDefautConfirmation": "Remplacer l'image par l'image par défaut ?"
     },
     "Roll": {
       "fausseNote": "Fausse note",
