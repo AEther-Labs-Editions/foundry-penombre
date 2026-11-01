@@ -1,6 +1,7 @@
 import jsdoc from 'eslint-plugin-jsdoc';
 import prettier from 'eslint-plugin-prettier';
 import configPrettier from 'eslint-config-prettier';
+import globals from 'globals';
 
 export default [
   {
@@ -12,10 +13,23 @@ export default [
     ],
     languageOptions: {
       globals: {
-        browser: true,
-        es2022: true,
-        node: true,
-        jquery: true,
+        ...globals.browser,
+        // Variables globales de Foundry VTT
+        Actor: "readonly",
+        canvas: "readonly",
+        ChatMessage: "readonly",
+        CONFIG: "readonly",
+        CONST: "readonly",
+        foundry: "readonly",
+        fromUuid: "readonly",
+        fromUuidSync: "readonly",
+        game: "readonly",
+        Handlebars: "readonly",
+        Hooks: "readonly",
+        Item: "readonly",
+        Macro: "readonly",
+        Roll: "readonly",
+        ui: "readonly",
       },
       ecmaVersion: 2022,
       sourceType: 'module',
@@ -100,6 +114,7 @@ export default [
       'no-unsafe-negation': ['warn', { enforceForOrderingRelations: true }],
       'no-unsafe-optional-chaining': ['warn', { disallowArithmeticOperators: true }],
       'no-unused-expressions': 'warn',
+      'no-undef': 'error',
       'no-useless-backreference': 'warn',
       'no-useless-call': 'warn',
       'no-useless-catch': 'warn',
