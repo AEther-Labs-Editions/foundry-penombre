@@ -76,8 +76,6 @@ export default class EminenceSheet extends PenombreBaseActorSheet {
       maitrise.infobulle = `${entete}${maitrise.system.description ?? ""}`
     }
 
-    context.hasAtouts = this.document.system.hasAtouts
-
     // Select options
     context.harmoniqueValueChoices = { d4: "D4", d6: "D6", d8: "D8", d10: "D10", d12: "D12" }
     context.potentielChoices = Object.fromEntries(Array.from({ length: SYSTEM.POTENTIEL_MAX }, (_, i) => [i, i]))

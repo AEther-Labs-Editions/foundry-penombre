@@ -65,8 +65,6 @@ export default class AdversaireSheet extends PenombreBaseActorSheet {
     if (type === "action") {
       itemData.name = subtype === "dissonance" ? game.i18n.localize("PENOMBRE.ui.actionDissonanceNew") : game.i18n.localize("PENOMBRE.ui.actionAdverseNew")
       foundry.utils.setProperty(itemData, "system.type", subtype)
-    } else if (type === "description") {
-      itemData.name = game.i18n.localize("PENOMBRE.ui.descriptionNew")
     } else if (type === "intrigue") {
       itemData.name = game.i18n.localize("PENOMBRE.ui.intrigueNew")
     }

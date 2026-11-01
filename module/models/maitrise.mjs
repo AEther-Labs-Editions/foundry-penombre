@@ -1,3 +1,5 @@
+import { SYSTEM } from "../config/system.mjs"
+
 const { HTMLField, NumberField, StringField } = foundry.data.fields
 
 export default class Maitrise extends foundry.abstract.TypeDataModel {
@@ -6,7 +8,6 @@ export default class Maitrise extends foundry.abstract.TypeDataModel {
 
   static defineSchema() {
     const schema = {}
-    schema.slug = new StringField({ required: true })
     schema.description = new HTMLField({})
     schema.harmonique = new StringField({ required: true, nullable: false, initial: SYSTEM.HARMONIQUES.ame.id, choices: SYSTEM.HARMONIQUES })
     schema.prerequis = new StringField({})
@@ -30,8 +31,11 @@ export default class Maitrise extends foundry.abstract.TypeDataModel {
     this.parent.updateSource(updates)
   }
 
-  /** @override */
-  prepareBaseData() {
-    this.slug = this.parent.name.slugify({ strict: true })
+  /**
+   * Identifiant de la maîtrise tiré de son nom, utilisé par la fenêtre de jet. Calculé, pas enregistré.
+   * @returns {string}
+   */
+  get slug() {
+    return this.parent.name.slugify({ strict: true })
   }
 }

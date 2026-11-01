@@ -9,7 +9,7 @@ export default class Macros {
     switch (dropData.type) {
       case "penombre.harmonique":
         foundry.utils.mergeObject(macroData, {
-          name: `Jet de ${game.i18n.localize(`PENOMBRE.ui.${dropData.harmonique}`)} (${dropData.actorName})`,
+          name: game.i18n.format("PENOMBRE.Roll.macro", { harmonique: game.i18n.localize(`PENOMBRE.ui.${dropData.harmonique}`), acteur: dropData.actorName }),
           img: `systems/penombre/assets/ui/${dropData.valeur}.webp`,
           command: `await game.system.api.helpers.Macros.rollHarmonique("${dropData.actorId}", "${dropData.harmonique}")`,
           flags: { "penombre.macros.harmonique": true },
@@ -29,12 +29,10 @@ export default class Macros {
         return
     }
 
-    // Assign the macro to the hotbar
+    // Réutilise la macro si elle existe déjà, et la place dans tous les cas sur la case visée
     let macro = game.macros.find((m) => m.name === macroData.name && m.command === macroData.command && m.author.isSelf)
-    if (!macro) {
-      macro = await Macro.create(macroData)
-      game.user.assignHotbarMacro(macro, slot)
-    }
+    if (!macro) macro = await Macro.create(macroData)
+    await game.user.assignHotbarMacro(macro, slot)
   }
 
   static async rollHarmonique(actorId, harmonique) {

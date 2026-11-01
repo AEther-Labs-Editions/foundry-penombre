@@ -1,3 +1,4 @@
+import { activerImageParDefaut } from "./image-par-defaut.mjs"
 const { sheets } = foundry.applications
 const { HandlebarsApplicationMixin } = foundry.applications.api
 
@@ -24,14 +25,7 @@ export default class PenombreBaseItemSheet extends HandlebarsApplicationMixin(sh
   async _onRender(context, options) {
     await super._onRender(context, options)
 
-    const editableImage = this.element.querySelector("[data-action='editImage']")
-    if (editableImage) {
-      editableImage.addEventListener("contextmenu", (event) => {
-        event.preventDefault()
-        const { img } = this.document.constructor.getDefaultArtwork?.(this.document.toObject()) ?? {}
-        this.document.update({ img: img || "icons/svg/item-bag.svg" })
-      })
-    }
+    activerImageParDefaut(this)
   }
 
   /** @override */

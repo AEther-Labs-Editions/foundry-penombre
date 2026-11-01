@@ -65,19 +65,24 @@ export default class PenombreCombatTracker extends sidebar.tabs.CombatTracker {
     const targetCombatant = combatant.parent.combatants.get(targetCombatantId)
     if (!targetCombatant) return
 
-    // Nouvelle initiative du combatant droppé = initiative du combatant cible
-    const newInitiative = targetCombatant.initiative
+    if (targetCombatant === combatant) return
+    const combat = combatant.parent
 
-    // Le combattant droppé avait une initiative inférieure à celle du combattant cible
-    if (combatant.initiative < targetCombatant.initiative) {
-      // Le combattant cible est décalé d'une unité pour laisser la place
-      await targetCombatant.update({ initiative: targetCombatant.initiative - 10 })
+    // Nouvel ordre : le combattant glissé prend la place de la cible, au-dessus s'il remonte, en dessous s'il descend
+    const turns = combat.turns
+    const remonte = turns.indexOf(combatant) > turns.indexOf(targetCombatant)
+    const ordre = turns.filter((c) => c !== combatant)
+    const indexCible = ordre.indexOf(targetCombatant)
+    ordre.splice(remonte ? indexCible : indexCible + 1, 0, combatant)
+
+    // Les valeurs d'initiative existantes, de la plus haute à la plus basse, sont redistribuées dans ce nouvel ordre :
+    // seules les positions changent, et un combattant qui entre ensuite garde sa tranche (2xx ou 1xx)
+    const valeurs = turns.map((c) => c.initiative ?? 0).sort((a, b) => b - a)
+    // Valeurs strictement décroissantes, pour que deux combattants à égalité ne soient pas départagés autrement
+    for (let i = 1; i < valeurs.length; i++) {
+      if (valeurs[i] >= valeurs[i - 1]) valeurs[i] = valeurs[i - 1] - 1
     }
-    // Le combattant droppé avait une initiative supérieure ou égale à celle du combattant cible
-    else if (combatant.initiative >= targetCombatant.initiative) {
-      // Le combattant cible est décalé d'une unité pour laisser la place
-      await targetCombatant.update({ initiative: targetCombatant.initiative + 10 })
-    }
-    await combatant.update({ initiative: newInitiative })
+    const updates = ordre.map((c, i) => ({ _id: c.id, initiative: valeurs[i] })).filter((u) => combat.combatants.get(u._id).initiative !== u.initiative)
+    if (updates.length) await combat.updateEmbeddedDocuments("Combatant", updates)
   }
 }

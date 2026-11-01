@@ -34,6 +34,13 @@
 - Interne : les règles des jets (coût en jetons, vérification de la répartition, analyse des dés) sont dans module/regles/jets.mjs, en fonctions pures couvertes par des tests unitaires (`npm test`, sans Foundry)
 - Interne : les règles des jetons de conscience sont dans module/regles/conscience.mjs, en fonctions pures testées (dont la règle « jetons non perdus en tête, en nombre égal à la valeur, sans dépasser le maximum » après une suite d'opérations)
 - Interne : les règles des jetons de la réserve collégiale (paiement tout ou rien, taille de la réserve) sont dans module/regles/reserve.mjs, en fonctions pures testées
+- Interne : code mort retiré (tableaux atouts et maitrises du modèle Éminence, remplacés depuis longtemps par les objets intégrés, et hasAtouts ; création d'un objet « description » sur l'Adversaire) ; le slug des maîtrises n'est plus enregistré, il est calculé à partir du nom
+- Fiche Adversaire : en mode lecture, la description est enrichie (liens @UUID cliquables, comme dans les autres fiches) au lieu d'être affichée brute
+- Interne : les conséquences d'une fausse note et d'une envolée (jeton de conscience, atout collégial) et l'apparence Dice So Nice des dés sont calculées au même endroit pour le jet et la relance
+- Traduction : le titre de la fenêtre de jet, le nom des macros de jet, les libellés de difficulté, « Acteur inconnu » et le nombre de succès en infobulle passent par le fichier de langue
+- Macros : glisser une harmonique ou une Éminence déjà présente dans la barre de raccourcis place la macro existante sur la case visée (il ne se passait rien)
+- Suivi de combat : glisser un combattant sur un autre le place exactement à cet endroit ; la cible n'était décalée que de 10 points d'initiative et pouvait passer par-dessus un troisième combattant proche
+- Fiches : le clic droit sur l'image demande confirmation avant de remettre l'image par défaut, et ne fait rien sur une fiche qu'on ne peut que consulter (la mise à jour échouait en erreur)
 
 1.8.4
 - Fiche Eminence : refactoring interne de la mise en page (les float sont remplacés par flex et grid dans les blocs Personnage, Harmoniques, Conscience, Timbre et les tableaux), sans changement visuel

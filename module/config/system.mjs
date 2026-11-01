@@ -32,83 +32,83 @@ export const POTENTIEL_MAX = 20
 export const DIFFICULTE = Object.freeze({
   1: {
     id: "1",
-    label: "1 (Par défaut)",
+    label: "PENOMBRE.Difficulte.1",
   },
   2: {
     id: "2",
-    label: "2 (Difficile)",
+    label: "PENOMBRE.Difficulte.2",
   },
   3: {
     id: "3",
-    label: "3 (Très difficile)",
+    label: "PENOMBRE.Difficulte.3",
   },
   4: {
     id: "4",
-    label: "4 (Exceptionnelle)",
+    label: "PENOMBRE.Difficulte.4",
   },
   5: {
     id: "5",
-    label: "5",
+    label: "PENOMBRE.Difficulte.5",
   },
   6: {
     id: "6",
-    label: "6 (Phénoménale)",
+    label: "PENOMBRE.Difficulte.6",
   },
   7: {
     id: "7",
-    label: "7",
+    label: "PENOMBRE.Difficulte.7",
   },
   8: {
     id: "8",
-    label: "8 (Inouïe)",
+    label: "PENOMBRE.Difficulte.8",
   },
   9: {
     id: "9",
-    label: "9",
+    label: "PENOMBRE.Difficulte.9",
   },
   10: {
     id: "10",
-    label: "10 (Surréaliste)",
+    label: "PENOMBRE.Difficulte.10",
   },
   11: {
     id: "11",
-    label: "11",
+    label: "PENOMBRE.Difficulte.11",
   },
   12: {
     id: "12",
-    label: "12 (Digne d'une fable)",
+    label: "PENOMBRE.Difficulte.12",
   },
   13: {
     id: "13",
-    label: "13",
+    label: "PENOMBRE.Difficulte.13",
   },
   14: {
     id: "14",
-    label: "14",
+    label: "PENOMBRE.Difficulte.14",
   },
   15: {
     id: "15",
-    label: "15",
+    label: "PENOMBRE.Difficulte.15",
   },
   16: {
     id: "16",
-    label: "16 (Digne d'un mythe)",
+    label: "PENOMBRE.Difficulte.16",
   },
   17: {
     id: "17",
-    label: "17",
+    label: "PENOMBRE.Difficulte.17",
   },
   18: {
     id: "18",
-    label: "18",
+    label: "PENOMBRE.Difficulte.18",
   },
   19: {
     id: "19",
-    label: "19",
+    label: "PENOMBRE.Difficulte.19",
   },
   20: {
     id: "20",
-    label: "20 (Digne d'une muse)",
+    label: "PENOMBRE.Difficulte.20",
   },
 })
 
