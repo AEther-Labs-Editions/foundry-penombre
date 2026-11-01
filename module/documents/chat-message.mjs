@@ -33,14 +33,16 @@ export default class PenombreMessage extends ChatMessage {
   _enrichChatCard(html) {
     const actor = this.getAssociatedActor()
 
+    // L'auteur est null si son utilisateur a été supprimé
+    const avatarAuteur = this.author?.avatar ?? CONST.DEFAULT_TOKEN
     let img
     let nameText
     if (this.isContentVisible) {
-      img = actor?.img ?? this.author.avatar
+      img = actor?.img ?? avatarAuteur
       nameText = this.alias
     } else {
-      img = this.author.avatar
-      nameText = this.author.name
+      img = avatarAuteur
+      nameText = this.author?.name ?? this.alias
     }
 
     const avatar = document.createElement("a")

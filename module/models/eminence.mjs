@@ -1,4 +1,5 @@
 import { SYSTEM } from "../config/system.mjs"
+import * as conscience from "../regles/conscience.mjs"
 
 const { SchemaField, NumberField, StringField, ArrayField, BooleanField } = foundry.data.fields
 
@@ -251,13 +252,11 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
   }
 
   get nbJetonsRestants() {
-    const jetonsConscience = this.conscience.jetons.filter((jeton) => jeton.statut === SYSTEM.JETON_STATUTS.actif.id).length
-    return jetonsConscience
+    return conscience.nbJetonsDisponibles(this.conscience.jetons)
   }
 
   // #region Jetons de conscience
-  // Les jetons non perdus (actifs ou dépensés) sont en tête du tableau et leur nombre est la valeur de conscience ;
-  // les jetons perdus suivent. Toutes les modifications passent par ces méthodes pour garder cette règle.
+  // Les règles sont dans regles/conscience.mjs ; ces méthodes les appliquent puis enregistrent l'Éminence.
 
   /**
    * Dépense des jetons de conscience, tout ou rien.
@@ -265,16 +264,8 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
    * @returns {Promise<boolean>} Faux s'il ne reste pas assez de jetons disponibles (rien n'est dépensé)
    */
   async depenserJetons(nbJetons) {
-    if (this.nbJetonsRestants < nbJetons) return false
-    const jetons = foundry.utils.duplicate(this.conscience.jetons)
-    let reste = nbJetons
-    for (const jeton of jetons) {
-      if (reste === 0) break
-      if (jeton.statut === SYSTEM.JETON_STATUTS.actif.id) {
-        jeton.statut = SYSTEM.JETON_STATUTS.inactif.id
-        reste--
-      }
-    }
+    const jetons = conscience.depenser(this.conscience.jetons, nbJetons)
+    if (!jetons) return false
     if (nbJetons > 0) await this.parent.update({ "system.conscience.jetons": jetons })
     return true
   }
@@ -284,10 +275,8 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
    * @returns {Promise<boolean>} Faux s'il n'y a aucun jeton dépensé
    */
   async regagnerUnJeton() {
-    const jetons = foundry.utils.duplicate(this.conscience.jetons)
-    const jeton = jetons.find((j) => j.statut === SYSTEM.JETON_STATUTS.inactif.id)
-    if (!jeton) return false
-    jeton.statut = SYSTEM.JETON_STATUTS.actif.id
+    const jetons = conscience.regagner(this.conscience.jetons)
+    if (!jetons) return false
     await this.parent.update({ "system.conscience.jetons": jetons })
     return true
   }
@@ -298,11 +287,8 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
    * @returns {Promise<void>}
    */
   async basculerJeton(index) {
-    const jetons = foundry.utils.duplicate(this.conscience.jetons)
-    const jeton = jetons[index]
-    if (!jeton || jeton.statut === SYSTEM.JETON_STATUTS.perdu.id) return
-    jeton.statut = jeton.statut === SYSTEM.JETON_STATUTS.actif.id ? SYSTEM.JETON_STATUTS.inactif.id : SYSTEM.JETON_STATUTS.actif.id
-    await this.parent.update({ "system.conscience.jetons": jetons })
+    const jetons = conscience.basculer(this.conscience.jetons, index)
+    if (jetons) await this.parent.update({ "system.conscience.jetons": jetons })
   }
 
   /**
@@ -310,12 +296,9 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
    * @returns {Promise<boolean>} Faux si la conscience est déjà au maximum
    */
   async ajouterUnJeton() {
-    const valeur = this.conscience.valeur
-    if (valeur >= this.conscience.max) return false
-    const jetons = foundry.utils.duplicate(this.conscience.jetons)
-    if (!jetons[valeur]) return false
-    jetons[valeur].statut = SYSTEM.JETON_STATUTS.inactif.id
-    await this.parent.update({ "system.conscience.valeur": valeur + 1, "system.conscience.jetons": jetons })
+    const resultat = conscience.ajouter(this.conscience.jetons, this.conscience.valeur, this.conscience.max)
+    if (!resultat) return false
+    await this.parent.update({ "system.conscience.valeur": resultat.valeur, "system.conscience.jetons": resultat.jetons })
     return true
   }
 
@@ -325,12 +308,9 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
    * @returns {Promise<boolean>} Faux si ce jeton est déjà perdu
    */
   async perdreJeton(index) {
-    const jetons = foundry.utils.duplicate(this.conscience.jetons)
-    if (!jetons[index] || jetons[index].statut === SYSTEM.JETON_STATUTS.perdu.id) return false
-    const [jetonPerdu] = jetons.splice(index, 1)
-    jetonPerdu.statut = SYSTEM.JETON_STATUTS.perdu.id
-    jetons.push(jetonPerdu)
-    await this.parent.update({ "system.conscience.valeur": Math.max(this.conscience.valeur - 1, 0), "system.conscience.jetons": jetons })
+    const resultat = conscience.perdre(this.conscience.jetons, this.conscience.valeur, index)
+    if (!resultat) return false
+    await this.parent.update({ "system.conscience.valeur": resultat.valeur, "system.conscience.jetons": resultat.jetons })
     return true
   }
 
@@ -339,9 +319,7 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
    * @returns {Promise<boolean>} Faux s'il n'y avait plus aucun jeton à perdre
    */
   async perdreUnJeton() {
-    const jetons = this.conscience.jetons
-    let index = jetons.findIndex((j) => j.statut === SYSTEM.JETON_STATUTS.inactif.id)
-    if (index === -1) index = jetons.findIndex((j) => j.statut === SYSTEM.JETON_STATUTS.actif.id)
+    const index = conscience.indexJetonAPerdre(this.conscience.jetons)
     if (index === -1) return false
     return this.perdreJeton(index)
   }
