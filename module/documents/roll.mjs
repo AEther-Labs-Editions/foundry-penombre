@@ -925,7 +925,7 @@ export default class PenombreRoll extends Roll {
         const [dieIndex, resultIndex] = indice.split("-").map(Number)
         if (roll.dice[dieIndex] && roll.dice[dieIndex].results[resultIndex]) {
           const formula = `1d${roll.dice[dieIndex].faces}`
-          const newDice = await new Roll(formula, {}, { rollMode }).evaluate()
+          const newDice = await new Roll(formula, {}, { rollMode: roll.options.rollMode }).evaluate()
 
           if (game.modules.get("dice-so-nice")?.active) {
             const desSpeciaux = game.settings.get(SYSTEM.ID, "desSpeciaux")
