@@ -36,6 +36,7 @@
 - Interne : les règles des jetons de la réserve collégiale (paiement tout ou rien, taille de la réserve) sont dans module/regles/reserve.mjs, en fonctions pures testées
 - Interne : code mort retiré (tableaux atouts et maitrises du modèle Éminence, remplacés depuis longtemps par les objets intégrés, et hasAtouts ; création d'un objet « description » sur l'Adversaire) ; le slug des maîtrises n'est plus enregistré, il est calculé à partir du nom
 - Fiche Adversaire : en mode lecture, la description est enrichie (liens @UUID cliquables, comme dans les autres fiches) au lieu d'être affichée brute
+- Interne : les conséquences d'une fausse note et d'une envolée (jeton de conscience, atout collégial) et l'apparence Dice So Nice des dés sont calculées au même endroit pour le jet et la relance
 
 1.8.4
 - Fiche Eminence : refactoring interne de la mise en page (les float sont remplacés par flex et grid dans les blocs Personnage, Harmoniques, Conscience, Timbre et les tableaux), sans changement visuel

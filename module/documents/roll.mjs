@@ -70,19 +70,38 @@ export default class PenombreRoll extends Roll {
    */
   static _applyDiceAppearances(roll) {
     if (!game.modules.get("dice-so-nice")?.active) return
+    roll.dice.forEach((die, index) => {
+      die.options.appearance = PenombreRoll._apparenceDe(index, die.faces)
+    })
+  }
+
+  /**
+   * Apparence Dice So Nice d'un dé : beige pour le dé d'harmonique (premier dé) et le dé merveilleux, bleu pour les autres,
+   * standard si les dés Pénombre ne sont pas utilisés.
+   * @param {number} index Position du dé dans le jet
+   * @param {number} faces Nombre de faces du dé
+   * @returns {object}
+   */
+  static _apparenceDe(index, faces) {
     const desSpeciaux = game.settings.get(SYSTEM.ID, "desSpeciaux")
-    const desSpeciauxTexture = game.settings.get(SYSTEM.ID, "desSpeciauxTexture")
-    if (!(game.dice3d.getLoadedDiceSystems().has("penombre") && desSpeciaux)) {
-      for (const die of roll.dice) {
-        die.options.appearance = { system: "standard" }
-      }
-      return
+    if (!(game.dice3d.getLoadedDiceSystems().has("penombre") && desSpeciaux)) return { system: "standard" }
+    const colorset = index === 0 || faces === MERVEILLEUX_FACES ? "penombre-beige" : "penombre-bleu"
+    return PenombreRoll._getDiceAppearance(colorset, game.settings.get(SYSTEM.ID, "desSpeciauxTexture"))
+  }
+
+  /**
+   * Conséquences du dé d'harmonique, après un jet ou la relance de ce dé. Fausse note : l'Éminence perd un jeton de
+   * conscience et un atout collégial utilisé perd un niveau ; envolée : un jeton dépensé redevient disponible.
+   * @param {PenombreRoll} roll
+   * @param {Actor|null} actor Acteur qui a lancé les dés
+   */
+  static async _appliquerEvenementsHarmonique(roll, actor) {
+    const analyse = PenombreRoll.analyseRollResult(roll)
+    if (actor?.type === "eminence") {
+      if (analyse.isDeHarmoniqueMin) await actor.system.perdreUnJeton()
+      if (analyse.isDeHarmoniqueMax) await actor.system.regagnerUnJeton()
     }
-    for (let i = 0; i < roll.dice.length; i++) {
-      const die = roll.dice[i]
-      const colorset = (i === 0 || die.faces === MERVEILLEUX_FACES) ? "penombre-beige" : "penombre-bleu"
-      die.options.appearance = PenombreRoll._getDiceAppearance(colorset, desSpeciauxTexture)
-    }
+    if (analyse.isDeHarmoniqueMin) await PenombreRoll._degraderAtoutFaction(roll.options.factionAtoutsUsed)
   }
 
   static async prompt(options = {}) {
@@ -928,14 +947,7 @@ export default class PenombreRoll extends Roll {
           const newDice = await new Roll(formula, {}, { rollMode: roll.options.rollMode }).evaluate()
 
           if (game.modules.get("dice-so-nice")?.active) {
-            const desSpeciaux = game.settings.get(SYSTEM.ID, "desSpeciaux")
-            const desSpeciauxTexture = game.settings.get(SYSTEM.ID, "desSpeciauxTexture")
-            if (game.dice3d.getLoadedDiceSystems().has("penombre") && desSpeciaux) {
-              const colorset = (dieIndex === 0 || newDice.dice[0].faces === MERVEILLEUX_FACES) ? "penombre-beige" : "penombre-bleu"
-              newDice.dice[0].options.appearance = PenombreRoll._getDiceAppearance(colorset, desSpeciauxTexture)
-            } else {
-              newDice.dice[0].options.appearance = { system: "standard" }
-            }
+            newDice.dice[0].options.appearance = PenombreRoll._apparenceDe(dieIndex, newDice.dice[0].faces)
           }
 
           newRolls.push(newDice)
@@ -951,23 +963,8 @@ export default class PenombreRoll extends Roll {
       // Gestion des effets de jetons si le dé harmonique (index 0) a été relancé
       const harmoniqueRerolled = rerolledDices.some((indice) => indice.startsWith("0-"))
       if (harmoniqueRerolled) {
-        const postAnalysis = PenombreRoll.analyseRollResult(roll)
         const actorId = roll.options.actorId || message.speaker.actor
-        const rerollActor = actorId ? game.actors.get(actorId) : null
-        if (rerollActor?.type === "eminence") {
-          // Fausse note (1 sur le dé harmonique) : perte d'un jeton
-          if (postAnalysis.isDeHarmoniqueMin) {
-            await rerollActor.system.perdreUnJeton()
-          }
-          // Envolée (max sur le dé harmonique) : réactivation d'un jeton inactif
-          if (postAnalysis.isDeHarmoniqueMax) {
-            await rerollActor.system.regagnerUnJeton()
-          }
-        }
-        // Fausse note sur un jet ayant utilisé un atout collégial : son niveau baisse de 1
-        if (postAnalysis.isDeHarmoniqueMin) {
-          await PenombreRoll._degraderAtoutFaction(roll.options.factionAtoutsUsed)
-        }
+        await PenombreRoll._appliquerEvenementsHarmonique(roll, actorId ? game.actors.get(actorId) : null)
       }
 
       // Affichage groupé de tous les nouveaux dés avec Dice So Nice

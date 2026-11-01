@@ -1,4 +1,5 @@
 const { SchemaField, NumberField, StringField, BooleanField, ArrayField, TypedObjectField, DocumentIdField } = foundry.data.fields
+import { SYSTEM } from "../config/system.mjs"
 import BaseMessageData from "./base-message.mjs"
 import PenombreRoll from "../documents/roll.mjs"
 import { demanderAuMJ, mjConnecte } from "../helpers/mj.mjs"

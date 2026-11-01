@@ -66,22 +66,8 @@ export default class PenombreActor extends Actor {
       { messageMode: roll.options.rollMode },
     )
 
-    // Gestion des cas particuliers : perte ou gain de jetons de conscience
-    const rollResults = PenombreRoll.analyseRollResult(roll)
-    // Fausse note (1 sur le dé harmonique) : perte d'un jeton
-    if (rollResults.isDeHarmoniqueMin) {
-      await this.system.perdreUnJeton()
-    }
-
-    // Envolée (20 sur le dé harmonique) : un jeton dépensé est réactivé
-    if (rollResults.isDeHarmoniqueMax) {
-      await this.system.regagnerUnJeton()
-    }
-
-    // Fausse note sur un jet ayant utilisé un atout collégial : son niveau baisse de 1
-    if (rollResults.isDeHarmoniqueMin) {
-      await PenombreRoll._degraderAtoutFaction(roll.options.factionAtoutsUsed)
-    }
+    // Fausse note ou envolée : jetons de conscience et atout collégial
+    await PenombreRoll._appliquerEvenementsHarmonique(roll, this)
 
     return chatMessage
   }

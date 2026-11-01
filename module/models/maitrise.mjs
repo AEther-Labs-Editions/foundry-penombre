@@ -1,3 +1,5 @@
+import { SYSTEM } from "../config/system.mjs"
+
 const { HTMLField, NumberField, StringField } = foundry.data.fields
 
 export default class Maitrise extends foundry.abstract.TypeDataModel {
