@@ -1,3 +1,4 @@
+import { nbJetonsDisponibles } from "../regles/reserve.mjs"
 const { TypedObjectField, BooleanField, SchemaField, StringField, NumberField } = foundry.data.fields
 
 export default class ReserveCollegiale extends foundry.abstract.TypeDataModel {
@@ -44,7 +45,7 @@ export default class ReserveCollegiale extends foundry.abstract.TypeDataModel {
   }
 
   get nbJetonsRestants() {
-    return Object.values(this.jetons).filter((jeton) => jeton.valeur === true).length
+    return nbJetonsDisponibles(this.jetons)
   }
 
   /**

@@ -1,6 +1,7 @@
 const { HandlebarsApplicationMixin, ApplicationV2 } = foundry.applications.api
 import { SYSTEM } from "../config/system.mjs"
 import { demanderAuMJ, estEntierPositif, verifierRequete } from "../helpers/mj.mjs"
+import * as reserve from "../regles/reserve.mjs"
 
 /**
  * Une application pour gérer la réserve collégiale, le potentiel collégial et les factions.
@@ -161,14 +162,7 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
     }
     if (CONFIG.debug.penombre?.reserve) console.debug("Pénombre | Ajustement du nombre de jetons de la réserve collégiale", nbJetons)
     await PenombreReserveCollegiale._updateReserve((r) => {
-      // Ajouter les jetons manquants si le nombre augmente
-      for (let i = 1; i <= nbJetons; i++) {
-        r.jetons[String(i)] ??= { valeur: false }
-      }
-      // Supprimer les jetons en excès si le nombre diminue
-      for (const key of Object.keys(r.jetons)) {
-        if (Number(key) > nbJetons) delete r.jetons[key]
-      }
+      r.jetons = reserve.ajusterTaille(r.jetons, nbJetons)
     })
   }
 
@@ -186,10 +180,9 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
    */
   static async _mutateReserveFromRoll(nbJetons) {
     return PenombreReserveCollegiale._updateReserve((r) => {
-      const disponibles = Object.values(r.jetons).filter((jeton) => jeton.valeur === true)
-      if (disponibles.length < nbJetons) return { paye: false, restants: disponibles.length }
-      for (const jeton of disponibles.slice(0, nbJetons)) jeton.valeur = false
-      return { paye: true, restants: disponibles.length }
+      const { jetons, paye, restants } = reserve.payer(r.jetons, nbJetons)
+      r.jetons = jetons
+      return { paye, restants }
     })
   }
 
