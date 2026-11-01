@@ -28,10 +28,8 @@ export default class PenombreSettingsHandler {
         hint: "PENOMBRE.Settings.nbJetons.hint",
         scope: "world",
         config: true,
-        default: 10,
-        type: Number,
+        type: new foundry.data.fields.NumberField({ required: true, nullable: false, integer: true, min: 1, initial: 10 }),
         requiresReload: true,
-        onChange: ReserveCollegiale.changeNbJetons,
       },
 
       utiliserFactions: {

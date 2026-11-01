@@ -146,6 +146,32 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
     return traitement
   }
 
+  /**
+   * Met la réserve à la taille fixée par le paramètre nbJetons (appelé par le MJ actif quand le style de jeu
+   * ou le nombre de jetons change). En Kit de démo, le nombre de jetons est d'abord ramené à 10.
+   * @returns {Promise<void>}
+   */
+  static async ajusterNbJetons() {
+    const nbJetons = game.settings.get(SYSTEM.ID, "nbJetons")
+    if (game.settings.get(SYSTEM.ID, "styleJeu") === "demo" && nbJetons !== 10) {
+      ui.notifications.warn("PENOMBRE.Warnings.limiteNbJetonsDemo", { localize: true })
+      // Le changement du paramètre rappelle cette fonction, qui ajuste alors la réserve
+      await game.settings.set(SYSTEM.ID, "nbJetons", 10)
+      return
+    }
+    if (CONFIG.debug.penombre?.reserve) console.debug("Pénombre | Ajustement du nombre de jetons de la réserve collégiale", nbJetons)
+    await PenombreReserveCollegiale._updateReserve((r) => {
+      // Ajouter les jetons manquants si le nombre augmente
+      for (let i = 1; i <= nbJetons; i++) {
+        r.jetons[String(i)] ??= { valeur: false }
+      }
+      // Supprimer les jetons en excès si le nombre diminue
+      for (const key of Object.keys(r.jetons)) {
+        if (Number(key) > nbJetons) delete r.jetons[key]
+      }
+    })
+  }
+
   /** @param {string} index */
   static async _mutateToggleJeton(index) {
     await PenombreReserveCollegiale._updateReserve((r) => {
