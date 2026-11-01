@@ -115,28 +115,14 @@ export default class EminenceSheet extends PenombreBaseActorSheet {
   _getJetonConscienceContextOptions() {
     return [
       {
-        label: `Ajouter / Perdre un jeton de conscience`,
+        label: "PENOMBRE.ui.ajouterPerdreJeton",
         icon: `<i class="fa-regular fa-bolt"></i>`,
         onClick: async (event, li) => {
           event.preventDefault()
-          const index = li.dataset.index
-          let jetons = foundry.utils.duplicate(this.document.system.conscience.jetons)
-          const currentStatut = jetons[index].statut
-          let currentConscience = this.document.system.conscience.valeur
-          switch (currentStatut) {
-            case "actif":
-            case "inactif":
-              const jetonSupprime = jetons.splice(index, 1)[0]
-              jetonSupprime.statut = "perdu"
-              jetons.push(jetonSupprime)
-              currentConscience--
-              break
-            case "perdu":
-              jetons[currentConscience].statut = "inactif"
-              currentConscience++
-              break
-          }
-          await this.document.update({ "system.conscience.jetons": jetons, "system.conscience.valeur": currentConscience })
+          const index = Number(li.dataset.index)
+          // Un jeton perdu revient (la conscience augmente), un autre jeton est perdu
+          if (this.document.system.conscience.jetons[index]?.statut === SYSTEM.JETON_STATUTS.perdu.id) await this.document.system.ajouterUnJeton()
+          else await this.document.system.perdreJeton(index)
         },
       },
     ]
@@ -172,19 +158,7 @@ export default class EminenceSheet extends PenombreBaseActorSheet {
    **/
   static async #onClicJeton(event, target) {
     event.preventDefault()
-    const dataset = target.dataset
-    const index = dataset.index // Commence à 0
-    const jetons = foundry.utils.duplicate(this.document.system.conscience.jetons)
-    const currentStatut = jetons[index].statut
-    switch (currentStatut) {
-      case "actif":
-        jetons[index].statut = "inactif"
-        break
-      case "inactif":
-        jetons[index].statut = "actif"
-        break
-    }
-    await this.document.update({ "system.conscience.jetons": jetons })
+    await this.document.system.basculerJeton(Number(target.dataset.index))
   }
 
   static async #onClicNote(event, target) {

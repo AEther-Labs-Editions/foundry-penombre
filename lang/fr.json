@@ -412,6 +412,7 @@
       "creerComplicationJet": "Créer une complication pour économiser des jetons",
       "complicationDescription": "Description du traumatisme",
       "complicationJetonsEconomises": "Jetons économisés",
+      "ajouterPerdreJeton": "Ajouter / Perdre un jeton de conscience",
       "clicJetons": "Clic pour dépenser ou réactiver un jeton. <br>Clic-droit pour perdre ou ajouter un jeton.",
       "timbre": "Timbre",
       "peste": "Peste",
