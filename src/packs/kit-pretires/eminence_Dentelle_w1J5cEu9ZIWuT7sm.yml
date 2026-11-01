@@ -288,7 +288,7 @@ items:
     _key: '!actors.items!w1J5cEu9ZIWuT7sm.cYgjoQ83r2Fii8lg'
   - type: maitrise
     name: Prisme
-    img: systems/penombre/assets/icons/maitrise.png
+    img: systems/penombre/assets/icons/maitrise.webp
     system:
       description: >-
         <div class="maitrise-carte"><h1 class="maitrise-titre">Dentelle,
