@@ -35,6 +35,7 @@
 - Interne : les règles des jetons de conscience sont dans module/regles/conscience.mjs, en fonctions pures testées (dont la règle « jetons non perdus en tête, en nombre égal à la valeur, sans dépasser le maximum » après une suite d'opérations)
 - Interne : les règles des jetons de la réserve collégiale (paiement tout ou rien, taille de la réserve) sont dans module/regles/reserve.mjs, en fonctions pures testées
 - Interne : code mort retiré (tableaux atouts et maitrises du modèle Éminence, remplacés depuis longtemps par les objets intégrés, et hasAtouts ; création d'un objet « description » sur l'Adversaire) ; le slug des maîtrises n'est plus enregistré, il est calculé à partir du nom
+- Fiche Adversaire : en mode lecture, la description est enrichie (liens @UUID cliquables, comme dans les autres fiches) au lieu d'être affichée brute
 
 1.8.4
 - Fiche Eminence : refactoring interne de la mise en page (les float sont remplacés par flex et grid dans les blocs Personnage, Harmoniques, Conscience, Timbre et les tableaux), sans changement visuel
