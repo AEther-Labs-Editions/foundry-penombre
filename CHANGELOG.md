@@ -22,6 +22,7 @@
 - Fenêtre de jet : une seule vérification active ou désactive le bouton « Lancer les dés » ; cocher un atout ou saisir la description d'une complication ne réactive plus le bouton quand on demande plus de jetons de conscience ou de réserve qu'il n'en reste
 - Action collégiale : seules les Éminences des joueuses connectées sont attendues (plus le MJ, même s'il a un personnage associé, ni un personnage qui n'est pas une Éminence, ni l'Éminence qui lance) ; les boutons Participer ne s'affichent que pour elles
 - Action collégiale : le MJ peut la clore depuis le message principal (bouton « Clore l'action collégiale », après confirmation) ; les Éminences qui n'ont pas répondu ne participent pas et le résultat s'affiche, au lieu de rester masqué si une joueuse se déconnecte ou ne répond pas
+- Action collégiale : l'animation Dice So Nice du jet principal, jouée quand toutes les réponses sont arrivées, respecte le mode du jet (privé, à l'aveugle, pour soi) au lieu d'être montrée à tout le monde ; même correction pour l'animation des relances, qui comparait le mode du jet aux noms d'avant Foundry V14 et jouait donc toujours en public
 
 1.8.4
 - Fiche Eminence : refactoring interne de la mise en page (les float sont remplacés par flex et grid dans les blocs Personnage, Harmoniques, Conscience, Timbre et les tableaux), sans changement visuel

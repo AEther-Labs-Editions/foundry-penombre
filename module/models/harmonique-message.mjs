@@ -118,9 +118,9 @@ export default class HarmoniqueMessageData extends BaseMessageData {
 
           // Si le joueur est à l'origine du message, affichage du résultat du roll dans Dice So Nice (visible par tous les joueurs)
           if (game.modules.get("dice-so-nice")?.active && game.user.id === this.parent.author.id && message.system.dsnDejaTraite === false) {
-            // Paramètres : roll, user, synchronize, whisper, blind
-            // @param {Boolean} synchronize if the animation needs to be shown to other players. Default: false
-            await game.dice3d.showForRoll(roll, game.user, true)
+            // Paramètres : roll, user, synchronize, whisper, blind ; whisper et blind respectent le mode du jet
+            const { whisper, blind } = PenombreRoll._visibiliteDSN(roll.options.rollMode)
+            await game.dice3d.showForRoll(roll, game.user, true, whisper, blind)
             await message.update({ "system.dsnDejaTraite": true })
           }
 
