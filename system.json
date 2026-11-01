@@ -51,14 +51,14 @@
           "name": "Échos mélodiques",
           "sorting": "m",
           "color": "#266a8e",
-          "packs": ["sc-echos-adversaires", "sc-echos-journal", "sc-echos-scenes"],
+          "packs": ["sc-echos-adversaires", "sc-echos-journal"],
           "folders": []
         },
         {
           "name": "Plénitude",
           "sorting": "m",
           "color": "#266a8e",
-          "packs": ["sc-plenitude-adversaires", "sc-plenitude-journal", "sc-plenitude-scenes"],
+          "packs": ["sc-plenitude-adversaires", "sc-plenitude-journal"],
           "folders": []
         }
       ]
