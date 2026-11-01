@@ -1,5 +1,5 @@
 2.0.0
-- Règle optionnelle « Le jeu des factions » (chapitre « La lutte au quotidien », p. 90-94), activée par le paramètre « Utiliser la règle des Factions » : relations avec jusqu'à 3 atouts collégiaux et une complication collégiale chacune, potentiel collégial, atouts de faction dans la fenêtre de jet (jeton pris dans la réserve collégiale), complication collégiale à la place de jetons dépensés
+- Règle optionnelle « Le jeu des factions » (chapitre « La lutte au quotidien », p. 90-94), activée par le paramètre « Activer le Jeu des Factions » : relations avec jusqu'à 3 atouts collégiaux et une complication collégiale chacune, potentiel collégial, atouts de faction dans la fenêtre de jet (jeton pris dans la réserve collégiale), complication collégiale à la place de jetons dépensés
 - Réserve collégiale : avec les factions, la fenêtre reproduit la feuille collégiale étendue du livre (médaillon Potentiel, colonne Relations avec 3 lignes d'atouts et une ligne de complication par relation) ; le MJ saisit directement sur les lignes en mode édition
 - Factions : sur une fausse note, l'un des atouts collégiaux utilisés perd un niveau et disparaît à 0 (l'envolée n'a pas d'effet)
 - Factions : un atout saisi sur une ligne vide est créé au niveau 1 sans rien dépenser ; le MJ reporte lui-même le coût éventuel (potentiel, case de complication), ce qui permet la création préalable, l'évolution de fin de scénario et les dépenses de potentiel en jeu
@@ -30,6 +30,7 @@
 - Paramètre « Nombre de jetons de la Réserve Collégiale » : nombre entier d'au moins 1 ; en Kit de démo, il est ramené à 10 avec un avertissement affiché au seul MJ (les joueuses recevaient une erreur permanente), et la réserve est ajustée en un seul endroit
 - Tchat : un message dont l'utilisateur auteur a été supprimé s'affiche avec l'avatar par défaut au lieu de faire échouer l'affichage du message
 - Conscience : toutes les modifications des jetons (dépense, envolée, clic, menu contextuel Ajouter / Perdre, fausse note) passent par le modèle de l'Éminence, qui garde les jetons non perdus en tête et leur nombre égal à la valeur de conscience ; le menu contextuel n'ajoute plus de jeton au-delà du maximum
+- Kit - Prétirés : la maîtrise Prisme de la Dentelle affiche son icône (le chemin pointait vers maitrise.png, qui n'existe pas, au lieu de maitrise.webp)
 - Interne : les règles des jets (coût en jetons, vérification de la répartition, analyse des dés) sont dans module/regles/jets.mjs, en fonctions pures couvertes par des tests unitaires (`npm test`, sans Foundry)
 - Interne : les règles des jetons de conscience sont dans module/regles/conscience.mjs, en fonctions pures testées (dont la règle « jetons non perdus en tête, en nombre égal à la valeur, sans dépasser le maximum » après une suite d'opérations)
 - Interne : les règles des jetons de la réserve collégiale (paiement tout ou rien, taille de la réserve) sont dans module/regles/reserve.mjs, en fonctions pures testées

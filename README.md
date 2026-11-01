@@ -6,7 +6,7 @@
 <p>Ce système vous permet de jouer au jeu de rôle "<em>Pénombre</em>" sur la plateforme de jeu Foundry Virtual Tabletop.</p>
 
 <p align="center">
-    <img alt="Foundry Version 13 support" src="https://img.shields.io/badge/Foundry-v13-informational">
+    <img alt="Foundry Version 14 support" src="https://img.shields.io/badge/Foundry-v14-informational">
     <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/AEther-Labs-Editions/foundry-penombre"> 
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/AEther-Labs-Editions/foundry-penombre">
     <img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/AEther-Labs-Editions/foundry-penombre?label=latest%20release" /> 
