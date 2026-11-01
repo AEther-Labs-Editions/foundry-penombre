@@ -1,11 +1,6 @@
 import { SYSTEM } from "../config/system.mjs"
 import { demanderAuMJ, mjConnecte } from "../helpers/mj.mjs"
-
-/**
- * Constantes pour le calcul des succès et types de dés
- */
-const SUCCESS_DIVISOR = 4
-const MERVEILLEUX_FACES = 20
+import { MERVEILLEUX_FACES, analyserDes, calculerCoutJetons, jetonsARepartir as calculerJetonsARepartir, verifierRepartition } from "../regles/jets.mjs"
 
 const DICE_APPEARANCE_CONFIGS = {
   "penombre-beige": {
@@ -592,52 +587,39 @@ export default class PenombreRoll extends Roll {
    * @returns {boolean} Vrai si le lancer est possible
    */
   static _validerJetons(dialogElement, { notifier = false } = {}) {
-    const avertir = (message, options) => {
-      if (notifier) ui.notifications.warn(message, options)
-    }
-    let canRoll = true
     const jetonsConscience = Number(dialogElement.querySelector("#jetonsConscience").value) || 0
     const jetonsReserve = Number(dialogElement.querySelector("#jetonsReserve").value) || 0
-    const jetonsTotal = jetonsConscience + jetonsReserve
-
-    const jetons = PenombreRoll._getJetonsTotal(dialogElement)
-    const jetonsComplication = PenombreRoll._getComplicationJetons(dialogElement)
-    const jetonsARepartir = Math.max(jetons - jetonsComplication, 0)
-
-    if (jetonsTotal > jetonsARepartir) avertir(game.i18n.localize("PENOMBRE.Warnings.jetonsDepassement"))
-    if (jetonsTotal !== jetonsARepartir) canRoll = false
-
-    // Jetons disponibles
+    const aRepartir = calculerJetonsARepartir(PenombreRoll._getJetonsTotal(dialogElement), PenombreRoll._getComplicationJetons(dialogElement))
     const id = dialogElement.querySelector(".penombre-roll-dialog").dataset.actorId
     const actor = id ? game.actors.get(id) : null
-    if (!actor) canRoll = false
-    else {
-      // Jetons de conscience
-      const nbJetonsRestantsConscience = actor.system.nbJetonsRestants
-      if (jetonsConscience > nbJetonsRestantsConscience) {
-        avertir(game.i18n.format("PENOMBRE.Warnings.jetonsConscienceInsuffisants", { actuel: nbJetonsRestantsConscience, demande: jetonsConscience }))
-        canRoll = false
+    const dispoConscience = actor ? actor.system.nbJetonsRestants : null
+    // La réserve collégiale est inutilisable sans MJ connecté
+    const dispoReserve = mjConnecte() ? game.settings.get(SYSTEM.ID, "reserveCollegiale").nbJetonsRestants : 0
+    const minimumReserve = PenombreRoll._getJetonsReserveMinimum(dialogElement)
+
+    const { possible, erreurs } = verifierRepartition({
+      jetonsConscience,
+      jetonsReserve,
+      aRepartir,
+      dispoConscience,
+      dispoReserve,
+      minimumReserve,
+      descriptionManquante: PenombreRoll._isComplicationDescriptionMissing(dialogElement),
+    })
+
+    if (notifier) {
+      if (erreurs.includes("depassement")) ui.notifications.warn(game.i18n.localize("PENOMBRE.Warnings.jetonsDepassement"))
+      if (erreurs.includes("conscience")) {
+        ui.notifications.warn(game.i18n.format("PENOMBRE.Warnings.jetonsConscienceInsuffisants", { actuel: dispoConscience, demande: jetonsConscience }))
       }
+      if (erreurs.includes("reserve")) {
+        ui.notifications.warn(game.i18n.format("PENOMBRE.Warnings.jetonsReserveInsuffisants", { actuel: dispoReserve, demande: jetonsReserve }), { permanent: true })
+      }
+      if (erreurs.includes("minimumReserve")) ui.notifications.warn(game.i18n.format("PENOMBRE.Warnings.jetonsReserveFactionRequis", { minimum: minimumReserve }))
     }
 
-    // Jetons de la réserve collégiale (inutilisable sans MJ connecté)
-    const nbJetonsRestantsReserveCollegiale = mjConnecte() ? game.settings.get(SYSTEM.ID, "reserveCollegiale").nbJetonsRestants : 0
-    if (jetonsReserve > nbJetonsRestantsReserveCollegiale) {
-      avertir(game.i18n.format("PENOMBRE.Warnings.jetonsReserveInsuffisants", { actuel: nbJetonsRestantsReserveCollegiale, demande: jetonsReserve }), { permanent: true })
-      canRoll = false
-    }
-
-    // Un atout collégial doit obligatoirement être payé par un jeton de la réserve
-    const jetonsReserveMinimum = PenombreRoll._getJetonsReserveMinimum(dialogElement)
-    if (jetonsReserve < jetonsReserveMinimum) {
-      avertir(game.i18n.format("PENOMBRE.Warnings.jetonsReserveFactionRequis", { minimum: jetonsReserveMinimum }))
-      canRoll = false
-    }
-
-    if (PenombreRoll._isComplicationDescriptionMissing(dialogElement)) canRoll = false
-
-    dialogElement.querySelector('button[type="submit"]').disabled = !canRoll
-    return canRoll
+    dialogElement.querySelector('button[type="submit"]').disabled = !possible
+    return possible
   }
 
   static _updateFormula(dialogElement) {
@@ -692,64 +674,30 @@ export default class PenombreRoll extends Roll {
   }
 
   static _updateNbJetons(dialogElement) {
-    // Action collégiale
-    const actionCollegiale = dialogElement.querySelector("#actionCollegiale")?.checked ?? false
-    const messageType = dialogElement.querySelector(".messageType").innerHTML
-    const jetonActionCollegiale = actionCollegiale && messageType !== "lie" ? 1 : 0
-
-    const actionCollegialeLiee = dialogElement.querySelector("#actionCollegiale")?.checked === undefined // Si on ne trouve pas la checkbox, c'est que c'est une action collégiale liée
-
-    // Le joueur a-t-il coché la case "Premier atout pour action collégiale" ?
-    const actionCollegialePremierAtout = dialogElement.querySelector("#actionCollegialePremierAtout")?.checked ?? false
-
-    // Atouts : 1 jeton par atout au-delà du premier sinon 1 jeton par atout
-    // Dans le cas d'une action collégiale, le premier atout ne coûte pas de jeton si la case est cochée
-    // Pour une action collégiale liée, si la case est cochée, le premier atout ne coûte pas de jeton
-    const nbAtoutsSelectionnes = Number(dialogElement.querySelectorAll(".atout.checked").length)
-    let premierAtoutGratuit = false
-    if (
-      (actionCollegiale && actionCollegialePremierAtout) ||
-      (!actionCollegiale && !actionCollegialeLiee) ||
-      (!actionCollegiale && actionCollegialeLiee && actionCollegialePremierAtout)
-    ) {
-      premierAtoutGratuit = true
-    }
-    let jetonsAtouts = nbAtoutsSelectionnes
-    if (premierAtoutGratuit) jetonsAtouts = Math.max(nbAtoutsSelectionnes - 1, 0)
-
-    // Atouts de faction : le jeton dépensé pour un atout collégial doit obligatoirement venir de la réserve.
-    // Le premier atout gratuit est prioritairement attribué à un atout personnel s'il y en a un de sélectionné.
-    const nbFactionAtoutsSelectionnes = dialogElement.querySelectorAll(".faction-atout.checked").length
-    const nbAtoutsPersonnelsSelectionnes = nbAtoutsSelectionnes - nbFactionAtoutsSelectionnes
-    let jetonsReserveMinimum = nbFactionAtoutsSelectionnes
-    if (premierAtoutGratuit && nbAtoutsPersonnelsSelectionnes === 0 && nbFactionAtoutsSelectionnes > 0) {
-      jetonsReserveMinimum = Math.max(nbFactionAtoutsSelectionnes - 1, 0)
-    }
-    dialogElement.querySelector("#jetonsReserve").dataset.minimum = jetonsReserveMinimum
-
-    // Dé merveilleux
-    const deMerveilleux = dialogElement.querySelector("#deMerveilleux").checked
-    const jetonDeMerveilleux = deMerveilleux ? 1 : 0
-
-    // Effet magique
-    const effetMagique = dialogElement.querySelector("#effetMagique")?.checked ?? false
-    const jetonEffetMagique = effetMagique ? 1 : 0
-
-    // Selon la maitrise magique : 1 jeton par niveau manquant par rapport au niveau de l'effet magique souhaité
-    const niveauEffetMagique = Number(dialogElement.querySelector("#effetMagiqueNiveau")?.value || 1)
-    const maitriseSlug = dialogElement.querySelector("#effetMagiqueMaitrise")?.value || null
     const actorId = dialogElement.querySelector(".penombre-roll-dialog").dataset.actorId
-    let actor = null
-    if (actorId) actor = game.actors.get(actorId)
-    let niveauMaitrise = 0
-    if (actor && maitriseSlug) {
-      const maitrise = actor.itemTypes.maitrise.find((m) => m.system.slug === maitriseSlug)
-      if (maitrise) niveauMaitrise = maitrise.system.niveau || 0
-    }
-    const jetonsEffetMagiqueMaitrise = effetMagique ? Math.max(niveauEffetMagique - niveauMaitrise, 0) : 0
+    const actor = actorId ? game.actors.get(actorId) : null
+    const maitriseSlug = dialogElement.querySelector("#effetMagiqueMaitrise")?.value || null
+    const maitrise = actor && maitriseSlug ? actor.itemTypes.maitrise.find((m) => m.system.slug === maitriseSlug) : null
 
-    // Total des jetons à dépenser (avant déduction de la complication)
-    const jetons = jetonsAtouts + jetonActionCollegiale + jetonDeMerveilleux + jetonEffetMagique + jetonsEffetMagiqueMaitrise
+    // Coût en jetons d'après les options cochées (règles dans regles/jets.mjs)
+    const cout = calculerCoutJetons({
+      actionCollegiale: dialogElement.querySelector("#actionCollegiale")?.checked ?? false,
+      messageLie: dialogElement.querySelector(".messageType").innerHTML === "lie",
+      // Si on ne trouve pas la case, c'est une action collégiale liée
+      actionCollegialeLiee: dialogElement.querySelector("#actionCollegiale")?.checked === undefined,
+      premierAtoutCoche: dialogElement.querySelector("#actionCollegialePremierAtout")?.checked ?? false,
+      nbAtouts: dialogElement.querySelectorAll(".atout.checked").length,
+      nbFactionAtouts: dialogElement.querySelectorAll(".faction-atout.checked").length,
+      deMerveilleux: dialogElement.querySelector("#deMerveilleux").checked,
+      effetMagique: dialogElement.querySelector("#effetMagique")?.checked ?? false,
+      niveauEffetMagique: Number(dialogElement.querySelector("#effetMagiqueNiveau")?.value || 1),
+      niveauMaitrise: maitrise?.system.niveau || 0,
+    })
+    const { jetonsAtouts, premierAtoutGratuit, jetonActionCollegiale, jetonDeMerveilleux, jetonEffetMagique, jetonsEffetMagiqueMaitrise } = cout
+    const nbAtoutsSelectionnes = dialogElement.querySelectorAll(".atout.checked").length
+    const jetons = cout.total
+    dialogElement.querySelector("#jetonsReserve").dataset.minimum = cout.jetonsReserveMinimum
+
     const jetonsInput = dialogElement.querySelector("#jetons")
     jetonsInput.dataset.total = jetons
 
@@ -776,7 +724,7 @@ export default class PenombreRoll extends Roll {
       }
     }
     const jetonsComplication = PenombreRoll._getComplicationJetons(dialogElement)
-    const jetonsARepartir = Math.max(jetons - jetonsComplication, 0)
+    const jetonsARepartir = calculerJetonsARepartir(jetons, jetonsComplication)
     // Le champ affiché au joueur montre le nombre de jetons qu'il reste réellement à répartir
     jetonsInput.value = jetonsARepartir
 
@@ -878,53 +826,9 @@ export default class PenombreRoll extends Roll {
    *   @property {boolean} isDeMerveilleuxMax - True if the first die (merveilleux) rolled its maximum value.
    */
   static analyseRollResult(roll) {
-    let nbSucces = 0
-    let isDeHarmoniqueMin = false
-    let isDeHarmoniqueMax = false
-    let isDeMerveilleuxMin = false
-    let isDeMerveilleuxMax = false
-    let typeDeHarmonique = null
-
-    for (const [index, die] of roll.dice.entries()) {
-      // Traitement du premier dé uniquement (dé harmonique ou merveilleux)
-      if (index === 0) {
-        typeDeHarmonique = die.faces
-        const isMerveilleux = die.faces === MERVEILLEUX_FACES
-
-        // Résultat maximum
-        if (die.total === die.faces) {
-          if (isMerveilleux) {
-            isDeMerveilleuxMax = true
-          } else {
-            isDeHarmoniqueMax = true
-          }
-        }
-
-        // Résultat minimum
-        if (die.total === 1) {
-          if (isMerveilleux) {
-            isDeMerveilleuxMin = true
-          } else {
-            isDeHarmoniqueMin = true
-          }
-        }
-      }
-
-      // Les autres dés peuvent être un dé merveilleux ou des dés d'atouts
-      else if (die.faces === MERVEILLEUX_FACES) {
-        if (die.total === die.faces) isDeMerveilleuxMax = true
-        if (die.total === 1) isDeMerveilleuxMin = true
-      }
-
-      // Calcul des succès pour tous les dés
-      for (const result of die.results) {
-        nbSucces += Math.floor(result.result / SUCCESS_DIVISOR)
-      }
-    }
-
-    if (CONFIG.debug.penombre?.rolls)
-      console.debug("Pénombre | Roll | analyseRollResult", { nbSucces, isDeHarmoniqueMin, isDeHarmoniqueMax, isDeMerveilleuxMin, isDeMerveilleuxMax })
-    return { nbSucces, typeDeHarmonique, isDeHarmoniqueMin, isDeHarmoniqueMax, isDeMerveilleuxMin, isDeMerveilleuxMax }
+    const resultat = analyserDes(roll.dice)
+    if (CONFIG.debug.penombre?.rolls) console.debug("Pénombre | Roll | analyseRollResult", resultat)
+    return resultat
   }
 
   /**
