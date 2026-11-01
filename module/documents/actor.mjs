@@ -1,6 +1,22 @@
 import PenombreRoll from "./roll.mjs"
 export default class PenombreActor extends Actor {
   /**
+   * Éminences dont la réponse est attendue pour une action collégiale : personnages des joueuses connectées
+   * (hors MJ), qui sont des Éminences différentes de celle qui lance, chacune une seule fois.
+   * @param {PenombreActor} acteurQuiLance
+   * @returns {PenombreActor[]}
+   */
+  static participantsAttendus(acteurQuiLance) {
+    const participants = new Map()
+    for (const user of game.users) {
+      const personnage = user.character
+      if (!user.active || user.isGM || personnage?.type !== "eminence" || personnage.id === acteurQuiLance.id) continue
+      participants.set(personnage.id, personnage)
+    }
+    return [...participants.values()]
+  }
+
+  /**
    * Rolls a harmonique for the actor, prompting the user and sending a chat message with the result.
    * Handles both principal and collegial actions, linking related messages for group rolls.
    *
@@ -23,10 +39,9 @@ export default class PenombreActor extends Actor {
     // Message principal : si c'est une action collégiale
     let messagesLies = {}
     if (messageType === "principal" && roll.options.actionCollegiale) {
-      // Préparation des messages liées : récupération des autres joueurs connectés
-      const players = game.users.filter((user) => !user.isSelf && user.active && user.character)
-      for (const player of players) {
-        messagesLies[player.character.id] = {
+      // Préparation des messages liés : une réponse attendue par Éminence participante
+      for (const participant of PenombreActor.participantsAttendus(this)) {
+        messagesLies[participant.id] = {
           messageId: null, // On mettra à jour ce champ plus tard
           reponseFaite: false,
           participe: false,

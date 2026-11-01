@@ -3,7 +3,7 @@
 </div>
 {{#if isMessagePrincipal}}
   <div class="roll-result-total">
-    {{#if hasAutresSucces}}<div class="autres-succes">{{localize "PENOMBRE.ui.otherSuccess"}} : {{#each autresSucces}}{{#if this.participe}}<span data-tooltip="{{this.actor}}">{{this.nbSucces}}</span>{{#if @last}}{{else}}, {{/if}}{{/if}}{{/each}}{{/if}}</div>
+    {{#if hasAutresSucces}}<div class="autres-succes">{{localize "PENOMBRE.ui.otherSuccess"}} : {{#each autresSucces}}<span data-tooltip="{{this.actor}}">{{this.nbSucces}}</span>{{#unless @last}}, {{/unless}}{{/each}}{{/if}}</div>
     <div class="total">{{localize "PENOMBRE.ui.total"}} : {{totalSucces}}</div>
     {{#if hasDifficulte}}
       <div class="difficulte">

@@ -54,6 +54,23 @@ export default class PenombreRoll extends Roll {
   }
 
   /**
+   * Destinataires de l'animation Dice So Nice selon le mode du jet, comme pour le message de tchat.
+   * @param {string} rollMode Mode du jet (SYSTEM.DICE_ROLL_MODES)
+   * @returns {{whisper: string[]|null, blind: boolean}} whisper : utilisateurs qui voient l'animation (null pour tous)
+   */
+  static _visibiliteDSN(rollMode) {
+    // Les jets enregistrés avant Foundry V14 portent les anciens noms des modes
+    rollMode = { publicroll: "public", gmroll: "gm", blindroll: "blind", selfroll: "self" }[rollMode] ?? rollMode
+    let whisper = null
+    // Jet pour soi
+    if (rollMode === SYSTEM.DICE_ROLL_MODES.SELF) whisper = [game.user.id]
+    // Jet privé ou à l'aveugle : MJ seulement
+    else if (rollMode === SYSTEM.DICE_ROLL_MODES.PRIVATE || rollMode === SYSTEM.DICE_ROLL_MODES.BLIND) whisper = game.users.filter((u) => u.isGM).map((u) => u.id)
+    const blind = rollMode === SYSTEM.DICE_ROLL_MODES.BLIND
+    return { whisper, blind }
+  }
+
+  /**
    * @param {Roll} roll
    */
   static _applyDiceAppearances(roll) {
@@ -976,14 +993,7 @@ export default class PenombreRoll extends Roll {
       const roll = message.rolls[0]
 
       // Reprise du choix du rollMode
-      const rollMode = roll.options.rollMode
-      let whisper = null
-      // Self roll
-      if (rollMode === SYSTEM.DICE_ROLL_MODES.SELF) whisper = [game.user.id]
-      // Private or blind roll
-      else if (rollMode === SYSTEM.DICE_ROLL_MODES.PRIVATE || rollMode === SYSTEM.DICE_ROLL_MODES.BLIND) whisper = game.users.filter((u) => u.isGM).map((u) => u.id)
-
-      const blind = rollMode === SYSTEM.DICE_ROLL_MODES.BLIND
+      const { whisper, blind } = PenombreRoll._visibiliteDSN(roll.options.rollMode)
 
       if (CONFIG.debug.penombre?.rolls && roll) console.debug("Pénombre | Reroll", roll, rerolledDices)
 

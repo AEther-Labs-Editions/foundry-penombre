@@ -112,26 +112,27 @@ export const DIFFICULTE = Object.freeze({
   },
 })
 
+// Modes de message de Foundry V14 (CONFIG.ChatMessage.modes), enregistrés dans roll.options.rollMode
 export const DICE_ROLL_MODES = Object.freeze({
   /**
    * This roll is visible to all players.
    */
-  PUBLIC: "publicroll",
+  PUBLIC: "public",
 
   /**
    * Rolls of this type are only visible to the player that rolled and any Game Master users.
    */
-  PRIVATE: "gmroll",
+  PRIVATE: "gm",
 
   /**
    * A private dice roll only visible to Gamemaster users. The rolling player will not see the result of their own roll.
    */
-  BLIND: "blindroll",
+  BLIND: "blind",
 
   /**
    * A private dice roll which is only visible to the user who rolled it.
    */
-  SELF: "selfroll",
+  SELF: "self",
 })
 
 /**

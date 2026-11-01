@@ -1,6 +1,6 @@
 const { HandlebarsApplicationMixin, ApplicationV2 } = foundry.applications.api
 import { SYSTEM } from "../config/system.mjs"
-import { demanderAuMJ } from "../helpers/mj.mjs"
+import { demanderAuMJ, estEntierPositif, verifierRequete } from "../helpers/mj.mjs"
 
 /**
  * Une application pour gérer la réserve collégiale, le potentiel collégial et les factions.
@@ -550,50 +550,33 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
   // Les données reçues sont vérifiées avant toute modification : une requête invalide est refusée et ne change rien.
   // L'édition des factions est réservée au MJ et ne passe pas par une requête.
 
-  /**
-   * Refuse la requête si la condition est fausse.
-   * @param {boolean} condition
-   * @param {string} parametre Nom du paramètre invalide
-   */
-  static #verifier(condition, parametre) {
-    if (!condition) throw new Error(game.i18n.format("PENOMBRE.Warnings.requeteInvalide", { parametre }))
-  }
-
-  /**
-   * @param {*} valeur
-   * @returns {boolean} Vrai pour un entier supérieur ou égal à 1
-   */
-  static #estEntierPositif(valeur) {
-    return Number.isInteger(valeur) && valeur >= 1
-  }
-
   /** @param {{index: string}} params */
   static _handleQueryUpdateReserveCollegiale = async ({ index }) => {
     const jetons = game.settings.get(SYSTEM.ID, "reserveCollegiale").jetons
-    PenombreReserveCollegiale.#verifier(typeof index === "string" && Object.hasOwn(jetons, index), "index")
+    verifierRequete(typeof index === "string" && Object.hasOwn(jetons, index), "index")
     return PenombreReserveCollegiale._mutateToggleJeton(index)
   }
 
   /** @param {{nbJetons: number}} params */
   static _handleQueryUpdateReserveCollegialeFromRoll = async ({ nbJetons }) => {
-    PenombreReserveCollegiale.#verifier(PenombreReserveCollegiale.#estEntierPositif(nbJetons), "nbJetons")
+    verifierRequete(estEntierPositif(nbJetons), "nbJetons")
     return PenombreReserveCollegiale._mutateReserveFromRoll(nbJetons)
   }
 
   /** @param {{factionId: string, niveau: number, nom: string}} params */
   static _handleQueryAddFactionComplicationFromRoll = async ({ factionId, niveau, nom }) => {
     const factions = game.settings.get(SYSTEM.ID, "reserveCollegiale").factions ?? {}
-    PenombreReserveCollegiale.#verifier(typeof factionId === "string" && Object.hasOwn(factions, factionId), "factionId")
-    PenombreReserveCollegiale.#verifier(PenombreReserveCollegiale.#estEntierPositif(niveau), "niveau")
-    PenombreReserveCollegiale.#verifier(nom === undefined || typeof nom === "string", "nom")
+    verifierRequete(typeof factionId === "string" && Object.hasOwn(factions, factionId), "factionId")
+    verifierRequete(estEntierPositif(niveau), "niveau")
+    verifierRequete(nom === undefined || typeof nom === "string", "nom")
     return PenombreReserveCollegiale._mutateAddFactionComplicationFromRoll(factionId, niveau, nom)
   }
 
   /** @param {{factionId: string, elementId: string}} params */
   static _handleQueryDecrementFactionAtout = async ({ factionId, elementId }) => {
     const factions = game.settings.get(SYSTEM.ID, "reserveCollegiale").factions ?? {}
-    PenombreReserveCollegiale.#verifier(typeof factionId === "string" && Object.hasOwn(factions, factionId), "factionId")
-    PenombreReserveCollegiale.#verifier(typeof elementId === "string" && Object.hasOwn(factions[factionId].atouts ?? {}, elementId), "elementId")
+    verifierRequete(typeof factionId === "string" && Object.hasOwn(factions, factionId), "factionId")
+    verifierRequete(typeof elementId === "string" && Object.hasOwn(factions[factionId].atouts ?? {}, elementId), "elementId")
     return PenombreReserveCollegiale._mutateDecrementFactionAtout(factionId, elementId)
   }
 

@@ -55,6 +55,21 @@ export default class HarmoniqueMessageData extends BaseMessageData {
   }
 
   /**
+   * Clôture de l'action collégiale par le MJ : les réponses manquantes passent à « ne participe pas »,
+   * ce qui affiche le résultat du message principal.
+   * @returns {Promise<void>}
+   */
+  async cloreActionCollegiale() {
+    const update = {}
+    for (const [actorId, reponse] of Object.entries(this.messagesLies)) {
+      if (reponse.reponseFaite) continue
+      update[`system.messagesLies.${actorId}.reponseFaite`] = true
+      update[`system.messagesLies.${actorId}.participe`] = false
+    }
+    if (!foundry.utils.isEmpty(update)) await this.parent.update(update)
+  }
+
+  /**
    * Modifie le contenu HTML d'un message en fonction de l'état d'une action collégiale.
    * Si toutes les réponses sont faites, calcule le nombre total de succès à partir du jet principal et des messages liés,
    * détermine si la difficulté est atteinte, puis affiche le résultat via un template Handlebars.
@@ -87,11 +102,13 @@ export default class HarmoniqueMessageData extends BaseMessageData {
           const roll = this.parent.rolls[0]
           const rollResults = PenombreRoll.analyseRollResult(roll)
           const nbSucces = rollResults.nbSucces
-          const autresSucces = Object.entries(this.messagesLies).map(([id, value]) => ({
-            actor: game.actors.get(id)?.name ?? "Acteur inconnu",
-            nbSucces: value.nbSucces,
-            participe: value.participe,
-          }))
+          // Seules les participantes sont listées (le séparateur ne dépend que d'elles)
+          const autresSucces = Object.entries(this.messagesLies)
+            .filter(([, value]) => value.participe)
+            .map(([id, value]) => ({
+              actor: game.actors.get(id)?.name ?? "Acteur inconnu",
+              nbSucces: value.nbSucces,
+            }))
           const totalSucces = nbSucces + autresSucces.reduce((acc, curr) => acc + curr.nbSucces, 0)
 
           const hasDifficulte = roll.options.difficulte !== ""
@@ -103,9 +120,9 @@ export default class HarmoniqueMessageData extends BaseMessageData {
 
           // Si le joueur est à l'origine du message, affichage du résultat du roll dans Dice So Nice (visible par tous les joueurs)
           if (game.modules.get("dice-so-nice")?.active && game.user.id === this.parent.author.id && message.system.dsnDejaTraite === false) {
-            // Paramètres : roll, user, synchronize, whisper, blind
-            // @param {Boolean} synchronize if the animation needs to be shown to other players. Default: false
-            await game.dice3d.showForRoll(roll, game.user, true)
+            // Paramètres : roll, user, synchronize, whisper, blind ; whisper et blind respectent le mode du jet
+            const { whisper, blind } = PenombreRoll._visibiliteDSN(roll.options.rollMode)
+            await game.dice3d.showForRoll(roll, game.user, true, whisper, blind)
             await message.update({ "system.dsnDejaTraite": true })
           }
 
@@ -257,9 +274,27 @@ export default class HarmoniqueMessageData extends BaseMessageData {
       }
     }
 
-    // Les boutons pour participer à un jet collégial sont visibles par tous les autres joueurs
+    // Le MJ peut clore une action collégiale qui attend encore des réponses
+    if (game.user.isGM && this.actionCollegiale && !this.actionCollegialeMessageLie && !this.toutesReponsesFaites) {
+      const boutonClore = html.querySelector(".clore-action")
+      if (boutonClore) {
+        boutonClore.classList.remove("hidden")
+        boutonClore.addEventListener("click", async (ev) => {
+          ev.preventDefault()
+          ev.stopPropagation()
+          const confirme = await foundry.applications.api.DialogV2.confirm({
+            window: { title: game.i18n.localize("PENOMBRE.ui.cloreAction") },
+            content: `<p>${game.i18n.localize("PENOMBRE.ui.cloreActionConfirmation")}</p>`,
+          })
+          if (confirme) await this.cloreActionCollegiale()
+        })
+      }
+    }
+
+    // Les boutons pour participer à un jet collégial ne sont visibles que par les joueuses dont la réponse est attendue
     const currentActorId = game.user.character?.id
-    if (this.actionCollegiale && !this.actionCollegialeMessageLie && !this.parent.isAuthor && currentActorId && !this.messagesLies[currentActorId]?.reponseFaite) {
+    const reponseAttendue = currentActorId && this.messagesLies[currentActorId] && !this.messagesLies[currentActorId].reponseFaite
+    if (this.actionCollegiale && !this.actionCollegialeMessageLie && !this.parent.isAuthor && reponseAttendue) {
       html.querySelector(".participate-yes").classList.remove("hidden")
       html.querySelector(".participate-no").classList.remove("hidden")
 

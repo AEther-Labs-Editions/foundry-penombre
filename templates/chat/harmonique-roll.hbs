@@ -13,6 +13,11 @@
           <button class="participate-no hidden">{{localize "PENOMBRE.ui.participerNon"}}</button>
         </div>
       {{/if}}
+      {{#if isActionPrincipale}}
+        <div class="participate-container">
+          <button class="clore-action hidden">{{localize "PENOMBRE.ui.cloreAction"}}</button>
+        </div>
+      {{/if}}
     {{/if}}
 
     <div class="roll-results">
