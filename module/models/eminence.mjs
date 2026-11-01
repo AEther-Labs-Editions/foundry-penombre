@@ -97,31 +97,7 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
       note4: new BooleanField({ initial: false }),
     })
 
-    // Pouvoirs : sous forme d'un item
-
-    // Atouts : sous forme d'un item
-
-    schema.atouts = new ArrayField(
-      new SchemaField({
-        description: new StringField({}),
-        valeur: new NumberField({ ...requiredInteger, initial: 0, min: 0, max: 3 }),
-      }),
-    )
-
-    // Maîtrises magiques
-    schema.maitrises = new ArrayField(
-      new SchemaField({
-        description: new StringField({}),
-        harmonique: new StringField({
-          required: true,
-          nullable: false,
-          initial: SYSTEM.HARMONIQUES.ame.id,
-          choices: SYSTEM.HARMONIQUES,
-        }),
-        prerequis: new StringField({}),
-        niveau: new NumberField({ ...requiredInteger, initial: 1, min: 1, max: 5 }),
-      }),
-    )
+    // Pouvoirs, atouts et maîtrises magiques : objets intégrés
 
     return schema
   }
@@ -245,10 +221,6 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
       }
     }
     return super._preUpdate(changed, options, user)
-  }
-
-  get hasAtouts() {
-    return this.atouts.length > 0
   }
 
   get nbJetonsRestants() {
