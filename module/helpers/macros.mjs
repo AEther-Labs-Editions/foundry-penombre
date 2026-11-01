@@ -9,7 +9,7 @@ export default class Macros {
     switch (dropData.type) {
       case "penombre.harmonique":
         foundry.utils.mergeObject(macroData, {
-          name: `Jet de ${game.i18n.localize(`PENOMBRE.ui.${dropData.harmonique}`)} (${dropData.actorName})`,
+          name: game.i18n.format("PENOMBRE.Roll.macro", { harmonique: game.i18n.localize(`PENOMBRE.ui.${dropData.harmonique}`), acteur: dropData.actorName }),
           img: `systems/penombre/assets/ui/${dropData.valeur}.webp`,
           command: `await game.system.api.helpers.Macros.rollHarmonique("${dropData.actorId}", "${dropData.harmonique}")`,
           flags: { "penombre.macros.harmonique": true },

@@ -32,8 +32,8 @@ export function registerHandlebars() {
 
   Handlebars.registerHelper("displayNbSuccess", function (value) {
     const nbSuccess = Math.floor(value / 4)
-    if (nbSuccess === 1) return " (1 succès)"
-    else if (nbSuccess > 1) return ` (${nbSuccess} succès)`
+    if (nbSuccess === 1) return game.i18n.localize("PENOMBRE.Roll.unSucces")
+    else if (nbSuccess > 1) return game.i18n.format("PENOMBRE.Roll.nbSucces", { nb: nbSuccess })
     else return ""
   })
 }

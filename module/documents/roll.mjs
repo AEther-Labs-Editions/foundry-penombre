@@ -196,7 +196,10 @@ export default class PenombreRoll extends Roll {
     }
 
     const content = await foundry.applications.handlebars.renderTemplate("systems/penombre/templates/dialogs/roll-dialog.hbs", dialogContext)
-    const title = harmonique != null ? `Jet de ${game.i18n.localize(`PENOMBRE.ui.${harmonique}`)}` : "Jet de dés"
+    const title =
+      harmonique != null
+        ? game.i18n.format("PENOMBRE.Roll.titre", { harmonique: game.i18n.localize(`PENOMBRE.ui.${harmonique}`) })
+        : game.i18n.localize("PENOMBRE.Roll.titreSansHarmonique")
 
     const rollContext = await foundry.applications.api.DialogV2.wait({
       window: { title },

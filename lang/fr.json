@@ -468,7 +468,13 @@
       "fausseNote": "Fausse note",
       "envolee": "Envolée",
       "incidentMagique": "Incident magique",
-      "merveille": "Merveille"
+      "merveille": "Merveille",
+      "titre": "Jet de {harmonique}",
+      "titreSansHarmonique": "Jet de dés",
+      "macro": "Jet de {harmonique} ({acteur})",
+      "acteurInconnu": "Acteur inconnu",
+      "unSucces": " (1 succès)",
+      "nbSucces": " ({nb} succès)"
     },
     "Warnings": {
       "jetonsDepassement": "Trop de jetons sélectionnés",
@@ -577,6 +583,28 @@
       "bugReportTooltip": "Signaler un bug ou faire une suggestion d’amélioration sur GitHub",
       "video": "Présentation vidéo du système",
       "videoTooltip": "Lancer la vidéo YouTube de présentation du système réalisée par Carter"
+    },
+    "Difficulte": {
+      "1": "1 (Par défaut)",
+      "2": "2 (Difficile)",
+      "3": "3 (Très difficile)",
+      "4": "4 (Exceptionnelle)",
+      "5": "5",
+      "6": "6 (Phénoménale)",
+      "7": "7",
+      "8": "8 (Inouïe)",
+      "9": "9",
+      "10": "10 (Surréaliste)",
+      "11": "11",
+      "12": "12 (Digne d'une fable)",
+      "13": "13",
+      "14": "14",
+      "15": "15",
+      "16": "16 (Digne d'un mythe)",
+      "17": "17",
+      "18": "18",
+      "19": "19",
+      "20": "20 (Digne d'une muse)"
     }
   }
 }

@@ -107,7 +107,7 @@ export default class HarmoniqueMessageData extends BaseMessageData {
           const autresSucces = Object.entries(this.messagesLies)
             .filter(([, value]) => value.participe)
             .map(([id, value]) => ({
-              actor: game.actors.get(id)?.name ?? "Acteur inconnu",
+              actor: game.actors.get(id)?.name ?? game.i18n.localize("PENOMBRE.Roll.acteurInconnu"),
               nbSucces: value.nbSucces,
             }))
           const totalSucces = nbSucces + autresSucces.reduce((acc, curr) => acc + curr.nbSucces, 0)
