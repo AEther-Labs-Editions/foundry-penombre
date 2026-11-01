@@ -102,11 +102,13 @@ export default class HarmoniqueMessageData extends BaseMessageData {
           const roll = this.parent.rolls[0]
           const rollResults = PenombreRoll.analyseRollResult(roll)
           const nbSucces = rollResults.nbSucces
-          const autresSucces = Object.entries(this.messagesLies).map(([id, value]) => ({
-            actor: game.actors.get(id)?.name ?? "Acteur inconnu",
-            nbSucces: value.nbSucces,
-            participe: value.participe,
-          }))
+          // Seules les participantes sont listées (le séparateur ne dépend que d'elles)
+          const autresSucces = Object.entries(this.messagesLies)
+            .filter(([, value]) => value.participe)
+            .map(([id, value]) => ({
+              actor: game.actors.get(id)?.name ?? "Acteur inconnu",
+              nbSucces: value.nbSucces,
+            }))
           const totalSucces = nbSucces + autresSucces.reduce((acc, curr) => acc + curr.nbSucces, 0)
 
           const hasDifficulte = roll.options.difficulte !== ""

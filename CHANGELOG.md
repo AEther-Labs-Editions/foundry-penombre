@@ -24,6 +24,7 @@
 - Action collégiale : le MJ peut la clore depuis le message principal (bouton « Clore l'action collégiale », après confirmation) ; les Éminences qui n'ont pas répondu ne participent pas et le résultat s'affiche, au lieu de rester masqué si une joueuse se déconnecte ou ne répond pas
 - Action collégiale : l'animation Dice So Nice du jet principal, jouée quand toutes les réponses sont arrivées, respecte le mode du jet (privé, à l'aveugle, pour soi) au lieu d'être montrée à tout le monde ; même correction pour l'animation des relances, qui comparait le mode du jet aux noms d'avant Foundry V14 et jouait donc toujours en public
 - Action collégiale : le MJ vérifie chaque réponse (message principal d'une action collégiale, Éminence attendue et appartenant à la joueuse, jet lié à ce message) ; une réponse arrivée après la clôture ou une seconde réponse est refusée avec un message, seule la mise à jour des succès après une relance reste possible
+- Action collégiale : « Autres succès » ne liste que les participantes, sans virgule finale quand la dernière Éminence n'a pas participé ; la ligne n'apparaît plus si personne n'a participé
 
 1.8.4
 - Fiche Eminence : refactoring interne de la mise en page (les float sont remplacés par flex et grid dans les blocs Personnage, Harmoniques, Conscience, Timbre et les tableaux), sans changement visuel
