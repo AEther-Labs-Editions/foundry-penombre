@@ -128,47 +128,15 @@ Hooks.once("ready", function () {
 })
 
 Hooks.on("updateSetting", async (setting, update, options, id) => {
-  // Mise à jour de la Réserve collégiale
+  // Mise à jour de la Réserve collégiale : rafraîchie seulement si elle est ouverte (on la rouvre depuis le menu Pénombre)
   if (setting.key === "penombre.reserveCollegiale") {
-    game.system.applicationReserveCollegiale.render(true)
+    const reserve = game.system.applicationReserveCollegiale
+    if (reserve?.rendered) reserve.render()
   }
 
-  // Passage en mode Kit de demo : forcer le nombre de jetons à 10
-  if (setting.key === "penombre.styleJeu" && setting.value === "demo" && game.user.isGM) {
-    if (game.settings.get(SYSTEM.ID, "nbJetons") !== 10) {
-      game.settings.set(SYSTEM.ID, "nbJetons", 10)
-    }
-  }
-
-  // Mise à jour du nombre de jetons dans la réserve collégiale
-  if (setting.key === "penombre.nbJetons" && game.user.isGM) {
-    if (CONFIG.debug.penombre?.reserve) console.debug("Pénombre | Mise à jour du nombre de jetons dans la réserve collégiale", setting, update, options, id)
-    let nouveauNbJetons = update.value
-
-    // En mode Kit de demo, on force le nombre de jetons à 10
-    if (game.settings.get(SYSTEM.ID, "styleJeu") === "demo" && nouveauNbJetons !== 10) {
-      nouveauNbJetons = 10
-      game.settings.set(SYSTEM.ID, "nbJetons", 10)
-    }
-
-    // Passe par la file d'attente des modifications de la réserve
-    applications.PenombreReserveCollegiale._updateReserve((reserveCollegiale) => {
-      // Ajouter les jetons manquants si le nombre augmente
-      for (let i = 1; i <= nouveauNbJetons; i++) {
-        const key = String(i)
-        if (!reserveCollegiale.jetons.hasOwnProperty(key)) {
-          reserveCollegiale.jetons[key] = { valeur: false }
-        }
-      }
-
-      // Supprimer les jetons en excès si le nombre diminue
-      Object.keys(reserveCollegiale.jetons).forEach((key) => {
-        const numericKey = parseInt(key, 10)
-        if (numericKey > nouveauNbJetons) {
-          delete reserveCollegiale.jetons[key]
-        }
-      })
-    })
+  // Style de jeu ou nombre de jetons modifié : le MJ actif ajuste la réserve collégiale
+  if (["penombre.styleJeu", "penombre.nbJetons"].includes(setting.key) && game.user.isActiveGM) {
+    await applications.PenombreReserveCollegiale.ajusterNbJetons()
   }
 })
 

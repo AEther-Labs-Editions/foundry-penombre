@@ -9,9 +9,10 @@ export default class ReserveCollegiale extends foundry.abstract.TypeDataModel {
         valeur: new BooleanField(), // True si le jeton est disponible, false sinon
       }),
       {
-        validateKeys: (key) => {
+        // Clés « 1 » à « n » : leur nombre est fixé par le paramètre nbJetons, sans limite haute ici
+        validateKey: (key) => {
           const numericKey = Number(key)
-          return Number.isInteger(numericKey) && numericKey >= 1 && numericKey <= 10
+          return Number.isInteger(numericKey) && numericKey >= 1
         },
       },
     )
@@ -86,11 +87,5 @@ export default class ReserveCollegiale extends foundry.abstract.TypeDataModel {
       }
     }
     return complications
-  }
-
-  static changeNbJetons(newNbJetons) {
-    if (game.settings.get("penombre", "styleJeu") === "demo" && newNbJetons !== 10) {
-      ui.notifications.error(game.i18n.localize("PENOMBRE.Warnings.limiteNbJetonsDemo"), { permanent: true })
-    }
   }
 }

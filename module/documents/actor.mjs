@@ -74,16 +74,8 @@ export default class PenombreActor extends Actor {
     }
 
     // Envolée (20 sur le dé harmonique) : un jeton dépensé est réactivé
-    // Le premier jeton inactif est réactivé
     if (rollResults.isDeHarmoniqueMax) {
-      const jetons = foundry.utils.duplicate(this.system.conscience.jetons)
-      for (let i = 0; i < jetons.length; i++) {
-        if (jetons[i].statut === SYSTEM.JETON_STATUTS.inactif.id) {
-          jetons[i].statut = SYSTEM.JETON_STATUTS.actif.id
-          break
-        }
-      }
-      await this.update({ "system.conscience.jetons": jetons })
+      await this.system.regagnerUnJeton()
     }
 
     // Fausse note sur un jet ayant utilisé un atout collégial : son niveau baisse de 1

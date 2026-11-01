@@ -255,63 +255,96 @@ export default class Eminence extends foundry.abstract.TypeDataModel {
     return jetonsConscience
   }
 
+  // #region Jetons de conscience
+  // Les jetons non perdus (actifs ou dépensés) sont en tête du tableau et leur nombre est la valeur de conscience ;
+  // les jetons perdus suivent. Toutes les modifications passent par ces méthodes pour garder cette règle.
+
+  /**
+   * Dépense des jetons de conscience, tout ou rien.
+   * @param {number} nbJetons
+   * @returns {Promise<boolean>} Faux s'il ne reste pas assez de jetons disponibles (rien n'est dépensé)
+   */
   async depenserJetons(nbJetons) {
-    // Tout ou rien : pas de paiement partiel
     if (this.nbJetonsRestants < nbJetons) return false
-    // Parcours de l'objet pour mettre à jour nbJetons
-    let nbJetonsModifies = 0
-    const jetons = { ...this.conscience.jetons }
-    for (const key of Object.keys(jetons)) {
-      if (nbJetonsModifies >= nbJetons) break
-      if (jetons[key].statut === SYSTEM.JETON_STATUTS.actif.id) {
-        jetons[key] = { ...jetons[key], statut: SYSTEM.JETON_STATUTS.inactif.id }
-        nbJetonsModifies++
+    const jetons = foundry.utils.duplicate(this.conscience.jetons)
+    let reste = nbJetons
+    for (const jeton of jetons) {
+      if (reste === 0) break
+      if (jeton.statut === SYSTEM.JETON_STATUTS.actif.id) {
+        jeton.statut = SYSTEM.JETON_STATUTS.inactif.id
+        reste--
       }
     }
-    if (nbJetonsModifies > 0) {
-      await this.parent.update({ "system.conscience.jetons": jetons })
-    }
+    if (nbJetons > 0) await this.parent.update({ "system.conscience.jetons": jetons })
     return true
   }
 
   /**
-   * Retire un jeton du pool de conscience, en privilégiant les jetons inactifs.
-   * Si aucun jeton inactif n'est trouvé, retire un jeton actif à la place.
-   * Le jeton retiré voit son statut passé à "perdu" et est déplacé en fin de tableau.
-   * Si un jeton est perdu, la valeur de conscience diminue de 1 (minimum 0).
-   * Met à jour l'objet parent avec la nouvelle valeur de conscience et le tableau de jetons.
+   * Envolée : le premier jeton dépensé redevient disponible.
+   * @returns {Promise<boolean>} Faux s'il n'y a aucun jeton dépensé
+   */
+  async regagnerUnJeton() {
+    const jetons = foundry.utils.duplicate(this.conscience.jetons)
+    const jeton = jetons.find((j) => j.statut === SYSTEM.JETON_STATUTS.inactif.id)
+    if (!jeton) return false
+    jeton.statut = SYSTEM.JETON_STATUTS.actif.id
+    await this.parent.update({ "system.conscience.jetons": jetons })
+    return true
+  }
+
+  /**
+   * Clic sur un jeton de la fiche : un jeton disponible est dépensé, un jeton dépensé redevient disponible.
+   * @param {number} index
+   * @returns {Promise<void>}
+   */
+  async basculerJeton(index) {
+    const jetons = foundry.utils.duplicate(this.conscience.jetons)
+    const jeton = jetons[index]
+    if (!jeton || jeton.statut === SYSTEM.JETON_STATUTS.perdu.id) return
+    jeton.statut = jeton.statut === SYSTEM.JETON_STATUTS.actif.id ? SYSTEM.JETON_STATUTS.inactif.id : SYSTEM.JETON_STATUTS.actif.id
+    await this.parent.update({ "system.conscience.jetons": jetons })
+  }
+
+  /**
+   * La conscience augmente de 1 : le premier jeton perdu revient, dépensé, dans la limite du maximum.
+   * @returns {Promise<boolean>} Faux si la conscience est déjà au maximum
+   */
+  async ajouterUnJeton() {
+    const valeur = this.conscience.valeur
+    if (valeur >= this.conscience.max) return false
+    const jetons = foundry.utils.duplicate(this.conscience.jetons)
+    if (!jetons[valeur]) return false
+    jetons[valeur].statut = SYSTEM.JETON_STATUTS.inactif.id
+    await this.parent.update({ "system.conscience.valeur": valeur + 1, "system.conscience.jetons": jetons })
+    return true
+  }
+
+  /**
+   * Perte d'un jeton précis : il passe au statut perdu, en fin de tableau, et la conscience diminue de 1.
+   * @param {number} index
+   * @returns {Promise<boolean>} Faux si ce jeton est déjà perdu
+   */
+  async perdreJeton(index) {
+    const jetons = foundry.utils.duplicate(this.conscience.jetons)
+    if (!jetons[index] || jetons[index].statut === SYSTEM.JETON_STATUTS.perdu.id) return false
+    const [jetonPerdu] = jetons.splice(index, 1)
+    jetonPerdu.statut = SYSTEM.JETON_STATUTS.perdu.id
+    jetons.push(jetonPerdu)
+    await this.parent.update({ "system.conscience.valeur": Math.max(this.conscience.valeur - 1, 0), "system.conscience.jetons": jetons })
+    return true
+  }
+
+  /**
+   * Fausse note : perte d'un jeton, en privilégiant un jeton dépensé, sinon un jeton disponible.
+   * @returns {Promise<boolean>} Faux s'il n'y avait plus aucun jeton à perdre
    */
   async perdreUnJeton() {
-    const jetons = foundry.utils.duplicate(this.conscience.jetons)
-    let conscienceActuelle = this.conscience.valeur
-
-    let jetonPerdu = false
-    // On cherche d'abord un jeton inactif à perdre
-    for (let i = 0; i < jetons.length; i++) {
-      if (jetons[i].statut === SYSTEM.JETON_STATUTS.inactif.id) {
-        const jetonSupprime = jetons.splice(i, 1)[0]
-        jetonSupprime.statut = SYSTEM.JETON_STATUTS.perdu.id
-        jetons.push(jetonSupprime)
-        jetonPerdu = true
-        break
-      }
-    }
-    // Si pas de jeton inactif, on perd un jeton actif
-    if (!jetonPerdu) {
-      for (let i = 0; i < jetons.length; i++) {
-        if (jetons[i].statut === SYSTEM.JETON_STATUTS.actif.id) {
-          const jetonSupprime = jetons.splice(i, 1)[0]
-          jetonSupprime.statut = SYSTEM.JETON_STATUTS.perdu.id
-          jetons.push(jetonSupprime)
-          jetonPerdu = true
-          break
-        }
-      }
-    }
-    // Si un jeton a été perdu, on baisse la conscience de 1
-    if (jetonPerdu) {
-      const newConscience = Math.max(conscienceActuelle - 1, 0)
-      await this.parent.update({ "system.conscience.valeur": newConscience, "system.conscience.jetons": jetons })
-    }
+    const jetons = this.conscience.jetons
+    let index = jetons.findIndex((j) => j.statut === SYSTEM.JETON_STATUTS.inactif.id)
+    if (index === -1) index = jetons.findIndex((j) => j.statut === SYSTEM.JETON_STATUTS.actif.id)
+    if (index === -1) return false
+    return this.perdreJeton(index)
   }
+
+  // #endregion Jetons de conscience
 }

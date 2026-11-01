@@ -1057,14 +1057,7 @@ export default class PenombreRoll extends Roll {
           }
           // Envolée (max sur le dé harmonique) : réactivation d'un jeton inactif
           if (postAnalysis.isDeHarmoniqueMax) {
-            const jetons = foundry.utils.duplicate(rerollActor.system.conscience.jetons)
-            for (let i = 0; i < jetons.length; i++) {
-              if (jetons[i].statut === SYSTEM.JETON_STATUTS.inactif.id) {
-                jetons[i].statut = SYSTEM.JETON_STATUTS.actif.id
-                break
-              }
-            }
-            await rerollActor.update({ "system.conscience.jetons": jetons })
+            await rerollActor.system.regagnerUnJeton()
           }
         }
         // Fausse note sur un jet ayant utilisé un atout collégial : son niveau baisse de 1
