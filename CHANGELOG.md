@@ -38,6 +38,7 @@
 - Fiche Adversaire : en mode lecture, la description est enrichie (liens @UUID cliquables, comme dans les autres fiches) au lieu d'être affichée brute
 - Interne : les conséquences d'une fausse note et d'une envolée (jeton de conscience, atout collégial) et l'apparence Dice So Nice des dés sont calculées au même endroit pour le jet et la relance
 - Traduction : le titre de la fenêtre de jet, le nom des macros de jet, les libellés de difficulté, « Acteur inconnu » et le nombre de succès en infobulle passent par le fichier de langue
+- Macros : glisser une harmonique ou une Éminence déjà présente dans la barre de raccourcis place la macro existante sur la case visée (il ne se passait rien)
 
 1.8.4
 - Fiche Eminence : refactoring interne de la mise en page (les float sont remplacés par flex et grid dans les blocs Personnage, Harmoniques, Conscience, Timbre et les tableaux), sans changement visuel

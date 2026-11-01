@@ -19,12 +19,13 @@ export function registerHandlebars() {
     }
   })
 
+  // Répète le bloc n fois ; @index va de 1 à n
   Handlebars.registerHelper("times", function (n, block) {
     let accum = ""
     for (let i = 1; i <= n; ++i) {
       block.data.index = i
-      block.data.first = i === 0
-      block.data.last = i === n - 1
+      block.data.first = i === 1
+      block.data.last = i === n
       accum += block.fn(this)
     }
     return accum

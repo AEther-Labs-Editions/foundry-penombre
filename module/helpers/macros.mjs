@@ -29,12 +29,10 @@ export default class Macros {
         return
     }
 
-    // Assign the macro to the hotbar
+    // Réutilise la macro si elle existe déjà, et la place dans tous les cas sur la case visée
     let macro = game.macros.find((m) => m.name === macroData.name && m.command === macroData.command && m.author.isSelf)
-    if (!macro) {
-      macro = await Macro.create(macroData)
-      game.user.assignHotbarMacro(macro, slot)
-    }
+    if (!macro) macro = await Macro.create(macroData)
+    await game.user.assignHotbarMacro(macro, slot)
   }
 
   static async rollHarmonique(actorId, harmonique) {
