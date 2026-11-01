@@ -161,6 +161,52 @@ export default class HarmoniqueMessageData extends BaseMessageData {
     }
   }
 
+  /**
+   * Relance des dés sélectionnés, payée par un jeton de conscience ou par un jeton de la réserve collégiale.
+   * Pour un jet lié à une action collégiale, le message principal est ensuite mis à jour par le MJ.
+   * @param {"conscience"|"reserve"} source Origine du jeton dépensé
+   * @param {string} messageId Message du jet
+   * @param {string[]} des Indices des dés à relancer ("dé-résultat")
+   * @param {Actor|undefined} actor Acteur qui a lancé les dés
+   */
+  async #relancer(source, messageId, des, actor) {
+    if (des.length === 0) return
+
+    // La relance d'un jet lié met à jour le message principal, ce que seul le MJ peut faire
+    const jetLie = this.actionCollegialeMessageLie && this.idMessageOrigine
+    if (jetLie && !mjConnecte()) {
+      ui.notifications.warn("PENOMBRE.Warnings.mjAbsent", { localize: true })
+      return
+    }
+
+    // Paiement d'un jeton
+    if (source === "conscience") {
+      if (!actor || actor.system.nbJetonsRestants === 0) {
+        ui.notifications.warn(game.i18n.format("PENOMBRE.Warnings.jetonsConscienceInsuffisants", { actuel: 0, demande: 1 }))
+        return
+      }
+      if (!(await actor.system.depenserJetons(1))) return
+    } else {
+      const avertirReserveVide = () => ui.notifications.warn(game.i18n.format("PENOMBRE.Warnings.jetonsReserveInsuffisants", { actuel: 0, demande: 1 }), { permanent: true })
+      if (game.settings.get(SYSTEM.ID, "reserveCollegiale").nbJetonsRestants === 0) return avertirReserveVide()
+      const paiement = await demanderAuMJ("penombre.updateReserveCollegialeFromRoll", { nbJetons: 1 })
+      if (!paiement.ok) return
+      if (!paiement.resultat?.paye) return avertirReserveVide()
+    }
+
+    await PenombreRoll.reroll(messageId, des)
+
+    // Jet lié : le message principal reprend le nouveau résultat
+    if (jetLie && actor) {
+      await demanderAuMJ("penombre.updateMessageParticipation", {
+        existingMessageId: this.idMessageOrigine,
+        actorId: actor.id,
+        answer: true,
+        newMessageId: messageId,
+      })
+    }
+  }
+
   async addListeners(html) {
     // Les boutons reroll n'est affiché que pour le MJ ou le joueur à l'origine du message
     if (game.user.isGM || this.parent.isAuthor) {
@@ -174,103 +220,24 @@ export default class HarmoniqueMessageData extends BaseMessageData {
         })
       })
 
-      // S'il reste au moins un jeton de conscience
+      // Boutons de relance, affichés s'il reste au moins un jeton à dépenser
       const actor = game.actors.get(this.parent.speaker.actor)
-      if (actor && actor.system.nbJetonsRestants > 0) {
-        html.querySelector(".reroll-conscience").classList.remove("hidden")
-
-        html.querySelector(".reroll-conscience").addEventListener("click", async (ev) => {
-          ev.preventDefault()
-          ev.stopPropagation()
-          const messageId = ev.target.closest(".chat-message").dataset.messageId
-          if (!messageId) return
-          let rerolledDices = []
-          // Remonter dans la structure html pour trouver les éléments dice-selected
-          ev.target
-            .closest(".chat-message")
-            .querySelectorAll(".dice-selected")
-            .forEach((selected) => {
-              rerolledDices.push(selected.dataset.indice)
-            })
-          // Pas de dé sélectionné
-          if (rerolledDices.length === 0) return
-
-          // On vérifie qu'il reste un jeton de la réserve de conscience
-          if (actor.system.nbJetonsRestants === 0) {
-            ui.notifications.warn(game.i18n.format("PENOMBRE.Warnings.jetonsConscienceInsuffisants", { actuel: 0, demande: 1 }))
-            return
-          }
-
-          // La relance d'un jet lié met à jour le message principal, ce que seul le MJ peut faire
-          if (this.actionCollegialeMessageLie && this.idMessageOrigine && !mjConnecte()) {
-            ui.notifications.warn("PENOMBRE.Warnings.mjAbsent", { localize: true })
-            return
-          }
-
-          // Dépense d'un jeton de conscience et relance
-          if (!(await actor.system.depenserJetons(1))) return
-          await PenombreRoll.reroll(messageId, rerolledDices)
-
-          // Si c'est un message lié, mettre à jour le message principal
-          if (this.actionCollegialeMessageLie && this.idMessageOrigine) {
-            await demanderAuMJ("penombre.updateMessageParticipation", {
-              existingMessageId: this.idMessageOrigine,
-              actorId: actor.id,
-              answer: true,
-              newMessageId: messageId,
-            })
-          }
-        })
+      const relancePossible = {
+        conscience: actor?.system.nbJetonsRestants > 0,
+        reserve: game.settings.get(SYSTEM.ID, "reserveCollegiale").nbJetonsRestants > 0,
       }
-
-      // S'il reste au moins un jeton dans la réserve collégiale
-      let reserveCollegiale = game.settings.get(SYSTEM.ID, "reserveCollegiale")
-      if (reserveCollegiale.nbJetonsRestants > 0) {
-        html.querySelector(".reroll-reserve").classList.remove("hidden")
-
-        html.querySelector(".reroll-reserve").addEventListener("click", async (ev) => {
+      for (const [source, possible] of Object.entries(relancePossible)) {
+        if (!possible) continue
+        const bouton = html.querySelector(`.reroll-${source}`)
+        bouton.classList.remove("hidden")
+        bouton.addEventListener("click", async (ev) => {
           ev.preventDefault()
           ev.stopPropagation()
-          const messageId = ev.target.closest(".chat-message").dataset.messageId
+          const messageElement = ev.target.closest(".chat-message")
+          const messageId = messageElement?.dataset.messageId
           if (!messageId) return
-          let rerolledDices = []
-          // Remonter dans la structure html pour trouver les éléments dice-selected
-          ev.target
-            .closest(".chat-message")
-            .querySelectorAll(".dice-selected")
-            .forEach((selected) => {
-              rerolledDices.push(selected.dataset.indice)
-            })
-          // Pas de dé sélectionné
-          if (rerolledDices.length === 0) return
-
-          // On vérifie qu'il reste un jeton dans la réserve collégiale
-          reserveCollegiale = game.settings.get(SYSTEM.ID, "reserveCollegiale")
-          if (reserveCollegiale.nbJetonsRestants === 0) {
-            ui.notifications.warn(game.i18n.format("PENOMBRE.Warnings.jetonsReserveInsuffisants", { actuel: 0, demande: 1 }), {
-              permanent: true,
-            })
-            return
-          }
-
-          // Dépense d'un jeton de la réserve et relance
-          const paiement = await demanderAuMJ("penombre.updateReserveCollegialeFromRoll", { nbJetons: 1 })
-          if (!paiement.ok) return
-          if (!paiement.resultat?.paye) {
-            ui.notifications.warn(game.i18n.format("PENOMBRE.Warnings.jetonsReserveInsuffisants", { actuel: 0, demande: 1 }), { permanent: true })
-            return
-          }
-          await PenombreRoll.reroll(messageId, rerolledDices)
-
-          // Si c'est un message lié, mettre à jour le message principal
-          if (this.actionCollegialeMessageLie && this.idMessageOrigine) {
-            await demanderAuMJ("penombre.updateMessageParticipation", {
-              existingMessageId: this.idMessageOrigine,
-              actorId: actor.id,
-              answer: true,
-              newMessageId: messageId,
-            })
-          }
+          const des = [...messageElement.querySelectorAll(".dice-selected")].map((de) => de.dataset.indice)
+          await this.#relancer(source, messageId, des, actor)
         })
       }
     }
