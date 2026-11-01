@@ -9,9 +9,10 @@ export default class ReserveCollegiale extends foundry.abstract.TypeDataModel {
         valeur: new BooleanField(), // True si le jeton est disponible, false sinon
       }),
       {
-        validateKeys: (key) => {
+        // Clés « 1 » à « n » : leur nombre est fixé par le paramètre nbJetons, sans limite haute ici
+        validateKey: (key) => {
           const numericKey = Number(key)
-          return Number.isInteger(numericKey) && numericKey >= 1 && numericKey <= 10
+          return Number.isInteger(numericKey) && numericKey >= 1
         },
       },
     )

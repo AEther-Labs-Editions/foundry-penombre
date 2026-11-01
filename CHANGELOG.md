@@ -26,6 +26,7 @@
 - Action collégiale : le MJ vérifie chaque réponse (message principal d'une action collégiale, Éminence attendue et appartenant à la joueuse, jet lié à ce message) ; une réponse arrivée après la clôture ou une seconde réponse est refusée avec un message, seule la mise à jour des succès après une relance reste possible
 - Action collégiale : « Autres succès » ne liste que les participantes, sans virgule finale quand la dernière Éminence n'a pas participé ; la ligne n'apparaît plus si personne n'a participé
 - Réserve collégiale : une fenêtre fermée ne se rouvre plus à chaque modification de la réserve ; elle est seulement rafraîchie si elle est ouverte (réouverture depuis le menu Pénombre ou la macro)
+- Réserve collégiale : les clés des jetons sont réellement vérifiées (option `validateKey` mal orthographiée, donc ignorée), sans la limite de 10 jetons qui aurait supprimé les jetons au-delà
 
 1.8.4
 - Fiche Eminence : refactoring interne de la mise en page (les float sont remplacés par flex et grid dans les blocs Personnage, Harmoniques, Conscience, Timbre et les tableaux), sans changement visuel
