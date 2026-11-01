@@ -1,4 +1,5 @@
 import PenombreRoll from "./roll.mjs"
+import { verifierRequete } from "../helpers/mj.mjs"
 
 export default class PenombreMessage extends ChatMessage {
   /** @inheritDoc */
@@ -61,49 +62,58 @@ export default class PenombreMessage extends ChatMessage {
   }
 
   /**
-   * Handles participation in a query message for the Penombre system.
-   * Updates the original message with the actor's response and, if applicable, the number of successes from a new roll.
+   * Enregistre, chez le MJ, la réponse d'une Éminence à une action collégiale sur le message principal.
+   * La requête est refusée si le message n'est pas le message principal d'une action collégiale, si l'Éminence
+   * n'était pas attendue ou n'appartient pas à l'expéditeur, ou si le jet joint n'est pas un jet lié à ce message.
+   * Une réponse n'est acceptée que si l'Éminence n'a pas encore répondu, ou pour mettre à jour les succès
+   * d'un jet déjà compté après une relance.
    *
-   * @param {Object} params The parameters for handling participation.
-   * @param {string} params.existingMessageId The ID of the existing message to update.
-   * @param {string} params.actorId The ID of the actor responding to the query.
-   * @param {boolean} params.answer Whether the actor's response is positive.
-   * @param {number} [params.nbSucces] The number of successes (optional, recalculated if answer is positive).
-   * @param {string} [params.newMessageId] The ID of the new message containing the actor's roll (optional).
-   * @returns {Promise<void>} Resolves when the message has been updated.
+   * @param {Object} params
+   * @param {string} params.existingMessageId Identifiant du message principal
+   * @param {string} params.actorId Identifiant de l'Éminence qui répond
+   * @param {boolean} params.answer Vrai si elle participe
+   * @param {string} [params.newMessageId] Identifiant du message de son jet, si elle participe
+   * @param {object} [context] Contexte de la requête
+   * @param {User} [context.user] Utilisateur qui envoie la requête
+   * @returns {Promise<void>}
    */
-  static async _handleQueryMessageParticipation({ existingMessageId, actorId, answer, nbSucces, newMessageId }) {
+  static async _handleQueryMessageParticipation({ existingMessageId, actorId, answer, newMessageId }, { user } = {}) {
     const message = game.messages.get(existingMessageId)
-    let newMessage
-    if (newMessageId) {
-      newMessage = game.messages.get(newMessageId)
-    }
-    if (!message) return
+    verifierRequete(message?.type === "harmonique" && message.system.actionCollegiale && !message.system.actionCollegialeMessageLie, "existingMessageId")
+    const reponse = typeof actorId === "string" ? message.system.messagesLies[actorId] : undefined
+    verifierRequete(!!reponse, "actorId")
+    const actor = game.actors.get(actorId)
+    verifierRequete(!!actor && (!user || user.isGM || actor.testUserPermission(user, "OWNER")), "actorId")
+    verifierRequete(typeof answer === "boolean", "answer")
+    if (CONFIG.debug.penombre?.chat) console.debug("Pénombre | Participation au jet", existingMessageId, actorId, answer, newMessageId)
 
-    // Vérifie que le message est un jet de dés de Pénombre
-    if (message.isRoll && message.rolls[0] && message.rolls[0] instanceof PenombreRoll) {
-      if (CONFIG.debug.penombre?.chat) console.debug("Pénombre | Participation au jet", existingMessageId, actorId, answer, nbSucces, newMessageId)
-      // Met à jour la réponse de l'acteur dans le message
-      if (answer) {
-        if (!newMessage) {
-          console.error("Pénombre | _handleQueryMessageParticipation : newMessage introuvable", newMessageId)
-          return
-        }
-        // Si la réponse est positive, on enregistre le nombre de succès
-        const rollResults = PenombreRoll.analyseRollResult(newMessage.rolls[0])
-        const nbSucces = rollResults.nbSucces
-        await message.update({
-          [`system.messagesLies.${actorId}.messageId`]: newMessageId,
-          [`system.messagesLies.${actorId}.reponseFaite`]: true,
-          [`system.messagesLies.${actorId}.participe`]: true,
-          [`system.messagesLies.${actorId}.nbSucces`]: nbSucces,
-        })
-      } else {
-        await message.update({
-          [`system.messagesLies.${actorId}.reponseFaite`]: true,
-          [`system.messagesLies.${actorId}.participe`]: false,
-        })
-      }
+    if (answer) {
+      const newMessage = game.messages.get(newMessageId)
+      verifierRequete(
+        newMessage?.type === "harmonique" &&
+          newMessage.system.actionCollegialeMessageLie &&
+          newMessage.system.idMessageOrigine === existingMessageId &&
+          newMessage.speaker.actor === actorId &&
+          newMessage.rolls[0] instanceof PenombreRoll,
+        "newMessageId",
+      )
+      // Après une réponse, seule la mise à jour du jet déjà compté (relance) est acceptée
+      const miseAJourApresRelance = reponse.participe && reponse.messageId === newMessageId
+      if (reponse.reponseFaite && !miseAJourApresRelance) throw new Error(game.i18n.localize("PENOMBRE.Warnings.actionCollegialeClose"))
+
+      const { nbSucces } = PenombreRoll.analyseRollResult(newMessage.rolls[0])
+      await message.update({
+        [`system.messagesLies.${actorId}.messageId`]: newMessageId,
+        [`system.messagesLies.${actorId}.reponseFaite`]: true,
+        [`system.messagesLies.${actorId}.participe`]: true,
+        [`system.messagesLies.${actorId}.nbSucces`]: nbSucces,
+      })
+    } else {
+      if (reponse.reponseFaite) throw new Error(game.i18n.localize("PENOMBRE.Warnings.actionCollegialeClose"))
+      await message.update({
+        [`system.messagesLies.${actorId}.reponseFaite`]: true,
+        [`system.messagesLies.${actorId}.participe`]: false,
+      })
     }
   }
 }

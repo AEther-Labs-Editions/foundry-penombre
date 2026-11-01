@@ -34,3 +34,20 @@ export async function demanderAuMJ(nom, donnees = {}) {
     return { ok: false }
   }
 }
+
+/**
+ * Refuse une requête reçue par le MJ si la condition est fausse : l'erreur est renvoyée à l'expéditeur.
+ * @param {boolean} condition
+ * @param {string} parametre Nom du paramètre invalide
+ */
+export function verifierRequete(condition, parametre) {
+  if (!condition) throw new Error(game.i18n.format("PENOMBRE.Warnings.requeteInvalide", { parametre }))
+}
+
+/**
+ * @param {*} valeur
+ * @returns {boolean} Vrai pour un entier supérieur ou égal à 1
+ */
+export function estEntierPositif(valeur) {
+  return Number.isInteger(valeur) && valeur >= 1
+}
