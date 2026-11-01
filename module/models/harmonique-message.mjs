@@ -55,6 +55,21 @@ export default class HarmoniqueMessageData extends BaseMessageData {
   }
 
   /**
+   * Clôture de l'action collégiale par le MJ : les réponses manquantes passent à « ne participe pas »,
+   * ce qui affiche le résultat du message principal.
+   * @returns {Promise<void>}
+   */
+  async cloreActionCollegiale() {
+    const update = {}
+    for (const [actorId, reponse] of Object.entries(this.messagesLies)) {
+      if (reponse.reponseFaite) continue
+      update[`system.messagesLies.${actorId}.reponseFaite`] = true
+      update[`system.messagesLies.${actorId}.participe`] = false
+    }
+    if (!foundry.utils.isEmpty(update)) await this.parent.update(update)
+  }
+
+  /**
    * Modifie le contenu HTML d'un message en fonction de l'état d'une action collégiale.
    * Si toutes les réponses sont faites, calcule le nombre total de succès à partir du jet principal et des messages liés,
    * détermine si la difficulté est atteinte, puis affiche le résultat via un template Handlebars.
@@ -253,6 +268,23 @@ export default class HarmoniqueMessageData extends BaseMessageData {
               newMessageId: messageId,
             })
           }
+        })
+      }
+    }
+
+    // Le MJ peut clore une action collégiale qui attend encore des réponses
+    if (game.user.isGM && this.actionCollegiale && !this.actionCollegialeMessageLie && !this.toutesReponsesFaites) {
+      const boutonClore = html.querySelector(".clore-action")
+      if (boutonClore) {
+        boutonClore.classList.remove("hidden")
+        boutonClore.addEventListener("click", async (ev) => {
+          ev.preventDefault()
+          ev.stopPropagation()
+          const confirme = await foundry.applications.api.DialogV2.confirm({
+            window: { title: game.i18n.localize("PENOMBRE.ui.cloreAction") },
+            content: `<p>${game.i18n.localize("PENOMBRE.ui.cloreActionConfirmation")}</p>`,
+          })
+          if (confirme) await this.cloreActionCollegiale()
         })
       }
     }

@@ -449,6 +449,8 @@
       "actionLiee": "Action collégiale (liée)",
       "participerOui": "Participer",
       "participerNon": "Ne pas participer",
+      "cloreAction": "Clore l’action collégiale",
+      "cloreActionConfirmation": "Les Éminences qui n’ont pas encore répondu ne participeront pas, et le résultat de l’action sera affiché.",
       "success": "Succès",
       "otherSuccess": "Autres succès",
       "resultSuccess": "C’est réussi !",
