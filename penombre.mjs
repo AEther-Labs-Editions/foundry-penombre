@@ -128,9 +128,10 @@ Hooks.once("ready", function () {
 })
 
 Hooks.on("updateSetting", async (setting, update, options, id) => {
-  // Mise à jour de la Réserve collégiale
+  // Mise à jour de la Réserve collégiale : rafraîchie seulement si elle est ouverte (on la rouvre depuis le menu Pénombre)
   if (setting.key === "penombre.reserveCollegiale") {
-    game.system.applicationReserveCollegiale.render(true)
+    const reserve = game.system.applicationReserveCollegiale
+    if (reserve?.rendered) reserve.render()
   }
 
   // Passage en mode Kit de demo : forcer le nombre de jetons à 10
