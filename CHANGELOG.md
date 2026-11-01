@@ -41,6 +41,8 @@
 - Macros : glisser une harmonique ou une Éminence déjà présente dans la barre de raccourcis place la macro existante sur la case visée (il ne se passait rien)
 - Suivi de combat : glisser un combattant sur un autre le place exactement à cet endroit ; la cible n'était décalée que de 10 points d'initiative et pouvait passer par-dessus un troisième combattant proche
 - Fiches : le clic droit sur l'image demande confirmation avant de remettre l'image par défaut, et ne fait rien sur une fiche qu'on ne peut que consulter (la mise à jour échouait en erreur)
+- Relance : un seul code pour la relance payée par la conscience et par la réserve ; la relance par la réserve d'un jet lié ne plante plus si l'Éminence n'existe plus
+- Interne : ESLint signale les variables non définies (règle no-undef) ; les variables globales du navigateur et de Foundry sont déclarées
 
 1.8.4
 - Fiche Eminence : refactoring interne de la mise en page (les float sont remplacés par flex et grid dans les blocs Personnage, Harmoniques, Conscience, Timbre et les tableaux), sans changement visuel
