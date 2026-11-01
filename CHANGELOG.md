@@ -30,6 +30,7 @@
 - Paramètre « Nombre de jetons de la Réserve Collégiale » : nombre entier d'au moins 1 ; en Kit de démo, il est ramené à 10 avec un avertissement affiché au seul MJ (les joueuses recevaient une erreur permanente), et la réserve est ajustée en un seul endroit
 - Conscience : toutes les modifications des jetons (dépense, envolée, clic, menu contextuel Ajouter / Perdre, fausse note) passent par le modèle de l'Éminence, qui garde les jetons non perdus en tête et leur nombre égal à la valeur de conscience ; le menu contextuel n'ajoute plus de jeton au-delà du maximum
 - Interne : les règles des jets (coût en jetons, vérification de la répartition, analyse des dés) sont dans module/regles/jets.mjs, en fonctions pures couvertes par des tests unitaires (`npm test`, sans Foundry)
+- Interne : les règles des jetons de conscience sont dans module/regles/conscience.mjs, en fonctions pures testées (dont la règle « jetons non perdus en tête, en nombre égal à la valeur, sans dépasser le maximum » après une suite d'opérations)
 
 1.8.4
 - Fiche Eminence : refactoring interne de la mise en page (les float sont remplacés par flex et grid dans les blocs Personnage, Harmoniques, Conscience, Timbre et les tableaux), sans changement visuel
