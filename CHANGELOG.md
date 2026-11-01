@@ -39,6 +39,7 @@
 - Interne : les conséquences d'une fausse note et d'une envolée (jeton de conscience, atout collégial) et l'apparence Dice So Nice des dés sont calculées au même endroit pour le jet et la relance
 - Traduction : le titre de la fenêtre de jet, le nom des macros de jet, les libellés de difficulté, « Acteur inconnu » et le nombre de succès en infobulle passent par le fichier de langue
 - Macros : glisser une harmonique ou une Éminence déjà présente dans la barre de raccourcis place la macro existante sur la case visée (il ne se passait rien)
+- Suivi de combat : glisser un combattant sur un autre le place exactement à cet endroit ; la cible n'était décalée que de 10 points d'initiative et pouvait passer par-dessus un troisième combattant proche
 
 1.8.4
 - Fiche Eminence : refactoring interne de la mise en page (les float sont remplacés par flex et grid dans les blocs Personnage, Harmoniques, Conscience, Timbre et les tableaux), sans changement visuel
