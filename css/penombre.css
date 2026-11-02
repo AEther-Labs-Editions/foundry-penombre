@@ -2268,6 +2268,10 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
 #penombre-reserve-collegiale .div-factions .ligne-nom .faction-nom-readonly {
   font-weight: bold;
 }
+#penombre-reserve-collegiale .div-factions .faction-nom-readonly,
+#penombre-reserve-collegiale .div-factions .element-nom-readonly {
+  line-height: 22px;
+}
 #penombre-reserve-collegiale .div-factions .cases {
   display: flex;
   flex-shrink: 0;

@@ -308,6 +308,13 @@ body {
       font-weight: bold;
     }
 
+    // En lecture, le nom est centré verticalement dans sa ligne de 22 px, comme le texte du champ en édition
+    // (sinon il reste collé en haut, au-dessus du libellé)
+    .faction-nom-readonly,
+    .element-nom-readonly {
+      line-height: 22px;
+    }
+
     .cases {
       display: flex;
       flex-shrink: 0;

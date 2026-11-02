@@ -46,6 +46,7 @@
 - Relance : cliquer sur « Relance (conscience) » ou « Relance (réserve) » sans avoir sélectionné de dé affiche un avertissement au lieu de ne rien faire ; aucun jeton n'est dépensé
 - Fenêtre de jet : l'infobulle du nombre de jetons n'affiche les lignes « Complication » et « Reste à répartir » que si une complication couvre des jetons (plus de « Complication : -0 ») ; ses textes passent par le fichier de langue
 - Fiche Eminence : la tache sombre en haut à droite du bloc Timbre / Peste (reste d'ornement du livre dans l'image de fond) est effacée
+- Feuille collégiale : en mode lecture, le nom de chaque relation (et des atouts et complications) est centré verticalement sur sa ligne comme en mode édition ; il était collé en haut, au-dessus du libellé « Nom de la relation »
 
 1.8.4
 - Fiche Eminence : refactoring interne de la mise en page (les float sont remplacés par flex et grid dans les blocs Personnage, Harmoniques, Conscience, Timbre et les tableaux), sans changement visuel
