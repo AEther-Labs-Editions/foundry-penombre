@@ -170,7 +170,10 @@ export default class HarmoniqueMessageData extends BaseMessageData {
    * @param {Actor|undefined} actor Acteur qui a lancé les dés
    */
   async #relancer(source, messageId, des, actor) {
-    if (des.length === 0) return
+    if (des.length === 0) {
+      ui.notifications.warn("PENOMBRE.Warnings.aucunDeSelectionne", { localize: true })
+      return
+    }
 
     // La relance d'un jet lié met à jour le message principal, ce que seul le MJ peut faire
     const jetLie = this.actionCollegialeMessageLie && this.idMessageOrigine

@@ -490,7 +490,8 @@
       "mjErreur": "Le MJ n’a pas pu traiter la demande : {erreur}",
       "actionCollegialeClose": "L’action collégiale a déjà reçu cette réponse ou a été close : la réponse n’est pas prise en compte.",
       "requeteInvalide": "Requête refusée : paramètre « {parametre} » invalide.",
-      "jetAnnuleReserve": "Jet annulé : vous avez demandé {demande} jeton(s) de la réserve collégiale, mais il n’en reste plus que {actuel}."
+      "jetAnnuleReserve": "Jet annulé : vous avez demandé {demande} jeton(s) de la réserve collégiale, mais il n’en reste plus que {actuel}.",
+      "aucunDeSelectionne": "Aucun dé sélectionné : cliquez sur le dé à relancer avant de choisir la relance par la conscience ou par la réserve."
     },
     "Settings": {
       "styleJeu": {
