@@ -44,6 +44,7 @@
 - Relance : un seul code pour la relance payée par la conscience et par la réserve ; la relance par la réserve d'un jet lié ne plante plus si l'Éminence n'existe plus
 - Interne : ESLint signale les variables non définies (règle no-undef) ; les variables globales du navigateur et de Foundry sont déclarées
 - Relance : cliquer sur « Relance (conscience) » ou « Relance (réserve) » sans avoir sélectionné de dé affiche un avertissement au lieu de ne rien faire ; aucun jeton n'est dépensé
+- Fenêtre de jet : l'infobulle du nombre de jetons n'affiche les lignes « Complication » et « Reste à répartir » que si une complication couvre des jetons (plus de « Complication : -0 ») ; ses textes passent par le fichier de langue
 
 1.8.4
 - Fiche Eminence : refactoring interne de la mise en page (les float sont remplacés par flex et grid dans les blocs Personnage, Harmoniques, Conscience, Timbre et les tableaux), sans changement visuel

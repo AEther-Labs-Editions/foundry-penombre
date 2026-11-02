@@ -476,7 +476,18 @@
       "macro": "Jet de {harmonique} ({acteur})",
       "acteurInconnu": "Acteur inconnu",
       "unSucces": " (1 succès)",
-      "nbSucces": " ({nb} succès)"
+      "nbSucces": " ({nb} succès)",
+      "infobulleJetons": {
+        "atouts": "• Atouts : {nb}",
+        "premierAtoutGratuit": "(Premier atout gratuit)",
+        "actionCollegiale": "• Action collégiale : {nb}",
+        "deMerveilleux": "• Dé merveilleux : {nb}",
+        "effetMagique": "• Produire effet magique : {nb}",
+        "maitrise": "• Compenser maîtrise magique : {nb}",
+        "total": "Total : {nb}",
+        "complication": "• Complication : -{nb}",
+        "reste": "Reste à répartir : {nb}"
+      }
     },
     "Warnings": {
       "jetonsDepassement": "Trop de jetons sélectionnés",

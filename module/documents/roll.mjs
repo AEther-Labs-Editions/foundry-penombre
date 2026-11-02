@@ -753,17 +753,18 @@ export default class PenombreRoll extends Roll {
     // Met à jour le tooltip pour expliquer chaque partie du total
     const tooltipLabel = dialogElement.querySelector("#jetonsDepenserTooltip")
     if (tooltipLabel) {
-      const tooltipContent = `
-        • Atouts : ${jetonsAtouts} ${nbAtoutsSelectionnes > 0 && premierAtoutGratuit ? "(Premier atout gratuit)" : ""}<br>
-        • Action collégiale : ${jetonActionCollegiale} <br>
-        • Dé merveilleux : ${jetonDeMerveilleux} <br>
-        • Produire effet magique : ${jetonEffetMagique} <br>
-        • Compenser maîtrise magique : ${jetonsEffetMagiqueMaitrise} <br>
-        Total : ${jetons} <br>
-        • Complication : -${jetonsComplication} <br>
-        Reste à répartir : ${jetonsARepartir}`
-
-      tooltipLabel.setAttribute("data-tooltip", tooltipContent)
+      const t = (cle, donnees = {}) => game.i18n.format(`PENOMBRE.Roll.infobulleJetons.${cle}`, donnees)
+      const lignes = [
+        `${t("atouts", { nb: jetonsAtouts })}${nbAtoutsSelectionnes > 0 && premierAtoutGratuit ? ` ${t("premierAtoutGratuit")}` : ""}`,
+        t("actionCollegiale", { nb: jetonActionCollegiale }),
+        t("deMerveilleux", { nb: jetonDeMerveilleux }),
+        t("effetMagique", { nb: jetonEffetMagique }),
+        t("maitrise", { nb: jetonsEffetMagiqueMaitrise }),
+        t("total", { nb: jetons }),
+      ]
+      // Complication : seulement si elle couvre des jetons (sinon « -0 »)
+      if (jetonsComplication > 0) lignes.push(t("complication", { nb: jetonsComplication }), t("reste", { nb: jetonsARepartir }))
+      tooltipLabel.setAttribute("data-tooltip", lignes.join("<br>"))
     }
 
     PenombreRoll._validerJetons(dialogElement)
