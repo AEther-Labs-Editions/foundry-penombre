@@ -2305,12 +2305,27 @@ body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   font-size: 17px;
   color: #7a3b20;
 }
+.penombre.roll-dialog .window-content {
+  min-height: 0;
+}
 .theme-light .penombre.roll-dialog .window-content {
   background-color: #faeed6;
   background-image: url("/systems/penombre/assets/background/fond-coupe.webp");
   background-repeat: repeat;
 }
+.penombre.roll-dialog .window-content > .dialog-form {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.penombre.roll-dialog .window-content .dialog-content {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+}
 .penombre.roll-dialog .window-content .form-footer {
+  flex: none;
   justify-content: center;
 }
 .penombre.roll-dialog .window-content .form-footer > button {
