@@ -16,6 +16,18 @@ body {
   }
 }
 
+// Fenêtre détachée (V14) : Foundry ne limite pas la hauteur d'une application redimensionnable à celle de la fenêtre
+// séparée. Sur un petit écran, le bas de la feuille sortait de la fenêtre et la colonne Relations défilait jusqu'à un
+// bas invisible (bouton « Créer une relation » inaccessible) : la feuille est limitée à la hauteur de la fenêtre
+body.detached #penombre-reserve-collegiale.feuille-etendue {
+  min-height: 0;
+  max-height: 100vh;
+
+  .window-content {
+    min-height: 0;
+  }
+}
+
 #penombre-reserve-collegiale {
   // Avec les factions, la fenêtre est la feuille collégiale étendue : un seul parchemin, sans marge ni fond de thème
   // Redimensionnable en hauteur seulement : jamais plus petite que le panier, largeur fixe

@@ -49,6 +49,7 @@
 - Feuille collégiale : en mode lecture, le nom de chaque relation (et des atouts et complications) est centré verticalement sur sa ligne comme en mode édition ; il était collé en haut, au-dessus du libellé « Nom de la relation »
 - Feuille collégiale : la colonne Relations garde sa position de défilement quand on valide un nom ou change un niveau, et le champ où l'on est passé (Tab) garde le focus ; la colonne revenait en haut et le focus était perdu à chaque modification
 - Fenêtre de jet : sur un écran de petite hauteur, son contenu défile et le bouton « Lancer les dés » reste visible ; le bas de la fenêtre était coupé
+- Feuille collégiale en fenêtre détachée : la feuille est limitée à la hauteur de la fenêtre séparée ; sur un petit écran, la colonne Relations ne défilait pas jusqu'en bas et le bouton « Créer une relation » était inaccessible
 
 1.8.4
 - Fiche Eminence : refactoring interne de la mise en page (les float sont remplacés par flex et grid dans les blocs Personnage, Harmoniques, Conscience, Timbre et les tableaux), sans changement visuel

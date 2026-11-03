@@ -2024,6 +2024,13 @@ body.theme-dark .penombre.maitrise .maitrise-carte .maitrise-harmonique {
 body.theme-light #penombre-reserve-collegiale .div-jetons-2 {
   background-color: #faeed6;
 }
+body.detached #penombre-reserve-collegiale.feuille-etendue {
+  min-height: 0;
+  max-height: 100vh;
+}
+body.detached #penombre-reserve-collegiale.feuille-etendue .window-content {
+  min-height: 0;
+}
 #penombre-reserve-collegiale.feuille-etendue {
   min-height: 593px;
   min-width: 987px;
