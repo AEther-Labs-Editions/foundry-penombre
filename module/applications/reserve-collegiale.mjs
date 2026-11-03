@@ -71,6 +71,8 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
   static PARTS = {
     main: {
       template: "systems/penombre/templates/reserve-collegiale.hbs",
+      // Chaque modification redessine la fenêtre : la colonne Relations garde sa position de défilement
+      scrollable: [".div-factions"],
     },
   }
 
