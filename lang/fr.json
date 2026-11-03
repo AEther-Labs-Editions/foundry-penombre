@@ -487,6 +487,12 @@
         "total": "Total : {nb}",
         "complication": "• Complication : -{nb}",
         "reste": "Reste à répartir : {nb}"
+      },
+      "envoleeReport": {
+        "reserve": "Envolée : la conscience de {nom} n'a aucun jeton dépensé, un jeton de la réserve collégiale est réactivé. Pour donner plutôt le jeton à une autre Éminence, le MJ le réactive sur sa fiche et reprend celui de la réserve.",
+        "rien": "Envolée : ni la conscience de {nom} ni la réserve collégiale n'ont de jeton dépensé. Le MJ peut réactiver un jeton dépensé d'une autre Éminence.",
+        "dissonant": "Envolée : la conscience de {nom} n'a aucun jeton dépensé, et son timbre dissonant l'empêche de réactiver un jeton de la réserve collégiale. Le MJ peut réactiver un jeton dépensé d'une autre Éminence.",
+        "mjAbsent": "Envolée : la conscience de {nom} n'a aucun jeton dépensé. Sans MJ connecté, rien n'a été réactivé : réactivez à la main un jeton de la réserve collégiale ou d'une autre Éminence."
       }
     },
     "Warnings": {

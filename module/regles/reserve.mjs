@@ -37,6 +37,22 @@ export function payer(jetons, nbJetons) {
 }
 
 /**
+ * Envolée reportée sur la réserve : le premier jeton pris redevient disponible.
+ * @param {JetonsReserve} jetons
+ * @returns {{jetons: JetonsReserve, reactive: boolean}} Nouveaux jetons, jeton réactivé (faux si aucun n'était pris)
+ */
+export function reactiver(jetons) {
+  const nouveaux = Object.fromEntries(Object.entries(jetons).map(([cle, jeton]) => [cle, { ...jeton }]))
+  const jeton = Object.keys(nouveaux)
+    .sort((a, b) => Number(a) - Number(b))
+    .map((cle) => nouveaux[cle])
+    .find((j) => j.valeur !== true)
+  if (!jeton) return { jetons: nouveaux, reactive: false }
+  jeton.valeur = true
+  return { jetons: nouveaux, reactive: true }
+}
+
+/**
  * Met la réserve à la taille voulue : jetons « 1 » à « nbJetons », les nouveaux non disponibles, les autres supprimés.
  * @param {JetonsReserve} jetons
  * @param {number} nbJetons

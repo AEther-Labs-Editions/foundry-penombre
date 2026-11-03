@@ -54,6 +54,7 @@ Hooks.once("init", function () {
 
   // Factions : seules les modifications liées aux jets passent par le MJ, l'édition des factions lui est réservée
   CONFIG.queries["penombre.addFactionComplicationFromRoll"] = applications.PenombreReserveCollegiale._handleQueryAddFactionComplicationFromRoll
+  CONFIG.queries["penombre.reactiverJetonReserveFromRoll"] = applications.PenombreReserveCollegiale._handleQueryReactiverJetonFromRoll
   CONFIG.queries["penombre.decrementFactionAtout"] = applications.PenombreReserveCollegiale._handleQueryDecrementFactionAtout
 
   CONFIG.Dice.rolls.push(documents.PenombreRoll)

@@ -188,6 +188,18 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
     })
   }
 
+  /**
+   * Envolée d'une Éminence dont la conscience n'a aucun jeton dépensé : un jeton de la réserve est réactivé.
+   * @returns {Promise<{reactive: boolean}>}
+   */
+  static async _mutateReactiverJetonFromRoll() {
+    return PenombreReserveCollegiale._updateReserve((r) => {
+      const { jetons, reactive } = reserve.reactiver(r.jetons)
+      r.jetons = jetons
+      return { reactive }
+    })
+  }
+
   /** @param {string} factionId */
   static async _mutateCreateFaction(factionId) {
     await PenombreReserveCollegiale._updateReserve((r) => {
@@ -580,6 +592,8 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
     verifierRequete(estEntierPositif(nbJetons), "nbJetons")
     return PenombreReserveCollegiale._mutateReserveFromRoll(nbJetons)
   }
+
+  static _handleQueryReactiverJetonFromRoll = async () => PenombreReserveCollegiale._mutateReactiverJetonFromRoll()
 
   /** @param {{factionId: string, niveau: number, nom: string}} params */
   static _handleQueryAddFactionComplicationFromRoll = async ({ factionId, niveau, nom }) => {

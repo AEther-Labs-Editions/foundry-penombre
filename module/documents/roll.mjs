@@ -90,6 +90,33 @@ export default class PenombreRoll extends Roll {
   }
 
   /**
+   * Envolée d'une Éminence dont la conscience n'a aucun jeton dépensé : un jeton de la réserve collégiale est réactivé
+   * par le MJ, et un message l'indique dans le tchat (ou dit pourquoi ce n'est pas possible).
+   * @param {PenombreRoll} roll
+   * @param {Actor} actor
+   */
+  static async _envoleeSurReserve(roll, actor) {
+    // Livre 1 : une envolée réactive un jeton « conscience ou collégial » ; une Éminence au timbre dissonant ne peut pas
+    // réactiver de jeton de la réserve collégiale lors d'une envolée. Selon un auteur du jeu, le jeton peut aller sur
+    // n'importe quelle feuille : le don à une autre Éminence est laissé au MJ, à la main, et rappelé dans le message
+    let cas
+    if (actor.system.timbre?.statut === SYSTEM.TIMBRES.dissonant.id) cas = "dissonant"
+    else if (!mjConnecte()) cas = "mjAbsent"
+    else {
+      const reponse = await demanderAuMJ("penombre.reactiverJetonReserveFromRoll", {})
+      cas = reponse.ok && reponse.resultat?.reactive ? "reserve" : "rien"
+    }
+    // Message dans le tchat, avec la visibilité du jet, pour que la table sache où est allé le jeton
+    const mode = { publicroll: "public", gmroll: "gm", blindroll: "blind", selfroll: "self" }[roll.options.rollMode] ?? roll.options.rollMode
+    const donnees = {
+      speaker: ChatMessage.getSpeaker({ actor }),
+      content: `<p class="penombre-envolee-report">${game.i18n.format(`PENOMBRE.Roll.envoleeReport.${cas}`, { nom: foundry.utils.escapeHTML(actor.name) })}</p>`,
+    }
+    ChatMessage.applyMode(donnees, CONFIG.ChatMessage.modes[mode] ? mode : undefined)
+    await ChatMessage.create(donnees)
+  }
+
+  /**
    * Conséquences du dé d'harmonique, après un jet ou la relance de ce dé. Fausse note : l'Éminence perd un jeton de
    * conscience et un atout collégial utilisé perd un niveau ; envolée : un jeton dépensé redevient disponible.
    * @param {PenombreRoll} roll
@@ -99,7 +126,8 @@ export default class PenombreRoll extends Roll {
     const analyse = PenombreRoll.analyseRollResult(roll)
     if (actor?.type === "eminence") {
       if (analyse.isDeHarmoniqueMin) await actor.system.perdreUnJeton()
-      if (analyse.isDeHarmoniqueMax) await actor.system.regagnerUnJeton()
+      // Envolée : jeton de conscience, ou de la réserve collégiale si la conscience n'en a aucun de dépensé
+      if (analyse.isDeHarmoniqueMax && !(await actor.system.regagnerUnJeton())) await PenombreRoll._envoleeSurReserve(roll, actor)
     }
     if (analyse.isDeHarmoniqueMin) await PenombreRoll._degraderAtoutFaction(roll.options.factionAtoutsUsed)
   }

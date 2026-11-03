@@ -1,6 +1,6 @@
 import { test, describe } from "node:test"
 import assert from "node:assert/strict"
-import { ajusterTaille, nbJetonsDisponibles, payer } from "../../module/regles/reserve.mjs"
+import { ajusterTaille, nbJetonsDisponibles, payer, reactiver } from "../../module/regles/reserve.mjs"
 
 // "1" : jeton disponible, "0" : jeton pris
 const jetons = (code) => Object.fromEntries([...code].map((c, i) => [String(i + 1), { valeur: c === "1" }]))
@@ -48,5 +48,28 @@ describe("taille de la réserve", () => {
 
   test("plus de 10 jetons", () => {
     assert.equal(Object.keys(ajusterTaille(jetons("1"), 15)).length, 15)
+  })
+})
+
+describe("envolée reportée sur la réserve", () => {
+  test("le premier jeton pris redevient disponible", () => {
+    const avant = jetons("1001")
+    const r = reactiver(avant)
+    assert.equal(r.reactive, true)
+    assert.equal(code(r.jetons), "1101")
+    assert.equal(code(avant), "1001")
+  })
+
+  test("réserve pleine : rien à réactiver", () => {
+    const r = reactiver(jetons("111"))
+    assert.equal(r.reactive, false)
+    assert.equal(code(r.jetons), "111")
+  })
+
+  test("ordre numérique des jetons au-delà de 10", () => {
+    const liste = jetons("11111111111")
+    liste["2"].valeur = false
+    liste["10"].valeur = false
+    assert.equal(code(reactiver(liste).jetons), "11111111101")
   })
 })

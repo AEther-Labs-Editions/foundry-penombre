@@ -51,6 +51,7 @@
 - Fenêtre de jet : sur un écran de petite hauteur, son contenu défile et le bouton « Lancer les dés » reste visible ; le bas de la fenêtre était coupé
 - Feuille collégiale en fenêtre détachée : la feuille est limitée à la hauteur de la fenêtre séparée ; sur un petit écran, la colonne Relations ne défilait pas jusqu'en bas et le bouton « Créer une relation » était inaccessible
 - Factions : une complication collégiale créée lors d'un jet ne peut viser qu'une faction qui n'en a pas encore (une seule par faction, livre 2 p. 90) ; les autres sont grisées dans la fenêtre de jet. Auparavant, les cases s'ajoutaient à la complication existante, plafonnées à 3, et les jetons au-delà étaient économisés sans contrepartie. Si la cible n'est plus disponible au moment du lancer, le jet est annulé sans rien dépenser (issue #17)
+- Envolée : si la conscience de l'Éminence n'a aucun jeton dépensé, un jeton de la réserve collégiale est réactivé à la place (livre 1 : « conscience ou collégial »), sauf avec un timbre dissonant ; un message dans le tchat, avec la visibilité du jet, indique où est allé le jeton ou pourquoi aucun ne l'a été, et rappelle que le MJ peut le donner à la main à une autre Éminence (règle précisée par un auteur du jeu : le jeton peut aller sur n'importe quelle feuille). Auparavant, l'envolée était perdue sans avertissement (issue #18)
 
 1.8.4
 - Fiche Eminence : refactoring interne de la mise en page (les float sont remplacés par flex et grid dans les blocs Personnage, Harmoniques, Conscience, Timbre et les tableaux), sans changement visuel
