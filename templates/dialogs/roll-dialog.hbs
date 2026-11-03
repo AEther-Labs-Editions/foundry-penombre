@@ -149,7 +149,7 @@
             <select id="complicationCible" name="complicationCible">
               <option value="moi" {{#unless hasComplicationLibreIndividuelle}}disabled{{/unless}}>{{ localize 'PENOMBRE.Factions.cibleMoi' }}</option>
               {{#each factions}}
-                <option value="{{this.id}}">{{ localize 'PENOMBRE.Factions.cibleFaction' }} : {{this.nom}}</option>
+                <option value="{{this.id}}" {{#if this.aComplication}}disabled{{/if}}>{{ localize 'PENOMBRE.Factions.cibleFaction' }} : {{this.nom}}{{#if this.aComplication}} ({{ localize 'PENOMBRE.Factions.dejaUneComplication' }}){{/if}}</option>
               {{/each}}
             </select>
           </div>

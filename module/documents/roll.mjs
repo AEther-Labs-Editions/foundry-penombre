@@ -158,13 +158,18 @@ export default class PenombreRoll extends Roll {
     if (utiliserFactions && avecMJ) {
       const reserveCollegiale = game.settings.get(SYSTEM.ID, "reserveCollegiale")
       factionAtouts = reserveCollegiale.allFactionAtouts || []
-      factions = Object.entries(reserveCollegiale.factions || {}).map(([id, faction]) => ({ id, nom: faction.nom }))
+      // Une faction n'a qu'une complication collégiale (livre 2, p. 90) : celles qui en ont déjà une ne sont pas proposées
+      factions = Object.entries(reserveCollegiale.factions || {}).map(([id, faction]) => ({
+        id,
+        nom: faction.nom,
+        aComplication: Object.keys(faction.complications ?? {}).length > 0,
+      }))
     }
 
     // Une complication individuelle ne peut être créée que s'il reste au moins une des 4 cases libres (description
-    // vide) ; une complication de faction reste toujours possible dès lors qu'au moins une faction existe.
-    const hasComplicationLibreIndividuelle = Object.values(actor.system.conscience?.complications ?? {}).some((complication) => !complication.description)
-    const hasComplicationLibre = hasComplicationLibreIndividuelle || factions.length > 0
+    // vide) ; une complication collégiale, que pour une faction qui n'en a pas encore.
+    const hasComplicationLibreIndividuelle = PenombreRoll._complicationIndividuelleLibre(actor)
+    const hasComplicationLibre = hasComplicationLibreIndividuelle || factions.some((faction) => !faction.aComplication)
 
     let dialogContext = {
       actor,
@@ -337,6 +342,13 @@ export default class PenombreRoll extends Roll {
       return null
     }
 
+    // La cible de la complication a pu être prise pendant que la fenêtre était ouverte (une autre joueuse, le MJ) :
+    // le jet est annulé plutôt que lancé à coût réduit sans complication
+    if (complicationUse && complicationJetons > 0 && !PenombreRoll._cibleComplicationLibre(actor, complicationCible)) {
+      ui.notifications.warn("PENOMBRE.Warnings.complicationCibleOccupee", { localize: true })
+      return null
+    }
+
     formule = rollContext.formule || formule
 
     const rollOptions = {
@@ -391,16 +403,38 @@ export default class PenombreRoll extends Roll {
         })
       }
     } else if (complicationUse && complicationJetons > 0) {
-      await demanderAuMJ("penombre.addFactionComplicationFromRoll", {
+      const creation = await demanderAuMJ("penombre.addFactionComplicationFromRoll", {
         factionId: complicationCible,
         niveau: complicationJetons,
         nom: complicationDescription,
       })
+      // Refus du MJ (une complication a été créée entre-temps sur la faction) : le MJ doit régler la situation
+      if (!creation.ok || !creation.resultat?.cree) ui.notifications.warn("PENOMBRE.Warnings.complicationFactionNonCreee", { localize: true, permanent: true })
     }
 
     if (CONFIG.debug.penombre?.rolls) console.debug("Pénombre | PenombreRoll | roll", roll)
 
     return roll
+  }
+
+  /**
+   * @param {Actor} actor
+   * @returns {boolean} Vrai s'il reste une des 4 complications individuelles libre (sans description)
+   */
+  static _complicationIndividuelleLibre(actor) {
+    return Object.values(actor.system.conscience?.complications ?? {}).some((complication) => !complication.description)
+  }
+
+  /**
+   * Vérifie qu'une complication peut encore être créée sur la cible choisie.
+   * @param {Actor} actor
+   * @param {string} cible "moi" ou identifiant d'une faction
+   * @returns {boolean} Vrai si l'Éminence a une complication libre (« moi ») ou si la faction existe et n'a pas de complication
+   */
+  static _cibleComplicationLibre(actor, cible) {
+    if (cible === "moi") return PenombreRoll._complicationIndividuelleLibre(actor)
+    const faction = game.settings.get(SYSTEM.ID, "reserveCollegiale").factions?.[cible]
+    return !!faction && Object.keys(faction.complications ?? {}).length === 0
   }
 
   // #region Événements du prompt

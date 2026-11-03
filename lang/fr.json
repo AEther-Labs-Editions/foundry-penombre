@@ -502,7 +502,9 @@
       "actionCollegialeClose": "L’action collégiale a déjà reçu cette réponse ou a été close : la réponse n’est pas prise en compte.",
       "requeteInvalide": "Requête refusée : paramètre « {parametre} » invalide.",
       "jetAnnuleReserve": "Jet annulé : vous avez demandé {demande} jeton(s) de la réserve collégiale, mais il n’en reste plus que {actuel}.",
-      "aucunDeSelectionne": "Aucun dé sélectionné : cliquez sur le dé à relancer avant de choisir la relance par la conscience ou par la réserve."
+      "aucunDeSelectionne": "Aucun dé sélectionné : cliquez sur le dé à relancer avant de choisir la relance par la conscience ou par la réserve.",
+      "complicationCibleOccupee": "Jet annulé : la cible choisie pour la complication n'est plus disponible (la faction a déjà une complication, ou l'Éminence n'a plus de complication libre). Aucun jeton n'a été dépensé.",
+      "complicationFactionNonCreee": "La complication collégiale n'a pas pu être créée : la faction en a déjà une. Le MJ doit régler la situation."
     },
     "Settings": {
       "styleJeu": {
@@ -566,7 +568,8 @@
       "choisirAtoutDegrade": "Fausse note : choisissez l’atout collégial dont le niveau baisse",
       "choisir": "Choisir",
       "atoutDegrade": "Le niveau de l’atout collégial « {nom} » ({faction}) baisse d’un niveau.",
-      "atoutADegrader": "Le MJ n’a pas pu dégrader l’atout collégial « {nom} » ({faction}) : retirez-lui un niveau à la main."
+      "atoutADegrader": "Le MJ n’a pas pu dégrader l’atout collégial « {nom} » ({faction}) : retirez-lui un niveau à la main.",
+      "dejaUneComplication": "a déjà une complication"
     },
     "GroupManager": {
       "title": "Gestionnaire de groupe",

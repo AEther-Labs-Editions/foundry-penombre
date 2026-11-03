@@ -312,26 +312,23 @@ export default class PenombreReserveCollegiale extends HandlebarsApplicationMixi
 
   /**
    * Convertit des jetons économisés lors d'un jet en une complication collégiale pour une faction.
-   * Crée la complication si la faction n'en a pas, ou augmente son niveau (max 3) sinon.
+   * Une faction n'a qu'une complication collégiale (livre 2, p. 90) : rien n'est fait si elle en a déjà une.
    * @param {string} factionId
    * @param {number} niveau
-   * @param {string} [nom] Description de la complication, utilisée seulement à la création
+   * @param {string} [nom] Description de la complication
+   * @returns {Promise<{cree: boolean}>} cree : la complication a été créée
    */
   static async _mutateAddFactionComplicationFromRoll(factionId, niveau, nom) {
-    await PenombreReserveCollegiale._updateReserve((r) => {
+    return PenombreReserveCollegiale._updateReserve((r) => {
       const faction = r.factions[factionId]
-      if (!faction) return
+      if (!faction) return { cree: false }
       if (!faction.complications) faction.complications = {}
-      const complicationIds = Object.keys(faction.complications)
-      if (complicationIds.length > 0) {
-        const existing = faction.complications[complicationIds[0]]
-        existing.valeur = Math.min(existing.valeur + niveau, 3)
-      } else {
-        faction.complications[foundry.utils.randomID()] = {
-          nom: nom || game.i18n.localize("PENOMBRE.Factions.complicationDepuisJet"),
-          valeur: Math.min(niveau, 3),
-        }
+      if (Object.keys(faction.complications).length > 0) return { cree: false }
+      faction.complications[foundry.utils.randomID()] = {
+        nom: nom || game.i18n.localize("PENOMBRE.Factions.complicationDepuisJet"),
+        valeur: Math.min(niveau, 3),
       }
+      return { cree: true }
     })
   }
 
