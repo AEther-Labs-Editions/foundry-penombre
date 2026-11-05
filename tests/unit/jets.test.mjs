@@ -1,6 +1,6 @@
 import { test, describe } from "node:test"
 import assert from "node:assert/strict"
-import { analyserDes, calculerCoutJetons, jetonsARepartir, verifierRepartition } from "../../module/regles/jets.mjs"
+import { analyserDes, calculerCoutJetons, jetonsARepartir, jetonsReserveMinimum, verifierRepartition } from "../../module/regles/jets.mjs"
 
 describe("calculerCoutJetons", () => {
   test("jet simple sans option : rien à payer", () => {
@@ -76,6 +76,31 @@ describe("calculerCoutJetons", () => {
     })
     // 2 atouts + 1 action collégiale + 1 dé merveilleux + 1 effet magique + 2 niveaux manquants
     assert.equal(cout.total, 7)
+  })
+})
+
+describe("jetonsReserveMinimum", () => {
+  test("la complication couvre d'abord les jetons des atouts collégiaux", () => {
+    assert.equal(jetonsReserveMinimum(1, 0), 1)
+    assert.equal(jetonsReserveMinimum(1, 1), 0)
+    assert.equal(jetonsReserveMinimum(2, 1), 1)
+    assert.equal(jetonsReserveMinimum(1, 3), 0)
+  })
+
+  test("atout personnel + atout collégial, complication de 1 : le jet est gratuit", () => {
+    const cout = calculerCoutJetons({ nbAtouts: 2, nbFactionAtouts: 1 })
+    const aRepartir = jetonsARepartir(cout.total, 1)
+    const minimumReserve = jetonsReserveMinimum(cout.jetonsReserveMinimum, 1)
+    const { possible } = verifierRepartition({ jetonsConscience: 0, jetonsReserve: 0, aRepartir, dispoConscience: 5, dispoReserve: 5, minimumReserve })
+    assert.equal(possible, true)
+  })
+
+  test("complication sur le jeton collégial : le reste peut être payé par la conscience", () => {
+    const cout = calculerCoutJetons({ nbAtouts: 2, nbFactionAtouts: 1, deMerveilleux: true })
+    const aRepartir = jetonsARepartir(cout.total, 1)
+    const minimumReserve = jetonsReserveMinimum(cout.jetonsReserveMinimum, 1)
+    const { possible } = verifierRepartition({ jetonsConscience: 1, jetonsReserve: 0, aRepartir, dispoConscience: 5, dispoReserve: 5, minimumReserve })
+    assert.equal(possible, true)
   })
 })
 

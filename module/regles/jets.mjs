@@ -70,6 +70,19 @@ export function jetonsARepartir(total, jetonsComplication) {
 }
 
 /**
+ * Jetons devant encore venir de la réserve collégiale pour les atouts de faction, une fois déduits ceux couverts par
+ * la complication. Une complication (individuelle ou collégiale) peut remplacer n'importe quel jeton à dépenser,
+ * y compris celui d'un atout collégial (livre 2, p. 90) : elle couvre en priorité ces jetons, ce qui laisse le
+ * reste du coût libre entre conscience et réserve.
+ * @param {number} minimum Jetons de la réserve imposés par les atouts de faction (voir calculerCoutJetons)
+ * @param {number} jetonsComplication Jetons couverts par la complication
+ * @returns {number}
+ */
+export function jetonsReserveMinimum(minimum, jetonsComplication) {
+  return Math.max(minimum - jetonsComplication, 0)
+}
+
+/**
  * Raisons d'empêcher le lancer, d'après la répartition des jetons demandée.
  *
  * Codes renvoyés :

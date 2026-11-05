@@ -1,6 +1,6 @@
 import { SYSTEM } from "../config/system.mjs"
 import { demanderAuMJ, mjConnecte } from "../helpers/mj.mjs"
-import { MERVEILLEUX_FACES, analyserDes, calculerCoutJetons, jetonsARepartir as calculerJetonsARepartir, verifierRepartition } from "../regles/jets.mjs"
+import { MERVEILLEUX_FACES, analyserDes, calculerCoutJetons, jetonsARepartir as calculerJetonsARepartir, jetonsReserveMinimum, verifierRepartition } from "../regles/jets.mjs"
 
 const DICE_APPEARANCE_CONFIGS = {
   "penombre-beige": {
@@ -679,7 +679,8 @@ export default class PenombreRoll extends Roll {
     const dispoConscience = actor ? actor.system.nbJetonsRestants : null
     // La réserve collégiale est inutilisable sans MJ connecté
     const dispoReserve = mjConnecte() ? game.settings.get(SYSTEM.ID, "reserveCollegiale").nbJetonsRestants : 0
-    const minimumReserve = PenombreRoll._getJetonsReserveMinimum(dialogElement)
+    // La complication peut remplacer le jeton d'un atout collégial : elle réduit d'autant le minimum imposé à la réserve
+    const minimumReserve = jetonsReserveMinimum(PenombreRoll._getJetonsReserveMinimum(dialogElement), PenombreRoll._getComplicationJetons(dialogElement))
 
     const { possible, erreurs } = verifierRepartition({
       jetonsConscience,
