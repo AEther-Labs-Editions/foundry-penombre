@@ -1,3 +1,6 @@
+2.0.1
+- Fiche Eminence : sous Firefox, les cases de valeur des atouts gardent leur place dans leur colonne au lieu d'être tassées vers la droite
+
 2.0.0
 ### Nouvelles fonctionnalités
 - Règle optionnelle « Le jeu des factions » (chapitre « La lutte au quotidien », p. 90-94), activée par le paramètre « Activer le Jeu des Factions » : relations avec jusqu'à 3 atouts collégiaux et une complication collégiale chacune, potentiel collégial, atouts de faction dans la fenêtre de jet (jeton pris dans la réserve collégiale), complication collégiale à la place de jetons dépensés ; une complication (individuelle ou collégiale) peut remplacer le jeton d'un atout collégial payant ; une complication collégiale créée lors d'un jet ne peut viser qu'une faction qui n'en a pas encore (une seule par faction, livre 2 p. 90), les autres sont grisées dans la fenêtre de jet, et si la cible n'est plus disponible au moment du lancer, le jet est annulé sans rien dépenser (issue #17)

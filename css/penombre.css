@@ -1133,6 +1133,7 @@ body.theme-dark .penombre.eminence .eminence-timbre.avance .frise-penombre {
 }
 .penombre.eminence .eminence-content .eminence-atouts .content .atouts td.item-case-width .cases-atout .item-case {
   flex: none;
+  max-width: none;
   width: 20px;
   height: 20px;
 }

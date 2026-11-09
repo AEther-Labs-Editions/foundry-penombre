@@ -993,9 +993,12 @@ body {
             gap: 1px;
             vertical-align: middle;
 
-            // Taille fixe : la colonne réduite au minimum ne doit pas écraser les cubes
+            // Taille fixe : la colonne réduite au minimum ne doit pas écraser les cubes.
+            // max-width: none annule le max-width: 100 % que Foundry met sur toutes les images : un maximum en pourcentage
+            // peut ramener à zéro la largeur minimale du cube, et la colonne à 1 % ne réserve alors plus la place des 3 cubes
             .item-case {
               flex: none;
+              max-width: none;
               width: @small-case-size;
               height: @small-case-size;
             }
